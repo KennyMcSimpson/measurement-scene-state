@@ -1,0 +1,28 @@
+seed: 17
+device: auto
+dataset:
+  name: hypersim
+  root: data/hypersim_prepared/test
+  image_size: [128, 160]
+  context_views: 2
+  target_views: 1
+  length: 1999
+  sample_stride: 5
+model:
+  mode: fixed
+  voxel_resolution: 32
+  image_feature_dim: 32
+  state_feature_dim: 32
+  refinement_blocks: 2
+  n_samples: 48
+  ray_chunk_size: 4096
+training:
+  output_dir: outputs/hypersim_pilot_test
+  batch_size: 1
+  learning_rate: 0.0005
+  max_steps: 1
+  num_workers: 0
+  amp: true
+  log_every: 1
+  checkpoint_every: 1
+  measurements: [rgb, depth, normal, point, visibility]

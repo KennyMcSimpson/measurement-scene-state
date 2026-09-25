@@ -1,0 +1,32 @@
+seed: 17
+dataset_root: data/hypersim_er_prepared/train
+output_dir: outputs/geometry_certificate_audit_v1
+context_views: 4
+image_size: [128, 160]
+window_count: 32
+window_stride: 7
+permutation_windows: 2
+local_bounds_m: [[-6.0, -4.0, 0.05], [6.0, 4.0, 12.05]]
+voxel_resolution: [48, 32, 48]
+certificate:
+  proposer: loftr_indoor_new
+  confidence_threshold: 0.2
+  reciprocal_threshold_px: 1.5
+  cycle_threshold_px: 2.0
+  epipolar_threshold_px: 1.5
+  reprojection_threshold_px: 1.5
+  verification_threshold_px: 2.0
+  min_triangulation_angle_deg: 1.0
+  grid_stride: 8
+  device: auto
+  model_cache_dir: outputs/model_cache/torch
+decision:
+  minimum_windows: 32
+  minimum_certified_coverage: 0.15
+  minimum_nonzero_window_fraction: 0.8
+  maximum_median_error_m: 0.25
+  maximum_p90_error_m: 0.5
+  maximum_permutation_delta_m: 0.0001
+  minimum_shuffled_error_ratio: 1.5
+  minimum_shuffled_error_margin_m: 0.05
+  minimum_risk_error_spearman: 0.0

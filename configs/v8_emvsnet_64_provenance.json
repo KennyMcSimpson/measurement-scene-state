@@ -1,0 +1,36 @@
+{
+  "schema_version": "mcss.emvsnet_checkpoint_provenance.v1",
+  "checkpoint": {
+    "filename": "best_model_64.ckpt",
+    "sha256": "b245a2aeff6e40a983e79f2b9a569bd86ea061c4e6f12852446bd569fccb2984",
+    "hub_model_id": "BuTTerK3ks/EMVSNet",
+    "hub_revision": "7596a73607b30771df1b6bcdb1d3e4ce2f17eef3",
+    "hub_file_commit": "dc1815f6712c43c2e92d7781524e31684197817f"
+  },
+  "training": {
+    "evidential_method": "der",
+    "evidence_kind": "publisher_release_inference_contract",
+    "claim_ceiling": "publisher_prescribed_inference_method_not_checkpoint_training_log"
+  },
+  "model_card": {
+    "sha256": "ea818418c94d2fc077d5ba1d7521a47f9e6711ddd4af3da465f19a44266a9b9b",
+    "required_fragments": [
+      "python train.py",
+      "python eval.py",
+      "--evidential_method der"
+    ]
+  },
+  "paper": {
+    "doi": "10.5194/isprs-annals-XI-2-2026-259-2026",
+    "pdf_sha256": "820f7e0ddffd99ccdc5886cbf0b036a48e4aea7a3c5640c8a0afafba671f2dde",
+    "method_evidence": "full Normal-inverse-Gamma DER with independent alpha in Eq. 7",
+    "training_image_size": [128, 160],
+    "training_views": 7,
+    "training_depth_range_mm": [425, 935]
+  },
+  "code": {
+    "repository": "https://github.com/BuTTerK3ks/EMVSNet.git",
+    "revision": "982bf4c57f00b2d389cc7c97aae1df70d6ccd6f6",
+    "local_changes": "device-portability-only"
+  }
+}

@@ -1,0 +1,44 @@
+{
+    "completed_utc":  "2026-09-20T16:22:34.5516424Z",
+    "status":  "complete",
+    "authorization":  "User 2026-09-21 local old 3D datasets deletion",
+    "started_utc":  "2026-09-20T16:17:15.7308912Z",
+    "targets":  [
+                    {
+                        "status":  "deleted_and_absent",
+                        "path":  "<workspace-root>\\data\\hypersim_er_prepared",
+                        "files":  125870,
+                        "bytes":  14960209419
+                    },
+                    {
+                        "status":  "deleted_and_absent",
+                        "path":  "<workspace-root>\\data\\hypersim_final_holdout_archives",
+                        "files":  26,
+                        "bytes":  102405935184
+                    },
+                    {
+                        "status":  "deleted_and_absent",
+                        "path":  "<workspace-root>\\data\\hypersim_final_holdout_raw",
+                        "files":  136795,
+                        "bytes":  102370486124
+                    },
+                    {
+                        "status":  "deleted_and_absent",
+                        "path":  "<workspace-root>\\data\\hypersim_prepared",
+                        "files":  29599,
+                        "bytes":  3534935427
+                    },
+                    {
+                        "status":  "deleted_and_absent",
+                        "path":  "<workspace-root>\\data\\hypersim_raw",
+                        "files":  128027,
+                        "bytes":  59103934584
+                    },
+                    {
+                        "status":  "deleted_and_absent",
+                        "path":  "<external-data-root>/DL3DV_Benchmark_20260920",
+                        "files":  13058,
+                        "bytes":  11559355642
+                    }
+                ]
+}

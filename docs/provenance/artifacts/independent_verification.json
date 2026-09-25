@@ -1,0 +1,35 @@
+{
+  "status": "verified",
+  "checks": [
+    {
+      "path": "<workspace-root>\\data\\hypersim_er_prepared",
+      "absent": true
+    },
+    {
+      "path": "<workspace-root>\\data\\hypersim_final_holdout_archives",
+      "absent": true
+    },
+    {
+      "path": "<workspace-root>\\data\\hypersim_final_holdout_raw",
+      "absent": true
+    },
+    {
+      "path": "<workspace-root>\\data\\hypersim_prepared",
+      "absent": true
+    },
+    {
+      "path": "<workspace-root>\\data\\hypersim_raw",
+      "absent": true
+    },
+    {
+      "path": "<external-data-root>/DL3DV_Benchmark_20260920",
+      "absent": true
+    }
+  ],
+  "removed_bytes": 293934856380,
+  "removed_files": 433375,
+  "free_bytes": {
+    "D:/": 389799022592,
+    "E:/": 338248003584
+  }
+}

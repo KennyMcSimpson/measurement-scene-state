@@ -1,0 +1,67 @@
+diff --git a/models/drmvsnet.py b/models/drmvsnet.py
+index e0b35ab..af2b458 100644
+--- a/models/drmvsnet.py
++++ b/models/drmvsnet.py
+@@ -136,7 +136,9 @@ class UNetConvLSTM(nn.Module):
+             - h2: [B, 16, H/4, W/4] (quarter resolution)
+         """
+         if idx ==0 : # input the first layer of input image
+-           hidden_state = self._init_hidden(batch_size=input_tensor.size(0))
++            hidden_state = self._init_hidden(
++                batch_size=input_tensor.size(0), device=input_tensor.device
++            )
+ 
+         layer_output_list = []
+         last_state_list   = []
+@@ -207,10 +209,10 @@ class UNetConvLSTM(nn.Module):
+ 
+             return prob_volume
+ 
+-    def _init_hidden(self, batch_size):
++    def _init_hidden(self, batch_size, device=None):
+         init_states = []
+         for i in range(self.num_layers):
+-            init_states.append(self.cell_list[i].init_hidden(batch_size))
++            init_states.append(self.cell_list[i].init_hidden(batch_size, device=device))
+         return init_states
+ 
+     @staticmethod
+@@ -359,9 +361,13 @@ class EMVSNet(nn.Module):
+         # Test phase
+         else:
+             shape = ref_feature.shape
+-            depth_image = torch.zeros(shape[0], shape[2], shape[3]).cuda()  # B * H * W
+-            max_prob_image = torch.zeros(shape[0], shape[2], shape[3]).cuda()
+-            exp_sum = torch.zeros(shape[0], shape[2], shape[3]).cuda()
++            depth_image = torch.zeros(
++                shape[0], shape[2], shape[3], device=ref_feature.device
++            )  # B * H * W
++            max_prob_image = torch.zeros(
++                shape[0], shape[2], shape[3], device=ref_feature.device
++            )
++            exp_sum = torch.zeros(shape[0], shape[2], shape[3], device=ref_feature.device)
+ 
+             for d in range(num_depth):
+                 ref_volume = ref_feature
+diff --git a/models/module.py b/models/module.py
+index b4cd9ab..8a948fe 100644
+--- a/models/module.py
++++ b/models/module.py
+@@ -91,9 +91,14 @@ class ConvLSTMCell(nn.Module):
+         
+         return h_next, c_next
+ 
+-    def init_hidden(self, batch_size):
+-        return (Variable(torch.zeros(batch_size, self.hidden_dim, self.height, self.width)).cuda(),
+-                Variable(torch.zeros(batch_size, self.hidden_dim, self.height, self.width)).cuda())
++    def init_hidden(self, batch_size, device=None):
++        # Keep the original state shapes while allowing the project adapter to run on any
++        # selected torch device (the upstream code hard-coded CUDA here).
++        device = device or next(self.parameters()).device
++        return (
++            Variable(torch.zeros(batch_size, self.hidden_dim, self.height, self.width, device=device)),
++            Variable(torch.zeros(batch_size, self.hidden_dim, self.height, self.width, device=device)),
++        )
+ 
+ def convgnrelu(in_channels, out_channels, kernel_size=3, stride=1,dilation=1, bias=True, group_channel=8):
+     return nn.Sequential(

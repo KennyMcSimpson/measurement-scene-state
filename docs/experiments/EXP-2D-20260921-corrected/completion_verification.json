@@ -1,0 +1,23 @@
+{
+  "status": "verified",
+  "checks": {
+    "complete": true,
+    "split_identity": true,
+    "sealed_identity": true,
+    "protocol_unchanged": true,
+    "selection_unchanged": true,
+    "method_complete_pair_coverage": true,
+    "trajectory_coverage": true,
+    "code_unchanged_during_run": true,
+    "unaffected_metrics_exactly_reproduced": true,
+    "actual_cache_count": true
+  },
+  "raw_rows": 2424,
+  "validation_pairs": 32,
+  "validation_sequences": 16,
+  "selected_eta": 5.0,
+  "selected_global_schedule": [
+    "OFF",
+    "ALL"
+  ]
+}

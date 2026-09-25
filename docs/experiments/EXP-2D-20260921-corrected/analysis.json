@@ -1,0 +1,676 @@
+{
+  "schema": "mcss.vision_probe.analysis.v1",
+  "status": "complete",
+  "official_benchmark": false,
+  "scope": "Frozen DINO features, observed RGB feedback, per-image private writes; not full inverse JEPA or streaming TTT",
+  "interval_note": "Descriptive paired percentile bootstrap, 10000 draws over sequences; no multiplicity correction",
+  "selected_eta": 5.0,
+  "splits": {
+    "discovery": {
+      "methods": {
+        "OFFOFF": {
+          "n_pairs": 24,
+          "mean_object_iou": 0.3648036116113265,
+          "foreground_iou": 0.5251324257502953,
+          "rgb_mse": 0.023526840552221984,
+          "delta_iou_vs_off": {
+            "mean": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "n_sequences": 12,
+            "pair_wins": 0,
+            "pair_losses": 0,
+            "pair_ties": 24,
+            "per_sequence": {
+              "sheep": 0.0,
+              "color-run": 0.0,
+              "paragliding": 0.0,
+              "lucia": 0.0,
+              "dancing": 0.0,
+              "classic-car": 0.0,
+              "cat-girl": 0.0,
+              "lindy-hop": 0.0,
+              "drone": 0.0,
+              "tractor-sand": 0.0,
+              "bmx-bumps": 0.0,
+              "motocross-bumps": 0.0
+            }
+          },
+          "action_pairs": {
+            "OFF/OFF": 24
+          },
+          "mean_final_a_norm": 0.0,
+          "mean_final_b_norm": 0.0,
+          "mean_committed_write_events": 0.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "AA": {
+          "n_pairs": 24,
+          "mean_object_iou": 0.3650733431180318,
+          "foreground_iou": 0.527867941185832,
+          "rgb_mse": 0.01328980314428918,
+          "delta_iou_vs_off": {
+            "mean": 0.0002697315067052841,
+            "lower95": -0.0007250862661749124,
+            "upper95": 0.001225207389021913,
+            "n_sequences": 12,
+            "pair_wins": 4,
+            "pair_losses": 3,
+            "pair_ties": 17,
+            "per_sequence": {
+              "sheep": 0.0,
+              "color-run": 0.001297980546951294,
+              "paragliding": 0.0,
+              "lucia": 0.0,
+              "dancing": 0.0,
+              "classic-car": 0.003125011920928955,
+              "cat-girl": -0.001916050910949707,
+              "lindy-hop": 0.0029761940240859985,
+              "drone": 0.001201920211315155,
+              "tractor-sand": 0.0,
+              "bmx-bumps": 0.0,
+              "motocross-bumps": -0.003448277711868286
+            }
+          },
+          "action_pairs": {
+            "A/A": 24
+          },
+          "mean_final_a_norm": 0.19690420106053352,
+          "mean_final_b_norm": 0.0,
+          "mean_committed_write_events": 2.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "BB": {
+          "n_pairs": 24,
+          "mean_object_iou": 0.3635406121611595,
+          "foreground_iou": 0.5276715736836195,
+          "rgb_mse": 0.013486502886128923,
+          "delta_iou_vs_off": {
+            "mean": -0.00126299945016702,
+            "lower95": -0.0037603835420062146,
+            "upper95": 0.0007965123901764551,
+            "n_sequences": 12,
+            "pair_wins": 4,
+            "pair_losses": 3,
+            "pair_ties": 17,
+            "per_sequence": {
+              "sheep": 0.0,
+              "color-run": -0.011280655860900879,
+              "paragliding": 0.0,
+              "lucia": 0.0,
+              "dancing": 0.0,
+              "classic-car": 0.003125011920928955,
+              "cat-girl": -0.0077301859855651855,
+              "lindy-hop": 0.0029761940240859985,
+              "drone": 0.001201920211315155,
+              "tractor-sand": 0.0,
+              "bmx-bumps": 0.0,
+              "motocross-bumps": -0.003448277711868286
+            }
+          },
+          "action_pairs": {
+            "B/B": 24
+          },
+          "mean_final_a_norm": 0.0,
+          "mean_final_b_norm": 0.21961971124013266,
+          "mean_committed_write_events": 2.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "ALLALL": {
+          "n_pairs": 24,
+          "mean_object_iou": 0.3616920768593748,
+          "foreground_iou": 0.5259642964228988,
+          "rgb_mse": 0.014836696015360454,
+          "delta_iou_vs_off": {
+            "mean": -0.0031115347519516945,
+            "lower95": -0.007584656014417608,
+            "upper95": 0.0007402030751109123,
+            "n_sequences": 12,
+            "pair_wins": 3,
+            "pair_losses": 6,
+            "pair_ties": 15,
+            "per_sequence": {
+              "sheep": 0.0,
+              "color-run": -0.01638662815093994,
+              "paragliding": 0.0,
+              "lucia": 0.0,
+              "dancing": -0.010416671633720398,
+              "classic-car": 0.003225088119506836,
+              "cat-girl": -0.019417554140090942,
+              "lindy-hop": 0.003918647766113281,
+              "drone": 0.0017387010157108307,
+              "tractor-sand": 0.0,
+              "bmx-bumps": 0.0,
+              "motocross-bumps": 0.0
+            }
+          },
+          "action_pairs": {
+            "ALL/ALL": 24
+          },
+          "mean_final_a_norm": 0.14822036741922298,
+          "mean_final_b_norm": 0.16127988401179513,
+          "mean_committed_write_events": 4.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "residual_selector": {
+          "n_pairs": 24,
+          "mean_object_iou": 0.3630091892555356,
+          "foreground_iou": 0.5280969298134247,
+          "rgb_mse": 0.011524832613455752,
+          "delta_iou_vs_off": {
+            "mean": -0.001794422355790933,
+            "lower95": -0.0051476193669562536,
+            "upper95": 0.0009881484632690747,
+            "n_sequences": 12,
+            "pair_wins": 3,
+            "pair_losses": 4,
+            "pair_ties": 17,
+            "per_sequence": {
+              "sheep": 0.0,
+              "color-run": -0.011786118149757385,
+              "paragliding": 0.0,
+              "lucia": 0.0,
+              "dancing": 0.0,
+              "classic-car": 0.004166692495346069,
+              "cat-girl": -0.015180259943008423,
+              "lindy-hop": 0.0029761940240859985,
+              "drone": 0.0017387010157108307,
+              "tractor-sand": 0.0,
+              "bmx-bumps": 0.0,
+              "motocross-bumps": -0.003448277711868286
+            }
+          },
+          "action_pairs": {
+            "A/ALL": 3,
+            "ALL/ALL": 4,
+            "ALL/A": 10,
+            "A/B": 1,
+            "A/A": 3,
+            "B/ALL": 1,
+            "ALL/B": 1,
+            "B/A": 1
+          },
+          "mean_final_a_norm": 0.1558405477553606,
+          "mean_final_b_norm": 0.14355900480101505,
+          "mean_committed_write_events": 2.9583333333333335,
+          "mean_candidate_readouts": 8.0
+        },
+        "oracle_bestconstantperpair": {
+          "n_pairs": 24,
+          "mean_object_iou": 0.3658226501817505,
+          "foreground_iou": 0.5287614744156599,
+          "rgb_mse": 0.020317038773403812,
+          "delta_iou_vs_off": {
+            "mean": 0.0010190385704239209,
+            "lower95": 0.0002003684639930725,
+            "upper95": 0.001961979138044019,
+            "n_sequences": 12,
+            "pair_wins": 4,
+            "pair_losses": 0,
+            "pair_ties": 20,
+            "per_sequence": {
+              "sheep": 0.0,
+              "color-run": 0.00240442156791687,
+              "paragliding": 0.0,
+              "lucia": 0.0,
+              "dancing": 0.0,
+              "classic-car": 0.004166692495346069,
+              "cat-girl": 0.0,
+              "lindy-hop": 0.003918647766113281,
+              "drone": 0.0017387010157108307,
+              "tractor-sand": 0.0,
+              "bmx-bumps": 0.0,
+              "motocross-bumps": 0.0
+            }
+          },
+          "action_pairs": {
+            "OFF/OFF": 20,
+            "A/A": 1,
+            "ALL/ALL": 3
+          },
+          "mean_final_a_norm": 0.03369422070682049,
+          "mean_final_b_norm": 0.026597684249281883,
+          "mean_committed_write_events": 0.5833333333333334,
+          "mean_candidate_readouts": 0.0
+        },
+        "oracle_bestsequenceperpair": {
+          "n_pairs": 24,
+          "mean_object_iou": 0.3670975885664423,
+          "foreground_iou": 0.5310120241095623,
+          "rgb_mse": 0.020816187413098913,
+          "delta_iou_vs_off": {
+            "mean": 0.002293976955115795,
+            "lower95": 0.0006905204306046168,
+            "upper95": 0.004243094528404373,
+            "n_sequences": 12,
+            "pair_wins": 7,
+            "pair_losses": 0,
+            "pair_ties": 17,
+            "per_sequence": {
+              "sheep": 0.0,
+              "color-run": 0.00240442156791687,
+              "paragliding": 0.0,
+              "lucia": 0.0,
+              "dancing": 0.010416656732559204,
+              "classic-car": 0.00709158182144165,
+              "cat-girl": 0.001957714557647705,
+              "lindy-hop": 0.003918647766113281,
+              "drone": 0.0017387010157108307,
+              "tractor-sand": 0.0,
+              "bmx-bumps": 0.0,
+              "motocross-bumps": 0.0
+            }
+          },
+          "action_pairs": {
+            "OFF/OFF": 17,
+            "OFF/A": 1,
+            "OFF/ALL": 2,
+            "ALL/OFF": 1,
+            "B/ALL": 1,
+            "OFF/B": 1,
+            "ALL/ALL": 1
+          },
+          "mean_final_a_norm": 0.03483624942600727,
+          "mean_final_b_norm": 0.04702328580121199,
+          "mean_committed_write_events": 0.625,
+          "mean_candidate_readouts": 0.0
+        }
+      },
+      "oracle_trajectory_minus_oracle_constant": {
+        "mean": 0.0012749383846918743,
+        "lower95": 0.0,
+        "upper95": 0.0031741907199223838,
+        "n_sequences": 12,
+        "pair_wins": 4,
+        "pair_losses": 0,
+        "pair_ties": 20,
+        "per_sequence": {
+          "sheep": 0.0,
+          "color-run": 0.0,
+          "paragliding": 0.0,
+          "lucia": 0.0,
+          "dancing": 0.010416656732559204,
+          "classic-car": 0.002924889326095581,
+          "cat-girl": 0.001957714557647705,
+          "lindy-hop": 0.0,
+          "drone": 0.0,
+          "tractor-sand": 0.0,
+          "bmx-bumps": 0.0,
+          "motocross-bumps": 0.0
+        }
+      },
+      "pooled_rgb_improvement_iou_delta_correlation_descriptive_only": -0.007494584827871474,
+      "correlation_note": "Actions and target frames are dependent; this correlation has no inferential p-value"
+    },
+    "validation": {
+      "methods": {
+        "OFFOFF": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.443378038238734,
+          "foreground_iou": 0.5499347192235291,
+          "rgb_mse": 0.03021895349957049,
+          "delta_iou_vs_off": {
+            "mean": 0.0,
+            "lower95": 0.0,
+            "upper95": 0.0,
+            "n_sequences": 16,
+            "pair_wins": 0,
+            "pair_losses": 0,
+            "pair_ties": 32,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.0,
+              "rallye": 0.0,
+              "scooter-board": 0.0,
+              "motorbike": 0.0,
+              "longboard": 0.0,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": 0.0,
+              "stroller": 0.0,
+              "disc-jockey": 0.0,
+              "dogs-scale": 0.0,
+              "koala": 0.0,
+              "scooter-gray": 0.0,
+              "lady-running": 0.0,
+              "elephant": 0.0
+            }
+          },
+          "action_pairs": {
+            "OFF/OFF": 32
+          },
+          "mean_final_a_norm": 0.0,
+          "mean_final_b_norm": 0.0,
+          "mean_committed_write_events": 0.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "AA": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.44260581908747554,
+          "foreground_iou": 0.5492433425970376,
+          "rgb_mse": 0.015112721375771798,
+          "delta_iou_vs_off": {
+            "mean": -0.0007722191512584686,
+            "lower95": -0.006305134971626103,
+            "upper95": 0.003473675926215946,
+            "n_sequences": 16,
+            "pair_wins": 6,
+            "pair_losses": 3,
+            "pair_ties": 23,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.003037095069885254,
+              "rallye": 0.0,
+              "scooter-board": 0.0,
+              "motorbike": 0.0039682537317276,
+              "longboard": -0.003703698515892029,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": -0.035714298486709595,
+              "stroller": 0.003170296549797058,
+              "disc-jockey": 0.00048698484897613525,
+              "dogs-scale": 0.0,
+              "koala": -0.007575780153274536,
+              "scooter-gray": 0.0,
+              "lady-running": 0.0069213807582855225,
+              "elephant": 0.017054259777069092
+            }
+          },
+          "action_pairs": {
+            "A/A": 32
+          },
+          "mean_final_a_norm": 0.21844667196273804,
+          "mean_final_b_norm": 0.0,
+          "mean_committed_write_events": 2.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "BB": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.4427679916843772,
+          "foreground_iou": 0.548975067678839,
+          "rgb_mse": 0.015318231613491662,
+          "delta_iou_vs_off": {
+            "mean": -0.0006100465543568134,
+            "lower95": -0.0062529803719371556,
+            "upper95": 0.0038440892705693818,
+            "n_sequences": 16,
+            "pair_wins": 5,
+            "pair_losses": 4,
+            "pair_ties": 23,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.003037095069885254,
+              "rallye": 0.0,
+              "scooter-board": 0.0,
+              "motorbike": 0.0,
+              "longboard": -0.003703698515892029,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": -0.035714298486709595,
+              "stroller": 0.003170296549797058,
+              "disc-jockey": -0.00101451575756073,
+              "dogs-scale": 0.0,
+              "koala": -0.007575780153274536,
+              "scooter-gray": 0.008064515888690948,
+              "lady-running": 0.0069213807582855225,
+              "elephant": 0.017054259777069092
+            }
+          },
+          "action_pairs": {
+            "B/B": 32
+          },
+          "mean_final_a_norm": 0.0,
+          "mean_final_b_norm": 0.23553487239405513,
+          "mean_committed_write_events": 2.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "ALLALL": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.4420061116106808,
+          "foreground_iou": 0.5489761368371546,
+          "rgb_mse": 0.016157932521309704,
+          "delta_iou_vs_off": {
+            "mean": -0.0013719266280531883,
+            "lower95": -0.006954761873930693,
+            "upper95": 0.0030738428467884655,
+            "n_sequences": 16,
+            "pair_wins": 6,
+            "pair_losses": 4,
+            "pair_ties": 22,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.003037095069885254,
+              "rallye": 0.0,
+              "scooter-board": 0.0,
+              "motorbike": 0.00158730149269104,
+              "longboard": 0.0,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": -0.035714298486709595,
+              "stroller": 0.003170296549797058,
+              "disc-jockey": 0.0020742714405059814,
+              "dogs-scale": -0.00746956467628479,
+              "koala": -0.007575780153274536,
+              "scooter-gray": 0.0,
+              "lady-running": 0.0,
+              "elephant": 0.018939852714538574
+            }
+          },
+          "action_pairs": {
+            "ALL/ALL": 32
+          },
+          "mean_final_a_norm": 0.16924770548939705,
+          "mean_final_b_norm": 0.17687964509241283,
+          "mean_committed_write_events": 4.0,
+          "mean_candidate_readouts": 0.0
+        },
+        "residual_selector": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.4402692331932485,
+          "foreground_iou": 0.5469224941916764,
+          "rgb_mse": 0.012501753881224431,
+          "delta_iou_vs_off": {
+            "mean": -0.0031088050454854965,
+            "lower95": -0.013815869390964507,
+            "upper95": 0.004671042412519452,
+            "n_sequences": 16,
+            "pair_wins": 6,
+            "pair_losses": 5,
+            "pair_ties": 21,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.003037095069885254,
+              "rallye": 0.0,
+              "scooter-board": 0.0,
+              "motorbike": 0.00158730149269104,
+              "longboard": -0.003703698515892029,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": -0.0714285671710968,
+              "stroller": 0.003170296549797058,
+              "disc-jockey": 0.0020742714405059814,
+              "dogs-scale": -0.00746956467628479,
+              "koala": -0.007575780153274536,
+              "scooter-gray": 0.0,
+              "lady-running": 0.0,
+              "elephant": 0.03056776523590088
+            }
+          },
+          "action_pairs": {
+            "B/B": 2,
+            "A/A": 5,
+            "ALL/ALL": 9,
+            "ALL/A": 3,
+            "A/B": 1,
+            "A/ALL": 3,
+            "B/A": 3,
+            "B/ALL": 2,
+            "ALL/B": 4
+          },
+          "mean_final_a_norm": 0.15044442750513554,
+          "mean_final_b_norm": 0.16872402757871896,
+          "mean_committed_write_events": 2.9375,
+          "mean_candidate_readouts": 8.0
+        },
+        "oracle_bestconstantperpair": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.4469907619059086,
+          "foreground_iou": 0.5545060806907713,
+          "rgb_mse": 0.023732639499939978,
+          "delta_iou_vs_off": {
+            "mean": 0.0036127236671745777,
+            "lower95": 0.0008702893974259497,
+            "upper95": 0.007756313506979494,
+            "n_sequences": 16,
+            "pair_wins": 8,
+            "pair_losses": 0,
+            "pair_ties": 24,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.003037095069885254,
+              "rallye": 0.0,
+              "scooter-board": 0.0,
+              "motorbike": 0.0039682537317276,
+              "longboard": 0.0,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": 0.0,
+              "stroller": 0.003170296549797058,
+              "disc-jockey": 0.0020742714405059814,
+              "dogs-scale": 0.0,
+              "koala": 0.0,
+              "scooter-gray": 0.008064515888690948,
+              "lady-running": 0.0069213807582855225,
+              "elephant": 0.03056776523590088
+            }
+          },
+          "action_pairs": {
+            "OFF/OFF": 24,
+            "A/A": 5,
+            "ALL/ALL": 2,
+            "B/B": 1
+          },
+          "mean_final_a_norm": 0.05259032268077135,
+          "mean_final_b_norm": 0.02247827174142003,
+          "mean_committed_write_events": 0.625,
+          "mean_candidate_readouts": 0.0
+        },
+        "oracle_bestsequenceperpair": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.455143578350544,
+          "foreground_iou": 0.5548463971354067,
+          "rgb_mse": 0.024065873789368197,
+          "delta_iou_vs_off": {
+            "mean": 0.011765540111809969,
+            "lower95": 0.0017408104264177383,
+            "upper95": 0.028471336991060518,
+            "n_sequences": 16,
+            "pair_wins": 10,
+            "pair_losses": 0,
+            "pair_ties": 22,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.003037095069885254,
+              "rallye": 0.0,
+              "scooter-board": 0.125,
+              "motorbike": 0.0039682537317276,
+              "longboard": 0.0,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": 0.0,
+              "stroller": 0.003170296549797058,
+              "disc-jockey": 0.0020742714405059814,
+              "dogs-scale": 0.0,
+              "koala": 0.00544506311416626,
+              "scooter-gray": 0.008064515888690948,
+              "lady-running": 0.0069213807582855225,
+              "elephant": 0.03056776523590088
+            }
+          },
+          "action_pairs": {
+            "OFF/OFF": 22,
+            "OFF/A": 3,
+            "OFF/ALL": 2,
+            "ALL/A": 1,
+            "B/ALL": 1,
+            "OFF/B": 2,
+            "A/ALL": 1
+          },
+          "mean_final_a_norm": 0.039882487151771784,
+          "mean_final_b_norm": 0.03396565746515989,
+          "mean_committed_write_events": 0.5625,
+          "mean_candidate_readouts": 0.0
+        },
+        "bestgloballyfixed": {
+          "n_pairs": 32,
+          "mean_object_iou": 0.45083677442744374,
+          "foreground_iou": 0.5500670387409627,
+          "rgb_mse": 0.01770068844780326,
+          "delta_iou_vs_off": {
+            "mean": 0.007458736188709736,
+            "lower95": -0.004642183310352266,
+            "upper95": 0.02526478739455342,
+            "n_sequences": 16,
+            "pair_wins": 7,
+            "pair_losses": 4,
+            "pair_ties": 21,
+            "per_sequence": {
+              "dog-agility": 0.0,
+              "kid-football": 0.003037095069885254,
+              "rallye": 0.0,
+              "scooter-board": 0.125,
+              "motorbike": 0.0039682537317276,
+              "longboard": 0.0,
+              "mallard-fly": 0.0,
+              "bear": 0.0,
+              "hike": -0.035714298486709595,
+              "stroller": 0.003170296549797058,
+              "disc-jockey": -0.00101451575756073,
+              "dogs-scale": 0.0,
+              "koala": -0.007575780153274536,
+              "scooter-gray": 0.004493087530136108,
+              "lady-running": 0.0069213807582855225,
+              "elephant": 0.017054259777069092
+            }
+          },
+          "action_pairs": {
+            "OFF/ALL": 32
+          },
+          "mean_final_a_norm": 0.13686346705071628,
+          "mean_final_b_norm": 0.1454582952428609,
+          "mean_committed_write_events": 2.0,
+          "mean_candidate_readouts": 0.0
+        }
+      },
+      "oracle_trajectory_minus_oracle_constant": {
+        "mean": 0.008152816444635391,
+        "lower95": 0.0,
+        "upper95": 0.024118132889270782,
+        "n_sequences": 16,
+        "pair_wins": 2,
+        "pair_losses": 0,
+        "pair_ties": 30,
+        "per_sequence": {
+          "dog-agility": 0.0,
+          "kid-football": 0.0,
+          "rallye": 0.0,
+          "scooter-board": 0.125,
+          "motorbike": 0.0,
+          "longboard": 0.0,
+          "mallard-fly": 0.0,
+          "bear": 0.0,
+          "hike": 0.0,
+          "stroller": 0.0,
+          "disc-jockey": 0.0,
+          "dogs-scale": 0.0,
+          "koala": 0.00544506311416626,
+          "scooter-gray": 0.0,
+          "lady-running": 0.0,
+          "elephant": 0.0
+        }
+      },
+      "pooled_rgb_improvement_iou_delta_correlation_descriptive_only": 0.14921374109252122,
+      "correlation_note": "Actions and target frames are dependent; this correlation has no inferential p-value"
+    }
+  }
+}

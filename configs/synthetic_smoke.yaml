@@ -1,0 +1,28 @@
+seed: 17
+device: cpu
+dataset:
+  name: synthetic
+  root: null
+  image_size: [32, 32]
+  context_views: 2
+  target_views: 1
+  length: 8
+model:
+  mode: fixed
+  voxel_resolution: 16
+  image_feature_dim: 16
+  state_feature_dim: 16
+  refinement_blocks: 1
+  n_samples: 24
+  ray_chunk_size: 512
+training:
+  output_dir: outputs/synthetic_smoke
+  batch_size: 1
+  learning_rate: 0.001
+  max_steps: 8
+  num_workers: 0
+  amp: false
+  log_every: 1
+  checkpoint_every: 4
+  measurements: [rgb, depth, normal, point, visibility]
+

@@ -1,0 +1,1040 @@
+{
+  "schema": "vision_2d_probe_assets.v1",
+  "run_started_at": "2026-09-20T16:33:42.749627+00:00",
+  "run_finished_at": "2026-09-20T16:33:44.385145+00:00",
+  "project_root": "<workspace-root>",
+  "provenance": {
+    "local_sha256_note": "SHA-256 values were computed locally after download; no official checksum was asserted.",
+    "archive_source": "https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-trainval-480p.zip",
+    "archive_source_page": "https://davischallenge.org/davis2017/code.html",
+    "checkpoint_source": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+    "checkpoint_source_page": "https://github.com/facebookresearch/dinov2"
+  },
+  "dataset": {
+    "dataset": "DAVIS-2017 trainval 480p",
+    "official_page": "https://davischallenge.org/davis2017/code.html",
+    "archive": {
+      "url": "https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-trainval-480p.zip",
+      "destination": "data\\vision_2d_probe\\raw\\DAVIS-2017-trainval-480p.zip",
+      "downloaded": false,
+      "size_bytes": 832766765,
+      "sha256": "e3d0b5b77c3d031b000a19e0e25e3e2cac65d183755601bc2cf066df1a2aa492",
+      "remote": {
+        "status_code": 200,
+        "content_length": "832766765",
+        "content_type": "application/zip",
+        "etag": "\"31a3032d-54c6d0af8b4dc\"",
+        "last_modified": "Wed, 05 Apr 2017 15:28:22 GMT",
+        "final_url": "https://data.vision.ee.ethz.ch/csergi/share/davis/DAVIS-2017-trainval-480p.zip"
+      },
+      "local_verified_against": "HTTP Content-Length when available; SHA-256 is local only"
+    },
+    "extraction": {
+      "extracted": false,
+      "destination": "data\\vision_2d_probe\\davis2017_trainval_480p",
+      "reason": "destination already exists"
+    },
+    "dataset_root": "data\\vision_2d_probe\\davis2017_trainval_480p\\DAVIS",
+    "image_root": "JPEGImages\\480p",
+    "mask_root": "Annotations\\480p",
+    "split_root": "ImageSets\\2017",
+    "split_policy": "official train.txt and val.txt are inventory splits; experimental allocation is recorded separately",
+    "split_counts": {
+      "train": 60,
+      "val": 30
+    },
+    "train_val_overlap": [],
+    "sequences": {
+      "train": [
+        {
+          "sequence": "bear",
+          "image_dir": "JPEGImages\\480p\\bear",
+          "mask_dir": "Annotations\\480p\\bear",
+          "frame_count": 82,
+          "mask_count": 82,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00081.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "bmx-bumps",
+          "image_dir": "JPEGImages\\480p\\bmx-bumps",
+          "mask_dir": "Annotations\\480p\\bmx-bumps",
+          "frame_count": 90,
+          "mask_count": 90,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00089.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "boat",
+          "image_dir": "JPEGImages\\480p\\boat",
+          "mask_dir": "Annotations\\480p\\boat",
+          "frame_count": 75,
+          "mask_count": 75,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00074.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "boxing-fisheye",
+          "image_dir": "JPEGImages\\480p\\boxing-fisheye",
+          "mask_dir": "Annotations\\480p\\boxing-fisheye",
+          "frame_count": 87,
+          "mask_count": 87,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00086.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "breakdance-flare",
+          "image_dir": "JPEGImages\\480p\\breakdance-flare",
+          "mask_dir": "Annotations\\480p\\breakdance-flare",
+          "frame_count": 71,
+          "mask_count": 71,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00070.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "bus",
+          "image_dir": "JPEGImages\\480p\\bus",
+          "mask_dir": "Annotations\\480p\\bus",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "car-turn",
+          "image_dir": "JPEGImages\\480p\\car-turn",
+          "mask_dir": "Annotations\\480p\\car-turn",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "cat-girl",
+          "image_dir": "JPEGImages\\480p\\cat-girl",
+          "mask_dir": "Annotations\\480p\\cat-girl",
+          "frame_count": 89,
+          "mask_count": 89,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00088.jpg",
+          "width": 911,
+          "height": 480
+        },
+        {
+          "sequence": "classic-car",
+          "image_dir": "JPEGImages\\480p\\classic-car",
+          "mask_dir": "Annotations\\480p\\classic-car",
+          "frame_count": 63,
+          "mask_count": 63,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00062.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "color-run",
+          "image_dir": "JPEGImages\\480p\\color-run",
+          "mask_dir": "Annotations\\480p\\color-run",
+          "frame_count": 84,
+          "mask_count": 84,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00083.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "crossing",
+          "image_dir": "JPEGImages\\480p\\crossing",
+          "mask_dir": "Annotations\\480p\\crossing",
+          "frame_count": 52,
+          "mask_count": 52,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00051.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "dance-jump",
+          "image_dir": "JPEGImages\\480p\\dance-jump",
+          "mask_dir": "Annotations\\480p\\dance-jump",
+          "frame_count": 60,
+          "mask_count": 60,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00059.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "dancing",
+          "image_dir": "JPEGImages\\480p\\dancing",
+          "mask_dir": "Annotations\\480p\\dancing",
+          "frame_count": 62,
+          "mask_count": 62,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00061.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "disc-jockey",
+          "image_dir": "JPEGImages\\480p\\disc-jockey",
+          "mask_dir": "Annotations\\480p\\disc-jockey",
+          "frame_count": 76,
+          "mask_count": 76,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00075.jpg",
+          "width": 1138,
+          "height": 480
+        },
+        {
+          "sequence": "dog-agility",
+          "image_dir": "JPEGImages\\480p\\dog-agility",
+          "mask_dir": "Annotations\\480p\\dog-agility",
+          "frame_count": 25,
+          "mask_count": 25,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00024.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "dog-gooses",
+          "image_dir": "JPEGImages\\480p\\dog-gooses",
+          "mask_dir": "Annotations\\480p\\dog-gooses",
+          "frame_count": 86,
+          "mask_count": 86,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00085.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "dogs-scale",
+          "image_dir": "JPEGImages\\480p\\dogs-scale",
+          "mask_dir": "Annotations\\480p\\dogs-scale",
+          "frame_count": 83,
+          "mask_count": 83,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00082.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "drift-turn",
+          "image_dir": "JPEGImages\\480p\\drift-turn",
+          "mask_dir": "Annotations\\480p\\drift-turn",
+          "frame_count": 64,
+          "mask_count": 64,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00063.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "drone",
+          "image_dir": "JPEGImages\\480p\\drone",
+          "mask_dir": "Annotations\\480p\\drone",
+          "frame_count": 91,
+          "mask_count": 91,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00090.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "elephant",
+          "image_dir": "JPEGImages\\480p\\elephant",
+          "mask_dir": "Annotations\\480p\\elephant",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "flamingo",
+          "image_dir": "JPEGImages\\480p\\flamingo",
+          "mask_dir": "Annotations\\480p\\flamingo",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "hike",
+          "image_dir": "JPEGImages\\480p\\hike",
+          "mask_dir": "Annotations\\480p\\hike",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "hockey",
+          "image_dir": "JPEGImages\\480p\\hockey",
+          "mask_dir": "Annotations\\480p\\hockey",
+          "frame_count": 75,
+          "mask_count": 75,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00074.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "horsejump-low",
+          "image_dir": "JPEGImages\\480p\\horsejump-low",
+          "mask_dir": "Annotations\\480p\\horsejump-low",
+          "frame_count": 60,
+          "mask_count": 60,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00059.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "kid-football",
+          "image_dir": "JPEGImages\\480p\\kid-football",
+          "mask_dir": "Annotations\\480p\\kid-football",
+          "frame_count": 68,
+          "mask_count": 68,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00067.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "kite-walk",
+          "image_dir": "JPEGImages\\480p\\kite-walk",
+          "mask_dir": "Annotations\\480p\\kite-walk",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "koala",
+          "image_dir": "JPEGImages\\480p\\koala",
+          "mask_dir": "Annotations\\480p\\koala",
+          "frame_count": 100,
+          "mask_count": 100,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00099.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "lady-running",
+          "image_dir": "JPEGImages\\480p\\lady-running",
+          "mask_dir": "Annotations\\480p\\lady-running",
+          "frame_count": 65,
+          "mask_count": 65,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00064.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "lindy-hop",
+          "image_dir": "JPEGImages\\480p\\lindy-hop",
+          "mask_dir": "Annotations\\480p\\lindy-hop",
+          "frame_count": 73,
+          "mask_count": 73,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00072.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "longboard",
+          "image_dir": "JPEGImages\\480p\\longboard",
+          "mask_dir": "Annotations\\480p\\longboard",
+          "frame_count": 52,
+          "mask_count": 52,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00051.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "lucia",
+          "image_dir": "JPEGImages\\480p\\lucia",
+          "mask_dir": "Annotations\\480p\\lucia",
+          "frame_count": 70,
+          "mask_count": 70,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00069.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "mallard-fly",
+          "image_dir": "JPEGImages\\480p\\mallard-fly",
+          "mask_dir": "Annotations\\480p\\mallard-fly",
+          "frame_count": 70,
+          "mask_count": 70,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00069.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "mallard-water",
+          "image_dir": "JPEGImages\\480p\\mallard-water",
+          "mask_dir": "Annotations\\480p\\mallard-water",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "miami-surf",
+          "image_dir": "JPEGImages\\480p\\miami-surf",
+          "mask_dir": "Annotations\\480p\\miami-surf",
+          "frame_count": 70,
+          "mask_count": 70,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00069.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "motocross-bumps",
+          "image_dir": "JPEGImages\\480p\\motocross-bumps",
+          "mask_dir": "Annotations\\480p\\motocross-bumps",
+          "frame_count": 60,
+          "mask_count": 60,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00059.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "motorbike",
+          "image_dir": "JPEGImages\\480p\\motorbike",
+          "mask_dir": "Annotations\\480p\\motorbike",
+          "frame_count": 43,
+          "mask_count": 43,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00042.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "night-race",
+          "image_dir": "JPEGImages\\480p\\night-race",
+          "mask_dir": "Annotations\\480p\\night-race",
+          "frame_count": 46,
+          "mask_count": 46,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00045.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "paragliding",
+          "image_dir": "JPEGImages\\480p\\paragliding",
+          "mask_dir": "Annotations\\480p\\paragliding",
+          "frame_count": 70,
+          "mask_count": 70,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00069.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "planes-water",
+          "image_dir": "JPEGImages\\480p\\planes-water",
+          "mask_dir": "Annotations\\480p\\planes-water",
+          "frame_count": 38,
+          "mask_count": 38,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00037.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "rallye",
+          "image_dir": "JPEGImages\\480p\\rallye",
+          "mask_dir": "Annotations\\480p\\rallye",
+          "frame_count": 50,
+          "mask_count": 50,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00049.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "rhino",
+          "image_dir": "JPEGImages\\480p\\rhino",
+          "mask_dir": "Annotations\\480p\\rhino",
+          "frame_count": 90,
+          "mask_count": 90,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00089.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "rollerblade",
+          "image_dir": "JPEGImages\\480p\\rollerblade",
+          "mask_dir": "Annotations\\480p\\rollerblade",
+          "frame_count": 35,
+          "mask_count": 35,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00034.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "schoolgirls",
+          "image_dir": "JPEGImages\\480p\\schoolgirls",
+          "mask_dir": "Annotations\\480p\\schoolgirls",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "scooter-board",
+          "image_dir": "JPEGImages\\480p\\scooter-board",
+          "mask_dir": "Annotations\\480p\\scooter-board",
+          "frame_count": 91,
+          "mask_count": 91,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00090.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "scooter-gray",
+          "image_dir": "JPEGImages\\480p\\scooter-gray",
+          "mask_dir": "Annotations\\480p\\scooter-gray",
+          "frame_count": 75,
+          "mask_count": 75,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00074.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "sheep",
+          "image_dir": "JPEGImages\\480p\\sheep",
+          "mask_dir": "Annotations\\480p\\sheep",
+          "frame_count": 68,
+          "mask_count": 68,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00067.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "skate-park",
+          "image_dir": "JPEGImages\\480p\\skate-park",
+          "mask_dir": "Annotations\\480p\\skate-park",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "snowboard",
+          "image_dir": "JPEGImages\\480p\\snowboard",
+          "mask_dir": "Annotations\\480p\\snowboard",
+          "frame_count": 66,
+          "mask_count": 66,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00065.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "soccerball",
+          "image_dir": "JPEGImages\\480p\\soccerball",
+          "mask_dir": "Annotations\\480p\\soccerball",
+          "frame_count": 48,
+          "mask_count": 48,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00047.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "stroller",
+          "image_dir": "JPEGImages\\480p\\stroller",
+          "mask_dir": "Annotations\\480p\\stroller",
+          "frame_count": 91,
+          "mask_count": 91,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00090.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "stunt",
+          "image_dir": "JPEGImages\\480p\\stunt",
+          "mask_dir": "Annotations\\480p\\stunt",
+          "frame_count": 71,
+          "mask_count": 71,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00070.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "surf",
+          "image_dir": "JPEGImages\\480p\\surf",
+          "mask_dir": "Annotations\\480p\\surf",
+          "frame_count": 55,
+          "mask_count": 55,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00054.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "swing",
+          "image_dir": "JPEGImages\\480p\\swing",
+          "mask_dir": "Annotations\\480p\\swing",
+          "frame_count": 60,
+          "mask_count": 60,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00059.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "tennis",
+          "image_dir": "JPEGImages\\480p\\tennis",
+          "mask_dir": "Annotations\\480p\\tennis",
+          "frame_count": 70,
+          "mask_count": 70,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00069.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "tractor-sand",
+          "image_dir": "JPEGImages\\480p\\tractor-sand",
+          "mask_dir": "Annotations\\480p\\tractor-sand",
+          "frame_count": 76,
+          "mask_count": 76,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00075.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "train",
+          "image_dir": "JPEGImages\\480p\\train",
+          "mask_dir": "Annotations\\480p\\train",
+          "frame_count": 80,
+          "mask_count": 80,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00079.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "tuk-tuk",
+          "image_dir": "JPEGImages\\480p\\tuk-tuk",
+          "mask_dir": "Annotations\\480p\\tuk-tuk",
+          "frame_count": 59,
+          "mask_count": 59,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00058.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "upside-down",
+          "image_dir": "JPEGImages\\480p\\upside-down",
+          "mask_dir": "Annotations\\480p\\upside-down",
+          "frame_count": 65,
+          "mask_count": 65,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00064.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "varanus-cage",
+          "image_dir": "JPEGImages\\480p\\varanus-cage",
+          "mask_dir": "Annotations\\480p\\varanus-cage",
+          "frame_count": 67,
+          "mask_count": 67,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00066.jpg",
+          "width": 854,
+          "height": 480
+        },
+        {
+          "sequence": "walking",
+          "image_dir": "JPEGImages\\480p\\walking",
+          "mask_dir": "Annotations\\480p\\walking",
+          "frame_count": 72,
+          "mask_count": 72,
+          "missing_mask_count": 0,
+          "first_frame": "00000.jpg",
+          "last_frame": "00071.jpg",
+          "width": 854,
+          "height": 480
+        }
+      ],
+      "val": [
+        {
+          "sequence": "bike-packing",
+          "sealed": true
+        },
+        {
+          "sequence": "blackswan",
+          "sealed": true
+        },
+        {
+          "sequence": "bmx-trees",
+          "sealed": true
+        },
+        {
+          "sequence": "breakdance",
+          "sealed": true
+        },
+        {
+          "sequence": "camel",
+          "sealed": true
+        },
+        {
+          "sequence": "car-roundabout",
+          "sealed": true
+        },
+        {
+          "sequence": "car-shadow",
+          "sealed": true
+        },
+        {
+          "sequence": "cows",
+          "sealed": true
+        },
+        {
+          "sequence": "dance-twirl",
+          "sealed": true
+        },
+        {
+          "sequence": "dog",
+          "sealed": true
+        },
+        {
+          "sequence": "dogs-jump",
+          "sealed": true
+        },
+        {
+          "sequence": "drift-chicane",
+          "sealed": true
+        },
+        {
+          "sequence": "drift-straight",
+          "sealed": true
+        },
+        {
+          "sequence": "goat",
+          "sealed": true
+        },
+        {
+          "sequence": "gold-fish",
+          "sealed": true
+        },
+        {
+          "sequence": "horsejump-high",
+          "sealed": true
+        },
+        {
+          "sequence": "india",
+          "sealed": true
+        },
+        {
+          "sequence": "judo",
+          "sealed": true
+        },
+        {
+          "sequence": "kite-surf",
+          "sealed": true
+        },
+        {
+          "sequence": "lab-coat",
+          "sealed": true
+        },
+        {
+          "sequence": "libby",
+          "sealed": true
+        },
+        {
+          "sequence": "loading",
+          "sealed": true
+        },
+        {
+          "sequence": "mbike-trick",
+          "sealed": true
+        },
+        {
+          "sequence": "motocross-jump",
+          "sealed": true
+        },
+        {
+          "sequence": "paragliding-launch",
+          "sealed": true
+        },
+        {
+          "sequence": "parkour",
+          "sealed": true
+        },
+        {
+          "sequence": "pigs",
+          "sealed": true
+        },
+        {
+          "sequence": "scooter-black",
+          "sealed": true
+        },
+        {
+          "sequence": "shooting",
+          "sealed": true
+        },
+        {
+          "sequence": "soapbox",
+          "sealed": true
+        }
+      ]
+    }
+  },
+  "experiment_allocation": {
+    "source_split": "official train.txt",
+    "ordering": "ascending sha256(sequence_name encoded as UTF-8)",
+    "counts": {
+      "fit": 24,
+      "discovery": 12,
+      "validation": 16,
+      "reserve": 8
+    },
+    "groups": {
+      "fit": {
+        "count": 24,
+        "sequence_names": [
+          "surf",
+          "stunt",
+          "bus",
+          "flamingo",
+          "horsejump-low",
+          "train",
+          "planes-water",
+          "schoolgirls",
+          "boat",
+          "dance-jump",
+          "skate-park",
+          "rhino",
+          "swing",
+          "dog-gooses",
+          "hockey",
+          "night-race",
+          "drift-turn",
+          "walking",
+          "mallard-water",
+          "breakdance-flare",
+          "upside-down",
+          "boxing-fisheye",
+          "tuk-tuk",
+          "snowboard"
+        ]
+      },
+      "discovery": {
+        "count": 12,
+        "sequence_names": [
+          "sheep",
+          "color-run",
+          "paragliding",
+          "lucia",
+          "dancing",
+          "classic-car",
+          "cat-girl",
+          "lindy-hop",
+          "drone",
+          "tractor-sand",
+          "bmx-bumps",
+          "motocross-bumps"
+        ]
+      },
+      "validation": {
+        "count": 16,
+        "sequence_names": [
+          "dog-agility",
+          "kid-football",
+          "rallye",
+          "scooter-board",
+          "motorbike",
+          "longboard",
+          "mallard-fly",
+          "bear",
+          "hike",
+          "stroller",
+          "disc-jockey",
+          "dogs-scale",
+          "koala",
+          "scooter-gray",
+          "lady-running",
+          "elephant"
+        ]
+      },
+      "reserve": {
+        "count": 8,
+        "sequence_names": [
+          "varanus-cage",
+          "soccerball",
+          "crossing",
+          "rollerblade",
+          "kite-walk",
+          "miami-surf",
+          "tennis",
+          "car-turn"
+        ]
+      }
+    },
+    "official_val": {
+      "source_split": "official val.txt",
+      "sequence_count": 30,
+      "sequence_names": [
+        "bike-packing",
+        "blackswan",
+        "bmx-trees",
+        "breakdance",
+        "camel",
+        "car-roundabout",
+        "car-shadow",
+        "cows",
+        "dance-twirl",
+        "dog",
+        "dogs-jump",
+        "drift-chicane",
+        "drift-straight",
+        "goat",
+        "gold-fish",
+        "horsejump-high",
+        "india",
+        "judo",
+        "kite-surf",
+        "lab-coat",
+        "libby",
+        "loading",
+        "mbike-trick",
+        "motocross-jump",
+        "paragliding-launch",
+        "parkour",
+        "pigs",
+        "scooter-black",
+        "shooting",
+        "soapbox"
+      ],
+      "sealed": true,
+      "used_for_experiment": false
+    }
+  },
+  "weights": {
+    "url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth",
+    "destination": "data\\vision_2d_probe\\weights\\dinov2_vits14_pretrain.pth",
+    "downloaded": false,
+    "size_bytes": 88283115,
+    "sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "remote": {
+      "status_code": 200,
+      "content_length": "88283115",
+      "content_type": "binary/octet-stream",
+      "etag": "\"0bd1417efc23bdb1d69200156f5a22bc-11\"",
+      "last_modified": "Thu, 13 Apr 2023 22:01:20 GMT",
+      "final_url": "https://dl.fbaipublicfiles.com/dinov2/dinov2_vits14/dinov2_vits14_pretrain.pth"
+    },
+    "local_verified_against": "HTTP Content-Length when available; SHA-256 is local only"
+  }
+}

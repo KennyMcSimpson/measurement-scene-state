@@ -1,0 +1,64 @@
+{
+  "schema": "mcss.vision_probe.exploratory.v1",
+  "status": "complete",
+  "exploratory": true,
+  "official_benchmark": false,
+  "split_counts": {
+    "fit": 24,
+    "discovery": 12,
+    "validation": 16,
+    "sealed": 38
+  },
+  "feature_cache": {
+    "weight_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "model_source_sha256": "0f980f53b85c24e9fc15e544d388baf803b11bea2cf8a93c65ffc7d4f6d4e36b",
+    "size": 224
+  },
+  "discovery_selection": {
+    "eta": 5.0,
+    "action_pair": [
+      "OFF",
+      "ALL"
+    ],
+    "discovery_mean_metric": 0.3661236163849632,
+    "selection_rule": "discovery_mean_metric_only"
+  },
+  "validation": {
+    "bestgloballyfixed": {
+      "per_sequence_paired_delta": {
+        "dog-agility": 0.0,
+        "kid-football": 0.003037095069885254,
+        "rallye": 0.0,
+        "scooter-board": 0.125,
+        "motorbike": 0.0039682537317276,
+        "longboard": 0.0,
+        "mallard-fly": 0.0,
+        "bear": 0.0,
+        "hike": -0.035714298486709595,
+        "stroller": 0.003170296549797058,
+        "disc-jockey": -0.00101451575756073,
+        "dogs-scale": 0.0,
+        "koala": -0.007575780153274536,
+        "scooter-gray": 0.004493087530136108,
+        "lady-running": 0.0069213807582855225,
+        "elephant": 0.017054259777069092
+      },
+      "bootstrap1000": {
+        "mean": 0.007458736188709736,
+        "lower95": -0.0046598054468631744,
+        "upper95": 0.025279799476265907
+      }
+    }
+  },
+  "fixed_methods": [
+    "OFFOFF",
+    "AA",
+    "BB",
+    "ALLALL",
+    "residual_selector"
+  ],
+  "oracle_methods": [
+    "oracle_bestconstantperpair",
+    "oracle_bestsequenceperpair"
+  ]
+}

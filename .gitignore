@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Local data, caches, and generated experiment trees are never committed.
+/data/
+/outputs/
+**/.git/
+
+# Local/editor/runtime material.
+.env
+.env.*
+.mypy_cache/
+.ipynb_checkpoints/
+*.log
+
+# uv.lock is deliberately tracked for reproducibility.

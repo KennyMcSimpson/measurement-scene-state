@@ -1,0 +1,1668 @@
+{
+  "schema": "mcss.vision_probe.posthoc_diagnostic.v1",
+  "scope": "Post hoc inspection of frozen validation outputs; no fitting or tuning",
+  "per_pair": [
+    {
+      "sequence": "dog-agility",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 28
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dog-agility",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 28
+      },
+      "nn_changed_fraction": 0.01953125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0030790797900408506,
+      "relative_feature_change": 0.08007160574197769
+    },
+    {
+      "sequence": "dog-agility",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 28
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dog-agility",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 42
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 4.889443516731262e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dog-agility",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 42
+      },
+      "nn_changed_fraction": 0.01953125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.002470356645062566,
+      "relative_feature_change": 0.07117396593093872
+    },
+    {
+      "sequence": "dog-agility",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 42
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 4.889443516731262e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dog-agility",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 28
+      },
+      "nn_changed_fraction": 0.0390625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0074001336470246315,
+      "relative_feature_change": 0.12348341196775436
+    },
+    {
+      "sequence": "dog-agility",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 42
+      },
+      "nn_changed_fraction": 0.05859375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.006783411838114262,
+      "relative_feature_change": 0.11777229607105255
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 61,
+        "2": 11
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 4.656612873077393e-10,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 61,
+        "2": 11
+      },
+      "nn_changed_fraction": 0.04296875,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.004531284794211388,
+      "relative_feature_change": 0.09901861846446991
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 61,
+        "2": 11
+      },
+      "nn_changed_fraction": 0.03125,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0014213791582733393,
+      "relative_feature_change": 0.05605488270521164
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 30,
+        "2": 6
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.3283064365386963e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 30,
+        "2": 6
+      },
+      "nn_changed_fraction": 0.05859375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0023138527758419514,
+      "relative_feature_change": 0.0702112689614296
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 30,
+        "2": 6
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.3283064365386963e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 61,
+        "2": 11
+      },
+      "nn_changed_fraction": 0.04296875,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0048274090513587,
+      "relative_feature_change": 0.10199365764856339
+    },
+    {
+      "sequence": "kid-football",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 30,
+        "2": 6
+      },
+      "nn_changed_fraction": 0.05859375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.00293961470015347,
+      "relative_feature_change": 0.07952601462602615
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": -5.122274160385132e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.00390625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.005890536587685347,
+      "relative_feature_change": 0.11564090102910995
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": -5.122274160385132e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.6298145055770874e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 4
+      },
+      "nn_changed_fraction": 0.015625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.006404690444469452,
+      "relative_feature_change": 0.12078836560249329
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.6298145055770874e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.00390625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.006163385231047869,
+      "relative_feature_change": 0.11117085814476013
+    },
+    {
+      "sequence": "rallye",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 4
+      },
+      "nn_changed_fraction": 0.015625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.006111434660851955,
+      "relative_feature_change": 0.11079413443803787
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.0390625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.002051969524472952,
+      "relative_feature_change": 0.0643979161977768
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.046875,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0007339173462241888,
+      "relative_feature_change": 0.038610637187957764
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.07421875,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0029774438589811325,
+      "relative_feature_change": 0.07798280566930771
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.05859375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0030410131439566612,
+      "relative_feature_change": 0.07762844860553741
+    },
+    {
+      "sequence": "scooter-board",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 1
+      },
+      "nn_changed_fraction": 0.07421875,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0029774438589811325,
+      "relative_feature_change": 0.07798280566930771
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 3,
+        "3": 1
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.3283064365386963e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 3,
+        "3": 1
+      },
+      "nn_changed_fraction": 0.046875,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.012177595868706703,
+      "relative_feature_change": 0.16667702794075012
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 3,
+        "3": 1
+      },
+      "nn_changed_fraction": 0.00390625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0011154755484312773,
+      "relative_feature_change": 0.048734620213508606
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 13,
+        "2": 3,
+        "3": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 13,
+        "2": 3,
+        "3": 4
+      },
+      "nn_changed_fraction": 0.0703125,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.007799068000167608,
+      "relative_feature_change": 0.13099025189876556
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 13,
+        "2": 3,
+        "3": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 4,
+        "2": 3,
+        "3": 1
+      },
+      "nn_changed_fraction": 0.0234375,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0041528078727424145,
+      "relative_feature_change": 0.09463179111480713
+    },
+    {
+      "sequence": "motorbike",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 13,
+        "2": 3,
+        "3": 4
+      },
+      "nn_changed_fraction": 0.046875,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.003536602482199669,
+      "relative_feature_change": 0.0863451287150383
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 8,
+        "3": 3,
+        "4": 23,
+        "5": 1
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 3.4924596548080444e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 8,
+        "3": 3,
+        "4": 23,
+        "5": 1
+      },
+      "nn_changed_fraction": 0.02734375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0020874598994851112,
+      "relative_feature_change": 0.06730488687753677
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 8,
+        "3": 3,
+        "4": 23,
+        "5": 1
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 3.4924596548080444e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 1,
+        "3": 2,
+        "4": 19,
+        "5": 12
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.6530975699424744e-08,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 1,
+        "3": 2,
+        "4": 19,
+        "5": 12
+      },
+      "nn_changed_fraction": 0.02734375,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0024292201269418,
+      "relative_feature_change": 0.07178688049316406
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 1,
+        "3": 2,
+        "4": 19,
+        "5": 12
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.6530975699424744e-08,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 8,
+        "3": 3,
+        "4": 23,
+        "5": 1
+      },
+      "nn_changed_fraction": 0.0703125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.008871510624885559,
+      "relative_feature_change": 0.1401330530643463
+    },
+    {
+      "sequence": "longboard",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 1,
+        "3": 2,
+        "4": 19,
+        "5": 12
+      },
+      "nn_changed_fraction": 0.0390625,
+      "label_changed_fraction": 0.0078125,
+      "mean_feature_cosine_drift": 0.005090510472655296,
+      "relative_feature_change": 0.10449732095003128
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 8
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.28642737865448e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 8
+      },
+      "nn_changed_fraction": 0.05859375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.002235239604488015,
+      "relative_feature_change": 0.06837056577205658
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 8
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.28642737865448e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 20
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 8.381903171539307e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 20
+      },
+      "nn_changed_fraction": 0.0625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.003676078747957945,
+      "relative_feature_change": 0.08752086013555527
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 20
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 8.381903171539307e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 8
+      },
+      "nn_changed_fraction": 0.0703125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.004480880219489336,
+      "relative_feature_change": 0.09653928130865097
+    },
+    {
+      "sequence": "mallard-fly",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 20
+      },
+      "nn_changed_fraction": 0.1015625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.008213011547923088,
+      "relative_feature_change": 0.12985759973526
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 32
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.7939677238464355e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 32
+      },
+      "nn_changed_fraction": 0.00390625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.00048418273217976093,
+      "relative_feature_change": 0.031402625143527985
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 32
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.7939677238464355e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 26
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.752088665962219e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 26
+      },
+      "nn_changed_fraction": 0.02734375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0008904826827347279,
+      "relative_feature_change": 0.042004164308309555
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 26
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.752088665962219e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 32
+      },
+      "nn_changed_fraction": 0.0078125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0005135508254170418,
+      "relative_feature_change": 0.03232213109731674
+    },
+    {
+      "sequence": "bear",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 26
+      },
+      "nn_changed_fraction": 0.046875,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.002938384423032403,
+      "relative_feature_change": 0.07633351534605026
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 10
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": -2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 10
+      },
+      "nn_changed_fraction": 0.0546875,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.004102351143956184,
+      "relative_feature_change": 0.09073016792535782
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 10
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": -2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 12
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 4.190951585769653e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 12
+      },
+      "nn_changed_fraction": 0.05078125,
+      "label_changed_fraction": 0.0078125,
+      "mean_feature_cosine_drift": 0.0036953086964786053,
+      "relative_feature_change": 0.08611062914133072
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 12
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 4.190951585769653e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 10
+      },
+      "nn_changed_fraction": 0.0625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.01017167791724205,
+      "relative_feature_change": 0.14592967927455902
+    },
+    {
+      "sequence": "hike",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 12
+      },
+      "nn_changed_fraction": 0.1015625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.011943168006837368,
+      "relative_feature_change": 0.15857800841331482
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 5,
+        "2": 10
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.6298145055770874e-08,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 5,
+        "2": 10
+      },
+      "nn_changed_fraction": 0.01171875,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0024953221436589956,
+      "relative_feature_change": 0.07178757339715958
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 5,
+        "2": 10
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.6298145055770874e-08,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 9,
+        "2": 18
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.3737007975578308e-08,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 9,
+        "2": 18
+      },
+      "nn_changed_fraction": 0.015625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0008370752912014723,
+      "relative_feature_change": 0.04142981767654419
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 9,
+        "2": 18
+      },
+      "nn_changed_fraction": 0.0078125,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0003578208852559328,
+      "relative_feature_change": 0.027009909972548485
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 5,
+        "2": 10
+      },
+      "nn_changed_fraction": 0.01953125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.00392181146889925,
+      "relative_feature_change": 0.09110409766435623
+    },
+    {
+      "sequence": "stroller",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 9,
+        "2": 18
+      },
+      "nn_changed_fraction": 0.03515625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0022375755943357944,
+      "relative_feature_change": 0.06795389205217361
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 81,
+        "2": 21
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": -4.656612873077393e-10,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 81,
+        "2": 21
+      },
+      "nn_changed_fraction": 0.0625,
+      "label_changed_fraction": 0.015625,
+      "mean_feature_cosine_drift": 0.014242220669984818,
+      "relative_feature_change": 0.1728675365447998
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 81,
+        "2": 21
+      },
+      "nn_changed_fraction": 0.0546875,
+      "label_changed_fraction": 0.015625,
+      "mean_feature_cosine_drift": 0.010889241471886635,
+      "relative_feature_change": 0.14946657419204712
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 80,
+        "2": 37
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.05359673500061e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 80,
+        "2": 37
+      },
+      "nn_changed_fraction": 0.08203125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.02238912135362625,
+      "relative_feature_change": 0.21294589340686798
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 80,
+        "2": 37
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.05359673500061e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 81,
+        "2": 21
+      },
+      "nn_changed_fraction": 0.06640625,
+      "label_changed_fraction": 0.0234375,
+      "mean_feature_cosine_drift": 0.01147833839058876,
+      "relative_feature_change": 0.15119817852973938
+    },
+    {
+      "sequence": "disc-jockey",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 80,
+        "2": 37
+      },
+      "nn_changed_fraction": 0.05078125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.010432026349008083,
+      "relative_feature_change": 0.14380766451358795
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 51,
+        "3": 73,
+        "4": 29
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.1641532182693481e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 51,
+        "3": 73,
+        "4": 29
+      },
+      "nn_changed_fraction": 0.0234375,
+      "label_changed_fraction": 0.0078125,
+      "mean_feature_cosine_drift": 0.009853595867753029,
+      "relative_feature_change": 0.14508718252182007
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 51,
+        "3": 73,
+        "4": 29
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 1.1641532182693481e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 25,
+        "2": 35,
+        "4": 19
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 25,
+        "2": 35,
+        "4": 19
+      },
+      "nn_changed_fraction": 0.02734375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.006866670213639736,
+      "relative_feature_change": 0.11953366547822952
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 25,
+        "2": 35,
+        "4": 19
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 11,
+        "2": 51,
+        "3": 73,
+        "4": 29
+      },
+      "nn_changed_fraction": 0.01171875,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0038732108660042286,
+      "relative_feature_change": 0.09245434403419495
+    },
+    {
+      "sequence": "dogs-scale",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 25,
+        "2": 35,
+        "4": 19
+      },
+      "nn_changed_fraction": 0.01953125,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.004187463782727718,
+      "relative_feature_change": 0.09237832576036453
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 57
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.984919309616089e-10,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 57
+      },
+      "nn_changed_fraction": 0.03515625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.00226681400090456,
+      "relative_feature_change": 0.06800766289234161
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 57
+      },
+      "nn_changed_fraction": 0.046875,
+      "label_changed_fraction": 0.01171875,
+      "mean_feature_cosine_drift": 0.002827949356287718,
+      "relative_feature_change": 0.07641704380512238
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 52
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 8.847564458847046e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 52
+      },
+      "nn_changed_fraction": 0.03515625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.002140505239367485,
+      "relative_feature_change": 0.06551215797662735
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 52
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 8.847564458847046e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 57
+      },
+      "nn_changed_fraction": 0.05859375,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.006118276156485081,
+      "relative_feature_change": 0.11206073313951492
+    },
+    {
+      "sequence": "koala",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 52
+      },
+      "nn_changed_fraction": 0.0703125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0066033704206347466,
+      "relative_feature_change": 0.1156645268201828
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 20,
+        "2": 7
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.752088665962219e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 20,
+        "2": 7
+      },
+      "nn_changed_fraction": 0.03125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0016562012024223804,
+      "relative_feature_change": 0.057062484323978424
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 20,
+        "2": 7
+      },
+      "nn_changed_fraction": 0.03125,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0010927587281912565,
+      "relative_feature_change": 0.04630782827734947
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 15,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.3283064365386963e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 15,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.0234375,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.0010317617561668158,
+      "relative_feature_change": 0.0454145148396492
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 15,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.3283064365386963e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 20,
+        "2": 7
+      },
+      "nn_changed_fraction": 0.0546875,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0035121014807373285,
+      "relative_feature_change": 0.08364027738571167
+    },
+    {
+      "sequence": "scooter-gray",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 15,
+        "2": 4
+      },
+      "nn_changed_fraction": 0.08203125,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.004363554064184427,
+      "relative_feature_change": 0.09413088113069534
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 31
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 2.561137080192566e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 31
+      },
+      "nn_changed_fraction": 0.05078125,
+      "label_changed_fraction": 0.0078125,
+      "mean_feature_cosine_drift": 0.0027437859680503607,
+      "relative_feature_change": 0.0747683197259903
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 31
+      },
+      "nn_changed_fraction": 0.03125,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.000624936306849122,
+      "relative_feature_change": 0.035459086298942566
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 22
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 3.4924596548080444e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 22
+      },
+      "nn_changed_fraction": 0.05078125,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.006532084662467241,
+      "relative_feature_change": 0.1166180893778801
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 22
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 3.4924596548080444e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 31
+      },
+      "nn_changed_fraction": 0.0390625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.0017988663166761398,
+      "relative_feature_change": 0.060384757816791534
+    },
+    {
+      "sequence": "lady-running",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 22
+      },
+      "nn_changed_fraction": 0.0390625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.002072228817269206,
+      "relative_feature_change": 0.0650419220328331
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 1,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 37
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.984919309616089e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 1,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 37
+      },
+      "nn_changed_fraction": 0.0546875,
+      "label_changed_fraction": 0.0078125,
+      "mean_feature_cosine_drift": 0.015678945928812027,
+      "relative_feature_change": 0.1797408014535904
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 1,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 37
+      },
+      "nn_changed_fraction": 0.02734375,
+      "label_changed_fraction": 0.0078125,
+      "mean_feature_cosine_drift": 0.007436760235577822,
+      "relative_feature_change": 0.12299264967441559
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 2,
+      "method": "OFFOFF",
+      "target_object_token_counts": {
+        "1": 33
+      },
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 6.51925802230835e-09,
+      "relative_feature_change": 0.0
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 2,
+      "method": "residual_selector",
+      "target_object_token_counts": {
+        "1": 33
+      },
+      "nn_changed_fraction": 0.1015625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.01859629899263382,
+      "relative_feature_change": 0.19422027468681335
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 2,
+      "method": "oracle_bestsequenceperpair",
+      "target_object_token_counts": {
+        "1": 33
+      },
+      "nn_changed_fraction": 0.1015625,
+      "label_changed_fraction": 0.00390625,
+      "mean_feature_cosine_drift": 0.019354932010173798,
+      "relative_feature_change": 0.19809237122535706
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 1,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 37
+      },
+      "nn_changed_fraction": 0.02734375,
+      "label_changed_fraction": 0.0078125,
+      "mean_feature_cosine_drift": 0.007436760235577822,
+      "relative_feature_change": 0.12299264967441559
+    },
+    {
+      "sequence": "elephant",
+      "target_slot": 2,
+      "method": "bestgloballyfixed",
+      "target_object_token_counts": {
+        "1": 33
+      },
+      "nn_changed_fraction": 0.0625,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 0.008604979142546654,
+      "relative_feature_change": 0.13113391399383545
+    }
+  ],
+  "methods": {
+    "OFFOFF": {
+      "nn_changed_fraction": 0.0,
+      "label_changed_fraction": 0.0,
+      "mean_feature_cosine_drift": 4.300090949982405e-09,
+      "relative_feature_change": 0.0
+    },
+    "bestgloballyfixed": {
+      "nn_changed_fraction": 0.0487060546875,
+      "label_changed_fraction": 0.00244140625,
+      "mean_feature_cosine_drift": 0.00552489105029963,
+      "relative_feature_change": 0.10279579064808786
+    },
+    "oracle_bestsequenceperpair": {
+      "nn_changed_fraction": 0.0128173828125,
+      "label_changed_fraction": 0.001953125,
+      "mean_feature_cosine_drift": 0.0015030872818897478,
+      "relative_feature_change": 0.026203680376056582
+    },
+    "residual_selector": {
+      "nn_changed_fraction": 0.0400390625,
+      "label_changed_fraction": 0.0023193359375,
+      "mean_feature_cosine_drift": 0.005449471209431067,
+      "relative_feature_change": 0.0958689785329625
+    }
+  }
+}

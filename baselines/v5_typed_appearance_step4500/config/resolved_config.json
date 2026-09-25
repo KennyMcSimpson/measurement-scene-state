@@ -1,0 +1,73 @@
+{
+  "dataset": {
+    "context_views": 4,
+    "image_size": [
+      128,
+      160
+    ],
+    "length": 1,
+    "local_bounds_m": [
+      [
+        -6.0,
+        -4.0,
+        0.05
+      ],
+      [
+        6.0,
+        4.0,
+        12.05
+      ]
+    ],
+    "name": "hypersim",
+    "root": "data/hypersim_prepared/train/ai_001_001",
+    "sample_stride": 100000,
+    "spatial_protocol": "context_local_metric",
+    "target_views": 2
+  },
+  "device": "auto",
+  "model": {
+    "appearance_resolution_scale": 2,
+    "completion_residual_scale": 4.0,
+    "evidence_temperature": 0.1,
+    "image_feature_dim": 48,
+    "mode": "fixed",
+    "n_samples": 64,
+    "observed_residual_floor": 0.1,
+    "ray_chunk_size": 4096,
+    "refinement_blocks": 4,
+    "state_architecture": "evidence_residual",
+    "state_feature_dim": 48,
+    "voxel_resolution": [
+      48,
+      32,
+      48
+    ]
+  },
+  "seed": 17,
+  "training": {
+    "amp": true,
+    "amp_dtype": "bfloat16",
+    "batch_size": 1,
+    "checkpoint_every": 500,
+    "ema_decay": 0.98,
+    "evidence_residual_weight": 0.001,
+    "gradient_accumulation": 1,
+    "learning_rate": 0.0002,
+    "log_every": 10,
+    "lr_schedule": "constant",
+    "max_steps": 5000,
+    "measurements": [
+      "rgb",
+      "depth",
+      "normal",
+      "point",
+      "visibility"
+    ],
+    "min_lr_ratio": 0.1,
+    "num_workers": 0,
+    "output_dir": "outputs/hypersim_er_v5_appearance2x_overfit",
+    "resume": null,
+    "warmup_steps": 0,
+    "weight_decay": 0.0001
+  }
+}

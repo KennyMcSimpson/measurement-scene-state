@@ -1,0 +1,50 @@
+seed: 17
+dataset_root: data/hypersim_er_prepared/train
+frozen_windows: configs/hypersim_mapanything_geometry_smoke_windows.json
+output_dir: outputs/mapanything_geometry_smoke_v2
+context_views: 4
+permutation_windows: 1
+supplier:
+  model_id: facebook/map-anything
+  model_revision: a1d87e9086706fb9974f3be5a3e3a0ca5401c5aa
+  code_repository: facebookresearch/map-anything
+  code_revision: 3d10cf7a3016fc0f9bb13a071ee66c47b10be0d9
+  dependencies:
+    - name: dinov2
+      repository: facebookresearch/dinov2
+      revision: 7764ea0f912e53c92e82eb78a2a1631e92725fc8
+      source_sha256: ef177de4d1146157c59515f3fcc931767ff489d80309f722fdb3fd10519d0c94
+  code_root: third_party/map-anything
+  dinov2_code_root: third_party/dinov2
+  device: cuda
+  model_cache_dir: outputs/model_cache/huggingface
+  memory_efficient_inference: true
+  minibatch_size: 1
+  use_amp: true
+  amp_dtype: bf16
+  apply_mask: true
+  mask_edges: true
+  apply_confidence_mask: false
+  use_multiview_confidence: false
+certificate:
+  grid_stride: 4
+  min_depth_m: 0.1
+  max_depth_m: 20.0
+  depth_absolute_tolerance_m: 0.1
+  depth_relative_tolerance: 0.05
+  roundtrip_threshold_px: 2.0
+  surface_half_width_m: 0.05
+  free_space_margin_m: 0.05
+  minimum_supporting_views: 1
+  maximum_conflicting_views: 0
+decision:
+  minimum_windows: 1
+  minimum_certified_coverage: 0.15
+  minimum_nonzero_window_fraction: 0.8
+  maximum_median_error_m: 0.25
+  maximum_p90_error_m: 0.5
+  maximum_permutation_delta_m: 0.0001
+  minimum_shuffled_error_ratio: 1.5
+  minimum_shuffled_error_margin_m: 0.05
+  maximum_shuffled_coverage_ratio: 0.5
+  minimum_risk_error_spearman: 0.0

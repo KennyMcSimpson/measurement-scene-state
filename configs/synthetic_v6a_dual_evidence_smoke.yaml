@@ -1,0 +1,36 @@
+seed: 17
+device: cpu
+dataset:
+  name: synthetic
+  root: null
+  image_size: [8, 8]
+  context_views: 2
+  target_views: 1
+  length: 4
+  sample_stride: 1
+model:
+  mode: fixed
+  state_architecture: dual_evidence
+  voxel_resolution: [8, 8, 8]
+  image_feature_dim: 8
+  state_feature_dim: 8
+  refinement_blocks: 1
+  evidence_temperature: 0.1
+  surface_peak_temperature: 0.05
+  observed_residual_floor: 0.1
+  completion_residual_scale: 4.0
+  appearance_resolution_scale: 2
+  n_samples: 8
+  ray_chunk_size: 128
+training:
+  output_dir: outputs/synthetic_v6a_dual_evidence_smoke
+  batch_size: 1
+  learning_rate: 0.001
+  max_steps: 2
+  num_workers: 0
+  amp: false
+  amp_dtype: bfloat16
+  log_every: 1
+  checkpoint_every: 1
+  measurements: [rgb, depth, normal, point, visibility]
+  evidence_residual_weight: 0.001

@@ -1,0 +1,14 @@
+{
+  "frozen_v2_hash_checks": 63,
+  "frozen_v2_mismatches": [],
+  "new_tests": {
+    "passed": 2,
+    "command": ".venv/bin/pytest tests/test_v2_followup.py -q"
+  },
+  "lint": "PASS",
+  "old_full_suite_not_repeated": "Only separate post-hoc reporting script and two tests added; frozen implementation unchanged.",
+  "source_sha256": "ea40036c9ebd360f0daf11555b6a662197677cf97ed144ea50b44e0a4afe544c",
+  "git_commit": "70be8e0ca4b0953a865fc83707fbf511f3268984",
+  "repeat_exit_code": 0,
+  "diagnostic_byte_identical": true
+}

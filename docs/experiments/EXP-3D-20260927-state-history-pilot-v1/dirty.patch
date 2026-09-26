@@ -1,0 +1,582 @@
+diff --git a/EXPERIMENTS.md b/EXPERIMENTS.md
+index 5dcf780..bf70338 100644
+--- a/EXPERIMENTS.md
++++ b/EXPERIMENTS.md
+@@ -1,7 +1,33 @@
+ # 实验注册表
+ 
++## EXP-2D-followup-20260927
++
++- **状态**：POST_HOC_DISCOVERY_ONLY；保留V2全部冻结产物。
++- **新增诊断**：仅用其余11序列选择全局16轨迹，12折都选ALL/B；CycleGate−该折外全局基线为−0.208623个百分点。f_cycle改善的168条候选中33条任务收益为负。
++- **边界**：不改V2主要比较，不构成独立确认，不据此断言所有可见信号都无效。
++- **验证**：2项新增测试通过；63份V2文件哈希无变化；重生成逐字节一致。
++- **报告**：[结果与资源审计](docs/experiments/EXP-2D-followup-20260927/README.md)。
++
++## EXP-2D-opportunity-selector-v2-20260926T015728+0800
++
++- **状态**：`BLOCKED_NO_INDEPENDENT_DATA`；已完成实现、旧 raw 后处理、discovery nested LOSO、全套测试与审计。
++- **旧 raw 诊断**：hindsight-global16=A/ALL；dynamic−hindsight-global16=+0.205456 个百分点，重采样/删一均重新求全局winner。
++- **Discovery**：CycleGate 外层 OOF ΔJ=+0.124429 个百分点，GateOnly=+0.115612；Cycle−Gate 95%区间跨0。只属 discovery 过程评估。
++- **独立数据**：VOST片段缺原视频映射；FBMS原视频身份及mask编码不合格。未打开旧保护集，独立序列0，未生成确认结果。
++- **验证**：500 passed、1 skipped（重试）；原生崩溃日志保留，674项V1产物未变。
++- **产物**：[完整报告](docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/README.md)；协议/锁/raw/统计/复现命令均保存在独立目录。
++
+ 这里是唯一的人类可读实验索引。机器可读的细节放在各 artifact bundle 和本地 `outputs/` 中。
+ 
++## EXP-2D-20260926-opportunity-selector-v1
++
++- **状态**：已完成锁定验证与独立审计；按预注册门槛 H1=STRONG、H2=NOT_ESTABLISHED。
++- **主评价**：448 输入、真实32×32 DINO patch、原始像素空间对象 J；16个历史内部validation序列、32 pairs。不是新holdout或官方DAVIS J&F。
++- **结果**：OFF J=55.2677%；dynamic oracle=55.5129%（+0.2451个百分点，sequence-bootstrap95%CI[+0.1173,+0.3934]）；visible selector=55.2207%（−0.0470个百分点）。
++- **解释**：小幅答案可见机会分布于14个序列；非恒定轨迹机会比constant oracle多0.0750个百分点（不证明顺序因果机制）。部署选择器尚未获得净收益，29次写入有16次有害。
++- **验证**：458 tests passed、1项缺失历史checkpoint明确skip；1792 raw rows完整、输入hash和封存边界通过审计，全部分析可逐字节重建。reserve及official val保持封存。
++- **artifact**：[实验报告](docs/experiments/EXP-2D-20260926-opportunity-selector-v1/README.md)。
++
+ ## EXP-2D-20260921-corrected
+ 
+ - **状态 / 证据**：`EXPLORATORY`；修正版，替代 `EXP-2D-20260921-original`。
+diff --git a/README.md b/README.md
+index 686cffc..f7aa5ff 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,11 @@
+ # Measurement Scene State / Inverse-JEPA + Dynamic-TTT research archive
+ 
++2026-09-27 后续探索：[折外全局轨迹与 cycle 诊断](docs/experiments/EXP-2D-followup-20260927/README.md)。12个discovery外层折都选择ALL/B；CycleGate仍低约0.209个百分点。仅属事后discovery分析，独立确认仍受阻。
++
++V2 最新进展（2026-09-26）：[独立确认报告](docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/README.md) 已完成旧 raw 的 global16 诊断、discovery nested LOSO、实现与测试；独立确认因外部原视频身份/标注兼容性审计未通过而标为 `BLOCKED_NO_INDEPENDENT_DATA`。discovery 的正值不能当成新测试成功。
++
++最新进展（2026-09-26）：[Opportunity + visible selector v1](docs/experiments/EXP-2D-20260926-opportunity-selector-v1/README.md) 已完成。高分辨率评价支持小幅跨序列oracle机会，但简单部署选择器没有净收益。
++
+ 这是 Kenny 的 CV 研究协作仓库。仓库把三条内容放在一起，但明确区分证据等级：
+ 
+ 1. 原来的 `Measurement Scene State` 三维主线与 V5 比较基线；
+diff --git a/STATUS.md b/STATUS.md
+index e52bef3..5c8b623 100644
+--- a/STATUS.md
++++ b/STATUS.md
+@@ -1,4 +1,10 @@
+-# 当前状态（2026-09-25）
++# 当前状态（2026-09-26）
++
++2026-09-27 后续探索：[折外全局轨迹与 cycle 诊断](docs/experiments/EXP-2D-followup-20260927/README.md)。12个discovery外层折都选择ALL/B；CycleGate仍低约0.209个百分点。仅属事后discovery分析，独立确认仍受阻。
++
++V2 当前状态：`BLOCKED_NO_INDEPENDENT_DATA`。旧 raw 真正逐样本空间约 +0.2055 个百分点；CycleGate discovery 外层 OOF 约 +0.1244 个百分点，但尚无独立测试结果。完整测试重试通过（500 passed、1 skipped），首轮原生崩溃已留档。[V2 报告](docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/README.md)。
++
++最新机制实验已完成：448像素J下有小幅、跨序列的oracle机会（H1=STRONG），但部署可见选择器净收益未建立（H2=NOT_ESTABLISHED）。详见 [新实验报告](docs/experiments/EXP-2D-20260926-opportunity-selector-v1/README.md)。以下保留历史证据状态。
+ 
+ | ID | 状态 | 证据等级 | 已验证 | 当前可以说什么 | 当前不能说什么 |
+ |---|---|---|---|---|---|
+diff --git a/pyproject.toml b/pyproject.toml
+index ba8a194..6092b42 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -15,14 +15,17 @@ dependencies = [
+     "pillow>=10.4",
+     "pyyaml>=6.0.2",
+     "requests>=2.32",
++    "scipy>=1.11",
+     "torch>=2.7",
+     "tqdm>=4.67",
+ ]
+ 
+ [project.optional-dependencies]
+-eval = ["lpips>=0.1.4"]
++eval = ["lpips>=0.1.4", "matplotlib>=3.8"]
+ mapanything = ["mapanything==1.1.4"]
+ dev = [
++    "opencv-python-headless>=4.10",
++    "scikit-image>=0.24",
+     "pytest>=8.3",
+     "pytest-cov>=6.0",
+     "ruff>=0.9",
+diff --git a/scripts/download_hypersim_holdout_archives.py b/scripts/download_hypersim_holdout_archives.py
+index d2666c2..b6ea042 100644
+--- a/scripts/download_hypersim_holdout_archives.py
++++ b/scripts/download_hypersim_holdout_archives.py
+@@ -6,7 +6,6 @@ import argparse
+ import concurrent.futures
+ import hashlib
+ import json
+-import msvcrt
+ import os
+ import re
+ import shutil
+@@ -18,6 +17,8 @@ from typing import Any
+ 
+ import requests
+ 
++from mcss.file_lock import acquire_file_lock
++
+ PROJECT = Path(__file__).resolve().parents[1]
+ SOURCE = PROJECT / "outputs/dataset_access_check_20260918/hypersim_holdout_download_sizes.json"
+ DESTINATION = PROJECT / "data/hypersim_final_holdout_archives"
+@@ -226,8 +227,8 @@ def run(workers: int) -> int:
+         lock_file.write(b"0")
+         lock_file.flush()
+     lock_file.seek(0)
+-    msvcrt.locking(lock_file.fileno(), msvcrt.LK_NBLCK, 1)
+-    # The Windows file lock is held for the process lifetime; stale files do not block resumes.
++    acquire_file_lock(lock_file)
++    # The open handle keeps the process lock; stale files do not block resumes.
+     existing_status_hashes = _load_status_hashes(
+         LOG_ROOT / "status.json", source_manifest_sha256
+     )
+diff --git a/scripts/extract_hypersim_holdout_archives.py b/scripts/extract_hypersim_holdout_archives.py
+index a6cd6ac..0f615ae 100644
+--- a/scripts/extract_hypersim_holdout_archives.py
++++ b/scripts/extract_hypersim_holdout_archives.py
+@@ -12,7 +12,6 @@ from __future__ import annotations
+ import argparse
+ import hashlib
+ import json
+-import msvcrt
+ import os
+ import re
+ import shutil
+@@ -26,6 +25,8 @@ from dataclasses import dataclass
+ from pathlib import Path, PurePosixPath
+ from typing import Any
+ 
++from mcss.file_lock import acquire_file_lock, release_file_lock
++
+ PROJECT = Path(__file__).resolve().parents[1]
+ SOURCE = PROJECT / "outputs/dataset_access_check_20260918/hypersim_holdout_download_sizes.json"
+ ARCHIVE_ROOT = PROJECT / "data/hypersim_final_holdout_archives"
+@@ -318,14 +319,14 @@ def _process_lock(path: Path) -> Iterator[None]:
+             handle.flush()
+         handle.seek(0)
+         try:
+-            msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
++            acquire_file_lock(handle)
+         except OSError as error:
+             raise RuntimeError(f"Another extraction process holds the lock: {path}") from error
+         try:
+             yield
+         finally:
+             handle.seek(0)
+-            msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
++            release_file_lock(handle)
+     finally:
+         handle.close()
+ 
+diff --git a/tests/test_v5_checkpoint_compatibility.py b/tests/test_v5_checkpoint_compatibility.py
+index 641fc4b..e8f4b66 100644
+--- a/tests/test_v5_checkpoint_compatibility.py
++++ b/tests/test_v5_checkpoint_compatibility.py
+@@ -1,5 +1,6 @@
+ from pathlib import Path
+ 
++import pytest
+ import torch
+ 
+ from mcss.config import load_config
+@@ -9,11 +10,17 @@ from mcss.model.system import build_model
+ def test_frozen_v5_checkpoint_strictly_loads_into_current_model() -> None:
+     project_root = Path(__file__).resolve().parents[1]
+     baseline_root = project_root / "baselines" / "v5_typed_appearance_step4500"
++    checkpoint = baseline_root / "checkpoint" / "step_004500.pt"
++    if not checkpoint.exists():
++        pytest.skip(
++            "Optional historical V5 step-4500 checkpoint is not distributed in the public "
++            "repository; restore the original checkpoint to run strict compatibility checks"
++        )
+     config = load_config(
+         baseline_root / "config" / "hypersim_er_v5_appearance2x_overfit.yaml"
+     )
+     payload = torch.load(
+-        baseline_root / "checkpoint" / "step_004500.pt",
++        checkpoint,
+         map_location="cpu",
+         weights_only=False,
+     )
+diff --git a/uv.lock b/uv.lock
+index f43cc10..468c92b 100644
+--- a/uv.lock
++++ b/uv.lock
+@@ -4,10 +4,10 @@ requires-python = ">=3.11, <3.13"
+ resolution-markers = [
+     "python_full_version >= '3.12' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+     "(python_full_version >= '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version >= '3.12' and sys_platform == 'win32')",
+-    "python_full_version < '3.12' and platform_machine == 'aarch64' and sys_platform == 'linux'",
+-    "(python_full_version < '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version < '3.12' and sys_platform == 'win32')",
+     "python_full_version >= '3.12' and sys_platform == 'darwin'",
+     "python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
++    "python_full_version < '3.12' and platform_machine == 'aarch64' and sys_platform == 'linux'",
++    "(python_full_version < '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version < '3.12' and sys_platform == 'win32')",
+     "python_full_version < '3.12' and sys_platform == 'darwin'",
+     "python_full_version < '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
+ ]
+@@ -271,7 +271,7 @@ name = "cuda-bindings"
+ version = "12.9.7"
+ source = { registry = "https://pypi.org/simple" }
+ dependencies = [
+-    { name = "cuda-pathfinder", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "cuda-pathfinder" },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/40/f3/f9d1095f90d2a4df24cfcafe7487fd9444c6dacb94e3722be6fedd8ac26c/cuda_bindings-12.9.7-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:16043ef5b15ab88fe9954c5c2061b1d8007591b27f2c916331056de0ebc6187e", size = 7114834, upload-time = "2026-05-27T18:44:07.746Z" },
+@@ -298,37 +298,37 @@ wheels = [
+ 
+ [package.optional-dependencies]
+ cublas = [
+-    { name = "nvidia-cublas-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cublas-cu12" },
+ ]
+ cudart = [
+-    { name = "nvidia-cuda-runtime-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cuda-runtime-cu12" },
+ ]
+ cufft = [
+-    { name = "nvidia-cufft-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cufft-cu12" },
+ ]
+ cufile = [
+-    { name = "nvidia-cufile-cu12", marker = "sys_platform == 'linux'" },
++    { name = "nvidia-cufile-cu12" },
+ ]
+ cupti = [
+-    { name = "nvidia-cuda-cupti-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cuda-cupti-cu12" },
+ ]
+ curand = [
+-    { name = "nvidia-curand-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-curand-cu12" },
+ ]
+ cusolver = [
+-    { name = "nvidia-cusolver-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cusolver-cu12" },
+ ]
+ cusparse = [
+-    { name = "nvidia-cusparse-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cusparse-cu12" },
+ ]
+ nvjitlink = [
+-    { name = "nvidia-nvjitlink-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-nvjitlink-cu12" },
+ ]
+ nvrtc = [
+-    { name = "nvidia-cuda-nvrtc-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cuda-nvrtc-cu12" },
+ ]
+ nvtx = [
+-    { name = "nvidia-nvtx-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-nvtx-cu12" },
+ ]
+ 
+ [[package]]
+@@ -547,6 +547,20 @@ wheels = [
+     { url = "https://files.pythonhosted.org/packages/1e/5e/d4e9f1a599fb8e573b7b87160658329fbf28d19eac2718f51fc3def3aa5a/idna-3.18-py3-none-any.whl", hash = "sha256:7f952cbe720b688055e3f87de14f5c3e5fdaa8bc3928985c4077ca689de849a2", size = 65455, upload-time = "2026-06-02T14:34:06.319Z" },
+ ]
+ 
++[[package]]
++name = "imageio"
++version = "2.37.4"
++source = { registry = "https://pypi.org/simple" }
++dependencies = [
++    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
++    { name = "pillow" },
++]
++sdist = { url = "https://files.pythonhosted.org/packages/48/62/aa770a9307508d2a2a2c62d536a49347bffe9e55322db27838d3c93d0b07/imageio-2.37.4.tar.gz", hash = "sha256:e45cbc5e83502047fb138f7f585f7f105a136a57eea5f4b3cfc6ce1b52720bd3", size = 390173, upload-time = "2026-07-20T05:26:11.369Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/3e/2d/ca050652104bab2cf55e569db2a178b1b61cb041fef28307f2db383f6d9f/imageio-2.37.4-py3-none-any.whl", hash = "sha256:1ab2e22c8debf700f24c3ac43e8f95f3b3a8110c83b93411e97b4b0b2cd1c7e6", size = 318000, upload-time = "2026-07-20T05:26:09.874Z" },
++]
++
+ [[package]]
+ name = "iniconfig"
+ version = "2.3.0"
+@@ -669,6 +683,18 @@ wheels = [
+     { url = "https://files.pythonhosted.org/packages/e0/6f/01e0e2cf90c47ecf26656263cdabe491a1b206c94c0c30a1dd7e4d13ed29/kornia_rs-0.1.14-cp312-cp312-win_amd64.whl", hash = "sha256:ac4bbd0a8fd73b5058a39707c790fecec4c5204a42d1f5af17f1fa57cc83d406", size = 3367565, upload-time = "2026-05-19T07:46:16.682Z" },
+ ]
+ 
++[[package]]
++name = "lazy-loader"
++version = "0.6"
++source = { registry = "https://pypi.org/simple" }
++dependencies = [
++    { name = "packaging" },
++]
++sdist = { url = "https://files.pythonhosted.org/packages/19/8c/0f2ff2a8b7513e68871a74740c17a504b0488c679b379e6445ebb7bd78dc/lazy_loader-0.6.tar.gz", hash = "sha256:2f4b7824d6401958639008a0cae20c776b61dff619accd6890693e2de8260167", size = 18438, upload-time = "2026-09-21T21:31:32.982Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/23/93/4e45e37f26c820216704b36b8e67cc55c490a7abd287a78a26a2c0e21386/lazy_loader-0.6-py3-none-any.whl", hash = "sha256:77253be3391b06124a0e16105bd663b6c54470af1a9ca8e1cf026f38d58ed056", size = 8791, upload-time = "2026-09-21T21:31:31.632Z" },
++]
++
+ [[package]]
+ name = "lightning-utilities"
+ version = "0.15.3"
+@@ -867,6 +893,8 @@ dependencies = [
+     { name = "pillow" },
+     { name = "pyyaml" },
+     { name = "requests" },
++    { name = "scipy", version = "1.17.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "scipy", version = "1.18.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+     { name = "torch", version = "2.11.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+     { name = "torch", version = "2.13.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+     { name = "tqdm" },
+@@ -874,12 +902,15 @@ dependencies = [
+ 
+ [package.optional-dependencies]
+ dev = [
++    { name = "opencv-python-headless" },
+     { name = "pytest" },
+     { name = "pytest-cov" },
+     { name = "ruff" },
++    { name = "scikit-image" },
+ ]
+ eval = [
+     { name = "lpips" },
++    { name = "matplotlib" },
+ ]
+ mapanything = [
+     { name = "mapanything" },
+@@ -891,13 +922,17 @@ requires-dist = [
+     { name = "kornia", specifier = ">=0.8.1,<0.9" },
+     { name = "lpips", marker = "extra == 'eval'", specifier = ">=0.1.4" },
+     { name = "mapanything", marker = "extra == 'mapanything'", editable = "third_party/map-anything" },
++    { name = "matplotlib", marker = "extra == 'eval'", specifier = ">=3.8" },
+     { name = "numpy", specifier = ">=1.26" },
++    { name = "opencv-python-headless", marker = "extra == 'dev'", specifier = ">=4.10" },
+     { name = "pillow", specifier = ">=10.4" },
+     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8.3" },
+     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=6.0" },
+     { name = "pyyaml", specifier = ">=6.0.2" },
+     { name = "requests", specifier = ">=2.32" },
+     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.9" },
++    { name = "scikit-image", marker = "extra == 'dev'", specifier = ">=0.24" },
++    { name = "scipy", specifier = ">=1.11" },
+     { name = "torch", marker = "sys_platform != 'linux' and sys_platform != 'win32'", specifier = ">=2.7" },
+     { name = "torch", marker = "sys_platform == 'linux' or sys_platform == 'win32'", specifier = ">=2.7", index = "https://download.pytorch.org/whl/cu128" },
+     { name = "tqdm", specifier = ">=4.67" },
+@@ -1065,7 +1100,7 @@ name = "nvidia-cudnn-cu12"
+ version = "9.19.0.56"
+ source = { registry = "https://pypi.org/simple" }
+ dependencies = [
+-    { name = "nvidia-cublas-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cublas-cu12" },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/09/b8/277c51962ee46fa3e5b203ac5f76107c650f781d6891e681e28e6f3e9fe6/nvidia_cudnn_cu12-9.19.0.56-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:08caaf27fe556aca82a3ee3b5aa49a77e7de0cfcb7ff4e5c29da426387a8267e", size = 656910700, upload-time = "2026-02-03T20:40:25.508Z" },
+@@ -1077,7 +1112,7 @@ name = "nvidia-cufft-cu12"
+ version = "11.3.3.83"
+ source = { registry = "https://pypi.org/simple" }
+ dependencies = [
+-    { name = "nvidia-nvjitlink-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-nvjitlink-cu12" },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/60/bc/7771846d3a0272026c416fbb7e5f4c1f146d6d80704534d0b187dd6f4800/nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:848ef7224d6305cdb2a4df928759dca7b1201874787083b6e7550dd6765ce69a", size = 193109211, upload-time = "2025-03-07T01:44:56.873Z" },
+@@ -1107,9 +1142,9 @@ name = "nvidia-cusolver-cu12"
+ version = "11.7.3.90"
+ source = { registry = "https://pypi.org/simple" }
+ dependencies = [
+-    { name = "nvidia-cublas-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "nvidia-cusparse-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "nvidia-nvjitlink-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-cublas-cu12" },
++    { name = "nvidia-cusparse-cu12" },
++    { name = "nvidia-nvjitlink-cu12" },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/c8/32/f7cd6ce8a7690544d084ea21c26e910a97e077c9b7f07bf5de623ee19981/nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_aarch64.whl", hash = "sha256:db9ed69dbef9715071232caa9b69c52ac7de3a95773c2db65bdba85916e4e5c0", size = 267229841, upload-time = "2025-03-07T01:46:54.356Z" },
+@@ -1121,7 +1156,7 @@ name = "nvidia-cusparse-cu12"
+ version = "12.5.8.93"
+ source = { registry = "https://pypi.org/simple" }
+ dependencies = [
+-    { name = "nvidia-nvjitlink-cu12", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "nvidia-nvjitlink-cu12" },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/bc/f7/cd777c4109681367721b00a106f491e0d0d15cfa1fd59672ce580ce42a97/nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:9b6c161cb130be1a07a27ea6923df8141f3c295852f4b260c65f18f3e0a091dc", size = 288117129, upload-time = "2025-03-07T01:47:40.407Z" },
+@@ -1587,6 +1622,43 @@ wheels = [
+     { url = "https://files.pythonhosted.org/packages/8d/fc/7eedc3510d97878876e32774eebbeb61c43f148a96e915c84229a3e967aa/safetensors-0.8.0-cp310-abi3-win_arm64.whl", hash = "sha256:f7838e5135a406ad3e02efdcb8cf2e5397d368b0154537c4fec682dbc544d452", size = 340500, upload-time = "2026-06-09T07:52:26.745Z" },
+ ]
+ 
++[[package]]
++name = "scikit-image"
++version = "0.26.0"
++source = { registry = "https://pypi.org/simple" }
++dependencies = [
++    { name = "imageio" },
++    { name = "lazy-loader" },
++    { name = "networkx" },
++    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
++    { name = "packaging" },
++    { name = "pillow" },
++    { name = "scipy", version = "1.17.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "scipy", version = "1.18.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
++    { name = "tifffile", version = "2026.3.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "tifffile", version = "2026.9.20", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
++]
++sdist = { url = "https://files.pythonhosted.org/packages/a1/b4/2528bb43c67d48053a7a649a9666432dc307d66ba02e3a6d5c40f46655df/scikit_image-0.26.0.tar.gz", hash = "sha256:f5f970ab04efad85c24714321fcc91613fcb64ef2a892a13167df2f3e59199fa", size = 22729739, upload-time = "2025-12-20T17:12:21.824Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/76/16/8a407688b607f86f81f8c649bf0d68a2a6d67375f18c2d660aba20f5b648/scikit_image-0.26.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:b1ede33a0fb3731457eaf53af6361e73dd510f449dac437ab54573b26788baf0", size = 12355510, upload-time = "2025-12-20T17:10:31.628Z" },
++    { url = "https://files.pythonhosted.org/packages/6b/f9/7efc088ececb6f6868fd4475e16cfafc11f242ce9ab5fc3557d78b5da0d4/scikit_image-0.26.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:7af7aa331c6846bd03fa28b164c18d0c3fd419dbb888fb05e958ac4257a78fdd", size = 12056334, upload-time = "2025-12-20T17:10:34.559Z" },
++    { url = "https://files.pythonhosted.org/packages/9f/1e/bc7fb91fb5ff65ef42346c8b7ee8b09b04eabf89235ab7dbfdfd96cbd1ea/scikit_image-0.26.0-cp311-cp311-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:9ea6207d9e9d21c3f464efe733121c0504e494dbdc7728649ff3e23c3c5a4953", size = 13297768, upload-time = "2025-12-20T17:10:37.733Z" },
++    { url = "https://files.pythonhosted.org/packages/a5/2a/e71c1a7d90e70da67b88ccc609bd6ae54798d5847369b15d3a8052232f9d/scikit_image-0.26.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:74aa5518ccea28121f57a95374581d3b979839adc25bb03f289b1bc9b99c58af", size = 13711217, upload-time = "2025-12-20T17:10:40.935Z" },
++    { url = "https://files.pythonhosted.org/packages/d4/59/9637ee12c23726266b91296791465218973ce1ad3e4c56fc81e4d8e7d6e1/scikit_image-0.26.0-cp311-cp311-musllinux_1_2_aarch64.whl", hash = "sha256:d5c244656de905e195a904e36dbc18585e06ecf67d90f0482cbde63d7f9ad59d", size = 14337782, upload-time = "2025-12-20T17:10:43.452Z" },
++    { url = "https://files.pythonhosted.org/packages/e7/5c/a3e1e0860f9294663f540c117e4bf83d55e5b47c281d475cc06227e88411/scikit_image-0.26.0-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:21a818ee6ca2f2131b9e04d8eb7637b5c18773ebe7b399ad23dcc5afaa226d2d", size = 14805997, upload-time = "2025-12-20T17:10:45.93Z" },
++    { url = "https://files.pythonhosted.org/packages/d3/c6/2eeacf173da041a9e388975f54e5c49df750757fcfc3ee293cdbbae1ea0a/scikit_image-0.26.0-cp311-cp311-win_amd64.whl", hash = "sha256:9490360c8d3f9a7e85c8de87daf7c0c66507960cf4947bb9610d1751928721c7", size = 11878486, upload-time = "2025-12-20T17:10:48.246Z" },
++    { url = "https://files.pythonhosted.org/packages/c3/a4/a852c4949b9058d585e762a66bf7e9a2cd3be4795cd940413dfbfbb0ce79/scikit_image-0.26.0-cp311-cp311-win_arm64.whl", hash = "sha256:0baa0108d2d027f34d748e84e592b78acc23e965a5de0e4bb03cf371de5c0581", size = 11346518, upload-time = "2025-12-20T17:10:50.575Z" },
++    { url = "https://files.pythonhosted.org/packages/99/e8/e13757982264b33a1621628f86b587e9a73a13f5256dad49b19ba7dc9083/scikit_image-0.26.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:d454b93a6fa770ac5ae2d33570f8e7a321bb80d29511ce4b6b78058ebe176e8c", size = 12376452, upload-time = "2025-12-20T17:10:52.796Z" },
++    { url = "https://files.pythonhosted.org/packages/e3/be/f8dd17d0510f9911f9f17ba301f7455328bf13dae416560126d428de9568/scikit_image-0.26.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:3409e89d66eff5734cd2b672d1c48d2759360057e714e1d92a11df82c87cba37", size = 12061567, upload-time = "2025-12-20T17:10:55.207Z" },
++    { url = "https://files.pythonhosted.org/packages/b3/2b/c70120a6880579fb42b91567ad79feb4772f7be72e8d52fec403a3dde0c6/scikit_image-0.26.0-cp312-cp312-manylinux_2_24_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:4c717490cec9e276afb0438dd165b7c3072d6c416709cc0f9f5a4c1070d23a44", size = 13084214, upload-time = "2025-12-20T17:10:57.468Z" },
++    { url = "https://files.pythonhosted.org/packages/f4/a2/70401a107d6d7466d64b466927e6b96fcefa99d57494b972608e2f8be50f/scikit_image-0.26.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:7df650e79031634ac90b11e64a9eedaf5a5e06fcd09bcd03a34be01745744466", size = 13561683, upload-time = "2025-12-20T17:10:59.49Z" },
++    { url = "https://files.pythonhosted.org/packages/13/a5/48bdfd92794c5002d664e0910a349d0a1504671ef5ad358150f21643c79a/scikit_image-0.26.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:cefd85033e66d4ea35b525bb0937d7f42d4cdcfed2d1888e1570d5ce450d3932", size = 14112147, upload-time = "2025-12-20T17:11:02.083Z" },
++    { url = "https://files.pythonhosted.org/packages/ee/b5/ac71694da92f5def5953ca99f18a10fe98eac2dd0a34079389b70b4d0394/scikit_image-0.26.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:3f5bf622d7c0435884e1e141ebbe4b2804e16b2dd23ae4c6183e2ea99233be70", size = 14661625, upload-time = "2025-12-20T17:11:04.528Z" },
++    { url = "https://files.pythonhosted.org/packages/23/4d/a3cc1e96f080e253dad2251bfae7587cf2b7912bcd76fd43fd366ff35a87/scikit_image-0.26.0-cp312-cp312-win_amd64.whl", hash = "sha256:abed017474593cd3056ae0fe948d07d0747b27a085e92df5474f4955dd65aec0", size = 11911059, upload-time = "2025-12-20T17:11:06.61Z" },
++    { url = "https://files.pythonhosted.org/packages/35/8a/d1b8055f584acc937478abf4550d122936f420352422a1a625eef2c605d8/scikit_image-0.26.0-cp312-cp312-win_arm64.whl", hash = "sha256:4d57e39ef67a95d26860c8caf9b14b8fb130f83b34c6656a77f191fa6d1d04d8", size = 11348740, upload-time = "2025-12-20T17:11:09.118Z" },
++]
++
+ [[package]]
+ name = "scikit-learn"
+ version = "1.9.0"
+@@ -1627,7 +1699,7 @@ resolution-markers = [
+     "python_full_version < '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
+ ]
+ dependencies = [
+-    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" } },
+ ]
+ sdist = { url = "https://files.pythonhosted.org/packages/7a/97/5a3609c4f8d58b039179648e62dd220f89864f56f7357f5d4f45c29eb2cc/scipy-1.17.1.tar.gz", hash = "sha256:95d8e012d8cb8816c226aef832200b1d45109ed4464303e997c5b13122b297c0", size = 30573822, upload-time = "2026-02-23T00:26:24.851Z" }
+ wheels = [
+@@ -1664,7 +1736,7 @@ resolution-markers = [
+     "python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
+ ]
+ dependencies = [
+-    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
++    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" } },
+ ]
+ sdist = { url = "https://files.pythonhosted.org/packages/a7/25/c2700dfaf6442b4effaa91af24ebce5dc9d31bb4a69706313aae70d72cd0/scipy-1.18.0.tar.gz", hash = "sha256:67b2ad2ad54c72ca6d04975a9b2df8c3638c34ddd5b28738e94fc2b57929d378", size = 30774447, upload-time = "2026-06-19T15:01:43.456Z" }
+ wheels = [
+@@ -1759,6 +1831,42 @@ wheels = [
+     { url = "https://files.pythonhosted.org/packages/32/d5/f9a850d79b0851d1d4ef6456097579a9005b31fea68726a4ae5f2d82ddd9/threadpoolctl-3.6.0-py3-none-any.whl", hash = "sha256:43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb", size = 18638, upload-time = "2025-03-13T13:49:21.846Z" },
+ ]
+ 
++[[package]]
++name = "tifffile"
++version = "2026.3.3"
++source = { registry = "https://pypi.org/simple" }
++resolution-markers = [
++    "python_full_version < '3.12' and platform_machine == 'aarch64' and sys_platform == 'linux'",
++    "(python_full_version < '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version < '3.12' and sys_platform == 'win32')",
++    "python_full_version < '3.12' and sys_platform == 'darwin'",
++    "python_full_version < '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
++]
++dependencies = [
++    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" } },
++]
++sdist = { url = "https://files.pythonhosted.org/packages/c5/cb/2f6d79c7576e22c116352a801f4c3c8ace5957e9aced862012430b62e14f/tifffile-2026.3.3.tar.gz", hash = "sha256:d9a1266bed6f2ee1dd0abde2018a38b4f8b2935cb843df381d70ac4eac5458b7", size = 388745, upload-time = "2026-03-03T19:14:38.134Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/1a/e4/e804505f87627cd8cdae9c010c47c4485fd8c1ce31a7dd0ab7fcc4707377/tifffile-2026.3.3-py3-none-any.whl", hash = "sha256:e8be15c94273113d31ecb7aa3a39822189dd11c4967e3cc88c178f1ad2fd1170", size = 243960, upload-time = "2026-03-03T19:14:35.808Z" },
++]
++
++[[package]]
++name = "tifffile"
++version = "2026.9.20"
++source = { registry = "https://pypi.org/simple" }
++resolution-markers = [
++    "python_full_version >= '3.12' and platform_machine == 'aarch64' and sys_platform == 'linux'",
++    "(python_full_version >= '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version >= '3.12' and sys_platform == 'win32')",
++    "python_full_version >= '3.12' and sys_platform == 'darwin'",
++    "python_full_version >= '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
++]
++dependencies = [
++    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" } },
++]
++sdist = { url = "https://files.pythonhosted.org/packages/92/66/634db78ebad513038d753830dd8815eea26278b5463ba0f43198b0c24c4e/tifffile-2026.9.20.tar.gz", hash = "sha256:30e145a7042ce7143ae50a50fe8b7221b0070aae22adab8f9e79a264be6b5cdc", size = 449417, upload-time = "2026-09-21T03:59:40.055Z" }
++wheels = [
++    { url = "https://files.pythonhosted.org/packages/05/bf/04f3e61cb20a03678ca43f29bae9a7d0b7d9f563b86f5f600b2d8fba9712/tifffile-2026.9.20-py3-none-any.whl", hash = "sha256:9b913167b8f66a57f2e7c0454486c4c4607196d494797461226166bd0755c0e6", size = 275004, upload-time = "2026-09-21T03:59:38.46Z" },
++]
++
+ [[package]]
+ name = "timm"
+ version = "1.0.28"
+@@ -1815,20 +1923,20 @@ resolution-markers = [
+     "(python_full_version < '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version < '3.12' and sys_platform == 'win32')",
+ ]
+ dependencies = [
+-    { name = "cuda-bindings", marker = "sys_platform == 'linux'" },
+-    { name = "cuda-toolkit", extra = ["cublas", "cudart", "cufft", "cufile", "cupti", "curand", "cusolver", "cusparse", "nvjitlink", "nvrtc", "nvtx"], marker = "sys_platform == 'linux'" },
+-    { name = "filelock", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "fsspec", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "jinja2", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "networkx", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "nvidia-cudnn-cu12", marker = "sys_platform == 'linux'" },
+-    { name = "nvidia-cusparselt-cu12", marker = "sys_platform == 'linux'" },
+-    { name = "nvidia-nccl-cu12", marker = "sys_platform == 'linux'" },
+-    { name = "nvidia-nvshmem-cu12", marker = "sys_platform == 'linux'" },
+-    { name = "setuptools", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "sympy", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "triton", marker = "sys_platform == 'linux'" },
+-    { name = "typing-extensions", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "cuda-bindings", marker = "sys_platform != 'win32'" },
++    { name = "cuda-toolkit", extra = ["cublas", "cudart", "cufft", "cufile", "cupti", "curand", "cusolver", "cusparse", "nvjitlink", "nvrtc", "nvtx"], marker = "sys_platform != 'win32'" },
++    { name = "filelock" },
++    { name = "fsspec" },
++    { name = "jinja2" },
++    { name = "networkx" },
++    { name = "nvidia-cudnn-cu12", marker = "sys_platform != 'win32'" },
++    { name = "nvidia-cusparselt-cu12", marker = "sys_platform != 'win32'" },
++    { name = "nvidia-nccl-cu12", marker = "sys_platform != 'win32'" },
++    { name = "nvidia-nvshmem-cu12", marker = "sys_platform != 'win32'" },
++    { name = "setuptools" },
++    { name = "sympy" },
++    { name = "triton", marker = "sys_platform != 'win32'" },
++    { name = "typing-extensions" },
+ ]
+ wheels = [
+     { url = "https://download-r2.pytorch.org/whl/cu128/torch-2.11.0%2Bcu128-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:d76f08e212285bd84c4c5a3472417f8eb4ee72e4067a604f7508dbfa2119771f", upload-time = "2026-04-27T17:36:45Z" },
+@@ -1850,13 +1958,13 @@ resolution-markers = [
+     "python_full_version < '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
+ ]
+ dependencies = [
+-    { name = "filelock", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "fsspec", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "jinja2", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "networkx", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "setuptools", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "sympy", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "typing-extensions", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
++    { name = "filelock" },
++    { name = "fsspec" },
++    { name = "jinja2" },
++    { name = "networkx" },
++    { name = "setuptools" },
++    { name = "sympy" },
++    { name = "typing-extensions" },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/5b/fe/cba54dc58523434919b66f13a667e36e436deddd77ca519e96553617d4ec/torch-2.13.0-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:e76f9bcecc52b8ff711239a2f7547d5353df95878ab232f0773c1d95928b92f8", size = 111187938, upload-time = "2026-07-08T16:05:17.065Z" },
+@@ -1906,10 +2014,10 @@ resolution-markers = [
+     "(python_full_version < '3.12' and platform_machine != 'aarch64' and sys_platform == 'linux') or (python_full_version < '3.12' and sys_platform == 'win32')",
+ ]
+ dependencies = [
+-    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version < '3.12' and sys_platform == 'linux') or (python_full_version < '3.12' and sys_platform == 'win32')" },
+-    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" }, marker = "(python_full_version >= '3.12' and sys_platform == 'linux') or (python_full_version >= '3.12' and sys_platform == 'win32')" },
+-    { name = "pillow", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+-    { name = "torch", version = "2.11.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" }, marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
++    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
++    { name = "pillow" },
++    { name = "torch", version = "2.11.0+cu128", source = { registry = "https://download.pytorch.org/whl/cu128" } },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/33/bf/21b899792b08cae7a298551c68398a79e333697479ed311b3b067aab4bdc/torchvision-0.26.0-cp311-cp311-manylinux_2_28_aarch64.whl", hash = "sha256:1c55dc8affbcc0eb2060fbabbe996ae9e5839b24bb6419777f17848945a411b1", size = 7767527, upload-time = "2026-03-23T18:12:44.348Z" },
+@@ -1931,10 +2039,10 @@ resolution-markers = [
+     "python_full_version < '3.12' and sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32'",
+ ]
+ dependencies = [
+-    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12' and sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12' and sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "pillow", marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
+-    { name = "torch", version = "2.13.0", source = { registry = "https://pypi.org/simple" }, marker = "sys_platform != 'linux' and sys_platform != 'win32'" },
++    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
++    { name = "numpy", version = "2.5.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
++    { name = "pillow" },
++    { name = "torch", version = "2.13.0", source = { registry = "https://pypi.org/simple" } },
+ ]
+ wheels = [
+     { url = "https://files.pythonhosted.org/packages/7a/b2/1e010052079e4c577007b789db336ea7075f1a426e84d17121fbc3745516/torchvision-0.28.0-cp311-cp311-macosx_14_0_arm64.whl", hash = "sha256:83fe6c020866a85acd7d97deccc45ff11d66daf42916d04396a4309c66c0ccb8", size = 1856017, upload-time = "2026-07-08T16:07:55.533Z" },

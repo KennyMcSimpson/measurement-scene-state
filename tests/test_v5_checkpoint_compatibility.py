@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import pytest
 import torch
 
 from mcss.config import load_config
@@ -9,11 +10,17 @@ from mcss.model.system import build_model
 def test_frozen_v5_checkpoint_strictly_loads_into_current_model() -> None:
     project_root = Path(__file__).resolve().parents[1]
     baseline_root = project_root / "baselines" / "v5_typed_appearance_step4500"
+    checkpoint = baseline_root / "checkpoint" / "step_004500.pt"
+    if not checkpoint.exists():
+        pytest.skip(
+            "Optional historical V5 step-4500 checkpoint is not distributed in the public "
+            "repository; restore the original checkpoint to run strict compatibility checks"
+        )
     config = load_config(
         baseline_root / "config" / "hypersim_er_v5_appearance2x_overfit.yaml"
     )
     payload = torch.load(
-        baseline_root / "checkpoint" / "step_004500.pt",
+        checkpoint,
         map_location="cpu",
         weights_only=False,
     )

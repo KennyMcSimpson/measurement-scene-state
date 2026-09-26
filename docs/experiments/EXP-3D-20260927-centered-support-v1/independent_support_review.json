@@ -1,0 +1,184 @@
+{
+  "status": "PASS",
+  "scope": "INDEPENDENT_READONLY_ENGINEERING_AUDIT_NOT_SCIENTIFIC_QUALIFICATION",
+  "checks": {
+    "initial_learned_parameters_exact": true,
+    "same_data_manifest_and_all_data_hashes": true,
+    "same_training_config": true,
+    "same_write_config": true,
+    "data_sha256_current_matches": true,
+    "source_sha256_current_matches": true,
+    "ai003_all_ten_writer_gradients_nonzero": true,
+    "exact_130_steps": true,
+    "all_six_checkpoints_load": true,
+    "checkpoint_hashes_match_summary": true
+  },
+  "initial_parameter_comparison": {
+    "carrier_state_dict": {
+      "learned_tensors": 22,
+      "differing": [],
+      "equal": true
+    },
+    "write_rule_state_dict": {
+      "learned_tensors": 8,
+      "differing": [],
+      "equal": true
+    }
+  },
+  "per_scene_gradients": {
+    "ai_001_001": {
+      "phase_b_steps": 10,
+      "nonzero_writer_gradients": 10,
+      "old_nonzero_writer_gradients": 10,
+      "action_distribution": {
+        "FUSE": 4,
+        "COMPLETE": 3,
+        "ALL": 3
+      },
+      "minimum_gradient": 4.847211561085566e-06,
+      "maximum_gradient": 0.0008140657808871944
+    },
+    "ai_002_001": {
+      "phase_b_steps": 10,
+      "nonzero_writer_gradients": 10,
+      "old_nonzero_writer_gradients": 10,
+      "action_distribution": {
+        "FUSE": 4,
+        "COMPLETE": 3,
+        "ALL": 3
+      },
+      "minimum_gradient": 1.0595834024055447e-05,
+      "maximum_gradient": 0.00021063098131556842
+    },
+    "ai_003_001": {
+      "phase_b_steps": 10,
+      "nonzero_writer_gradients": 10,
+      "old_nonzero_writer_gradients": 0,
+      "action_distribution": {
+        "FUSE": 4,
+        "COMPLETE": 3,
+        "ALL": 3
+      },
+      "minimum_gradient": 5.0756349129069215e-05,
+      "maximum_gradient": 0.004130801213947122
+    }
+  },
+  "lock_hash_verification": {
+    "data_sha256": {
+      "count": 97,
+      "mismatches": []
+    },
+    "source_sha256": {
+      "count": 100,
+      "mismatches": []
+    }
+  },
+  "strict_checkpoint_loads": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/training/initial.pt": {
+      "load": "PASS",
+      "sha256": "58bd3a64a2bab15c08db6c6ba520957b6160a81926be1553628a0af3832ba775",
+      "bounds": [
+        [
+          -6.0,
+          -4.0,
+          0.05
+        ],
+        [
+          6.0,
+          4.0,
+          12.05
+        ]
+      ]
+    },
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/training/phase_a_final.pt": {
+      "load": "PASS",
+      "sha256": "487656b5546a38ed23496329f721c01d139f95b7f0f5576f7220bee308e7b078",
+      "bounds": [
+        [
+          -6.0,
+          -4.0,
+          0.05
+        ],
+        [
+          6.0,
+          4.0,
+          12.05
+        ]
+      ]
+    },
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/training/phase_b_final.pt": {
+      "load": "PASS",
+      "sha256": "4969b46a695bf12e7a9517b307401390bf89e9595876d8fe4fd03e2f2eebddc3",
+      "bounds": [
+        [
+          -6.0,
+          -4.0,
+          0.05
+        ],
+        [
+          6.0,
+          4.0,
+          12.05
+        ]
+      ]
+    },
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-centered-support-v1/training/initial.pt": {
+      "load": "PASS",
+      "sha256": "5718286e3e2d6a7db3a6b4b39b8b3d8de6db9793f1b6adc2d7b0bf2bd192fbbc",
+      "bounds": [
+        [
+          -6.0,
+          -4.0,
+          -6.0
+        ],
+        [
+          6.0,
+          4.0,
+          6.0
+        ]
+      ]
+    },
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-centered-support-v1/training/phase_a_final.pt": {
+      "load": "PASS",
+      "sha256": "5633628059d8e2711a68cc3cf090ad6969b47720b8fe3b34eed833a7c2654dbc",
+      "bounds": [
+        [
+          -6.0,
+          -4.0,
+          -6.0
+        ],
+        [
+          6.0,
+          4.0,
+          6.0
+        ]
+      ]
+    },
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-centered-support-v1/training/phase_b_final.pt": {
+      "load": "PASS",
+      "sha256": "ece968c5f4cf3e243df52159bc3e1ba29381a3542755222bd5afcff0ee25199e",
+      "bounds": [
+        [
+          -6.0,
+          -4.0,
+          -6.0
+        ],
+        [
+          6.0,
+          4.0,
+          6.0
+        ]
+      ]
+    }
+  },
+  "source_changes_from_prior_run": [
+    "/home/zonghan/measurement-scene-state/src/mcss/dynamic/checkpoint.py",
+    "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/small_training.py",
+    "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/spatial.py"
+  ],
+  "limitations": [
+    "Only train scenes used; no independent generalization conclusion.",
+    "Positive geometric support means in-frustum in at least two observations, not measured visibility of real surfaces.",
+    "A nonzero writer gradient proves a trainable path, not beneficial action choice."
+  ]
+}

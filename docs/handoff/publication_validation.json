@@ -1,0 +1,27 @@
+{
+  "clean_checkout_tests": {
+    "passed": 582,
+    "skipped": 1,
+    "seconds": 18.71,
+    "skip_reason": "Historical V5 checkpoint not distributed",
+    "scope": "Fresh staged-file directory without dataset or weights, using installed Python dependencies"
+  },
+  "ruff": "PASS; third_party/backups/outputs excluded",
+  "lock_check": "uv lock --check --offline PASS",
+  "archives": {
+    "files": 7,
+    "original_bytes": 92364718,
+    "compressed_bytes": 9382086,
+    "roundtrip_sha256": "PASS"
+  },
+  "fixes_for_collaborators": [
+    "Self-contained DINOv2 hash-test fixture",
+    "Pinned Long-LRM split descriptor plus Apache-2.0 license",
+    "Portable 3D reproduction entry point",
+    "Byte-preserved historical artifacts",
+    "CPU CI with no data/weight downloads"
+  ],
+  "test_failure_history": "Initial clean checkout exposed 4 local-file dependencies; fixed fixture paths without weakening assertions; final suite passes",
+  "training_and_data_download_rerun": false,
+  "workflow_remote_status": "Not yet run; local clean checkout verified"
+}

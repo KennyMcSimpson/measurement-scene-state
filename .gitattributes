@@ -1,0 +1,6 @@
+# Historical reports are byte-preserved evidence, including CSV CRLF and patch whitespace.
+docs/experiments/** -text -whitespace
+Codex_CV_2D_V2_Independent_Confirmation.md -text -whitespace
+tests/fixtures/long_lrm/*.json -text
+# Portable entry points must remain executable by POSIX shells after Windows checkout.
+*.sh text eol=lf

@@ -24,3 +24,12 @@ htmlcov/
 *.log
 
 # uv.lock is deliberately tracked for reproducibility.
+
+# Large text reports are committed as deterministic .gz archives.
+/docs/experiments/EXP-2D-20260926-opportunity-selector-v1/discovery_raw.jsonl
+/docs/experiments/EXP-2D-20260926-opportunity-selector-v1/rank_analysis.json
+/docs/experiments/EXP-2D-20260926-opportunity-selector-v1/visible_features.csv
+/docs/experiments/EXP-2D-20260926-opportunity-selector-v1/signal_scatter.csv
+/docs/experiments/EXP-2D-20260926-opportunity-selector-v1/raw_results.jsonl
+/docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/discovery_rows.jsonl
+/docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/nested_cv_results.json

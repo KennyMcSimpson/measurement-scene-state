@@ -1,0 +1,59 @@
+{
+  "status": "LOCKED_BEFORE_NEW_GEOMETRY_EVALUATION",
+  "created_utc": "2026-09-26T18:24:44.943056+00:00",
+  "scope": "POSTHOC_TRAIN_ONLY_GEOMETRY_BUGFIX_NOT_INDEPENDENT_CONFIRMATION",
+  "trigger": "ai003 observed cameras face outside anchor-frontward volume; no2view-supportedcandidate",
+  "change": "one uniform anchor-centered metricbox for allscenes; sameextent/grid/candidatecount",
+  "old_bounds": [
+    [
+      -6,
+      -4,
+      0.05
+    ],
+    [
+      6,
+      4,
+      12.05
+    ]
+  ],
+  "new_bounds": [
+    [
+      -6,
+      -4,
+      -6
+    ],
+    [
+      6,
+      4,
+      6
+    ]
+  ],
+  "bounds_selection_inputs": "rootcauseobservedcameras only; noquerycamera/GT/scores",
+  "scene_specific_tuning": false,
+  "candidate_search": false,
+  "support_threshold": 2,
+  "grid_size": [
+    8,
+    8,
+    8
+  ],
+  "candidate_count": 128,
+  "scenes": [
+    "ai_001_001",
+    "ai_002_001",
+    "ai_003_001"
+  ],
+  "dataset_manifest": "outputs/EXP-3D-20260927-small-training-v1/data/manifest.json",
+  "frame_roles_unchanged": true,
+  "seed": 20260927,
+  "stage_A_steps": 100,
+  "stage_B_steps": 30,
+  "optimizer_schedule_unchanged": true,
+  "backbone_write_rule_unchanged": true,
+  "primary_fix_check": "ai003cachedprefixmulti-view support positive; finite nonzero proposals and trainwritergradients",
+  "task_metrics": "same12 trainqueries allreported; no requirementofpositivegain",
+  "initialize": "fresh sameseed; do NOT transplant geometrybuffers from oldcheckpoint",
+  "keep_old_results": true,
+  "no_extra_training_for_results": true,
+  "if_no_multiview_overlap": "report geometry insufficient; never force support or relax2viewrule"
+}

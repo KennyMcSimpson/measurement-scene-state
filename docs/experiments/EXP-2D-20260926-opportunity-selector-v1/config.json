@@ -1,0 +1,78 @@
+{
+  "F_scope": "approximate binary boundary F, secondary; not official DAVIS J&F",
+  "abstention_thresholds": [
+    0.0,
+    0.001,
+    0.005,
+    0.01,
+    0.02
+  ],
+  "aggregation": "objects within pair, both target pairs within sequence, equal sequence mean",
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20260926,
+  "boundary_tolerance_diagonal": 0.008,
+  "correspondence": "cosine hard nearest source token, no target masks",
+  "eta": 5.0,
+  "eta_rule": "fixed from historical discovery; no new eta search",
+  "identifiability_strong": {
+    "both_ci_lower_gt": 0,
+    "harmful_among_writes_max": 0.25
+  },
+  "latent_width": 64,
+  "max_increment_norm": 0.15,
+  "opportunity_moderate": {
+    "minimum_positive_sequences": 2,
+    "top1_max_exclusive": 0.8
+  },
+  "opportunity_strong": {
+    "loso_min_gt": 0,
+    "minimum_positive_sequences": 4,
+    "non_tiny_gain_gt": 0,
+    "sequence_ci_lower_gt": 0,
+    "top1_max": 0.5
+  },
+  "pixel_readout": "source object area occupancy, nearest transfer, bilinear upsample, >=0.5",
+  "primary_metric": "J",
+  "primary_resolution": 448,
+  "probability_threshold": 0.5,
+  "rank_absolute_tolerance": 1e-08,
+  "rank_relative_tolerance": 1e-05,
+  "reserve_policy": "remains sealed; no confirmation in this v1",
+  "resolutions": [
+    224,
+    448
+  ],
+  "rgb_ridge": 0.1,
+  "rgb_thresholds": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0
+  ],
+  "ridge_alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "schema": "opportunity-selector-v1",
+  "seed": 20260926,
+  "size_bucket_thresholds": [
+    0.005,
+    0.02,
+    0.1
+  ],
+  "stages": [
+    "fit",
+    "discovery_opportunity",
+    "discovery_selectors",
+    "lock",
+    "validation",
+    "report"
+  ],
+  "tie_rule": "OFF,A,B,ALL Cartesian order, earliest exact maximum",
+  "validation_history": "same 16 historical internal validation sequences; not a fresh holdout"
+}

@@ -12,7 +12,6 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import msvcrt
 import os
 import re
 import shutil
@@ -25,6 +24,8 @@ from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any
+
+from mcss.file_lock import acquire_file_lock, release_file_lock
 
 PROJECT = Path(__file__).resolve().parents[1]
 SOURCE = PROJECT / "outputs/dataset_access_check_20260918/hypersim_holdout_download_sizes.json"
@@ -318,14 +319,14 @@ def _process_lock(path: Path) -> Iterator[None]:
             handle.flush()
         handle.seek(0)
         try:
-            msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
+            acquire_file_lock(handle)
         except OSError as error:
             raise RuntimeError(f"Another extraction process holds the lock: {path}") from error
         try:
             yield
         finally:
             handle.seek(0)
-            msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            release_file_lock(handle)
     finally:
         handle.close()
 

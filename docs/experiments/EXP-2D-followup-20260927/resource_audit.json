@@ -1,0 +1,118 @@
+{
+  "schema": "mcss.followup.resource_audit.v1",
+  "date": "2026-09-27",
+  "scope": "Three official-source metadata/code/license checks only; no dataset RGB, source mask, target GT, evaluation or frozen V2 edits.",
+  "candidate_count": 3,
+  "metadata_budget_bytes": 20000000,
+  "download_accounting": {
+    "segtrack_completed_range_passes_bytes": 1536300,
+    "interrupted_segtrack_code_pass_hard_cap_bytes": 10000000,
+    "other_shell_downloads": "Small official GitHub repository listings and source files (<1MB); no media responses.",
+    "controlled_download_upper_bound_bytes": 13000000,
+    "web_tool_pages": "Rendered official documentation; transport byte counts not exposed.",
+    "interrupted_attempt": "Initial SegTrack code whitelist was too broad and began retrieving unrelated MATLAB dependency source. Stopped it; no images or masks were read. Replaced by narrow README/two-helper whitelist."
+  },
+  "rgb_downloaded": 0,
+  "source_masks_downloaded": 0,
+  "target_gt_downloaded": 0,
+  "target_gt_read": 0,
+  "davis_official_val_touched": false,
+  "reserve_touched": false,
+  "n_qualified_new_sequences": 0,
+  "frozen_v2_modified": false,
+  "candidates": [
+    {
+      "dataset": "YouTube-VOS 2019 train",
+      "priority": "Best fit for the unchanged source-annotated task; qualification incomplete",
+      "official_urls": {
+        "task": "https://youtube-vos.org/dataset/vos/",
+        "terms": "https://youtube-vos.org/dataset/term/",
+        "download": "https://drive.google.com/drive/folders/1XwjQ-eysmOb7JdmJAwfVOBZX-aMbHccC",
+        "author_conversion_code": "https://github.com/youtubevos/vis2vos/blob/master/convert.py"
+      },
+      "verified": [
+        "Official VOS task provides an object mask of the first frame.",
+        "Official 2019 train has3471 videos.",
+        "Official terms license annotations CC BY4.0 and restrict data release to non-commercial research.",
+        "Official 2019 download link resolves to a public Google Drive folder.",
+        "Authors VIS-to-VOS converter initializes palette PNG label0 and writes positive per-instance IDs ins+1."
+      ],
+      "identity": {
+        "dataset_clip_id": "Ten-character name derived from file_names in the official conversion example",
+        "original_youtube_video_id_mapping": "NOT_FOUND_IN_INSPECTED_OFFICIAL_METADATA",
+        "independence_status": "UNVERIFIED"
+      },
+      "mask_semantics": {
+        "background_zero": "Explicit in authors VIS-to-VOS converter, not yet audited native VOS2019 package",
+        "void_255": "NOT_ESTABLISHED; converter does not reserve255",
+        "source_to_target_instance_consistency": "Per-video instance loop is explicit in converter",
+        "qualification": "Do not transfer converter assumptions to native release without its format metadata/loader contract."
+      },
+      "availability": "Official Drive entry reachable; file inventory/archive ranged access not verified; no GT bundle downloaded.",
+      "specific_next_step": "Obtain official native VOS2019 format/loader documentation plus a clip-name→original YouTube video ID/frame-span table. Qualify those metadata against historical exposure before selecting32 videos or downloading GT.",
+      "status": "BLOCKED_IDENTITY_MAPPING_AND_NATIVE_LABEL_CONTRACT"
+    },
+    {
+      "dataset": "SegTrack-v2",
+      "priority": "Small accessible fallback, but not qualified for independent confirmation",
+      "official_urls": {
+        "dataset": "https://web.engr.oregonstate.edu/~lif/SegTrack2/dataset.html",
+        "archive": "https://web.engr.oregonstate.edu/~lif/SegTrack2/SegTrackv2.zip",
+        "original_segtrack_terms": "https://sites.cc.gatech.edu/gvu/perception/projects/SegTrack/"
+      },
+      "verified": [
+        "Official page lists14 named sequences and24 objects.",
+        "Official ZIP HEAD200,209209384bytes, Accept-Ranges bytes.",
+        "ZIP directory and selected README/MATLAB helpers fetched with206 byte ranges; no masks decoded.",
+        "Official compute_overlaps helper operates on binary foreground GT; zero/one logical intersection and union are explicit."
+      ],
+      "license": "Original SegTrack official site permits non-commercial scholarly dissemination subject to author copyright; inspected SegTrack-v2 page/README did not establish a clear standalone dataset license. Bundled dependency licenses are not dataset permission.",
+      "identity": {
+        "sequence_names": "Named clips; not an audited source-video URL or original-recording mapping",
+        "independence_status": "UNVERIFIED"
+      },
+      "mask_semantics": {
+        "binary_foreground": "Verified at evaluation-function input only",
+        "raw_pixel_mapping": "NOT_ESTABLISHED in inspected helpers",
+        "void_255": "NOT_ESTABLISHED; do not assume white255 is void"
+      },
+      "specific_next_step": "Need the dataset-specific usage grant, original-video provenance, and exact binary PNG loader contract.14 named clips alone do not guarantee14 independent original recordings.",
+      "status": "BLOCKED_PROVENANCE_LICENSE_AND_RAW_MASK_MAPPING"
+    },
+    {
+      "dataset": "Segment Anything Video (SA-V)",
+      "priority": "Promising future separately preregistered adapter study, not a replacement inside frozen V2",
+      "official_urls": {
+        "dataset": "https://ai.meta.com/datasets/segment-anything-video/",
+        "documentation": "https://github.com/facebookresearch/sam2/blob/main/sav_dataset/README.md",
+        "downloads": "https://ai.meta.com/datasets/segment-anything-video-downloads/",
+        "evaluator": "https://github.com/facebookresearch/sam2/blob/main/sav_dataset/sav_evaluator.py"
+      },
+      "verified": [
+        "Official dataset release is CC BY4.0.",
+        "Train schema explicitly contains video_id, frame count/duration, masklet IDs and per-object RLE annotations.",
+        "Official docs say videos were collected through a contract third party.",
+        "Val/test use separate binary PNGs per video/object; objects may overlap, including whole-person and hand masks."
+      ],
+      "identity": {
+        "video_id": "Explicit official field tied to each released video",
+        "original_recording_grouping": "Cross-video source-recording/clip grouping still not established from inspected schema; IDs alone do not prove independent recordings."
+      },
+      "mask_semantics": {
+        "representation": "Per-object binary RLE or PNG, not a mutually exclusive indexed instance map",
+        "background_zero_void255": "Cannot apply V1 indexed-mask0/255 convention to independent binary masks",
+        "overlap": "Explicitly permitted; collapsing masks needs a new policy and changes task semantics"
+      },
+      "availability": "Official README links download page, but inspected current page did not expose a usable static asset manifest. No form submitted or dataset downloaded.",
+      "specific_next_step": "If pursuing separately, preregister a per-object binary-mask adapter preserving overlaps, manual-only annotation choice and frame handling, then obtain official video grouping/download metadata. This requires a new protocol; frozen V2 is not qualified by this audit.",
+      "status": "FUTURE_PROTOCOL_REQUIRED_NO_CURRENT_V2_COMPATIBILITY"
+    }
+  ],
+  "conclusion": "No qualified independent confirmation data was established. Prioritize concrete YouTube-VOS identity/native-label metadata rather than another broad dataset search. SA-V is a separate future protocol option, not permission to change frozen V2.",
+  "source_artifact_hashes": {
+    "followup_ytvos_convert.py": "b4bbbd9f306a0889b483468b8fc5a1391c905c309369e8eb9d401668deceb6ca",
+    "followup_segtrack_compute_overlaps.m": "3e6fe47c8f9a13ac120e69dcaa851abdd2cbac20ac69bdeb97ba1d7f95ebee87",
+    "followup_segtrack_README": "582a15ac67ffaa9fa81e99510cdcf185005e666f96fd01109eae1eb32b274f1f",
+    "followup_sav_evaluator.py": "1b11190b7de3d141f4610005a1b18235fd9bc97350889a1107b5511fd73ac9c9"
+  }
+}

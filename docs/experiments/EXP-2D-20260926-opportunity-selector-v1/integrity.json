@@ -1,0 +1,36 @@
+{
+  "FINAL_INTEGRITY": "PASS",
+  "analysis_sha256": {
+    "bootstrap_results.json": "fa77b88eba4c37c2f6e03a2443cc0a16d1de25519248419e06e9d26046579de8",
+    "oracle_analysis.json": "287fb04d7d8a546e2b4e589cd04f252221f3c0ff9dbc1ff89a94471bd59d1f81",
+    "per_pair_results.csv": "4a107a3a3a956468218a94899d6d13e4356f395e5c0cb0dfd09c7e9ae07ae15b",
+    "per_sequence_results.csv": "15ac7e46a9a0e395b454522e49d599562f1f2eab8215283d079aeffe02a9edc1",
+    "rank_analysis.json": "a85bded4bd3e4cd0862ac7f08e80cd14dd9e62b4c3512b0062bfb88596bd0e43",
+    "robustness_analysis.json": "02456036f6f5b60bb280cae6ccfadac00816b873a46a4d5f6807e300978c7039",
+    "selector_analysis.json": "c9fd30e47d2cd5026b519fe31cd10aedfda0c082f59108a74d2b2cc230a53e26",
+    "signal_analysis.json": "b33c794c435c6fdcd8016ff1db4914d8728de5a9ce5a9c17908275ac121fd594",
+    "signal_scatter.csv": "98d87fb2981f08d16bcd01921d470eb86d83bdadd84c1d7448749fbfb85eb8e1",
+    "visible_features.csv": "0cff05dafe91404a11f26253bf9279a1e8709f8067f776a835d98284a93994e7"
+  },
+  "checks": {
+    "all_analyses_exactly_reproduced": true,
+    "all_numeric_metrics_finite": true,
+    "audited_media_access_present": true,
+    "decisions_committed_before_target_gt": true,
+    "decisions_match_locked_inference": true,
+    "exact_raw_coverage": true,
+    "full_test_suite_passed": true,
+    "input_hashes_match": true,
+    "no_sealed_media_access": true,
+    "off_has_zero_write": true,
+    "raw_hash_matches_validation_completion": true,
+    "selector_training_identity": true
+  },
+  "davis_official_val_touched": false,
+  "raw_rows": 1792,
+  "raw_sha256": "201719eb9d40120efe8073525486599d08df33d852b9134cd280ebda57153a42",
+  "reserve_touched": false,
+  "validation_gt_used_for_selection": false,
+  "validation_pairs": 64,
+  "verified_input_files": 168
+}

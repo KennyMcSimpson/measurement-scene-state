@@ -6,7 +6,6 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
-import msvcrt
 import os
 import re
 import shutil
@@ -17,6 +16,8 @@ from pathlib import Path
 from typing import Any
 
 import requests
+
+from mcss.file_lock import acquire_file_lock
 
 PROJECT = Path(__file__).resolve().parents[1]
 SOURCE = PROJECT / "outputs/dataset_access_check_20260918/hypersim_holdout_download_sizes.json"
@@ -226,8 +227,8 @@ def run(workers: int) -> int:
         lock_file.write(b"0")
         lock_file.flush()
     lock_file.seek(0)
-    msvcrt.locking(lock_file.fileno(), msvcrt.LK_NBLCK, 1)
-    # The Windows file lock is held for the process lifetime; stale files do not block resumes.
+    acquire_file_lock(lock_file)
+    # The open handle keeps the process lock; stale files do not block resumes.
     existing_status_hashes = _load_status_hashes(
         LOG_ROOT / "status.json", source_manifest_sha256
     )

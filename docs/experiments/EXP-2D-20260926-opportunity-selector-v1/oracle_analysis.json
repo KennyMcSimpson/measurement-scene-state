@@ -1,0 +1,3261 @@
+{
+  "224/discovery": {
+    "oracle_minus_off": {
+      "sequence_values": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.00739040598163998,
+        "color-run": 0.0012334477692515777,
+        "dancing": 0.018477283319096705,
+        "drone": 0.001650826873027894,
+        "lindy-hop": 0.00030165866754170573,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "sequence_bootstrap": {
+        "mean": 0.0024211352175464887,
+        "ci95": [
+          0.00017820198098972458,
+          0.0057506820272721125
+        ],
+        "n": 12
+      },
+      "pair_bootstrap": {
+        "mean": 0.0024211352175464887,
+        "ci95": [
+          0.0005793146342497402,
+          0.004806697105010498
+        ],
+        "n": 24
+      },
+      "positive_sequences": 5,
+      "sequence_std": 0.005244226756187772,
+      "pair_mean": 0.0024211352175464887,
+      "pair_median": 0.0,
+      "pair_std": 0.005373915812556103,
+      "pair_min": 0.0,
+      "pair_max": 0.020745299991141497,
+      "improved_pairs": 8,
+      "tied_pairs": 16,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 2,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "threshold_pair_counts": {
+        "0.005": 3,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.2543712390259507,
+        "color-run": 0.04245418155887219,
+        "dancing": 0.6359717535665312,
+        "drone": 0.0568200012492761,
+        "lindy-hop": 0.010382824599369763,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "top1_positive_gain_share": 0.6359717535665312,
+      "top3_positive_gain_share": 0.9471629938417581,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.002641238419141624,
+        "cat-girl": 0.002641238419141624,
+        "classic-car": 0.0019693833299016254,
+        "color-run": 0.002529106803755117,
+        "dancing": 0.0009614853901328325,
+        "drone": 0.002491163248866361,
+        "lindy-hop": 0.0026138149039105596,
+        "lucia": 0.002641238419141624,
+        "motocross-bumps": 0.002641238419141624,
+        "paragliding": 0.002641238419141624,
+        "sheep": 0.002641238419141624,
+        "tractor-sand": 0.002641238419141624
+      },
+      "leave_one_sequence_out_ci": {
+        "bmx-bumps": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006161339687092162
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "cat-girl": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006161339687092162
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "classic-car": {
+          "mean": 0.0019693833299016254,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.005366832942807965
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.8529335063949679,
+          "directional_ci_positive": true
+        },
+        "color-run": {
+          "mean": 0.002529106803755117,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.006011264516816898
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.664168482926368,
+          "directional_ci_positive": true
+        },
+        "dancing": {
+          "mean": 0.0009614853901328325,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.00237938362911058
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.6987678607858816,
+          "directional_ci_positive": true
+        },
+        "drone": {
+          "mean": 0.002491163248866361,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.00596280092227045
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.6742846057050604,
+          "directional_ci_positive": true
+        },
+        "lindy-hop": {
+          "mean": 0.0026138149039105596,
+          "ci95": [
+            0.0001500751702752631,
+            0.006123396132203405
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.642644215738342,
+          "directional_ci_positive": true
+        },
+        "lucia": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "motocross-bumps": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "paragliding": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "sheep": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "tractor-sand": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.0009614853901328325,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0013377925451956568,
+        0.018477283319096705
+      ]
+    },
+    "trajectory_minus_constant": {
+      "sequence_values": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.0031414524090651874,
+        "color-run": 0.0,
+        "dancing": 0.008447138635719942,
+        "drone": 0.00017749859889734654,
+        "lindy-hop": 0.0,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "sequence_bootstrap": {
+        "mean": 0.000980507470306873,
+        "ci95": [
+          0.0,
+          0.0024553770310560834
+        ],
+        "n": 12
+      },
+      "pair_bootstrap": {
+        "mean": 0.000980507470306873,
+        "ci95": [
+          1.4791549908112211e-05,
+          0.002576895359071967
+        ],
+        "n": 24
+      },
+      "positive_sequences": 3,
+      "sequence_std": 0.0024103533857468143,
+      "pair_mean": 0.000980507470306873,
+      "pair_median": 0.0,
+      "pair_std": 0.0034522555873417937,
+      "pair_min": 0.0,
+      "pair_max": 0.016894277271439884,
+      "improved_pairs": 4,
+      "tied_pairs": 20,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "threshold_pair_counts": {
+        "0.005": 1,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.26699205124209774,
+        "color-run": 0.0,
+        "dancing": 0.7179223422163398,
+        "drone": 0.015085606541562449,
+        "lindy-hop": 0.0,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "top1_positive_gain_share": 0.7179223422163398,
+      "top3_positive_gain_share": 1.0,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.0010696445130620432,
+        "cat-girl": 0.0010696445130620432,
+        "classic-car": 0.0007840579304197535,
+        "color-run": 0.0010696445130620432,
+        "dancing": 0.0003017228189056849,
+        "drone": 0.0010535082767986481,
+        "lindy-hop": 0.0010696445130620432,
+        "lucia": 0.0010696445130620432,
+        "motocross-bumps": 0.0010696445130620432,
+        "paragliding": 0.0010696445130620432,
+        "sheep": 0.0010696445130620432,
+        "tractor-sand": 0.0010696445130620432
+      },
+      "leave_one_sequence_out_ci": {
+        "bmx-bumps": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "cat-girl": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "classic-car": {
+          "mean": 0.0007840579304197535,
+          "ci95": [
+            0.0,
+            0.0023360375549958652
+          ],
+          "n": 11,
+          "positive_sequence_count": 2,
+          "top1_positive_gain_share": 0.9794195866946255,
+          "directional_ci_positive": false
+        },
+        "color-run": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "dancing": {
+          "mean": 0.0003017228189056849,
+          "ci95": [
+            0.0,
+            0.0008890322204536596
+          ],
+          "n": 11,
+          "positive_sequence_count": 2,
+          "top1_positive_gain_share": 0.9465196688738376,
+          "directional_ci_positive": false
+        },
+        "drone": {
+          "mean": 0.0010535082767986481,
+          "ci95": [
+            0.0,
+            0.002589351665111365
+          ],
+          "n": 11,
+          "positive_sequence_count": 2,
+          "top1_positive_gain_share": 0.7289185202131331,
+          "directional_ci_positive": false
+        },
+        "lindy-hop": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "lucia": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "motocross-bumps": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "paragliding": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "sheep": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        },
+        "tractor-sand": {
+          "mean": 0.0010696445130620432,
+          "ci95": [
+            0.0,
+            0.002621624137638155
+          ],
+          "n": 11,
+          "positive_sequence_count": 3,
+          "top1_positive_gain_share": 0.7179223422163398,
+          "directional_ci_positive": false
+        }
+      },
+      "all_loso_ci_lower_positive": false,
+      "loso_min": 0.0003017228189056849,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        4.4374649724336634e-05,
+        0.008447138635719942
+      ]
+    },
+    "H1": "MODERATE",
+    "non_tiny_gain": 0.0027643626760535506,
+    "tie_aware_oracle": {
+      "fractional_counts": {
+        "OFF/OFF": 2.116666666666667,
+        "OFF/A": 0.95,
+        "OFF/B": 0.75,
+        "OFF/ALL": 2.0,
+        "A/OFF": 0.95,
+        "A/A": 2.2,
+        "A/B": 1.0166666666666666,
+        "A/ALL": 1.0166666666666666,
+        "B/OFF": 1.75,
+        "B/A": 1.2,
+        "B/B": 2.0166666666666666,
+        "B/ALL": 2.116666666666667,
+        "ALL/OFF": 2.0,
+        "ALL/A": 0.95,
+        "ALL/B": 0.95,
+        "ALL/ALL": 2.0166666666666666
+      },
+      "constant_oracle_counts_off_first_ties": {
+        "OFF/OFF": 17,
+        "ALL/ALL": 3,
+        "B/B": 1,
+        "A/A": 3
+      },
+      "sequence_preferences": {
+        "bmx-bumps": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "cat-girl": {
+          "OFF/OFF": 1.1,
+          "OFF/A": 0.1,
+          "A/OFF": 0.1,
+          "A/A": 0.1,
+          "A/B": 0.1,
+          "A/ALL": 0.1,
+          "B/A": 0.1,
+          "B/ALL": 0.1,
+          "ALL/A": 0.1,
+          "ALL/B": 0.1
+        },
+        "classic-car": {
+          "ALL/OFF": 1.0,
+          "B/ALL": 1.0
+        },
+        "color-run": {
+          "B/B": 1.0,
+          "A/A": 1.0
+        },
+        "dancing": {
+          "OFF/ALL": 1.0,
+          "ALL/ALL": 1.0
+        },
+        "drone": {
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.0625,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "A/B": 0.0625,
+          "A/ALL": 0.0625,
+          "B/OFF": 1.0625,
+          "B/A": 0.0625,
+          "B/B": 0.0625,
+          "B/ALL": 0.0625,
+          "ALL/OFF": 0.0625,
+          "ALL/A": 0.0625,
+          "ALL/B": 0.0625,
+          "ALL/ALL": 0.0625
+        },
+        "lindy-hop": {
+          "OFF/ALL": 0.25,
+          "A/A": 0.35,
+          "B/A": 0.35,
+          "ALL/OFF": 0.25,
+          "OFF/OFF": 0.1,
+          "OFF/A": 0.1,
+          "A/OFF": 0.1,
+          "B/B": 0.1,
+          "B/ALL": 0.1,
+          "ALL/A": 0.1,
+          "ALL/B": 0.1,
+          "ALL/ALL": 0.1
+        },
+        "lucia": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "motocross-bumps": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "paragliding": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "sheep": {
+          "OFF/OFF": 0.22916666666666666,
+          "A/B": 0.22916666666666666,
+          "A/ALL": 0.22916666666666666,
+          "B/B": 0.22916666666666666,
+          "B/ALL": 0.22916666666666666,
+          "ALL/ALL": 0.22916666666666666,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.0625,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "B/OFF": 0.0625,
+          "B/A": 0.0625,
+          "ALL/OFF": 0.0625,
+          "ALL/A": 0.0625,
+          "ALL/B": 0.0625
+        },
+        "tractor-sand": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        }
+      },
+      "object_size_preferences": {
+        "small": {
+          "OFF/OFF": 1.5916666666666668,
+          "OFF/A": 0.925,
+          "OFF/B": 0.625,
+          "OFF/ALL": 1.375,
+          "A/OFF": 0.925,
+          "A/A": 1.675,
+          "A/B": 1.2916666666666665,
+          "A/ALL": 1.2916666666666665,
+          "B/OFF": 1.625,
+          "B/A": 1.675,
+          "B/B": 1.5916666666666668,
+          "B/ALL": 1.5916666666666668,
+          "ALL/OFF": 2.375,
+          "ALL/A": 0.925,
+          "ALL/B": 0.925,
+          "ALL/ALL": 2.591666666666667
+        },
+        "medium": {
+          "OFF/OFF": 1.1041666666666665,
+          "OFF/A": 0.9375,
+          "OFF/B": 0.4375,
+          "OFF/ALL": 4.4375,
+          "A/OFF": 0.9375,
+          "A/A": 1.9375000000000004,
+          "A/B": 0.7041666666666666,
+          "A/ALL": 0.7041666666666666,
+          "B/OFF": 0.4375,
+          "B/A": 1.9375000000000004,
+          "B/B": 1.0041666666666667,
+          "B/ALL": 3.104166666666667,
+          "ALL/OFF": 2.4375,
+          "ALL/A": 0.9375,
+          "ALL/B": 0.9375,
+          "ALL/ALL": 2.0041666666666673
+        },
+        "tiny": {
+          "OFF/OFF": 0.6875,
+          "OFF/A": 0.6875,
+          "OFF/B": 0.6875,
+          "OFF/ALL": 0.9375,
+          "A/OFF": 0.6875,
+          "A/A": 1.9375,
+          "A/B": 0.6875,
+          "A/ALL": 0.6875,
+          "B/OFF": 3.6875,
+          "B/A": 0.9375,
+          "B/B": 0.6875,
+          "B/ALL": 0.6875,
+          "ALL/OFF": 0.9375,
+          "ALL/A": 0.6875,
+          "ALL/B": 0.6875,
+          "ALL/ALL": 0.6875
+        },
+        "large": {
+          "OFF/OFF": 2.325,
+          "OFF/A": 0.325,
+          "A/OFF": 0.325,
+          "A/A": 2.325,
+          "A/B": 0.225,
+          "A/ALL": 0.225,
+          "B/A": 0.325,
+          "B/ALL": 1.3250000000000002,
+          "ALL/A": 0.325,
+          "ALL/B": 0.325,
+          "ALL/OFF": 1.125,
+          "B/B": 3.225,
+          "ALL/ALL": 1.225,
+          "B/OFF": 1.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125
+        }
+      },
+      "entropy_nats": 2.705897966240347,
+      "tie_counts": [
+        16,
+        16,
+        1,
+        10,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        16,
+        1,
+        4,
+        10,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        6,
+        16,
+        16,
+        16
+      ]
+    }
+  },
+  "224/validation": {
+    "oracle_minus_off": {
+      "sequence_values": {
+        "bear": 0.0,
+        "disc-jockey": 0.004131949222085651,
+        "dog-agility": 0.0,
+        "dogs-scale": 0.00015393600260132922,
+        "elephant": 0.0017071880248332727,
+        "hike": 0.0027620777653757367,
+        "kid-football": 0.0007445140186437271,
+        "koala": 0.0023367890411383763,
+        "lady-running": 0.002801622609176796,
+        "longboard": 0.0022644884118420416,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.030681601800581923,
+        "scooter-gray": 0.014251415723058311,
+        "stroller": 6.354728789959019e-06
+      },
+      "sequence_bootstrap": {
+        "mean": 0.0038651210842579452,
+        "ci95": [
+          0.0009203660853708617,
+          0.008289043383089324
+        ],
+        "n": 16
+      },
+      "pair_bootstrap": {
+        "mean": 0.0038651210842579452,
+        "ci95": [
+          0.000828577376309627,
+          0.008467659707202443
+        ],
+        "n": 32
+      },
+      "positive_sequences": 11,
+      "sequence_std": 0.007713904450597414,
+      "pair_mean": 0.0038651210842579452,
+      "pair_median": 0.0,
+      "pair_std": 0.011520061723786477,
+      "pair_min": 0.0,
+      "pair_max": 0.061362321295451966,
+      "improved_pairs": 15,
+      "tied_pairs": 17,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 2,
+        "0.01": 2,
+        "0.02": 1
+      },
+      "threshold_pair_counts": {
+        "0.005": 5,
+        "0.01": 2,
+        "0.02": 2
+      },
+      "sequence_positive_gain_share": {
+        "bear": 0.0,
+        "disc-jockey": 0.06681467947592988,
+        "dog-agility": 0.0,
+        "dogs-scale": 0.0024891846730928967,
+        "elephant": 0.027605668548561,
+        "hike": 0.04466350641357108,
+        "kid-football": 0.012038982777215252,
+        "koala": 0.037786478583034654,
+        "lady-running": 0.04530295668788007,
+        "longboard": 0.03661735884978095,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.4961293762170779,
+        "scooter-gray": 0.23044905017824305,
+        "stroller": 0.00010275759561325371
+      },
+      "top1_positive_gain_share": 0.4961293762170779,
+      "top3_positive_gain_share": 0.7933931058712509,
+      "leave_one_sequence_out": {
+        "bear": 0.004122795823208475,
+        "disc-jockey": 0.003847332541736098,
+        "dog-agility": 0.004122795823208475,
+        "dogs-scale": 0.004112533423035053,
+        "elephant": 0.00400898328821959,
+        "hike": 0.003938657305516759,
+        "kid-football": 0.004073161555298893,
+        "koala": 0.003967009887132583,
+        "lady-running": 0.003936020982596688,
+        "longboard": 0.003971829929085672,
+        "mallard-fly": 0.004122795823208475,
+        "motorbike": 0.004122795823208475,
+        "rallye": 0.004122795823208475,
+        "scooter-board": 0.00207735570316968,
+        "scooter-gray": 0.0031727014416712543,
+        "stroller": 0.004122372174622478
+      },
+      "leave_one_sequence_out_ci": {
+        "bear": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010168216660263285,
+            0.008745875002682025
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "disc-jockey": {
+          "mean": 0.003847332541736098,
+          "ci95": [
+            0.000735912693301721,
+            0.008545812951457569
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5316515008384993,
+          "directional_ci_positive": true
+        },
+        "dog-agility": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0009978552520656752,
+            0.00874469810916996
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "dogs-scale": {
+          "mean": 0.004112533423035053,
+          "ci95": [
+            0.0009879343174263333,
+            0.008732606474301869
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.49736741556479763,
+          "directional_ci_positive": true
+        },
+        "elephant": {
+          "mean": 0.00400898328821959,
+          "ci95": [
+            0.0008578630314118164,
+            0.008668397825789197
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.51021417975209,
+          "directional_ci_positive": true
+        },
+        "hike": {
+          "mean": 0.003938657305516759,
+          "ci95": [
+            0.0007908731055695987,
+            0.008600221380495963
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.519324216700399,
+          "directional_ci_positive": true
+        },
+        "kid-football": {
+          "mean": 0.004073161555298893,
+          "ci95": [
+            0.0009525019253530385,
+            0.00873843511152415
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5021750530316734,
+          "directional_ci_positive": true
+        },
+        "koala": {
+          "mean": 0.003967009887132583,
+          "ci95": [
+            0.0008324777090848467,
+            0.008639683969756262
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5156125591401717,
+          "directional_ci_positive": true
+        },
+        "lady-running": {
+          "mean": 0.003936020982596688,
+          "ci95": [
+            0.0008045353902598705,
+            0.008610436734965355
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5196720569028492,
+          "directional_ci_positive": true
+        },
+        "longboard": {
+          "mean": 0.003971829929085672,
+          "ci95": [
+            0.000840746223526429,
+            0.008630734331058303
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5149868339175494,
+          "directional_ci_positive": true
+        },
+        "mallard-fly": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010311487007145016,
+            0.008742874113571202
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "motorbike": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010311487007145016,
+            0.008742874113571202
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "rallye": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010311487007145016,
+            0.008742874113571202
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "scooter-board": {
+          "mean": 0.00207735570316968,
+          "ci95": [
+            0.0006916152010034614,
+            0.0041230794732288805
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.4573575820874314,
+          "directional_ci_positive": true
+        },
+        "scooter-gray": {
+          "mean": 0.0031727014416712543,
+          "ci95": [
+            0.0006916152010034614,
+            0.0074077887269110385
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.644699842592607,
+          "directional_ci_positive": true
+        },
+        "stroller": {
+          "mean": 0.004122372174622478,
+          "ci95": [
+            0.0010165249655352756,
+            0.008764545382742087
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.49618036251812075,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.00207735570316968,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0012258510217385,
+        0.0027719639763260015,
+        0.030681601800581923
+      ]
+    },
+    "trajectory_minus_constant": {
+      "sequence_values": {
+        "bear": 0.0,
+        "disc-jockey": 0.0,
+        "dog-agility": 0.0,
+        "dogs-scale": 3.70269955093927e-05,
+        "elephant": 0.0,
+        "hike": 0.0,
+        "kid-football": 0.0,
+        "koala": 0.0017679718566183666,
+        "lady-running": 0.0002461390214406334,
+        "longboard": 0.0022644884118420416,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.030681160647725983,
+        "scooter-gray": 0.0,
+        "stroller": 0.0
+      },
+      "sequence_bootstrap": {
+        "mean": 0.002187299183321026,
+        "ci95": [
+          3.076737768007917e-05,
+          0.006146276913967525
+        ],
+        "n": 16
+      },
+      "pair_bootstrap": {
+        "mean": 0.002187299183321026,
+        "ci95": [
+          1.784330918588803e-05,
+          0.00617735296773974
+        ],
+        "n": 32
+      },
+      "positive_sequences": 5,
+      "sequence_std": 0.007387069627410173,
+      "pair_mean": 0.002187299183321026,
+      "pair_median": 0.0,
+      "pair_std": 0.01067341802843015,
+      "pair_min": 0.0,
+      "pair_max": 0.061362321295451966,
+      "improved_pairs": 6,
+      "tied_pairs": 26,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 1,
+        "0.01": 1,
+        "0.02": 1
+      },
+      "threshold_pair_counts": {
+        "0.005": 1,
+        "0.01": 1,
+        "0.02": 1
+      },
+      "sequence_positive_gain_share": {
+        "bear": 0.0,
+        "disc-jockey": 0.0,
+        "dog-agility": 0.0,
+        "dogs-scale": 0.0010580112848683832,
+        "elephant": 0.0,
+        "hike": 0.0,
+        "kid-football": 0.0,
+        "koala": 0.05051811927752651,
+        "lady-running": 0.00703318912993063,
+        "longboard": 0.0647056090082924,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.8766850712993821,
+        "scooter-gray": 0.0,
+        "stroller": 0.0
+      },
+      "top1_positive_gain_share": 0.8766850712993821,
+      "top3_positive_gain_share": 0.991908799585201,
+      "leave_one_sequence_out": {
+        "bear": 0.002333119128875761,
+        "disc-jockey": 0.002333119128875761,
+        "dog-agility": 0.002333119128875761,
+        "dogs-scale": 0.0023306506625084683,
+        "elephant": 0.002333119128875761,
+        "hike": 0.002333119128875761,
+        "kid-football": 0.002333119128875761,
+        "koala": 0.0022152543384345367,
+        "lady-running": 0.002316709860779719,
+        "longboard": 0.0021821532347529584,
+        "mallard-fly": 0.002333119128875761,
+        "motorbike": 0.002333119128875761,
+        "rallye": 0.002333119128875761,
+        "scooter-board": 0.0002877084190273623,
+        "scooter-gray": 0.002333119128875761,
+        "stroller": 0.002333119128875761
+      },
+      "leave_one_sequence_out_ci": {
+        "bear": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.00653933687264649
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "disc-jockey": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.00653933687264649
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "dog-agility": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.00653933687264649
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "dogs-scale": {
+          "mean": 0.0023306506625084683,
+          "ci95": [
+            3.281853619208445e-05,
+            0.00653933687264649
+          ],
+          "n": 15,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.8776135963881146,
+          "directional_ci_positive": true
+        },
+        "elephant": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.00653933687264649
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "hike": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.00653933687264649
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "kid-football": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.00653933687264649
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "koala": {
+          "mean": 0.0022152543384345367,
+          "ci95": [
+            4.936932734585693e-06,
+            0.006440632384158095
+          ],
+          "n": 15,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.9233299645826845,
+          "directional_ci_positive": true
+        },
+        "lady-running": {
+          "mean": 0.002316709860779719,
+          "ci95": [
+            4.936932734585693e-06,
+            0.0065253960709177414
+          ],
+          "n": 15,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.8828946362579858,
+          "directional_ci_positive": true
+        },
+        "longboard": {
+          "mean": 0.0021821532347529584,
+          "ci95": [
+            4.936932734585693e-06,
+            0.006371961710427645
+          ],
+          "n": 15,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.9373359658126666,
+          "directional_ci_positive": true
+        },
+        "mallard-fly": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.5287002559377294e-05,
+            0.006527926248944215
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "motorbike": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.5287002559377294e-05,
+            0.006527926248944215
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "rallye": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.5287002559377294e-05,
+            0.006527926248944215
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "scooter-board": {
+          "mean": 0.0002877084190273623,
+          "ci95": [
+            4.936932734585693e-06,
+            0.0006886272632508572
+          ],
+          "n": 15,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.5247183750589004,
+          "directional_ci_positive": true
+        },
+        "scooter-gray": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.006556028708232026
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        },
+        "stroller": {
+          "mean": 0.002333119128875761,
+          "ci95": [
+            3.281853619208445e-05,
+            0.006556028708232026
+          ],
+          "n": 15,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8766850712993821,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.0002877084190273623,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        8.930500199220287e-05,
+        0.030681160647725983
+      ]
+    },
+    "H1": "STRONG",
+    "non_tiny_gain": 0.0022363572623757574,
+    "tie_aware_oracle": {
+      "fractional_counts": {
+        "OFF/OFF": 3.7261904761904763,
+        "OFF/A": 1.814285714285714,
+        "OFF/B": 1.7428571428571429,
+        "OFF/ALL": 3.0956709956709956,
+        "A/OFF": 1.3142857142857143,
+        "A/A": 1.2290043290043289,
+        "A/B": 1.5956709956709956,
+        "A/ALL": 1.8123376623376624,
+        "B/OFF": 1.8142857142857143,
+        "B/A": 1.3718614718614717,
+        "B/B": 1.5385281385281384,
+        "B/ALL": 2.845670995670996,
+        "ALL/OFF": 2.0123376623376625,
+        "ALL/A": 1.0623376623376624,
+        "ALL/B": 2.2123376623376623,
+        "ALL/ALL": 2.8123376623376624
+      },
+      "constant_oracle_counts_off_first_ties": {
+        "OFF/OFF": 21,
+        "ALL/ALL": 4,
+        "A/A": 5,
+        "B/B": 2
+      },
+      "sequence_preferences": {
+        "bear": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "disc-jockey": {
+          "ALL/B": 0.5909090909090909,
+          "ALL/ALL": 0.5909090909090909,
+          "OFF/ALL": 0.09090909090909091,
+          "A/A": 0.09090909090909091,
+          "A/B": 0.09090909090909091,
+          "A/ALL": 0.09090909090909091,
+          "B/A": 0.09090909090909091,
+          "B/B": 0.09090909090909091,
+          "B/ALL": 0.09090909090909091,
+          "ALL/OFF": 0.09090909090909091,
+          "ALL/A": 0.09090909090909091
+        },
+        "dog-agility": {
+          "OFF/OFF": 0.20535714285714285,
+          "OFF/A": 0.20535714285714285,
+          "OFF/B": 0.20535714285714285,
+          "A/OFF": 0.20535714285714285,
+          "B/OFF": 0.20535714285714285,
+          "B/A": 0.20535714285714285,
+          "B/B": 0.20535714285714285,
+          "OFF/ALL": 0.0625,
+          "A/A": 0.0625,
+          "A/B": 0.0625,
+          "A/ALL": 0.0625,
+          "B/ALL": 0.0625,
+          "ALL/OFF": 0.0625,
+          "ALL/A": 0.0625,
+          "ALL/B": 0.0625,
+          "ALL/ALL": 0.0625
+        },
+        "dogs-scale": {
+          "OFF/ALL": 0.7,
+          "A/B": 0.2,
+          "B/ALL": 0.2,
+          "ALL/OFF": 0.7,
+          "ALL/B": 0.2
+        },
+        "elephant": {
+          "OFF/ALL": 0.16666666666666666,
+          "A/A": 0.16666666666666666,
+          "A/B": 0.16666666666666666,
+          "B/A": 0.16666666666666666,
+          "B/B": 0.16666666666666666,
+          "ALL/OFF": 0.16666666666666666,
+          "OFF/OFF": 0.3333333333333333,
+          "OFF/B": 0.3333333333333333,
+          "B/OFF": 0.3333333333333333
+        },
+        "hike": {
+          "OFF/A": 0.06666666666666667,
+          "OFF/B": 0.06666666666666667,
+          "OFF/ALL": 0.06666666666666667,
+          "A/OFF": 0.06666666666666667,
+          "A/A": 0.06666666666666667,
+          "A/B": 0.06666666666666667,
+          "A/ALL": 0.06666666666666667,
+          "B/OFF": 0.06666666666666667,
+          "B/A": 0.06666666666666667,
+          "B/B": 0.06666666666666667,
+          "B/ALL": 0.06666666666666667,
+          "ALL/OFF": 0.06666666666666667,
+          "ALL/A": 0.06666666666666667,
+          "ALL/B": 0.06666666666666667,
+          "ALL/ALL": 0.06666666666666667,
+          "OFF/OFF": 1.0
+        },
+        "kid-football": {
+          "OFF/A": 0.13392857142857142,
+          "OFF/ALL": 0.13392857142857142,
+          "A/OFF": 0.13392857142857142,
+          "A/A": 0.13392857142857142,
+          "A/B": 0.13392857142857142,
+          "A/ALL": 0.13392857142857142,
+          "B/OFF": 0.13392857142857142,
+          "B/A": 0.13392857142857142,
+          "B/B": 0.13392857142857142,
+          "B/ALL": 0.13392857142857142,
+          "ALL/OFF": 0.13392857142857142,
+          "ALL/A": 0.13392857142857142,
+          "ALL/B": 0.13392857142857142,
+          "ALL/ALL": 0.13392857142857142,
+          "OFF/OFF": 0.0625,
+          "OFF/B": 0.0625
+        },
+        "koala": {
+          "B/ALL": 1.0,
+          "ALL/ALL": 1.0
+        },
+        "lady-running": {
+          "A/ALL": 0.3333333333333333,
+          "B/ALL": 0.3333333333333333,
+          "ALL/B": 0.3333333333333333,
+          "OFF/OFF": 1.0
+        },
+        "longboard": {
+          "OFF/OFF": 0.5,
+          "OFF/A": 0.7,
+          "OFF/B": 0.2,
+          "A/OFF": 0.2,
+          "B/OFF": 0.2,
+          "ALL/B": 0.2
+        },
+        "mallard-fly": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "motorbike": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "rallye": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "scooter-board": {
+          "OFF/A": 0.08333333333333333,
+          "OFF/B": 0.08333333333333333,
+          "A/OFF": 0.08333333333333333,
+          "A/A": 0.08333333333333333,
+          "A/B": 0.08333333333333333,
+          "A/ALL": 0.08333333333333333,
+          "B/OFF": 0.08333333333333333,
+          "B/A": 0.08333333333333333,
+          "B/B": 0.08333333333333333,
+          "B/ALL": 0.08333333333333333,
+          "ALL/A": 0.08333333333333333,
+          "ALL/ALL": 0.08333333333333333,
+          "OFF/ALL": 1.0
+        },
+        "scooter-gray": {
+          "OFF/B": 0.22916666666666666,
+          "A/B": 0.22916666666666666,
+          "A/ALL": 0.22916666666666666,
+          "B/OFF": 0.22916666666666666,
+          "B/B": 0.22916666666666666,
+          "ALL/OFF": 0.22916666666666666,
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/ALL": 0.0625,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "B/A": 0.0625,
+          "B/ALL": 0.0625,
+          "ALL/A": 0.0625,
+          "ALL/B": 0.0625,
+          "ALL/ALL": 0.0625
+        },
+        "stroller": {
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.3125,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "A/B": 0.0625,
+          "A/ALL": 0.3125,
+          "B/OFF": 0.0625,
+          "B/A": 0.0625,
+          "B/B": 0.0625,
+          "B/ALL": 0.3125,
+          "ALL/OFF": 0.0625,
+          "ALL/A": 0.0625,
+          "ALL/B": 0.0625,
+          "ALL/ALL": 0.3125
+        }
+      },
+      "object_size_preferences": {
+        "large": {
+          "OFF/OFF": 0.7261904761904762,
+          "OFF/A": 0.4642857142857143,
+          "OFF/B": 0.7261904761904762,
+          "OFF/ALL": 1.7699134199134199,
+          "A/OFF": 0.4642857142857143,
+          "A/A": 0.6699134199134199,
+          "A/B": 1.2699134199134199,
+          "A/ALL": 0.8365800865800865,
+          "B/OFF": 0.7976190476190476,
+          "B/A": 0.8127705627705627,
+          "B/B": 0.8127705627705627,
+          "B/ALL": 2.436580086580087,
+          "ALL/OFF": 1.7699134199134199,
+          "ALL/A": 0.5032467532467533,
+          "ALL/B": 1.9365800865800864,
+          "ALL/ALL": 2.0032467532467533
+        },
+        "medium": {
+          "ALL/B": 1.8755952380952379,
+          "ALL/ALL": 1.575595238095238,
+          "OFF/ALL": 2.275595238095238,
+          "A/B": 1.1089285714285713,
+          "B/ALL": 1.2755952380952382,
+          "ALL/OFF": 2.1089285714285717,
+          "OFF/A": 2.175595238095238,
+          "OFF/B": 1.4375000000000002,
+          "A/OFF": 1.1755952380952381,
+          "A/A": 0.575595238095238,
+          "A/ALL": 1.4089285714285715,
+          "B/OFF": 1.5089285714285716,
+          "B/A": 0.575595238095238,
+          "B/B": 0.9089285714285714,
+          "ALL/A": 0.575595238095238,
+          "OFF/OFF": 3.4375
+        },
+        "small": {
+          "ALL/B": 1.075,
+          "ALL/ALL": 1.0416666666666667,
+          "OFF/OFF": 0.875,
+          "OFF/A": 1.2416666666666665,
+          "OFF/B": 0.7416666666666667,
+          "OFF/ALL": 0.375,
+          "A/OFF": 0.7416666666666667,
+          "A/A": 0.5416666666666666,
+          "A/B": 0.5416666666666666,
+          "A/ALL": 0.5416666666666666,
+          "B/OFF": 0.7416666666666667,
+          "B/A": 0.5416666666666666,
+          "B/B": 0.5416666666666666,
+          "B/ALL": 0.5416666666666666,
+          "ALL/OFF": 0.375,
+          "ALL/A": 0.5416666666666666
+        },
+        "tiny": {
+          "OFF/ALL": 2.715909090909091,
+          "A/A": 0.2159090909090909,
+          "A/B": 0.2159090909090909,
+          "A/ALL": 0.5492424242424242,
+          "B/A": 0.2159090909090909,
+          "B/B": 0.2159090909090909,
+          "B/ALL": 0.5492424242424242,
+          "ALL/OFF": 0.7159090909090909,
+          "ALL/A": 0.2159090909090909,
+          "ALL/B": 0.7492424242424243,
+          "ALL/ALL": 0.2159090909090909,
+          "OFF/OFF": 2.125,
+          "OFF/A": 1.325,
+          "OFF/B": 0.325,
+          "A/OFF": 0.325,
+          "B/OFF": 0.325
+        }
+      },
+      "entropy_nats": 2.7103024095027575,
+      "tie_counts": [
+        16,
+        16,
+        2,
+        11,
+        7,
+        16,
+        5,
+        2,
+        6,
+        3,
+        15,
+        1,
+        14,
+        16,
+        1,
+        1,
+        3,
+        1,
+        2,
+        5,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        12,
+        1,
+        6,
+        16,
+        16,
+        4
+      ]
+    }
+  },
+  "448/discovery": {
+    "oracle_minus_off": {
+      "sequence_values": {
+        "bmx-bumps": 0.0015604713751059818,
+        "cat-girl": 0.003433613710193073,
+        "classic-car": 0.005709763589236971,
+        "color-run": 0.01249103443454136,
+        "dancing": 0.010257549956861622,
+        "drone": 0.0070429113929333514,
+        "lindy-hop": 0.0021771923632508267,
+        "lucia": 0.002245851943127597,
+        "motocross-bumps": 0.021307957980642084,
+        "paragliding": 0.0,
+        "sheep": 0.0013062440177979279,
+        "tractor-sand": 0.0
+      },
+      "sequence_bootstrap": {
+        "mean": 0.005627715896974233,
+        "ci95": [
+          0.002538954755695832,
+          0.009265650136123706
+        ],
+        "n": 12
+      },
+      "pair_bootstrap": {
+        "mean": 0.005627715896974233,
+        "ci95": [
+          0.0027199139657285575,
+          0.008941897267873943
+        ],
+        "n": 24
+      },
+      "positive_sequences": 10,
+      "sequence_std": 0.006076849356304759,
+      "pair_mean": 0.005627715896974233,
+      "pair_median": 0.0028667153929039096,
+      "pair_std": 0.007730698430874737,
+      "pair_min": 0.0,
+      "pair_max": 0.02258197414102253,
+      "improved_pairs": 15,
+      "tied_pairs": 9,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "threshold_pair_counts": {
+        "0.005": 6,
+        "0.01": 6,
+        "0.02": 4
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.023106937812683123,
+        "cat-girl": 0.05084380254576537,
+        "classic-car": 0.08454826809793964,
+        "color-run": 0.1849630569964335,
+        "dancing": 0.15189036642699988,
+        "drone": 0.1042890745533193,
+        "lindy-hop": 0.03223913578066672,
+        "lucia": 0.03325582385823542,
+        "motocross-bumps": 0.3155211097291177,
+        "paragliding": 0.0,
+        "sheep": 0.019342424198839355,
+        "tractor-sand": 0.0
+      },
+      "top1_positive_gain_share": 0.3155211097291177,
+      "top3_positive_gain_share": 0.6523745331525511,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.005997465398962256,
+        "cat-girl": 0.005827179732136156,
+        "classic-car": 0.005620257015859439,
+        "color-run": 0.005003777848104494,
+        "dancing": 0.005206821891529925,
+        "drone": 0.0054990617609779495,
+        "lindy-hop": 0.005941399854585452,
+        "lucia": 0.005935158074596655,
+        "motocross-bumps": 0.004202239343913519,
+        "paragliding": 0.0061393264330628,
+        "sheep": 0.006020576976899352,
+        "tractor-sand": 0.0061393264330628
+      },
+      "leave_one_sequence_out_ci": {
+        "bmx-bumps": {
+          "mean": 0.005997465398962256,
+          "ci95": [
+            0.0026987342532825047,
+            0.009856975675332032
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3229842875766245,
+          "directional_ci_positive": true
+        },
+        "cat-girl": {
+          "mean": 0.005827179732136156,
+          "ci95": [
+            0.0024525373034044195,
+            0.009761037667035536
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.33242274619855827,
+          "directional_ci_positive": true
+        },
+        "classic-car": {
+          "mean": 0.005620257015859439,
+          "ci95": [
+            0.0022393590036944217,
+            0.009592011512979753
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3446616558074017,
+          "directional_ci_positive": true
+        },
+        "color-run": {
+          "mean": 0.005003777848104494,
+          "ci95": [
+            0.0020022563306784373,
+            0.008923473061230102
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3871249180023206,
+          "directional_ci_positive": true
+        },
+        "dancing": {
+          "mean": 0.005206821891529925,
+          "ci95": [
+            0.002021664737803206,
+            0.009240600445396568
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3720286826596453,
+          "directional_ci_positive": true
+        },
+        "drone": {
+          "mean": 0.0054990617609779495,
+          "ci95": [
+            0.002132099662405553,
+            0.009580635051133015
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.35225774383824887,
+          "directional_ci_positive": true
+        },
+        "lindy-hop": {
+          "mean": 0.005941399854585452,
+          "ci95": [
+            0.0025633376093815944,
+            0.009916656337200486
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3260321029654781,
+          "directional_ci_positive": true
+        },
+        "lucia": {
+          "mean": 0.005935158074596655,
+          "ci95": [
+            0.0025510100939037197,
+            0.009916649437953104
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3263749785267383,
+          "directional_ci_positive": true
+        },
+        "motocross-bumps": {
+          "mean": 0.004202239343913519,
+          "ci95": [
+            0.0020086503471762503,
+            0.0066888619078421165
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.2702246331121102,
+          "directional_ci_positive": true
+        },
+        "paragliding": {
+          "mean": 0.0061393264330628,
+          "ci95": [
+            0.002894089004581146,
+            0.010069365112550027
+          ],
+          "n": 11,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.3155211097291177,
+          "directional_ci_positive": true
+        },
+        "sheep": {
+          "mean": 0.006020576976899352,
+          "ci95": [
+            0.0026941937057869112,
+            0.010038888210556596
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3217444269181816,
+          "directional_ci_positive": true
+        },
+        "tractor-sand": {
+          "mean": 0.0061393264330628,
+          "ci95": [
+            0.0028805049194246387,
+            0.010077588993645865
+          ],
+          "n": 11,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.3155211097291177,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.004202239343913519,
+      "quantiles": [
+        0.0,
+        0.0014969145357789683,
+        0.002839732826660335,
+        0.00784657103391542,
+        0.021307957980642084
+      ]
+    },
+    "trajectory_minus_constant": {
+      "sequence_values": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.00036340052277139545,
+        "classic-car": 0.002119251739759659,
+        "color-run": 0.004782400962624944,
+        "dancing": 0.0,
+        "drone": 0.0,
+        "lindy-hop": 0.0007521095831119623,
+        "lucia": 1.6235483628890268e-05,
+        "motocross-bumps": 0.01646565910636856,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "sequence_bootstrap": {
+        "mean": 0.0020415881165221175,
+        "ci95": [
+          0.00017660431164663823,
+          0.004930076524201802
+        ],
+        "n": 12
+      },
+      "pair_bootstrap": {
+        "mean": 0.0020415881165221175,
+        "ci95": [
+          0.00039729832157880295,
+          0.004189296073477937
+        ],
+        "n": 24
+      },
+      "positive_sequences": 6,
+      "sequence_std": 0.004556694019210678,
+      "pair_mean": 0.0020415881165221175,
+      "pair_median": 0.0,
+      "pair_std": 0.004766103003541661,
+      "pair_min": 0.0,
+      "pair_max": 0.019469996026684977,
+      "improved_pairs": 11,
+      "tied_pairs": 13,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 1,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "threshold_pair_counts": {
+        "0.005": 3,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.014833245086283402,
+        "classic-car": 0.08650339910260003,
+        "color-run": 0.1952075496163191,
+        "dancing": 0.0,
+        "drone": 0.0,
+        "lindy-hop": 0.030699531450757503,
+        "lucia": 0.0006626982975287767,
+        "motocross-bumps": 0.6720935764465112,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "top1_positive_gain_share": 0.6720935764465112,
+      "top3_positive_gain_share": 0.9538045251654304,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.0022271870362059465,
+        "cat-girl": 0.0021941506250449105,
+        "classic-car": 0.0020345277871368864,
+        "color-run": 0.0017924233123309515,
+        "dancing": 0.0022271870362059465,
+        "drone": 0.0022271870362059465,
+        "lindy-hop": 0.0021588134377412225,
+        "lucia": 0.0022257110831487748,
+        "motocross-bumps": 0.0007303089356269864,
+        "paragliding": 0.0022271870362059465,
+        "sheep": 0.0022271870362059465,
+        "tractor-sand": 0.0022271870362059465
+      },
+      "leave_one_sequence_out_ci": {
+        "bmx-bumps": {
+          "mean": 0.0022271870362059465,
+          "ci95": [
+            0.00020577192536586327,
+            0.005313906170869604
+          ],
+          "n": 11,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.6720935764465112,
+          "directional_ci_positive": true
+        },
+        "cat-girl": {
+          "mean": 0.0021941506250449105,
+          "ci95": [
+            0.0001926592490690599,
+            0.005312192476807167
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6822130092132218,
+          "directional_ci_positive": true
+        },
+        "classic-car": {
+          "mean": 0.0020345277871368864,
+          "ci95": [
+            6.902472843641558e-05,
+            0.0050628169730901505
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.7357373588322721,
+          "directional_ci_positive": true
+        },
+        "color-run": {
+          "mean": 0.0017924233123309515,
+          "ci95": [
+            6.902472843641558e-05,
+            0.004820040747735388
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.8351141665482744,
+          "directional_ci_positive": true
+        },
+        "dancing": {
+          "mean": 0.0022271870362059465,
+          "ci95": [
+            0.00019561115518340358,
+            0.005396549478427582
+          ],
+          "n": 11,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.6720935764465112,
+          "directional_ci_positive": true
+        },
+        "drone": {
+          "mean": 0.0022271870362059465,
+          "ci95": [
+            0.00019561115518340358,
+            0.005396549478427582
+          ],
+          "n": 11,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.6720935764465112,
+          "directional_ci_positive": true
+        },
+        "lindy-hop": {
+          "mean": 0.0021588134377412225,
+          "ci95": [
+            7.046378266715817e-05,
+            0.0053601635574897465
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6933800181201165,
+          "directional_ci_positive": true
+        },
+        "lucia": {
+          "mean": 0.0022257110831487748,
+          "ci95": [
+            0.0001926592490690599,
+            0.005412126533375755
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6725392670738223,
+          "directional_ci_positive": true
+        },
+        "motocross-bumps": {
+          "mean": 0.0007303089356269864,
+          "ci95": [
+            6.837359846472384e-05,
+            0.0016351735706806641
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.5953148081116392,
+          "directional_ci_positive": true
+        },
+        "paragliding": {
+          "mean": 0.0022271870362059465,
+          "ci95": [
+            0.0002072478784230351,
+            0.005382222249930763
+          ],
+          "n": 11,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.6720935764465112,
+          "directional_ci_positive": true
+        },
+        "sheep": {
+          "mean": 0.0022271870362059465,
+          "ci95": [
+            0.0002072478784230351,
+            0.005382222249930763
+          ],
+          "n": 11,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.6720935764465112,
+          "directional_ci_positive": true
+        },
+        "tractor-sand": {
+          "mean": 0.0022271870362059465,
+          "ci95": [
+            0.0002072478784230351,
+            0.005382222249930763
+          ],
+          "n": 11,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.6720935764465112,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.0007303089356269864,
+      "quantiles": [
+        0.0,
+        0.0,
+        8.117741814445134e-06,
+        0.0010938951222738864,
+        0.01646565910636856
+      ]
+    },
+    "H1": "STRONG",
+    "non_tiny_gain": 0.00735958444369161,
+    "tie_aware_oracle": {
+      "fractional_counts": {
+        "OFF/ALL": 0.764520202020202,
+        "A/A": 0.6284090909090909,
+        "A/B": 0.5034090909090909,
+        "A/ALL": 0.514520202020202,
+        "B/A": 2.239520202020202,
+        "B/B": 0.764520202020202,
+        "B/ALL": 2.0978535353535355,
+        "ALL/OFF": 4.0978535353535355,
+        "ALL/A": 1.3478535353535352,
+        "ALL/B": 2.8228535353535356,
+        "ALL/ALL": 1.864520202020202,
+        "OFF/OFF": 1.7875,
+        "OFF/A": 0.5375,
+        "OFF/B": 1.3708333333333333,
+        "A/OFF": 1.2875,
+        "B/OFF": 1.3708333333333333
+      },
+      "constant_oracle_counts_off_first_ties": {
+        "A/A": 6,
+        "OFF/OFF": 11,
+        "ALL/ALL": 3,
+        "B/B": 4
+      },
+      "sequence_preferences": {
+        "bmx-bumps": {
+          "OFF/ALL": 0.1534090909090909,
+          "A/A": 0.1534090909090909,
+          "A/B": 0.1534090909090909,
+          "A/ALL": 0.1534090909090909,
+          "B/A": 0.1534090909090909,
+          "B/B": 0.1534090909090909,
+          "B/ALL": 0.1534090909090909,
+          "ALL/OFF": 0.1534090909090909,
+          "ALL/A": 0.1534090909090909,
+          "ALL/B": 0.1534090909090909,
+          "ALL/ALL": 0.1534090909090909,
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "A/OFF": 0.0625,
+          "B/OFF": 0.0625
+        },
+        "cat-girl": {
+          "B/A": 1.0,
+          "OFF/B": 0.3333333333333333,
+          "B/OFF": 0.3333333333333333,
+          "ALL/OFF": 0.3333333333333333
+        },
+        "classic-car": {
+          "A/OFF": 0.5,
+          "B/A": 0.5,
+          "ALL/B": 1.0
+        },
+        "color-run": {
+          "B/ALL": 1.0,
+          "ALL/OFF": 1.0
+        },
+        "dancing": {
+          "OFF/OFF": 1.0,
+          "ALL/ALL": 1.0
+        },
+        "drone": {
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.1736111111111111,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "A/B": 0.0625,
+          "A/ALL": 0.1736111111111111,
+          "B/OFF": 0.0625,
+          "B/A": 0.1736111111111111,
+          "B/B": 0.1736111111111111,
+          "B/ALL": 0.1736111111111111,
+          "ALL/OFF": 0.1736111111111111,
+          "ALL/A": 0.1736111111111111,
+          "ALL/B": 0.1736111111111111,
+          "ALL/ALL": 0.1736111111111111
+        },
+        "lindy-hop": {
+          "ALL/OFF": 1.0,
+          "OFF/B": 0.5,
+          "B/OFF": 0.5
+        },
+        "lucia": {
+          "B/ALL": 0.3958333333333333,
+          "ALL/A": 0.3958333333333333,
+          "ALL/B": 0.3958333333333333,
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.0625,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "A/B": 0.0625,
+          "A/ALL": 0.0625,
+          "B/OFF": 0.0625,
+          "B/A": 0.0625,
+          "B/B": 0.0625,
+          "ALL/OFF": 0.0625,
+          "ALL/ALL": 0.0625
+        },
+        "motocross-bumps": {
+          "ALL/A": 0.5,
+          "ALL/B": 0.5,
+          "ALL/OFF": 1.0
+        },
+        "paragliding": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "sheep": {
+          "OFF/OFF": 0.25,
+          "A/OFF": 0.25,
+          "ALL/B": 0.25,
+          "ALL/ALL": 0.25,
+          "OFF/ALL": 0.25,
+          "B/B": 0.25,
+          "B/ALL": 0.25,
+          "ALL/OFF": 0.25
+        },
+        "tractor-sand": {
+          "OFF/OFF": 0.225,
+          "OFF/A": 0.225,
+          "OFF/B": 0.225,
+          "A/OFF": 0.225,
+          "A/A": 0.225,
+          "A/B": 0.1,
+          "B/OFF": 0.225,
+          "B/A": 0.225,
+          "ALL/B": 0.225,
+          "ALL/ALL": 0.1
+        }
+      },
+      "object_size_preferences": {
+        "small": {
+          "OFF/ALL": 0.827020202020202,
+          "A/A": 0.6659090909090909,
+          "A/B": 0.4159090909090909,
+          "A/ALL": 0.327020202020202,
+          "B/A": 1.277020202020202,
+          "B/B": 0.827020202020202,
+          "B/ALL": 0.827020202020202,
+          "ALL/OFF": 3.827020202020202,
+          "ALL/A": 0.827020202020202,
+          "ALL/B": 2.277020202020202,
+          "ALL/ALL": 2.527020202020202,
+          "A/OFF": 2.075,
+          "OFF/B": 2.075,
+          "B/OFF": 2.075,
+          "OFF/OFF": 1.5750000000000002,
+          "OFF/A": 0.575
+        },
+        "medium": {
+          "OFF/ALL": 0.7159090909090909,
+          "A/A": 0.2159090909090909,
+          "A/B": 0.2159090909090909,
+          "A/ALL": 0.2159090909090909,
+          "B/A": 0.7159090909090909,
+          "B/B": 0.7159090909090909,
+          "B/ALL": 1.0492424242424243,
+          "ALL/OFF": 5.049242424242424,
+          "ALL/A": 1.0492424242424243,
+          "ALL/B": 3.2992424242424243,
+          "ALL/ALL": 1.4659090909090908,
+          "OFF/B": 2.458333333333333,
+          "B/OFF": 2.458333333333333,
+          "A/OFF": 0.875,
+          "OFF/OFF": 3.375,
+          "OFF/A": 0.125
+        },
+        "tiny": {
+          "OFF/OFF": 0.725,
+          "OFF/A": 0.725,
+          "OFF/B": 0.725,
+          "OFF/ALL": 1.0833333333333333,
+          "A/OFF": 0.725,
+          "A/A": 0.725,
+          "A/B": 0.6,
+          "A/ALL": 0.8333333333333333,
+          "B/OFF": 0.725,
+          "B/A": 1.0583333333333331,
+          "B/B": 1.0833333333333333,
+          "B/ALL": 1.0833333333333333,
+          "ALL/OFF": 3.0833333333333335,
+          "ALL/A": 0.8333333333333333,
+          "ALL/B": 1.0583333333333331,
+          "ALL/ALL": 0.9333333333333332
+        },
+        "large": {
+          "B/A": 2.611111111111111,
+          "OFF/B": 0.8333333333333333,
+          "B/OFF": 0.8333333333333333,
+          "ALL/OFF": 4.444444444444445,
+          "A/OFF": 0.5,
+          "ALL/B": 1.1111111111111112,
+          "B/ALL": 3.111111111111111,
+          "ALL/ALL": 1.1111111111111112,
+          "OFF/ALL": 0.1111111111111111,
+          "A/ALL": 0.1111111111111111,
+          "B/B": 0.1111111111111111,
+          "ALL/A": 0.1111111111111111
+        }
+      },
+      "entropy_nats": 2.5889732076627507,
+      "tie_counts": [
+        11,
+        16,
+        1,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        16,
+        9,
+        1,
+        2,
+        3,
+        16,
+        2,
+        1,
+        16,
+        16,
+        4,
+        4,
+        10,
+        8
+      ]
+    }
+  },
+  "448/validation": {
+    "oracle_minus_off": {
+      "sequence_values": {
+        "bear": 0.001889063276553471,
+        "disc-jockey": 0.007555968344968855,
+        "dog-agility": 0.0005907322145288219,
+        "dogs-scale": 0.00039903961611836847,
+        "elephant": 0.0005945392912166114,
+        "hike": 0.0032052175408744943,
+        "kid-football": 9.400263207337556e-06,
+        "koala": 0.001094554105296519,
+        "lady-running": 0.00024508879632875735,
+        "longboard": 0.000372544121341023,
+        "mallard-fly": 0.0068346210674162244,
+        "motorbike": 0.0,
+        "rallye": 0.005100052136751937,
+        "scooter-board": 0.00851163533455676,
+        "scooter-gray": 0.0,
+        "stroller": 0.0028186066393566245
+      },
+      "sequence_bootstrap": {
+        "mean": 0.002451316421782238,
+        "ci95": [
+          0.0011730613407610196,
+          0.003934167578335956
+        ],
+        "n": 16
+      },
+      "pair_bootstrap": {
+        "mean": 0.002451316421782238,
+        "ci95": [
+          0.0009730827950521462,
+          0.004248016369909678
+        ],
+        "n": 32
+      },
+      "positive_sequences": 14,
+      "sequence_std": 0.002852248314914366,
+      "pair_mean": 0.002451316421782238,
+      "pair_median": 0.00012363848165292124,
+      "pair_std": 0.004712001503991967,
+      "pair_min": 0.0,
+      "pair_max": 0.01702327066911352,
+      "improved_pairs": 18,
+      "tied_pairs": 14,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 4,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "threshold_pair_counts": {
+        "0.005": 6,
+        "0.01": 4,
+        "0.02": 0
+      },
+      "sequence_positive_gain_share": {
+        "bear": 0.04816451019356829,
+        "disc-jockey": 0.19265078035792862,
+        "dog-agility": 0.015061606522918,
+        "dogs-scale": 0.010174115338918726,
+        "elephant": 0.015158673670542236,
+        "hike": 0.08172184322047177,
+        "kid-football": 0.0002396738524810442,
+        "koala": 0.02790730359130666,
+        "lady-running": 0.0062489075806094,
+        "longboard": 0.009498572839032025,
+        "mallard-fly": 0.17425894630238847,
+        "motorbike": 0.0,
+        "rallye": 0.13003350188273347,
+        "scooter-board": 0.21701694798871446,
+        "scooter-gray": 0.0,
+        "stroller": 0.07186461665838684
+      },
+      "top1_positive_gain_share": 0.21701694798871446,
+      "top3_positive_gain_share": 0.5839266746490316,
+      "leave_one_sequence_out": {
+        "bear": 0.002488799964797489,
+        "disc-jockey": 0.002111006293569797,
+        "dog-agility": 0.0025753553689324654,
+        "dogs-scale": 0.0025881348754931625,
+        "elephant": 0.0025751015638199462,
+        "hike": 0.0024010563471760873,
+        "kid-football": 0.002614110832353898,
+        "koala": 0.0025417672428812857,
+        "lady-running": 0.0025983982634791365,
+        "longboard": 0.0025899012418116522,
+        "mallard-fly": 0.0021590961120733056,
+        "motorbike": 0.0026147375165677202,
+        "rallye": 0.002274734040784258,
+        "scooter-board": 0.002047295160930603,
+        "scooter-gray": 0.0026147375165677202,
+        "stroller": 0.002426830407277279
+      },
+      "leave_one_sequence_out_ci": {
+        "bear": {
+          "mean": 0.002488799964797489,
+          "ci95": [
+            0.0010992615792317967,
+            0.004087922096629486
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.22799837819962745,
+          "directional_ci_positive": true
+        },
+        "disc-jockey": {
+          "mean": 0.002111006293569797,
+          "ci95": [
+            0.0009238531479875755,
+            0.0035410887121267625
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.26880183037140526,
+          "directional_ci_positive": true
+        },
+        "dog-agility": {
+          "mean": 0.0025753553689324654,
+          "ci95": [
+            0.0012146839918124018,
+            0.00414739023903785
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.22033555542757316,
+          "directional_ci_positive": true
+        },
+        "dogs-scale": {
+          "mean": 0.0025881348754931625,
+          "ci95": [
+            0.0012314576575994396,
+            0.004155550600772971
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.21924759834202717,
+          "directional_ci_positive": true
+        },
+        "elephant": {
+          "mean": 0.0025751015638199462,
+          "ci95": [
+            0.0012185406337673092,
+            0.0041442100512455145
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.2203572719653684,
+          "directional_ci_positive": true
+        },
+        "hike": {
+          "mean": 0.0024010563471760873,
+          "ci95": [
+            0.0010296708697073048,
+            0.003986124528954689
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.23633029533209143,
+          "directional_ci_positive": true
+        },
+        "kid-football": {
+          "mean": 0.002614110832353898,
+          "ci95": [
+            0.0012435344182100021,
+            0.0041357796414891596
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.21706897374590625,
+          "directional_ci_positive": true
+        },
+        "koala": {
+          "mean": 0.0025417672428812857,
+          "ci95": [
+            0.001155345833750987,
+            0.0041042480188632725
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.22324717466807797,
+          "directional_ci_positive": true
+        },
+        "lady-running": {
+          "mean": 0.0025983982634791365,
+          "ci95": [
+            0.0012343069793618244,
+            0.00412785685339586
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.2183815943893597,
+          "directional_ci_positive": true
+        },
+        "longboard": {
+          "mean": 0.0025899012418116522,
+          "ci95": [
+            0.0012203338422374604,
+            0.004125676950111596
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.21909806693640096,
+          "directional_ci_positive": true
+        },
+        "mallard-fly": {
+          "mean": 0.0021590961120733056,
+          "ci95": [
+            0.000922269368202145,
+            0.0036357667652486825
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.2628147734897369,
+          "directional_ci_positive": true
+        },
+        "motorbike": {
+          "mean": 0.0026147375165677202,
+          "ci95": [
+            0.001257561385715541,
+            0.0041508195825193705
+          ],
+          "n": 15,
+          "positive_sequence_count": 14,
+          "top1_positive_gain_share": 0.21701694798871446,
+          "directional_ci_positive": true
+        },
+        "rallye": {
+          "mean": 0.002274734040784258,
+          "ci95": [
+            0.0009595591031662112,
+            0.003844536036584507
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.24945437376999063,
+          "directional_ci_positive": true
+        },
+        "scooter-board": {
+          "mean": 0.002047295160930603,
+          "ci95": [
+            0.000903878233316167,
+            0.003385056504352932
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.24604719075726797,
+          "directional_ci_positive": true
+        },
+        "scooter-gray": {
+          "mean": 0.0026147375165677202,
+          "ci95": [
+            0.0012549925139650055,
+            0.004174400885124446
+          ],
+          "n": 15,
+          "positive_sequence_count": 14,
+          "top1_positive_gain_share": 0.21701694798871446,
+          "directional_ci_positive": true
+        },
+        "stroller": {
+          "mean": 0.002426830407277279,
+          "ci95": [
+            0.0010524776607531649,
+            0.004035212279343593
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.23382035841299065,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.002047295160930603,
+      "quantiles": [
+        0.0,
+        0.0003406802900879566,
+        0.0008445466982565653,
+        0.003678926189843855,
+        0.00851163533455676
+      ]
+    },
+    "trajectory_minus_constant": {
+      "sequence_values": {
+        "bear": 0.0,
+        "disc-jockey": 0.0,
+        "dog-agility": 0.0,
+        "dogs-scale": 0.00028937479565249724,
+        "elephant": 0.0005945392912166114,
+        "hike": 0.0,
+        "kid-football": 9.400263207337556e-06,
+        "koala": 0.000638170132089777,
+        "lady-running": 0.0,
+        "longboard": 3.747456691702289e-05,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.008438071327916685,
+        "scooter-gray": 0.0,
+        "stroller": 0.001998837074851545
+      },
+      "sequence_bootstrap": {
+        "mean": 0.0007503667157407173,
+        "ci95": [
+          6.520078860903361e-05,
+          0.0018907644512814283
+        ],
+        "n": 16
+      },
+      "pair_bootstrap": {
+        "mean": 0.0007503667157407173,
+        "ci95": [
+          5.808506334558628e-05,
+          0.0019294580741118568
+        ],
+        "n": 32
+      },
+      "positive_sequences": 7,
+      "sequence_std": 0.0020468506696891585,
+      "pair_mean": 0.0007503667157407173,
+      "pair_median": 0.0,
+      "pair_std": 0.0029892323055374257,
+      "pair_min": 0.0,
+      "pair_max": 0.01687614265583337,
+      "improved_pairs": 8,
+      "tied_pairs": 24,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "threshold_pair_counts": {
+        "0.005": 1,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "sequence_positive_gain_share": {
+        "bear": 0.0,
+        "disc-jockey": 0.0,
+        "dog-agility": 0.0,
+        "dogs-scale": 0.024102781145386668,
+        "elephant": 0.04952072756099977,
+        "hike": 0.0,
+        "kid-football": 0.0007829724295255235,
+        "koala": 0.05315485404524952,
+        "lady-running": 0.0,
+        "longboard": 0.003121354376708846,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.7028289594031304,
+        "scooter-gray": 0.0,
+        "stroller": 0.16648835103899934
+      },
+      "top1_positive_gain_share": 0.7028289594031304,
+      "top3_positive_gain_share": 0.9224721644873792,
+      "leave_one_sequence_out": {
+        "bear": 0.0008003911634567651,
+        "disc-jockey": 0.0008003911634567651,
+        "dog-agility": 0.0008003911634567651,
+        "dogs-scale": 0.0007810995104132653,
+        "elephant": 0.000760755210708991,
+        "hike": 0.0008003911634567651,
+        "kid-football": 0.0007997644792429425,
+        "koala": 0.0007578464879841132,
+        "lady-running": 0.0008003911634567651,
+        "longboard": 0.0007978928589956302,
+        "mallard-fly": 0.0008003911634567651,
+        "motorbike": 0.0008003911634567651,
+        "rallye": 0.0008003911634567651,
+        "scooter-board": 0.00023785307492898606,
+        "scooter-gray": 0.0008003911634567651,
+        "stroller": 0.0006671353584666621
+      },
+      "leave_one_sequence_out_ci": {
+        "bear": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.954210120088387e-05,
+            0.0019972972352500173
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "disc-jockey": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.954210120088387e-05,
+            0.0019972972352500173
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "dog-agility": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.954210120088387e-05,
+            0.0019972972352500173
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "dogs-scale": {
+          "mean": 0.0007810995104132653,
+          "ci95": [
+            4.566966414760916e-05,
+            0.0019877555590373653
+          ],
+          "n": 15,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.720187480632462,
+          "directional_ci_positive": true
+        },
+        "elephant": {
+          "mean": 0.000760755210708991,
+          "ci95": [
+            4.1089832132435765e-05,
+            0.001959138151591158
+          ],
+          "n": 15,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.7394469082946113,
+          "directional_ci_positive": true
+        },
+        "hike": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            7.883027594325067e-05,
+            0.001998800031900871
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "kid-football": {
+          "mean": 0.0007997644792429425,
+          "ci95": [
+            7.821925883477373e-05,
+            0.00199876869769018
+          ],
+          "n": 15,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.7033796863049955,
+          "directional_ci_positive": true
+        },
+        "koala": {
+          "mean": 0.0007578464879841132,
+          "ci95": [
+            4.046335872846714e-05,
+            0.001957877548452323
+          ],
+          "n": 15,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.7422850108128646,
+          "directional_ci_positive": true
+        },
+        "lady-running": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.829716516739402e-05,
+            0.001993346514925539
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "longboard": {
+          "mean": 0.0007978928589956302,
+          "ci95": [
+            6.308969694379662e-05,
+            0.001993346514925539
+          ],
+          "n": 15,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.7050296066515616,
+          "directional_ci_positive": true
+        },
+        "mallard-fly": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.807604540947279e-05,
+            0.0019934089725370664
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "motorbike": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.807604540947279e-05,
+            0.0019934089725370664
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "rallye": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.807604540947279e-05,
+            0.0019934089725370664
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "scooter-board": {
+          "mean": 0.00023785307492898606,
+          "ci95": [
+            3.858330608699963e-05,
+            0.0005299051524981512
+          ],
+          "n": 15,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.5602441970947323,
+          "directional_ci_positive": true
+        },
+        "scooter-gray": {
+          "mean": 0.0008003911634567651,
+          "ci95": [
+            6.745962165224383e-05,
+            0.0020041744023105543
+          ],
+          "n": 15,
+          "positive_sequence_count": 7,
+          "top1_positive_gain_share": 0.7028289594031304,
+          "directional_ci_positive": true
+        },
+        "stroller": {
+          "mean": 0.0006671353584666621,
+          "ci95": [
+            3.983165647047288e-05,
+            0.0018253076250717936
+          ],
+          "n": 15,
+          "positive_sequence_count": 6,
+          "top1_positive_gain_share": 0.8432143213345962,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.00023785307492898606,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0003656659195435258,
+        0.008438071327916685
+      ]
+    },
+    "H1": "STRONG",
+    "non_tiny_gain": 0.003425356256930093,
+    "tie_aware_oracle": {
+      "fractional_counts": {
+        "OFF/OFF": 5.650534188034187,
+        "OFF/A": 1.725534188034188,
+        "OFF/B": 1.600534188034188,
+        "OFF/ALL": 1.1624999999999999,
+        "A/OFF": 2.7255341880341883,
+        "A/A": 1.2866452991452992,
+        "A/B": 0.9755341880341881,
+        "A/ALL": 1.648611111111111,
+        "B/OFF": 1.600534188034188,
+        "B/A": 0.9616452991452991,
+        "B/B": 1.775534188034188,
+        "B/ALL": 1.3088675213675212,
+        "ALL/OFF": 1.7069444444444444,
+        "ALL/A": 1.8783119658119658,
+        "ALL/B": 1.7672008547008546,
+        "ALL/ALL": 4.225534188034188
+      },
+      "constant_oracle_counts_off_first_ties": {
+        "OFF/OFF": 17,
+        "A/A": 9,
+        "ALL/ALL": 5,
+        "B/B": 1
+      },
+      "sequence_preferences": {
+        "bear": {
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.0625,
+          "A/OFF": 0.0625,
+          "A/A": 0.1736111111111111,
+          "A/B": 0.1736111111111111,
+          "A/ALL": 0.1736111111111111,
+          "B/OFF": 0.0625,
+          "B/A": 0.1736111111111111,
+          "B/B": 0.1736111111111111,
+          "B/ALL": 0.1736111111111111,
+          "ALL/OFF": 0.0625,
+          "ALL/A": 0.1736111111111111,
+          "ALL/B": 0.1736111111111111,
+          "ALL/ALL": 0.1736111111111111
+        },
+        "disc-jockey": {
+          "OFF/OFF": 1.0,
+          "OFF/ALL": 0.2,
+          "A/A": 0.2,
+          "A/B": 0.2,
+          "B/A": 0.2,
+          "ALL/OFF": 0.2
+        },
+        "dog-agility": {
+          "OFF/OFF": 0.1111111111111111,
+          "OFF/A": 0.1111111111111111,
+          "OFF/B": 0.1111111111111111,
+          "A/OFF": 0.1111111111111111,
+          "A/A": 0.1111111111111111,
+          "B/OFF": 0.1111111111111111,
+          "B/A": 0.1111111111111111,
+          "ALL/OFF": 0.1111111111111111,
+          "ALL/A": 0.1111111111111111,
+          "ALL/ALL": 1.0
+        },
+        "dogs-scale": {
+          "ALL/A": 1.0,
+          "ALL/ALL": 1.0
+        },
+        "elephant": {
+          "OFF/A": 0.25,
+          "OFF/B": 0.25,
+          "A/OFF": 0.25,
+          "B/OFF": 0.25,
+          "OFF/OFF": 1.0
+        },
+        "hike": {
+          "OFF/OFF": 1.0,
+          "OFF/A": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "kid-football": {
+          "A/OFF": 1.0,
+          "OFF/OFF": 1.0
+        },
+        "koala": {
+          "OFF/A": 0.25,
+          "OFF/B": 0.25,
+          "A/OFF": 0.25,
+          "B/OFF": 0.25,
+          "ALL/B": 1.0
+        },
+        "lady-running": {
+          "B/B": 1.0,
+          "OFF/A": 0.2,
+          "OFF/B": 0.2,
+          "A/OFF": 0.2,
+          "A/A": 0.2,
+          "B/OFF": 0.2
+        },
+        "longboard": {
+          "ALL/ALL": 1.0,
+          "OFF/ALL": 0.5,
+          "A/ALL": 0.5
+        },
+        "mallard-fly": {
+          "OFF/OFF": 0.08333333333333333,
+          "OFF/A": 0.08333333333333333,
+          "OFF/B": 0.08333333333333333,
+          "OFF/ALL": 0.08333333333333333,
+          "A/OFF": 0.08333333333333333,
+          "A/A": 0.08333333333333333,
+          "A/B": 0.08333333333333333,
+          "B/OFF": 0.08333333333333333,
+          "B/A": 0.08333333333333333,
+          "B/B": 0.08333333333333333,
+          "B/ALL": 0.41666666666666663,
+          "ALL/OFF": 0.08333333333333333,
+          "A/ALL": 0.3333333333333333,
+          "ALL/ALL": 0.3333333333333333
+        },
+        "motorbike": {
+          "OFF/OFF": 0.125,
+          "OFF/A": 0.125,
+          "OFF/B": 0.125,
+          "OFF/ALL": 0.125,
+          "A/OFF": 0.125,
+          "A/A": 0.125,
+          "A/B": 0.125,
+          "A/ALL": 0.125,
+          "B/OFF": 0.125,
+          "B/A": 0.125,
+          "B/B": 0.125,
+          "B/ALL": 0.125,
+          "ALL/OFF": 0.125,
+          "ALL/A": 0.125,
+          "ALL/B": 0.125,
+          "ALL/ALL": 0.125
+        },
+        "rallye": {
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.0625,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "A/B": 0.0625,
+          "A/ALL": 0.2625,
+          "B/OFF": 0.0625,
+          "B/A": 0.0625,
+          "B/B": 0.0625,
+          "B/ALL": 0.2625,
+          "ALL/OFF": 0.0625,
+          "ALL/A": 0.2625,
+          "ALL/B": 0.2625,
+          "ALL/ALL": 0.2625
+        },
+        "scooter-board": {
+          "ALL/OFF": 1.0625,
+          "OFF/OFF": 0.0625,
+          "OFF/A": 0.0625,
+          "OFF/B": 0.0625,
+          "OFF/ALL": 0.0625,
+          "A/OFF": 0.0625,
+          "A/A": 0.0625,
+          "A/B": 0.0625,
+          "A/ALL": 0.0625,
+          "B/OFF": 0.0625,
+          "B/A": 0.0625,
+          "B/B": 0.0625,
+          "B/ALL": 0.0625,
+          "ALL/A": 0.0625,
+          "ALL/B": 0.0625,
+          "ALL/ALL": 0.0625
+        },
+        "scooter-gray": {
+          "OFF/OFF": 0.14358974358974358,
+          "OFF/A": 0.14358974358974358,
+          "OFF/B": 0.14358974358974358,
+          "A/OFF": 0.14358974358974358,
+          "A/A": 0.14358974358974358,
+          "A/B": 0.14358974358974358,
+          "B/OFF": 0.14358974358974358,
+          "B/A": 0.14358974358974358,
+          "B/B": 0.14358974358974358,
+          "B/ALL": 0.14358974358974358,
+          "ALL/A": 0.14358974358974358,
+          "ALL/B": 0.14358974358974358,
+          "ALL/ALL": 0.14358974358974358,
+          "OFF/ALL": 0.06666666666666667,
+          "A/ALL": 0.06666666666666667
+        },
+        "stroller": {
+          "OFF/A": 0.25,
+          "OFF/B": 0.25,
+          "A/OFF": 0.25,
+          "B/OFF": 0.25,
+          "OFF/OFF": 1.0
+        }
+      },
+      "object_size_preferences": {
+        "large": {
+          "OFF/OFF": 3.173611111111111,
+          "OFF/A": 0.6736111111111112,
+          "OFF/B": 0.6736111111111112,
+          "OFF/ALL": 0.4625,
+          "A/OFF": 1.6736111111111112,
+          "A/A": 0.6847222222222222,
+          "A/B": 0.5736111111111111,
+          "A/ALL": 0.1736111111111111,
+          "B/OFF": 0.6736111111111112,
+          "B/A": 0.6847222222222222,
+          "B/B": 1.1736111111111112,
+          "B/ALL": 0.1736111111111111,
+          "ALL/OFF": 0.5736111111111111,
+          "ALL/A": 3.2847222222222223,
+          "ALL/B": 1.1736111111111112,
+          "ALL/ALL": 2.173611111111111
+        },
+        "medium": {
+          "OFF/OFF": 4.4288461538461545,
+          "ALL/A": 1.3455128205128204,
+          "ALL/ALL": 4.803846153846153,
+          "OFF/A": 1.2538461538461538,
+          "A/OFF": 2.253846153846154,
+          "A/A": 0.7538461538461538,
+          "A/B": 0.5538461538461539,
+          "A/ALL": 2.15,
+          "B/B": 0.5538461538461539,
+          "B/ALL": 0.8871794871794871,
+          "OFF/B": 1.1288461538461538,
+          "B/OFF": 1.1288461538461538,
+          "OFF/ALL": 1.775,
+          "B/A": 0.4288461538461538,
+          "ALL/OFF": 0.20833333333333331,
+          "ALL/B": 0.3455128205128205
+        },
+        "small": {
+          "OFF/OFF": 2.254166666666667,
+          "ALL/ALL": 1.4541666666666666,
+          "OFF/ALL": 0.7541666666666667,
+          "A/ALL": 0.9541666666666666,
+          "OFF/A": 0.25416666666666665,
+          "OFF/B": 0.25416666666666665,
+          "A/OFF": 0.25416666666666665,
+          "A/A": 0.25416666666666665,
+          "A/B": 0.25416666666666665,
+          "B/OFF": 0.25416666666666665,
+          "B/A": 0.25416666666666665,
+          "B/B": 0.25416666666666665,
+          "B/ALL": 0.45416666666666666,
+          "ALL/OFF": 2.1875,
+          "ALL/A": 0.45416666666666666,
+          "ALL/B": 0.45416666666666666
+        },
+        "tiny": {
+          "OFF/ALL": 0.95,
+          "A/A": 0.65,
+          "A/B": 0.45,
+          "B/A": 0.45,
+          "ALL/OFF": 0.45,
+          "ALL/ALL": 3.25,
+          "B/B": 1.25,
+          "OFF/A": 0.45,
+          "OFF/B": 0.45,
+          "A/OFF": 0.45,
+          "B/OFF": 0.45,
+          "A/ALL": 0.75,
+          "OFF/OFF": 0.25,
+          "B/ALL": 0.25,
+          "ALL/A": 0.25,
+          "ALL/B": 0.25
+        }
+      },
+      "entropy_nats": 2.628516737881,
+      "tie_counts": [
+        16,
+        9,
+        1,
+        5,
+        9,
+        1,
+        1,
+        1,
+        4,
+        1,
+        1,
+        8,
+        1,
+        1,
+        4,
+        1,
+        1,
+        5,
+        1,
+        2,
+        12,
+        3,
+        16,
+        16,
+        16,
+        5,
+        1,
+        16,
+        13,
+        15,
+        4,
+        1
+      ]
+    }
+  }
+}

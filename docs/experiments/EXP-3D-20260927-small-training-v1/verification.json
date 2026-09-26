@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scientific_qualification": "NOT_ESTABLISHED_NOT_TESTED_ON_DEV",
+  "CARRIER_STATUS": "PARTIAL",
+  "trained_scenes": 3,
+  "dev_test_scenes": 0,
+  "A_steps": 100,
+  "B_steps": 30,
+  "full_tests": {
+    "passed": 561,
+    "skipped": 1,
+    "exit_code": 0,
+    "seconds": 17.88,
+    "skip": "Missing historical V5 checkpoint"
+  },
+  "focused_tests": 26,
+  "lint": "PASS",
+  "original_core_sources_unchanged": true,
+  "new_source_hashes": {
+    "src/mcss/mechanism_pilot/data_prep.py": "65bee98eecc73e46bdeb8c43e511989c596d36efe27dd5ec8e98891a48cd17d7",
+    "src/mcss/mechanism_pilot/small_training.py": "9bb09c120ab92df034998710761fce50e34c4289fc28bb5506b7d23880906585",
+    "scripts/prepare_small_3d_pilot.py": "6efb1f580dbdc6f0e33e419ca682f9276b809774bfe1282978940f29ebb21d9b",
+    "scripts/train_small_3d_pilot.py": "ee1fd7ac01ee5f866cc19c24c7d2eebc4eacbec67220a0f922cedc58f9afab14",
+    "scripts/audit_small_3d_training.py": "e60e161939c9745025a285a583a0502ed0229b96d2d841326d1eb39df211f4b1",
+    "tests/test_small_3d_data.py": "b342382655f03606e6f235751eb2a6e87d8a92a088273cddabd52c6736d96020",
+    "tests/test_small_3d_training.py": "f6c8c82448deeeafb34bafb32ba3d49585c5365408a46b8e3268925de88c2400"
+  },
+  "checkpoint_sha256": {
+    "initial": "58bd3a64a2bab15c08db6c6ba520957b6160a81926be1553628a0af3832ba775",
+    "phase_a_final": "487656b5546a38ed23496329f721c01d139f95b7f0f5576f7220bee308e7b078",
+    "phase_b_final": "4969b46a695bf12e7a9517b307401390bf89e9595876d8fe4fd03e2f2eebddc3"
+  },
+  "data_access": "TRAIN_ONLY",
+  "training_resume_cli": false,
+  "failures_preserved": [
+    "data_attempt1_interrupted/",
+    "data_preparation_attempt1.log",
+    "independent_audit_attempt1.log"
+  ],
+  "observed_failure": "ai_003_001 has zero multi-view candidate support and 10/10 zero writer gradients; no sample removed",
+  "recovery_status": "NEW_TRAINING_NOT_HISTORICAL_RECOVERY"
+}

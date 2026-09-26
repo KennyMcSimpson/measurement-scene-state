@@ -1,0 +1,403 @@
+{
+  "status": "PASS",
+  "scope": "POSTHOC_TRAIN_SCENE_DIAGNOSTIC_INDEPENDENT_ARTIFACT_AUDIT",
+  "checks": {
+    "raw_counts": true,
+    "primary_secondary_counts": true,
+    "cohort_query_ids": true,
+    "primary_never_optimizer_supervision": true,
+    "primary_no_logged_training_runtime_access": true,
+    "secondary_all_optimizer_supervision": true,
+    "seal_before_query_read": true,
+    "states_exclude_query_ids": true,
+    "same_target_camera_across_methods": true,
+    "input_sha256_unchanged": true,
+    "source_sha256_unchanged": true,
+    "original_checkpoint_matches_training_summary": true,
+    "history_exact_recompute_frame_holdout": true,
+    "static_exact_recompute_frame_holdout": true,
+    "history_exact_recompute_training_query": true,
+    "static_exact_recompute_training_query": true
+  },
+  "counts": {
+    "static": 90,
+    "dynamic": 144,
+    "sealed": 33,
+    "optimizer_supervision_events": 1600,
+    "training_access_events": 10678
+  },
+  "hash_verification": {
+    "input_sha256": {
+      "checked": 209,
+      "mismatches": []
+    },
+    "source_sha256": {
+      "checked": 102,
+      "mismatches": []
+    }
+  },
+  "findings": {
+    "frame_holdout": {
+      "beneficial_flip_count": 0,
+      "per_scene_history": {
+        "ai_001_001": {
+          "write_oracle_gain": 0.0005351169349393781,
+          "hindsight_global_action_gain": 0.0005351169349393781,
+          "global_action_gap": 0.0,
+          "observation_only_oracle_gain": 0.0005351169349393781,
+          "state_dependent_action_gap": 0.0,
+          "best_fixed_action": "COMPLETE",
+          "action_means": {
+            "OFF": 0.0,
+            "FUSE": -0.00876884732472799,
+            "COMPLETE": 0.0005351169349393781,
+            "ALL": -0.00822394086240974
+          }
+        },
+        "ai_002_001": {
+          "write_oracle_gain": 0.001633588153395038,
+          "hindsight_global_action_gain": 0.001633588153395038,
+          "global_action_gap": 0.0,
+          "observation_only_oracle_gain": 0.001633588153395038,
+          "state_dependent_action_gap": 0.0,
+          "best_fixed_action": "ALL",
+          "action_means": {
+            "OFF": 0.0,
+            "FUSE": 0.0015975634541541828,
+            "COMPLETE": 3.59616719807776e-05,
+            "ALL": 0.001633588153395038
+          }
+        },
+        "ai_003_001": {
+          "write_oracle_gain": 9.857949105757102e-05,
+          "hindsight_global_action_gain": 9.857949105757102e-05,
+          "global_action_gap": 0.0,
+          "observation_only_oracle_gain": 9.857949105757102e-05,
+          "state_dependent_action_gap": 0.0,
+          "best_fixed_action": "FUSE",
+          "action_means": {
+            "OFF": 0.0,
+            "FUSE": 9.857949105757102e-05,
+            "COMPLETE": 0.0,
+            "ALL": 9.857949105757102e-05
+          }
+        }
+      },
+      "per_continuation_winners": [
+        {
+          "scene_id": "ai_001_001",
+          "optimal_action_sets": {
+            "FC": [
+              "COMPLETE"
+            ],
+            "CF": [
+              "COMPLETE"
+            ]
+          },
+          "beneficial_action_flip": false
+        },
+        {
+          "scene_id": "ai_002_001",
+          "optimal_action_sets": {
+            "FC": [
+              "ALL"
+            ],
+            "CF": [
+              "ALL"
+            ]
+          },
+          "beneficial_action_flip": false
+        },
+        {
+          "scene_id": "ai_003_001",
+          "optimal_action_sets": {
+            "FC": [
+              "FUSE",
+              "ALL"
+            ],
+            "CF": [
+              "FUSE",
+              "ALL"
+            ]
+          },
+          "beneficial_action_flip": false
+        }
+      ],
+      "largest_scene_oracle": {
+        "scene_id": "ai_002_001",
+        "gain": 0.001633588153395038
+      },
+      "write_oracle_gain": 0.0007557615264639957,
+      "global_action_gap": 0.0005654019908239438,
+      "state_dependent_action_gap": 0.0,
+      "static_full_depth_absrel": {
+        "A": {
+          "per_scene": {
+            "ai_001_001": 0.5497848159255267,
+            "ai_002_001": 0.30833336141360995,
+            "ai_003_001": 5.7825683637751695
+          },
+          "mean": 2.213562180371435
+        },
+        "B": {
+          "per_scene": {
+            "ai_001_001": 0.31292501342618007,
+            "ai_002_001": 0.7243241198289101,
+            "ai_003_001": 2.5927826489544237
+          },
+          "mean": 1.210010594069838
+        },
+        "anchor": {
+          "per_scene": {
+            "ai_001_001": 0.4246458473791049,
+            "ai_002_001": 0.49423767641700406,
+            "ai_003_001": 5.7825683637751695
+          },
+          "mean": 2.2338172958570928
+        },
+        "prior": {
+          "per_scene": {
+            "ai_001_001": 0.567249548927597,
+            "ai_002_001": 0.20911318518010621,
+            "ai_003_001": 9.643736321057386
+          },
+          "mean": 3.473366351721696
+        },
+        "wrong_scene": {
+          "per_scene": {
+            "ai_001_001": 0.6977501571675768,
+            "ai_002_001": 0.49423767641700406,
+            "ai_003_001": 6.905386961446686
+          },
+          "mean": 2.6991249316770887
+        }
+      },
+      "wrong_scene_minus_A": {
+        "mean": 0.4855627513056535,
+        "ci95": [
+          0.14796534124205007,
+          1.1228185976715164
+        ],
+        "n_scenes": 3,
+        "draws": 10000,
+        "seed": 20260927,
+        "unit": "scene",
+        "per_scene": {
+          "ai_001_001": 0.14796534124205007,
+          "ai_002_001": 0.1859043150033941,
+          "ai_003_001": 1.1228185976715164
+        },
+        "loso": {
+          "ai_001_001": 0.6543614563374552,
+          "ai_002_001": 0.6353919694567832,
+          "ai_003_001": 0.1669348281227221
+        }
+      },
+      "context_gap_B_minus_A": {
+        "mean": -1.0035515863015976,
+        "ci95": [
+          -3.189785714820746,
+          0.41599075841530014
+        ],
+        "n_scenes": 3,
+        "draws": 10000,
+        "seed": 20260927,
+        "unit": "scene",
+        "per_scene": {
+          "ai_001_001": -0.23685980249934668,
+          "ai_002_001": 0.41599075841530014,
+          "ai_003_001": -3.189785714820746
+        },
+        "loso": {
+          "ai_001_001": -1.3868974782027228,
+          "ai_002_001": -1.7133227586600461,
+          "ai_003_001": 0.08956547795797673
+        }
+      }
+    },
+    "training_query": {
+      "beneficial_flip_count": 1,
+      "per_scene_history": {
+        "ai_001_001": {
+          "write_oracle_gain": 0.0019978030867462415,
+          "hindsight_global_action_gain": 0.0009198260784351042,
+          "global_action_gap": 0.0010779770083111373,
+          "observation_only_oracle_gain": 0.0009198260784351042,
+          "state_dependent_action_gap": 0.0010779770083111373,
+          "best_fixed_action": "COMPLETE",
+          "action_means": {
+            "OFF": 0.0,
+            "FUSE": -0.002061970783174716,
+            "COMPLETE": 0.0009198260784351042,
+            "ALL": -0.0011626526382376712
+          }
+        },
+        "ai_002_001": {
+          "write_oracle_gain": 0.0,
+          "hindsight_global_action_gain": 0.0,
+          "global_action_gap": 0.0,
+          "observation_only_oracle_gain": 0.0,
+          "state_dependent_action_gap": 0.0,
+          "best_fixed_action": "OFF",
+          "action_means": {
+            "OFF": 0.0,
+            "FUSE": -7.178840926228003e-06,
+            "COMPLETE": -7.4547474148700665e-06,
+            "ALL": -1.4454057678553456e-05
+          }
+        },
+        "ai_003_001": {
+          "write_oracle_gain": 0.0017251146722233879,
+          "hindsight_global_action_gain": 0.0017251146722233879,
+          "global_action_gap": 0.0,
+          "observation_only_oracle_gain": 0.0017251146722233879,
+          "state_dependent_action_gap": 0.0,
+          "best_fixed_action": "COMPLETE",
+          "action_means": {
+            "OFF": 0.0,
+            "FUSE": -2.9019940296914903e-05,
+            "COMPLETE": 0.0017251146722233879,
+            "ALL": 0.0016930244791374671
+          }
+        }
+      },
+      "per_continuation_winners": [
+        {
+          "scene_id": "ai_001_001",
+          "optimal_action_sets": {
+            "FC": [
+              "ALL"
+            ],
+            "CF": [
+              "COMPLETE"
+            ]
+          },
+          "beneficial_action_flip": true
+        },
+        {
+          "scene_id": "ai_002_001",
+          "optimal_action_sets": {
+            "FC": [
+              "OFF"
+            ],
+            "CF": [
+              "OFF"
+            ]
+          },
+          "beneficial_action_flip": false
+        },
+        {
+          "scene_id": "ai_003_001",
+          "optimal_action_sets": {
+            "FC": [
+              "COMPLETE"
+            ],
+            "CF": [
+              "COMPLETE"
+            ]
+          },
+          "beneficial_action_flip": false
+        }
+      ],
+      "largest_scene_oracle": {
+        "scene_id": "ai_001_001",
+        "gain": 0.0019978030867462415
+      },
+      "write_oracle_gain": 0.0012409725863232097,
+      "global_action_gap": 0.0003618105852420024,
+      "state_dependent_action_gap": 0.0003593256694370457,
+      "static_full_depth_absrel": {
+        "A": {
+          "per_scene": {
+            "ai_001_001": 0.4164024997555591,
+            "ai_002_001": 0.13603262142940106,
+            "ai_003_001": 0.4421487554272202
+          },
+          "mean": 0.3315279588707268
+        },
+        "B": {
+          "per_scene": {
+            "ai_001_001": 0.24778498570430516,
+            "ai_002_001": 0.2902149252897499,
+            "ai_003_001": 0.4523714688034761
+          },
+          "mean": 0.33012379326584373
+        },
+        "anchor": {
+          "per_scene": {
+            "ai_001_001": 0.5531812645187753,
+            "ai_002_001": 0.2879406493995273,
+            "ai_003_001": 0.4421487554272202
+          },
+          "mean": 0.42775688978184095
+        },
+        "prior": {
+          "per_scene": {
+            "ai_001_001": 1.1967777942637359,
+            "ai_002_001": 0.3676450299692169,
+            "ai_003_001": 10.151134756714908
+          },
+          "mean": 3.9051858603159535
+        },
+        "wrong_scene": {
+          "per_scene": {
+            "ai_001_001": 0.6978547274456028,
+            "ai_002_001": 0.2879406493995273,
+            "ai_003_001": 0.4429152219995483
+          },
+          "mean": 0.4762368662815595
+        }
+      },
+      "wrong_scene_minus_A": {
+        "mean": 0.1447089074108327,
+        "ci95": [
+          0.000766466572328095,
+          0.28145222769004374
+        ],
+        "n_scenes": 3,
+        "draws": 10000,
+        "seed": 20260927,
+        "unit": "scene",
+        "per_scene": {
+          "ai_001_001": 0.28145222769004374,
+          "ai_002_001": 0.15190802797012623,
+          "ai_003_001": 0.000766466572328095
+        },
+        "loso": {
+          "ai_001_001": 0.07633724727122716,
+          "ai_002_001": 0.14110934713118592,
+          "ai_003_001": 0.216680127830085
+        }
+      },
+      "context_gap_B_minus_A": {
+        "mean": -0.0014041656048830637,
+        "ci95": [
+          -0.16861751405125394,
+          0.15418230386034884
+        ],
+        "n_scenes": 3,
+        "draws": 10000,
+        "seed": 20260927,
+        "unit": "scene",
+        "per_scene": {
+          "ai_001_001": -0.16861751405125394,
+          "ai_002_001": 0.15418230386034884,
+          "ai_003_001": 0.01022271337625591
+        },
+        "loso": {
+          "ai_001_001": 0.08220250861830238,
+          "ai_002_001": -0.07919740033749902,
+          "ai_003_001": -0.007217605095452551
+        }
+      }
+    }
+  },
+  "important_limits": [
+    "Primary frames8/9 absent from training runtime/supervision logs but all scenes used for training; no independent scene confirmation.",
+    "Hash verification reads bytes and the manifest contains camera metadata before sealing; no query decoding/numerical use in construction is claimed, not OS-level inaccessible bytes.",
+    "Primary scene003 static A AbsRel5.782568 and large context gap remain a carrier qualification failure despite wrong-scene damage and coverage1.",
+    "Positive per-state oracle includes OFF and is an offline opportunity bound, not deployable-policy success.",
+    "Primary frame-holdout has zero beneficial winner flips and zero state-dependent action gap. Secondary already-trained queries have one beneficial flip and gap0.0003593256694370457; this secondary result cannot replace the primary conclusion.",
+    "R-Residual untrained, dev/test absent; static qualification/natural histories/policy remain incomplete."
+  ]
+}

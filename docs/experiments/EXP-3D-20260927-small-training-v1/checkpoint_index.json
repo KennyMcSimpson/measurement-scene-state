@@ -1,0 +1,25 @@
+{
+  "status": "NEWLY_TRAINED_ENGINEERING_CHECKPOINT_NOT_RECOVERED_HISTORICAL_WEIGHT",
+  "schema": "mcss.dynamic.v1",
+  "carrier_status": "PARTIAL",
+  "n_train_scenes": 3,
+  "n_dev_scenes": 0,
+  "qualified_multiscene_generalization": false,
+  "checkpoints": {
+    "initial": {
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/training/initial.pt",
+      "sha256": "58bd3a64a2bab15c08db6c6ba520957b6160a81926be1553628a0af3832ba775",
+      "phase": "initial"
+    },
+    "phase_a_final": {
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/training/phase_a_final.pt",
+      "sha256": "487656b5546a38ed23496329f721c01d139f95b7f0f5576f7220bee308e7b078",
+      "phase": "phase_a_final"
+    },
+    "phase_b_final": {
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/training/phase_b_final.pt",
+      "sha256": "4969b46a695bf12e7a9517b307401390bf89e9595876d8fe4fd03e2f2eebddc3",
+      "phase": "phase_b_final"
+    }
+  }
+}

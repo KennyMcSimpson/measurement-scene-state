@@ -1,0 +1,135 @@
+{
+  "schema": "mcss.mechanism.carrier_audit.v1",
+  "CARRIER_STATUS": "BLOCKED",
+  "STATIC_STATE_STATUS": "BLOCKED_CARRIER_NOT_READY",
+  "audit_scope": "Local metadata/config/provenance/path existence only. No query/holdout/RGB/depth media read or download.",
+  "available_real_scene_counts": {
+    "train": 0,
+    "dev": 0,
+    "test": 0
+  },
+  "checkpoint": null,
+  "physical_scene_independence": "UNVERIFIED: metadata scene IDs are not audited physical sites",
+  "missing_paths": [
+    "baselines/v5_typed_appearance_step4500/checkpoint/step_004500.pt",
+    "outputs/dynamic_ttt_pilot_20260919",
+    "outputs/dynamic_training_run_20260919",
+    "outputs/dynamic_training_run_20260919/episodes/episode_index_train.json",
+    "outputs/dynamic_training_run_20260919/training",
+    "outputs/dynamic_full_method_20260920",
+    "outputs/hypersim_holdout_extraction_20260919",
+    "data/hypersim_prepared",
+    "data/hypersim_er_prepared",
+    "data/hypersim_final_holdout_raw",
+    "data/dl3dv",
+    "data/scannet",
+    "data/replica_prepared"
+  ],
+  "existence_checked": {
+    "baselines/v5_typed_appearance_step4500/checkpoint/step_004500.pt": false,
+    "outputs/dynamic_ttt_pilot_20260919": false,
+    "outputs/dynamic_training_run_20260919": false,
+    "outputs/dynamic_training_run_20260919/episodes/episode_index_train.json": false,
+    "outputs/dynamic_training_run_20260919/training": false,
+    "outputs/dynamic_full_method_20260920": false,
+    "outputs/hypersim_holdout_extraction_20260919": false,
+    "data/hypersim_prepared": false,
+    "data/hypersim_er_prepared": false,
+    "data/hypersim_final_holdout_raw": false,
+    "data/dl3dv": false,
+    "data/scannet": false,
+    "data/replica_prepared": false
+  },
+  "local_roots": {
+    "repository_data": "vision_2d_probe only",
+    "/data": "symlink to unavailable /media/gsk/data/",
+    "/mnt": "empty"
+  },
+  "historical_v5": {
+    "config_and_source_available": true,
+    "source_zip_contains_weights": false,
+    "expected_checkpoint_sha256": "9e84334eb6de2875ef2cafdf909fff00e21dfb31d0a0d5f4b5ee844fb0847245",
+    "training": "Single ai_001_001 window, length1, context4 target2,128x160; single-window overfit only",
+    "dynamic_compatible": false,
+    "dynamic_schema": "mcss.dynamic.v1 explicitly rejects legacy V5"
+  },
+  "historical_dynamic": {
+    "documented_train": [
+      "ai_001_001",
+      "ai_001_002",
+      "ai_001_003"
+    ],
+    "documented_dev": [
+      "ai_003_010",
+      "ai_004_003",
+      "ai_004_004"
+    ],
+    "early_optimization": "3 optimizer steps on ai_001_001; not qualification",
+    "later_run": "1600 developmental steps mentioned; artifacts and actual training scope not locally verifiable",
+    "default_steps_not_run_evidence": {
+      "stage_a": 1000,
+      "stage_b": 600
+    }
+  },
+  "metadata_only_counts": {
+    "configs/hypersim_subset_v1.csv": {
+      "train": 60,
+      "val": 20,
+      "test": 20
+    },
+    "configs/hypersim_er_partitions.csv": {
+      "train": 365,
+      "val": 46,
+      "diagnostic_test": 20,
+      "final_holdout": 26
+    }
+  },
+  "cleanup_provenance": {
+    "source": "docs/provenance/DATA.md",
+    "deleted_files": 433375,
+    "deleted_bytes": 293934856380
+  },
+  "implemented_capabilities": [
+    "Query-independent materialization",
+    "Real fuse_down and complete_down write sites",
+    "Parameter-free RGB/depth/visibility renderer",
+    "Runtime and sealed evaluator separation"
+  ],
+  "controls_audit": {
+    "existing": "LearnedHeadsControl/FreeDecoderControl predict complete outputs, not residual corrections",
+    "new": "ResidualReadoutControl: detached private state, cloned cameras, small RGB/depth residual; standard nn.Module optimizer training API",
+    "training_status": "UNTRAINED_UNEVALUATED",
+    "scientific_result": null
+  },
+  "boundary_limits": [
+    "EvaluationLedger controls callback API, not arbitrary filesystem access; providers must remain evaluator-only",
+    "Physical identities require audited external mapping",
+    "Structural policy keys cannot detect semantically relabeled tensors"
+  ],
+  "evidence_files": [
+    "baselines/v5_typed_appearance_step4500/MANIFEST.sha256",
+    "docs/provenance/DATA.md",
+    "docs/dynamic_ttt_implementation_20260919.md",
+    "docs/superpowers/plans/2026-09-20-complete-method-and-benchmark.md",
+    "src/mcss/dynamic/carrier.py",
+    "src/mcss/dynamic/checkpoint.py",
+    "src/mcss/data/pilot_provenance.py"
+  ],
+  "required_for_real_pilot": [
+    "Compatible trained dynamic checkpoint, config/hash/training-scope provenance",
+    "Calibrated RGB/depth cohort with verified physical-scene train/dev/test split",
+    "Static qualification and trained residual control before scientific history claims"
+  ],
+  "CARRIER_CHECKPOINT": null,
+  "TRAINING_SCOPE": "NO_AVAILABLE_DYNAMIC_CHECKPOINT; historical scope documented separately",
+  "N_TRAIN_SCENES": 0,
+  "N_DEV_SCENES": 0,
+  "N_TEST_SCENES": 0,
+  "HAS_REAL_L_FUSE": true,
+  "HAS_REAL_L_COMPLETE": true,
+  "HAS_RGB_READOUT": true,
+  "HAS_DEPTH_READOUT": true,
+  "HAS_QUERY_INDEPENDENT_STATE": true,
+  "HAS_FIXED_MEASUREMENT": true,
+  "DATA_AVAILABLE": false
+}

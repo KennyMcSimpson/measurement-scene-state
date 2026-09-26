@@ -1,0 +1,16 @@
+{
+  "stage": "analysis_only_after_validation_completed",
+  "first_exit_code": 139,
+  "first_error": "process segmentation fault; no Python exception trace",
+  "cause": "not established",
+  "recovery": "same immutable raw data, same code, OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONFAULTHANDLER=1",
+  "recovery_exit_code": 0,
+  "validation_rerun": false,
+  "scientific_code_changed": false,
+  "parameters_changed": false,
+  "additional_audit_incident": {
+    "exit_code": 139,
+    "recovery_exit_code": 0,
+    "recovery": "PYTHONFAULTHANDLER=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1; same code/raw; all regenerated artifacts byte-identical"
+  }
+}

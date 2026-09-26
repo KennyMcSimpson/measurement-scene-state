@@ -1,0 +1,3950 @@
+{
+  "224/discovery": {
+    "oracle": {
+      "sequence_values": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.00739040598163998,
+        "color-run": 0.0012334477692515777,
+        "dancing": 0.018477283319096705,
+        "drone": 0.001650826873027894,
+        "lindy-hop": 0.00030165866754170573,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "sequence_bootstrap": {
+        "mean": 0.0024211352175464887,
+        "ci95": [
+          0.00017820198098972458,
+          0.0057506820272721125
+        ],
+        "n": 12
+      },
+      "pair_bootstrap": {
+        "mean": 0.0024211352175464887,
+        "ci95": [
+          0.0005793146342497402,
+          0.004806697105010498
+        ],
+        "n": 24
+      },
+      "positive_sequences": 5,
+      "sequence_std": 0.005244226756187772,
+      "pair_mean": 0.0024211352175464887,
+      "pair_median": 0.0,
+      "pair_std": 0.005373915812556103,
+      "pair_min": 0.0,
+      "pair_max": 0.020745299991141497,
+      "improved_pairs": 8,
+      "tied_pairs": 16,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 2,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "threshold_pair_counts": {
+        "0.005": 3,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.2543712390259507,
+        "color-run": 0.04245418155887219,
+        "dancing": 0.6359717535665312,
+        "drone": 0.0568200012492761,
+        "lindy-hop": 0.010382824599369763,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "top1_positive_gain_share": 0.6359717535665312,
+      "top3_positive_gain_share": 0.9471629938417581,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.002641238419141624,
+        "cat-girl": 0.002641238419141624,
+        "classic-car": 0.0019693833299016254,
+        "color-run": 0.002529106803755117,
+        "dancing": 0.0009614853901328325,
+        "drone": 0.002491163248866361,
+        "lindy-hop": 0.0026138149039105596,
+        "lucia": 0.002641238419141624,
+        "motocross-bumps": 0.002641238419141624,
+        "paragliding": 0.002641238419141624,
+        "sheep": 0.002641238419141624,
+        "tractor-sand": 0.002641238419141624
+      },
+      "leave_one_sequence_out_ci": {
+        "bmx-bumps": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006161339687092162
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "cat-girl": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006161339687092162
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "classic-car": {
+          "mean": 0.0019693833299016254,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.005366832942807965
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.8529335063949679,
+          "directional_ci_positive": true
+        },
+        "color-run": {
+          "mean": 0.002529106803755117,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.006011264516816898
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.664168482926368,
+          "directional_ci_positive": true
+        },
+        "dancing": {
+          "mean": 0.0009614853901328325,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.00237938362911058
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.6987678607858816,
+          "directional_ci_positive": true
+        },
+        "drone": {
+          "mean": 0.002491163248866361,
+          "ci95": [
+            5.4847030462128315e-05,
+            0.00596280092227045
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.6742846057050604,
+          "directional_ci_positive": true
+        },
+        "lindy-hop": {
+          "mean": 0.0026138149039105596,
+          "ci95": [
+            0.0001500751702752631,
+            0.006123396132203405
+          ],
+          "n": 11,
+          "positive_sequence_count": 4,
+          "top1_positive_gain_share": 0.642644215738342,
+          "directional_ci_positive": true
+        },
+        "lucia": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "motocross-bumps": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "paragliding": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "sheep": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        },
+        "tractor-sand": {
+          "mean": 0.002641238419141624,
+          "ci95": [
+            0.0002049222007373914,
+            0.006150819647434469
+          ],
+          "n": 11,
+          "positive_sequence_count": 5,
+          "top1_positive_gain_share": 0.6359717535665312,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.0009614853901328325,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0013377925451956568,
+        0.018477283319096705
+      ]
+    },
+    "object_size": {
+      "224/discovery/small": {
+        "objects": [
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 5336,
+            "pixel_fraction": 0.013017174082747853,
+            "token_count_224": 4,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 7225,
+            "pixel_fraction": 0.01762539032006245,
+            "token_count_224": 4,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.04681702583522543,
+            "pixel_count": 7978,
+            "pixel_fraction": 0.019462334113973457,
+            "token_count_224": 6,
+            "token_count_448": 19
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 5362,
+            "pixel_fraction": 0.013080601092896174,
+            "token_count_224": 2,
+            "token_count_448": 15
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 4933,
+            "pixel_fraction": 0.012034055425448867,
+            "token_count_224": 4,
+            "token_count_448": 11
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 4036,
+            "pixel_fraction": 0.009845823575331772,
+            "token_count_224": 6,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 7366,
+            "pixel_fraction": 0.01796935987509758,
+            "token_count_224": 4,
+            "token_count_448": 16
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2228,
+            "pixel_fraction": 0.005435206869633099,
+            "token_count_224": 1,
+            "token_count_448": 5
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 2848,
+            "pixel_fraction": 0.006947697111631538,
+            "token_count_224": 2,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 8,
+            "gain": 0.0,
+            "pixel_count": 2872,
+            "pixel_fraction": 0.00700624512099922,
+            "token_count_224": 1,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 6948,
+            "pixel_fraction": 0.016949648711943793,
+            "token_count_224": 7,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 7336,
+            "pixel_fraction": 0.017896174863387977,
+            "token_count_224": 5,
+            "token_count_448": 19
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 6886,
+            "pixel_fraction": 0.01679839968774395,
+            "token_count_224": 5,
+            "token_count_448": 18
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 7190,
+            "pixel_fraction": 0.017540007806401248,
+            "token_count_224": 5,
+            "token_count_448": 22
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2336,
+            "pixel_fraction": 0.005698672911787666,
+            "token_count_224": 2,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 2256,
+            "pixel_fraction": 0.005503512880562061,
+            "token_count_224": 0,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 2456,
+            "pixel_fraction": 0.005991412958626073,
+            "token_count_224": 0,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2508,
+            "pixel_fraction": 0.006118266978922717,
+            "token_count_224": 2,
+            "token_count_448": 7
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 2721,
+            "pixel_fraction": 0.00663788056206089,
+            "token_count_224": 2,
+            "token_count_448": 7
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 6541,
+            "pixel_fraction": 0.015956772053083528,
+            "token_count_224": 4,
+            "token_count_448": 11
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 8072,
+            "pixel_fraction": 0.019691647150663544,
+            "token_count_224": 5,
+            "token_count_448": 22
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 3215,
+            "pixel_fraction": 0.007842993754879,
+            "token_count_224": 2,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 3553,
+            "pixel_fraction": 0.008667544886807182,
+            "token_count_224": 1,
+            "token_count_448": 11
+          }
+        ],
+        "sequence_macro_gain": 0.005201891759469492
+      },
+      "224/discovery/medium": {
+        "objects": [
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 10534,
+            "pixel_fraction": 0.02569769711163154,
+            "token_count_224": 5,
+            "token_count_448": 29
+          },
+          {
+            "sequence": "cat-girl",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 20075,
+            "pixel_fraction": 0.045908799853640686,
+            "token_count_224": 11,
+            "token_count_448": 46
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 8226,
+            "pixel_fraction": 0.020067330210772834,
+            "token_count_224": 5,
+            "token_count_448": 19
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 20254,
+            "pixel_fraction": 0.04940964090554254,
+            "token_count_224": 12,
+            "token_count_448": 56
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 13639,
+            "pixel_fraction": 0.033272345823575335,
+            "token_count_224": 9,
+            "token_count_448": 29
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 10645,
+            "pixel_fraction": 0.025968481654957066,
+            "token_count_224": 8,
+            "token_count_448": 26
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.062235899973424325,
+            "pixel_count": 19812,
+            "pixel_fraction": 0.048331381733021074,
+            "token_count_224": 10,
+            "token_count_448": 48
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 13810,
+            "pixel_fraction": 0.033689500390320065,
+            "token_count_224": 6,
+            "token_count_448": 35
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 17128,
+            "pixel_fraction": 0.04178376268540203,
+            "token_count_224": 10,
+            "token_count_448": 44
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 9871,
+            "pixel_fraction": 0.024080308352849335,
+            "token_count_224": 7,
+            "token_count_448": 24
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.004723594476425952,
+            "pixel_count": 25822,
+            "pixel_fraction": 0.06299277907884465,
+            "token_count_224": 19,
+            "token_count_448": 64
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 11151,
+            "pixel_fraction": 0.027202868852459015,
+            "token_count_224": 5,
+            "token_count_448": 31
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 6,
+            "gain": 0.0,
+            "pixel_count": 32122,
+            "pixel_fraction": 0.07836163153786105,
+            "token_count_224": 19,
+            "token_count_448": 79
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 7,
+            "gain": 0.00010294420424129813,
+            "pixel_count": 15169,
+            "pixel_fraction": 0.03700478142076503,
+            "token_count_224": 9,
+            "token_count_448": 37
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 10616,
+            "pixel_fraction": 0.025897736143637783,
+            "token_count_224": 7,
+            "token_count_448": 27
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 9884,
+            "pixel_fraction": 0.024112021857923497,
+            "token_count_224": 8,
+            "token_count_448": 25
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 6,
+            "gain": 0.0,
+            "pixel_count": 33722,
+            "pixel_fraction": 0.08226483216237315,
+            "token_count_224": 19,
+            "token_count_448": 80
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 7,
+            "gain": 0.0,
+            "pixel_count": 14488,
+            "pixel_fraction": 0.035343481654957064,
+            "token_count_224": 9,
+            "token_count_448": 35
+          },
+          {
+            "sequence": "lucia",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 20142,
+            "pixel_fraction": 0.049136416861826696,
+            "token_count_224": 13,
+            "token_count_448": 49
+          },
+          {
+            "sequence": "lucia",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 18486,
+            "pixel_fraction": 0.04509660421545667,
+            "token_count_224": 13,
+            "token_count_448": 46
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 9777,
+            "pixel_fraction": 0.02385099531615925,
+            "token_count_224": 6,
+            "token_count_448": 24
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 11337,
+            "pixel_fraction": 0.02765661592505855,
+            "token_count_224": 6,
+            "token_count_448": 29
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 8619,
+            "pixel_fraction": 0.021026053864168618,
+            "token_count_224": 7,
+            "token_count_448": 24
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 9818,
+            "pixel_fraction": 0.023951014832162373,
+            "token_count_224": 5,
+            "token_count_448": 26
+          }
+        ],
+        "sequence_macro_gain": 0.0017958102587154984
+      },
+      "224/discovery/tiny": {
+        "objects": [
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 1619,
+            "pixel_fraction": 0.003949551131928181,
+            "token_count_224": 1,
+            "token_count_448": 3
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1793,
+            "pixel_fraction": 0.004374024199843872,
+            "token_count_224": 2,
+            "token_count_448": 4
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 8,
+            "gain": 0.0,
+            "pixel_count": 296,
+            "pixel_fraction": 0.0007220921155347385,
+            "token_count_224": 0,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 689,
+            "pixel_fraction": 0.001680815768930523,
+            "token_count_224": 0,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 699,
+            "pixel_fraction": 0.0017052107728337236,
+            "token_count_224": 1,
+            "token_count_448": 1
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 588,
+            "pixel_fraction": 0.0014344262295081967,
+            "token_count_224": 1,
+            "token_count_448": 3
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1065,
+            "pixel_fraction": 0.0025980679156908664,
+            "token_count_224": 1,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 548,
+            "pixel_fraction": 0.0013368462138953943,
+            "token_count_224": 0,
+            "token_count_448": 1
+          }
+        ],
+        "sequence_macro_gain": 0.0
+      },
+      "224/discovery/large": {
+        "objects": [
+          {
+            "sequence": "cat-girl",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 138156,
+            "pixel_fraction": 0.31594401756311746,
+            "token_count_224": 79,
+            "token_count_448": 326
+          },
+          {
+            "sequence": "cat-girl",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 46572,
+            "pixel_fraction": 0.10650384193194291,
+            "token_count_224": 29,
+            "token_count_448": 103
+          },
+          {
+            "sequence": "cat-girl",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 83371,
+            "pixel_fraction": 0.1906581595316502,
+            "token_count_224": 51,
+            "token_count_448": 191
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.013574264362447463,
+            "pixel_count": 270801,
+            "pixel_fraction": 0.6606191451990633,
+            "token_count_224": 173,
+            "token_count_448": 672
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.03076817152739242,
+            "pixel_count": 245112,
+            "pixel_fraction": 0.5979508196721312,
+            "token_count_224": 151,
+            "token_count_448": 612
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 43559,
+            "pixel_fraction": 0.1062621975019516,
+            "token_count_224": 30,
+            "token_count_448": 106
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.017490309624747957,
+            "pixel_count": 154577,
+            "pixel_fraction": 0.3770906518345043,
+            "token_count_224": 92,
+            "token_count_448": 390
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": -0.015571367665513258,
+            "pixel_count": 42190,
+            "pixel_fraction": 0.10292252146760343,
+            "token_count_224": 28,
+            "token_count_448": 104
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.008536718790909559,
+            "pixel_count": 189108,
+            "pixel_fraction": 0.4613290398126464,
+            "token_count_224": 114,
+            "token_count_448": 472
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": -0.00305497413463518,
+            "pixel_count": 70075,
+            "pixel_fraction": 0.1709479898516784,
+            "token_count_224": 46,
+            "token_count_448": 178
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.001810774105930335,
+            "pixel_count": 42844,
+            "pixel_fraction": 0.10451795472287276,
+            "token_count_224": 28,
+            "token_count_448": 106
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.01650826873027894,
+            "pixel_count": 132869,
+            "pixel_fraction": 0.3241339773614364,
+            "token_count_224": 83,
+            "token_count_448": 335
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 45122,
+            "pixel_fraction": 0.11007513661202185,
+            "token_count_224": 30,
+            "token_count_448": 121
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 41386,
+            "pixel_fraction": 0.1009611631537861,
+            "token_count_224": 26,
+            "token_count_448": 100
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 79647,
+            "pixel_fraction": 0.19429888758782202,
+            "token_count_224": 52,
+            "token_count_448": 197
+          }
+        ],
+        "sequence_macro_gain": 0.0059957711577472905
+      }
+    }
+  },
+  "224/validation": {
+    "oracle": {
+      "sequence_values": {
+        "bear": 0.0,
+        "disc-jockey": 0.004131949222085651,
+        "dog-agility": 0.0,
+        "dogs-scale": 0.00015393600260132922,
+        "elephant": 0.0017071880248332727,
+        "hike": 0.0027620777653757367,
+        "kid-football": 0.0007445140186437271,
+        "koala": 0.0023367890411383763,
+        "lady-running": 0.002801622609176796,
+        "longboard": 0.0022644884118420416,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.030681601800581923,
+        "scooter-gray": 0.014251415723058311,
+        "stroller": 6.354728789959019e-06
+      },
+      "sequence_bootstrap": {
+        "mean": 0.0038651210842579452,
+        "ci95": [
+          0.0009203660853708617,
+          0.008289043383089324
+        ],
+        "n": 16
+      },
+      "pair_bootstrap": {
+        "mean": 0.0038651210842579452,
+        "ci95": [
+          0.000828577376309627,
+          0.008467659707202443
+        ],
+        "n": 32
+      },
+      "positive_sequences": 11,
+      "sequence_std": 0.007713904450597414,
+      "pair_mean": 0.0038651210842579452,
+      "pair_median": 0.0,
+      "pair_std": 0.011520061723786477,
+      "pair_min": 0.0,
+      "pair_max": 0.061362321295451966,
+      "improved_pairs": 15,
+      "tied_pairs": 17,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 2,
+        "0.01": 2,
+        "0.02": 1
+      },
+      "threshold_pair_counts": {
+        "0.005": 5,
+        "0.01": 2,
+        "0.02": 2
+      },
+      "sequence_positive_gain_share": {
+        "bear": 0.0,
+        "disc-jockey": 0.06681467947592988,
+        "dog-agility": 0.0,
+        "dogs-scale": 0.0024891846730928967,
+        "elephant": 0.027605668548561,
+        "hike": 0.04466350641357108,
+        "kid-football": 0.012038982777215252,
+        "koala": 0.037786478583034654,
+        "lady-running": 0.04530295668788007,
+        "longboard": 0.03661735884978095,
+        "mallard-fly": 0.0,
+        "motorbike": 0.0,
+        "rallye": 0.0,
+        "scooter-board": 0.4961293762170779,
+        "scooter-gray": 0.23044905017824305,
+        "stroller": 0.00010275759561325371
+      },
+      "top1_positive_gain_share": 0.4961293762170779,
+      "top3_positive_gain_share": 0.7933931058712509,
+      "leave_one_sequence_out": {
+        "bear": 0.004122795823208475,
+        "disc-jockey": 0.003847332541736098,
+        "dog-agility": 0.004122795823208475,
+        "dogs-scale": 0.004112533423035053,
+        "elephant": 0.00400898328821959,
+        "hike": 0.003938657305516759,
+        "kid-football": 0.004073161555298893,
+        "koala": 0.003967009887132583,
+        "lady-running": 0.003936020982596688,
+        "longboard": 0.003971829929085672,
+        "mallard-fly": 0.004122795823208475,
+        "motorbike": 0.004122795823208475,
+        "rallye": 0.004122795823208475,
+        "scooter-board": 0.00207735570316968,
+        "scooter-gray": 0.0031727014416712543,
+        "stroller": 0.004122372174622478
+      },
+      "leave_one_sequence_out_ci": {
+        "bear": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010168216660263285,
+            0.008745875002682025
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "disc-jockey": {
+          "mean": 0.003847332541736098,
+          "ci95": [
+            0.000735912693301721,
+            0.008545812951457569
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5316515008384993,
+          "directional_ci_positive": true
+        },
+        "dog-agility": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0009978552520656752,
+            0.00874469810916996
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "dogs-scale": {
+          "mean": 0.004112533423035053,
+          "ci95": [
+            0.0009879343174263333,
+            0.008732606474301869
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.49736741556479763,
+          "directional_ci_positive": true
+        },
+        "elephant": {
+          "mean": 0.00400898328821959,
+          "ci95": [
+            0.0008578630314118164,
+            0.008668397825789197
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.51021417975209,
+          "directional_ci_positive": true
+        },
+        "hike": {
+          "mean": 0.003938657305516759,
+          "ci95": [
+            0.0007908731055695987,
+            0.008600221380495963
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.519324216700399,
+          "directional_ci_positive": true
+        },
+        "kid-football": {
+          "mean": 0.004073161555298893,
+          "ci95": [
+            0.0009525019253530385,
+            0.00873843511152415
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5021750530316734,
+          "directional_ci_positive": true
+        },
+        "koala": {
+          "mean": 0.003967009887132583,
+          "ci95": [
+            0.0008324777090848467,
+            0.008639683969756262
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5156125591401717,
+          "directional_ci_positive": true
+        },
+        "lady-running": {
+          "mean": 0.003936020982596688,
+          "ci95": [
+            0.0008045353902598705,
+            0.008610436734965355
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5196720569028492,
+          "directional_ci_positive": true
+        },
+        "longboard": {
+          "mean": 0.003971829929085672,
+          "ci95": [
+            0.000840746223526429,
+            0.008630734331058303
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.5149868339175494,
+          "directional_ci_positive": true
+        },
+        "mallard-fly": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010311487007145016,
+            0.008742874113571202
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "motorbike": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010311487007145016,
+            0.008742874113571202
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "rallye": {
+          "mean": 0.004122795823208475,
+          "ci95": [
+            0.0010311487007145016,
+            0.008742874113571202
+          ],
+          "n": 15,
+          "positive_sequence_count": 11,
+          "top1_positive_gain_share": 0.4961293762170779,
+          "directional_ci_positive": true
+        },
+        "scooter-board": {
+          "mean": 0.00207735570316968,
+          "ci95": [
+            0.0006916152010034614,
+            0.0041230794732288805
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.4573575820874314,
+          "directional_ci_positive": true
+        },
+        "scooter-gray": {
+          "mean": 0.0031727014416712543,
+          "ci95": [
+            0.0006916152010034614,
+            0.0074077887269110385
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.644699842592607,
+          "directional_ci_positive": true
+        },
+        "stroller": {
+          "mean": 0.004122372174622478,
+          "ci95": [
+            0.0010165249655352756,
+            0.008764545382742087
+          ],
+          "n": 15,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.49618036251812075,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.00207735570316968,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0012258510217385,
+        0.0027719639763260015,
+        0.030681601800581923
+      ]
+    },
+    "object_size": {
+      "224/validation/large": {
+        "objects": [
+          {
+            "sequence": "bear",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 48160,
+            "pixel_fraction": 0.11748633879781421,
+            "token_count_224": 32,
+            "token_count_448": 122
+          },
+          {
+            "sequence": "bear",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 44139,
+            "pixel_fraction": 0.10767710772833723,
+            "token_count_224": 26,
+            "token_count_448": 109
+          },
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.005110582836294175,
+            "pixel_count": 177382,
+            "pixel_fraction": 0.3247327182190978,
+            "token_count_224": 81,
+            "token_count_448": 336
+          },
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": -2.780128866552989e-05,
+            "pixel_count": 166599,
+            "pixel_fraction": 0.30499231107205627,
+            "token_count_224": 80,
+            "token_count_448": 311
+          },
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.008885984089776588,
+            "pixel_count": 77786,
+            "pixel_fraction": 0.14240260691271237,
+            "token_count_224": 37,
+            "token_count_448": 148
+          },
+          {
+            "sequence": "dog-agility",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 44186,
+            "pixel_fraction": 0.10779176424668228,
+            "token_count_224": 28,
+            "token_count_448": 115
+          },
+          {
+            "sequence": "dog-agility",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 56360,
+            "pixel_fraction": 0.13749024199843873,
+            "token_count_224": 42,
+            "token_count_448": 136
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 5.022114562958091e-05,
+            "pixel_count": 84396,
+            "pixel_fraction": 0.205884074941452,
+            "token_count_224": 51,
+            "token_count_448": 210
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0009041436702786898,
+            "pixel_count": 116173,
+            "pixel_fraction": 0.28340407884465263,
+            "token_count_224": 73,
+            "token_count_448": 292
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 46694,
+            "pixel_fraction": 0.113910031225605,
+            "token_count_224": 29,
+            "token_count_448": 116
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0002771232049024186,
+            "pixel_count": 55372,
+            "pixel_fraction": 0.1350800156128025,
+            "token_count_224": 35,
+            "token_count_448": 135
+          },
+          {
+            "sequence": "elephant",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0034143760496665454,
+            "pixel_count": 58991,
+            "pixel_fraction": 0.14390856752537082,
+            "token_count_224": 37,
+            "token_count_448": 150
+          },
+          {
+            "sequence": "elephant",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 50078,
+            "pixel_fraction": 0.12216530054644809,
+            "token_count_224": 33,
+            "token_count_448": 126
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0029780560745747975,
+            "pixel_count": 99930,
+            "pixel_fraction": 0.24377927400468383,
+            "token_count_224": 61,
+            "token_count_448": 249
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 49588,
+            "pixel_fraction": 0.12096994535519126,
+            "token_count_224": 30,
+            "token_count_448": 117
+          },
+          {
+            "sequence": "koala",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0035359437132367333,
+            "pixel_count": 87874,
+            "pixel_fraction": 0.21436865729898516,
+            "token_count_224": 57,
+            "token_count_448": 222
+          },
+          {
+            "sequence": "koala",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0011376343690400192,
+            "pixel_count": 81086,
+            "pixel_fraction": 0.19780932864949258,
+            "token_count_224": 52,
+            "token_count_448": 201
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.011206490436707184,
+            "pixel_count": 52806,
+            "pixel_fraction": 0.12882025761124122,
+            "token_count_224": 31,
+            "token_count_448": 130
+          }
+        ],
+        "sequence_macro_gain": 0.0027129528447046645
+      },
+      "224/validation/medium": {
+        "objects": [
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.010822929695108896,
+            "pixel_count": 36089,
+            "pixel_fraction": 0.06606802870533099,
+            "token_count_224": 21,
+            "token_count_448": 62
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 15911,
+            "pixel_fraction": 0.038814890710382514,
+            "token_count_224": 11,
+            "token_count_448": 39
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 39298,
+            "pixel_fraction": 0.09586748633879781,
+            "token_count_224": 25,
+            "token_count_448": 100
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 35085,
+            "pixel_fraction": 0.08558987119437939,
+            "token_count_224": 19,
+            "token_count_448": 91
+          },
+          {
+            "sequence": "hike",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.005524155530751473,
+            "pixel_count": 20058,
+            "pixel_fraction": 0.04893149882903981,
+            "token_count_224": 10,
+            "token_count_448": 49
+          },
+          {
+            "sequence": "hike",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 18647,
+            "pixel_fraction": 0.0454893637782982,
+            "token_count_224": 12,
+            "token_count_448": 52
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 14096,
+            "pixel_fraction": 0.0343871975019516,
+            "token_count_224": 11,
+            "token_count_448": 37
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 33008,
+            "pixel_fraction": 0.08052302888368462,
+            "token_count_224": 22,
+            "token_count_448": 82
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 11163,
+            "pixel_fraction": 0.027232142857142858,
+            "token_count_224": 8,
+            "token_count_448": 28
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 32988,
+            "pixel_fraction": 0.08047423887587822,
+            "token_count_224": 23,
+            "token_count_448": 77
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.013341768078482308,
+            "pixel_count": 14851,
+            "pixel_fraction": 0.036229020296643245,
+            "token_count_224": 11,
+            "token_count_448": 36
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.009303116039938164,
+            "pixel_count": 32496,
+            "pixel_fraction": 0.07927400468384074,
+            "token_count_224": 19,
+            "token_count_448": 80
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 11627,
+            "pixel_fraction": 0.028364071038251365,
+            "token_count_224": 12,
+            "token_count_448": 27
+          },
+          {
+            "sequence": "mallard-fly",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 9333,
+            "pixel_fraction": 0.022767857142857142,
+            "token_count_224": 8,
+            "token_count_448": 23
+          },
+          {
+            "sequence": "mallard-fly",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 31539,
+            "pixel_fraction": 0.07693940281030445,
+            "token_count_224": 20,
+            "token_count_448": 78
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 8852,
+            "pixel_fraction": 0.02159445745511319,
+            "token_count_224": 4,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 17578,
+            "pixel_fraction": 0.04288153786104606,
+            "token_count_224": 13,
+            "token_count_448": 45
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.057005662892233244,
+            "pixel_count": 29336,
+            "pixel_fraction": 0.07156518345042935,
+            "token_count_224": 20,
+            "token_count_448": 70
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 13193,
+            "pixel_fraction": 0.03218432864949258,
+            "token_count_224": 7,
+            "token_count_448": 34
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 27832,
+            "pixel_fraction": 0.06789617486338798,
+            "token_count_224": 15,
+            "token_count_448": 71
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 11994,
+            "pixel_fraction": 0.029259367681498828,
+            "token_count_224": 5,
+            "token_count_448": 36
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 19909,
+            "pixel_fraction": 0.04856801327088212,
+            "token_count_224": 10,
+            "token_count_448": 52
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 5.266883062687855e-05,
+            "pixel_count": 19952,
+            "pixel_fraction": 0.04867291178766588,
+            "token_count_224": 9,
+            "token_count_448": 51
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": -2.7249915466986963e-05,
+            "pixel_count": 29613,
+            "pixel_fraction": 0.07224092505854801,
+            "token_count_224": 18,
+            "token_count_448": 73
+          }
+        ],
+        "sequence_macro_gain": 0.003712222664370311
+      },
+      "224/validation/small": {
+        "objects": [
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 5641,
+            "pixel_fraction": 0.010326962507322788,
+            "token_count_224": 0,
+            "token_count_448": 13
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 7687,
+            "pixel_fraction": 0.01875243950039032,
+            "token_count_224": 6,
+            "token_count_448": 21
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 5078,
+            "pixel_fraction": 0.012387782982045277,
+            "token_count_224": 3,
+            "token_count_448": 14
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 6591,
+            "pixel_fraction": 0.01607874707259953,
+            "token_count_224": 1,
+            "token_count_448": 20
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2918,
+            "pixel_fraction": 0.007118462138953942,
+            "token_count_224": 1,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 3570,
+            "pixel_fraction": 0.008709016393442622,
+            "token_count_224": 3,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 5919,
+            "pixel_fraction": 0.014439402810304449,
+            "token_count_224": 4,
+            "token_count_448": 16
+          },
+          {
+            "sequence": "rallye",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 6753,
+            "pixel_fraction": 0.01647394613583138,
+            "token_count_224": 4,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 1.7646114237601651e-06,
+            "pixel_count": 6950,
+            "pixel_fraction": 0.016954527712724436,
+            "token_count_224": 4,
+            "token_count_448": 20
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 3681,
+            "pixel_fraction": 0.00897980093676815,
+            "token_count_224": 4,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 7457,
+            "pixel_fraction": 0.018191354410616707,
+            "token_count_224": 4,
+            "token_count_448": 18
+          }
+        ],
+        "sequence_macro_gain": 1.2604367312572607e-07
+      },
+      "224/validation/tiny": {
+        "objects": [
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 109,
+            "pixel_fraction": 0.0001995459871118922,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 338,
+            "pixel_fraction": 0.0008245511319281811,
+            "token_count_224": 0,
+            "token_count_448": 1
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 104,
+            "pixel_fraction": 0.0002537080405932865,
+            "token_count_224": 0,
+            "token_count_448": 1
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1686,
+            "pixel_fraction": 0.004112997658079626,
+            "token_count_224": 0,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 1304,
+            "pixel_fraction": 0.0031811085089773613,
+            "token_count_224": 1,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 935,
+            "pixel_fraction": 0.0022809328649492583,
+            "token_count_224": 2,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1910,
+            "pixel_fraction": 0.004659445745511319,
+            "token_count_224": 3,
+            "token_count_448": 4
+          },
+          {
+            "sequence": "rallye",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 1784,
+            "pixel_fraction": 0.004352068696330992,
+            "token_count_224": 1,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.12272464259090393,
+            "pixel_count": 1157,
+            "pixel_fraction": 0.0028225019516003123,
+            "token_count_224": 1,
+            "token_count_448": 3
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1297,
+            "pixel_fraction": 0.003164032006245121,
+            "token_count_224": 0,
+            "token_count_448": 3
+          }
+        ],
+        "sequence_macro_gain": 0.00876604589935028
+      }
+    }
+  },
+  "448/discovery": {
+    "oracle": {
+      "sequence_values": {
+        "bmx-bumps": 0.0015604713751059818,
+        "cat-girl": 0.003433613710193073,
+        "classic-car": 0.005709763589236971,
+        "color-run": 0.01249103443454136,
+        "dancing": 0.010257549956861622,
+        "drone": 0.0070429113929333514,
+        "lindy-hop": 0.0021771923632508267,
+        "lucia": 0.002245851943127597,
+        "motocross-bumps": 0.021307957980642084,
+        "paragliding": 0.0,
+        "sheep": 0.0013062440177979279,
+        "tractor-sand": 0.0
+      },
+      "sequence_bootstrap": {
+        "mean": 0.005627715896974233,
+        "ci95": [
+          0.002538954755695832,
+          0.009265650136123706
+        ],
+        "n": 12
+      },
+      "pair_bootstrap": {
+        "mean": 0.005627715896974233,
+        "ci95": [
+          0.0027199139657285575,
+          0.008941897267873943
+        ],
+        "n": 24
+      },
+      "positive_sequences": 10,
+      "sequence_std": 0.006076849356304759,
+      "pair_mean": 0.005627715896974233,
+      "pair_median": 0.0028667153929039096,
+      "pair_std": 0.007730698430874737,
+      "pair_min": 0.0,
+      "pair_max": 0.02258197414102253,
+      "improved_pairs": 15,
+      "tied_pairs": 9,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "threshold_pair_counts": {
+        "0.005": 6,
+        "0.01": 6,
+        "0.02": 4
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.023106937812683123,
+        "cat-girl": 0.05084380254576537,
+        "classic-car": 0.08454826809793964,
+        "color-run": 0.1849630569964335,
+        "dancing": 0.15189036642699988,
+        "drone": 0.1042890745533193,
+        "lindy-hop": 0.03223913578066672,
+        "lucia": 0.03325582385823542,
+        "motocross-bumps": 0.3155211097291177,
+        "paragliding": 0.0,
+        "sheep": 0.019342424198839355,
+        "tractor-sand": 0.0
+      },
+      "top1_positive_gain_share": 0.3155211097291177,
+      "top3_positive_gain_share": 0.6523745331525511,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.005997465398962256,
+        "cat-girl": 0.005827179732136156,
+        "classic-car": 0.005620257015859439,
+        "color-run": 0.005003777848104494,
+        "dancing": 0.005206821891529925,
+        "drone": 0.0054990617609779495,
+        "lindy-hop": 0.005941399854585452,
+        "lucia": 0.005935158074596655,
+        "motocross-bumps": 0.004202239343913519,
+        "paragliding": 0.0061393264330628,
+        "sheep": 0.006020576976899352,
+        "tractor-sand": 0.0061393264330628
+      },
+      "leave_one_sequence_out_ci": {
+        "bmx-bumps": {
+          "mean": 0.005997465398962256,
+          "ci95": [
+            0.0026987342532825047,
+            0.009856975675332032
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3229842875766245,
+          "directional_ci_positive": true
+        },
+        "cat-girl": {
+          "mean": 0.005827179732136156,
+          "ci95": [
+            0.0024525373034044195,
+            0.009761037667035536
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.33242274619855827,
+          "directional_ci_positive": true
+        },
+        "classic-car": {
+          "mean": 0.005620257015859439,
+          "ci95": [
+            0.0022393590036944217,
+            0.009592011512979753
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3446616558074017,
+          "directional_ci_positive": true
+        },
+        "color-run": {
+          "mean": 0.005003777848104494,
+          "ci95": [
+            0.0020022563306784373,
+            0.008923473061230102
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3871249180023206,
+          "directional_ci_positive": true
+        },
+        "dancing": {
+          "mean": 0.005206821891529925,
+          "ci95": [
+            0.002021664737803206,
+            0.009240600445396568
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3720286826596453,
+          "directional_ci_positive": true
+        },
+        "drone": {
+          "mean": 0.0054990617609779495,
+          "ci95": [
+            0.002132099662405553,
+            0.009580635051133015
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.35225774383824887,
+          "directional_ci_positive": true
+        },
+        "lindy-hop": {
+          "mean": 0.005941399854585452,
+          "ci95": [
+            0.0025633376093815944,
+            0.009916656337200486
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3260321029654781,
+          "directional_ci_positive": true
+        },
+        "lucia": {
+          "mean": 0.005935158074596655,
+          "ci95": [
+            0.0025510100939037197,
+            0.009916649437953104
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3263749785267383,
+          "directional_ci_positive": true
+        },
+        "motocross-bumps": {
+          "mean": 0.004202239343913519,
+          "ci95": [
+            0.0020086503471762503,
+            0.0066888619078421165
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.2702246331121102,
+          "directional_ci_positive": true
+        },
+        "paragliding": {
+          "mean": 0.0061393264330628,
+          "ci95": [
+            0.002894089004581146,
+            0.010069365112550027
+          ],
+          "n": 11,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.3155211097291177,
+          "directional_ci_positive": true
+        },
+        "sheep": {
+          "mean": 0.006020576976899352,
+          "ci95": [
+            0.0026941937057869112,
+            0.010038888210556596
+          ],
+          "n": 11,
+          "positive_sequence_count": 9,
+          "top1_positive_gain_share": 0.3217444269181816,
+          "directional_ci_positive": true
+        },
+        "tractor-sand": {
+          "mean": 0.0061393264330628,
+          "ci95": [
+            0.0028805049194246387,
+            0.010077588993645865
+          ],
+          "n": 11,
+          "positive_sequence_count": 10,
+          "top1_positive_gain_share": 0.3155211097291177,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.004202239343913519,
+      "quantiles": [
+        0.0,
+        0.0014969145357789683,
+        0.002839732826660335,
+        0.00784657103391542,
+        0.021307957980642084
+      ]
+    },
+    "object_size": {
+      "448/discovery/small": {
+        "objects": [
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.006241885500423948,
+            "pixel_count": 5336,
+            "pixel_fraction": 0.013017174082747853,
+            "token_count_224": 4,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 7225,
+            "pixel_fraction": 0.01762539032006245,
+            "token_count_224": 4,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0386595778149211,
+            "pixel_count": 7978,
+            "pixel_fraction": 0.019462334113973457,
+            "token_count_224": 6,
+            "token_count_448": 19
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.06857368986375711,
+            "pixel_count": 5362,
+            "pixel_fraction": 0.013080601092896174,
+            "token_count_224": 2,
+            "token_count_448": 15
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 4933,
+            "pixel_fraction": 0.012034055425448867,
+            "token_count_224": 4,
+            "token_count_448": 11
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0027731648942608267,
+            "pixel_count": 4036,
+            "pixel_fraction": 0.009845823575331772,
+            "token_count_224": 6,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 7366,
+            "pixel_fraction": 0.01796935987509758,
+            "token_count_224": 4,
+            "token_count_448": 16
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2228,
+            "pixel_fraction": 0.005435206869633099,
+            "token_count_224": 1,
+            "token_count_448": 5
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.007147988533590277,
+            "pixel_count": 2848,
+            "pixel_fraction": 0.006947697111631538,
+            "token_count_224": 2,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 8,
+            "gain": -0.002554838787603847,
+            "pixel_count": 2872,
+            "pixel_fraction": 0.00700624512099922,
+            "token_count_224": 1,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 6948,
+            "pixel_fraction": 0.016949648711943793,
+            "token_count_224": 7,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 7336,
+            "pixel_fraction": 0.017896174863387977,
+            "token_count_224": 5,
+            "token_count_448": 19
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 6886,
+            "pixel_fraction": 0.01679839968774395,
+            "token_count_224": 5,
+            "token_count_448": 18
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 7190,
+            "pixel_fraction": 0.017540007806401248,
+            "token_count_224": 5,
+            "token_count_448": 22
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2336,
+            "pixel_fraction": 0.005698672911787666,
+            "token_count_224": 2,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 2256,
+            "pixel_fraction": 0.005503512880562061,
+            "token_count_224": 0,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 2456,
+            "pixel_fraction": 0.005991412958626073,
+            "token_count_224": 0,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2508,
+            "pixel_fraction": 0.006118266978922717,
+            "token_count_224": 2,
+            "token_count_448": 7
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 2721,
+            "pixel_fraction": 0.00663788056206089,
+            "token_count_224": 2,
+            "token_count_448": 7
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 6541,
+            "pixel_fraction": 0.015956772053083528,
+            "token_count_224": 4,
+            "token_count_448": 11
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 8072,
+            "pixel_fraction": 0.019691647150663544,
+            "token_count_224": 5,
+            "token_count_448": 22
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 3215,
+            "pixel_fraction": 0.007842993754879,
+            "token_count_224": 2,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 3553,
+            "pixel_fraction": 0.008667544886807182,
+            "token_count_224": 1,
+            "token_count_448": 11
+          }
+        ],
+        "sequence_macro_gain": 0.012744763587312228
+      },
+      "448/discovery/medium": {
+        "objects": [
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 10534,
+            "pixel_fraction": 0.02569769711163154,
+            "token_count_224": 5,
+            "token_count_448": 29
+          },
+          {
+            "sequence": "cat-girl",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 20075,
+            "pixel_fraction": 0.045908799853640686,
+            "token_count_224": 11,
+            "token_count_448": 46
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 8226,
+            "pixel_fraction": 0.020067330210772834,
+            "token_count_224": 5,
+            "token_count_448": 19
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.013802927492723424,
+            "pixel_count": 20254,
+            "pixel_fraction": 0.04940964090554254,
+            "token_count_224": 12,
+            "token_count_448": 56
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.014094871847022683,
+            "pixel_count": 13639,
+            "pixel_fraction": 0.033272345823575335,
+            "token_count_224": 9,
+            "token_count_448": 29
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 10645,
+            "pixel_fraction": 0.025968481654957066,
+            "token_count_224": 8,
+            "token_count_448": 26
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 19812,
+            "pixel_fraction": 0.048331381733021074,
+            "token_count_224": 10,
+            "token_count_448": 48
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 13810,
+            "pixel_fraction": 0.033689500390320065,
+            "token_count_224": 6,
+            "token_count_448": 35
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.025205202227128187,
+            "pixel_count": 17128,
+            "pixel_fraction": 0.04178376268540203,
+            "token_count_224": 10,
+            "token_count_448": 44
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 9871,
+            "pixel_fraction": 0.024080308352849335,
+            "token_count_224": 7,
+            "token_count_448": 24
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 25822,
+            "pixel_fraction": 0.06299277907884465,
+            "token_count_224": 19,
+            "token_count_448": 64
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 11151,
+            "pixel_fraction": 0.027202868852459015,
+            "token_count_224": 5,
+            "token_count_448": 31
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 6,
+            "gain": 0.0063516390822295765,
+            "pixel_count": 32122,
+            "pixel_fraction": 0.07836163153786105,
+            "token_count_224": 19,
+            "token_count_448": 79
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 7,
+            "gain": 0.018676510760113785,
+            "pixel_count": 15169,
+            "pixel_fraction": 0.03700478142076503,
+            "token_count_224": 9,
+            "token_count_448": 37
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 10616,
+            "pixel_fraction": 0.025897736143637783,
+            "token_count_224": 7,
+            "token_count_448": 27
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 9884,
+            "pixel_fraction": 0.024112021857923497,
+            "token_count_224": 8,
+            "token_count_448": 25
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 6,
+            "gain": 0.0,
+            "pixel_count": 33722,
+            "pixel_fraction": 0.08226483216237315,
+            "token_count_224": 19,
+            "token_count_448": 80
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 7,
+            "gain": 0.0,
+            "pixel_count": 14488,
+            "pixel_fraction": 0.035343481654957064,
+            "token_count_224": 9,
+            "token_count_448": 35
+          },
+          {
+            "sequence": "lucia",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.004491703886255194,
+            "pixel_count": 20142,
+            "pixel_fraction": 0.049136416861826696,
+            "token_count_224": 13,
+            "token_count_448": 49
+          },
+          {
+            "sequence": "lucia",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 18486,
+            "pixel_fraction": 0.04509660421545667,
+            "token_count_224": 13,
+            "token_count_448": 46
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.04006788364052327,
+            "pixel_count": 9777,
+            "pixel_fraction": 0.02385099531615925,
+            "token_count_224": 6,
+            "token_count_448": 24
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 11337,
+            "pixel_fraction": 0.02765661592505855,
+            "token_count_224": 6,
+            "token_count_448": 29
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 8619,
+            "pixel_fraction": 0.021026053864168618,
+            "token_count_224": 7,
+            "token_count_448": 24
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.013062440177979195,
+            "pixel_count": 9818,
+            "pixel_fraction": 0.023951014832162373,
+            "token_count_224": 5,
+            "token_count_448": 26
+          }
+        ],
+        "sequence_macro_gain": 0.007266329782588992
+      },
+      "448/discovery/tiny": {
+        "objects": [
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "bmx-bumps",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 1619,
+            "pixel_fraction": 0.003949551131928181,
+            "token_count_224": 1,
+            "token_count_448": 3
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1793,
+            "pixel_fraction": 0.004374024199843872,
+            "token_count_224": 2,
+            "token_count_448": 4
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 1,
+            "object_id": 8,
+            "gain": 0.0,
+            "pixel_count": 296,
+            "pixel_fraction": 0.0007220921155347385,
+            "token_count_224": 0,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 689,
+            "pixel_fraction": 0.001680815768930523,
+            "token_count_224": 0,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "paragliding",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 699,
+            "pixel_fraction": 0.0017052107728337236,
+            "token_count_224": 1,
+            "token_count_448": 1
+          },
+          {
+            "sequence": "sheep",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.0,
+            "pixel_count": 588,
+            "pixel_fraction": 0.0014344262295081967,
+            "token_count_224": 1,
+            "token_count_448": 3
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1065,
+            "pixel_fraction": 0.0025980679156908664,
+            "token_count_224": 1,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "tractor-sand",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 548,
+            "pixel_fraction": 0.0013368462138953943,
+            "token_count_224": 0,
+            "token_count_448": 1
+          }
+        ],
+        "sequence_macro_gain": 0.0
+      },
+      "448/discovery/large": {
+        "objects": [
+          {
+            "sequence": "cat-girl",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.004703550040600302,
+            "pixel_count": 138156,
+            "pixel_fraction": 0.31594401756311746,
+            "token_count_224": 79,
+            "token_count_448": 326
+          },
+          {
+            "sequence": "cat-girl",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0023677017289842617,
+            "pixel_count": 46572,
+            "pixel_fraction": 0.10650384193194291,
+            "token_count_224": 29,
+            "token_count_448": 103
+          },
+          {
+            "sequence": "cat-girl",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.006663203071187618,
+            "pixel_count": 83371,
+            "pixel_fraction": 0.1906581595316502,
+            "token_count_224": 51,
+            "token_count_448": 191
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0014715203113901953,
+            "pixel_count": 270801,
+            "pixel_fraction": 0.6606191451990633,
+            "token_count_224": 173,
+            "token_count_448": 672
+          },
+          {
+            "sequence": "classic-car",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.004889261884285512,
+            "pixel_count": 245112,
+            "pixel_fraction": 0.5979508196721312,
+            "token_count_224": 151,
+            "token_count_448": 612
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.028362764333987323,
+            "pixel_count": 43559,
+            "pixel_fraction": 0.1062621975019516,
+            "token_count_224": 30,
+            "token_count_448": 106
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.026045531494223173,
+            "pixel_count": 154577,
+            "pixel_fraction": 0.3770906518345043,
+            "token_count_224": 92,
+            "token_count_448": 390
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.009807443814632166,
+            "pixel_count": 42190,
+            "pixel_fraction": 0.10292252146760343,
+            "token_count_224": 28,
+            "token_count_448": 104
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0042965126259990605,
+            "pixel_count": 189108,
+            "pixel_fraction": 0.4613290398126464,
+            "token_count_224": 114,
+            "token_count_448": 472
+          },
+          {
+            "sequence": "color-run",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0064339543384063225,
+            "pixel_count": 70075,
+            "pixel_fraction": 0.1709479898516784,
+            "token_count_224": 46,
+            "token_count_448": 178
+          },
+          {
+            "sequence": "dancing",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": -0.002319480300879584,
+            "pixel_count": 42844,
+            "pixel_fraction": 0.10451795472287276,
+            "token_count_224": 28,
+            "token_count_448": 106
+          },
+          {
+            "sequence": "drone",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0018554240655764276,
+            "pixel_count": 132869,
+            "pixel_fraction": 0.3241339773614364,
+            "token_count_224": 83,
+            "token_count_448": 335
+          },
+          {
+            "sequence": "lindy-hop",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0024406133294224697,
+            "pixel_count": 45122,
+            "pixel_fraction": 0.11007513661202185,
+            "token_count_224": 30,
+            "token_count_448": 121
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.021350436144495444,
+            "pixel_count": 41386,
+            "pixel_fraction": 0.1009611631537861,
+            "token_count_224": 26,
+            "token_count_448": 100
+          },
+          {
+            "sequence": "motocross-bumps",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.023813512137549675,
+            "pixel_count": 79647,
+            "pixel_fraction": 0.19429888758782202,
+            "token_count_224": 52,
+            "token_count_448": 197
+          }
+        ],
+        "sequence_macro_gain": 0.0067580450382885805
+      }
+    }
+  },
+  "448/validation": {
+    "oracle": {
+      "sequence_values": {
+        "bear": 0.001889063276553471,
+        "disc-jockey": 0.007555968344968855,
+        "dog-agility": 0.0005907322145288219,
+        "dogs-scale": 0.00039903961611836847,
+        "elephant": 0.0005945392912166114,
+        "hike": 0.0032052175408744943,
+        "kid-football": 9.400263207337556e-06,
+        "koala": 0.001094554105296519,
+        "lady-running": 0.00024508879632875735,
+        "longboard": 0.000372544121341023,
+        "mallard-fly": 0.0068346210674162244,
+        "motorbike": 0.0,
+        "rallye": 0.005100052136751937,
+        "scooter-board": 0.00851163533455676,
+        "scooter-gray": 0.0,
+        "stroller": 0.0028186066393566245
+      },
+      "sequence_bootstrap": {
+        "mean": 0.002451316421782238,
+        "ci95": [
+          0.0011730613407610196,
+          0.003934167578335956
+        ],
+        "n": 16
+      },
+      "pair_bootstrap": {
+        "mean": 0.002451316421782238,
+        "ci95": [
+          0.0009730827950521462,
+          0.004248016369909678
+        ],
+        "n": 32
+      },
+      "positive_sequences": 14,
+      "sequence_std": 0.002852248314914366,
+      "pair_mean": 0.002451316421782238,
+      "pair_median": 0.00012363848165292124,
+      "pair_std": 0.004712001503991967,
+      "pair_min": 0.0,
+      "pair_max": 0.01702327066911352,
+      "improved_pairs": 18,
+      "tied_pairs": 14,
+      "worse_pairs": 0,
+      "threshold_sequence_counts": {
+        "0.005": 4,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "threshold_pair_counts": {
+        "0.005": 6,
+        "0.01": 4,
+        "0.02": 0
+      },
+      "sequence_positive_gain_share": {
+        "bear": 0.04816451019356829,
+        "disc-jockey": 0.19265078035792862,
+        "dog-agility": 0.015061606522918,
+        "dogs-scale": 0.010174115338918726,
+        "elephant": 0.015158673670542236,
+        "hike": 0.08172184322047177,
+        "kid-football": 0.0002396738524810442,
+        "koala": 0.02790730359130666,
+        "lady-running": 0.0062489075806094,
+        "longboard": 0.009498572839032025,
+        "mallard-fly": 0.17425894630238847,
+        "motorbike": 0.0,
+        "rallye": 0.13003350188273347,
+        "scooter-board": 0.21701694798871446,
+        "scooter-gray": 0.0,
+        "stroller": 0.07186461665838684
+      },
+      "top1_positive_gain_share": 0.21701694798871446,
+      "top3_positive_gain_share": 0.5839266746490316,
+      "leave_one_sequence_out": {
+        "bear": 0.002488799964797489,
+        "disc-jockey": 0.002111006293569797,
+        "dog-agility": 0.0025753553689324654,
+        "dogs-scale": 0.0025881348754931625,
+        "elephant": 0.0025751015638199462,
+        "hike": 0.0024010563471760873,
+        "kid-football": 0.002614110832353898,
+        "koala": 0.0025417672428812857,
+        "lady-running": 0.0025983982634791365,
+        "longboard": 0.0025899012418116522,
+        "mallard-fly": 0.0021590961120733056,
+        "motorbike": 0.0026147375165677202,
+        "rallye": 0.002274734040784258,
+        "scooter-board": 0.002047295160930603,
+        "scooter-gray": 0.0026147375165677202,
+        "stroller": 0.002426830407277279
+      },
+      "leave_one_sequence_out_ci": {
+        "bear": {
+          "mean": 0.002488799964797489,
+          "ci95": [
+            0.0010992615792317967,
+            0.004087922096629486
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.22799837819962745,
+          "directional_ci_positive": true
+        },
+        "disc-jockey": {
+          "mean": 0.002111006293569797,
+          "ci95": [
+            0.0009238531479875755,
+            0.0035410887121267625
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.26880183037140526,
+          "directional_ci_positive": true
+        },
+        "dog-agility": {
+          "mean": 0.0025753553689324654,
+          "ci95": [
+            0.0012146839918124018,
+            0.00414739023903785
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.22033555542757316,
+          "directional_ci_positive": true
+        },
+        "dogs-scale": {
+          "mean": 0.0025881348754931625,
+          "ci95": [
+            0.0012314576575994396,
+            0.004155550600772971
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.21924759834202717,
+          "directional_ci_positive": true
+        },
+        "elephant": {
+          "mean": 0.0025751015638199462,
+          "ci95": [
+            0.0012185406337673092,
+            0.0041442100512455145
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.2203572719653684,
+          "directional_ci_positive": true
+        },
+        "hike": {
+          "mean": 0.0024010563471760873,
+          "ci95": [
+            0.0010296708697073048,
+            0.003986124528954689
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.23633029533209143,
+          "directional_ci_positive": true
+        },
+        "kid-football": {
+          "mean": 0.002614110832353898,
+          "ci95": [
+            0.0012435344182100021,
+            0.0041357796414891596
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.21706897374590625,
+          "directional_ci_positive": true
+        },
+        "koala": {
+          "mean": 0.0025417672428812857,
+          "ci95": [
+            0.001155345833750987,
+            0.0041042480188632725
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.22324717466807797,
+          "directional_ci_positive": true
+        },
+        "lady-running": {
+          "mean": 0.0025983982634791365,
+          "ci95": [
+            0.0012343069793618244,
+            0.00412785685339586
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.2183815943893597,
+          "directional_ci_positive": true
+        },
+        "longboard": {
+          "mean": 0.0025899012418116522,
+          "ci95": [
+            0.0012203338422374604,
+            0.004125676950111596
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.21909806693640096,
+          "directional_ci_positive": true
+        },
+        "mallard-fly": {
+          "mean": 0.0021590961120733056,
+          "ci95": [
+            0.000922269368202145,
+            0.0036357667652486825
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.2628147734897369,
+          "directional_ci_positive": true
+        },
+        "motorbike": {
+          "mean": 0.0026147375165677202,
+          "ci95": [
+            0.001257561385715541,
+            0.0041508195825193705
+          ],
+          "n": 15,
+          "positive_sequence_count": 14,
+          "top1_positive_gain_share": 0.21701694798871446,
+          "directional_ci_positive": true
+        },
+        "rallye": {
+          "mean": 0.002274734040784258,
+          "ci95": [
+            0.0009595591031662112,
+            0.003844536036584507
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.24945437376999063,
+          "directional_ci_positive": true
+        },
+        "scooter-board": {
+          "mean": 0.002047295160930603,
+          "ci95": [
+            0.000903878233316167,
+            0.003385056504352932
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.24604719075726797,
+          "directional_ci_positive": true
+        },
+        "scooter-gray": {
+          "mean": 0.0026147375165677202,
+          "ci95": [
+            0.0012549925139650055,
+            0.004174400885124446
+          ],
+          "n": 15,
+          "positive_sequence_count": 14,
+          "top1_positive_gain_share": 0.21701694798871446,
+          "directional_ci_positive": true
+        },
+        "stroller": {
+          "mean": 0.002426830407277279,
+          "ci95": [
+            0.0010524776607531649,
+            0.004035212279343593
+          ],
+          "n": 15,
+          "positive_sequence_count": 13,
+          "top1_positive_gain_share": 0.23382035841299065,
+          "directional_ci_positive": true
+        }
+      },
+      "all_loso_ci_lower_positive": true,
+      "loso_min": 0.002047295160930603,
+      "quantiles": [
+        0.0,
+        0.0003406802900879566,
+        0.0008445466982565653,
+        0.003678926189843855,
+        0.00851163533455676
+      ]
+    },
+    "object_size": {
+      "448/validation/large": {
+        "objects": [
+          {
+            "sequence": "bear",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 48160,
+            "pixel_fraction": 0.11748633879781421,
+            "token_count_224": 32,
+            "token_count_448": 122
+          },
+          {
+            "sequence": "bear",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.003778126553106942,
+            "pixel_count": 44139,
+            "pixel_fraction": 0.10767710772833723,
+            "token_count_224": 26,
+            "token_count_448": 109
+          },
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 177382,
+            "pixel_fraction": 0.3247327182190978,
+            "token_count_224": 81,
+            "token_count_448": 336
+          },
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.003993210821055637,
+            "pixel_count": 166599,
+            "pixel_fraction": 0.30499231107205627,
+            "token_count_224": 80,
+            "token_count_448": 311
+          },
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.041342599248757494,
+            "pixel_count": 77786,
+            "pixel_fraction": 0.14240260691271237,
+            "token_count_224": 37,
+            "token_count_448": 148
+          },
+          {
+            "sequence": "dog-agility",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 44186,
+            "pixel_fraction": 0.10779176424668228,
+            "token_count_224": 28,
+            "token_count_448": 115
+          },
+          {
+            "sequence": "dog-agility",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0011814644290576437,
+            "pixel_count": 56360,
+            "pixel_fraction": 0.13749024199843873,
+            "token_count_224": 42,
+            "token_count_448": 136
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.002289240162119399,
+            "pixel_count": 84396,
+            "pixel_fraction": 0.205884074941452,
+            "token_count_224": 51,
+            "token_count_448": 210
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": -0.003960203662810136,
+            "pixel_count": 116173,
+            "pixel_fraction": 0.28340407884465263,
+            "token_count_224": 73,
+            "token_count_448": 292
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.003985961865910492,
+            "pixel_count": 46694,
+            "pixel_fraction": 0.113910031225605,
+            "token_count_224": 29,
+            "token_count_448": 116
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0015103337161385677,
+            "pixel_count": 55372,
+            "pixel_fraction": 0.1350800156128025,
+            "token_count_224": 35,
+            "token_count_448": 135
+          },
+          {
+            "sequence": "elephant",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0011890785824332228,
+            "pixel_count": 58991,
+            "pixel_fraction": 0.14390856752537082,
+            "token_count_224": 37,
+            "token_count_448": 150
+          },
+          {
+            "sequence": "elephant",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 50078,
+            "pixel_fraction": 0.12216530054644809,
+            "token_count_224": 33,
+            "token_count_448": 126
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 3.7601052829461246e-05,
+            "pixel_count": 99930,
+            "pixel_fraction": 0.24377927400468383,
+            "token_count_224": 61,
+            "token_count_448": 249
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 49588,
+            "pixel_fraction": 0.12096994535519126,
+            "token_count_224": 30,
+            "token_count_448": 117
+          },
+          {
+            "sequence": "koala",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0006087478653442613,
+            "pixel_count": 87874,
+            "pixel_fraction": 0.21436865729898516,
+            "token_count_224": 57,
+            "token_count_448": 222
+          },
+          {
+            "sequence": "koala",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0015803603452487769,
+            "pixel_count": 81086,
+            "pixel_fraction": 0.19780932864949258,
+            "token_count_224": 52,
+            "token_count_448": 201
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 5.589464474820005e-05,
+            "pixel_count": 52806,
+            "pixel_fraction": 0.12882025761124122,
+            "token_count_224": 31,
+            "token_count_448": 130
+          }
+        ],
+        "sequence_macro_gain": 0.0025389817211294557
+      },
+      "448/validation/medium": {
+        "objects": [
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 36089,
+            "pixel_fraction": 0.06606802870533099,
+            "token_count_224": 21,
+            "token_count_448": 62
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 15911,
+            "pixel_fraction": 0.038814890710382514,
+            "token_count_224": 11,
+            "token_count_448": 39
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.00019681476294525213,
+            "pixel_count": 39298,
+            "pixel_fraction": 0.09586748633879781,
+            "token_count_224": 25,
+            "token_count_448": 100
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": -0.000829829915356739,
+            "pixel_count": 35085,
+            "pixel_fraction": 0.08558987119437939,
+            "token_count_224": 19,
+            "token_count_448": 91
+          },
+          {
+            "sequence": "hike",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 20058,
+            "pixel_fraction": 0.04893149882903981,
+            "token_count_224": 10,
+            "token_count_448": 49
+          },
+          {
+            "sequence": "hike",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.006410435081748989,
+            "pixel_count": 18647,
+            "pixel_fraction": 0.0454893637782982,
+            "token_count_224": 12,
+            "token_count_448": 52
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 14096,
+            "pixel_fraction": 0.0343871975019516,
+            "token_count_224": 11,
+            "token_count_448": 37
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0009244605405668294,
+            "pixel_count": 33008,
+            "pixel_fraction": 0.08052302888368462,
+            "token_count_224": 22,
+            "token_count_448": 82
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 11163,
+            "pixel_fraction": 0.027232142857142858,
+            "token_count_224": 8,
+            "token_count_448": 28
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 4,
+            "gain": 0.0024653467837286724,
+            "pixel_count": 32988,
+            "pixel_fraction": 0.08047423887587822,
+            "token_count_224": 23,
+            "token_count_448": 77
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.00020570042492096263,
+            "pixel_count": 14851,
+            "pixel_fraction": 0.036229020296643245,
+            "token_count_224": 11,
+            "token_count_448": 36
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 4,
+            "gain": 0.0010543940047604838,
+            "pixel_count": 32496,
+            "pixel_fraction": 0.07927400468384074,
+            "token_count_224": 19,
+            "token_count_448": 80
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 11627,
+            "pixel_fraction": 0.028364071038251365,
+            "token_count_224": 12,
+            "token_count_448": 27
+          },
+          {
+            "sequence": "mallard-fly",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 9333,
+            "pixel_fraction": 0.022767857142857142,
+            "token_count_224": 8,
+            "token_count_448": 23
+          },
+          {
+            "sequence": "mallard-fly",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.013669242134832449,
+            "pixel_count": 31539,
+            "pixel_fraction": 0.07693940281030445,
+            "token_count_224": 20,
+            "token_count_448": 78
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 8852,
+            "pixel_fraction": 0.02159445745511319,
+            "token_count_224": 4,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 17578,
+            "pixel_fraction": 0.04288153786104606,
+            "token_count_224": 13,
+            "token_count_448": 45
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 29336,
+            "pixel_fraction": 0.07156518345042935,
+            "token_count_224": 20,
+            "token_count_448": 70
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 13193,
+            "pixel_fraction": 0.03218432864949258,
+            "token_count_224": 7,
+            "token_count_448": 34
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 27832,
+            "pixel_fraction": 0.06789617486338798,
+            "token_count_224": 15,
+            "token_count_448": 71
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.011274426557426387,
+            "pixel_count": 11994,
+            "pixel_fraction": 0.029259367681498828,
+            "token_count_224": 5,
+            "token_count_448": 36
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 19909,
+            "pixel_fraction": 0.04856801327088212,
+            "token_count_224": 10,
+            "token_count_448": 52
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 19952,
+            "pixel_fraction": 0.04867291178766588,
+            "token_count_224": 9,
+            "token_count_448": 51
+          },
+          {
+            "sequence": "stroller",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 29613,
+            "pixel_fraction": 0.07224092505854801,
+            "token_count_224": 18,
+            "token_count_448": 73
+          }
+        ],
+        "sequence_macro_gain": 0.001431698898009234
+      },
+      "448/validation/small": {
+        "objects": [
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 5641,
+            "pixel_fraction": 0.010326962507322788,
+            "token_count_224": 0,
+            "token_count_448": 13
+          },
+          {
+            "sequence": "kid-football",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 7687,
+            "pixel_fraction": 0.01875243950039032,
+            "token_count_224": 6,
+            "token_count_448": 21
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 5078,
+            "pixel_fraction": 0.012387782982045277,
+            "token_count_224": 3,
+            "token_count_448": 14
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 6591,
+            "pixel_fraction": 0.01607874707259953,
+            "token_count_224": 1,
+            "token_count_448": 20
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 1,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 2918,
+            "pixel_fraction": 0.007118462138953942,
+            "token_count_224": 1,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 3570,
+            "pixel_fraction": 0.008709016393442622,
+            "token_count_224": 3,
+            "token_count_448": 9
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 5919,
+            "pixel_fraction": 0.014439402810304449,
+            "token_count_224": 4,
+            "token_count_448": 16
+          },
+          {
+            "sequence": "rallye",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.010200104273503874,
+            "pixel_count": 6753,
+            "pixel_fraction": 0.01647394613583138,
+            "token_count_224": 4,
+            "token_count_448": 17
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.03404654133822704,
+            "pixel_count": 6950,
+            "pixel_fraction": 0.016954527712724436,
+            "token_count_224": 4,
+            "token_count_448": 20
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 3681,
+            "pixel_fraction": 0.00897980093676815,
+            "token_count_224": 4,
+            "token_count_448": 8
+          },
+          {
+            "sequence": "scooter-gray",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 7457,
+            "pixel_fraction": 0.018191354410616707,
+            "token_count_224": 4,
+            "token_count_448": 18
+          }
+        ],
+        "sequence_macro_gain": 0.0038890535632310564
+      },
+      "448/validation/tiny": {
+        "objects": [
+          {
+            "sequence": "disc-jockey",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 109,
+            "pixel_fraction": 0.0001995459871118922,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "dogs-scale",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 0,
+            "pixel_fraction": 0.0,
+            "token_count_224": 0,
+            "token_count_448": 0
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 338,
+            "pixel_fraction": 0.0008245511319281811,
+            "token_count_224": 0,
+            "token_count_448": 1
+          },
+          {
+            "sequence": "lady-running",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 104,
+            "pixel_fraction": 0.0002537080405932865,
+            "token_count_224": 0,
+            "token_count_448": 1
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1686,
+            "pixel_fraction": 0.004112997658079626,
+            "token_count_224": 0,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 1,
+            "object_id": 5,
+            "gain": 0.0,
+            "pixel_count": 1304,
+            "pixel_fraction": 0.0031811085089773613,
+            "token_count_224": 1,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "longboard",
+            "target_slot": 2,
+            "object_id": 3,
+            "gain": 0.0,
+            "pixel_count": 935,
+            "pixel_fraction": 0.0022809328649492583,
+            "token_count_224": 2,
+            "token_count_448": 2
+          },
+          {
+            "sequence": "motorbike",
+            "target_slot": 1,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1910,
+            "pixel_fraction": 0.004659445745511319,
+            "token_count_224": 3,
+            "token_count_448": 4
+          },
+          {
+            "sequence": "rallye",
+            "target_slot": 1,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 1784,
+            "pixel_fraction": 0.004352068696330992,
+            "token_count_224": 1,
+            "token_count_448": 6
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 2,
+            "object_id": 1,
+            "gain": 0.0,
+            "pixel_count": 1157,
+            "pixel_fraction": 0.0028225019516003123,
+            "token_count_224": 1,
+            "token_count_448": 3
+          },
+          {
+            "sequence": "scooter-board",
+            "target_slot": 2,
+            "object_id": 2,
+            "gain": 0.0,
+            "pixel_count": 1297,
+            "pixel_fraction": 0.003164032006245121,
+            "token_count_224": 0,
+            "token_count_448": 3
+          }
+        ],
+        "sequence_macro_gain": 0.0
+      }
+    }
+  }
+}

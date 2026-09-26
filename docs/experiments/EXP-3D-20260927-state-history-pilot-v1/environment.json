@@ -1,0 +1,14 @@
+{
+  "platform": "Linux-6.11.0-13-generic-x86_64-with-glibc2.40",
+  "python": "3.13.3",
+  "git_status": " M EXPERIMENTS.md\n M README.md\n M STATUS.md\n M pyproject.toml\n M scripts/download_hypersim_holdout_archives.py\n M scripts/extract_hypersim_holdout_archives.py\n M tests/test_v5_checkpoint_compatibility.py\n M uv.lock\n?? Codex_CV_2D_V2_Independent_Confirmation.md\n?? docs/experiments/EXP-2D-20260926-opportunity-selector-v1/\n?? docs/experiments/EXP-2D-followup-20260927/\n?? docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/\n?? docs/experiments/EXP-3D-20260927-state-history-pilot-v1/\n?? scripts/audit_opportunity_probe.py\n?? scripts/audit_vision_2d_v2.py\n?? scripts/explore_v2_discovery.py\n?? scripts/finalize_vision_2d_v2.py\n?? scripts/report_opportunity_probe.py\n?? scripts/report_vision_2d_v2.py\n?? scripts/run_opportunity_probe.py\n?? scripts/run_vision_2d_v2.py\n?? src/mcss/file_lock.py\n?? src/mcss/vision_probe/opportunity_analysis.py\n?? src/mcss/vision_probe/opportunity_metrics.py\n?? src/mcss/vision_probe/opportunity_reporting.py\n?? src/mcss/vision_probe/opportunity_runner.py\n?? src/mcss/vision_probe/opportunity_selectors.py\n?? src/mcss/vision_probe/v2_access.py\n?? src/mcss/vision_probe/v2_cycle.py\n?? src/mcss/vision_probe/v2_dataset.py\n?? src/mcss/vision_probe/v2_reporting.py\n?? src/mcss/vision_probe/v2_runner.py\n?? src/mcss/vision_probe/v2_selectors.py\n?? src/mcss/vision_probe/v2_statistics.py\n?? tests/test_file_lock.py\n?? tests/test_opportunity_analysis.py\n?? tests/test_opportunity_metrics.py\n?? tests/test_opportunity_runner.py\n?? tests/test_opportunity_selectors.py\n?? tests/test_v2_access.py\n?? tests/test_v2_cycle.py\n?? tests/test_v2_dataset.py\n?? tests/test_v2_followup.py\n?? tests/test_v2_reporting.py\n?? tests/test_v2_runner.py\n?? tests/test_v2_selectors.py\n?? tests/test_v2_statistics.py\n",
+  "runtime": {
+    "executable": "/home/zonghan/measurement-scene-state/.venv/bin/python",
+    "python": "3.12.7 (main, Nov  6 2024, 18:29:01) [GCC 14.2.0]",
+    "torch": "2.11.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "smoke_device": "cpu",
+    "smoke_threads": 1
+  }
+}

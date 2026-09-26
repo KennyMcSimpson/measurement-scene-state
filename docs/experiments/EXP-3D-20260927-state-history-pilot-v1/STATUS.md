@@ -1,0 +1,42 @@
+# Status
+
+```text
+3D REVERSE-JEPA + DYNAMIC TTT MECHANISM PILOT
+CARRIER_STATUS="BLOCKED"
+STATIC_STATE_STATUS="BLOCKED_CARRIER_NOT_READY"
+WRITE_OPPORTUNITY_STATUS="NOT_ESTABLISHED"
+HISTORY_ACTION_STATUS="NOT_ESTABLISHED"
+EVALUATION_STATUS="NOT_EVALUATED_CARRIER_BLOCKED"
+status_interpretation="Not evaluated, not a negative experimental finding."
+FEEDBACK_IDENTIFIABILITY_STATUS="SKIPPED"
+POLICY_STAGE_SKIPPED=true
+N_TRAIN_SCENES=0
+N_DEV_SCENES=0
+N_EVAL_SCENES=0
+2D_BRANCH_STATUS="SEALED_PENDING_INDEPENDENT_CONFIRMATION"
+STATIC_R_FIXED=NA
+STATIC_R_RESIDUAL=NA
+STATIC_ANCHOR=NA
+CROSS_SCENE_REPLACEMENT_DELTA=NA
+BEST_FIXED_WRITE=NA
+WRITE_ORACLE_GAIN=NA
+BENEFICIAL_ACTION_FLIPS=NA
+HISTORY_INTERACTION_MEAN=NA
+HISTORY_INTERACTION_CI=NA
+GLOBAL_ACTION_GAP=NA
+STATE_DEPENDENT_ACTION_GAP=NA
+POLICY_P0_GAIN=NA
+POLICY_P1_GAIN=NA
+POLICY_P2_GAIN=NA
+POLICY_REGRET=NA
+CONTROLLED_HISTORY_PAIRS=0
+SEALED_QUERY_LEAKAGE=false
+TEST_DEPTH_IN_POLICY=false
+2D_OUTER_FOLD_FIXED16=0.44309250428314817
+2D_GATEONLY_OOF=0.44091809831626816
+2D_CYCLEGATE_OOF=0.44100626941360027
+TESTS={"status": "PASS", "full_suite": {"passed": 537, "skipped": 1, "seconds": 18.29, "command": "PYTHONFAULTHANDLER=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/pytest -q", "attempts": [{"log": "full_suite_attempt1.log", "exit_code": 139, "result": "Native segmentation fault in old DL3DV test; cause undiagnosed, preserved"}, {"log": "full_suite_attempt2.log", "exit_code": 0, "result": "537 passed, 1 skipped"}], "skip_reason": "Historical V5 checkpoint not distributed; missing locally"}, "new_test_count": 35, "final_script_change_recheck": {"passed": 4, "log": "final_integration_tests.log"}, "lint": "PASS", "requirements": {"1-8,11,12": "tests/test_mechanism_runtime.py", "9,10,13": "tests/test_mechanism_contracts.py", "14": "tests/test_mechanism_statistics.py", "15": "tests/test_v2_followup.py", "raw_recompute_and_repeat": "tests/test_mechanism_smoke.py"}, "setup_notes": ["Initial shell used unavailable python alias; retried with python3, then environment .venv/bin/python; no science affected", "Initial new-file lint findings corrected; final lint passed", "Smoke first run preserved; second separates camera fixture from label creation and records post prediction difference"]}
+CANDIDATE_STATE_ISOLATION=true
+FINAL_INTEGRITY="PASS"
+REPORT_DIR="/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-20260927-state-history-pilot-v1"
+```

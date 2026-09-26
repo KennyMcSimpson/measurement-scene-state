@@ -15,14 +15,17 @@ dependencies = [
     "pillow>=10.4",
     "pyyaml>=6.0.2",
     "requests>=2.32",
+    "scipy>=1.11",
     "torch>=2.7",
     "tqdm>=4.67",
 ]
 
 [project.optional-dependencies]
-eval = ["lpips>=0.1.4"]
+eval = ["lpips>=0.1.4", "matplotlib>=3.8"]
 mapanything = ["mapanything==1.1.4"]
 dev = [
+    "opencv-python-headless>=4.10",
+    "scikit-image>=0.24",
     "pytest>=8.3",
     "pytest-cov>=6.0",
     "ruff>=0.9",
@@ -53,6 +56,7 @@ pythonpath = ["src"]
 [tool.ruff]
 line-length = 100
 target-version = "py311"
+extend-exclude = ["third_party", "backups", "outputs"]
 
 [tool.ruff.lint]
 select = ["B", "E", "F", "I", "UP"]

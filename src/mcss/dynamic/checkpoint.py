@@ -6,6 +6,7 @@ from collections.abc import Mapping
 from copy import deepcopy
 from dataclasses import asdict
 from hashlib import sha256
+from math import prod
 from os import replace
 from pathlib import Path
 
@@ -76,6 +77,7 @@ def load_dynamic_checkpoint(
 
     carrier_config = _carrier_config(payload["carrier_config"])
     write_config = _write_config(payload["write_config"])
+    _validate_geometry(carrier_config, payload["carrier_state_dict"])
     carrier = DynamicSceneCarrier(carrier_config).to(device)
     write_rule = DirectWriteRule(carrier_config, write_config).to(device)
     carrier.load_state_dict(payload["carrier_state_dict"], strict=True)
@@ -94,6 +96,57 @@ def _validate_components(carrier: DynamicSceneCarrier, write_rule: DirectWriteRu
         raise TypeError("dynamic checkpoints require DynamicSceneCarrier and DirectWriteRule")
     if carrier.config != write_rule.carrier_config:
         raise ValueError("carrier and write rule must use the same CarrierConfig")
+    _validate_geometry(carrier.config, carrier.state_dict())
+
+
+def _validate_geometry(config: CarrierConfig, state: Mapping[str, torch.Tensor]) -> None:
+    """Reject stale geometry buffers without constructing a model or consuming RNG.
+
+    Buffers are serialized alongside weights. Strict state-dict loading checks shapes,
+    but otherwise permits old points/bounds to silently overwrite a new configuration.
+    Rebuild the deterministic float32 geometry exactly as the carrier initializes it.
+    """
+
+    depth, height, width = config.grid_size
+    voxel_count = prod(config.grid_size)
+    if config.token_count == 1:
+        ids = torch.tensor([(voxel_count - 1) // 2], dtype=torch.long)
+    else:
+        ids = torch.div(
+            torch.arange(config.token_count, dtype=torch.long) * (voxel_count - 1),
+            config.token_count - 1,
+            rounding_mode="floor",
+        )
+    d = torch.div(ids, height * width, rounding_mode="floor")
+    h = torch.div(ids, width, rounding_mode="floor").remainder(height)
+    w = ids.remainder(width)
+    fractions = torch.stack(
+        (
+            (w.to(torch.float32) + 0.5) / width,
+            (h.to(torch.float32) + 0.5) / height,
+            (d.to(torch.float32) + 0.5) / depth,
+        ),
+        dim=-1,
+    )
+    bounds = torch.tensor(config.local_bounds_m, dtype=torch.float32).unsqueeze(0)
+    expected = {
+        "_bounds": bounds,
+        "_candidate_ids": ids,
+        "_candidate_points": bounds[:, 0] + fractions * (bounds[:, 1] - bounds[:, 0]),
+        "_candidate_normalized_xyz": fractions * 2.0 - 1.0,
+    }
+    for name, reference in expected.items():
+        actual = state.get(name)
+        if not isinstance(actual, torch.Tensor):
+            raise ValueError(f"checkpoint geometry missing tensor {name}")
+        if name == "_candidate_ids" and actual.dtype != torch.long:
+            raise ValueError(f"checkpoint geometry dtype mismatch for {name}")
+        if name != "_candidate_ids" and not actual.is_floating_point():
+            raise ValueError(f"checkpoint geometry dtype mismatch for {name}")
+        if actual.shape != reference.shape or not torch.equal(
+            actual.detach().cpu(), reference.to(dtype=actual.dtype)
+        ):
+            raise ValueError(f"checkpoint geometry/config mismatch for {name}")
 
 
 def _cpu_state_dict(module: torch.nn.Module) -> dict[str, torch.Tensor]:

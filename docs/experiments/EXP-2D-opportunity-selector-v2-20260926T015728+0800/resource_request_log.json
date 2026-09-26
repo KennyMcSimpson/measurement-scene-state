@@ -1,0 +1,47 @@
+{
+  "scope": "Observed request-operation summaries; prototype range readers did not persist per-range offsets. Byte totals below are instrumented content counts, not invented packet logs.",
+  "operations": [
+    {
+      "resource": "https://tri-ml-public.s3.amazonaws.com/datasets/VOST.zip",
+      "operation": "Range ZIP EOCD/ZIP64 then rejected >20MB central-directory request before network",
+      "body_bytes": 98
+    },
+    {
+      "resource": "https://tri-ml-public.s3.amazonaws.com/datasets/VOST.zip",
+      "operation": "Range ZIP central-directory metadata",
+      "body_bytes": 21043087
+    },
+    {
+      "resource": "https://tri-ml-public.s3.amazonaws.com/datasets/VOST.zip",
+      "operation": "Range central-directory plus README.md and ImageSets/train.txt only",
+      "body_bytes": 21047600
+    },
+    {
+      "resource": "https://lmb.informatik.uni-freiburg.de/resources/datasets/fbms/FBMS_Trainingset.zip",
+      "operation": "HEAD and range central-directory metadata",
+      "body_bytes": 908081
+    },
+    {
+      "resource": "https://lmb.informatik.uni-freiburg.de/resources/datasets/fbms/FBMS_Testset.zip",
+      "operation": "HEAD and range central-directory metadata",
+      "body_bytes": 961762
+    },
+    {
+      "resource": "https://lmb.informatik.uni-freiburg.de/resources/datasets/fbms/pami2013_MoSeg_eval.tar.gz",
+      "operation": "official evaluation source/documentation package only",
+      "body_bytes": 154558
+    }
+  ],
+  "archive_and_eval_total_bytes": 44115186,
+  "archive_media_bytes": 0,
+  "budget_bytes": 1000000000,
+  "additional_small_metadata_resources": [
+    "https://www.vostdataset.org/data.html",
+    "https://api.github.com/repos/TRI-ML/VOST/git/trees/main?recursive=1",
+    "https://api.github.com/repos/TRI-ML/VOST/issues?state=all&per_page=100",
+    "https://lmb.informatik.uni-freiburg.de/resources/datasets/"
+  ],
+  "http_status": "Range body reads were 206; no full media archive response was consumed",
+  "gt_mask_body_downloads": 0,
+  "gt_mask_decodes": 0
+}

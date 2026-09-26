@@ -1,0 +1,6 @@
+{
+  "exit_code": 0,
+  "summary": "458 passed, 1 skipped in 15.93s",
+  "skip": "Optional historical V5 step4500 checkpoint absent from public repo",
+  "command": "OMP_NUM_THREADS=4 .venv/bin/python -m pytest -q"
+}

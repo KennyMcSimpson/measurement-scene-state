@@ -1,0 +1,57 @@
+{
+  "stage": "LOCKED_BEFORE_IMPLEMENTATION_AND_SMOKE",
+  "scientific_scene_count": 0,
+  "config": {
+    "seed": 20260927,
+    "bootstrap_draws": 10000,
+    "primary_metric": "scene_macro_depth_AbsRel_gain_vs_same_history_OFF",
+    "actions": [
+      "OFF",
+      "FUSE",
+      "COMPLETE",
+      "ALL"
+    ],
+    "histories": {
+      "FC": [
+        "FUSE",
+        "COMPLETE"
+      ],
+      "CF": [
+        "COMPLETE",
+        "FUSE"
+      ]
+    },
+    "tie_tolerance": 1e-08,
+    "carrier": "existing DynamicSceneCarrier; unchanged defaults",
+    "write": "existing DirectWriteRule; unchanged defaults",
+    "synthetic_only": true,
+    "synthetic_scene_count": 3,
+    "context_A": [
+      0,
+      1,
+      2
+    ],
+    "context_B": [
+      0,
+      3,
+      4
+    ],
+    "stream": [
+      5,
+      6
+    ],
+    "continuation": [
+      7
+    ],
+    "sealed_query": [
+      8,
+      9
+    ],
+    "residual_control": "NOT_RUN_REQUIRES_TRAINED_HEAD",
+    "policy_stage_skipped": true
+  },
+  "synthetic_is_not_scientific_evidence": true,
+  "formal_data_selection": "UNAVAILABLE_NOT_LOCKED",
+  "phase_C": "SKIPPED",
+  "two_dimensional": "existing raw-only posthoc outer-fold fixed16; seal branch"
+}

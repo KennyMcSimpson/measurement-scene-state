@@ -1,0 +1,22 @@
+{
+  "residual": {
+    "status": "NOT_RUN",
+    "reason": "Trained residual head missing; carrier weights alone insufficient"
+  },
+  "natural_history": {
+    "status": "SKIPPED",
+    "reason": "Static qualification not established"
+  },
+  "policy_P0_P1_P2": {
+    "status": "SKIPPED",
+    "reason": "Static qualification not established and primary beneficial history flips zero"
+  },
+  "independent_scene_confirmation": {
+    "status": "BLOCKED",
+    "reason": "No audited unseen development cohort in this run"
+  },
+  "historical_V5_test": {
+    "status": "SKIPPED",
+    "reason": "Missing V5 step4500; incompatible with mcss.dynamic.v1"
+  }
+}

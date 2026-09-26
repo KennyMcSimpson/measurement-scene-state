@@ -1,0 +1,47 @@
+........................................................................ [ 14%]
+........Fatal Python error: Segmentation fault
+
+Thread 0x00007f9771c006c0 (most recent call first):
+  <no Python frame>
+
+Current thread 0x00007f98a2626080 (most recent call first):
+  File "/home/zonghan/measurement-scene-state/src/mcss/types.py", line 13 in _require_finite
+  File "/home/zonghan/measurement-scene-state/src/mcss/types.py", line 643 in __post_init__
+  File "<string>", line 12 in __init__
+  File "/home/zonghan/measurement-scene-state/src/mcss/dynamic/carrier.py", line 96 in materialize
+  File "/home/zonghan/measurement-scene-state/src/mcss/dynamic/runner.py", line 85 in reset
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 124 in decorate_context
+  File "/home/zonghan/measurement-scene-state/tests/dynamic/test_runner.py", line 41 in reset
+  File "/home/zonghan/measurement-scene-state/tests/dynamic/test_runner.py", line 136 in test_same_episode_reset_changes_branch_but_preserves_content_hashes
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/python.py", line 167 in pytest_pyfunc_call
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/python.py", line 1707 in runtest
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 184 in pytest_runtest_call
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 250 in <lambda>
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 361 in from_call
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 249 in call_and_report
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 139 in runtestprotocol
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/runner.py", line 118 in pytest_runtest_protocol
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/main.py", line 408 in pytest_runtestloop
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/main.py", line 384 in _main
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/main.py", line 330 in wrap_session
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/main.py", line 377 in pytest_cmdline_main
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_callers.py", line 121 in _multicall
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_manager.py", line 120 in _hookexec
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/pluggy/_hooks.py", line 512 in __call__
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 229 in _main
+  File "/home/zonghan/measurement-scene-state/.venv/lib/python3.12/site-packages/_pytest/config/__init__.py", line 253 in _console_main
+  File "/home/zonghan/measurement-scene-state/.venv/bin/pytest", line 10 in <module>
+
+Extension modules: numpy._core._multiarray_umath, numpy.linalg._umath_linalg, torch._C, torch._C._dynamo.autograd_compiler, torch._C._dynamo.eval_frame, torch._C._dynamo.guards, torch._C._dynamo.utils, torch._C._fft, torch._C._linalg, torch._C._nested, torch._C._nn, torch._C._sparse, torch._C._special, PIL._imaging, yaml._yaml, charset_normalizer.md, charset_normalizer.cd, requests.packages.charset_normalizer.md, requests.packages.chardet.md, requests.packages.charset_normalizer.cd, requests.packages.chardet.cd, h5py._errors, h5py.defs, h5py._objects, h5py.h5, h5py.utils, h5py.h5t, h5py.h5s, h5py.h5ac, h5py.h5p, h5py.h5r, h5py._npystrings, h5py._proxy, h5py._conv, h5py.h5z, h5py.h5a, h5py.h5d, h5py.h5ds, h5py.h5g, h5py.h5i, h5py.h5o, h5py.h5f, h5py.h5fd, h5py.h5pl, h5py.h5l, h5py._selector, _cyutility, scipy._cyutility, scipy._lib._ccallback_c, numpy.random._common, numpy.random.bit_generator, numpy.random._bounded_integers, numpy.random._pcg64, numpy.random._generator, numpy.random._mt19937, numpy.random._philox, numpy.random._sfc64, numpy.random.mtrand, scipy.ndimage._nd_image, scipy.ndimage._rank_filter_1d, scipy.special._ufuncs_cxx, scipy.linalg._fblas, scipy.linalg._flapack, scipy.linalg._batched_linalg, scipy.linalg._cythonized_array_utils, scipy.linalg._solve_toeplitz, scipy.linalg._internal_matfuncs, scipy.linalg._linalg_pythran, scipy.linalg.cython_blas, scipy.linalg.cython_lapack, scipy.linalg._decomp_update, scipy.special._ellip_harm_2, scipy.special._special_ufuncs, scipy.special._gufuncs, scipy.special._ufuncs, scipy.special._specfun, scipy.special._comb, _ni_label, scipy.ndimage._ni_label (total: 79)

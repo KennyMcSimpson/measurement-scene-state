@@ -1,0 +1,278 @@
+{
+  "status": "PASS",
+  "scope": "TRAIN_ONLY_ENGINEERING_NOT_INDEPENDENT_EVALUATION",
+  "steps": {
+    "A": 100,
+    "B": 30
+  },
+  "scene_step_counts": {
+    "phase_a": {
+      "ai_001_001": 34,
+      "ai_002_001": 33,
+      "ai_003_001": 33
+    },
+    "phase_b": {
+      "ai_001_001": 10,
+      "ai_002_001": 10,
+      "ai_003_001": 10
+    }
+  },
+  "state_dict_changes": {
+    "initial->phase_a_final": {
+      "carrier": {
+        "l2": 3.4206692872187965,
+        "changed_tensors": [
+          "image_encoder.0.weight",
+          "image_encoder.0.bias",
+          "image_encoder.2.weight",
+          "image_encoder.2.bias",
+          "fuse_up.weight",
+          "fuse_up.bias",
+          "fuse_down.weight",
+          "fuse_down.bias",
+          "refinement.0.weight",
+          "refinement.0.bias",
+          "refinement.2.weight",
+          "refinement.2.bias",
+          "complete_up.weight",
+          "complete_up.bias",
+          "complete_down.weight",
+          "complete_down.bias",
+          "density_head.weight",
+          "density_head.bias",
+          "color_head.weight",
+          "color_head.bias"
+        ]
+      },
+      "writer": {
+        "l2": 0.0,
+        "changed_tensors": []
+      }
+    },
+    "phase_a_final->phase_b_final": {
+      "carrier": {
+        "l2": 0.28569942595451636,
+        "changed_tensors": [
+          "image_encoder.0.weight",
+          "image_encoder.0.bias",
+          "image_encoder.2.weight",
+          "image_encoder.2.bias",
+          "fuse_up.weight",
+          "fuse_up.bias",
+          "fuse_down.weight",
+          "fuse_down.bias",
+          "refinement.0.weight",
+          "refinement.0.bias",
+          "refinement.2.weight",
+          "refinement.2.bias",
+          "complete_up.weight",
+          "complete_up.bias",
+          "complete_down.weight",
+          "complete_down.bias",
+          "density_head.weight",
+          "density_head.bias",
+          "color_head.weight",
+          "color_head.bias"
+        ]
+      },
+      "writer": {
+        "l2": 0.06568857846071954,
+        "changed_tensors": [
+          "targets.fuse.weight",
+          "targets.fuse.bias",
+          "targets.complete.weight",
+          "targets.complete.bias",
+          "projections.complete",
+          "projections.fuse",
+          "gates.complete",
+          "gates.fuse"
+        ]
+      }
+    }
+  },
+  "train_OFF_scene_macro": {
+    "initial": {
+      "loss": 1.5500077704588573,
+      "rgb_psnr": 11.274662096483405,
+      "rgb_mse": 0.08313899040485101,
+      "rgb_ssim": 0.28658630938009305,
+      "depth_absrel": 1.321706189243832,
+      "depth_rmse": 1.6275990095762094,
+      "depth_delta1": 0.15438639322916667,
+      "opacity": 0.6137920715802466,
+      "coverage": 1.0
+    },
+    "phase_a_final": {
+      "loss": 1.453247492512067,
+      "rgb_psnr": 11.247885270672002,
+      "rgb_mse": 0.08445682439816399,
+      "rgb_ssim": 0.2825578128232963,
+      "depth_absrel": 1.2285706445599984,
+      "depth_rmse": 1.6389587257133007,
+      "depth_delta1": 0.14337158203125,
+      "opacity": 0.5356501950575572,
+      "coverage": 1.0
+    },
+    "phase_b_final": {
+      "loss": 1.4518928031126659,
+      "rgb_psnr": 11.31150484660995,
+      "rgb_mse": 0.08298427535815442,
+      "rgb_ssim": 0.28392529299940833,
+      "depth_absrel": 1.2291944702913444,
+      "depth_rmse": 1.629803943476162,
+      "depth_delta1": 0.1434326171875,
+      "opacity": 0.5429377718801941,
+      "coverage": 1.0
+    }
+  },
+  "per_scene": {
+    "initial": {
+      "ai_001_001": {
+        "loss": 0.5869936347007751,
+        "rgb_psnr": 13.56769461359115,
+        "rgb_mse": 0.04911916430112329,
+        "rgb_ssim": 0.5264229231585384,
+        "depth_absrel": 0.4496897203726862,
+        "depth_rmse": 1.1370609229563624,
+        "depth_delta1": 0.32691650390625,
+        "opacity": 0.6745330222911434,
+        "coverage": 1.0
+      },
+      "ai_002_001": {
+        "loss": 0.7874650061130524,
+        "rgb_psnr": 9.84942031108379,
+        "rgb_mse": 0.1086422482764016,
+        "rgb_ssim": 0.3321580958768098,
+        "depth_absrel": 0.539764670073738,
+        "depth_rmse": 2.4819086433388486,
+        "depth_delta1": 0.03868408203125,
+        "opacity": 0.5773520744824054,
+        "coverage": 1.0
+      },
+      "ai_003_001": {
+        "loss": 3.275564670562744,
+        "rgb_psnr": 10.406871364775276,
+        "rgb_mse": 0.09165555863702812,
+        "rgb_ssim": 0.0011779091049308398,
+        "depth_absrel": 2.975664177285072,
+        "depth_rmse": 1.2638274624334178,
+        "depth_delta1": 0.09755859375,
+        "opacity": 0.5894911179671909,
+        "coverage": 1.0
+      }
+    },
+    "phase_a_final": {
+      "ai_001_001": {
+        "loss": 0.6129272878170013,
+        "rgb_psnr": 12.595284716501673,
+        "rgb_mse": 0.06180936833037463,
+        "rgb_ssim": 0.5181227278388528,
+        "depth_absrel": 0.4540080293130826,
+        "depth_rmse": 1.191947956098532,
+        "depth_delta1": 0.29039306640625,
+        "opacity": 0.5947611324892932,
+        "coverage": 1.0
+      },
+      "ai_002_001": {
+        "loss": 0.8324006646871567,
+        "rgb_psnr": 9.1356700529881,
+        "rgb_mse": 0.1281592135678242,
+        "rgb_ssim": 0.32783437553971045,
+        "depth_absrel": 0.5664583341904027,
+        "depth_rmse": 2.5837424069683506,
+        "depth_delta1": 0.0306640625,
+        "opacity": 0.5004646438592317,
+        "coverage": 1.0
+      },
+      "ai_003_001": {
+        "loss": 2.9144145250320435,
+        "rgb_psnr": 12.012701042526235,
+        "rgb_mse": 0.06340189129629313,
+        "rgb_ssim": 0.0017163350913256058,
+        "depth_absrel": 2.6652455701765096,
+        "depth_rmse": 1.1411858140730193,
+        "depth_delta1": 0.1090576171875,
+        "opacity": 0.5117248088241467,
+        "coverage": 1.0
+      }
+    },
+    "phase_b_final": {
+      "ai_001_001": {
+        "loss": 0.6066117733716965,
+        "rgb_psnr": 12.768837015359582,
+        "rgb_mse": 0.059098494013383074,
+        "rgb_ssim": 0.5207818028752352,
+        "depth_absrel": 0.45302665791484775,
+        "depth_rmse": 1.1770528502941138,
+        "depth_delta1": 0.2903564453125,
+        "opacity": 0.6048218120544334,
+        "coverage": 1.0
+      },
+      "ai_002_001": {
+        "loss": 0.825336679816246,
+        "rgb_psnr": 9.246849385225655,
+        "rgb_mse": 0.12506907799798367,
+        "rgb_ssim": 0.32931618234824933,
+        "depth_absrel": 0.5627325228770782,
+        "depth_rmse": 2.5689399271658497,
+        "depth_delta1": 0.031201171875000003,
+        "opacity": 0.5096024742924783,
+        "coverage": 1.0
+      },
+      "ai_003_001": {
+        "loss": 2.923729956150055,
+        "rgb_psnr": 11.918828139244614,
+        "rgb_mse": 0.06478525406309651,
+        "rgb_ssim": 0.0016778937747404894,
+        "depth_absrel": 2.6718242300821076,
+        "depth_rmse": 1.1434190529685222,
+        "depth_delta1": 0.108740234375,
+        "opacity": 0.5143890292936704,
+        "coverage": 1.0
+      }
+    }
+  },
+  "write_benefit_evaluated": false,
+  "psnr_note": "Null macro when any query PSNR is infinite/undefined; perfect flags retained, no row dropped.",
+  "perfect_rgb_queries": [],
+  "writer_nonzero_gradient_steps": 30,
+  "training_loss_first_last": {
+    "phase_a": {
+      "first": 0.506319522857666,
+      "last": 0.6764506101608276
+    },
+    "phase_b": {
+      "first": 0.6662424802780151,
+      "last": 1.5075762271881104
+    }
+  },
+  "loss_first_last_note": "different scenes/queries; do not interpret as matched gain",
+  "source_data_hashes_verified": true,
+  "strict_checkpoint_loads": 3,
+  "checkpoint_restore": {
+    "initial": {
+      "all_two_step_fast_exact": true,
+      "all_two_step_fast_nonzero": true,
+      "all_two_step_state_exact": true,
+      "materialized_state_exact": true,
+      "state_dict_exact": true
+    },
+    "phase_a_final": {
+      "all_two_step_fast_exact": true,
+      "all_two_step_fast_nonzero": true,
+      "all_two_step_state_exact": true,
+      "materialized_state_exact": true,
+      "state_dict_exact": true
+    },
+    "phase_b_final": {
+      "all_two_step_fast_exact": true,
+      "all_two_step_fast_nonzero": true,
+      "all_two_step_state_exact": true,
+      "materialized_state_exact": true,
+      "state_dict_exact": true
+    }
+  },
+  "elapsed_seconds": 10.878567387990188,
+  "controller_trained": false,
+  "carrier_qualification": "NOT_EVALUATED"
+}

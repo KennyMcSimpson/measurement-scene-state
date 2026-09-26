@@ -1,0 +1,1022 @@
+{
+  "README_J_comparisons": [
+    {
+      "method": "OFF/OFF",
+      "pass": true,
+      "recomputed": 0.5526773124485799,
+      "reported": 0.552677
+    },
+    {
+      "method": "Discovery-fixed",
+      "pass": true,
+      "recomputed": 0.5524797849894001,
+      "reported": 0.55248
+    },
+    {
+      "method": "Constant oracle",
+      "pass": true,
+      "recomputed": 0.5543782621546214,
+      "reported": 0.554378
+    },
+    {
+      "method": "Dynamic oracle",
+      "pass": true,
+      "recomputed": 0.5551286288703621,
+      "reported": 0.555129
+    },
+    {
+      "method": "RGB selector",
+      "pass": true,
+      "recomputed": 0.5521811584968606,
+      "reported": 0.552181
+    },
+    {
+      "method": "Visible selector",
+      "pass": true,
+      "recomputed": 0.552207055235976,
+      "reported": 0.552207
+    }
+  ],
+  "STATUS_full_precision_comparisons": [
+    {
+      "field": "OFF_J",
+      "pass": true,
+      "recomputed": 0.5526773124485799,
+      "reported": 0.5526773124485799
+    },
+    {
+      "field": "BEST_FIXED_J",
+      "pass": true,
+      "recomputed": 0.5524797849894001,
+      "reported": 0.5524797849894001
+    },
+    {
+      "field": "CONSTANT_ORACLE_J",
+      "pass": true,
+      "recomputed": 0.5543782621546214,
+      "reported": 0.5543782621546214
+    },
+    {
+      "field": "DYNAMIC_ORACLE_J",
+      "pass": true,
+      "recomputed": 0.5551286288703621,
+      "reported": 0.5551286288703621
+    },
+    {
+      "field": "DYNAMIC_ORACLE_MINUS_OFF",
+      "pass": true,
+      "recomputed": 0.002451316421782224,
+      "reported": 0.002451316421782238
+    },
+    {
+      "field": "DYNAMIC_ORACLE_MINUS_CONSTANT",
+      "pass": true,
+      "recomputed": 0.0007503667157407051,
+      "reported": 0.0007503667157407173
+    },
+    {
+      "field": "RGB_SELECTOR_J",
+      "pass": true,
+      "recomputed": 0.5521811584968606,
+      "reported": 0.5521811584968606
+    },
+    {
+      "field": "VISIBLE_SELECTOR_J",
+      "pass": true,
+      "recomputed": 0.552207055235976,
+      "reported": 0.552207055235976
+    },
+    {
+      "field": "VISIBLE_SELECTOR_MINUS_OFF",
+      "pass": true,
+      "recomputed": -0.00047025721260386157,
+      "reported": -0.00047025721260386157
+    },
+    {
+      "field": "VISIBLE_SELECTOR_MINUS_FIXED",
+      "pass": true,
+      "recomputed": -0.0002727297534241106,
+      "reported": -0.0002727297534241106
+    },
+    {
+      "field": "VISIBLE_SELECTOR_ORACLE_CAPTURE",
+      "pass": true,
+      "recomputed": 0.36824844873324014,
+      "reported": 0.36824844873324014
+    },
+    {
+      "field": "HARMFUL_WRITE_RATE",
+      "pass": true,
+      "recomputed": 0.5517241379310345,
+      "reported": 0.5517241379310345
+    },
+    {
+      "field": "TOP1_SEQUENCE_POSITIVE_GAIN_SHARE",
+      "pass": true,
+      "recomputed": 0.21701694798871568,
+      "reported": 0.21701694798871446
+    },
+    {
+      "field": "LEAVE_ONE_SEQUENCE_OUT_MIN_GAIN",
+      "pass": true,
+      "recomputed": 0.002047295160930588,
+      "reported": 0.002047295160930603
+    }
+  ],
+  "checks": {
+    "README_rounding_matches": true,
+    "STATUS_full_precision_matches": true,
+    "config.json_matches_lock": true,
+    "full_manifest_coverage": true,
+    "raw_matches_completion": true,
+    "raw_matches_integrity": true,
+    "selectors.json_matches_lock": true,
+    "split_manifest.json_matches_lock": true
+  },
+  "expected_rows": 1792,
+  "raw_rows": 1792,
+  "schema": "mcss.v2.old_raw_audit.v1",
+  "scope": "Numeric/artifact audit, not historical input-media re-audit or new confirmation",
+  "selector_recomputations": {
+    "rgb_selector": {
+      "OFF_rate": 0.0,
+      "beneficial_write_precision": 0.25,
+      "beneficial_write_recall": 0.4444444444444444,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            -0.0021545899168283205,
+            0.0009524412430929675
+          ],
+          "ci97_5": [
+            -0.0024557702938430293,
+            0.0011714542688059247
+          ],
+          "mean": -0.0004961539517192113
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.0005931955914222553,
+            -6.623312891846938e-05
+          ],
+          "ci97_5": [
+            -0.0006377026482206025,
+            -4.1762516353756584e-05
+          ],
+          "mean": -0.00029862649253946036
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0014527180666932468,
+      "harmful_write_pairs": 17,
+      "harmful_write_rate": 0.53125,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": -0.0006551684336040568,
+          "delta_fixed": -0.0003185349253754244,
+          "omitted_sequence": "bear"
+        },
+        {
+          "delta_OFF": -0.0008494903419408136,
+          "delta_fixed": -0.000284902269153949,
+          "omitted_sequence": "disc-jockey"
+        },
+        {
+          "delta_OFF": -0.0003539103045091548,
+          "delta_fixed": -0.0003380842847149901,
+          "omitted_sequence": "dog-agility"
+        },
+        {
+          "delta_OFF": -0.0005254445983345179,
+          "delta_fixed": -0.00031420175172535146,
+          "omitted_sequence": "dogs-scale"
+        },
+        {
+          "delta_OFF": 0.00013196256041503874,
+          "delta_fixed": -0.0002554996142226096,
+          "omitted_sequence": "elephant"
+        },
+        {
+          "delta_OFF": -0.0004410153654990886,
+          "delta_fixed": -0.0003185349253754244,
+          "omitted_sequence": "hike"
+        },
+        {
+          "delta_OFF": -0.0004493905114973995,
+          "delta_fixed": -0.0002909842826955907,
+          "omitted_sequence": "kid-football"
+        },
+        {
+          "delta_OFF": -0.0005474246988597127,
+          "delta_fixed": -0.00027424050967579753,
+          "omitted_sequence": "koala"
+        },
+        {
+          "delta_OFF": -0.00040139643187414586,
+          "delta_fixed": -0.00018662879961584185,
+          "omitted_sequence": "lady-running"
+        },
+        {
+          "delta_OFF": -0.00047107253454411097,
+          "delta_fixed": -0.00027703764163221806,
+          "omitted_sequence": "longboard"
+        },
+        {
+          "delta_OFF": -0.000498831471065673,
+          "delta_fixed": -0.0003267002495670468,
+          "omitted_sequence": "mallard-fly"
+        },
+        {
+          "delta_OFF": -0.0005292308818338254,
+          "delta_fixed": -0.0003185349253754244,
+          "omitted_sequence": "motorbike"
+        },
+        {
+          "delta_OFF": -0.0008692343576172879,
+          "delta_fixed": -0.0003185349253754244,
+          "omitted_sequence": "rallye"
+        },
+        {
+          "delta_OFF": -0.0005341351489431637,
+          "delta_fixed": -0.0003185349253754244,
+          "omitted_sequence": "scooter-board"
+        },
+        {
+          "delta_OFF": -0.0005292308818338254,
+          "delta_fixed": -0.0003185349253754244,
+          "omitted_sequence": "scooter-gray"
+        },
+        {
+          "delta_OFF": -0.00041544982596564324,
+          "delta_fixed": -0.0003185349253754244,
+          "omitted_sequence": "stroller"
+        }
+      ],
+      "mean_J": 0.5521811584968606,
+      "mean_OFF_J": 0.5526773124485799,
+      "mean_fixed_J": 0.5524797849894001,
+      "n_pairs": 32,
+      "n_sequences": 16,
+      "net_capture": -0.202403062823885,
+      "net_gain": -0.0004961539517192113,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.001889063276553471,
+            "positive_contribution_share": 0.15561321391036737,
+            "sequence": "bear",
+            "weighted_contribution": 0.00011806645478459193
+          },
+          {
+            "mean_gap": 0.004803891901604823,
+            "positive_contribution_share": 0.39572473159850396,
+            "sequence": "disc-jockey",
+            "weighted_contribution": 0.00030024324385030145
+          },
+          {
+            "mean_gap": -0.0026298086598700587,
+            "positive_contribution_share": 0.0,
+            "sequence": "dog-agility",
+            "weighted_contribution": -0.00016436304124187867
+          },
+          {
+            "mean_gap": -5.679425248961145e-05,
+            "positive_contribution_share": 0.0,
+            "sequence": "dogs-scale",
+            "weighted_contribution": -3.5496407806007158e-06
+          },
+          {
+            "mean_gap": -0.009917901633732962,
+            "positive_contribution_share": 0.0,
+            "sequence": "elephant",
+            "weighted_contribution": -0.0006198688521083101
+          },
+          {
+            "mean_gap": -0.0013232327450210524,
+            "positive_contribution_share": 0.0,
+            "sequence": "hike",
+            "weighted_contribution": -8.270204656381577e-05
+          },
+          {
+            "mean_gap": -0.0011976055550463882,
+            "positive_contribution_share": 0.0,
+            "sequence": "kid-football",
+            "weighted_contribution": -7.485034719039926e-05
+          },
+          {
+            "mean_gap": 0.0002729072553883105,
+            "positive_contribution_share": 0.022480970138763025,
+            "sequence": "koala",
+            "weighted_contribution": 1.7056703461769407e-05
+          },
+          {
+            "mean_gap": -0.0019175167493951928,
+            "positive_contribution_share": 0.0,
+            "sequence": "lady-running",
+            "weighted_contribution": -0.00011984479683719955
+          },
+          {
+            "mean_gap": -0.000872375209345716,
+            "positive_contribution_share": 0.0,
+            "sequence": "longboard",
+            "weighted_contribution": -5.452345058410725e-05
+          },
+          {
+            "mean_gap": -0.00045599116152228447,
+            "positive_contribution_share": 0.0,
+            "sequence": "mallard-fly",
+            "weighted_contribution": -2.849944759514278e-05
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "motorbike",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.005100052136751937,
+            "positive_contribution_share": 0.4201211859659699,
+            "sequence": "rallye",
+            "weighted_contribution": 0.00031875325854699606
+          },
+          {
+            "mean_gap": 7.356400664007556e-05,
+            "positive_contribution_share": 0.0060598983863957056,
+            "sequence": "scooter-board",
+            "weighted_contribution": 4.597750415004723e-06
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "scooter-gray",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.001706715838022732,
+            "positive_contribution_share": 0.0,
+            "sequence": "stroller",
+            "weighted_contribution": -0.00010666973987642075
+          }
+        ],
+        "top1_positive_share": 0.4201211859659699,
+        "top3_positive_share": 0.9714591314748413
+      },
+      "oracle_gain": 0.002451316421782238,
+      "pair_counts": {
+        "improved": 8,
+        "tied": 7,
+        "worse": 17
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 2,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "J": 0.8838815749846627,
+          "delta_OFF": 0.001889063276553471,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.001889063276553471,
+          "sequence": "bear",
+          "weighted_net_contribution": 0.00011806645478459193,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5790458975475594,
+          "delta_OFF": 0.004803891901604823,
+          "delta_fixed": -0.0005044898433221312,
+          "harmful_loss": 0.0024651502276512582,
+          "n_pairs": 2,
+          "positive_gain": 0.007269042129256081,
+          "sequence": "disc-jockey",
+          "weighted_net_contribution": 0.00030024324385030145,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.6622944016700156,
+          "delta_OFF": -0.0026298086598700587,
+          "delta_fixed": 0.00029324039009348546,
+          "harmful_loss": 0.0032205408743988806,
+          "n_pairs": 2,
+          "positive_gain": 0.0005907322145288219,
+          "sequence": "dog-agility",
+          "weighted_net_contribution": -0.00016436304124187867,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5180924518233918,
+          "delta_OFF": -5.679425248961145e-05,
+          "delta_fixed": -6.499760475109362e-05,
+          "harmful_loss": 0.00016645907295548268,
+          "n_pairs": 2,
+          "positive_gain": 0.00010966482046587123,
+          "sequence": "dogs-scale",
+          "weighted_net_contribution": -3.5496407806007158e-06,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7834993616994905,
+          "delta_OFF": -0.009917901633732962,
+          "delta_fixed": -0.000945529667292222,
+          "harmful_loss": 0.009917901633732962,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "elephant",
+          "weighted_net_contribution": -0.0006198688521083101,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.708620917952327,
+          "delta_OFF": -0.0013232327450210524,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0013232327450210524,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "hike",
+          "weighted_net_contribution": -8.270204656381577e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.832036476430349,
+          "delta_OFF": -0.0011976055550463882,
+          "delta_fixed": -0.0004132596401975053,
+          "harmful_loss": 0.0011976055550463882,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "kid-football",
+          "weighted_net_contribution": -7.485034719039926e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.8658442670791284,
+          "delta_OFF": 0.0002729072553883105,
+          "delta_fixed": -0.0006644162354944028,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0002729072553883105,
+          "sequence": "koala",
+          "weighted_net_contribution": 1.7056703461769407e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.37745811443782273,
+          "delta_OFF": -0.0019175167493951928,
+          "delta_fixed": -0.001978591886393738,
+          "harmful_loss": 0.0019175167493951928,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "lady-running",
+          "weighted_net_contribution": -0.00011984479683719955,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.39926075273903416,
+          "delta_OFF": -0.000872375209345716,
+          "delta_fixed": -0.0006224592561480946,
+          "harmful_loss": 0.000872375209345716,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "longboard",
+          "weighted_net_contribution": -5.452345058410725e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5899774205559305,
+          "delta_OFF": -0.00045599116152228447,
+          "delta_fixed": 0.0001224798628743362,
+          "harmful_loss": 0.00045599116152228447,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "mallard-fly",
+          "weighted_net_contribution": -2.849944759514278e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.166410843864431,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "motorbike",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2843650088809947,
+          "delta_OFF": 0.005100052136751937,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.005100052136751937,
+          "sequence": "rallye",
+          "weighted_net_contribution": 0.00031875325854699606,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.1431285724405161,
+          "delta_OFF": 7.356400664007556e-05,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 7.356400664007556e-05,
+          "sequence": "scooter-board",
+          "weighted_net_contribution": 4.597750415004723e-06,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4543335747595136,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "scooter-gray",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5866488990846034,
+          "delta_OFF": -0.001706715838022732,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.001706715838022732,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "stroller",
+          "weighted_net_contribution": -0.00010666973987642075,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.3902246590746381,
+      "positive_gain": 0.0009565641149740355,
+      "regret_to_dynamic_oracle": 0.002947470373501449,
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 5,
+        "tied": 2,
+        "worse": 9
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 1.0,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 32,
+      "write_rate": 1.0
+    },
+    "visible_selector": {
+      "OFF_rate": 0.09375,
+      "beneficial_write_precision": 0.27586206896551724,
+      "beneficial_write_recall": 0.4444444444444444,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            -0.002143864838573282,
+            0.0009970120063505885
+          ],
+          "ci97_5": [
+            -0.002434561571310456,
+            0.001191990671745153
+          ],
+          "mean": -0.00047025721260386157
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.0005199832955788739,
+            -7.579839474710361e-05
+          ],
+          "ci97_5": [
+            -0.0005584292973177646,
+            -5.545583088739591e-05
+          ],
+          "mean": -0.0002727297534241106
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0013729506822794876,
+      "harmful_write_pairs": 16,
+      "harmful_write_rate": 0.5517241379310345,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": -0.0006275452452143504,
+          "delta_fixed": -0.000290911736985718,
+          "omitted_sequence": "bear"
+        },
+        {
+          "delta_OFF": -0.0008331644945092236,
+          "delta_fixed": -0.0002685764217223589,
+          "omitted_sequence": "disc-jockey"
+        },
+        {
+          "delta_OFF": -0.0003067377567798827,
+          "delta_fixed": -0.000290911736985718,
+          "omitted_sequence": "dog-agility"
+        },
+        {
+          "delta_OFF": -0.0004978214099448116,
+          "delta_fixed": -0.0002865785633356451,
+          "omitted_sequence": "dogs-scale"
+        },
+        {
+          "delta_OFF": 0.0001595857488047451,
+          "delta_fixed": -0.0002278764258329032,
+          "omitted_sequence": "elephant"
+        },
+        {
+          "delta_OFF": -0.00041477662423042294,
+          "delta_fixed": -0.00029229618410675875,
+          "omitted_sequence": "hike"
+        },
+        {
+          "delta_OFF": -0.000432584010542005,
+          "delta_fixed": -0.0002741777817401962,
+          "omitted_sequence": "kid-football"
+        },
+        {
+          "delta_OFF": -0.0005198015104700064,
+          "delta_fixed": -0.00024661732128609113,
+          "omitted_sequence": "koala"
+        },
+        {
+          "delta_OFF": -0.00039744731570024263,
+          "delta_fixed": -0.00018267968344193864,
+          "omitted_sequence": "lady-running"
+        },
+        {
+          "delta_OFF": -0.0004434493461544046,
+          "delta_fixed": -0.0002494144532425117,
+          "omitted_sequence": "longboard"
+        },
+        {
+          "delta_OFF": -0.0004712082826759667,
+          "delta_fixed": -0.0002990770611773404,
+          "omitted_sequence": "mallard-fly"
+        },
+        {
+          "delta_OFF": -0.000501607693444119,
+          "delta_fixed": -0.000290911736985718,
+          "omitted_sequence": "motorbike"
+        },
+        {
+          "delta_OFF": -0.0008416111692275814,
+          "delta_fixed": -0.000290911736985718,
+          "omitted_sequence": "rallye"
+        },
+        {
+          "delta_OFF": -0.0005065119605534574,
+          "delta_fixed": -0.000290911736985718,
+          "omitted_sequence": "scooter-board"
+        },
+        {
+          "delta_OFF": -0.000501607693444119,
+          "delta_fixed": -0.000290911736985718,
+          "omitted_sequence": "scooter-gray"
+        },
+        {
+          "delta_OFF": -0.00038782663757593684,
+          "delta_fixed": -0.000290911736985718,
+          "omitted_sequence": "stroller"
+        }
+      ],
+      "mean_J": 0.552207055235976,
+      "mean_OFF_J": 0.5526773124485799,
+      "mean_fixed_J": 0.5524797849894001,
+      "n_pairs": 32,
+      "n_sequences": 16,
+      "net_capture": -0.19183864164788628,
+      "net_gain": -0.00047025721260386157,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.001889063276553471,
+            "positive_contribution_share": 0.1534708494313224,
+            "sequence": "bear",
+            "weighted_contribution": 0.00011806645478459193
+          },
+          {
+            "mean_gap": 0.004973352015976568,
+            "positive_contribution_share": 0.40404393430666474,
+            "sequence": "disc-jockey",
+            "weighted_contribution": 0.0003108345009985355
+          },
+          {
+            "mean_gap": -0.002923049049963544,
+            "positive_contribution_share": 0.0,
+            "sequence": "dog-agility",
+            "weighted_contribution": -0.0001826905656227215
+          },
+          {
+            "mean_gap": -5.679425248961145e-05,
+            "positive_contribution_share": 0.0,
+            "sequence": "dogs-scale",
+            "weighted_contribution": -3.5496407806007158e-06
+          },
+          {
+            "mean_gap": -0.009917901633732962,
+            "positive_contribution_share": 0.0,
+            "sequence": "elephant",
+            "weighted_contribution": -0.0006198688521083101
+          },
+          {
+            "mean_gap": -0.001302466038205441,
+            "positive_contribution_share": 0.0,
+            "sequence": "hike",
+            "weighted_contribution": -8.140412738784006e-05
+          },
+          {
+            "mean_gap": -0.0010353552435317104,
+            "positive_contribution_share": 0.0,
+            "sequence": "kid-football",
+            "weighted_contribution": -6.47097027207319e-05
+          },
+          {
+            "mean_gap": 0.0002729072553883105,
+            "positive_contribution_share": 0.02217146922512276,
+            "sequence": "koala",
+            "weighted_contribution": 1.7056703461769407e-05
+          },
+          {
+            "mean_gap": -0.0015624056661581454,
+            "positive_contribution_share": 0.0,
+            "sequence": "lady-running",
+            "weighted_contribution": -9.765035413488408e-05
+          },
+          {
+            "mean_gap": -0.000872375209345716,
+            "positive_contribution_share": 0.0,
+            "sequence": "longboard",
+            "weighted_contribution": -5.452345058410725e-05
+          },
+          {
+            "mean_gap": -0.00045599116152228447,
+            "positive_contribution_share": 0.0,
+            "sequence": "mallard-fly",
+            "weighted_contribution": -2.849944759514278e-05
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "motorbike",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.005100052136751937,
+            "positive_contribution_share": 0.4143372767265774,
+            "sequence": "rallye",
+            "weighted_contribution": 0.00031875325854699606
+          },
+          {
+            "mean_gap": 7.356400664007556e-05,
+            "positive_contribution_share": 0.005976470310312694,
+            "sequence": "scooter-board",
+            "weighted_contribution": 4.597750415004723e-06
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "scooter-gray",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.001706715838022732,
+            "positive_contribution_share": 0.0,
+            "sequence": "stroller",
+            "weighted_contribution": -0.00010666973987642075
+          }
+        ],
+        "top1_positive_share": 0.4143372767265774,
+        "top3_positive_share": 0.9718520604645645
+      },
+      "oracle_gain": 0.002451316421782238,
+      "pair_counts": {
+        "improved": 8,
+        "tied": 8,
+        "worse": 16
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 2,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "J": 0.8838815749846627,
+          "delta_OFF": 0.001889063276553471,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.001889063276553471,
+          "sequence": "bear",
+          "weighted_net_contribution": 0.00011806645478459193,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.5792153576619311,
+          "delta_OFF": 0.004973352015976568,
+          "delta_fixed": -0.00033502972895038674,
+          "harmful_loss": 0.001727000178598448,
+          "n_pairs": 2,
+          "positive_gain": 0.0067003521945750155,
+          "sequence": "disc-jockey",
+          "weighted_net_contribution": 0.0003108345009985355,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.6620011612799221,
+          "delta_OFF": -0.002923049049963544,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0032205408743988806,
+          "n_pairs": 2,
+          "positive_gain": 0.0002974918244353364,
+          "sequence": "dog-agility",
+          "weighted_net_contribution": -0.0001826905656227215,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5180924518233918,
+          "delta_OFF": -5.679425248961145e-05,
+          "delta_fixed": -6.499760475109362e-05,
+          "harmful_loss": 0.00016645907295548268,
+          "n_pairs": 2,
+          "positive_gain": 0.00010966482046587123,
+          "sequence": "dogs-scale",
+          "weighted_net_contribution": -3.5496407806007158e-06,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7834993616994905,
+          "delta_OFF": -0.009917901633732962,
+          "delta_fixed": -0.000945529667292222,
+          "harmful_loss": 0.009917901633732962,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "elephant",
+          "weighted_net_contribution": -0.0006198688521083101,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7086416846591426,
+          "delta_OFF": -0.001302466038205441,
+          "delta_fixed": 2.0766706815611435e-05,
+          "harmful_loss": 0.001302466038205441,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "hike",
+          "weighted_net_contribution": -8.140412738784006e-05,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.8321987267418636,
+          "delta_OFF": -0.0010353552435317104,
+          "delta_fixed": -0.00025100932868282744,
+          "harmful_loss": 0.0010353552435317104,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "kid-football",
+          "weighted_net_contribution": -6.47097027207319e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.8658442670791284,
+          "delta_OFF": 0.0002729072553883105,
+          "delta_fixed": -0.0006644162354944028,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0002729072553883105,
+          "sequence": "koala",
+          "weighted_net_contribution": 1.7056703461769407e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.3778132255210598,
+          "delta_OFF": -0.0015624056661581454,
+          "delta_fixed": -0.0016234808031566905,
+          "harmful_loss": 0.0015624056661581454,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "lady-running",
+          "weighted_net_contribution": -9.765035413488408e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.39926075273903416,
+          "delta_OFF": -0.000872375209345716,
+          "delta_fixed": -0.0006224592561480946,
+          "harmful_loss": 0.000872375209345716,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "longboard",
+          "weighted_net_contribution": -5.452345058410725e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5899774205559305,
+          "delta_OFF": -0.00045599116152228447,
+          "delta_fixed": 0.0001224798628743362,
+          "harmful_loss": 0.00045599116152228447,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "mallard-fly",
+          "weighted_net_contribution": -2.849944759514278e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.166410843864431,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "motorbike",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2843650088809947,
+          "delta_OFF": 0.005100052136751937,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.005100052136751937,
+          "sequence": "rallye",
+          "weighted_net_contribution": 0.00031875325854699606,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.1431285724405161,
+          "delta_OFF": 7.356400664007556e-05,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 7.356400664007556e-05,
+          "sequence": "scooter-board",
+          "weighted_net_contribution": 4.597750415004723e-06,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4543335747595136,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "scooter-gray",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5866488990846034,
+          "delta_OFF": -0.001706715838022732,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.001706715838022732,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "stroller",
+          "weighted_net_contribution": -0.00010666973987642075,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.36824844873324014,
+      "positive_gain": 0.0009026934696756261,
+      "regret_to_dynamic_oracle": 0.0029215736343860994,
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 5,
+        "tied": 2,
+        "worse": 9
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.90625,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 29,
+      "write_rate": 0.90625
+    }
+  },
+  "source_raw_sha256": "201719eb9d40120efe8073525486599d08df33d852b9134cd280ebda57153a42",
+  "status": "PASS"
+}

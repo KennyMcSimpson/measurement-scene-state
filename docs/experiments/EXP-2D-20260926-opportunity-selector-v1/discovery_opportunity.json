@@ -1,0 +1,366 @@
+{
+  "224/discovery": {
+    "oracle_minus_off": {
+      "improved_pairs": 8,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.002641238419141624,
+        "cat-girl": 0.002641238419141624,
+        "classic-car": 0.0019693833299016254,
+        "color-run": 0.002529106803755117,
+        "dancing": 0.0009614853901328325,
+        "drone": 0.002491163248866361,
+        "lindy-hop": 0.0026138149039105596,
+        "lucia": 0.002641238419141624,
+        "motocross-bumps": 0.002641238419141624,
+        "paragliding": 0.002641238419141624,
+        "sheep": 0.002641238419141624,
+        "tractor-sand": 0.002641238419141624
+      },
+      "loso_min": 0.0009614853901328325,
+      "pair_bootstrap": {
+        "ci95": [
+          0.0005793146342497402,
+          0.004806697105010498
+        ],
+        "mean": 0.0024211352175464887,
+        "n": 24
+      },
+      "pair_max": 0.020745299991141497,
+      "pair_mean": 0.0024211352175464887,
+      "pair_median": 0.0,
+      "pair_min": 0.0,
+      "pair_std": 0.005373915812556103,
+      "positive_sequences": 5,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0013377925451956568,
+        0.018477283319096705
+      ],
+      "sequence_bootstrap": {
+        "ci95": [
+          0.00017820198098972458,
+          0.0057506820272721125
+        ],
+        "mean": 0.0024211352175464887,
+        "n": 12
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.2543712390259507,
+        "color-run": 0.04245418155887219,
+        "dancing": 0.6359717535665312,
+        "drone": 0.0568200012492761,
+        "lindy-hop": 0.010382824599369763,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "sequence_std": 0.005244226756187772,
+      "sequence_values": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.00739040598163998,
+        "color-run": 0.0012334477692515777,
+        "dancing": 0.018477283319096705,
+        "drone": 0.001650826873027894,
+        "lindy-hop": 0.00030165866754170573,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "threshold_pair_counts": {
+        "0.005": 3,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "threshold_sequence_counts": {
+        "0.005": 2,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "tied_pairs": 16,
+      "top1_positive_gain_share": 0.6359717535665312,
+      "top3_positive_gain_share": 0.9471629938417581,
+      "worse_pairs": 0
+    },
+    "trajectory_minus_constant": {
+      "improved_pairs": 4,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.0010696445130620432,
+        "cat-girl": 0.0010696445130620432,
+        "classic-car": 0.0007840579304197535,
+        "color-run": 0.0010696445130620432,
+        "dancing": 0.0003017228189056849,
+        "drone": 0.0010535082767986481,
+        "lindy-hop": 0.0010696445130620432,
+        "lucia": 0.0010696445130620432,
+        "motocross-bumps": 0.0010696445130620432,
+        "paragliding": 0.0010696445130620432,
+        "sheep": 0.0010696445130620432,
+        "tractor-sand": 0.0010696445130620432
+      },
+      "loso_min": 0.0003017228189056849,
+      "pair_bootstrap": {
+        "ci95": [
+          1.4791549908112211e-05,
+          0.002576895359071967
+        ],
+        "mean": 0.000980507470306873,
+        "n": 24
+      },
+      "pair_max": 0.016894277271439884,
+      "pair_mean": 0.000980507470306873,
+      "pair_median": 0.0,
+      "pair_min": 0.0,
+      "pair_std": 0.0034522555873417937,
+      "positive_sequences": 3,
+      "quantiles": [
+        0.0,
+        0.0,
+        0.0,
+        4.4374649724336634e-05,
+        0.008447138635719942
+      ],
+      "sequence_bootstrap": {
+        "ci95": [
+          0.0,
+          0.0024553770310560834
+        ],
+        "mean": 0.000980507470306873,
+        "n": 12
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.26699205124209774,
+        "color-run": 0.0,
+        "dancing": 0.7179223422163398,
+        "drone": 0.015085606541562449,
+        "lindy-hop": 0.0,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "sequence_std": 0.0024103533857468143,
+      "sequence_values": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0,
+        "classic-car": 0.0031414524090651874,
+        "color-run": 0.0,
+        "dancing": 0.008447138635719942,
+        "drone": 0.00017749859889734654,
+        "lindy-hop": 0.0,
+        "lucia": 0.0,
+        "motocross-bumps": 0.0,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "threshold_pair_counts": {
+        "0.005": 1,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "threshold_sequence_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "tied_pairs": 20,
+      "top1_positive_gain_share": 0.7179223422163398,
+      "top3_positive_gain_share": 1.0,
+      "worse_pairs": 0
+    }
+  },
+  "448/discovery": {
+    "oracle_minus_off": {
+      "improved_pairs": 15,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.005997465398962256,
+        "cat-girl": 0.005827179732136156,
+        "classic-car": 0.005620257015859439,
+        "color-run": 0.005003777848104494,
+        "dancing": 0.005206821891529925,
+        "drone": 0.0054990617609779495,
+        "lindy-hop": 0.005941399854585452,
+        "lucia": 0.005935158074596655,
+        "motocross-bumps": 0.004202239343913519,
+        "paragliding": 0.0061393264330628,
+        "sheep": 0.006020576976899352,
+        "tractor-sand": 0.0061393264330628
+      },
+      "loso_min": 0.004202239343913519,
+      "pair_bootstrap": {
+        "ci95": [
+          0.0027199139657285575,
+          0.008941897267873943
+        ],
+        "mean": 0.005627715896974233,
+        "n": 24
+      },
+      "pair_max": 0.02258197414102253,
+      "pair_mean": 0.005627715896974233,
+      "pair_median": 0.0028667153929039096,
+      "pair_min": 0.0,
+      "pair_std": 0.007730698430874737,
+      "positive_sequences": 10,
+      "quantiles": [
+        0.0,
+        0.0014969145357789683,
+        0.002839732826660335,
+        0.00784657103391542,
+        0.021307957980642084
+      ],
+      "sequence_bootstrap": {
+        "ci95": [
+          0.002538954755695832,
+          0.009265650136123706
+        ],
+        "mean": 0.005627715896974233,
+        "n": 12
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.023106937812683123,
+        "cat-girl": 0.05084380254576537,
+        "classic-car": 0.08454826809793964,
+        "color-run": 0.1849630569964335,
+        "dancing": 0.15189036642699988,
+        "drone": 0.1042890745533193,
+        "lindy-hop": 0.03223913578066672,
+        "lucia": 0.03325582385823542,
+        "motocross-bumps": 0.3155211097291177,
+        "paragliding": 0.0,
+        "sheep": 0.019342424198839355,
+        "tractor-sand": 0.0
+      },
+      "sequence_std": 0.006076849356304759,
+      "sequence_values": {
+        "bmx-bumps": 0.0015604713751059818,
+        "cat-girl": 0.003433613710193073,
+        "classic-car": 0.005709763589236971,
+        "color-run": 0.01249103443454136,
+        "dancing": 0.010257549956861622,
+        "drone": 0.0070429113929333514,
+        "lindy-hop": 0.0021771923632508267,
+        "lucia": 0.002245851943127597,
+        "motocross-bumps": 0.021307957980642084,
+        "paragliding": 0.0,
+        "sheep": 0.0013062440177979279,
+        "tractor-sand": 0.0
+      },
+      "threshold_pair_counts": {
+        "0.005": 6,
+        "0.01": 6,
+        "0.02": 4
+      },
+      "threshold_sequence_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "tied_pairs": 9,
+      "top1_positive_gain_share": 0.3155211097291177,
+      "top3_positive_gain_share": 0.6523745331525511,
+      "worse_pairs": 0
+    },
+    "trajectory_minus_constant": {
+      "improved_pairs": 11,
+      "leave_one_sequence_out": {
+        "bmx-bumps": 0.0022271870362059465,
+        "cat-girl": 0.0021941506250449105,
+        "classic-car": 0.0020345277871368864,
+        "color-run": 0.0017924233123309515,
+        "dancing": 0.0022271870362059465,
+        "drone": 0.0022271870362059465,
+        "lindy-hop": 0.0021588134377412225,
+        "lucia": 0.0022257110831487748,
+        "motocross-bumps": 0.0007303089356269864,
+        "paragliding": 0.0022271870362059465,
+        "sheep": 0.0022271870362059465,
+        "tractor-sand": 0.0022271870362059465
+      },
+      "loso_min": 0.0007303089356269864,
+      "pair_bootstrap": {
+        "ci95": [
+          0.00039729832157880295,
+          0.004189296073477937
+        ],
+        "mean": 0.0020415881165221175,
+        "n": 24
+      },
+      "pair_max": 0.019469996026684977,
+      "pair_mean": 0.0020415881165221175,
+      "pair_median": 0.0,
+      "pair_min": 0.0,
+      "pair_std": 0.004766103003541661,
+      "positive_sequences": 6,
+      "quantiles": [
+        0.0,
+        0.0,
+        8.117741814445134e-06,
+        0.0010938951222738864,
+        0.01646565910636856
+      ],
+      "sequence_bootstrap": {
+        "ci95": [
+          0.00017660431164663823,
+          0.004930076524201802
+        ],
+        "mean": 0.0020415881165221175,
+        "n": 12
+      },
+      "sequence_positive_gain_share": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.014833245086283402,
+        "classic-car": 0.08650339910260003,
+        "color-run": 0.1952075496163191,
+        "dancing": 0.0,
+        "drone": 0.0,
+        "lindy-hop": 0.030699531450757503,
+        "lucia": 0.0006626982975287767,
+        "motocross-bumps": 0.6720935764465112,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "sequence_std": 0.004556694019210678,
+      "sequence_values": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.00036340052277139545,
+        "classic-car": 0.002119251739759659,
+        "color-run": 0.004782400962624944,
+        "dancing": 0.0,
+        "drone": 0.0,
+        "lindy-hop": 0.0007521095831119623,
+        "lucia": 1.6235483628890268e-05,
+        "motocross-bumps": 0.01646565910636856,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "threshold_pair_counts": {
+        "0.005": 3,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "threshold_sequence_counts": {
+        "0.005": 1,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "tied_pairs": 13,
+      "top1_positive_gain_share": 0.6720935764465112,
+      "top3_positive_gain_share": 0.9538045251654304,
+      "worse_pairs": 0
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "PASS_ON_RETRY_WITH_NATIVE_CRASH_RECORDED",
+  "full_suite": {
+    "passed": 500,
+    "skipped": 1,
+    "failed": 0,
+    "command": "PYTHONFAULTHANDLER=1 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/pytest -q",
+    "log": "full-tests-retry1.log",
+    "exit_code": 0,
+    "seconds": 20.11
+  },
+  "prior_attempt": {
+    "exit_code": 139,
+    "kind": "native_segmentation_fault",
+    "log": "full-tests.log",
+    "location": "mcss/types.py _require_finite / tests/dynamic/test_runner.py test_same_episode_reset_changes_branch_but_preserves_content_hashes",
+    "cause": "UNDETERMINED",
+    "modifications_between_attempts": "No fixes to the crashing legacy dynamic/types code; same command/environment. V2 reporting development continued independently."
+  },
+  "skip_reason": "Optional historical V5 checkpoint is not distributed in public repository; preexisting V1 policy unchanged.",
+  "full_logs_retained": true,
+  "v2_new_tests": 42,
+  "lint": "PASS: new V2 modules, scripts and tests",
+  "git_diff_check": "PASS",
+  "regeneration": "10 statistical artifacts plus README/STATUS/terminal summary byte-identical"
+}

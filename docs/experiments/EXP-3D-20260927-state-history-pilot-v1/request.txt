@@ -1,0 +1,1175 @@
+你现在位于仓库：
+
+https://github.com/KennyMcSimpson/measurement-scene-state.git
+
+请在当前仓库基础上完成下一阶段机制实验。
+
+本轮的目的不是追求最好性能，也不是继续扩大二维 selector。
+
+本轮第一次直接检验完整研究方案中的两个核心：
+
+A. 真实目标约束的共享场景状态是否真的成立；
+B. 测量反馈驱动的动态测试时写入是否具有“状态/历史相关”的动作价值。
+
+核心研究问题是：
+
+> 模型已经怎样理解了这个场景，会不会决定它看到下一张图时应该怎样学习？
+>
+> 同一张新图像到来时，不同的已有快速权重历史是否会改变 OFF / fuse / complete / ALL 的相对任务价值？
+>
+> 如果会，这种差异能否仅通过部署时合法可见的场景预测误差和当前状态统计识别？
+
+这是一轮机制资格实验。
+
+任何负结果都必须保留。
+
+不得为了得到正结果而继续增加 controller、扩大动作空间、改变 backbone、打开封存测试数据或事后修改主要指标。
+
+============================================================
+0. 开始前必须阅读和审计
+============================================================
+
+先完整阅读：
+
+- README.md
+- ROADMAP.md
+- EXPERIMENTS.md
+- 当前三维模型与旧 V5 相关文档
+- research/ideas/CV_逆向JEPA与动态TTT_合作者完整讨论方案_2026-09-17.md
+- EXP-2D V1 / V2 的 README、config、integrity 和相关实现
+
+重点理解：
+
+1. B_t：已到达观测 / 冻结特征缓存；
+2. ΔW_t：场景内累计的两个 fast-weight 偏移；
+3. S_t：由 B_t 与 W0+ΔW_t 重新读出的场景状态；
+4. r_t：历史摘要；
+5. L_fuse 和 L_complete 两个实际可写位置；
+6. OFF / L_fuse / L_complete / ALL；
+7. 固定测量程序；
+8. 训练、部署、query evaluation 的信息边界。
+
+不要把二维的 A/B residual probe 直接当成三维实现。
+
+不要先改代码。
+
+先生成：
+
+docs/experiments/EXP-3D-20260927-state-history-pilot-v1/
+
+其中至少包含：
+
+- README.md
+- STATUS.md
+- preregistration.json
+- config.json
+- environment.json
+- dataset_manifest.json
+- split_manifest.json
+- information_contract.json
+- implementation_audit.json
+- commands.sh
+- git_commit.txt
+- dirty.patch
+
+本轮任何新实验都写入独立目录，不覆盖旧结果。
+
+============================================================
+1. 第一任务：审计三维载体是否真的可用于本轮实验
+============================================================
+
+先不要假设旧 V5 已经是合格底座。
+
+检查仓库和本地可访问 artifact：
+
+- 当前最新三维 checkpoint；
+- 对应训练配置；
+- 使用的数据集和 scene split；
+- 是否有 Hypersim / ScanNet / 其他已授权数据；
+- RGB、camera、depth 的完整性；
+- density / color / coverage / opacity 的读出；
+- 是否真的存在 L_fuse 和 L_complete 两个实际可写矩阵；
+- 当前 checkpoint 是否来自单场景过拟合、有限 pilot，还是已有多场景训练。
+
+生成：
+
+carrier_audit.json
+
+至少包含：
+
+CARRIER_CHECKPOINT=
+TRAINING_SCOPE=
+N_TRAIN_SCENES=
+N_DEV_SCENES=
+N_TEST_SCENES=
+HAS_REAL_L_FUSE=
+HAS_REAL_L_COMPLETE=
+HAS_RGB_READOUT=
+HAS_DEPTH_READOUT=
+HAS_QUERY_INDEPENDENT_STATE=
+HAS_FIXED_MEASUREMENT=
+DATA_AVAILABLE=
+CARRIER_STATUS=
+
+CARRIER_STATUS 只能为：
+
+READY
+PARTIAL
+BLOCKED
+
+如果没有可用的多场景载体：
+
+不要伪造三维结果。
+
+允许完成数据接口、实验实现、测试和 smoke test；
+但正式科学状态必须写：
+
+STATIC_STATE_STATUS=BLOCKED_CARRIER_NOT_READY
+
+如果旧 checkpoint 只能单场景 overfit：
+
+可以用作代码 smoke / mechanism debug，
+不能作为正式核心 A 的泛化证据。
+
+============================================================
+2. 锁定数据与信息边界
+============================================================
+
+首轮只研究：
+
+- 已标定相机；
+- 静态室内场景；
+- scene-level split；
+- 同一地点的重复 scan 不得跨 split。
+
+不要自动下载超大数据集。
+
+优先使用当前仓库已经合法可访问且能够审计来源的最小多场景开发子集。
+
+如果必须建立新 pilot：
+
+优先 Hypersim 或当前方案已经支持的数据，
+先建立少量但多 scene 的机制 cohort。
+
+必须将每个 scene 中的帧划分为：
+
+- context_A
+- context_B
+- stream / continuation
+- sealed_query
+
+sealed_query：
+
+- 状态构建期间不可见；
+- 动态策略不可见；
+- fast-weight write 不可见；
+- 最终 state seal 之后才允许 evaluator 读取。
+
+如果使用 depth：
+
+- 可以作为离线训练监督；
+- 可以作为 branch reward teacher；
+- 不能成为测试时 controller 输入。
+
+记录所有 label access。
+
+============================================================
+3. Phase A：静态共享场景状态资格实验
+============================================================
+
+这一阶段关闭所有 test-time fast-weight 写入：
+
+ΔW = 0
+
+目标不是证明“两个 hidden state 完全相等”。
+
+目标是检查：
+
+> 不同局部上下文构建的 query-independent scene state，
+> 是否能够通过同一个固定测量程序解释多个未参与状态构建的真实 query。
+
+------------------------------------------------------------
+3.1 两个独立上下文
+------------------------------------------------------------
+
+对每个 scene：
+
+构造：
+
+context_A
+context_B
+
+要求：
+
+- 两组上下文数量尽量相同；
+- 除必要 coordinate anchor 外不共享 RGB frame；
+- 不能先使用全部图像构建状态再在输出端遮挡；
+- 两个状态独立建立：
+
+S_A = D(B_A, W0)
+
+S_B = D(B_B, W0)
+
+然后让：
+
+S_A
+S_B
+
+分别预测同一组 sealed query。
+
+query camera 只能进入固定 measurement renderer。
+
+不能通过 query-conditioned image head 绕开 scene state。
+
+------------------------------------------------------------
+3.2 至少实现以下静态比较
+------------------------------------------------------------
+
+A. R-Fixed
+
+query-independent typed scene state
++
+fixed measurement
+
+B. R-Residual
+
+相同 typed scene state
++
+充分训练的 query-conditioned residual readout
+
+Residual head 必须：
+
+- 正常训练；
+- 计入参数；
+- 计入计算；
+- 不得故意削弱。
+
+C. R-Anchor
+
+只使用共同 anchor / 极少上下文。
+
+D. R-Mean 或 prior baseline
+
+用于判断是不是数据先验在产生大部分结果。
+
+如果代码与预算允许，再加入：
+
+E. R-Direct
+
+直接 image/geometry predictor。
+
+F. R-Latent
+
+latent-target JEPA 类对照。
+
+但 C/D 是最低要求。
+
+------------------------------------------------------------
+3.3 静态状态至少报告
+------------------------------------------------------------
+
+对 sealed queries：
+
+- RGB PSNR
+- RGB SSIM
+- LPIPS，如果实现可靠
+- depth AbsRel
+- depth RMSE
+- depth δ1，如果定义兼容
+- opacity
+- valid depth fraction
+- coverage
+
+不要只报告 RGB。
+
+同时报告：
+
+A/B 两上下文各自：
+
+- query performance
+- scene-macro performance
+- context gap
+- common-visible-region performance
+
+以及：
+
+- anchor-only gap
+- cross-scene state replacement
+
+------------------------------------------------------------
+3.4 Cross-scene replacement
+------------------------------------------------------------
+
+为了检查模型是否真的使用当前 scene observation：
+
+保持 query camera 不变，
+将 scene A 的上下文 / 状态替换成 scene B 的状态。
+
+如果替换错误 scene 后性能几乎不变化：
+
+说明当前 state 可能主要使用 dataset prior，
+不能宣布核心 A 成立。
+
+------------------------------------------------------------
+3.5 Phase A 判断标准
+------------------------------------------------------------
+
+不要人为规定一个保证成功的阈值。
+
+根据以下证据分层：
+
+STATIC_STATE_STATUS=
+
+SUPPORTED
+PARTIAL
+NOT_ESTABLISHED
+BLOCKED
+
+SUPPORTED 至少需要：
+
+1. 多个未见开发 scene；
+2. 完整 context 明显优于 anchor/prior；
+3. cross-scene replacement 明显损害预测；
+4. 同一封存 state 可以服务多个 queries；
+5. 几何指标没有明显 collapse；
+6. 不是只靠 opacity/coverage 变化制造 depth 改善。
+
+如果 Phase A 为 NOT_ESTABLISHED：
+
+不要进入大规模 controller 训练。
+
+仍然允许执行 Phase B 的极小机制 smoke，
+但必须明确：
+
+CARRIER_QUALIFICATION_FAILED=true
+
+============================================================
+4. Phase B：直接写入与受控历史实验
+============================================================
+
+这是本轮最重要的动态 TTT 实验。
+
+核心问题：
+
+> 面对完全相同的下一条视觉证据，
+> 不同 fast-weight 历史是否改变后续动作的相对任务价值？
+
+本轮不是简单比较：
+
+sample1 喜欢 fuse
+sample2 喜欢 complete
+
+而是更强的：
+
+同一个 observation，
+仅因为当前 state / write history 不同，
+最优动作或动作排序发生变化。
+
+============================================================
+5. 写入动作必须保持原方案定义
+============================================================
+
+动作空间固定为：
+
+A0 = OFF
+A1 = L_fuse
+A2 = L_complete
+A3 = ALL
+
+OFF 的定义：
+
+- 新图仍然加入 B_t；
+- 正常重新读取 scene state；
+- 只是本步不新增 fast-weight write。
+
+绝不能让 OFF 少看一张图。
+
+否则：
+
+OFF vs write
+
+会混入额外 observation exposure。
+
+ALL 必须：
+
+- fuse proposal 和 complete proposal 都从同一个旧 state / old weights 计算；
+- 同步 commit；
+- complete proposal 不得偷看同一步刚更新的 fuse weight。
+
+新增 regression test。
+
+============================================================
+6. 构造受控历史
+============================================================
+
+对同一 scene / 同一 observation prefix：
+
+从：
+
+W0
+ΔW=0
+
+出发。
+
+构造至少下面两个 matched histories：
+
+H_FC:
+step1 = L_fuse
+step2 = L_complete
+
+H_CF:
+step1 = L_complete
+step2 = L_fuse
+
+要求：
+
+- 相同观测；
+- 相同写入次数；
+- 相同 action multiset；
+- 相同 sample pack；
+- 相同预算；
+- 只改变执行顺序。
+
+如果允许，再加入：
+
+H_OFF
+H_FF
+H_CC
+H_ALL
+
+但核心受控 pair 是：
+
+F→C
+vs
+C→F
+
+每条历史建立独立：
+
+B
+ΔW
+S
+history summary
+
+绝不能共用被污染的 state。
+
+============================================================
+7. 相同下一观测 continuation
+============================================================
+
+构造两个不同历史后：
+
+让它们同时看到完全相同的下一观测：
+
+o_t = (I_t, C_t)
+
+对于每个 history：
+
+先用旧 state 对 o_t 做 pre-update prediction：
+
+I_hat_pre
+
+得到 deployment-visible feedback。
+
+然后 append 相同 observation。
+
+接下来分别 branch：
+
+OFF
+L_fuse
+L_complete
+ALL
+
+因此每个实验单元包含：
+
+history × next_observation × candidate_action
+
+每个 candidate：
+
+- clone state；
+- 独立 proposal；
+- commit；
+- post-write read；
+- 不能污染其他 candidate。
+
+============================================================
+8. 动作 reward 必须看留出未来 / query，而不是当前 frame 拟合
+============================================================
+
+当前新到达帧可以生成反馈，
+但不要把：
+
+“更新后当前 frame RGB 更像”
+
+直接当作动作收益。
+
+主要 reward 应来自：
+
+- sealed query；
+或
+- 预先规定的未来 continuation horizon。
+
+例如：
+
+G(H,a)
+=
+L_query(H, OFF)
+-
+L_query(H, a)
+
+其中：
+
+- loss 越低越好；
+- 所有 action 使用相同 query；
+- OFF 也已经吸收相同的新 observation；
+- 唯一区别是 fast-weight write。
+
+主要 reward 推荐：
+
+scene-macro depth AbsRel improvement
+
+同时报告：
+
+- RGB improvement
+- depth improvement
+- normals / point error，如果已有可靠实现
+- opacity
+- coverage
+
+如果主要几何指标不可靠：
+
+不能只改成 RGB 后继续声称“geometry revision”。
+
+============================================================
+9. 本轮最重要的历史依赖分析
+============================================================
+
+不能只检查：
+
+W_FC != W_CF
+
+也不能只检查最终 score 不同。
+
+至少报告四级证据。
+
+LEVEL 1 — Numerical history effect
+
+||ΔW_FC - ΔW_CF||
+
+LEVEL 2 — Prediction history effect
+
+相同 next observation 下：
+
+pre-update / post-update predictions 是否不同。
+
+LEVEL 3 — Action-value interaction
+
+对于任意 action pair a,b：
+
+Gamma(a,b)
+=
+[G(H_FC,a)-G(H_FC,b)]
+-
+[G(H_CF,a)-G(H_CF,b)]
+
+报告：
+
+- mean
+- sequence bootstrap CI
+- per-scene value
+- LOSO sensitivity
+
+LEVEL 4 — Decision-relevant state dependence
+
+检查：
+
+argmax_a G(H_FC,a)
+!=
+argmax_a G(H_CF,a)
+
+同时要求至少其中一个 winning action：
+
+G(H, a*) > 0
+
+不能把：
+
+两个写入都比 OFF 差，
+只是 fuse/complete 排序交换
+
+称为“有益的动态轨迹机会”。
+
+============================================================
+10. 还要做自然历史实验
+============================================================
+
+受控 F→C / C→F 是机制实验，
+不能单独代表真实 streaming deployment。
+
+如果载体通过基本资格检查：
+
+再在自然 scene prefix 上保存多个实际历史状态。
+
+对于同一个 continuation point：
+
+从自然生成的不同合法 state/history 中，
+接入相同的新 observation，
+重复四动作 branch。
+
+必须明确区分：
+
+CONTROLLED_HISTORY
+NATURAL_HISTORY
+
+两组不要混合统计。
+
+============================================================
+11. 必须报告的核心量
+============================================================
+
+A. Write opportunity
+
+best_action_reward
+vs
+OFF
+
+B. State-dependent opportunity
+
+对于相同 observation：
+
+不同 history 的最优 action 是否不同。
+
+C. Global-action gap
+
+per-state oracle
+vs
+同一 action 对所有 history / scene 的最优全局动作。
+
+D. Constant-history gap
+
+history-dependent action selection
+vs
+忽略 history 的 observation-only best action。
+
+E. Harmful-write prevalence
+
+多少状态下：
+
+fuse
+complete
+ALL
+
+比 OFF 更差。
+
+F. History flip count
+
+多少 matched history pair：
+
+best_action_FC != best_action_CF
+
+并且至少一个 history 存在 positive write gain。
+
+============================================================
+12. Bootstrap
+============================================================
+
+正式统计单位是 scene。
+
+不得把同 scene 的大量 rays、frames、queries 当独立样本。
+
+至少做：
+
+- scene-level paired bootstrap
+- 10,000 draws
+- fixed seed
+- 95% percentile CI
+
+同时报告：
+
+- per-scene
+- per-history-pair
+- per-continuation
+
+但最终结论以 scene 为单位。
+
+============================================================
+13. Phase C：只有 Phase B 显示真实动作差异后才做
+============================================================
+
+如果 Phase B 得到：
+
+HISTORY_ACTION_STATUS=
+SUPPORTED
+或
+PARTIAL
+
+再进入简单 action-value prediction。
+
+如果：
+
+没有稳定 write opportunity；
+或者 history 根本不改变有益动作选择；
+
+则不要训练复杂 controller。
+
+标记：
+
+POLICY_STAGE_SKIPPED=true
+
+并说明原因。
+
+============================================================
+14. Phase C 的合法 visible inputs
+============================================================
+
+严格遵守部署可见信息。
+
+新 observation 到来时，在写入前：
+
+旧 state：
+
+S_{t-1}
+
+对当前 camera：
+
+C_t
+
+生成：
+
+I_hat_pre = M_RGB(S_{t-1}, C_t)
+
+允许使用：
+
+- 当前 RGB I_t
+- camera
+- I_t - I_hat_pre
+- frozen feature residual
+- opacity
+- coverage
+- state summary
+- ΔW norm / layer-specific norm
+- previous action
+- previous write magnitude
+- observation count
+- viewpoint change
+- remaining budget
+
+不允许：
+
+- target query GT
+- future image
+- future depth
+- branch reward
+- oracle best action
+- held-out query score
+
+============================================================
+15. Policy 输入消融
+============================================================
+
+只做简单模型。
+
+不要上 transformer / large controller。
+
+比较：
+
+P0 — Observation only
+
+current RGB / camera / frozen feature summary
+
+P1 — Observation + measurement feedback
+
+增加：
+
+I - I_hat_pre
+feature residual
+opacity / coverage
+
+P2 — Observation + measurement feedback + history/state stats
+
+增加：
+
+ΔW stats
+previous action
+write magnitude
+history counters
+
+目的：
+
+回答三个不同问题：
+
+1. 当前 observation 自己能预测 action value 吗？
+2. scene-state measurement feedback 是否带来额外信息？
+3. 除了当前 state feedback，显式 history 是否仍有额外价值？
+
+============================================================
+16. Policy target
+============================================================
+
+不要只训练：
+
+best_action class label
+
+优先预测：
+
+Q(H,a;h)
+
+即各 action 的后续任务收益。
+
+使用训练 / discovery scenes 上的 branch reward。
+
+可以：
+
+- ridge
+- small MLP
+- linear ranker
+
+但必须容量匹配。
+
+不要在 validation 上调网络宽度。
+
+============================================================
+17. Policy 评价
+============================================================
+
+至少报告：
+
+- net task gain vs OFF
+- net task gain vs global fixed action
+- regret to oracle
+- harmful write rate
+- beneficial write precision
+- beneficial write recall
+- OFF rate
+- write rate
+- action confusion
+- per-scene bootstrap CI
+
+还要报告：
+
+measurement feedback rank correlation
+vs
+actual action reward
+
+以及：
+
+search-to-policy gap
+
+============================================================
+18. 不要在本轮做这些事
+============================================================
+
+本轮禁止同时：
+
+- 换 backbone；
+- 加 SAM；
+- 引入 optical-flow foundation model；
+- 改成大 controller；
+- 扩成长 trajectory search；
+- 把 Reverse / Reset / K/P / R2 整套搬入；
+- 用 test scene 调 eta / clip；
+- 打开未来 query 调 controller；
+- 用 test depth 作为 policy 输入；
+- 重定义主要指标追求正结果；
+- 只留下 history flip 的成功案例；
+- 删除失败 scene；
+- 用当前 frame post-write RGB improvement 冒充未来任务收益；
+- 因为 history 产生数值差异就声称存在 trajectory mechanism。
+
+============================================================
+19. 二维 V2 只补一个公平基线，然后封存
+============================================================
+
+二维部分不要继续增加 feature。
+
+只使用已有 discovery raw 完成：
+
+OUTER-FOLD FIXED16
+
+对 nested LOSO 的每个 outer fold：
+
+1. 只用 outer-train sequences；
+2. 在 16 条 trajectory 中选平均 reward 最好的同一条 global trajectory；
+3. 在 outer-heldout sequence 上评价；
+4. 拼成完整 OOF prediction。
+
+然后比较：
+
+- outer-fold fixed16
+- GateOnly OOF
+- CycleGate OOF
+- OFF
+
+这是 post-hoc 诊断。
+
+必须明确标记：
+
+POSTHOC_FAIR_BASELINE=true
+
+不得重新定义为预注册结果。
+
+完成后：
+
+2D_BRANCH_STATUS=SEALED_PENDING_INDEPENDENT_CONFIRMATION
+
+不要继续用旧 DAVIS validation 调二维模型。
+
+============================================================
+20. 必须新增的 regression tests
+============================================================
+
+至少覆盖：
+
+1. OFF append observation but ΔW unchanged.
+2. ALL proposals computed from same pre-write weights.
+3. Candidate branches isolated.
+4. H_FC and H_CF use exactly matched observation IDs.
+5. H_FC/H_CF action multiset identical.
+6. Sealed query cannot enter scene construction.
+7. Sealed query cannot enter policy features.
+8. Test depth cannot enter policy input.
+9. Query-conditioned residual head cannot modify shared scene state.
+10. Cross-scene replacement uses unchanged query cameras.
+11. Last committed write forces fresh scene read.
+12. History/state summary recomputed after state change.
+13. Scene-level split has no duplicate physical scene leakage.
+14. Bootstrap resamples scenes, not rays.
+15. 2D outer-fold fixed16 never sees heldout sequence rewards.
+
+运行完整 test suite。
+
+============================================================
+21. 建议输出目录
+============================================================
+
+创建：
+
+outputs/EXP-3D-20260927-state-history-pilot-v1/
+
+至少包含：
+
+raw/
+  static_state_results.*
+  controlled_history_results.*
+  natural_history_results.*
+  policy_branch_rewards.*
+  policy_decisions.*
+
+analysis/
+  static_state_analysis.json
+  carrier_analysis.json
+  history_interaction_analysis.json
+  action_oracle_analysis.json
+  policy_analysis.json
+  bootstrap_results.json
+  robustness_analysis.json
+  cost_analysis.json
+
+audit/
+  label_access_log.json
+  sealed_query_access_log.json
+  information_contract.json
+  integrity.json
+  tests.json
+
+locks/
+  carrier_lock.json
+  implementation_lock.json
+  metric_lock.json
+  policy_lock.json
+
+figures/
+
+============================================================
+22. 阶段判断
+============================================================
+
+最终不要只输出 PASS / FAIL。
+
+需要给下面几个独立状态。
+
+------------------------------------------------------------
+A. STATIC_STATE_STATUS
+------------------------------------------------------------
+
+SUPPORTED
+PARTIAL
+NOT_ESTABLISHED
+BLOCKED
+
+------------------------------------------------------------
+B. WRITE_OPPORTUNITY_STATUS
+------------------------------------------------------------
+
+SUPPORTED
+
+多个 scene 上存在相对 OFF 的正 task-relevant write opportunity，
+且不是单个 scene 支配。
+
+PARTIAL
+
+存在 opportunity，
+但分布集中或 CI 不稳定。
+
+NOT_ESTABLISHED
+
+写入 family 几乎没有留出 task headroom。
+
+------------------------------------------------------------
+C. HISTORY_ACTION_STATUS
+------------------------------------------------------------
+
+SUPPORTED
+
+同一新 observation 在不同历史状态下，
+出现稳定的、任务有意义的 action-value 差异；
+且多个 scene 中存在 positive beneficial action flip。
+
+PARTIAL
+
+history 改变 reward magnitude / rank，
+但真正有益的 winner flip 较少或不稳定。
+
+NOT_ESTABLISHED
+
+history 对后续有益动作选择没有稳定影响。
+
+------------------------------------------------------------
+D. FEEDBACK_IDENTIFIABILITY_STATUS
+------------------------------------------------------------
+
+SUPPORTED
+
+合法 measurement feedback 能在 heldout development scenes
+可靠减少 action regret，
+并带来净任务收益。
+
+PARTIAL
+
+存在预测信号，
+但部署净收益未稳定成立。
+
+NOT_ESTABLISHED
+
+当前 feedback 无法识别 action utility。
+
+SKIPPED
+
+Phase B 未建立值得学习的 action variation。
+
+============================================================
+23. 最终 README 必须回答
+============================================================
+
+1. 当前三维载体是不是合格的多场景研究底座？
+2. 共享 state 是否真正使用了当前 scene observation？
+3. 一个封存 state 能否服务多个 query？
+4. R-Fixed 与 R-Residual 的差异是什么？
+5. 错 scene replacement 会不会显著破坏预测？
+6. fast-weight write 相比只加入新 observation 是否有额外收益？
+7. 哪些 action 最容易有害？
+8. F→C 与 C→F 是否产生不同 state？
+9. 这种差异是否影响留出任务？
+10. history 是否改变动作 reward rank？
+11. 有多少 scene 出现 beneficial best-action flip？
+12. per-state oracle 是否明显优于 global fixed action？
+13. 当前 measurement feedback 能否识别这些差异？
+14. 显式 history 在已有 state feedback 之外是否还有价值？
+15. 当前主要瓶颈属于：
+   - carrier
+   - write family
+   - history effect
+   - feedback identifiability
+   - policy
+16. 下一轮最小必要实验是什么？
+
+============================================================
+24. 最终终端摘要
+============================================================
+
+完成后打印：
+
+============================================================
+3D REVERSE-JEPA + DYNAMIC TTT MECHANISM PILOT
+============================================================
+
+CARRIER_STATUS=
+STATIC_STATE_STATUS=
+WRITE_OPPORTUNITY_STATUS=
+HISTORY_ACTION_STATUS=
+FEEDBACK_IDENTIFIABILITY_STATUS=
+
+N_TRAIN_SCENES=
+N_DEV_SCENES=
+N_EVAL_SCENES=
+
+STATIC_R_FIXED=
+STATIC_R_RESIDUAL=
+STATIC_ANCHOR=
+CROSS_SCENE_REPLACEMENT_DELTA=
+
+BEST_FIXED_WRITE=
+WRITE_ORACLE_GAIN=
+
+CONTROLLED_HISTORY_PAIRS=
+BENEFICIAL_ACTION_FLIPS=
+HISTORY_INTERACTION_MEAN=
+HISTORY_INTERACTION_CI=
+
+GLOBAL_ACTION_GAP=
+STATE_DEPENDENT_ACTION_GAP=
+
+POLICY_P0_GAIN=
+POLICY_P1_GAIN=
+POLICY_P2_GAIN=
+POLICY_REGRET=
+
+SEALED_QUERY_LEAKAGE=false
+TEST_DEPTH_IN_POLICY=false
+CANDIDATE_STATE_ISOLATION=true
+
+2D_OUTER_FOLD_FIXED16=
+2D_GATEONLY_OOF=
+2D_CYCLEGATE_OOF=
+2D_BRANCH_STATUS=
+
+TESTS=
+FINAL_INTEGRITY=
+
+REPORT_DIR=
+
+============================================================
+
+============================================================
+25. 最重要的研究纪律
+============================================================
+
+不要把本轮设计成：
+
+“怎样让 dynamic TTT 一定成功？”
+
+本轮真正要区分：
+
+CASE A
+共享 state 自身没有建立。
+→ 修载体，不怪 controller。
+
+CASE B
+共享 state 成立，但 write family 没有 task headroom。
+→ 修写入机制，不继续优化 selector。
+
+CASE C
+write 有用，但 history 不影响 action value。
+→ 可以做自适应，但不能强主张 trajectory/state-dependent control。
+
+CASE D
+history 明显改变有益 action，
+但 deployment-visible feedback 识别不了。
+→ 研究 feedback / observability。
+
+CASE E
+history-dependent opportunity 存在，
+而 measurement feedback 可以预测并利用。
+→ 才进入完整联合 2×3、长期轨迹和外部验证。
+
+任何一个 CASE 都是有效科研结果。
+
+不要为得到 CASE E 修改实验定义。

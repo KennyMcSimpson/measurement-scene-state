@@ -1,0 +1,39 @@
+{
+  "status": "BLOCKED_NO_INDEPENDENT_DATA",
+  "independence_status": "UNVERIFIED",
+  "confirmation_allowed": false,
+  "n_new_sequences": 0,
+  "n_new_pairs": 0,
+  "historical_exposed_sequences": 52,
+  "reserve_sequences": 8,
+  "official_davis_val_sequences": 30,
+  "candidates": [
+    {
+      "dataset": "VOST",
+      "status": "UNVERIFIED_ORIGINAL_VIDEO_ID",
+      "audit": "vost_metadata_audit.json"
+    },
+    {
+      "dataset": "FBMS-59",
+      "status": "BLOCKED_PROTOCOL_COMPATIBILITY_AND_IDENTITY",
+      "audit": "fbms_metadata_audit.json"
+    }
+  ],
+  "required_to_unblock": [
+    "Dataset with auditable original-video identities/grouping and permission-compatible source annotations.",
+    "Documented, validated instance-ID/background/void adapter matching the frozen task without target-label-derived conventions.",
+    "Pre-GT sequence/frame lock followed by exact and near-duplicate checks against historical exposed RGB; uncertainty cannot pass."
+  ],
+  "sampling": "No independent sequence selected; provisional FBMS family count is NOT N_NEW_SEQUENCES.",
+  "target_gt_downloaded": 0,
+  "target_gt_read": 0,
+  "new_rgb_downloaded": 0,
+  "new_source_masks_downloaded": 0,
+  "reserve_touched": false,
+  "davis_official_val_touched": false,
+  "exact_duplicate_audit": "NOT_RUN_NO_QUALIFIED_SELECTION",
+  "near_duplicate_status": "UNVERIFIED",
+  "supports_remote_target_fetch": false,
+  "network_receipt": "resource_request_log.json",
+  "search_boundary": "Two bounded candidates audited; no unbounded further search, no protected split opening."
+}

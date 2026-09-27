@@ -1,0 +1,23 @@
+{
+  "TRAINING_READY": false,
+  "status": "PREPARATION_ARTIFACTS_CREATED",
+  "formal_training_steps": 0,
+  "synthetic_optimizer_steps": 0,
+  "tests": {
+    "passed": 31,
+    "log": "regression_tests.log"
+  },
+  "new_tests": 14,
+  "lint": "PASS",
+  "previous_pilot_implementation_unchanged": true,
+  "code_sha256": {
+    "scripts/prepare_3d_training.py": "df2f346c9603864efcd6dc299dc39ca398d504f88fc3aab58760098aafc92be7",
+    "scripts/probe_3d_training_resources.py": "60e2e4dfd9039c124dd7d6d1e91e49a085315769357c1295e7d6e0f598902559",
+    "src/mcss/mechanism_pilot/calibration.py": "98d3b2d2ceb30a8370c8d418f55059160b2e10184e8298f3395af96771219a91",
+    "src/mcss/mechanism_pilot/training.py": "985928dac37b0a39c0ef2dd9ff909dba613660b0cd36d9ac1de73aa400239b4b",
+    "tests/test_mechanism_calibration.py": "cdf59a6fc8517f05485cedacbce7466a75e07255f866b1246698c716ceedce2e",
+    "tests/test_mechanism_training.py": "09ef4a77bfb88abb2f81354954f2aa2af968694df3e44933811c9e11e79d4535"
+  },
+  "git_commit": "70be8e0ca4b0953a865fc83707fbf511f3268984",
+  "remaining": "cohort/frame provenance, real media, calibrated preprocessing and common-anchor trainer integration, residual training protocol"
+}

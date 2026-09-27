@@ -1,0 +1,3925 @@
+{
+  "448/discovery": {
+    "CycleGate": {
+      "OFF_rate": 0.08333333333333337,
+      "beneficial_write_precision": 0.5454545454545454,
+      "beneficial_write_recall": 0.8,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.0008418429469115248,
+            0.003997955404489144
+          ],
+          "ci97_5": [
+            0.0006450780763382562,
+            0.004227898695257259
+          ],
+          "mean": 0.002329941870981169
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.002720826462608142,
+            9.01964455339591e-05
+          ],
+          "ci97_5": [
+            -0.0031847684457488898,
+            0.00013212771039944338
+          ],
+          "mean": -0.0010005791936588914
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.000688193765577968,
+      "harmful_write_pairs": 4,
+      "harmful_write_rate": 0.18181818181818182,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0023998937342425493,
+          "delta_fixed": -0.0010915409385369723,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.0023607707632225324,
+          "delta_fixed": -0.0010915567300104042,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0026037704556480345,
+          "delta_fixed": -0.0008701333160844367,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0018208048324398383,
+          "delta_fixed": -0.0010651138270516406,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0022228975387919973,
+          "delta_fixed": -0.0011572001891813016,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0019014900962582432,
+          "delta_fixed": -0.0010915409385369723,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0025359730430034085,
+          "delta_fixed": -0.0011164650047032992,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.002337586409876948,
+          "delta_fixed": -0.0010915409385369723,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.002101545779772773,
+          "delta_fixed": -0.00020654111914220064,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0025417547683430934,
+          "delta_fixed": -0.0010915409385369723,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.0025417547683430934,
+          "delta_fixed": -0.0010915409385369723,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0025910602618315144,
+          "delta_fixed": -0.001042235445048551,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.4420919250894893,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.4140119923668984,
+      "net_gain": 0.002329941870981169,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.053470400704781124,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.001990824056326168,
+            "positive_contribution_share": 0.0682166694773547,
+            "sequence": "cat-girl",
+            "weighted_contribution": 0.00016590200469384733
+          },
+          {
+            "mean_gap": -0.0006821725603543549,
+            "positive_contribution_share": 0.0,
+            "sequence": "classic-car",
+            "weighted_contribution": -5.684771336286291e-05
+          },
+          {
+            "mean_gap": 0.007930449294935804,
+            "positive_contribution_share": 0.27174115996864523,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0006608707745779837
+          },
+          {
+            "mean_gap": 0.0035074295250620557,
+            "positive_contribution_share": 0.12018398103336625,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00029228579375517133
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.2413291908560886,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": 6.35989787365343e-05,
+            "positive_contribution_share": 0.002179253609971783,
+            "sequence": "lindy-hop",
+            "weighted_contribution": 5.2999148947111925e-06
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.07695533877671293,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.0048422988742735235,
+            "positive_contribution_share": 0.16592400557307943,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.00040352490618946027
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.0005423604283726347,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": -4.519670236438622e-05
+          }
+        ],
+        "top1_positive_share": 0.27174115996864523,
+        "top3_positive_share": 0.6789943563978132
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 12,
+        "tied": 8,
+        "worse": 4
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.79862945517296,
+          "delta_OFF": 0.001990824056326168,
+          "delta_fixed": 1.7370620775114531e-07,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.001990824056326168,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 0.00016590200469384733,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.40871286276468405,
+          "delta_OFF": -0.0006821725603543549,
+          "delta_fixed": -0.0024354838469778928,
+          "harmful_loss": 0.003710641076516058,
+          "n_pairs": 2,
+          "positive_gain": 0.003028468516161703,
+          "sequence": "classic-car",
+          "weighted_net_contribution": -5.684771336286291e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.6032879110784265,
+          "delta_OFF": 0.007930449294935804,
+          "delta_fixed": -0.00029069822633864817,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.007930449294935804,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0006608707745779837,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": 0.0007222517570876219,
+          "harmful_loss": 0.0027074662461310517,
+          "n_pairs": 2,
+          "positive_gain": 0.006214895771193107,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00029228579375517133,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.26949415090475715,
+          "delta_OFF": 6.35989787365343e-05,
+          "delta_fixed": 0.00027416472782959556,
+          "harmful_loss": 0.0012978574359158723,
+          "n_pairs": 2,
+          "positive_gain": 0.0013614564146524066,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": 5.2999148947111925e-06,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.30001317915279113,
+          "delta_OFF": 0.0048422988742735235,
+          "delta_fixed": -0.009734998013342488,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0048422988742735235,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.00040352490618946027,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.29323456046145396,
+          "delta_OFF": -0.0005423604283726347,
+          "delta_fixed": -0.0005423604283726347,
+          "harmful_loss": 0.0005423604283726347,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": -4.519670236438622e-05,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.5362985075671377,
+      "positive_gain": 0.003018135636559137,
+      "regret_to_dynamic_oracle": 0.003297774025993064,
+      "secondary": {
+        "F": 0.45837884146951047,
+        "JF": 0.45023538327949986,
+        "token_iou": 0.4445930626243353
+      },
+      "secondary_vs_GateOnly": {
+        "ci95": [
+          -0.0010727353563884285,
+          0.000133109007465079
+        ],
+        "mean": -0.0003224920046834741,
+        "scope": "Secondary descriptive paired sequence comparison, not primary H2"
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 8,
+        "tied": 2,
+        "worse": 2
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 2,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.9166666666666666,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 22,
+      "write_rate": 0.9166666666666666
+    },
+    "CycleGate_outer_OOF_before_fallback": {
+      "OFF_rate": 0.25,
+      "beneficial_write_precision": 0.4444444444444444,
+      "beneficial_write_recall": 0.5333333333333333,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.00012908453815257647,
+            0.0025960515039037822
+          ],
+          "ci97_5": [
+            1.215387129848469e-05,
+            0.0028521792118089938
+          ],
+          "mean": 0.0012442861950920866
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.0047988682514506975,
+            -0.00014272555238431864
+          ],
+          "ci97_5": [
+            -0.0052360114486005764,
+            -6.081103725457301e-05
+          ],
+          "mean": -0.0020862348695479733
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.000688193765577968,
+      "harmful_write_pairs": 4,
+      "harmful_write_rate": 0.2222222222222222,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0012155420878180963,
+          "delta_fixed": -0.0022758925849614255,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.0011764191167980794,
+          "delta_fixed": -0.0022759083764348573,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0014194188092235814,
+          "delta_fixed": -0.00205448496250889,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0012568270789011175,
+          "delta_fixed": -0.0016290915805903616,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.001038545892367544,
+          "delta_fixed": -0.002341551835605755,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0007171384498337899,
+          "delta_fixed": -0.0022758925849614255,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0014753901615473556,
+          "delta_fixed": -0.0021770478861593517,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.001153234763452495,
+          "delta_fixed": -0.0022758925849614255,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.00135740312191864,
+          "delta_fixed": -0.0009506837769963336,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.00135740312191864,
+          "delta_fixed": -0.0022758925849614255,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.00135740312191864,
+          "delta_fixed": -0.0022758925849614255,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0014067086154070615,
+          "delta_fixed": -0.0022265870914730044,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.44100626941360027,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.22109968197951907,
+      "net_gain": 0.0012442861950920868,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.08940569737862354,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.001990824056326168,
+            "positive_contribution_share": 0.1140623377996233,
+            "sequence": "cat-girl",
+            "weighted_contribution": 0.00016590200469384733
+          },
+          {
+            "mean_gap": -0.0006821725603543549,
+            "positive_contribution_share": 0.0,
+            "sequence": "classic-car",
+            "weighted_contribution": -5.684771336286291e-05
+          },
+          {
+            "mean_gap": 0.0011063364731927483,
+            "positive_contribution_share": 0.06338647763691704,
+            "sequence": "color-run",
+            "weighted_contribution": 9.219470609939569e-05
+          },
+          {
+            "mean_gap": 0.0035074295250620557,
+            "positive_contribution_share": 0.20095478052152663,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00029228579375517133
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.40351679287823766,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": -0.0012978574359158723,
+            "positive_contribution_share": 0.0,
+            "sequence": "lindy-hop",
+            "weighted_contribution": -0.0001081547863263227
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.12867391378507181,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.0005423604283726347,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": -4.519670236438622e-05
+          }
+        ],
+        "top1_positive_share": 0.40351679287823766,
+        "top3_positive_share": 0.7331454871848361
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 8,
+        "tied": 12,
+        "worse": 4
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.79862945517296,
+          "delta_OFF": 0.001990824056326168,
+          "delta_fixed": 1.7370620775114531e-07,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.001990824056326168,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 0.00016590200469384733,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.40871286276468405,
+          "delta_OFF": -0.0006821725603543549,
+          "delta_fixed": -0.0024354838469778928,
+          "harmful_loss": 0.003710641076516058,
+          "n_pairs": 2,
+          "positive_gain": 0.003028468516161703,
+          "sequence": "classic-car",
+          "weighted_net_contribution": -5.684771336286291e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5964637982566835,
+          "delta_OFF": 0.0011063364731927483,
+          "delta_fixed": -0.007114811048081704,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0011063364731927483,
+          "sequence": "color-run",
+          "weighted_net_contribution": 9.219470609939569e-05,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": 0.0007222517570876219,
+          "harmful_loss": 0.0027074662461310517,
+          "n_pairs": 2,
+          "positive_gain": 0.006214895771193107,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00029228579375517133,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2681326944901048,
+          "delta_OFF": -0.0012978574359158723,
+          "delta_fixed": -0.001087291686822811,
+          "harmful_loss": 0.0012978574359158723,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": -0.0001081547863263227,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2951708802785176,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.014577296887616012,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.29323456046145396,
+          "delta_OFF": -0.0005423604283726347,
+          "delta_fixed": -0.0005423604283726347,
+          "harmful_loss": 0.0005423604283726347,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": -4.519670236438622e-05,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.3433861971797584,
+      "positive_gain": 0.0019324799606700548,
+      "regret_to_dynamic_oracle": 0.0043834297018821465,
+      "secondary": {
+        "F": 0.45767958799628783,
+        "JF": 0.44934292870494397,
+        "token_iou": 0.44397570627431077
+      },
+      "secondary_vs_GateOnly": {
+        "ci95": [
+          -0.00014051083332890235,
+          0.00034289519537283414
+        ],
+        "mean": 8.817109733204782e-05,
+        "scope": "Secondary descriptive paired sequence comparison, not primary H2"
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 6,
+        "tied": 3,
+        "worse": 3
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.75,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 18,
+      "write_rate": 0.75
+    },
+    "GateOnly": {
+      "OFF_rate": 0.08333333333333337,
+      "beneficial_write_precision": 0.5454545454545454,
+      "beneficial_write_recall": 0.8,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.0008729163239941098,
+            0.004826359659002294
+          ],
+          "ci97_5": [
+            0.000672314744404931,
+            0.005256237734875547
+          ],
+          "mean": 0.002652433875664643
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.0025905854018025746,
+            0.0007458105905313701
+          ],
+          "ci97_5": [
+            -0.002866579205032805,
+            0.0009074269943182267
+          ],
+          "mean": -0.0006780871889754172
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.000688193765577968,
+      "harmful_write_pairs": 4,
+      "harmful_write_rate": 0.18181818181818182,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0027517031938972484,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.0027849195796859376,
+          "delta_fixed": -0.0006674079135469993,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0029044850668194966,
+          "delta_fixed": -0.0005694187049129748,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0017995603241143696,
+          "delta_fixed": -0.0010863583353771093,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0025747069984466964,
+          "delta_fixed": -0.0008053907295266026,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0022532995559129423,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0028877825026581076,
+          "delta_fixed": -0.0007646555450486002,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.002689395869531647,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.002453355239427472,
+          "delta_fixed": 0.00014526834051249843,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0028935642279977925,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.0028935642279977925,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0029428697214862135,
+          "delta_fixed": -0.000690425985393852,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.4424144170941728,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.4713162363243561,
+      "net_gain": 0.0026524338756646433,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.04802677481837287,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.0011950911314304036,
+            "positive_contribution_share": 0.0367814325672871,
+            "sequence": "cat-girl",
+            "weighted_contribution": 9.95909276192003e-05
+          },
+          {
+            "mean_gap": -0.00012012922703874551,
+            "positive_contribution_share": 0.0,
+            "sequence": "classic-car",
+            "weighted_contribution": -1.001076891989546e-05
+          },
+          {
+            "mean_gap": 0.012034042942717649,
+            "positive_contribution_share": 0.3703728756480887,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0010028369118931374
+          },
+          {
+            "mean_gap": 0.0035074295250620557,
+            "positive_contribution_share": 0.10794848959022224,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00029228579375517133
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.21676034878319395,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": 6.35989787365343e-05,
+            "positive_contribution_share": 0.001957391772246107,
+            "sequence": "lindy-hop",
+            "weighted_contribution": 5.2999148947111925e-06
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.06912079725952595,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.0048422988742735235,
+            "positive_contribution_share": 0.1490318895610631,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.00040352490618946027
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.0005423604283726347,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": -4.519670236438622e-05
+          }
+        ],
+        "top1_positive_share": 0.3703728756480887,
+        "top3_positive_share": 0.7361651139923457
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 12,
+        "tied": 8,
+        "worse": 4
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7978337222480643,
+          "delta_OFF": 0.0011950911314304036,
+          "delta_fixed": -0.0007955592186880134,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0011950911314304036,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 9.95909276192003e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.40927490609799966,
+          "delta_OFF": -0.00012012922703874551,
+          "delta_fixed": -0.0018734405136622834,
+          "harmful_loss": 0.003710641076516058,
+          "n_pairs": 2,
+          "positive_gain": 0.0035905118494773125,
+          "sequence": "classic-car",
+          "weighted_net_contribution": -1.001076891989546e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.6073915047262084,
+          "delta_OFF": 0.012034042942717649,
+          "delta_fixed": 0.0038128954214431965,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.012034042942717649,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0010028369118931374,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": 0.0007222517570876219,
+          "harmful_loss": 0.0027074662461310517,
+          "n_pairs": 2,
+          "positive_gain": 0.006214895771193107,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00029228579375517133,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.26949415090475715,
+          "delta_OFF": 6.35989787365343e-05,
+          "delta_fixed": 0.00027416472782959556,
+          "harmful_loss": 0.0012978574359158723,
+          "n_pairs": 2,
+          "positive_gain": 0.0013614564146524066,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": 5.2999148947111925e-06,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.30001317915279113,
+          "delta_OFF": 0.0048422988742735235,
+          "delta_fixed": -0.009734998013342488,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0048422988742735235,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.00040352490618946027,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.29323456046145396,
+          "delta_OFF": -0.0005423604283726347,
+          "delta_fixed": -0.0005423604283726347,
+          "harmful_loss": 0.0005423604283726347,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": -4.519670236438622e-05,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.5936027515245954,
+      "positive_gain": 0.003340627641242611,
+      "regret_to_dynamic_oracle": 0.00297528202130959,
+      "secondary": {
+        "F": 0.4588459309445374,
+        "JF": 0.45063017401935507,
+        "token_iou": 0.44483023074766
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 8,
+        "tied": 2,
+        "worse": 2
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 2,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.9166666666666666,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 22,
+      "write_rate": 0.9166666666666666
+    },
+    "GateOnly_outer_OOF_before_fallback": {
+      "OFF_rate": 0.25,
+      "beneficial_write_precision": 0.4444444444444444,
+      "beneficial_write_recall": 0.5333333333333333,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            7.827312280470776e-05,
+            0.00250299279005446
+          ],
+          "ci97_5": [
+            -1.8391172863039313e-05,
+            0.0027450171134755343
+          ],
+          "mean": 0.0011561150977600389
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.004851244168279402,
+            -0.00020210094449028826
+          ],
+          "ci97_5": [
+            -0.005285790404733137,
+            -0.00011760225905508663
+          ],
+          "mean": -0.0021744059668800213
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.000688193765577968,
+      "harmful_write_pairs": 4,
+      "harmful_write_rate": 0.2222222222222222,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.001119355436183135,
+          "delta_fixed": -0.002372079236596387,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.001152571821971824,
+          "delta_fixed": -0.0022997556712611128,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.001272137309105383,
+          "delta_fixed": -0.0022017664626270885,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0012612164702836789,
+          "delta_fixed": -0.0016247021892078003,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0009423592407325828,
+          "delta_fixed": -0.002437738487240716,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0006209517981988287,
+          "delta_fixed": -0.002372079236596387,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0013792035099123945,
+          "delta_fixed": -0.0022732345377943133,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.0010570481118175336,
+          "delta_fixed": -0.002372079236596387,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.0012355825705756488,
+          "delta_fixed": -0.0010725043283393249,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0012612164702836789,
+          "delta_fixed": -0.002372079236596387,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.0012612164702836789,
+          "delta_fixed": -0.002372079236596387,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0013105219637721001,
+          "delta_fixed": -0.0023227737431079656,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.44091809831626816,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.20543238481203882,
+      "net_gain": 0.0011561150977600389,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.0985536286238907,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.0011950911314304036,
+            "positive_contribution_share": 0.0754775572417649,
+            "sequence": "cat-girl",
+            "weighted_contribution": 9.95909276192003e-05
+          },
+          {
+            "mean_gap": -0.00012012922703874551,
+            "positive_contribution_share": 0.0,
+            "sequence": "classic-car",
+            "weighted_contribution": -1.001076891989546e-05
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0035074295250620557,
+            "positive_contribution_share": 0.22151633945477434,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00029228579375517133
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.4448043616327028,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": -0.0012978574359158723,
+            "positive_contribution_share": 0.0,
+            "sequence": "lindy-hop",
+            "weighted_contribution": -0.0001081547863263227
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.14183974270736496,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.0002819728967883295,
+            "positive_contribution_share": 0.017808370339502267,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 2.3497741399027456e-05
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.0005423604283726347,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": -4.519670236438622e-05
+          }
+        ],
+        "top1_positive_share": 0.4448043616327028,
+        "top3_positive_share": 0.8081604437948421
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 8,
+        "tied": 12,
+        "worse": 4
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7978337222480643,
+          "delta_OFF": 0.0011950911314304036,
+          "delta_fixed": -0.0007955592186880134,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0011950911314304036,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 9.95909276192003e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.40927490609799966,
+          "delta_OFF": -0.00012012922703874551,
+          "delta_fixed": -0.0018734405136622834,
+          "harmful_loss": 0.003710641076516058,
+          "n_pairs": 2,
+          "positive_gain": 0.0035905118494773125,
+          "sequence": "classic-car",
+          "weighted_net_contribution": -1.001076891989546e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5953574617834907,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.008221147521274452,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": 0.0007222517570876219,
+          "harmful_loss": 0.0027074662461310517,
+          "n_pairs": 2,
+          "positive_gain": 0.006214895771193107,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00029228579375517133,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2681326944901048,
+          "delta_OFF": -0.0012978574359158723,
+          "delta_fixed": -0.001087291686822811,
+          "harmful_loss": 0.0012978574359158723,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": -0.0001081547863263227,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.29545285317530595,
+          "delta_OFF": 0.0002819728967883295,
+          "delta_fixed": -0.014295323990827682,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0002819728967883295,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 2.3497741399027456e-05,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.29323456046145396,
+          "delta_OFF": -0.0005423604283726347,
+          "delta_fixed": -0.0005423604283726347,
+          "harmful_loss": 0.0005423604283726347,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": -4.519670236438622e-05,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.32771890001227816,
+      "positive_gain": 0.001844308863338007,
+      "regret_to_dynamic_oracle": 0.004471600799214194,
+      "secondary": {
+        "F": 0.4578818805284104,
+        "JF": 0.4493999894223393,
+        "token_iou": 0.4438448703537385
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 6,
+        "tied": 3,
+        "worse": 3
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.75,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 18,
+      "write_rate": 0.75
+    },
+    "OFF": {
+      "OFF_rate": 1.0,
+      "beneficial_write_precision": null,
+      "beneficial_write_recall": 0.0,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci97_5": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.005942367659996309,
+            -0.0011831160416193318
+          ],
+          "ci97_5": [
+            -0.006358044222608998,
+            -0.0009913256026250511
+          ],
+          "mean": -0.00333052106464006
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0,
+      "harmful_write_pairs": 0,
+      "harmful_write_rate": null,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0034914346727795216,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.003452327493232937,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0034739037717324713,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.002885918659491479,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0033800977279732987,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0029930310347952155,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0036524380477067075,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0034291273484139202,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0023080868989149737,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0036332957068800657,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0036332957068800657,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0036332957068800657,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.4397619832185082,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.0,
+      "net_gain": 0.0,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "cat-girl",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "classic-car",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "dancing",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "drone",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "lindy-hop",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": null,
+            "sequence": "tractor-sand",
+            "weighted_contribution": 0.0
+          }
+        ],
+        "top1_positive_share": null,
+        "top3_positive_share": null
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 0,
+        "tied": 24,
+        "worse": 0
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 0,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "J": 0.4247278029830644,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0015604713751059818,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.7966386311166338,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.001990650350118417,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.4093950353250384,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0017533112866235379,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "classic-car",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.5953574617834907,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.008221147521274452,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.5071436398123131,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.002785177767974434,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.26655818504176093,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.0070429113929333514,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.2694305519260206,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.00021056574909306125,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.7016237803767973,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.002245851943127597,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.2951708802785176,
+          "delta_OFF": 0.0,
+          "delta_fixed": -0.014577296887616012,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.2937769208898266,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        }
+      ],
+      "positive_capture": 0.0,
+      "positive_gain": 0.0,
+      "regret_to_dynamic_oracle": 0.005627715896974233,
+      "secondary": {
+        "F": 0.4539829453122905,
+        "JF": 0.4468724642653992,
+        "token_iou": 0.44266647286713123
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 0,
+        "tied": 12,
+        "worse": 0
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 0,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.0,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 0,
+      "write_rate": 0.0
+    },
+    "constant_oracle": {
+      "OFF_rate": 0.45833333333333337,
+      "beneficial_write_precision": 1.0,
+      "beneficial_write_recall": 0.8666666666666667,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.001918339492083838,
+            0.005385671474090664
+          ],
+          "ci97_5": [
+            0.0017241471291350894,
+            0.005673213729559778
+          ],
+          "mean": 0.0035861277804521154
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.0020071616008153336,
+            0.002140353796007374
+          ],
+          "ci97_5": [
+            -0.002278994726492767,
+            0.00238542727308658
+          ],
+          "mean": 0.0002556067158120551
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0,
+      "harmful_write_pairs": 0,
+      "harmful_write_rate": 0.0,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.003770278362756309,
+          "delta_fixed": 0.00027884368997678743,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.003633029107091246,
+          "delta_fixed": 0.00018070161385830917,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.003585729228722552,
+          "delta_fixed": 0.00011182545699008062,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0032113545357735428,
+          "delta_fixed": 0.0003254358762820635,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0029796348553239784,
+          "delta_fixed": -0.00040046287264932067,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.003271874724772003,
+          "delta_fixed": 0.00027884368997678743,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.003782586416844229,
+          "delta_fixed": 0.00013014836913752143,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.00370944699144788,
+          "delta_fixed": 0.00028031964303395926,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.003471930408286533,
+          "delta_fixed": 0.0011638435093715592,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.003912139396856853,
+          "delta_fixed": 0.00027884368997678743,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.003793389940693405,
+          "delta_fixed": 0.0001600942338133394,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.003912139396856853,
+          "delta_fixed": 0.00027884368997678743,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.4433481109989603,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "ANSWER_VISIBLE_DIAGNOSTIC",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.6372261581968296,
+      "net_gain": 0.0035861277804521154,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.036261753406465994,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.0030702131874216776,
+            "positive_contribution_share": 0.07134466885046423,
+            "sequence": "cat-girl",
+            "weighted_contribution": 0.00025585109895180647
+          },
+          {
+            "mean_gap": 0.0035905118494773125,
+            "positive_contribution_share": 0.08343520897965707,
+            "sequence": "classic-car",
+            "weighted_contribution": 0.000299209320789776
+          },
+          {
+            "mean_gap": 0.007708633471916415,
+            "positive_contribution_share": 0.17913085143293847,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0006423861226597013
+          },
+          {
+            "mean_gap": 0.010257549956861622,
+            "positive_contribution_share": 0.23836178799816818,
+            "sequence": "dancing",
+            "weighted_contribution": 0.0008547958297384686
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.1636610067113817,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": 0.0014250827801388644,
+            "positive_contribution_share": 0.03311563491748565,
+            "sequence": "lindy-hop",
+            "weighted_contribution": 0.00011875689834490537
+          },
+          {
+            "mean_gap": 0.0022296164594987067,
+            "positive_contribution_share": 0.05181114087392268,
+            "sequence": "lucia",
+            "weighted_contribution": 0.00018580137162489221
+          },
+          {
+            "mean_gap": 0.0048422988742735235,
+            "positive_contribution_share": 0.11252385048549121,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.00040352490618946027
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0013062440177979279,
+            "positive_contribution_share": 0.0303540963440248,
+            "sequence": "sheep",
+            "weighted_contribution": 0.00010885366814982732
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": 0.0
+          }
+        ],
+        "top1_positive_share": 0.23836178799816818,
+        "top3_positive_share": 0.5811536461424883
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 13,
+        "tied": 11,
+        "worse": 0
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.7997088443040555,
+          "delta_OFF": 0.0030702131874216776,
+          "delta_fixed": 0.0010795628373032606,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0030702131874216776,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 0.00025585109895180647,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.41298554717451574,
+          "delta_OFF": 0.0035905118494773125,
+          "delta_fixed": 0.0018372005628537746,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0035905118494773125,
+          "sequence": "classic-car",
+          "weighted_net_contribution": 0.000299209320789776,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.6030660952554071,
+          "delta_OFF": 0.007708633471916415,
+          "delta_fixed": -0.0005125140493580371,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.007708633471916415,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0006423861226597013,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5174011897691748,
+          "delta_OFF": 0.010257549956861622,
+          "delta_fixed": 0.007472372188887189,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.010257549956861622,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.0008547958297384686,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.2708556347061595,
+          "delta_OFF": 0.0014250827801388644,
+          "delta_fixed": 0.0016356485292319256,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0014250827801388644,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": 0.00011875689834490537,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.7038533968362961,
+          "delta_OFF": 0.0022296164594987067,
+          "delta_fixed": -1.6235483628890268e-05,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0022296164594987067,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.00018580137162489221,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.30001317915279113,
+          "delta_OFF": 0.0048422988742735235,
+          "delta_fixed": -0.009734998013342488,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0048422988742735235,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.00040352490618946027,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.25766200154209584,
+          "delta_OFF": 0.0013062440177979279,
+          "delta_fixed": 0.0013062440177979279,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0013062440177979279,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.00010885366814982732,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.2937769208898266,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        }
+      ],
+      "positive_capture": 0.6372261581968296,
+      "positive_gain": 0.0035861277804521154,
+      "regret_to_dynamic_oracle": 0.0020415881165221175,
+      "secondary": {
+        "F": 0.45908681940786084,
+        "JF": 0.4512174652034105,
+        "token_iou": 0.44681511508921784
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 10,
+        "tied": 2,
+        "worse": 0
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.5416666666666666,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 13,
+      "write_rate": 0.5416666666666666
+    },
+    "discovery_fixed16": {
+      "OFF_rate": 0.0,
+      "beneficial_write_precision": 0.5,
+      "beneficial_write_recall": 0.8,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.0011831160416193316,
+            0.005942367659996308
+          ],
+          "ci97_5": [
+            0.0009913256026250514,
+            0.006358044222609004
+          ],
+          "mean": 0.00333052106464006
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "ci97_5": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0005586884418505115,
+      "harmful_write_pairs": 3,
+      "harmful_write_rate": 0.125,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0034914346727795216,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.003452327493232937,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0034739037717324713,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.002885918659491479,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0033800977279732987,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0029930310347952155,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0036524380477067075,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.0034291273484139202,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.0023080868989149737,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.44309250428314817,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.5918068938822463,
+      "net_gain": 0.00333052106464006,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.03884009317820339,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.001990650350118417,
+            "positive_contribution_share": 0.04954723701905228,
+            "sequence": "cat-girl",
+            "weighted_contribution": 0.00016588752917653474
+          },
+          {
+            "mean_gap": 0.0017533112866235379,
+            "positive_contribution_share": 0.043639873713305924,
+            "sequence": "classic-car",
+            "weighted_contribution": 0.00014610927388529482
+          },
+          {
+            "mean_gap": 0.008221147521274452,
+            "positive_contribution_share": 0.2046241545035513,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0006850956267728711
+          },
+          {
+            "mean_gap": 0.002785177767974434,
+            "positive_contribution_share": 0.06932300441502208,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00023209814733120282
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.1752978869790439,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": -0.00021056574909306125,
+            "positive_contribution_share": 0.0,
+            "sequence": "lindy-hop",
+            "weighted_contribution": -1.7547145757755105e-05
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.05589919823399561,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.014577296887616012,
+            "positive_contribution_share": 0.36282855195782554,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.0012147747406346676
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": 0.0
+          }
+        ],
+        "top1_positive_share": 0.36282855195782554,
+        "top3_positive_share": 0.7427505934404207
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 12,
+        "tied": 9,
+        "worse": 3
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 6,
+        "0.01": 4,
+        "0.02": 1
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7986292814667523,
+          "delta_OFF": 0.001990650350118417,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.001990650350118417,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 0.00016588752917653474,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.41114834661166194,
+          "delta_OFF": 0.0017533112866235379,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.003711198917381725,
+          "n_pairs": 2,
+          "positive_gain": 0.005464510204005263,
+          "sequence": "classic-car",
+          "weighted_net_contribution": 0.00014610927388529482,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.6035786093047651,
+          "delta_OFF": 0.008221147521274452,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.008221147521274452,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0006850956267728711,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5099288175802876,
+          "delta_OFF": 0.002785177767974434,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0013870176541798118,
+          "n_pairs": 2,
+          "positive_gain": 0.004172195422154246,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00023209814733120282,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.26921998617692755,
+          "delta_OFF": -0.00021056574909306125,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0016060447306446013,
+          "n_pairs": 2,
+          "positive_gain": 0.00139547898155154,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": -1.7547145757755105e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.3097481771661336,
+          "delta_OFF": 0.014577296887616012,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.014577296887616012,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.0012147747406346676,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2937769208898266,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.691081351242628,
+      "positive_gain": 0.0038892095064905715,
+      "regret_to_dynamic_oracle": 0.0022971948323341727,
+      "secondary": {
+        "F": 0.4590188187834554,
+        "JF": 0.45105566153330173,
+        "token_iou": 0.44507551814119023
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 8,
+        "tied": 3,
+        "worse": 1
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 1.0,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 24,
+      "write_rate": 1.0
+    },
+    "dynamic_oracle": {
+      "OFF_rate": 0.375,
+      "beneficial_write_precision": 1.0,
+      "beneficial_write_recall": 1.0,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.002538954755695832,
+            0.009265650136123706
+          ],
+          "ci97_5": [
+            0.0022132155650993095,
+            0.009961194229128032
+          ],
+          "mean": 0.005627715896974233
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            0.0009102359859144427,
+            0.0038410016132595028
+          ],
+          "ci97_5": [
+            0.0007463915375460981,
+            0.004071236305126129
+          ],
+          "mean": 0.0022971948323341727
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0,
+      "harmful_write_pairs": 0,
+      "harmful_write_rate": 0.0,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.005997465398962256,
+          "delta_fixed": 0.002506030726182734,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.005827179732136156,
+          "delta_fixed": 0.00237485223890322,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.005620257015859439,
+          "delta_fixed": 0.002146353244126967,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.005003777848104494,
+          "delta_fixed": 0.002117859188613015,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.005206821891529925,
+          "delta_fixed": 0.0018267241635566258,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0054990617609779495,
+          "delta_fixed": 0.002506030726182734,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.005941399854585452,
+          "delta_fixed": 0.002288961806878744,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.005935158074596655,
+          "delta_fixed": 0.002506030726182734,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.004202239343913519,
+          "delta_fixed": 0.0018941524449985455,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0061393264330628,
+          "delta_fixed": 0.002506030726182734,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.006020576976899352,
+          "delta_fixed": 0.002387281270019286,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0061393264330628,
+          "delta_fixed": 0.002506030726182734,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.44538969911548243,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "ANSWER_VISIBLE_DIAGNOSTIC",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 1.0,
+      "net_gain": 0.005627715896974233,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.023106937812683123,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.003433613710193073,
+            "positive_contribution_share": 0.05084380254576537,
+            "sequence": "cat-girl",
+            "weighted_contribution": 0.00028613447584942275
+          },
+          {
+            "mean_gap": 0.005709763589236971,
+            "positive_contribution_share": 0.08454826809793964,
+            "sequence": "classic-car",
+            "weighted_contribution": 0.0004758136324364143
+          },
+          {
+            "mean_gap": 0.01249103443454136,
+            "positive_contribution_share": 0.1849630569964335,
+            "sequence": "color-run",
+            "weighted_contribution": 0.00104091953621178
+          },
+          {
+            "mean_gap": 0.010257549956861622,
+            "positive_contribution_share": 0.15189036642699988,
+            "sequence": "dancing",
+            "weighted_contribution": 0.0008547958297384686
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.1042890745533193,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": 0.0021771923632508267,
+            "positive_contribution_share": 0.03223913578066672,
+            "sequence": "lindy-hop",
+            "weighted_contribution": 0.0001814326969375689
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.03325582385823542,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.021307957980642084,
+            "positive_contribution_share": 0.3155211097291177,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.001775663165053507
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0013062440177979279,
+            "positive_contribution_share": 0.019342424198839355,
+            "sequence": "sheep",
+            "weighted_contribution": 0.00010885366814982732
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": 0.0
+          }
+        ],
+        "top1_positive_share": 0.3155211097291177,
+        "top3_positive_share": 0.6523745331525511
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 15,
+        "tied": 9,
+        "worse": 0
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 6,
+        "0.01": 6,
+        "0.02": 4
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.8000722448268269,
+          "delta_OFF": 0.003433613710193073,
+          "delta_fixed": 0.001442963360074656,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.003433613710193073,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 0.00028613447584942275,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4151047989142754,
+          "delta_OFF": 0.005709763589236971,
+          "delta_fixed": 0.0039564523026134335,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.005709763589236971,
+          "sequence": "classic-car",
+          "weighted_net_contribution": 0.0004758136324364143,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.607848496218032,
+          "delta_OFF": 0.01249103443454136,
+          "delta_fixed": 0.004269886913266907,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.01249103443454136,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.00104091953621178,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5174011897691748,
+          "delta_OFF": 0.010257549956861622,
+          "delta_fixed": 0.007472372188887189,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.010257549956861622,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.0008547958297384686,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.2716077442892715,
+          "delta_OFF": 0.0021771923632508267,
+          "delta_fixed": 0.002387758112343888,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0021771923632508267,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": 0.0001814326969375689,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.3164788382591597,
+          "delta_OFF": 0.021307957980642084,
+          "delta_fixed": 0.006730661093026072,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.021307957980642084,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.001775663165053507,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.25766200154209584,
+          "delta_OFF": 0.0013062440177979279,
+          "delta_fixed": 0.0013062440177979279,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0013062440177979279,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.00010885366814982732,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.2937769208898266,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        }
+      ],
+      "positive_capture": 1.0,
+      "positive_gain": 0.005627715896974233,
+      "regret_to_dynamic_oracle": 0.0,
+      "secondary": {
+        "F": 0.46067684870821307,
+        "JF": 0.4530332739118477,
+        "token_iou": 0.4486174775908391
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 10,
+        "tied": 2,
+        "worse": 0
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "sequence_weighted_write_rate": 0.625,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 15,
+      "write_rate": 0.625
+    },
+    "hindsight_global16": {
+      "OFF_rate": 0.0,
+      "beneficial_write_precision": 0.5,
+      "beneficial_write_recall": 0.8,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {},
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0005586884418505115,
+      "harmful_write_pairs": 3,
+      "harmful_write_rate": 0.125,
+      "interval_note": "Do not bootstrap the full-sample winner as fixed; sample-dependence intervals/LOSO are in global_diagnostic with reoptimization",
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0034914346727795216,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.003452327493232937,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0034739037717324713,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.002885918659491479,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0033800977279732987,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0029930310347952155,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0036524380477067075,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.0034291273484139202,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.0023080868989149737,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": 0.0,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.44309250428314817,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "ANSWER_VISIBLE_DIAGNOSTIC",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.5918068938822463,
+      "net_gain": 0.00333052106464006,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.03884009317820339,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.001990650350118417,
+            "positive_contribution_share": 0.04954723701905228,
+            "sequence": "cat-girl",
+            "weighted_contribution": 0.00016588752917653474
+          },
+          {
+            "mean_gap": 0.0017533112866235379,
+            "positive_contribution_share": 0.043639873713305924,
+            "sequence": "classic-car",
+            "weighted_contribution": 0.00014610927388529482
+          },
+          {
+            "mean_gap": 0.008221147521274452,
+            "positive_contribution_share": 0.2046241545035513,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0006850956267728711
+          },
+          {
+            "mean_gap": 0.002785177767974434,
+            "positive_contribution_share": 0.06932300441502208,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00023209814733120282
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.1752978869790439,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": -0.00021056574909306125,
+            "positive_contribution_share": 0.0,
+            "sequence": "lindy-hop",
+            "weighted_contribution": -1.7547145757755105e-05
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.05589919823399561,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.014577296887616012,
+            "positive_contribution_share": 0.36282855195782554,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.0012147747406346676
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": 0.0
+          }
+        ],
+        "top1_positive_share": 0.36282855195782554,
+        "top3_positive_share": 0.7427505934404207
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 12,
+        "tied": 9,
+        "worse": 3
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 6,
+        "0.01": 4,
+        "0.02": 1
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7986292814667523,
+          "delta_OFF": 0.001990650350118417,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.001990650350118417,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 0.00016588752917653474,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.41114834661166194,
+          "delta_OFF": 0.0017533112866235379,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.003711198917381725,
+          "n_pairs": 2,
+          "positive_gain": 0.005464510204005263,
+          "sequence": "classic-car",
+          "weighted_net_contribution": 0.00014610927388529482,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.6035786093047651,
+          "delta_OFF": 0.008221147521274452,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.008221147521274452,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0006850956267728711,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5099288175802876,
+          "delta_OFF": 0.002785177767974434,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0013870176541798118,
+          "n_pairs": 2,
+          "positive_gain": 0.004172195422154246,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00023209814733120282,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.26921998617692755,
+          "delta_OFF": -0.00021056574909306125,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0016060447306446013,
+          "n_pairs": 2,
+          "positive_gain": 0.00139547898155154,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": -1.7547145757755105e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.3097481771661336,
+          "delta_OFF": 0.014577296887616012,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.014577296887616012,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.0012147747406346676,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2937769208898266,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.691081351242628,
+      "positive_gain": 0.0038892095064905715,
+      "regret_to_dynamic_oracle": 0.0022971948323341727,
+      "secondary": {
+        "F": 0.4590188187834554,
+        "JF": 0.45105566153330173,
+        "token_iou": 0.44507551814119023
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 8,
+        "tied": 3,
+        "worse": 1
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 1.0,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 24,
+      "write_rate": 1.0
+    },
+    "v1_rgb_selector": {
+      "OFF_rate": 0.04166666666666663,
+      "beneficial_write_precision": 0.5652173913043478,
+      "beneficial_write_recall": 0.8666666666666667,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            -0.0001525458982252357,
+            0.004096813248656739
+          ],
+          "ci97_5": [
+            -0.00044215532625966193,
+            0.004446551043478091
+          ],
+          "mean": 0.0020088141171995823
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.0032266884365251534,
+            0.00019018157483087885
+          ],
+          "ci97_5": [
+            -0.003553818643988434,
+            0.0003232306293330392
+          ],
+          "mean": -0.001321706947440478
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.0010589020946414757,
+      "harmful_write_pairs": 5,
+      "harmful_write_rate": 0.21739130434782608,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0020495725482990003,
+          "delta_fixed": -0.0014418621244805215,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.0020827889340876895,
+          "delta_fixed": -0.0013695385591452475,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0018650234142652431,
+          "delta_fixed": -0.0016088803574672282,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0014028766982440673,
+          "delta_fixed": -0.0014830419612474118,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0018725763528484483,
+          "delta_fixed": -0.0015075213751248506,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.001551168910314694,
+          "delta_fixed": -0.0014418621244805215,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.00221366888385338,
+          "delta_fixed": -0.0014387691638533275,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.001987265223933399,
+          "delta_fixed": -0.0014418621244805215,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.0017512245938292239,
+          "delta_fixed": -0.0005568623050857497,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0021914335823995444,
+          "delta_fixed": -0.0014418621244805215,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.002616249575486333,
+          "delta_fixed": -0.001017046131393733,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0025219206888339642,
+          "delta_fixed": -0.0011113750180461015,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.4417707973357077,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.3569501648581142,
+      "net_gain": 0.0020088141171995823,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.047781196621229795,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.0011950911314304036,
+            "positive_contribution_share": 0.036593355855236924,
+            "sequence": "cat-girl",
+            "weighted_contribution": 9.95909276192003e-05
+          },
+          {
+            "mean_gap": 0.0035905118494773125,
+            "positive_contribution_share": 0.1099404675969011,
+            "sequence": "classic-car",
+            "weighted_contribution": 0.000299209320789776
+          },
+          {
+            "mean_gap": 0.008674125725710247,
+            "positive_contribution_share": 0.26559930122991215,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0007228438104758539
+          },
+          {
+            "mean_gap": 0.0035074295250620557,
+            "positive_contribution_share": 0.1073965100838294,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00029228579375517133
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.2156519750506751,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": -0.00024458831599219466,
+            "positive_contribution_share": 0.0,
+            "sequence": "lindy-hop",
+            "weighted_contribution": -2.038235966601622e-05
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.06876735772834193,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.0048422988742735235,
+            "positive_contribution_share": 0.1482698358338736,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.00040352490618946027
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.0046729759239546725,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": -0.00038941466032955604
+          },
+          {
+            "mean_gap": -0.0036353581707786187,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": -0.00030294651423155156
+          }
+        ],
+        "top1_positive_share": 0.26559930122991215,
+        "top3_positive_share": 0.6295211121144608
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 13,
+        "tied": 6,
+        "worse": 5
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7978337222480643,
+          "delta_OFF": 0.0011950911314304036,
+          "delta_fixed": -0.0007955592186880134,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0011950911314304036,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 9.95909276192003e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.41298554717451574,
+          "delta_OFF": 0.0035905118494773125,
+          "delta_fixed": 0.0018372005628537746,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0035905118494773125,
+          "sequence": "classic-car",
+          "weighted_net_contribution": 0.000299209320789776,
+          "write_rate": 0.5
+        },
+        {
+          "J": 0.6040315875092009,
+          "delta_OFF": 0.008674125725710247,
+          "delta_fixed": 0.0004529782044357944,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.008674125725710247,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0007228438104758539,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": 0.0007222517570876219,
+          "harmful_loss": 0.0027074662461310517,
+          "n_pairs": 2,
+          "positive_gain": 0.006214895771193107,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00029228579375517133,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.26918596361002844,
+          "delta_OFF": -0.00024458831599219466,
+          "delta_fixed": -3.402256689913341e-05,
+          "harmful_loss": 0.0016060447306446013,
+          "n_pairs": 2,
+          "positive_gain": 0.0013614564146524066,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": -2.038235966601622e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.30001317915279113,
+          "delta_OFF": 0.0048422988742735235,
+          "delta_fixed": -0.009734998013342488,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0048422988742735235,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.00040352490618946027,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.2516827816003433,
+          "delta_OFF": -0.0046729759239546725,
+          "delta_fixed": -0.0046729759239546725,
+          "harmful_loss": 0.004757955988143436,
+          "n_pairs": 2,
+          "positive_gain": 8.49800641887638e-05,
+          "sequence": "sheep",
+          "weighted_net_contribution": -0.00038941466032955604,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.29014156271904795,
+          "delta_OFF": -0.0036353581707786187,
+          "delta_fixed": -0.0036353581707786187,
+          "harmful_loss": 0.0036353581707786187,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": -0.00030294651423155156,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.5451085783293413,
+      "positive_gain": 0.003067716211841058,
+      "regret_to_dynamic_oracle": 0.0036189017797746506,
+      "secondary": {
+        "F": 0.4582036582140154,
+        "JF": 0.4499872277748615,
+        "token_iou": 0.44420720388491947
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 8,
+        "tied": 1,
+        "worse": 3
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 2,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.9583333333333334,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 23,
+      "write_rate": 0.9583333333333334
+    },
+    "v1_visible_selector": {
+      "OFF_rate": 0.08333333333333337,
+      "beneficial_write_precision": 0.5454545454545454,
+      "beneficial_write_recall": 0.8,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "comparisons": {
+        "vs_OFF": {
+          "ci95": [
+            0.0008729163239941098,
+            0.004826359659002294
+          ],
+          "ci97_5": [
+            0.000672314744404931,
+            0.005256237734875547
+          ],
+          "mean": 0.002652433875664643
+        },
+        "vs_discovery_fixed16": {
+          "ci95": [
+            -0.0025905854018025746,
+            0.0007458105905313701
+          ],
+          "ci97_5": [
+            -0.002866579205032805,
+            0.0009074269943182267
+          ],
+          "mean": -0.0006780871889754172
+        }
+      },
+      "decision_rate_denominators": {
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol",
+        "harmful_write_rate": "all writing pairs"
+      },
+      "draws": 10000,
+      "harmful_loss": 0.000688193765577968,
+      "harmful_write_pairs": 4,
+      "harmful_write_rate": 0.18181818181818182,
+      "leave_one_sequence_out": [
+        {
+          "delta_OFF": 0.0027517031938972484,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "bmx-bumps"
+        },
+        {
+          "delta_OFF": 0.0027849195796859376,
+          "delta_fixed": -0.0006674079135469993,
+          "omitted_sequence": "cat-girl"
+        },
+        {
+          "delta_OFF": 0.0029044850668194966,
+          "delta_fixed": -0.0005694187049129748,
+          "omitted_sequence": "classic-car"
+        },
+        {
+          "delta_OFF": 0.0017995603241143696,
+          "delta_fixed": -0.0010863583353771093,
+          "omitted_sequence": "color-run"
+        },
+        {
+          "delta_OFF": 0.0025747069984466964,
+          "delta_fixed": -0.0008053907295266026,
+          "omitted_sequence": "dancing"
+        },
+        {
+          "delta_OFF": 0.0022532995559129423,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "drone"
+        },
+        {
+          "delta_OFF": 0.0028877825026581076,
+          "delta_fixed": -0.0007646555450486002,
+          "omitted_sequence": "lindy-hop"
+        },
+        {
+          "delta_OFF": 0.002689395869531647,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "lucia"
+        },
+        {
+          "delta_OFF": 0.002453355239427472,
+          "delta_fixed": 0.00014526834051249843,
+          "omitted_sequence": "motocross-bumps"
+        },
+        {
+          "delta_OFF": 0.0028935642279977925,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "paragliding"
+        },
+        {
+          "delta_OFF": 0.0028935642279977925,
+          "delta_fixed": -0.0007397314788822732,
+          "omitted_sequence": "sheep"
+        },
+        {
+          "delta_OFF": 0.0029428697214862135,
+          "delta_fixed": -0.000690425985393852,
+          "omitted_sequence": "tractor-sand"
+        }
+      ],
+      "mean_J": 0.4424144170941728,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": 0.44309250428314817,
+      "method_scope": "STORED_DECISION_OR_FIXED_BASELINE",
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "net_capture": 0.4713162363243561,
+      "net_gain": 0.0026524338756646433,
+      "net_gain_contributions": {
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+        "per_sequence": [
+          {
+            "mean_gap": 0.0015604713751059818,
+            "positive_contribution_share": 0.04802677481837287,
+            "sequence": "bmx-bumps",
+            "weighted_contribution": 0.00013003928125883182
+          },
+          {
+            "mean_gap": 0.0011950911314304036,
+            "positive_contribution_share": 0.0367814325672871,
+            "sequence": "cat-girl",
+            "weighted_contribution": 9.95909276192003e-05
+          },
+          {
+            "mean_gap": -0.00012012922703874551,
+            "positive_contribution_share": 0.0,
+            "sequence": "classic-car",
+            "weighted_contribution": -1.001076891989546e-05
+          },
+          {
+            "mean_gap": 0.012034042942717649,
+            "positive_contribution_share": 0.3703728756480887,
+            "sequence": "color-run",
+            "weighted_contribution": 0.0010028369118931374
+          },
+          {
+            "mean_gap": 0.0035074295250620557,
+            "positive_contribution_share": 0.10794848959022224,
+            "sequence": "dancing",
+            "weighted_contribution": 0.00029228579375517133
+          },
+          {
+            "mean_gap": 0.0070429113929333514,
+            "positive_contribution_share": 0.21676034878319395,
+            "sequence": "drone",
+            "weighted_contribution": 0.000586909282744446
+          },
+          {
+            "mean_gap": 6.35989787365343e-05,
+            "positive_contribution_share": 0.001957391772246107,
+            "sequence": "lindy-hop",
+            "weighted_contribution": 5.2999148947111925e-06
+          },
+          {
+            "mean_gap": 0.002245851943127597,
+            "positive_contribution_share": 0.06912079725952595,
+            "sequence": "lucia",
+            "weighted_contribution": 0.0001871543285939664
+          },
+          {
+            "mean_gap": 0.0048422988742735235,
+            "positive_contribution_share": 0.1490318895610631,
+            "sequence": "motocross-bumps",
+            "weighted_contribution": 0.00040352490618946027
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "paragliding",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": 0.0,
+            "positive_contribution_share": 0.0,
+            "sequence": "sheep",
+            "weighted_contribution": 0.0
+          },
+          {
+            "mean_gap": -0.0005423604283726347,
+            "positive_contribution_share": 0.0,
+            "sequence": "tractor-sand",
+            "weighted_contribution": -4.519670236438622e-05
+          }
+        ],
+        "top1_positive_share": 0.3703728756480887,
+        "top3_positive_share": 0.7361651139923457
+      },
+      "oracle_gain": 0.005627715896974233,
+      "pair_counts": {
+        "improved": 12,
+        "tied": 8,
+        "worse": 4
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 5,
+        "0.01": 3,
+        "0.02": 1
+      },
+      "per_sequence": [
+        {
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0015604713751059818,
+          "sequence": "bmx-bumps",
+          "weighted_net_contribution": 0.00013003928125883182,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7978337222480643,
+          "delta_OFF": 0.0011950911314304036,
+          "delta_fixed": -0.0007955592186880134,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0011950911314304036,
+          "sequence": "cat-girl",
+          "weighted_net_contribution": 9.95909276192003e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.40927490609799966,
+          "delta_OFF": -0.00012012922703874551,
+          "delta_fixed": -0.0018734405136622834,
+          "harmful_loss": 0.003710641076516058,
+          "n_pairs": 2,
+          "positive_gain": 0.0035905118494773125,
+          "sequence": "classic-car",
+          "weighted_net_contribution": -1.001076891989546e-05,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.6073915047262084,
+          "delta_OFF": 0.012034042942717649,
+          "delta_fixed": 0.0038128954214431965,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.012034042942717649,
+          "sequence": "color-run",
+          "weighted_net_contribution": 0.0010028369118931374,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": 0.0007222517570876219,
+          "harmful_loss": 0.0027074662461310517,
+          "n_pairs": 2,
+          "positive_gain": 0.006214895771193107,
+          "sequence": "dancing",
+          "weighted_net_contribution": 0.00029228579375517133,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0070429113929333514,
+          "sequence": "drone",
+          "weighted_net_contribution": 0.000586909282744446,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.26949415090475715,
+          "delta_OFF": 6.35989787365343e-05,
+          "delta_fixed": 0.00027416472782959556,
+          "harmful_loss": 0.0012978574359158723,
+          "n_pairs": 2,
+          "positive_gain": 0.0013614564146524066,
+          "sequence": "lindy-hop",
+          "weighted_net_contribution": 5.2999148947111925e-06,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.002245851943127597,
+          "sequence": "lucia",
+          "weighted_net_contribution": 0.0001871543285939664,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.30001317915279113,
+          "delta_OFF": 0.0048422988742735235,
+          "delta_fixed": -0.009734998013342488,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0048422988742735235,
+          "sequence": "motocross-bumps",
+          "weighted_net_contribution": 0.00040352490618946027,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "paragliding",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": 0.0,
+          "harmful_loss": 0.0,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "sheep",
+          "weighted_net_contribution": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "J": 0.29323456046145396,
+          "delta_OFF": -0.0005423604283726347,
+          "delta_fixed": -0.0005423604283726347,
+          "harmful_loss": 0.0005423604283726347,
+          "n_pairs": 2,
+          "positive_gain": 0.0,
+          "sequence": "tractor-sand",
+          "weighted_net_contribution": -4.519670236438622e-05,
+          "write_rate": 1.0
+        }
+      ],
+      "positive_capture": 0.5936027515245954,
+      "positive_gain": 0.003340627641242611,
+      "regret_to_dynamic_oracle": 0.00297528202130959,
+      "secondary": {
+        "F": 0.4588459309445374,
+        "JF": 0.45063017401935507,
+        "token_iou": 0.44483023074766
+      },
+      "seed": 20260926,
+      "sequence_counts": {
+        "improved": 8,
+        "tied": 2,
+        "worse": 2
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 2,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "sequence_weighted_write_rate": 0.9166666666666666,
+      "status": "COMPLETE",
+      "tie_tolerance": 1e-12,
+      "write_pairs": 22,
+      "write_rate": 0.9166666666666666
+    }
+  }
+}

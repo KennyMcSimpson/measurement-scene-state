@@ -34,15 +34,7 @@ from mcss.dynamic.types import SealedScene, hash_scene_state
 from mcss.types import SceneState
 
 PROJECT = Path(__file__).resolve().parents[2]
-SPLIT_PATH = (
-    PROJECT
-    / "outputs"
-    / "benchmark_protocol_20260920"
-    / "sources"
-    / "Long-LRM"
-    / "data"
-    / "dl3dv_fold_8_kmeans_input_idx.json"
-)
+SPLIT_PATH = PROJECT / "tests/fixtures/long_lrm/dl3dv_fold_8_kmeans_input_idx.json"
 
 
 def _frame(

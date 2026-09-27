@@ -1,0 +1,151 @@
+EEE....................................                                  [100%]
+==================================== ERRORS ====================================
+_____ ERROR at setup of test_seals_precede_queries_and_no_query_in_runtime _____
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x741da3074da0>, _basetemp=PosixPath('/tmp/pytest-of-zonghan/pytest-43'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def run_fixture(tmp_path_factory):
+        root = tmp_path_factory.mktemp("trained-mechanism")
+        fixture = load_module("tests/test_small_3d_training.py", "small_training_fixture")
+        manifest = fixture.manifest_fixture(root)
+        # Shift every pose: missing query/continuation anchoring then becomes observable.
+        for scene in manifest["scenes"]:
+            for frame in scene["frames"]:
+                frame["c2w"][0][3] = 11.0
+                frame["c2w"][2][3] = -7.0
+        path = root / "manifest.json"
+        path.write_text(json.dumps(manifest))
+        torch.manual_seed(20260927)
+        carrier = DynamicSceneCarrier(carrier_config_for_spatial_mode("anchor-centered"))
+        writer = DirectWriteRule(carrier.config, WriteConfig())
+        checkpoint = root / "fixture.pt"
+        save_dynamic_checkpoint(
+            checkpoint, carrier, writer, phase="fixture", provenance={"scope": "fixture"}
+        )
+        runner = load_module("scripts/run_trained_3d_mechanism.py", "trained_mechanism")
+        output = root / "run"
+>       runner.run(path, checkpoint, output, device="cpu", engineering_fixture=True)
+
+tests/test_trained_mechanism.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py:124: in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+scripts/run_trained_3d_mechanism.py:445: in run
+    ledger.seal(key, state)
+src/mcss/mechanism_pilot/contracts.py:57: in seal
+    _validate_sealed(sealed)
+src/mcss/evaluation/sealed_queries.py:93: in _validate_sealed
+    _require_identifier(getattr(sealed, name), name)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 'fixture0/A', name = 'episode_id'
+
+    def _require_identifier(value: Any, name: str) -> None:
+        if not isinstance(value, str) or not value or any(char in value for char in "\\/"):
+>           raise ValueError(f"{name} must be a simple non-empty identifier")
+E           ValueError: episode_id must be a simple non-empty identifier
+
+src/mcss/evaluation/sealed_queries.py:271: ValueError
+_ ERROR at setup of test_fixed_cohorts_recompute_and_query_camera_not_changed __
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x741da3074da0>, _basetemp=PosixPath('/tmp/pytest-of-zonghan/pytest-43'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def run_fixture(tmp_path_factory):
+        root = tmp_path_factory.mktemp("trained-mechanism")
+        fixture = load_module("tests/test_small_3d_training.py", "small_training_fixture")
+        manifest = fixture.manifest_fixture(root)
+        # Shift every pose: missing query/continuation anchoring then becomes observable.
+        for scene in manifest["scenes"]:
+            for frame in scene["frames"]:
+                frame["c2w"][0][3] = 11.0
+                frame["c2w"][2][3] = -7.0
+        path = root / "manifest.json"
+        path.write_text(json.dumps(manifest))
+        torch.manual_seed(20260927)
+        carrier = DynamicSceneCarrier(carrier_config_for_spatial_mode("anchor-centered"))
+        writer = DirectWriteRule(carrier.config, WriteConfig())
+        checkpoint = root / "fixture.pt"
+        save_dynamic_checkpoint(
+            checkpoint, carrier, writer, phase="fixture", provenance={"scope": "fixture"}
+        )
+        runner = load_module("scripts/run_trained_3d_mechanism.py", "trained_mechanism")
+        output = root / "run"
+>       runner.run(path, checkpoint, output, device="cpu", engineering_fixture=True)
+
+tests/test_trained_mechanism.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py:124: in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+scripts/run_trained_3d_mechanism.py:445: in run
+    ledger.seal(key, state)
+src/mcss/mechanism_pilot/contracts.py:57: in seal
+    _validate_sealed(sealed)
+src/mcss/evaluation/sealed_queries.py:93: in _validate_sealed
+    _require_identifier(getattr(sealed, name), name)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 'fixture0/A', name = 'episode_id'
+
+    def _require_identifier(value: Any, name: str) -> None:
+        if not isinstance(value, str) or not value or any(char in value for char in "\\/"):
+>           raise ValueError(f"{name} must be a simple non-empty identifier")
+E           ValueError: episode_id must be a simple non-empty identifier
+
+src/mcss/evaluation/sealed_queries.py:271: ValueError
+_________ ERROR at setup of test_checkpoint_immutable_and_no_overwrite _________
+
+tmp_path_factory = TempPathFactory(_given_basetemp=None, _trace=<pluggy._tracing.TagTracerSub object at 0x741da3074da0>, _basetemp=PosixPath('/tmp/pytest-of-zonghan/pytest-43'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope="module")
+    def run_fixture(tmp_path_factory):
+        root = tmp_path_factory.mktemp("trained-mechanism")
+        fixture = load_module("tests/test_small_3d_training.py", "small_training_fixture")
+        manifest = fixture.manifest_fixture(root)
+        # Shift every pose: missing query/continuation anchoring then becomes observable.
+        for scene in manifest["scenes"]:
+            for frame in scene["frames"]:
+                frame["c2w"][0][3] = 11.0
+                frame["c2w"][2][3] = -7.0
+        path = root / "manifest.json"
+        path.write_text(json.dumps(manifest))
+        torch.manual_seed(20260927)
+        carrier = DynamicSceneCarrier(carrier_config_for_spatial_mode("anchor-centered"))
+        writer = DirectWriteRule(carrier.config, WriteConfig())
+        checkpoint = root / "fixture.pt"
+        save_dynamic_checkpoint(
+            checkpoint, carrier, writer, phase="fixture", provenance={"scope": "fixture"}
+        )
+        runner = load_module("scripts/run_trained_3d_mechanism.py", "trained_mechanism")
+        output = root / "run"
+>       runner.run(path, checkpoint, output, device="cpu", engineering_fixture=True)
+
+tests/test_trained_mechanism.py:48: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py:124: in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+scripts/run_trained_3d_mechanism.py:445: in run
+    ledger.seal(key, state)
+src/mcss/mechanism_pilot/contracts.py:57: in seal
+    _validate_sealed(sealed)
+src/mcss/evaluation/sealed_queries.py:93: in _validate_sealed
+    _require_identifier(getattr(sealed, name), name)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+value = 'fixture0/A', name = 'episode_id'
+
+    def _require_identifier(value: Any, name: str) -> None:
+        if not isinstance(value, str) or not value or any(char in value for char in "\\/"):
+>           raise ValueError(f"{name} must be a simple non-empty identifier")
+E           ValueError: episode_id must be a simple non-empty identifier
+
+src/mcss/evaluation/sealed_queries.py:271: ValueError
+=========================== short test summary info ============================
+ERROR tests/test_trained_mechanism.py::test_seals_precede_queries_and_no_query_in_runtime
+ERROR tests/test_trained_mechanism.py::test_fixed_cohorts_recompute_and_query_camera_not_changed
+ERROR tests/test_trained_mechanism.py::test_checkpoint_immutable_and_no_overwrite
+36 passed, 3 errors in 1.47s

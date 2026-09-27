@@ -1,0 +1,3631 @@
+{
+  "confirmation_status": "BLOCKED_NO_INDEPENDENT_DATA",
+  "old_raw": {
+    "diagnostics": {
+      "discovery448": {
+        "aggregation": "object-mean J input; pair mean within sequence; equal sequence mean",
+        "all_global_optimal_trajectories": [
+          "ALL/B"
+        ],
+        "coverage_scope": "All 16 trajectories for observed pairs; validate identities/slots against manifest",
+        "discovery_fixed16_trajectory": "ALL/B",
+        "draws": 10000,
+        "evidence_scope": "EXPLORATORY_OLD_RAW",
+        "gaps": {
+          "nonconstant_extra": {
+            "ci95": [
+              0.00017660431164667756,
+              0.004930076524201854
+            ],
+            "ci97_5": [
+              9.566508942848648e-05,
+              0.005579420078111137
+            ],
+            "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+            "hindsight_reoptimized_in_resamples": false,
+            "leave_one_sequence_out": [
+              {
+                "mean": 0.0022271870362059413,
+                "omitted_sequence": "bmx-bumps"
+              },
+              {
+                "mean": 0.0021941506250449053,
+                "omitted_sequence": "cat-girl"
+              },
+              {
+                "mean": 0.0020345277871368843,
+                "omitted_sequence": "classic-car"
+              },
+              {
+                "mean": 0.0017924233123309465,
+                "omitted_sequence": "color-run"
+              },
+              {
+                "mean": 0.0022271870362059413,
+                "omitted_sequence": "dancing"
+              },
+              {
+                "mean": 0.0022271870362059413,
+                "omitted_sequence": "drone"
+              },
+              {
+                "mean": 0.002158813437741214,
+                "omitted_sequence": "lindy-hop"
+              },
+              {
+                "mean": 0.0022257110831487748,
+                "omitted_sequence": "lucia"
+              },
+              {
+                "mean": 0.0007303089356269827,
+                "omitted_sequence": "motocross-bumps"
+              },
+              {
+                "mean": 0.0022271870362059413,
+                "omitted_sequence": "paragliding"
+              },
+              {
+                "mean": 0.0022271870362059413,
+                "omitted_sequence": "sheep"
+              },
+              {
+                "mean": 0.0022271870362059413,
+                "omitted_sequence": "tractor-sand"
+              }
+            ],
+            "loso_max": 0.0022271870362059413,
+            "loso_min": 0.0007303089356269827,
+            "mean": 0.002041588116522113,
+            "pair_counts": {
+              "improved": 11,
+              "tied": 13,
+              "worse": 0
+            },
+            "pair_gain_threshold_counts": {
+              "0.005": 3,
+              "0.01": 2,
+              "0.02": 0
+            },
+            "per_sequence": [
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "bmx-bumps",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.00036340052277139545,
+                "positive_contribution_share": 0.014833245086283435,
+                "sequence": "cat-girl",
+                "weighted_contribution": 3.0283376897616288e-05
+              },
+              {
+                "mean_gap": 0.002119251739759631,
+                "positive_contribution_share": 0.08650339910259909,
+                "sequence": "classic-car",
+                "weighted_contribution": 0.00017660431164663593
+              },
+              {
+                "mean_gap": 0.004782400962624944,
+                "positive_contribution_share": 0.1952075496163195,
+                "sequence": "color-run",
+                "weighted_contribution": 0.00039853341355207866
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "dancing",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "drone",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0007521095831120039,
+                "positive_contribution_share": 0.030699531450759272,
+                "sequence": "lindy-hop",
+                "weighted_contribution": 6.267579859266699e-05
+              },
+              {
+                "mean_gap": 1.6235483628834757e-05,
+                "positive_contribution_share": 0.0006626982975265123,
+                "sequence": "lucia",
+                "weighted_contribution": 1.352956969069563e-06
+              },
+              {
+                "mean_gap": 0.016465659106368546,
+                "positive_contribution_share": 0.6720935764465121,
+                "sequence": "motocross-bumps",
+                "weighted_contribution": 0.0013721382588640456
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "paragliding",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "sheep",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "tractor-sand",
+                "weighted_contribution": 0.0
+              }
+            ],
+            "positive_after_every_omission": true,
+            "sequence_counts": {
+              "improved": 6,
+              "tied": 6,
+              "worse": 0
+            },
+            "sequence_gain_threshold_counts": {
+              "0.005": 1,
+              "0.01": 1,
+              "0.02": 0
+            },
+            "top1_positive_share": 0.6720935764465121,
+            "top3_positive_share": 0.9538045251654308
+          },
+          "sample_dependence_gap": {
+            "ci95": [
+              0.0008379131682410363,
+              0.003827422793564855
+            ],
+            "ci97_5": [
+              0.0006375378693962985,
+              0.004062880280257365
+            ],
+            "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+            "hindsight_reoptimized_in_resamples": true,
+            "leave_one_sequence_out": [
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.44462016154905526,
+                "mean": 0.0025060307261827175,
+                "omitted_sequence": "bmx-bumps"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.4107709790846387,
+                "mean": 0.002374852238903269,
+                "omitted_sequence": "cat-girl"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.44599651861691963,
+                "mean": 0.0021463532441270416,
+                "omitted_sequence": "classic-car"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.42850285837209207,
+                "mean": 0.0021178591886130693,
+                "omitted_sequence": "color-run"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.43701647580159003,
+                "mean": 0.0018267241635567255,
+                "omitted_sequence": "dancing"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.45850081408755305,
+                "mean": 0.0025060307261828285,
+                "omitted_sequence": "drone"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.45889909683825914,
+                "mean": 0.0022889618068788198,
+                "omitted_sequence": "lindy-hop"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.41938549264344116,
+                "mean": 0.0025060307261828285,
+                "omitted_sequence": "lucia"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.45521471583924034,
+                "mean": 0.0018941524449986868,
+                "omitted_sequence": "motocross-bumps"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.44146771816667657,
+                "mean": 0.0025060307261828285,
+                "omitted_sequence": "paragliding"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.4600685721703164,
+                "mean": 0.002387281270019359,
+                "omitted_sequence": "sheep"
+              },
+              {
+                "hindsight_global16": "ALL/B",
+                "hindsight_global16_J": 0.4566666482279956,
+                "mean": 0.0025060307261828285,
+                "omitted_sequence": "tractor-sand"
+              }
+            ],
+            "loso_max": 0.0025060307261828285,
+            "loso_min": 0.0018267241635567255,
+            "mean": 0.0022971948323341714,
+            "pair_counts": {
+              "improved": 11,
+              "tied": 13,
+              "worse": 0
+            },
+            "pair_gain_threshold_counts": {
+              "0.005": 4,
+              "0.01": 2,
+              "0.02": 0
+            },
+            "per_sequence": [
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "bmx-bumps",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.001442963360074656,
+                "positive_contribution_share": 0.052345123269629465,
+                "sequence": "cat-girl",
+                "weighted_contribution": 0.000120246946672888
+              },
+              {
+                "mean_gap": 0.0039564523026134335,
+                "positive_contribution_share": 0.143524769388458,
+                "sequence": "classic-car",
+                "weighted_contribution": 0.00032970435855111946
+              },
+              {
+                "mean_gap": 0.004269886913266907,
+                "positive_contribution_share": 0.15489496338338768,
+                "sequence": "color-run",
+                "weighted_contribution": 0.0003558239094389089
+              },
+              {
+                "mean_gap": 0.007472372188887189,
+                "positive_contribution_share": 0.2710687285390351,
+                "sequence": "dancing",
+                "weighted_contribution": 0.0006226976824072658
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "drone",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0023877581123439295,
+                "positive_contribution_share": 0.08661861845350956,
+                "sequence": "lindy-hop",
+                "weighted_contribution": 0.00019897984269532745
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "lucia",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.006730661093026058,
+                "positive_contribution_share": 0.24416232203035274,
+                "sequence": "motocross-bumps",
+                "weighted_contribution": 0.0005608884244188381
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "paragliding",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0013062440177978862,
+                "positive_contribution_share": 0.047385474935627475,
+                "sequence": "sheep",
+                "weighted_contribution": 0.00010885366814982385
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "tractor-sand",
+                "weighted_contribution": 0.0
+              }
+            ],
+            "positive_after_every_omission": true,
+            "sequence_counts": {
+              "improved": 7,
+              "tied": 5,
+              "worse": 0
+            },
+            "sequence_gain_threshold_counts": {
+              "0.005": 2,
+              "0.01": 0,
+              "0.02": 0
+            },
+            "top1_positive_share": 0.2710687285390351,
+            "top3_positive_share": 0.6701260139527755
+          },
+          "write_opportunity": {
+            "ci95": [
+              0.0025389547556957494,
+              0.009265650136123706
+            ],
+            "ci97_5": [
+              0.0022132155650992787,
+              0.009961194229128124
+            ],
+            "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+            "hindsight_reoptimized_in_resamples": false,
+            "leave_one_sequence_out": [
+              {
+                "mean": 0.005997465398962267,
+                "omitted_sequence": "bmx-bumps"
+              },
+              {
+                "mean": 0.005827179732136165,
+                "omitted_sequence": "cat-girl"
+              },
+              {
+                "mean": 0.005620257015859453,
+                "omitted_sequence": "classic-car"
+              },
+              {
+                "mean": 0.005003777848104508,
+                "omitted_sequence": "color-run"
+              },
+              {
+                "mean": 0.005206821891529934,
+                "omitted_sequence": "dancing"
+              },
+              {
+                "mean": 0.005499061760977964,
+                "omitted_sequence": "drone"
+              },
+              {
+                "mean": 0.005941399854585461,
+                "omitted_sequence": "lindy-hop"
+              },
+              {
+                "mean": 0.005935158074596663,
+                "omitted_sequence": "lucia"
+              },
+              {
+                "mean": 0.004202239343913536,
+                "omitted_sequence": "motocross-bumps"
+              },
+              {
+                "mean": 0.0061393264330628135,
+                "omitted_sequence": "paragliding"
+              },
+              {
+                "mean": 0.006020576976899369,
+                "omitted_sequence": "sheep"
+              },
+              {
+                "mean": 0.0061393264330628135,
+                "omitted_sequence": "tractor-sand"
+              }
+            ],
+            "loso_max": 0.0061393264330628135,
+            "loso_min": 0.004202239343913536,
+            "mean": 0.005627715896974246,
+            "pair_counts": {
+              "improved": 15,
+              "tied": 9,
+              "worse": 0
+            },
+            "pair_gain_threshold_counts": {
+              "0.005": 6,
+              "0.01": 6,
+              "0.02": 4
+            },
+            "per_sequence": [
+              {
+                "mean_gap": 0.0015604713751060095,
+                "positive_contribution_share": 0.02310693781268348,
+                "sequence": "bmx-bumps",
+                "weighted_contribution": 0.00013003928125883413
+              },
+              {
+                "mean_gap": 0.0034336137101931286,
+                "positive_contribution_share": 0.05084380254576608,
+                "sequence": "cat-girl",
+                "weighted_contribution": 0.00028613447584942736
+              },
+              {
+                "mean_gap": 0.005709763589236971,
+                "positive_contribution_share": 0.08454826809793944,
+                "sequence": "classic-car",
+                "weighted_contribution": 0.0004758136324364143
+              },
+              {
+                "mean_gap": 0.01249103443454136,
+                "positive_contribution_share": 0.1849630569964331,
+                "sequence": "color-run",
+                "weighted_contribution": 0.00104091953621178
+              },
+              {
+                "mean_gap": 0.010257549956861678,
+                "positive_contribution_share": 0.15189036642700035,
+                "sequence": "dancing",
+                "weighted_contribution": 0.0008547958297384731
+              },
+              {
+                "mean_gap": 0.007042911392933338,
+                "positive_contribution_share": 0.10428907455331886,
+                "sequence": "drone",
+                "weighted_contribution": 0.0005869092827444448
+              },
+              {
+                "mean_gap": 0.0021771923632508683,
+                "positive_contribution_share": 0.03223913578066726,
+                "sequence": "lindy-hop",
+                "weighted_contribution": 0.00018143269693757236
+              },
+              {
+                "mean_gap": 0.0022458519431276525,
+                "positive_contribution_share": 0.03325582385823616,
+                "sequence": "lucia",
+                "weighted_contribution": 0.00018715432859397105
+              },
+              {
+                "mean_gap": 0.021307957980642056,
+                "positive_contribution_share": 0.31552110972911657,
+                "sequence": "motocross-bumps",
+                "weighted_contribution": 0.0017756631650535047
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "paragliding",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0013062440177978862,
+                "positive_contribution_share": 0.019342424198838692,
+                "sequence": "sheep",
+                "weighted_contribution": 0.00010885366814982385
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "tractor-sand",
+                "weighted_contribution": 0.0
+              }
+            ],
+            "positive_after_every_omission": true,
+            "sequence_counts": {
+              "improved": 10,
+              "tied": 2,
+              "worse": 0
+            },
+            "sequence_gain_threshold_counts": {
+              "0.005": 5,
+              "0.01": 3,
+              "0.02": 1
+            },
+            "top1_positive_share": 0.31552110972911657,
+            "top3_positive_share": 0.65237453315255
+          }
+        },
+        "global_trajectories": [
+          {
+            "J": 0.43976198321850807,
+            "regret_to_pair_oracle": 0.005627715896974361,
+            "trajectory": "OFF/OFF"
+          },
+          {
+            "J": 0.4400383928681948,
+            "regret_to_pair_oracle": 0.005351306247287635,
+            "trajectory": "OFF/A"
+          },
+          {
+            "J": 0.4402086527824816,
+            "regret_to_pair_oracle": 0.005181046333000816,
+            "trajectory": "OFF/B"
+          },
+          {
+            "J": 0.44131782419092996,
+            "regret_to_pair_oracle": 0.0040718749245524655,
+            "trajectory": "OFF/ALL"
+          },
+          {
+            "J": 0.4403958844603147,
+            "regret_to_pair_oracle": 0.004993814655167739,
+            "trajectory": "A/OFF"
+          },
+          {
+            "J": 0.4405754955838799,
+            "regret_to_pair_oracle": 0.004814203531602557,
+            "trajectory": "A/A"
+          },
+          {
+            "J": 0.440417101246676,
+            "regret_to_pair_oracle": 0.004972597868806439,
+            "trajectory": "A/B"
+          },
+          {
+            "J": 0.44025260232147984,
+            "regret_to_pair_oracle": 0.0051370967940025936,
+            "trajectory": "A/ALL"
+          },
+          {
+            "J": 0.4400019151206025,
+            "regret_to_pair_oracle": 0.0053877839948799355,
+            "trajectory": "B/OFF"
+          },
+          {
+            "J": 0.4417343181791365,
+            "regret_to_pair_oracle": 0.003655380936345931,
+            "trajectory": "B/A"
+          },
+          {
+            "J": 0.44042276623393023,
+            "regret_to_pair_oracle": 0.0049669328815522,
+            "trajectory": "B/B"
+          },
+          {
+            "J": 0.44087998131361394,
+            "regret_to_pair_oracle": 0.004509717801868485,
+            "trajectory": "B/ALL"
+          },
+          {
+            "J": 0.44130363197329986,
+            "regret_to_pair_oracle": 0.00408606714218257,
+            "trajectory": "ALL/OFF"
+          },
+          {
+            "J": 0.4420866231042764,
+            "regret_to_pair_oracle": 0.003303076011206052,
+            "trajectory": "ALL/A"
+          },
+          {
+            "J": 0.44309250428314817,
+            "regret_to_pair_oracle": 0.0022971948323342595,
+            "trajectory": "ALL/B"
+          },
+          {
+            "J": 0.4412532244423831,
+            "regret_to_pair_oracle": 0.004136474673099355,
+            "trajectory": "ALL/ALL"
+          }
+        ],
+        "hindsight_global16_trajectory": "ALL/B",
+        "historical_split": "discovery",
+        "independent_confirmation": false,
+        "interpretation": "Answer-visible finite-family opportunity; nonconstant is not causal order evidence",
+        "means": {
+          "OFF": 0.43976198321850807,
+          "constant_oracle": 0.4433481109989603,
+          "discovery_fixed16": 0.44309250428314817,
+          "dynamic_oracle": 0.44538969911548243,
+          "hindsight_global16": 0.44309250428314817
+        },
+        "n_candidates_per_pair": 16,
+        "n_pairs": 24,
+        "n_sequences": 12,
+        "one_trajectory_optimal_for_all_pairs": false,
+        "pair_optimal_set_intersection": [],
+        "per_pair": [
+          {
+            "OFF_J": 0.3494556059661288,
+            "constant_oracle_J": 0.35257654871634075,
+            "dynamic_oracle_J": 0.35257654871634075,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/ALL",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "bmx-bumps",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.5,
+            "constant_oracle_J": 0.5,
+            "dynamic_oracle_J": 0.5,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "bmx-bumps",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.7951177863123005,
+            "constant_oracle_J": 0.7983438335016244,
+            "dynamic_oracle_J": 0.7986534121970927,
+            "optimal_constant_trajectories": [
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "B/A"
+            ],
+            "sequence": "cat-girl",
+            "strict_nonconstant_extra": 0.0003095786954683266,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.7981594759209673,
+            "constant_oracle_J": 0.8010738551064867,
+            "dynamic_oracle_J": 0.8014910774565611,
+            "optimal_constant_trajectories": [
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "OFF/B",
+              "B/OFF",
+              "ALL/OFF"
+            ],
+            "sequence": "cat-girl",
+            "strict_nonconstant_extra": 0.0004172223500744643,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.498861501427742,
+            "constant_oracle_J": 0.498861501427742,
+            "dynamic_oracle_J": 0.4993520081982054,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "A/OFF",
+              "B/A"
+            ],
+            "sequence": "classic-car",
+            "strict_nonconstant_extra": 0.000490506770463417,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.3199285692223348,
+            "constant_oracle_J": 0.32710959292128944,
+            "dynamic_oracle_J": 0.33085758963034534,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "ALL/B"
+            ],
+            "sequence": "classic-car",
+            "strict_nonconstant_extra": 0.0037479967090559008,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.7067320002258429,
+            "constant_oracle_J": 0.7199300594778935,
+            "dynamic_oracle_J": 0.7281372467734571,
+            "optimal_constant_trajectories": [
+              "B/B"
+            ],
+            "optimal_trajectories": [
+              "B/ALL"
+            ],
+            "sequence": "color-run",
+            "strict_nonconstant_extra": 0.00820718729556369,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.4839829233411385,
+            "constant_oracle_J": 0.4862021310329208,
+            "dynamic_oracle_J": 0.487559745662607,
+            "optimal_constant_trajectories": [
+              "B/B"
+            ],
+            "optimal_trajectories": [
+              "ALL/OFF"
+            ],
+            "sequence": "color-run",
+            "strict_nonconstant_extra": 0.001357614629686199,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.5754615387414447,
+            "constant_oracle_J": 0.5754615387414447,
+            "dynamic_oracle_J": 0.5754615387414447,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF"
+            ],
+            "sequence": "dancing",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.43882574088318166,
+            "constant_oracle_J": 0.4593408407969049,
+            "dynamic_oracle_J": 0.4593408407969049,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "ALL/ALL"
+            ],
+            "sequence": "dancing",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.4,
+            "constant_oracle_J": 0.4,
+            "dynamic_oracle_J": 0.4,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "drone",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.13311637008352184,
+            "constant_oracle_J": 0.14720219286938854,
+            "dynamic_oracle_J": 0.14720219286938854,
+            "optimal_constant_trajectories": [
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/ALL",
+              "A/ALL",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "drone",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.3017037148733891,
+            "constant_oracle_J": 0.3045538804336668,
+            "dynamic_oracle_J": 0.3051788792154646,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "B/B"
+            ],
+            "optimal_trajectories": [
+              "ALL/OFF"
+            ],
+            "sequence": "lindy-hop",
+            "strict_nonconstant_extra": 0.0006249987817977809,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.23715738897865218,
+            "constant_oracle_J": 0.23715738897865218,
+            "dynamic_oracle_J": 0.23803660936307833,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/B",
+              "B/OFF"
+            ],
+            "sequence": "lindy-hop",
+            "strict_nonconstant_extra": 0.0008792203844261437,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.7224358401144595,
+            "constant_oracle_J": 0.7268950730334569,
+            "dynamic_oracle_J": 0.7269275440007147,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "B/ALL",
+              "ALL/A",
+              "ALL/B"
+            ],
+            "sequence": "lucia",
+            "strict_nonconstant_extra": 3.2470967257780536e-05,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.6808117206391352,
+            "constant_oracle_J": 0.6808117206391352,
+            "dynamic_oracle_J": 0.6808117206391352,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "lucia",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.364691767241514,
+            "constant_oracle_J": 0.36525571303509063,
+            "dynamic_oracle_J": 0.3847257090617756,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "B/B"
+            ],
+            "optimal_trajectories": [
+              "ALL/A",
+              "ALL/B"
+            ],
+            "sequence": "motocross-bumps",
+            "strict_nonconstant_extra": 0.019469996026684977,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.22564999331552127,
+            "constant_oracle_J": 0.23477064527049166,
+            "dynamic_oracle_J": 0.2482319674565438,
+            "optimal_constant_trajectories": [
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "ALL/OFF"
+            ],
+            "sequence": "motocross-bumps",
+            "strict_nonconstant_extra": 0.013461322186052144,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.40835266821345706,
+            "constant_oracle_J": 0.40835266821345706,
+            "dynamic_oracle_J": 0.40835266821345706,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "paragliding",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.5135776349152146,
+            "constant_oracle_J": 0.5135776349152146,
+            "dynamic_oracle_J": 0.5135776349152146,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "paragliding",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.2920037168412758,
+            "constant_oracle_J": 0.2920037168412758,
+            "dynamic_oracle_J": 0.2920037168412758,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "A/OFF",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "sheep",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.2207077982073201,
+            "constant_oracle_J": 0.22332028624291594,
+            "dynamic_oracle_J": 0.22332028624291594,
+            "optimal_constant_trajectories": [
+              "B/B"
+            ],
+            "optimal_trajectories": [
+              "OFF/ALL",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF"
+            ],
+            "sequence": "sheep",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.4109777080829562,
+            "constant_oracle_J": 0.4109777080829562,
+            "dynamic_oracle_J": 0.4109777080829562,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "B/OFF",
+              "B/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "tractor-sand",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.17657613369669697,
+            "constant_oracle_J": 0.17657613369669697,
+            "dynamic_oracle_J": 0.17657613369669697,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "A/A",
+              "B/OFF",
+              "B/A",
+              "ALL/B"
+            ],
+            "sequence": "tractor-sand",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          }
+        ],
+        "seed": 20260926,
+        "status": "COMPLETE",
+        "strict_nonconstant_pair_count": 11,
+        "strict_nonconstant_sequence_count": 6,
+        "tie_tolerance": 1e-12
+      },
+      "historical_validation448": {
+        "aggregation": "object-mean J input; pair mean within sequence; equal sequence mean",
+        "all_global_optimal_trajectories": [
+          "A/ALL"
+        ],
+        "coverage_scope": "All 16 trajectories for observed pairs; validate identities/slots against manifest",
+        "discovery_fixed16_trajectory": "ALL/B",
+        "draws": 10000,
+        "evidence_scope": "EXPLORATORY_OLD_RAW",
+        "gaps": {
+          "nonconstant_extra": {
+            "ci95": [
+              6.52007886089434e-05,
+              0.0018907644512813847
+            ],
+            "ci97_5": [
+              4.398299908362769e-05,
+              0.0022248981629288695
+            ],
+            "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+            "hindsight_reoptimized_in_resamples": false,
+            "leave_one_sequence_out": [
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "bear"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "disc-jockey"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "dog-agility"
+              },
+              {
+                "mean": 0.0007810995104132523,
+                "omitted_sequence": "dogs-scale"
+              },
+              {
+                "mean": 0.0007607552107089817,
+                "omitted_sequence": "elephant"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "hike"
+              },
+              {
+                "mean": 0.0007997644792429333,
+                "omitted_sequence": "kid-football"
+              },
+              {
+                "mean": 0.0007578464879841003,
+                "omitted_sequence": "koala"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "lady-running"
+              },
+              {
+                "mean": 0.0007978928589956191,
+                "omitted_sequence": "longboard"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "mallard-fly"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "motorbike"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "rallye"
+              },
+              {
+                "mean": 0.00023785307492897313,
+                "omitted_sequence": "scooter-board"
+              },
+              {
+                "mean": 0.0008003911634567522,
+                "omitted_sequence": "scooter-gray"
+              },
+              {
+                "mean": 0.0006671353584666529,
+                "omitted_sequence": "stroller"
+              }
+            ],
+            "loso_max": 0.0008003911634567522,
+            "loso_min": 0.00023785307492897313,
+            "mean": 0.0007503667157407051,
+            "pair_counts": {
+              "improved": 8,
+              "tied": 24,
+              "worse": 0
+            },
+            "pair_gain_threshold_counts": {
+              "0.005": 1,
+              "0.01": 1,
+              "0.02": 0
+            },
+            "per_sequence": [
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "bear",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "disc-jockey",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "dog-agility",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.00028937479565249724,
+                "positive_contribution_share": 0.024102781145387057,
+                "sequence": "dogs-scale",
+                "weighted_contribution": 1.8085924728281078e-05
+              },
+              {
+                "mean_gap": 0.0005945392912165559,
+                "positive_contribution_share": 0.049520727560995945,
+                "sequence": "elephant",
+                "weighted_contribution": 3.7158705701034744e-05
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "hike",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 9.400263207282045e-06,
+                "positive_contribution_share": 0.0007829724295209125,
+                "sequence": "kid-football",
+                "weighted_contribution": 5.875164504551278e-07
+              },
+              {
+                "mean_gap": 0.000638170132089777,
+                "positive_contribution_share": 0.05315485404525038,
+                "sequence": "koala",
+                "weighted_contribution": 3.9885633255611064e-05
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "lady-running",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 3.7474566916995133e-05,
+                "positive_contribution_share": 0.003121354376706585,
+                "sequence": "longboard",
+                "weighted_contribution": 2.342160432312196e-06
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "mallard-fly",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "motorbike",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "rallye",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.008438071327916685,
+                "positive_contribution_share": 0.7028289594031417,
+                "sequence": "scooter-board",
+                "weighted_contribution": 0.0005273794579947928
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "scooter-gray",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0019988370748514894,
+                "positive_contribution_share": 0.1664883510389974,
+                "sequence": "stroller",
+                "weighted_contribution": 0.0001249273171782181
+              }
+            ],
+            "positive_after_every_omission": true,
+            "sequence_counts": {
+              "improved": 7,
+              "tied": 9,
+              "worse": 0
+            },
+            "sequence_gain_threshold_counts": {
+              "0.005": 1,
+              "0.01": 0,
+              "0.02": 0
+            },
+            "top1_positive_share": 0.7028289594031417,
+            "top3_positive_share": 0.9224721644873896
+          },
+          "sample_dependence_gap": {
+            "ci95": [
+              0.0006127477897708428,
+              0.0027150871141281368
+            ],
+            "ci97_5": [
+              0.00048650099958969797,
+              0.0028662012378002748
+            ],
+            "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+            "hindsight_reoptimized_in_resamples": true,
+            "leave_one_sequence_out": [
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5310202346693742,
+                "mean": 0.0021915311267012294,
+                "omitted_sequence": "bear"
+              },
+              {
+                "hindsight_global16": "A/OFF",
+                "hindsight_global16_J": 0.551385021356132,
+                "mean": 0.001965651172859295,
+                "omitted_sequence": "disc-jockey"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5458122622496901,
+                "mean": 0.0019572790424018383,
+                "omitted_sequence": "dog-agility"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5554431913361911,
+                "mean": 0.002124127079395133,
+                "omitted_sequence": "dogs-scale"
+              },
+              {
+                "hindsight_global16": "B/ALL",
+                "hindsight_global16_J": 0.5376863317475661,
+                "mean": 0.0015167522058575633,
+                "omitted_sequence": "elephant"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5424037662329244,
+                "mean": 0.002190146679580396,
+                "omitted_sequence": "hike"
+              },
+              {
+                "hindsight_global16": "B/ALL",
+                "hindsight_global16_J": 0.5344974403312722,
+                "mean": 0.0020901983138739144,
+                "omitted_sequence": "kid-football"
+              },
+              {
+                "hindsight_global16": "B/ALL",
+                "hindsight_global16_J": 0.5322220173298037,
+                "mean": 0.002137459203313541,
+                "omitted_sequence": "koala"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5646604366160215,
+                "mean": 0.0021687195134616477,
+                "omitted_sequence": "lady-running"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5633190824492508,
+                "mean": 0.0021177435411541268,
+                "omitted_sequence": "longboard"
+              },
+              {
+                "hindsight_global16": "A/OFF",
+                "hindsight_global16_J": 0.5505025842215846,
+                "mean": 0.0018167510544770948,
+                "omitted_sequence": "mallard-fly"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5788516167440563,
+                "mean": 0.0021915311267012294,
+                "omitted_sequence": "motorbike"
+              },
+              {
+                "hindsight_global16": "A/OFF",
+                "hindsight_global16_J": 0.5712318793714701,
+                "mean": 0.001947657498183042,
+                "omitted_sequence": "rallye"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5804037681723172,
+                "mean": 0.0016289930381734319,
+                "omitted_sequence": "scooter-board"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5597116354375654,
+                "mean": 0.0021366637068532812,
+                "omitted_sequence": "scooter-gray"
+              },
+              {
+                "hindsight_global16": "A/ALL",
+                "hindsight_global16_J": 0.5508357463960447,
+                "mean": 0.0018898429615425982,
+                "omitted_sequence": "stroller"
+              }
+            ],
+            "loso_max": 0.0021915311267012294,
+            "loso_min": 0.0015167522058575633,
+            "mean": 0.0020545604312824164,
+            "pair_counts": {
+              "improved": 21,
+              "tied": 11,
+              "worse": 0
+            },
+            "pair_gain_threshold_counts": {
+              "0.005": 5,
+              "0.01": 1,
+              "0.02": 0
+            },
+            "per_sequence": [
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "bear",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0019826637487565524,
+                "positive_contribution_share": 0.060312893410459714,
+                "sequence": "disc-jockey",
+                "weighted_contribution": 0.00012391648429728452
+              },
+              {
+                "mean_gap": 0.0035137812644923105,
+                "positive_contribution_share": 0.10688969070317991,
+                "sequence": "dog-agility",
+                "weighted_contribution": 0.0002196113290307694
+              },
+              {
+                "mean_gap": 0.0010110607095924484,
+                "positive_contribution_share": 0.030756600481245157,
+                "sequence": "dogs-scale",
+                "weighted_contribution": 6.319129434952803e-05
+              },
+              {
+                "mean_gap": 0.008923528290638805,
+                "positive_contribution_share": 0.2714549105848432,
+                "sequence": "elephant",
+                "weighted_contribution": 0.0005577205181649253
+              },
+              {
+                "mean_gap": 2.0766706815611435e-05,
+                "positive_contribution_share": 0.0006317259673718037,
+                "sequence": "hike",
+                "weighted_contribution": 1.2979191759757147e-06
+              },
+              {
+                "mean_gap": 0.0012088660542894925,
+                "positive_contribution_share": 0.03677386522329444,
+                "sequence": "kid-football",
+                "weighted_contribution": 7.555412839309328e-05
+              },
+              {
+                "mean_gap": 0.0007499436045190766,
+                "positive_contribution_share": 0.02281338361665324,
+                "sequence": "koala",
+                "weighted_contribution": 4.687147528244229e-05
+              },
+              {
+                "mean_gap": 0.00034217419859472464,
+                "positive_contribution_share": 0.01040898436792226,
+                "sequence": "lady-running",
+                "weighted_contribution": 2.138588741217029e-05
+              },
+              {
+                "mean_gap": 0.0011068137832082048,
+                "positive_contribution_share": 0.03366942164233864,
+                "sequence": "longboard",
+                "weighted_contribution": 6.91758614505128e-05
+              },
+              {
+                "mean_gap": 0.00022696343659456275,
+                "positive_contribution_share": 0.006904257753229502,
+                "sequence": "mallard-fly",
+                "weighted_contribution": 1.4185214787160172e-05
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "motorbike",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "rallye",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.008438071327916685,
+                "positive_contribution_share": 0.25668724558547684,
+                "sequence": "scooter-board",
+                "weighted_contribution": 0.0005273794579947928
+              },
+              {
+                "mean_gap": 0.0008230112977208326,
+                "positive_contribution_share": 0.025036112505800238,
+                "sequence": "scooter-gray",
+                "weighted_contribution": 5.143820610755204e-05
+              },
+              {
+                "mean_gap": 0.0045253224773793566,
+                "positive_contribution_share": 0.13766090815818505,
+                "sequence": "stroller",
+                "weighted_contribution": 0.0002828326548362098
+              }
+            ],
+            "positive_after_every_omission": true,
+            "sequence_counts": {
+              "improved": 13,
+              "tied": 3,
+              "worse": 0
+            },
+            "sequence_gain_threshold_counts": {
+              "0.005": 2,
+              "0.01": 0,
+              "0.02": 0
+            },
+            "top1_positive_share": 0.2714549105848432,
+            "top3_positive_share": 0.6658030643285051
+          },
+          "write_opportunity": {
+            "ci95": [
+              0.001173061340761067,
+              0.003934167578336013
+            ],
+            "ci97_5": [
+              0.0010215847417329297,
+              0.004156180583154019
+            ],
+            "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+            "hindsight_reoptimized_in_resamples": false,
+            "leave_one_sequence_out": [
+              {
+                "mean": 0.002488799964797474,
+                "omitted_sequence": "bear"
+              },
+              {
+                "mean": 0.002111006293569782,
+                "omitted_sequence": "disc-jockey"
+              },
+              {
+                "mean": 0.0025753553689324546,
+                "omitted_sequence": "dog-agility"
+              },
+              {
+                "mean": 0.002588134875493144,
+                "omitted_sequence": "dogs-scale"
+              },
+              {
+                "mean": 0.0025751015638199354,
+                "omitted_sequence": "elephant"
+              },
+              {
+                "mean": 0.0024010563471760765,
+                "omitted_sequence": "hike"
+              },
+              {
+                "mean": 0.002614110832353887,
+                "omitted_sequence": "kid-football"
+              },
+              {
+                "mean": 0.002541767242881275,
+                "omitted_sequence": "koala"
+              },
+              {
+                "mean": 0.00259839826347912,
+                "omitted_sequence": "lady-running"
+              },
+              {
+                "mean": 0.0025899012418116375,
+                "omitted_sequence": "longboard"
+              },
+              {
+                "mean": 0.0021590961120732943,
+                "omitted_sequence": "mallard-fly"
+              },
+              {
+                "mean": 0.0026147375165677055,
+                "omitted_sequence": "motorbike"
+              },
+              {
+                "mean": 0.0022747340407842415,
+                "omitted_sequence": "rallye"
+              },
+              {
+                "mean": 0.002047295160930588,
+                "omitted_sequence": "scooter-board"
+              },
+              {
+                "mean": 0.0026147375165677055,
+                "omitted_sequence": "scooter-gray"
+              },
+              {
+                "mean": 0.002426830407277264,
+                "omitted_sequence": "stroller"
+              }
+            ],
+            "loso_max": 0.0026147375165677055,
+            "loso_min": 0.002047295160930588,
+            "mean": 0.002451316421782224,
+            "pair_counts": {
+              "improved": 18,
+              "tied": 14,
+              "worse": 0
+            },
+            "pair_gain_threshold_counts": {
+              "0.005": 6,
+              "0.01": 4,
+              "0.02": 0
+            },
+            "per_sequence": [
+              {
+                "mean_gap": 0.001889063276553471,
+                "positive_contribution_share": 0.04816451019356856,
+                "sequence": "bear",
+                "weighted_contribution": 0.00011806645478459193
+              },
+              {
+                "mean_gap": 0.007555968344968855,
+                "positive_contribution_share": 0.19265078035792974,
+                "sequence": "disc-jockey",
+                "weighted_contribution": 0.00047224802156055345
+              },
+              {
+                "mean_gap": 0.0005907322145287663,
+                "positive_contribution_share": 0.01506160652291667,
+                "sequence": "dog-agility",
+                "weighted_contribution": 3.6920763408047896e-05
+              },
+              {
+                "mean_gap": 0.000399039616118424,
+                "positive_contribution_share": 0.010174115338920198,
+                "sequence": "dogs-scale",
+                "weighted_contribution": 2.49399760074015e-05
+              },
+              {
+                "mean_gap": 0.0005945392912165559,
+                "positive_contribution_share": 0.015158673670540905,
+                "sequence": "elephant",
+                "weighted_contribution": 3.7158705701034744e-05
+              },
+              {
+                "mean_gap": 0.0032052175408744388,
+                "positive_contribution_share": 0.08172184322047081,
+                "sequence": "hike",
+                "weighted_contribution": 0.00020032609630465242
+              },
+              {
+                "mean_gap": 9.400263207282045e-06,
+                "positive_contribution_share": 0.00023967385247963024,
+                "sequence": "kid-football",
+                "weighted_contribution": 5.875164504551278e-07
+              },
+              {
+                "mean_gap": 0.0010945541052964636,
+                "positive_contribution_share": 0.027907303591305405,
+                "sequence": "koala",
+                "weighted_contribution": 6.840963158102897e-05
+              },
+              {
+                "mean_gap": 0.0002450887963287851,
+                "positive_contribution_share": 0.006248907580610143,
+                "sequence": "lady-running",
+                "weighted_contribution": 1.531804977054907e-05
+              },
+              {
+                "mean_gap": 0.000372544121341023,
+                "positive_contribution_share": 0.009498572839032078,
+                "sequence": "longboard",
+                "weighted_contribution": 2.3284007583813937e-05
+              },
+              {
+                "mean_gap": 0.006834621067416169,
+                "positive_contribution_share": 0.17425894630238803,
+                "sequence": "mallard-fly",
+                "weighted_contribution": 0.00042716381671351056
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "motorbike",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.005100052136751965,
+                "positive_contribution_share": 0.1300335018827349,
+                "sequence": "rallye",
+                "weighted_contribution": 0.0003187532585469978
+              },
+              {
+                "mean_gap": 0.00851163533455676,
+                "positive_contribution_share": 0.21701694798871568,
+                "sequence": "scooter-board",
+                "weighted_contribution": 0.0005319772084097976
+              },
+              {
+                "mean_gap": 0.0,
+                "positive_contribution_share": 0.0,
+                "sequence": "scooter-gray",
+                "weighted_contribution": 0.0
+              },
+              {
+                "mean_gap": 0.0028186066393566245,
+                "positive_contribution_share": 0.07186461665838724,
+                "sequence": "stroller",
+                "weighted_contribution": 0.00017616291495978903
+              }
+            ],
+            "positive_after_every_omission": true,
+            "sequence_counts": {
+              "improved": 14,
+              "tied": 2,
+              "worse": 0
+            },
+            "sequence_gain_threshold_counts": {
+              "0.005": 4,
+              "0.01": 0,
+              "0.02": 0
+            },
+            "top1_positive_share": 0.21701694798871568,
+            "top3_positive_share": 0.5839266746490335
+          }
+        },
+        "global_trajectories": [
+          {
+            "J": 0.5526773124485799,
+            "regret_to_pair_oracle": 0.0024513164217822014,
+            "trajectory": "OFF/OFF"
+          },
+          {
+            "J": 0.5528782150298358,
+            "regret_to_pair_oracle": 0.0022504138405262664,
+            "trajectory": "OFF/A"
+          },
+          {
+            "J": 0.5527243023955473,
+            "regret_to_pair_oracle": 0.0024043264748148108,
+            "trajectory": "OFF/B"
+          },
+          {
+            "J": 0.5512789988040045,
+            "regret_to_pair_oracle": 0.0038496300663575234,
+            "trajectory": "OFF/ALL"
+          },
+          {
+            "J": 0.5529839467072684,
+            "regret_to_pair_oracle": 0.002144682163093714,
+            "trajectory": "A/OFF"
+          },
+          {
+            "J": 0.552891204162393,
+            "regret_to_pair_oracle": 0.00223742470796906,
+            "trajectory": "A/A"
+          },
+          {
+            "J": 0.5525462666731491,
+            "regret_to_pair_oracle": 0.002582362197212973,
+            "trajectory": "A/B"
+          },
+          {
+            "J": 0.5530740684390796,
+            "regret_to_pair_oracle": 0.0020545604312824928,
+            "trajectory": "A/ALL"
+          },
+          {
+            "J": 0.5527176619257022,
+            "regret_to_pair_oracle": 0.0024109669446599202,
+            "trajectory": "B/OFF"
+          },
+          {
+            "J": 0.5526270304720234,
+            "regret_to_pair_oracle": 0.0025015983983386336,
+            "trajectory": "B/A"
+          },
+          {
+            "J": 0.552480819326895,
+            "regret_to_pair_oracle": 0.0026478095434671056,
+            "trajectory": "B/B"
+          },
+          {
+            "J": 0.5530664220971095,
+            "regret_to_pair_oracle": 0.0020622067732525284,
+            "trajectory": "B/ALL"
+          },
+          {
+            "J": 0.5526316796611542,
+            "regret_to_pair_oracle": 0.002496949209207844,
+            "trajectory": "ALL/OFF"
+          },
+          {
+            "J": 0.552656593600881,
+            "regret_to_pair_oracle": 0.002472035269481032,
+            "trajectory": "ALL/A"
+          },
+          {
+            "J": 0.5524797849894001,
+            "regret_to_pair_oracle": 0.002648843880961982,
+            "trajectory": "ALL/B"
+          },
+          {
+            "J": 0.5529404667581531,
+            "regret_to_pair_oracle": 0.002188162112208958,
+            "trajectory": "ALL/ALL"
+          }
+        ],
+        "hindsight_global16_trajectory": "A/ALL",
+        "historical_split": "validation",
+        "independent_confirmation": false,
+        "interpretation": "Answer-visible finite-family opportunity; nonconstant is not causal order evidence",
+        "means": {
+          "OFF": 0.5526773124485799,
+          "constant_oracle": 0.5543782621546214,
+          "discovery_fixed16": 0.5524797849894001,
+          "dynamic_oracle": 0.5551286288703621,
+          "hindsight_global16": 0.5530740684390796
+        },
+        "n_candidates_per_pair": 16,
+        "n_pairs": 32,
+        "n_sequences": 16,
+        "one_trajectory_optimal_for_all_pairs": false,
+        "pair_optimal_set_intersection": [],
+        "per_pair": [
+          {
+            "OFF_J": 0.8797412002136878,
+            "constant_oracle_J": 0.8797412002136878,
+            "dynamic_oracle_J": 0.8797412002136878,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "bear",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.8842438232025306,
+            "constant_oracle_J": 0.8880219497556375,
+            "dynamic_oracle_J": 0.8880219497556375,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "bear",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.7040369693910024,
+            "constant_oracle_J": 0.7040369693910024,
+            "dynamic_oracle_J": 0.7040369693910024,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF"
+            ],
+            "sequence": "disc-jockey",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.4444470419009067,
+            "constant_oracle_J": 0.45955897859084444,
+            "dynamic_oracle_J": 0.45955897859084444,
+            "optimal_constant_trajectories": [
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "OFF/ALL",
+              "A/A",
+              "A/B",
+              "B/A",
+              "ALL/OFF"
+            ],
+            "sequence": "disc-jockey",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.5579476772400406,
+            "constant_oracle_J": 0.5579476772400406,
+            "dynamic_oracle_J": 0.5579476772400406,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "A/A",
+              "B/OFF",
+              "B/A",
+              "ALL/OFF",
+              "ALL/A"
+            ],
+            "sequence": "dog-agility",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.7719007434197308,
+            "constant_oracle_J": 0.7730822078487884,
+            "dynamic_oracle_J": 0.7730822078487884,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "ALL/ALL"
+            ],
+            "sequence": "dog-agility",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.6742202052934155,
+            "constant_oracle_J": 0.6742202052934155,
+            "dynamic_oracle_J": 0.6747989548847205,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "ALL/A"
+            ],
+            "sequence": "dogs-scale",
+            "strict_nonconstant_extra": 0.0005787495913049945,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.3620782868583474,
+            "constant_oracle_J": 0.36229761649927916,
+            "dynamic_oracle_J": 0.36229761649927916,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "ALL/ALL"
+            ],
+            "sequence": "dogs-scale",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.826492334033777,
+            "constant_oracle_J": 0.826492334033777,
+            "dynamic_oracle_J": 0.8276814126162102,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "B/OFF"
+            ],
+            "sequence": "elephant",
+            "strict_nonconstant_extra": 0.0011890785824332228,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.7603421926326699,
+            "constant_oracle_J": 0.7603421926326699,
+            "dynamic_oracle_J": 0.7603421926326699,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF"
+            ],
+            "sequence": "elephant",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.7265440046517423,
+            "constant_oracle_J": 0.7265440046517423,
+            "dynamic_oracle_J": 0.7265440046517423,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF"
+            ],
+            "sequence": "hike",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.6933442967429537,
+            "constant_oracle_J": 0.6997547318247027,
+            "dynamic_oracle_J": 0.6997547318247027,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/A",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/B",
+              "B/ALL",
+              "ALL/ALL"
+            ],
+            "sequence": "hike",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.8423877825398111,
+            "constant_oracle_J": 0.8423877825398111,
+            "dynamic_oracle_J": 0.8424065830662257,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "A/OFF"
+            ],
+            "sequence": "kid-football",
+            "strict_nonconstant_extra": 1.880052641467511e-05,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.8240803814309795,
+            "constant_oracle_J": 0.8240803814309795,
+            "dynamic_oracle_J": 0.8240803814309795,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF"
+            ],
+            "sequence": "kid-football",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.8709426731250333,
+            "constant_oracle_J": 0.8714605067064084,
+            "dynamic_oracle_J": 0.8715514209903775,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "B/OFF"
+            ],
+            "sequence": "koala",
+            "strict_nonconstant_extra": 9.091428396912349e-05,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.8602000465224471,
+            "constant_oracle_J": 0.8605949808874854,
+            "dynamic_oracle_J": 0.8617804068676959,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "ALL/B"
+            ],
+            "sequence": "koala",
+            "strict_nonconstant_extra": 0.0011854259802104306,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.41970516628877924,
+            "constant_oracle_J": 0.41973311361115334,
+            "dynamic_oracle_J": 0.41973311361115334,
+            "optimal_constant_trajectories": [
+              "B/B"
+            ],
+            "optimal_trajectories": [
+              "B/B"
+            ],
+            "sequence": "lady-running",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.33904609608565667,
+            "constant_oracle_J": 0.3395083263559401,
+            "dynamic_oracle_J": 0.3395083263559401,
+            "optimal_constant_trajectories": [
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "A/A",
+              "B/OFF"
+            ],
+            "sequence": "lady-running",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.45365963860006,
+            "constant_oracle_J": 0.45415270795680573,
+            "dynamic_oracle_J": 0.45415270795680573,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "ALL/ALL"
+            ],
+            "sequence": "longboard",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.34660661729669984,
+            "constant_oracle_J": 0.3467836870488021,
+            "dynamic_oracle_J": 0.3468586361826361,
+            "optimal_constant_trajectories": [
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "OFF/ALL",
+              "A/ALL"
+            ],
+            "sequence": "longboard",
+            "strict_nonconstant_extra": 7.494913383404578e-05,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.5575924228536511,
+            "constant_oracle_J": 0.5575924228536511,
+            "dynamic_oracle_J": 0.5575924228536511,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF"
+            ],
+            "sequence": "mallard-fly",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.6232744005812545,
+            "constant_oracle_J": 0.6369436427160869,
+            "dynamic_oracle_J": 0.6369436427160869,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "A/ALL",
+              "B/ALL",
+              "ALL/ALL"
+            ],
+            "sequence": "mallard-fly",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.16574365965181334,
+            "constant_oracle_J": 0.16574365965181334,
+            "dynamic_oracle_J": 0.16574365965181334,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "motorbike",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.16707802807704863,
+            "constant_oracle_J": 0.16707802807704863,
+            "dynamic_oracle_J": 0.16707802807704863,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "motorbike",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.265,
+            "constant_oracle_J": 0.265,
+            "dynamic_oracle_J": 0.265,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "rallye",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.29352991348848545,
+            "constant_oracle_J": 0.3037300177619893,
+            "dynamic_oracle_J": 0.3037300177619893,
+            "optimal_constant_trajectories": [
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "A/ALL",
+              "B/ALL",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "rallye",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.28513408973697785,
+            "constant_oracle_J": 0.285281217750258,
+            "dynamic_oracle_J": 0.30215736040609137,
+            "optimal_constant_trajectories": [
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "ALL/OFF"
+            ],
+            "sequence": "scooter-board",
+            "strict_nonconstant_extra": 0.01687614265583337,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.0009759271307742355,
+            "constant_oracle_J": 0.0009759271307742355,
+            "dynamic_oracle_J": 0.0009759271307742355,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/OFF",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "scooter-board",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.5200428672309845,
+            "constant_oracle_J": 0.5200428672309845,
+            "dynamic_oracle_J": 0.5200428672309845,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "scooter-gray",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.3886242822880427,
+            "constant_oracle_J": 0.3886242822880427,
+            "dynamic_oracle_J": 0.3886242822880427,
+            "optimal_constant_trajectories": [
+              "OFF/OFF",
+              "A/A",
+              "B/B",
+              "ALL/ALL"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF",
+              "OFF/A",
+              "OFF/B",
+              "OFF/ALL",
+              "A/OFF",
+              "A/A",
+              "A/B",
+              "A/ALL",
+              "B/OFF",
+              "B/A",
+              "B/B",
+              "B/ALL",
+              "ALL/A",
+              "ALL/B",
+              "ALL/ALL"
+            ],
+            "sequence": "scooter-gray",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          },
+          {
+            "OFF_J": 0.5752621146877808,
+            "constant_oracle_J": 0.5769016538167909,
+            "dynamic_oracle_J": 0.580899327966494,
+            "optimal_constant_trajectories": [
+              "A/A"
+            ],
+            "optimal_trajectories": [
+              "OFF/A",
+              "OFF/B",
+              "A/OFF",
+              "B/OFF"
+            ],
+            "sequence": "stroller",
+            "strict_nonconstant_extra": 0.00399767414970309,
+            "target_slot": "1"
+          },
+          {
+            "OFF_J": 0.6014491151574715,
+            "constant_oracle_J": 0.6014491151574715,
+            "dynamic_oracle_J": 0.6014491151574715,
+            "optimal_constant_trajectories": [
+              "OFF/OFF"
+            ],
+            "optimal_trajectories": [
+              "OFF/OFF"
+            ],
+            "sequence": "stroller",
+            "strict_nonconstant_extra": 0.0,
+            "target_slot": "2"
+          }
+        ],
+        "seed": 20260926,
+        "status": "COMPLETE",
+        "strict_nonconstant_pair_count": 8,
+        "strict_nonconstant_sequence_count": 7,
+        "tie_tolerance": 1e-12
+      }
+    },
+    "fixed_trajectory_provenance": {
+      "fit_split": "discovery",
+      "path": "/home/zonghan/measurement-scene-state/docs/experiments/EXP-2D-20260926-opportunity-selector-v1/selectors.json",
+      "sha256": "b2a69320d3b9c6034450bd0e8c0386bbdef8eff5f3f91504728b90b6f0f65c3a",
+      "trajectory": [
+        "ALL",
+        "B"
+      ]
+    },
+    "schema": "mcss.v2.old_raw_global16.v1",
+    "scope": "Old saved raw only; no media reads, selector inference or fitting",
+    "source_raw": "/home/zonghan/measurement-scene-state/docs/experiments/EXP-2D-20260926-opportunity-selector-v1/raw_results.jsonl",
+    "source_raw_sha256": "201719eb9d40120efe8073525486599d08df33d852b9134cd280ebda57153a42"
+  },
+  "v2": {
+    "448/discovery": {
+      "aggregation": "object-mean J input; pair mean within sequence; equal sequence mean",
+      "all_global_optimal_trajectories": [
+        "ALL/B"
+      ],
+      "coverage_scope": "All 16 trajectories for observed pairs; validate identities/slots against manifest",
+      "discovery_fixed16_trajectory": "ALL/B",
+      "draws": 10000,
+      "gaps": {
+        "nonconstant_extra": {
+          "ci95": [
+            0.00017660431164667756,
+            0.004930076524201854
+          ],
+          "ci97_5": [
+            9.566508942848648e-05,
+            0.005579420078111137
+          ],
+          "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+          "hindsight_reoptimized_in_resamples": false,
+          "leave_one_sequence_out": [
+            {
+              "mean": 0.0022271870362059413,
+              "omitted_sequence": "bmx-bumps"
+            },
+            {
+              "mean": 0.0021941506250449053,
+              "omitted_sequence": "cat-girl"
+            },
+            {
+              "mean": 0.0020345277871368843,
+              "omitted_sequence": "classic-car"
+            },
+            {
+              "mean": 0.0017924233123309465,
+              "omitted_sequence": "color-run"
+            },
+            {
+              "mean": 0.0022271870362059413,
+              "omitted_sequence": "dancing"
+            },
+            {
+              "mean": 0.0022271870362059413,
+              "omitted_sequence": "drone"
+            },
+            {
+              "mean": 0.002158813437741214,
+              "omitted_sequence": "lindy-hop"
+            },
+            {
+              "mean": 0.0022257110831487748,
+              "omitted_sequence": "lucia"
+            },
+            {
+              "mean": 0.0007303089356269827,
+              "omitted_sequence": "motocross-bumps"
+            },
+            {
+              "mean": 0.0022271870362059413,
+              "omitted_sequence": "paragliding"
+            },
+            {
+              "mean": 0.0022271870362059413,
+              "omitted_sequence": "sheep"
+            },
+            {
+              "mean": 0.0022271870362059413,
+              "omitted_sequence": "tractor-sand"
+            }
+          ],
+          "loso_max": 0.0022271870362059413,
+          "loso_min": 0.0007303089356269827,
+          "mean": 0.002041588116522113,
+          "pair_counts": {
+            "improved": 11,
+            "tied": 13,
+            "worse": 0
+          },
+          "pair_gain_threshold_counts": {
+            "0.005": 3,
+            "0.01": 2,
+            "0.02": 0
+          },
+          "per_sequence": [
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "bmx-bumps",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.00036340052277139545,
+              "positive_contribution_share": 0.014833245086283435,
+              "sequence": "cat-girl",
+              "weighted_contribution": 3.0283376897616288e-05
+            },
+            {
+              "mean_gap": 0.002119251739759631,
+              "positive_contribution_share": 0.08650339910259909,
+              "sequence": "classic-car",
+              "weighted_contribution": 0.00017660431164663593
+            },
+            {
+              "mean_gap": 0.004782400962624944,
+              "positive_contribution_share": 0.1952075496163195,
+              "sequence": "color-run",
+              "weighted_contribution": 0.00039853341355207866
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "dancing",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "drone",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.0007521095831120039,
+              "positive_contribution_share": 0.030699531450759272,
+              "sequence": "lindy-hop",
+              "weighted_contribution": 6.267579859266699e-05
+            },
+            {
+              "mean_gap": 1.6235483628834757e-05,
+              "positive_contribution_share": 0.0006626982975265123,
+              "sequence": "lucia",
+              "weighted_contribution": 1.352956969069563e-06
+            },
+            {
+              "mean_gap": 0.016465659106368546,
+              "positive_contribution_share": 0.6720935764465121,
+              "sequence": "motocross-bumps",
+              "weighted_contribution": 0.0013721382588640456
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "paragliding",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "sheep",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "tractor-sand",
+              "weighted_contribution": 0.0
+            }
+          ],
+          "positive_after_every_omission": true,
+          "sequence_counts": {
+            "improved": 6,
+            "tied": 6,
+            "worse": 0
+          },
+          "sequence_gain_threshold_counts": {
+            "0.005": 1,
+            "0.01": 1,
+            "0.02": 0
+          },
+          "top1_positive_share": 0.6720935764465121,
+          "top3_positive_share": 0.9538045251654308
+        },
+        "sample_dependence_gap": {
+          "ci95": [
+            0.0008379131682410363,
+            0.003827422793564855
+          ],
+          "ci97_5": [
+            0.0006375378693962985,
+            0.004062880280257365
+          ],
+          "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+          "hindsight_reoptimized_in_resamples": true,
+          "leave_one_sequence_out": [
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.44462016154905526,
+              "mean": 0.0025060307261827175,
+              "omitted_sequence": "bmx-bumps"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.4107709790846387,
+              "mean": 0.002374852238903269,
+              "omitted_sequence": "cat-girl"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.44599651861691963,
+              "mean": 0.0021463532441270416,
+              "omitted_sequence": "classic-car"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.42850285837209207,
+              "mean": 0.0021178591886130693,
+              "omitted_sequence": "color-run"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.43701647580159003,
+              "mean": 0.0018267241635567255,
+              "omitted_sequence": "dancing"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.45850081408755305,
+              "mean": 0.0025060307261828285,
+              "omitted_sequence": "drone"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.45889909683825914,
+              "mean": 0.0022889618068788198,
+              "omitted_sequence": "lindy-hop"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.41938549264344116,
+              "mean": 0.0025060307261828285,
+              "omitted_sequence": "lucia"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.45521471583924034,
+              "mean": 0.0018941524449986868,
+              "omitted_sequence": "motocross-bumps"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.44146771816667657,
+              "mean": 0.0025060307261828285,
+              "omitted_sequence": "paragliding"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.4600685721703164,
+              "mean": 0.002387281270019359,
+              "omitted_sequence": "sheep"
+            },
+            {
+              "hindsight_global16": "ALL/B",
+              "hindsight_global16_J": 0.4566666482279956,
+              "mean": 0.0025060307261828285,
+              "omitted_sequence": "tractor-sand"
+            }
+          ],
+          "loso_max": 0.0025060307261828285,
+          "loso_min": 0.0018267241635567255,
+          "mean": 0.0022971948323341714,
+          "pair_counts": {
+            "improved": 11,
+            "tied": 13,
+            "worse": 0
+          },
+          "pair_gain_threshold_counts": {
+            "0.005": 4,
+            "0.01": 2,
+            "0.02": 0
+          },
+          "per_sequence": [
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "bmx-bumps",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.001442963360074656,
+              "positive_contribution_share": 0.052345123269629465,
+              "sequence": "cat-girl",
+              "weighted_contribution": 0.000120246946672888
+            },
+            {
+              "mean_gap": 0.0039564523026134335,
+              "positive_contribution_share": 0.143524769388458,
+              "sequence": "classic-car",
+              "weighted_contribution": 0.00032970435855111946
+            },
+            {
+              "mean_gap": 0.004269886913266907,
+              "positive_contribution_share": 0.15489496338338768,
+              "sequence": "color-run",
+              "weighted_contribution": 0.0003558239094389089
+            },
+            {
+              "mean_gap": 0.007472372188887189,
+              "positive_contribution_share": 0.2710687285390351,
+              "sequence": "dancing",
+              "weighted_contribution": 0.0006226976824072658
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "drone",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.0023877581123439295,
+              "positive_contribution_share": 0.08661861845350956,
+              "sequence": "lindy-hop",
+              "weighted_contribution": 0.00019897984269532745
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "lucia",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.006730661093026058,
+              "positive_contribution_share": 0.24416232203035274,
+              "sequence": "motocross-bumps",
+              "weighted_contribution": 0.0005608884244188381
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "paragliding",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.0013062440177978862,
+              "positive_contribution_share": 0.047385474935627475,
+              "sequence": "sheep",
+              "weighted_contribution": 0.00010885366814982385
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "tractor-sand",
+              "weighted_contribution": 0.0
+            }
+          ],
+          "positive_after_every_omission": true,
+          "sequence_counts": {
+            "improved": 7,
+            "tied": 5,
+            "worse": 0
+          },
+          "sequence_gain_threshold_counts": {
+            "0.005": 2,
+            "0.01": 0,
+            "0.02": 0
+          },
+          "top1_positive_share": 0.2710687285390351,
+          "top3_positive_share": 0.6701260139527755
+        },
+        "write_opportunity": {
+          "ci95": [
+            0.0025389547556957494,
+            0.009265650136123706
+          ],
+          "ci97_5": [
+            0.0022132155650992787,
+            0.009961194229128124
+          ],
+          "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights",
+          "hindsight_reoptimized_in_resamples": false,
+          "leave_one_sequence_out": [
+            {
+              "mean": 0.005997465398962267,
+              "omitted_sequence": "bmx-bumps"
+            },
+            {
+              "mean": 0.005827179732136165,
+              "omitted_sequence": "cat-girl"
+            },
+            {
+              "mean": 0.005620257015859453,
+              "omitted_sequence": "classic-car"
+            },
+            {
+              "mean": 0.005003777848104508,
+              "omitted_sequence": "color-run"
+            },
+            {
+              "mean": 0.005206821891529934,
+              "omitted_sequence": "dancing"
+            },
+            {
+              "mean": 0.005499061760977964,
+              "omitted_sequence": "drone"
+            },
+            {
+              "mean": 0.005941399854585461,
+              "omitted_sequence": "lindy-hop"
+            },
+            {
+              "mean": 0.005935158074596663,
+              "omitted_sequence": "lucia"
+            },
+            {
+              "mean": 0.004202239343913536,
+              "omitted_sequence": "motocross-bumps"
+            },
+            {
+              "mean": 0.0061393264330628135,
+              "omitted_sequence": "paragliding"
+            },
+            {
+              "mean": 0.006020576976899369,
+              "omitted_sequence": "sheep"
+            },
+            {
+              "mean": 0.0061393264330628135,
+              "omitted_sequence": "tractor-sand"
+            }
+          ],
+          "loso_max": 0.0061393264330628135,
+          "loso_min": 0.004202239343913536,
+          "mean": 0.005627715896974246,
+          "pair_counts": {
+            "improved": 15,
+            "tied": 9,
+            "worse": 0
+          },
+          "pair_gain_threshold_counts": {
+            "0.005": 6,
+            "0.01": 6,
+            "0.02": 4
+          },
+          "per_sequence": [
+            {
+              "mean_gap": 0.0015604713751060095,
+              "positive_contribution_share": 0.02310693781268348,
+              "sequence": "bmx-bumps",
+              "weighted_contribution": 0.00013003928125883413
+            },
+            {
+              "mean_gap": 0.0034336137101931286,
+              "positive_contribution_share": 0.05084380254576608,
+              "sequence": "cat-girl",
+              "weighted_contribution": 0.00028613447584942736
+            },
+            {
+              "mean_gap": 0.005709763589236971,
+              "positive_contribution_share": 0.08454826809793944,
+              "sequence": "classic-car",
+              "weighted_contribution": 0.0004758136324364143
+            },
+            {
+              "mean_gap": 0.01249103443454136,
+              "positive_contribution_share": 0.1849630569964331,
+              "sequence": "color-run",
+              "weighted_contribution": 0.00104091953621178
+            },
+            {
+              "mean_gap": 0.010257549956861678,
+              "positive_contribution_share": 0.15189036642700035,
+              "sequence": "dancing",
+              "weighted_contribution": 0.0008547958297384731
+            },
+            {
+              "mean_gap": 0.007042911392933338,
+              "positive_contribution_share": 0.10428907455331886,
+              "sequence": "drone",
+              "weighted_contribution": 0.0005869092827444448
+            },
+            {
+              "mean_gap": 0.0021771923632508683,
+              "positive_contribution_share": 0.03223913578066726,
+              "sequence": "lindy-hop",
+              "weighted_contribution": 0.00018143269693757236
+            },
+            {
+              "mean_gap": 0.0022458519431276525,
+              "positive_contribution_share": 0.03325582385823616,
+              "sequence": "lucia",
+              "weighted_contribution": 0.00018715432859397105
+            },
+            {
+              "mean_gap": 0.021307957980642056,
+              "positive_contribution_share": 0.31552110972911657,
+              "sequence": "motocross-bumps",
+              "weighted_contribution": 0.0017756631650535047
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "paragliding",
+              "weighted_contribution": 0.0
+            },
+            {
+              "mean_gap": 0.0013062440177978862,
+              "positive_contribution_share": 0.019342424198838692,
+              "sequence": "sheep",
+              "weighted_contribution": 0.00010885366814982385
+            },
+            {
+              "mean_gap": 0.0,
+              "positive_contribution_share": 0.0,
+              "sequence": "tractor-sand",
+              "weighted_contribution": 0.0
+            }
+          ],
+          "positive_after_every_omission": true,
+          "sequence_counts": {
+            "improved": 10,
+            "tied": 2,
+            "worse": 0
+          },
+          "sequence_gain_threshold_counts": {
+            "0.005": 5,
+            "0.01": 3,
+            "0.02": 1
+          },
+          "top1_positive_share": 0.31552110972911657,
+          "top3_positive_share": 0.65237453315255
+        }
+      },
+      "global_trajectories": [
+        {
+          "J": 0.43976198321850807,
+          "regret_to_pair_oracle": 0.005627715896974361,
+          "trajectory": "OFF/OFF"
+        },
+        {
+          "J": 0.4400383928681948,
+          "regret_to_pair_oracle": 0.005351306247287635,
+          "trajectory": "OFF/A"
+        },
+        {
+          "J": 0.4402086527824816,
+          "regret_to_pair_oracle": 0.005181046333000816,
+          "trajectory": "OFF/B"
+        },
+        {
+          "J": 0.44131782419092996,
+          "regret_to_pair_oracle": 0.0040718749245524655,
+          "trajectory": "OFF/ALL"
+        },
+        {
+          "J": 0.4403958844603147,
+          "regret_to_pair_oracle": 0.004993814655167739,
+          "trajectory": "A/OFF"
+        },
+        {
+          "J": 0.4405754955838799,
+          "regret_to_pair_oracle": 0.004814203531602557,
+          "trajectory": "A/A"
+        },
+        {
+          "J": 0.440417101246676,
+          "regret_to_pair_oracle": 0.004972597868806439,
+          "trajectory": "A/B"
+        },
+        {
+          "J": 0.44025260232147984,
+          "regret_to_pair_oracle": 0.0051370967940025936,
+          "trajectory": "A/ALL"
+        },
+        {
+          "J": 0.4400019151206025,
+          "regret_to_pair_oracle": 0.0053877839948799355,
+          "trajectory": "B/OFF"
+        },
+        {
+          "J": 0.4417343181791365,
+          "regret_to_pair_oracle": 0.003655380936345931,
+          "trajectory": "B/A"
+        },
+        {
+          "J": 0.44042276623393023,
+          "regret_to_pair_oracle": 0.0049669328815522,
+          "trajectory": "B/B"
+        },
+        {
+          "J": 0.44087998131361394,
+          "regret_to_pair_oracle": 0.004509717801868485,
+          "trajectory": "B/ALL"
+        },
+        {
+          "J": 0.44130363197329986,
+          "regret_to_pair_oracle": 0.00408606714218257,
+          "trajectory": "ALL/OFF"
+        },
+        {
+          "J": 0.4420866231042764,
+          "regret_to_pair_oracle": 0.003303076011206052,
+          "trajectory": "ALL/A"
+        },
+        {
+          "J": 0.44309250428314817,
+          "regret_to_pair_oracle": 0.0022971948323342595,
+          "trajectory": "ALL/B"
+        },
+        {
+          "J": 0.4412532244423831,
+          "regret_to_pair_oracle": 0.004136474673099355,
+          "trajectory": "ALL/ALL"
+        }
+      ],
+      "hindsight_global16_trajectory": "ALL/B",
+      "interpretation": "Answer-visible finite-family opportunity; nonconstant is not causal order evidence",
+      "means": {
+        "OFF": 0.43976198321850807,
+        "constant_oracle": 0.4433481109989603,
+        "discovery_fixed16": 0.44309250428314817,
+        "dynamic_oracle": 0.44538969911548243,
+        "hindsight_global16": 0.44309250428314817
+      },
+      "n_candidates_per_pair": 16,
+      "n_pairs": 24,
+      "n_sequences": 12,
+      "one_trajectory_optimal_for_all_pairs": false,
+      "pair_optimal_set_intersection": [],
+      "per_pair": [
+        {
+          "OFF_J": 0.3494556059661288,
+          "constant_oracle_J": 0.35257654871634075,
+          "dynamic_oracle_J": 0.35257654871634075,
+          "optimal_constant_trajectories": [
+            "A/A",
+            "B/B",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/ALL",
+            "A/A",
+            "A/B",
+            "A/ALL",
+            "B/A",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF",
+            "ALL/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "bmx-bumps",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.5,
+          "constant_oracle_J": 0.5,
+          "dynamic_oracle_J": 0.5,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "A/A",
+            "B/B",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "OFF/A",
+            "OFF/B",
+            "OFF/ALL",
+            "A/OFF",
+            "A/A",
+            "A/B",
+            "A/ALL",
+            "B/OFF",
+            "B/A",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF",
+            "ALL/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "bmx-bumps",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.7951177863123005,
+          "constant_oracle_J": 0.7983438335016244,
+          "dynamic_oracle_J": 0.7986534121970927,
+          "optimal_constant_trajectories": [
+            "A/A"
+          ],
+          "optimal_trajectories": [
+            "B/A"
+          ],
+          "sequence": "cat-girl",
+          "strict_nonconstant_extra": 0.0003095786954683266,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.7981594759209673,
+          "constant_oracle_J": 0.8010738551064867,
+          "dynamic_oracle_J": 0.8014910774565611,
+          "optimal_constant_trajectories": [
+            "A/A"
+          ],
+          "optimal_trajectories": [
+            "OFF/B",
+            "B/OFF",
+            "ALL/OFF"
+          ],
+          "sequence": "cat-girl",
+          "strict_nonconstant_extra": 0.0004172223500744643,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.498861501427742,
+          "constant_oracle_J": 0.498861501427742,
+          "dynamic_oracle_J": 0.4993520081982054,
+          "optimal_constant_trajectories": [
+            "OFF/OFF"
+          ],
+          "optimal_trajectories": [
+            "A/OFF",
+            "B/A"
+          ],
+          "sequence": "classic-car",
+          "strict_nonconstant_extra": 0.000490506770463417,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.3199285692223348,
+          "constant_oracle_J": 0.32710959292128944,
+          "dynamic_oracle_J": 0.33085758963034534,
+          "optimal_constant_trajectories": [
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "ALL/B"
+          ],
+          "sequence": "classic-car",
+          "strict_nonconstant_extra": 0.0037479967090559008,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.7067320002258429,
+          "constant_oracle_J": 0.7199300594778935,
+          "dynamic_oracle_J": 0.7281372467734571,
+          "optimal_constant_trajectories": [
+            "B/B"
+          ],
+          "optimal_trajectories": [
+            "B/ALL"
+          ],
+          "sequence": "color-run",
+          "strict_nonconstant_extra": 0.00820718729556369,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.4839829233411385,
+          "constant_oracle_J": 0.4862021310329208,
+          "dynamic_oracle_J": 0.487559745662607,
+          "optimal_constant_trajectories": [
+            "B/B"
+          ],
+          "optimal_trajectories": [
+            "ALL/OFF"
+          ],
+          "sequence": "color-run",
+          "strict_nonconstant_extra": 0.001357614629686199,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.5754615387414447,
+          "constant_oracle_J": 0.5754615387414447,
+          "dynamic_oracle_J": 0.5754615387414447,
+          "optimal_constant_trajectories": [
+            "OFF/OFF"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF"
+          ],
+          "sequence": "dancing",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.43882574088318166,
+          "constant_oracle_J": 0.4593408407969049,
+          "dynamic_oracle_J": 0.4593408407969049,
+          "optimal_constant_trajectories": [
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "ALL/ALL"
+          ],
+          "sequence": "dancing",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.4,
+          "constant_oracle_J": 0.4,
+          "dynamic_oracle_J": 0.4,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "A/A",
+            "B/B",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "OFF/A",
+            "OFF/B",
+            "OFF/ALL",
+            "A/OFF",
+            "A/A",
+            "A/B",
+            "A/ALL",
+            "B/OFF",
+            "B/A",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF",
+            "ALL/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "drone",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.13311637008352184,
+          "constant_oracle_J": 0.14720219286938854,
+          "dynamic_oracle_J": 0.14720219286938854,
+          "optimal_constant_trajectories": [
+            "B/B",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/ALL",
+            "A/ALL",
+            "B/A",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF",
+            "ALL/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "drone",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.3017037148733891,
+          "constant_oracle_J": 0.3045538804336668,
+          "dynamic_oracle_J": 0.3051788792154646,
+          "optimal_constant_trajectories": [
+            "A/A",
+            "B/B"
+          ],
+          "optimal_trajectories": [
+            "ALL/OFF"
+          ],
+          "sequence": "lindy-hop",
+          "strict_nonconstant_extra": 0.0006249987817977809,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.23715738897865218,
+          "constant_oracle_J": 0.23715738897865218,
+          "dynamic_oracle_J": 0.23803660936307833,
+          "optimal_constant_trajectories": [
+            "OFF/OFF"
+          ],
+          "optimal_trajectories": [
+            "OFF/B",
+            "B/OFF"
+          ],
+          "sequence": "lindy-hop",
+          "strict_nonconstant_extra": 0.0008792203844261437,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.7224358401144595,
+          "constant_oracle_J": 0.7268950730334569,
+          "dynamic_oracle_J": 0.7269275440007147,
+          "optimal_constant_trajectories": [
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "B/ALL",
+            "ALL/A",
+            "ALL/B"
+          ],
+          "sequence": "lucia",
+          "strict_nonconstant_extra": 3.2470967257780536e-05,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.6808117206391352,
+          "constant_oracle_J": 0.6808117206391352,
+          "dynamic_oracle_J": 0.6808117206391352,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "A/A",
+            "B/B",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "OFF/A",
+            "OFF/B",
+            "OFF/ALL",
+            "A/OFF",
+            "A/A",
+            "A/B",
+            "A/ALL",
+            "B/OFF",
+            "B/A",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF",
+            "ALL/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "lucia",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.364691767241514,
+          "constant_oracle_J": 0.36525571303509063,
+          "dynamic_oracle_J": 0.3847257090617756,
+          "optimal_constant_trajectories": [
+            "A/A",
+            "B/B"
+          ],
+          "optimal_trajectories": [
+            "ALL/A",
+            "ALL/B"
+          ],
+          "sequence": "motocross-bumps",
+          "strict_nonconstant_extra": 0.019469996026684977,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.22564999331552127,
+          "constant_oracle_J": 0.23477064527049166,
+          "dynamic_oracle_J": 0.2482319674565438,
+          "optimal_constant_trajectories": [
+            "A/A"
+          ],
+          "optimal_trajectories": [
+            "ALL/OFF"
+          ],
+          "sequence": "motocross-bumps",
+          "strict_nonconstant_extra": 0.013461322186052144,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.40835266821345706,
+          "constant_oracle_J": 0.40835266821345706,
+          "dynamic_oracle_J": 0.40835266821345706,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "A/A",
+            "B/B",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "OFF/A",
+            "OFF/B",
+            "OFF/ALL",
+            "A/OFF",
+            "A/A",
+            "A/B",
+            "A/ALL",
+            "B/OFF",
+            "B/A",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF",
+            "ALL/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "paragliding",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.5135776349152146,
+          "constant_oracle_J": 0.5135776349152146,
+          "dynamic_oracle_J": 0.5135776349152146,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "A/A",
+            "B/B",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "OFF/A",
+            "OFF/B",
+            "OFF/ALL",
+            "A/OFF",
+            "A/A",
+            "A/B",
+            "A/ALL",
+            "B/OFF",
+            "B/A",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF",
+            "ALL/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "paragliding",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.2920037168412758,
+          "constant_oracle_J": 0.2920037168412758,
+          "dynamic_oracle_J": 0.2920037168412758,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "A/OFF",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "sheep",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.2207077982073201,
+          "constant_oracle_J": 0.22332028624291594,
+          "dynamic_oracle_J": 0.22332028624291594,
+          "optimal_constant_trajectories": [
+            "B/B"
+          ],
+          "optimal_trajectories": [
+            "OFF/ALL",
+            "B/B",
+            "B/ALL",
+            "ALL/OFF"
+          ],
+          "sequence": "sheep",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "2"
+        },
+        {
+          "OFF_J": 0.4109777080829562,
+          "constant_oracle_J": 0.4109777080829562,
+          "dynamic_oracle_J": 0.4109777080829562,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "A/A",
+            "ALL/ALL"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "OFF/A",
+            "OFF/B",
+            "A/OFF",
+            "A/A",
+            "A/B",
+            "B/OFF",
+            "B/A",
+            "ALL/B",
+            "ALL/ALL"
+          ],
+          "sequence": "tractor-sand",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "1"
+        },
+        {
+          "OFF_J": 0.17657613369669697,
+          "constant_oracle_J": 0.17657613369669697,
+          "dynamic_oracle_J": 0.17657613369669697,
+          "optimal_constant_trajectories": [
+            "OFF/OFF",
+            "A/A"
+          ],
+          "optimal_trajectories": [
+            "OFF/OFF",
+            "OFF/A",
+            "OFF/B",
+            "A/OFF",
+            "A/A",
+            "B/OFF",
+            "B/A",
+            "ALL/B"
+          ],
+          "sequence": "tractor-sand",
+          "strict_nonconstant_extra": 0.0,
+          "target_slot": "2"
+        }
+      ],
+      "seed": 20260926,
+      "status": "COMPLETE",
+      "strict_nonconstant_pair_count": 11,
+      "strict_nonconstant_sequence_count": 6,
+      "tie_tolerance": 1e-12
+    }
+  }
+}

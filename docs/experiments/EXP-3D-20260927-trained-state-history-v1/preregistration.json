@@ -1,0 +1,91 @@
+{
+  "status": "LOCKED_BEFORE_REAL_EVALUATION",
+  "created_utc": "2026-09-26T18:46:13.085436+00:00",
+  "scope": "POSTHOC_TRAIN_SCENE_MECHANISM_DIAGNOSTIC",
+  "checkpoint": "outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/phase_b_final.pt",
+  "checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+  "checkpoint_selection": "User latest B-final, not metric-selected A-final",
+  "manifest": "outputs/EXP-3D-20260927-small-training-v1/data/manifest.json",
+  "scene_ids": [
+    "ai_001_001",
+    "ai_002_001",
+    "ai_003_001"
+  ],
+  "context_a": [
+    0,
+    1,
+    2
+  ],
+  "context_b": [
+    0,
+    3,
+    4
+  ],
+  "stream": [
+    5,
+    6
+  ],
+  "continuation": [
+    7
+  ],
+  "primary_queries": [
+    8,
+    9
+  ],
+  "secondary_queries": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "query_scope": "Primary not optimizer targets; both cohorts on trained scenes, not independent scene confirmation. Original synthetic roles reused for primary; real cohort newly locked. Secondary must not mix with primary.",
+  "static_methods": [
+    "A",
+    "B",
+    "anchor",
+    "prior",
+    "wrong_scene"
+  ],
+  "prior": {
+    "rgb": 0.5,
+    "ray_distance_m": 5.0,
+    "opacity": 1.0,
+    "note": "Same fixed toy baseline as prior smoke; not trained population baseline"
+  },
+  "wrong_scene": "next scene in locked ordering, donor A state; target anchor-relative query camera unchanged; no registration",
+  "histories": {
+    "FC": [
+      "FUSE",
+      "COMPLETE"
+    ],
+    "CF": [
+      "COMPLETE",
+      "FUSE"
+    ]
+  },
+  "actions": [
+    "OFF",
+    "FUSE",
+    "COMPLETE",
+    "ALL"
+  ],
+  "primary_metric": "depth_absrel_gain_vs_same_history_OFF",
+  "seed": 20260927,
+  "bootstrap_draws": 10000,
+  "tie_tolerance": 1e-08,
+  "visibility": {
+    "common_frustum": "query GT worldpoints inside at least one view per context",
+    "depth_consistent_common": "nearest context depth |raydistance-GT| <= .05m+.01*GT, approximate visibility, evaluator-only GT"
+  },
+  "renderer_samples": 64,
+  "ray_chunk_size": 2048,
+  "residual_control": "NOT_RUN_TRAINED_RESIDUAL_HEAD_MISSING",
+  "natural_history": "SKIPPED_STATIC_QUALIFICATION_NOT_ESTABLISHED",
+  "policy": "SKIPPED_STATIC_QUALIFICATION_NOT_ESTABLISHED",
+  "no_training_or_tuning": true,
+  "all_states_sealed_before_query_camera_or_gt": true,
+  "n_train_scenes": 3,
+  "n_dev_scenes": 0,
+  "n_test_scenes": 0,
+  "physical_scene_identity": "Unverified; no cross-split claim, scene bootstrap descriptive only"
+}

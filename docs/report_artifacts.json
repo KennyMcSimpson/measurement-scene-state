@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "description": "Lossless portable report artifacts; originals restored locally, not dataset media or weights",
+  "artifacts": [
+    {
+      "path": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/discovery_raw.jsonl",
+      "archive": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/discovery_raw.jsonl.gz",
+      "sha256": "d443496aaceea7c70d6a2d6253536a67b7236da7bed62e31b6c1c352887ae396",
+      "bytes": 6339790,
+      "compressed_sha256": "767bfc7b963b7525a0c6a2d52cd234f4d2a383ed16a9dd37a63a263de5a945e7",
+      "compressed_bytes": 748421
+    },
+    {
+      "path": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/rank_analysis.json",
+      "archive": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/rank_analysis.json.gz",
+      "sha256": "a85bded4bd3e4cd0862ac7f08e80cd14dd9e62b4c3512b0062bfb88596bd0e43",
+      "bytes": 13280641,
+      "compressed_sha256": "37b6a6df4fa6d8c0e6fa50430e393d2a9d5eaf17d3827f0515aa202b7b887716",
+      "compressed_bytes": 997598
+    },
+    {
+      "path": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/visible_features.csv",
+      "archive": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/visible_features.csv.gz",
+      "sha256": "0cff05dafe91404a11f26253bf9279a1e8709f8067f776a835d98284a93994e7",
+      "bytes": 1774662,
+      "compressed_sha256": "0d24510a3bedba83d8a9cbf17ad02012d3cc8a4e4c5e6cc59a2f63f4ceb0636f",
+      "compressed_bytes": 550551
+    },
+    {
+      "path": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/signal_scatter.csv",
+      "archive": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/signal_scatter.csv.gz",
+      "sha256": "98d87fb2981f08d16bcd01921d470eb86d83bdadd84c1d7448749fbfb85eb8e1",
+      "bytes": 4479421,
+      "compressed_sha256": "49da09ba417c4a4580be6895ff1c80a871cb5b1c2f2d3076b7ea1981de2a2fcd",
+      "compressed_bytes": 668165
+    },
+    {
+      "path": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/raw_results.jsonl",
+      "archive": "docs/experiments/EXP-2D-20260926-opportunity-selector-v1/raw_results.jsonl.gz",
+      "sha256": "201719eb9d40120efe8073525486599d08df33d852b9134cd280ebda57153a42",
+      "bytes": 14546205,
+      "compressed_sha256": "b0eabe77cf5cb6956c79ca7b7e082a9f7a603c1c22367a474c96a13b3972880c",
+      "compressed_bytes": 1724569
+    },
+    {
+      "path": "docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/discovery_rows.jsonl",
+      "archive": "docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/discovery_rows.jsonl.gz",
+      "sha256": "87627ebff9ee5046a94949fc001a035235d5a65a7c7e9d8c9f2d91e7b1bb4cf4",
+      "bytes": 1449857,
+      "compressed_sha256": "87a24b188073643da1a425e1ada1f17bdef8eaeccd48046097e200d1e6e6cb25",
+      "compressed_bytes": 185725
+    },
+    {
+      "path": "docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/nested_cv_results.json",
+      "archive": "docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/nested_cv_results.json.gz",
+      "sha256": "22c7edb992fb3d386fc5883f1d64fc63e957b514fc8142409c8f71942886ac7e",
+      "bytes": 50494142,
+      "compressed_sha256": "ac3ceed1341417b6d3f87cd636121bdecd2434234cbb39901b4d8468cea412cf",
+      "compressed_bytes": 4507057
+    }
+  ]
+}

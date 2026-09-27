@@ -21,3 +21,7 @@ checkpoints are not included in this public repository. See
 
 The PDF in `research/source/` is Kenny's supplied ICLR draft snapshot. Its
 publication status and any coauthor rights are not asserted by this repository.
+
+## Long-LRM metadata test fixture
+
+`tests/fixtures/long_lrm/` contains the unmodified public scene/frame-index split descriptor from Long-LRM revision `0e89431a964b8a7e2fdec24e3ca5ec74a26dcafc`, with source URL/hash provenance and upstream Apache-2.0 LICENSE. It contains no dataset images or weights. See its README.

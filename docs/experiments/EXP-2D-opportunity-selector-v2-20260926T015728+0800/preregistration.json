@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-09-25T18:03:59.834802+00:00",
+  "protocol_sha256": "5933d07e1eb944bfb16b8caa2725f9762507494e430e5f526ece8de106dc5cd5",
+  "config_sha256": "b961791a9557404d5fd550f010b5ba1686876ddbf1d2d7177f641e7677399a2d",
+  "scope": "pre-discovery V2 method definition; independent frame manifest separately frozen before evaluation",
+  "hypotheses": {
+    "H1a": "independent candidate opportunity across sequences; oracle nonnegativity constructive",
+    "H1b": "per-pair dynamic oracle minus subset-reoptimized hindsight-global16",
+    "H2": "CycleGate independently exceeds OFF and discovery-fixed16 using both 97.5% paired sequence intervals"
+  },
+  "source_mask_authorization": "existing V1 source-annotated mask-transfer task; explicitly authorized by V2 protocol, not label-free",
+  "new_test_gt_read": false,
+  "primary_method": "CycleGate",
+  "no_adaptive_testing": true,
+  "controls": [
+    "OFF",
+    "discovery_fixed16",
+    "V1_RGB",
+    "V1_visible",
+    "GateOnly"
+  ],
+  "offline_only": [
+    "constant_oracle",
+    "dynamic_oracle",
+    "hindsight_global16"
+  ],
+  "test_domain_caveat": "External dataset confirmation does not establish within-DAVIS replication or backbone pretraining independence."
+}

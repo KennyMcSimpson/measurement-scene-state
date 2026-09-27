@@ -1,5 +1,19 @@
 # Measurement Scene State / Inverse-JEPA + Dynamic-TTT research archive
 
+协作入口：先看 [当前结果与复现说明](docs/handoff/SHARED_WORKSPACE.md)。[三维从零复现](docs/handoff/3D_REPRODUCTION.md) 提供便携脚本；大报告先运行 `python scripts/restore_report_artifacts.py` 恢复，权重与数据不随 Git 分发。
+
+2026-09-27 [已训练权重机制补测](docs/experiments/EXP-3D-20260927-trained-state-history-v1/README.md)：同训练场景留出帧上，写入oracle AbsRel收益约0.000756，但有益历史动作翻转0/3、history额外空间0；静态context A AbsRel2.214，资格仍未建立。原训练query的1次翻转单列，不当独立证据。
+
+2026-09-27 已完成 [1000A＋600B 三维训练](docs/experiments/EXP-3D-20260927-centered-training-1000a-600b-v1/README.md)：耗时112秒，TRAIN OFF AbsRel 为 A结束0.287、B结束0.332（短程1.229）；B相对A回退，未验证写入收益或泛化。
+
+2026-09-27 三维修复：[锚点中心体积实验](docs/experiments/EXP-3D-20260927-centered-support-v1/README.md) 已恢复第三场景写入梯度（0/10 → 10/10），但重建指标变差；仅工程修复，保留原权重。
+
+2026-09-27 后续探索：[折外全局轨迹与 cycle 诊断](docs/experiments/EXP-2D-followup-20260927/README.md)。12个discovery外层折都选择ALL/B；CycleGate仍低约0.209个百分点。仅属事后discovery分析，独立确认仍受阻。
+
+V2 最新进展（2026-09-26）：[独立确认报告](docs/experiments/EXP-2D-opportunity-selector-v2-20260926T015728+0800/README.md) 已完成旧 raw 的 global16 诊断、discovery nested LOSO、实现与测试；独立确认因外部原视频身份/标注兼容性审计未通过而标为 `BLOCKED_NO_INDEPENDENT_DATA`。discovery 的正值不能当成新测试成功。
+
+最新进展（2026-09-26）：[Opportunity + visible selector v1](docs/experiments/EXP-2D-20260926-opportunity-selector-v1/README.md) 已完成。高分辨率评价支持小幅跨序列oracle机会，但简单部署选择器没有净收益。
+
 这是 Kenny 的 CV 研究协作仓库。仓库把三条内容放在一起，但明确区分证据等级：
 
 1. 原来的 `Measurement Scene State` 三维主线与 V5 比较基线；
@@ -233,3 +247,9 @@ The full 365-scene train, 46-scene validation, and 20-scene diagnostic-test part
 the 26-scene final holdout remains unmaterialized and sealed. No main-run, matched-baseline win, or
 CVPR-level empirical claim has been established yet.
 
+
+## 2026-09-27 三维小规模工程训练
+
+已完成3个train场景上的100步静态+30步写入训练，生成新的 `mcss.dynamic.v1` 权重。严格重载与写入重放通过；全套测试561 passed、1 skipped。一个场景因固定体积缺乏多视图候选支持而全部写入梯度为零，保留负例；当前仅工程可用，未取得独立静态/泛化资格。
+
+详见 [训练报告](docs/experiments/EXP-3D-20260927-small-training-v1/README.md) 和 [权重索引](docs/experiments/EXP-3D-20260927-small-training-v1/checkpoint_index.json)。

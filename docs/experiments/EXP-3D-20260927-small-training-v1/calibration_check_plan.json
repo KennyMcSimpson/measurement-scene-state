@@ -1,0 +1,15 @@
+{
+  "purpose": "validate official ray matrix/pose/metric scale against published geometry before training",
+  "scope": "first selected TRAIN frame per scene only",
+  "additional_member": "position.hdf5",
+  "query_or_holdout_reads": false,
+  "compare": "nativepixelcenter normalized rays timesdepth pluspose vs worldposition*scale",
+  "statistics": [
+    "median Euclidean error",
+    "p95 Euclidean error",
+    "valid count"
+  ],
+  "no_calibration_fitting": true,
+  "no_scene_reselection_on_error": true,
+  "formal_acceptance_threshold": "not a research metric; gross mismatch blocks launch and is investigated"
+}

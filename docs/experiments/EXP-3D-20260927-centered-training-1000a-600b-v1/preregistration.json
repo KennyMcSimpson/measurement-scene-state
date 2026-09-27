@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-09-26T18:36:14.671703+00:00",
+  "status": "LOCKED_BEFORE_RUN",
+  "scope": "TRAIN_ONLY_ENGINEERING",
+  "spatial_mode": "anchor-centered",
+  "initialization": "fresh same seed, not resume",
+  "config": {
+    "seed": 20260927,
+    "stage_a_steps": 1000,
+    "stage_b_steps": 600,
+    "stage_a_lr": 0.001,
+    "stage_b_lr": 0.0003,
+    "renderer_samples": 64,
+    "ray_chunk_size": 2048,
+    "gradient_clip": 1.0
+  },
+  "manifest": "outputs/EXP-3D-20260927-small-training-v1/data/manifest.json",
+  "scenes": [
+    "ai_001_001",
+    "ai_002_001",
+    "ai_003_001"
+  ],
+  "compare_to": "EXP-3D-20260927-centered-support-v1",
+  "evaluation": "All original 12 TRAIN query rows at initial, A final, B final; OFF reconstruction; no claim of write benefit",
+  "no_search_or_extra_steps": true,
+  "git_commit": "70be8e0ca4b0953a865fc83707fbf511f3268984"
+}

@@ -1,0 +1,8 @@
+{
+  "exit_code": 139,
+  "kind": "native_segmentation_fault",
+  "log": "full-tests.log",
+  "location": "mcss/types.py _require_finite / tests/dynamic/test_runner.py test_same_episode_reset_changes_branch_but_preserves_content_hashes",
+  "cause": "UNDETERMINED",
+  "modifications_between_attempts": "No fixes to the crashing legacy dynamic/types code; same command/environment. V2 reporting development continued independently."
+}

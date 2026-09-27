@@ -1,0 +1,1928 @@
+{
+  "scope": "POST_HOC_DISCOVERY_ONLY_NOT_INDEPENDENT_CONFIRMATION",
+  "seed": 20260927,
+  "source_hashes": {
+    "discovery_rows.jsonl": "87627ebff9ee5046a94949fc001a035235d5a65a7c7e9d8c9f2d91e7b1bb4cf4",
+    "nested_cv_results.json": "22c7edb992fb3d386fc5883f1d64fc63e957b514fc8142409c8f71942886ac7e",
+    "selectors.json": "a08454dd60d33c5e3a05c5afad79db4feeeb9a6db9576ca6674bfff91101250c"
+  },
+  "methods": {
+    "LOSO_global16": {
+      "status": "COMPLETE",
+      "n_sequences": 12,
+      "n_pairs": 24,
+      "mean_J": 0.44309250428314817,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": null,
+      "comparisons": {
+        "vs_OFF": {
+          "mean": 0.00333052106464006,
+          "ci95": [
+            0.0011847177546904539,
+            0.005951889868906704
+          ],
+          "ci97_5": [
+            0.0009730089144140968,
+            0.006377537075292245
+          ]
+        }
+      },
+      "seed": 20260927,
+      "draws": 10000,
+      "tie_tolerance": 1e-12,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "positive_gain": 0.0038892095064905715,
+      "harmful_loss": 0.0005586884418505115,
+      "net_gain": 0.00333052106464006,
+      "oracle_gain": 0.005627715896974233,
+      "positive_capture": 0.691081351242628,
+      "net_capture": 0.5918068938822463,
+      "regret_to_dynamic_oracle": 0.0022971948323341727,
+      "write_pairs": 24,
+      "write_rate": 1.0,
+      "OFF_rate": 0.0,
+      "sequence_weighted_write_rate": 1.0,
+      "harmful_write_pairs": 3,
+      "harmful_write_rate": 0.125,
+      "beneficial_write_precision": 0.5,
+      "beneficial_write_recall": 0.8,
+      "decision_rate_denominators": {
+        "harmful_write_rate": "all writing pairs",
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol"
+      },
+      "pair_counts": {
+        "improved": 12,
+        "tied": 9,
+        "worse": 3
+      },
+      "sequence_counts": {
+        "improved": 8,
+        "tied": 3,
+        "worse": 1
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 6,
+        "0.01": 4,
+        "0.02": 1
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 1,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "sequence": "bmx-bumps",
+          "n_pairs": 2,
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00013003928125883182,
+          "positive_gain": 0.0015604713751059818,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "cat-girl",
+          "n_pairs": 2,
+          "J": 0.7986292814667523,
+          "delta_OFF": 0.001990650350118417,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00016588752917653474,
+          "positive_gain": 0.001990650350118417,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "classic-car",
+          "n_pairs": 2,
+          "J": 0.41114834661166194,
+          "delta_OFF": 0.0017533112866235379,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00014610927388529482,
+          "positive_gain": 0.005464510204005263,
+          "harmful_loss": 0.003711198917381725,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "color-run",
+          "n_pairs": 2,
+          "J": 0.6035786093047651,
+          "delta_OFF": 0.008221147521274452,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0006850956267728711,
+          "positive_gain": 0.008221147521274452,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "dancing",
+          "n_pairs": 2,
+          "J": 0.5099288175802876,
+          "delta_OFF": 0.002785177767974434,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00023209814733120282,
+          "positive_gain": 0.004172195422154246,
+          "harmful_loss": 0.0013870176541798118,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "drone",
+          "n_pairs": 2,
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.000586909282744446,
+          "positive_gain": 0.0070429113929333514,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "lindy-hop",
+          "n_pairs": 2,
+          "J": 0.26921998617692755,
+          "delta_OFF": -0.00021056574909306125,
+          "delta_fixed": null,
+          "weighted_net_contribution": -1.7547145757755105e-05,
+          "positive_gain": 0.00139547898155154,
+          "harmful_loss": 0.0016060447306446013,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "lucia",
+          "n_pairs": 2,
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0001871543285939664,
+          "positive_gain": 0.002245851943127597,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "motocross-bumps",
+          "n_pairs": 2,
+          "J": 0.3097481771661336,
+          "delta_OFF": 0.014577296887616012,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0012147747406346676,
+          "positive_gain": 0.014577296887616012,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "paragliding",
+          "n_pairs": 2,
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "sheep",
+          "n_pairs": 2,
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "tractor-sand",
+          "n_pairs": 2,
+          "J": 0.2937769208898266,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        }
+      ],
+      "leave_one_sequence_out": [
+        {
+          "omitted_sequence": "bmx-bumps",
+          "delta_OFF": 0.0034914346727795216,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "cat-girl",
+          "delta_OFF": 0.003452327493232937,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "classic-car",
+          "delta_OFF": 0.0034739037717324713,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "color-run",
+          "delta_OFF": 0.002885918659491479,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "dancing",
+          "delta_OFF": 0.0033800977279732987,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "drone",
+          "delta_OFF": 0.0029930310347952155,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "lindy-hop",
+          "delta_OFF": 0.0036524380477067075,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "lucia",
+          "delta_OFF": 0.0034291273484139202,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "motocross-bumps",
+          "delta_OFF": 0.0023080868989149737,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "paragliding",
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "sheep",
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "tractor-sand",
+          "delta_OFF": 0.0036332957068800657,
+          "delta_fixed": null
+        }
+      ],
+      "net_gain_contributions": {
+        "per_sequence": [
+          {
+            "sequence": "bmx-bumps",
+            "mean_gap": 0.0015604713751059818,
+            "weighted_contribution": 0.00013003928125883182,
+            "positive_contribution_share": 0.03884009317820339
+          },
+          {
+            "sequence": "cat-girl",
+            "mean_gap": 0.001990650350118417,
+            "weighted_contribution": 0.00016588752917653474,
+            "positive_contribution_share": 0.04954723701905228
+          },
+          {
+            "sequence": "classic-car",
+            "mean_gap": 0.0017533112866235379,
+            "weighted_contribution": 0.00014610927388529482,
+            "positive_contribution_share": 0.043639873713305924
+          },
+          {
+            "sequence": "color-run",
+            "mean_gap": 0.008221147521274452,
+            "weighted_contribution": 0.0006850956267728711,
+            "positive_contribution_share": 0.2046241545035513
+          },
+          {
+            "sequence": "dancing",
+            "mean_gap": 0.002785177767974434,
+            "weighted_contribution": 0.00023209814733120282,
+            "positive_contribution_share": 0.06932300441502208
+          },
+          {
+            "sequence": "drone",
+            "mean_gap": 0.0070429113929333514,
+            "weighted_contribution": 0.000586909282744446,
+            "positive_contribution_share": 0.1752978869790439
+          },
+          {
+            "sequence": "lindy-hop",
+            "mean_gap": -0.00021056574909306125,
+            "weighted_contribution": -1.7547145757755105e-05,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "lucia",
+            "mean_gap": 0.002245851943127597,
+            "weighted_contribution": 0.0001871543285939664,
+            "positive_contribution_share": 0.05589919823399561
+          },
+          {
+            "sequence": "motocross-bumps",
+            "mean_gap": 0.014577296887616012,
+            "weighted_contribution": 0.0012147747406346676,
+            "positive_contribution_share": 0.36282855195782554
+          },
+          {
+            "sequence": "paragliding",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "sheep",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "tractor-sand",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          }
+        ],
+        "top1_positive_share": 0.36282855195782554,
+        "top3_positive_share": 0.7427505934404207,
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights"
+      }
+    },
+    "CycleGate": {
+      "status": "COMPLETE",
+      "n_sequences": 12,
+      "n_pairs": 24,
+      "mean_J": 0.44100626941360027,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": null,
+      "comparisons": {
+        "vs_OFF": {
+          "mean": 0.0012442861950920866,
+          "ci95": [
+            0.00012906851064670852,
+            0.002595436456156626
+          ],
+          "ci97_5": [
+            -3.0298004876428577e-06,
+            0.002826071828928406
+          ]
+        }
+      },
+      "seed": 20260927,
+      "draws": 10000,
+      "tie_tolerance": 1e-12,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "positive_gain": 0.0019324799606700548,
+      "harmful_loss": 0.000688193765577968,
+      "net_gain": 0.0012442861950920868,
+      "oracle_gain": 0.005627715896974233,
+      "positive_capture": 0.3433861971797584,
+      "net_capture": 0.22109968197951907,
+      "regret_to_dynamic_oracle": 0.0043834297018821465,
+      "write_pairs": 18,
+      "write_rate": 0.75,
+      "OFF_rate": 0.25,
+      "sequence_weighted_write_rate": 0.75,
+      "harmful_write_pairs": 4,
+      "harmful_write_rate": 0.2222222222222222,
+      "beneficial_write_precision": 0.4444444444444444,
+      "beneficial_write_recall": 0.5333333333333333,
+      "decision_rate_denominators": {
+        "harmful_write_rate": "all writing pairs",
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol"
+      },
+      "pair_counts": {
+        "improved": 8,
+        "tied": 12,
+        "worse": 4
+      },
+      "sequence_counts": {
+        "improved": 6,
+        "tied": 3,
+        "worse": 3
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "sequence": "bmx-bumps",
+          "n_pairs": 2,
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00013003928125883182,
+          "positive_gain": 0.0015604713751059818,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "cat-girl",
+          "n_pairs": 2,
+          "J": 0.79862945517296,
+          "delta_OFF": 0.001990824056326168,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00016590200469384733,
+          "positive_gain": 0.001990824056326168,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "classic-car",
+          "n_pairs": 2,
+          "J": 0.40871286276468405,
+          "delta_OFF": -0.0006821725603543549,
+          "delta_fixed": null,
+          "weighted_net_contribution": -5.684771336286291e-05,
+          "positive_gain": 0.003028468516161703,
+          "harmful_loss": 0.003710641076516058,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "color-run",
+          "n_pairs": 2,
+          "J": 0.5964637982566835,
+          "delta_OFF": 0.0011063364731927483,
+          "delta_fixed": null,
+          "weighted_net_contribution": 9.219470609939569e-05,
+          "positive_gain": 0.0011063364731927483,
+          "harmful_loss": 0.0,
+          "write_rate": 0.5
+        },
+        {
+          "sequence": "dancing",
+          "n_pairs": 2,
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00029228579375517133,
+          "positive_gain": 0.006214895771193107,
+          "harmful_loss": 0.0027074662461310517,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "drone",
+          "n_pairs": 2,
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.000586909282744446,
+          "positive_gain": 0.0070429113929333514,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "lindy-hop",
+          "n_pairs": 2,
+          "J": 0.2681326944901048,
+          "delta_OFF": -0.0012978574359158723,
+          "delta_fixed": null,
+          "weighted_net_contribution": -0.0001081547863263227,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0012978574359158723,
+          "write_rate": 0.5
+        },
+        {
+          "sequence": "lucia",
+          "n_pairs": 2,
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0001871543285939664,
+          "positive_gain": 0.002245851943127597,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "motocross-bumps",
+          "n_pairs": 2,
+          "J": 0.2951708802785176,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "sequence": "paragliding",
+          "n_pairs": 2,
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "sheep",
+          "n_pairs": 2,
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "sequence": "tractor-sand",
+          "n_pairs": 2,
+          "J": 0.29323456046145396,
+          "delta_OFF": -0.0005423604283726347,
+          "delta_fixed": null,
+          "weighted_net_contribution": -4.519670236438622e-05,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0005423604283726347,
+          "write_rate": 1.0
+        }
+      ],
+      "leave_one_sequence_out": [
+        {
+          "omitted_sequence": "bmx-bumps",
+          "delta_OFF": 0.0012155420878180963,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "cat-girl",
+          "delta_OFF": 0.0011764191167980794,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "classic-car",
+          "delta_OFF": 0.0014194188092235814,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "color-run",
+          "delta_OFF": 0.0012568270789011175,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "dancing",
+          "delta_OFF": 0.001038545892367544,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "drone",
+          "delta_OFF": 0.0007171384498337899,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "lindy-hop",
+          "delta_OFF": 0.0014753901615473556,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "lucia",
+          "delta_OFF": 0.001153234763452495,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "motocross-bumps",
+          "delta_OFF": 0.00135740312191864,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "paragliding",
+          "delta_OFF": 0.00135740312191864,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "sheep",
+          "delta_OFF": 0.00135740312191864,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "tractor-sand",
+          "delta_OFF": 0.0014067086154070615,
+          "delta_fixed": null
+        }
+      ],
+      "net_gain_contributions": {
+        "per_sequence": [
+          {
+            "sequence": "bmx-bumps",
+            "mean_gap": 0.0015604713751059818,
+            "weighted_contribution": 0.00013003928125883182,
+            "positive_contribution_share": 0.08940569737862354
+          },
+          {
+            "sequence": "cat-girl",
+            "mean_gap": 0.001990824056326168,
+            "weighted_contribution": 0.00016590200469384733,
+            "positive_contribution_share": 0.1140623377996233
+          },
+          {
+            "sequence": "classic-car",
+            "mean_gap": -0.0006821725603543549,
+            "weighted_contribution": -5.684771336286291e-05,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "color-run",
+            "mean_gap": 0.0011063364731927483,
+            "weighted_contribution": 9.219470609939569e-05,
+            "positive_contribution_share": 0.06338647763691704
+          },
+          {
+            "sequence": "dancing",
+            "mean_gap": 0.0035074295250620557,
+            "weighted_contribution": 0.00029228579375517133,
+            "positive_contribution_share": 0.20095478052152663
+          },
+          {
+            "sequence": "drone",
+            "mean_gap": 0.0070429113929333514,
+            "weighted_contribution": 0.000586909282744446,
+            "positive_contribution_share": 0.40351679287823766
+          },
+          {
+            "sequence": "lindy-hop",
+            "mean_gap": -0.0012978574359158723,
+            "weighted_contribution": -0.0001081547863263227,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "lucia",
+            "mean_gap": 0.002245851943127597,
+            "weighted_contribution": 0.0001871543285939664,
+            "positive_contribution_share": 0.12867391378507181
+          },
+          {
+            "sequence": "motocross-bumps",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "paragliding",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "sheep",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "tractor-sand",
+            "mean_gap": -0.0005423604283726347,
+            "weighted_contribution": -4.519670236438622e-05,
+            "positive_contribution_share": 0.0
+          }
+        ],
+        "top1_positive_share": 0.40351679287823766,
+        "top3_positive_share": 0.7331454871848361,
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights"
+      }
+    },
+    "GateOnly": {
+      "status": "COMPLETE",
+      "n_sequences": 12,
+      "n_pairs": 24,
+      "mean_J": 0.44091809831626816,
+      "mean_OFF_J": 0.4397619832185082,
+      "mean_fixed_J": null,
+      "comparisons": {
+        "vs_OFF": {
+          "mean": 0.0011561150977600389,
+          "ci95": [
+            7.076146880754816e-05,
+            0.0025030947119284276
+          ],
+          "ci97_5": [
+            -2.8969710091528617e-05,
+            0.002724843535327429
+          ]
+        }
+      },
+      "seed": 20260927,
+      "draws": 10000,
+      "tie_tolerance": 1e-12,
+      "ci_scope": "95% descriptive; 97.5% two-sided Bonferroni for the two prespecified primary H2 comparisons only",
+      "positive_gain": 0.001844308863338007,
+      "harmful_loss": 0.000688193765577968,
+      "net_gain": 0.0011561150977600389,
+      "oracle_gain": 0.005627715896974233,
+      "positive_capture": 0.32771890001227816,
+      "net_capture": 0.20543238481203882,
+      "regret_to_dynamic_oracle": 0.004471600799214194,
+      "write_pairs": 18,
+      "write_rate": 0.75,
+      "OFF_rate": 0.25,
+      "sequence_weighted_write_rate": 0.75,
+      "harmful_write_pairs": 4,
+      "harmful_write_rate": 0.2222222222222222,
+      "beneficial_write_precision": 0.4444444444444444,
+      "beneficial_write_recall": 0.5333333333333333,
+      "decision_rate_denominators": {
+        "harmful_write_rate": "all writing pairs",
+        "beneficial_write_precision": "all writing pairs",
+        "beneficial_write_recall": "pairs with dynamic-oracle gain>tol"
+      },
+      "pair_counts": {
+        "improved": 8,
+        "tied": 12,
+        "worse": 4
+      },
+      "sequence_counts": {
+        "improved": 6,
+        "tied": 3,
+        "worse": 3
+      },
+      "pair_gain_threshold_counts": {
+        "0.005": 3,
+        "0.01": 2,
+        "0.02": 0
+      },
+      "sequence_gain_threshold_counts": {
+        "0.005": 1,
+        "0.01": 0,
+        "0.02": 0
+      },
+      "per_sequence": [
+        {
+          "sequence": "bmx-bumps",
+          "n_pairs": 2,
+          "J": 0.4262882743581704,
+          "delta_OFF": 0.0015604713751059818,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00013003928125883182,
+          "positive_gain": 0.0015604713751059818,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "cat-girl",
+          "n_pairs": 2,
+          "J": 0.7978337222480643,
+          "delta_OFF": 0.0011950911314304036,
+          "delta_fixed": null,
+          "weighted_net_contribution": 9.95909276192003e-05,
+          "positive_gain": 0.0011950911314304036,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "classic-car",
+          "n_pairs": 2,
+          "J": 0.40927490609799966,
+          "delta_OFF": -0.00012012922703874551,
+          "delta_fixed": null,
+          "weighted_net_contribution": -1.001076891989546e-05,
+          "positive_gain": 0.0035905118494773125,
+          "harmful_loss": 0.003710641076516058,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "color-run",
+          "n_pairs": 2,
+          "J": 0.5953574617834907,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "sequence": "dancing",
+          "n_pairs": 2,
+          "J": 0.5106510693373753,
+          "delta_OFF": 0.0035074295250620557,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.00029228579375517133,
+          "positive_gain": 0.006214895771193107,
+          "harmful_loss": 0.0027074662461310517,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "drone",
+          "n_pairs": 2,
+          "J": 0.27360109643469427,
+          "delta_OFF": 0.0070429113929333514,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.000586909282744446,
+          "positive_gain": 0.0070429113929333514,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "lindy-hop",
+          "n_pairs": 2,
+          "J": 0.2681326944901048,
+          "delta_OFF": -0.0012978574359158723,
+          "delta_fixed": null,
+          "weighted_net_contribution": -0.0001081547863263227,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0012978574359158723,
+          "write_rate": 0.5
+        },
+        {
+          "sequence": "lucia",
+          "n_pairs": 2,
+          "J": 0.7038696323199249,
+          "delta_OFF": 0.002245851943127597,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0001871543285939664,
+          "positive_gain": 0.002245851943127597,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "motocross-bumps",
+          "n_pairs": 2,
+          "J": 0.29545285317530595,
+          "delta_OFF": 0.0002819728967883295,
+          "delta_fixed": null,
+          "weighted_net_contribution": 2.3497741399027456e-05,
+          "positive_gain": 0.0002819728967883295,
+          "harmful_loss": 0.0,
+          "write_rate": 0.5
+        },
+        {
+          "sequence": "paragliding",
+          "n_pairs": 2,
+          "J": 0.4609651515643358,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 1.0
+        },
+        {
+          "sequence": "sheep",
+          "n_pairs": 2,
+          "J": 0.25635575752429796,
+          "delta_OFF": 0.0,
+          "delta_fixed": null,
+          "weighted_net_contribution": 0.0,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0,
+          "write_rate": 0.0
+        },
+        {
+          "sequence": "tractor-sand",
+          "n_pairs": 2,
+          "J": 0.29323456046145396,
+          "delta_OFF": -0.0005423604283726347,
+          "delta_fixed": null,
+          "weighted_net_contribution": -4.519670236438622e-05,
+          "positive_gain": 0.0,
+          "harmful_loss": 0.0005423604283726347,
+          "write_rate": 1.0
+        }
+      ],
+      "leave_one_sequence_out": [
+        {
+          "omitted_sequence": "bmx-bumps",
+          "delta_OFF": 0.001119355436183135,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "cat-girl",
+          "delta_OFF": 0.001152571821971824,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "classic-car",
+          "delta_OFF": 0.001272137309105383,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "color-run",
+          "delta_OFF": 0.0012612164702836789,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "dancing",
+          "delta_OFF": 0.0009423592407325828,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "drone",
+          "delta_OFF": 0.0006209517981988287,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "lindy-hop",
+          "delta_OFF": 0.0013792035099123945,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "lucia",
+          "delta_OFF": 0.0010570481118175336,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "motocross-bumps",
+          "delta_OFF": 0.0012355825705756488,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "paragliding",
+          "delta_OFF": 0.0012612164702836789,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "sheep",
+          "delta_OFF": 0.0012612164702836789,
+          "delta_fixed": null
+        },
+        {
+          "omitted_sequence": "tractor-sand",
+          "delta_OFF": 0.0013105219637721001,
+          "delta_fixed": null
+        }
+      ],
+      "net_gain_contributions": {
+        "per_sequence": [
+          {
+            "sequence": "bmx-bumps",
+            "mean_gap": 0.0015604713751059818,
+            "weighted_contribution": 0.00013003928125883182,
+            "positive_contribution_share": 0.0985536286238907
+          },
+          {
+            "sequence": "cat-girl",
+            "mean_gap": 0.0011950911314304036,
+            "weighted_contribution": 9.95909276192003e-05,
+            "positive_contribution_share": 0.0754775572417649
+          },
+          {
+            "sequence": "classic-car",
+            "mean_gap": -0.00012012922703874551,
+            "weighted_contribution": -1.001076891989546e-05,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "color-run",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "dancing",
+            "mean_gap": 0.0035074295250620557,
+            "weighted_contribution": 0.00029228579375517133,
+            "positive_contribution_share": 0.22151633945477434
+          },
+          {
+            "sequence": "drone",
+            "mean_gap": 0.0070429113929333514,
+            "weighted_contribution": 0.000586909282744446,
+            "positive_contribution_share": 0.4448043616327028
+          },
+          {
+            "sequence": "lindy-hop",
+            "mean_gap": -0.0012978574359158723,
+            "weighted_contribution": -0.0001081547863263227,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "lucia",
+            "mean_gap": 0.002245851943127597,
+            "weighted_contribution": 0.0001871543285939664,
+            "positive_contribution_share": 0.14183974270736496
+          },
+          {
+            "sequence": "motocross-bumps",
+            "mean_gap": 0.0002819728967883295,
+            "weighted_contribution": 2.3497741399027456e-05,
+            "positive_contribution_share": 0.017808370339502267
+          },
+          {
+            "sequence": "paragliding",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "sheep",
+            "mean_gap": 0.0,
+            "weighted_contribution": 0.0,
+            "positive_contribution_share": 0.0
+          },
+          {
+            "sequence": "tractor-sand",
+            "mean_gap": -0.0005423604283726347,
+            "weighted_contribution": -4.519670236438622e-05,
+            "positive_contribution_share": 0.0
+          }
+        ],
+        "top1_positive_share": 0.4448043616327028,
+        "top3_positive_share": 0.8081604437948421,
+        "concentration_denominator": "sum of positive sequence mean gaps; equal sequence weights"
+      }
+    }
+  },
+  "comparisons": {
+    "CycleGate-LOSO_global16": {
+      "mean": -0.002086234869547963,
+      "ci95": [
+        -0.004860546057395536,
+        -0.00013577503001039118
+      ],
+      "per_sequence": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 1.7370620775114531e-07,
+        "classic-car": -0.0024354838469778928,
+        "color-run": -0.0071148110480816484,
+        "dancing": 0.0007222517570876219,
+        "drone": 0.0,
+        "lindy-hop": -0.0010872916868227556,
+        "lucia": 0.0,
+        "motocross-bumps": -0.014577296887615998,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": -0.0005423604283726347
+      },
+      "scope": "post-hoc descriptive interval conditional on saved OOF policies; no retraining in bootstrap"
+    },
+    "GateOnly-LOSO_global16": {
+      "mean": -0.0021744059668800156,
+      "ci95": [
+        -0.00492138076362608,
+        -0.0002013167451695765
+      ],
+      "per_sequence": {
+        "bmx-bumps": 0.0,
+        "cat-girl": -0.0007955592186880134,
+        "classic-car": -0.0018734405136622834,
+        "color-run": -0.008221147521274452,
+        "dancing": 0.0007222517570876219,
+        "drone": 0.0,
+        "lindy-hop": -0.0010872916868227556,
+        "lucia": 0.0,
+        "motocross-bumps": -0.014295323990827669,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": -0.0005423604283726347
+      },
+      "scope": "post-hoc descriptive interval conditional on saved OOF policies; no retraining in bootstrap"
+    },
+    "CycleGate-GateOnly": {
+      "mean": 8.817109733205246e-05,
+      "ci95": [
+        -0.00012119523905231022,
+        0.000342895195372848
+      ],
+      "per_sequence": {
+        "bmx-bumps": 0.0,
+        "cat-girl": 0.0007957329248957645,
+        "classic-car": -0.0005620433333156094,
+        "color-run": 0.0011063364731928038,
+        "dancing": 0.0,
+        "drone": 0.0,
+        "lindy-hop": 0.0,
+        "lucia": 0.0,
+        "motocross-bumps": -0.0002819728967883295,
+        "paragliding": 0.0,
+        "sheep": 0.0,
+        "tractor-sand": 0.0
+      },
+      "scope": "post-hoc descriptive interval conditional on saved OOF policies; no retraining in bootstrap"
+    }
+  },
+  "LOSO_global_decisions": [
+    {
+      "sequence": "bmx-bumps",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.44462016154905526
+    },
+    {
+      "sequence": "bmx-bumps",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.44462016154905526
+    },
+    {
+      "sequence": "cat-girl",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.4107709790846387
+    },
+    {
+      "sequence": "cat-girl",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.4107709790846387
+    },
+    {
+      "sequence": "classic-car",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.44599651861691963
+    },
+    {
+      "sequence": "classic-car",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.44599651861691963
+    },
+    {
+      "sequence": "color-run",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.42850285837209207
+    },
+    {
+      "sequence": "color-run",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.42850285837209207
+    },
+    {
+      "sequence": "dancing",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.43701647580159003
+    },
+    {
+      "sequence": "dancing",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.43701647580159003
+    },
+    {
+      "sequence": "drone",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.45850081408755305
+    },
+    {
+      "sequence": "drone",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.45850081408755305
+    },
+    {
+      "sequence": "lindy-hop",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.45889909683825914
+    },
+    {
+      "sequence": "lindy-hop",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.45889909683825914
+    },
+    {
+      "sequence": "lucia",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.41938549264344116
+    },
+    {
+      "sequence": "lucia",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "motocross-bumps",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.41938549264344116
+    },
+    {
+      "sequence": "motocross-bumps",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.45521471583924034
+    },
+    {
+      "sequence": "motocross-bumps",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "paragliding",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.45521471583924034
+    },
+    {
+      "sequence": "paragliding",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.44146771816667657
+    },
+    {
+      "sequence": "paragliding",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "sheep",
+        "tractor-sand"
+      ],
+      "training_score": 0.44146771816667657
+    },
+    {
+      "sequence": "sheep",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "tractor-sand"
+      ],
+      "training_score": 0.4600685721703164
+    },
+    {
+      "sequence": "sheep",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "tractor-sand"
+      ],
+      "training_score": 0.4600685721703164
+    },
+    {
+      "sequence": "tractor-sand",
+      "target_slot": 1,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep"
+      ],
+      "training_score": 0.4566666482279956
+    },
+    {
+      "sequence": "tractor-sand",
+      "target_slot": 2,
+      "trajectory": [
+        "ALL",
+        "B"
+      ],
+      "training_sequences": [
+        "bmx-bumps",
+        "cat-girl",
+        "classic-car",
+        "color-run",
+        "dancing",
+        "drone",
+        "lindy-hop",
+        "lucia",
+        "motocross-bumps",
+        "paragliding",
+        "sheep"
+      ],
+      "training_score": 0.4566666482279956
+    }
+  ],
+  "LOSO_global_winners": {
+    "ALL/B": 12
+  },
+  "cycle_within_pair_diagnostics": [
+    {
+      "sequence": "bmx-bumps",
+      "target_slot": 1,
+      "candidate_spearman": -0.07035394993113316,
+      "f_cycle_range": 0.010121241211891174,
+      "reward_range": 0.0031209427502119635,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 7
+    },
+    {
+      "sequence": "bmx-bumps",
+      "target_slot": 2,
+      "candidate_spearman": null,
+      "f_cycle_range": 0.007606112863868475,
+      "reward_range": 0.0,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 15
+    },
+    {
+      "sequence": "cat-girl",
+      "target_slot": 1,
+      "candidate_spearman": 0.7564790173489607,
+      "f_cycle_range": 0.03799816966056824,
+      "reward_range": 0.004464594094648056,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 0
+    },
+    {
+      "sequence": "cat-girl",
+      "target_slot": 2,
+      "candidate_spearman": 0.5538481950176862,
+      "f_cycle_range": 0.0035764575004577637,
+      "reward_range": 0.0037267858150631383,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 2
+    },
+    {
+      "sequence": "classic-car",
+      "target_slot": 1,
+      "candidate_spearman": -0.6612760979957649,
+      "f_cycle_range": 0.00291174153486895,
+      "reward_range": 0.010835440308826882,
+      "positive_cycle_but_harmful_candidates": 4,
+      "positive_cycle_candidates": 4
+    },
+    {
+      "sequence": "classic-car",
+      "target_slot": 2,
+      "candidate_spearman": 0.34137636509060465,
+      "f_cycle_range": 0.03739207734664274,
+      "reward_range": 0.010969216900157508,
+      "positive_cycle_but_harmful_candidates": 1,
+      "positive_cycle_candidates": 12
+    },
+    {
+      "sequence": "color-run",
+      "target_slot": 1,
+      "candidate_spearman": -0.7329760874357277,
+      "f_cycle_range": 0.012420763572057125,
+      "reward_range": 0.018687233600319986,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 0
+    },
+    {
+      "sequence": "color-run",
+      "target_slot": 2,
+      "candidate_spearman": 0.035746216239853884,
+      "f_cycle_range": 0.009320683777332306,
+      "reward_range": 0.0018534049146649023,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 1
+    },
+    {
+      "sequence": "dancing",
+      "target_slot": 1,
+      "candidate_spearman": 0.6420873694553346,
+      "f_cycle_range": 0.016228263576825386,
+      "reward_range": 0.009048494285814002,
+      "positive_cycle_but_harmful_candidates": 8,
+      "positive_cycle_candidates": 8
+    },
+    {
+      "sequence": "dancing",
+      "target_slot": 2,
+      "candidate_spearman": -0.5469003984328882,
+      "f_cycle_range": 0.026696602503458733,
+      "reward_range": 0.020782860446862284,
+      "positive_cycle_but_harmful_candidates": 1,
+      "positive_cycle_candidates": 4
+    },
+    {
+      "sequence": "drone",
+      "target_slot": 1,
+      "candidate_spearman": null,
+      "f_cycle_range": 0.0057032108306884766,
+      "reward_range": 0.0,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 15
+    },
+    {
+      "sequence": "drone",
+      "target_slot": 2,
+      "candidate_spearman": 0.7153586879965126,
+      "f_cycle_range": 0.007462891563773111,
+      "reward_range": 0.013917001061480222,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 15
+    },
+    {
+      "sequence": "lindy-hop",
+      "target_slot": 1,
+      "candidate_spearman": -0.6532966705450511,
+      "f_cycle_range": 0.007149418815970421,
+      "reward_range": 0.0013901812884175024,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 10
+    },
+    {
+      "sequence": "lindy-hop",
+      "target_slot": 2,
+      "candidate_spearman": 0.4183184553268537,
+      "f_cycle_range": 0.008539926260709763,
+      "reward_range": 0.004249530923148698,
+      "positive_cycle_but_harmful_candidates": 1,
+      "positive_cycle_candidates": 1
+    },
+    {
+      "sequence": "lucia",
+      "target_slot": 1,
+      "candidate_spearman": 0.8969937018449045,
+      "f_cycle_range": 0.0014278888702392578,
+      "reward_range": 0.004524003069879101,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 7
+    },
+    {
+      "sequence": "lucia",
+      "target_slot": 2,
+      "candidate_spearman": null,
+      "f_cycle_range": 0.0003566741943359375,
+      "reward_range": 0.0,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 5
+    },
+    {
+      "sequence": "motocross-bumps",
+      "target_slot": 1,
+      "candidate_spearman": -0.10532743215372228,
+      "f_cycle_range": 0.00854780524969101,
+      "reward_range": 0.020033941820261636,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 0
+    },
+    {
+      "sequence": "motocross-bumps",
+      "target_slot": 2,
+      "candidate_spearman": 0.9132004260021682,
+      "f_cycle_range": 0.03424537926912308,
+      "reward_range": 0.030142852771788603,
+      "positive_cycle_but_harmful_candidates": 3,
+      "positive_cycle_candidates": 15
+    },
+    {
+      "sequence": "paragliding",
+      "target_slot": 1,
+      "candidate_spearman": null,
+      "f_cycle_range": 0.011995315551757812,
+      "reward_range": 0.0,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 4
+    },
+    {
+      "sequence": "paragliding",
+      "target_slot": 2,
+      "candidate_spearman": null,
+      "f_cycle_range": 0.0050100237131118774,
+      "reward_range": 0.0,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 1
+    },
+    {
+      "sequence": "sheep",
+      "target_slot": 1,
+      "candidate_spearman": -0.8579382026405965,
+      "f_cycle_range": 0.003770826756954171,
+      "reward_range": 0.027909459410645876,
+      "positive_cycle_but_harmful_candidates": 9,
+      "positive_cycle_candidates": 9
+    },
+    {
+      "sequence": "sheep",
+      "target_slot": 2,
+      "candidate_spearman": -0.9028415549507763,
+      "f_cycle_range": 0.004812854528427057,
+      "reward_range": 0.0026124880355958557,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 11
+    },
+    {
+      "sequence": "tractor-sand",
+      "target_slot": 1,
+      "candidate_spearman": 0.6012036120421519,
+      "f_cycle_range": 0.00255180398623156,
+      "reward_range": 0.006185995484811968,
+      "positive_cycle_but_harmful_candidates": 6,
+      "positive_cycle_candidates": 15
+    },
+    {
+      "sequence": "tractor-sand",
+      "target_slot": 2,
+      "candidate_spearman": 0.9534625892455921,
+      "f_cycle_range": 0.005497634410858154,
+      "reward_range": 0.0010847208567452693,
+      "positive_cycle_but_harmful_candidates": 0,
+      "positive_cycle_candidates": 7
+    }
+  ],
+  "cycle_outer_coefficients": [
+    {
+      "held_out": [
+        "bmx-bumps"
+      ],
+      "cycle_standardized_coefficient": 0.0003922828340077317
+    },
+    {
+      "held_out": [
+        "cat-girl"
+      ],
+      "cycle_standardized_coefficient": 0.0004026036397981046
+    },
+    {
+      "held_out": [
+        "classic-car"
+      ],
+      "cycle_standardized_coefficient": 0.00015245150348440947
+    },
+    {
+      "held_out": [
+        "color-run"
+      ],
+      "cycle_standardized_coefficient": 0.0005361967195886888
+    },
+    {
+      "held_out": [
+        "dancing"
+      ],
+      "cycle_standardized_coefficient": 0.0004731022074199007
+    },
+    {
+      "held_out": [
+        "drone"
+      ],
+      "cycle_standardized_coefficient": 0.000293805731784925
+    },
+    {
+      "held_out": [
+        "lindy-hop"
+      ],
+      "cycle_standardized_coefficient": 0.00025636362771526503
+    },
+    {
+      "held_out": [
+        "lucia"
+      ],
+      "cycle_standardized_coefficient": 0.0003241403829689603
+    },
+    {
+      "held_out": [
+        "motocross-bumps"
+      ],
+      "cycle_standardized_coefficient": -0.00019127199965120425
+    },
+    {
+      "held_out": [
+        "paragliding"
+      ],
+      "cycle_standardized_coefficient": 0.0003590061814196698
+    },
+    {
+      "held_out": [
+        "sheep"
+      ],
+      "cycle_standardized_coefficient": 0.00040421652933173865
+    },
+    {
+      "held_out": [
+        "tractor-sand"
+      ],
+      "cycle_standardized_coefficient": 0.000513192642866155
+    }
+  ],
+  "confirmation_status": "BLOCKED_NO_INDEPENDENT_DATA",
+  "media_reads": 0,
+  "target_gt_file_reads": 0,
+  "v2_modified": false
+}

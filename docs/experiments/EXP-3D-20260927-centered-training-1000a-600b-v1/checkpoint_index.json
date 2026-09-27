@@ -1,0 +1,19 @@
+{
+  "schema": "mcss.dynamic.v1",
+  "status": "TRAIN_ONLY_NOT_GENERALIZATION_QUALIFIED",
+  "spatial_mode": "anchor-centered",
+  "checkpoints": {
+    "initial": {
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/initial.pt",
+      "sha256": "067292dc8048da924873bdc05d49b694c0d8ca4b7aa31a1feee4d9a828181da9"
+    },
+    "phase_a_final": {
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/phase_a_final.pt",
+      "sha256": "874e12bdcb981b9ab80f68d16691d86458ae35a155501626132a89d6d9ab8d70"
+    },
+    "phase_b_final": {
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/phase_b_final.pt",
+      "sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42"
+    }
+  }
+}

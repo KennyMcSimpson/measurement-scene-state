@@ -1,0 +1,140 @@
+{
+  "dataset": "FBMS-59",
+  "official_page": "https://lmb.informatik.uni-freiburg.de/resources/datasets/",
+  "license": "Research purposes only; commercial use prohibited",
+  "archive_metadata": [
+    {
+      "url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/fbms/FBMS_Trainingset.zip",
+      "content_length": 493963199,
+      "etag": "\"1d7147bf-4f9bf9a801e40\"",
+      "central_directory_bytes_downloaded": 908081,
+      "index_sha256": "58ec5ea4525708849c005f561b07de40ee0f4a659a9b1b35b6c7ae45c9b41bc0"
+    },
+    {
+      "url": "https://lmb.informatik.uni-freiburg.de/resources/datasets/fbms/FBMS_Testset.zip",
+      "content_length": 401372602,
+      "etag": "\"17ec75ba-4f9bf9abd2740\"",
+      "central_directory_bytes_downloaded": 961762,
+      "index_sha256": "6e47b7fd1f7131f77371cdcf10a120e73da83fc7f66991f03665e0dbf74f1b9e"
+    }
+  ],
+  "official_sequences": 59,
+  "provisional_name_families": {
+    "bear": [
+      "bear01",
+      "bear02"
+    ],
+    "camel": [
+      "camel01"
+    ],
+    "cars": [
+      "cars1",
+      "cars10",
+      "cars2",
+      "cars3",
+      "cars4",
+      "cars5",
+      "cars6",
+      "cars7",
+      "cars8",
+      "cars9"
+    ],
+    "cats": [
+      "cats01",
+      "cats02",
+      "cats03",
+      "cats04",
+      "cats05",
+      "cats06",
+      "cats07"
+    ],
+    "dogs": [
+      "dogs01",
+      "dogs02"
+    ],
+    "ducks": [
+      "ducks01"
+    ],
+    "farm": [
+      "farm01"
+    ],
+    "giraffes": [
+      "giraffes01"
+    ],
+    "goats": [
+      "goats01"
+    ],
+    "horses": [
+      "horses01",
+      "horses02",
+      "horses03",
+      "horses04",
+      "horses05",
+      "horses06"
+    ],
+    "lion": [
+      "lion01",
+      "lion02"
+    ],
+    "marple": [
+      "marple1",
+      "marple10",
+      "marple11",
+      "marple12",
+      "marple13",
+      "marple2",
+      "marple3",
+      "marple4",
+      "marple5",
+      "marple6",
+      "marple7",
+      "marple8",
+      "marple9"
+    ],
+    "meerkats": [
+      "meerkats01"
+    ],
+    "people": [
+      "people03",
+      "people04",
+      "people05",
+      "people1",
+      "people2"
+    ],
+    "rabbits": [
+      "rabbits01",
+      "rabbits02",
+      "rabbits03",
+      "rabbits04",
+      "rabbits05"
+    ],
+    "tennis": [
+      "tennis"
+    ]
+  },
+  "provisional_family_count": 16,
+  "family_rule": "Remove trailing digits across both releases; choose at most one per family only if later qualified",
+  "family_limit": "Conservative name grouping is not recovery of original recording IDs; cross-family shared source is unverified",
+  "source_video_identity_status": "UNVERIFIED",
+  "mask_semantics_status": "UNVERIFIED",
+  "annotation_evidence": {
+    "source": "official pami2013_MoSeg_eval.tar.gz evalcode/MoSegEval_PR.cpp",
+    "source_sha256": "93693b210a6c2956b65ee6940c845ffe43e68c63930158a0bf7ced0ce4a29219",
+    "lines_166_176": "Region count and color-to-region IDs are read from per-sequence definition files.",
+    "lines_204_208": "Berkeley PGM is read as region labels with probability one.",
+    "lines_211_226": "Freiburg PPM packs RGB as red*65536+green*256+blue, and the companion PGM is divided by255 for probabilities.",
+    "line_20": "Gray visualization palette includes 255; it is not a universal void label.",
+    "lines_331_335": "Evaluation subtracts one background region but does not establish universal raw-pixel background ID in this code."
+  },
+  "incompatibility": "A generic PGM-to-instance decoder could interpret confidence as object identity. No official universal 0-background/255-void contract was established; no largest-region heuristic or target-derived mapping was used.",
+  "legacy_bms_subset": "PGM labels confirmed but universal background/void encoding not established from official documentation; not promoted to compatible holdout.",
+  "definition_files_opened": 0,
+  "rgb_downloaded": 0,
+  "source_masks_downloaded": 0,
+  "target_masks_downloaded": 0,
+  "selected_sequences": [],
+  "confirmation_allowed": false,
+  "status": "BLOCKED_PROTOCOL_COMPATIBILITY_AND_IDENTITY",
+  "near_duplicate_status": "UNVERIFIED",
+  "exact_duplicate_audit": "NOT_RUN_NO_QUALIFIED_SELECTION"
+}

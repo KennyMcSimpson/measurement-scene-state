@@ -1,0 +1,26 @@
+{
+  "construction": [
+    "arrived RGB",
+    "arrived camera",
+    "frozen features"
+  ],
+  "policy": [
+    "arrived RGB/camera",
+    "pre-update RGB residual",
+    "opacity/coverage",
+    "state/fast/history summaries"
+  ],
+  "forbidden": [
+    "sealed query RGB",
+    "sealed query camera before sealing",
+    "future observations",
+    "test depth",
+    "query score",
+    "oracle action",
+    "branch rewards"
+  ],
+  "evaluator": "only after all candidate states sealed",
+  "depth_definition": "ray distance; no opacity-based GT filtering",
+  "OFF": "append same observation, unchanged fast weights, fresh read",
+  "ALL": "both proposals from same old weights; synchronous commit"
+}

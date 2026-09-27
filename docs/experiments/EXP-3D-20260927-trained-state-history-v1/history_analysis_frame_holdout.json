@@ -1,0 +1,483 @@
+{
+  "action_means": {
+    "ALL": -0.00216392440598571,
+    "COMPLETE": 0.0001903595356400519,
+    "FUSE": -0.0023575681265054125,
+    "OFF": 0.0
+  },
+  "actions": [
+    "OFF",
+    "FUSE",
+    "COMPLETE",
+    "ALL"
+  ],
+  "aggregation": "queries -> histories/continuations -> equal-weight scenes",
+  "beneficial_action_flip_count": 0,
+  "beneficial_flip_definition": "disjoint tolerance-optimal sets; positive winner > tolerance",
+  "beneficial_flip_rate": {
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "draws": 10000,
+    "loso": {
+      "ai_001_001": 0.0,
+      "ai_002_001": 0.0,
+      "ai_003_001": 0.0
+    },
+    "mean": 0.0,
+    "n_scenes": 3,
+    "per_scene": {
+      "ai_001_001": 0.0,
+      "ai_002_001": 0.0,
+      "ai_003_001": 0.0
+    },
+    "seed": 20260927,
+    "unit": "scene"
+  },
+  "best_fixed_action": "COMPLETE",
+  "bootstrap": {
+    "draws": 10000,
+    "global_action_reoptimized": true,
+    "metrics": {
+      "global_action_gap": {
+        "ci95": [
+          0.0,
+          0.0010650843209428404
+        ],
+        "mean": 0.0005654019908239438
+      },
+      "hindsight_global_action_gain": {
+        "ci95": [
+          9.857949105757102e-05,
+          0.001633588153395038
+        ],
+        "mean": 0.0001903595356400519
+      },
+      "observation_only_oracle_gain": {
+        "ci95": [
+          9.857949105757102e-05,
+          0.001633588153395038
+        ],
+        "mean": 0.0007557615264639957
+      },
+      "state_dependent_action_gap": {
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0
+      },
+      "write_oracle_gain": {
+        "ci95": [
+          9.857949105757102e-05,
+          0.001633588153395038
+        ],
+        "mean": 0.0007557615264639957
+      }
+    },
+    "seed": 20260927,
+    "unit": "scene"
+  },
+  "gamma": {
+    "COMPLETE__ALL": {
+      "ci95": [
+        -0.012698654375380591,
+        2.455955458779968e-06
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": -3.677019428444117e-05,
+        "ai_002_001": -0.006387325359704127,
+        "ai_003_001": -0.006348099209960906
+      },
+      "mean": -0.004257398254649825,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": -0.012698654375380591,
+        "ai_002_001": 2.455955458779968e-06,
+        "ai_003_001": -7.599634402766231e-05
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "FUSE__ALL": {
+      "ci95": [
+        0.0,
+        0.00014608907654534153
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": 2.7988168393999757e-08,
+        "ai_002_001": 7.304453827267077e-05,
+        "ai_003_001": 7.307252644106477e-05
+      },
+      "mean": 4.871501762737651e-05,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": 0.00014608907654534153,
+        "ai_002_001": 5.5976336787999514e-08,
+        "ai_003_001": 0.0
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "FUSE__COMPLETE": {
+      "ci95": [
+        -2.3999791219919686e-06,
+        0.012844743451925933
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": 3.679818245283517e-05,
+        "ai_002_001": 0.006460369897976798,
+        "ai_003_001": 0.0064211717364019705
+      },
+      "mean": 0.004306113272277201,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": 0.012844743451925933,
+        "ai_002_001": -2.3999791219919686e-06,
+        "ai_003_001": 7.599634402766231e-05
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "OFF__ALL": {
+      "ci95": [
+        -0.012591853554025922,
+        2.435948302070834e-06
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": -3.678019786279574e-05,
+        "ai_002_001": -0.006333924949026792,
+        "ai_003_001": -0.006294708802861926
+      },
+      "mean": -0.004221804649917171,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": -0.012591853554025922,
+        "ai_002_001": 2.435948302070834e-06,
+        "ai_003_001": -7.599634402766231e-05
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "OFF__COMPLETE": {
+      "ci95": [
+        -2.0007156709134222e-08,
+        0.00010680082135466895
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": -1.0003578354567111e-08,
+        "ai_002_001": 5.3400410677334476e-05,
+        "ai_003_001": 5.339040709897991e-05
+      },
+      "mean": 3.559360473265327e-05,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": 0.00010680082135466895,
+        "ai_002_001": -2.0007156709134222e-08,
+        "ai_003_001": 0.0
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "OFF__FUSE": {
+      "ci95": [
+        -0.012737942630571264,
+        2.3799719652828344e-06
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": -3.680818603118974e-05,
+        "ai_002_001": -0.006406969487299463,
+        "ai_003_001": -0.006367781329302991
+      },
+      "mean": -0.004270519667544548,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": -0.012737942630571264,
+        "ai_002_001": 2.3799719652828344e-06,
+        "ai_003_001": -7.599634402766231e-05
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    }
+  },
+  "global_action_gap": 0.0005654019908239438,
+  "harmful_write_prevalence": {
+    "ALL": {
+      "ci95": [
+        0.0,
+        1.0
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": 0.0,
+        "ai_002_001": 0.5,
+        "ai_003_001": 0.5
+      },
+      "mean": 0.3333333333333333,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": 1.0,
+        "ai_002_001": 0.0,
+        "ai_003_001": 0.0
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "COMPLETE": {
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": 0.0,
+        "ai_002_001": 0.0,
+        "ai_003_001": 0.0
+      },
+      "mean": 0.0,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": 0.0,
+        "ai_002_001": 0.0,
+        "ai_003_001": 0.0
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "FUSE": {
+      "ci95": [
+        0.0,
+        1.0
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_001_001": 0.0,
+        "ai_002_001": 0.5,
+        "ai_003_001": 0.5
+      },
+      "mean": 0.3333333333333333,
+      "n_scenes": 3,
+      "per_scene": {
+        "ai_001_001": 1.0,
+        "ai_002_001": 0.0,
+        "ai_003_001": 0.0
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    }
+  },
+  "hindsight_global_action_gain": 0.0001903595356400519,
+  "loso": {
+    "ai_001_001": {
+      "action_means": {
+        "ALL": 0.0008660838222263045,
+        "COMPLETE": 1.79808359903888e-05,
+        "FUSE": 0.0008480714726058769,
+        "OFF": 0.0
+      },
+      "best_fixed_action": "ALL",
+      "global_action_gap": 0.0,
+      "hindsight_global_action_gain": 0.0008660838222263045,
+      "observation_only_oracle_gain": 0.0008660838222263045,
+      "state_dependent_action_gap": 0.0,
+      "write_oracle_gain": 0.0008660838222263045
+    },
+    "ai_002_001": {
+      "action_means": {
+        "ALL": -0.004062680685676084,
+        "COMPLETE": 0.00026755846746968903,
+        "FUSE": -0.00433513391683521,
+        "OFF": 0.0
+      },
+      "best_fixed_action": "COMPLETE",
+      "global_action_gap": 4.928974552878551e-05,
+      "hindsight_global_action_gain": 0.00026755846746968903,
+      "observation_only_oracle_gain": 0.00031684821299847454,
+      "state_dependent_action_gap": 0.0,
+      "write_oracle_gain": 0.00031684821299847454
+    },
+    "ai_003_001": {
+      "action_means": {
+        "ALL": -0.003295176354507351,
+        "COMPLETE": 0.00028553930346007783,
+        "FUSE": -0.003585641935286904,
+        "OFF": 0.0
+      },
+      "best_fixed_action": "COMPLETE",
+      "global_action_gap": 0.0007988132407071302,
+      "hindsight_global_action_gain": 0.00028553930346007783,
+      "observation_only_oracle_gain": 0.001084352544167208,
+      "state_dependent_action_gap": 0.0,
+      "write_oracle_gain": 0.001084352544167208
+    }
+  },
+  "n_history_pairs": 3,
+  "n_scenes": 3,
+  "observation_only_oracle_gain": 0.0007557615264639957,
+  "oracle_comparators_are_offline_only": true,
+  "per_continuation": [
+    {
+      "beneficial_action_flip": false,
+      "continuation_id": "7",
+      "gamma": {
+        "COMPLETE__ALL": -0.012698654375380591,
+        "FUSE__ALL": 0.00014608907654534153,
+        "FUSE__COMPLETE": 0.012844743451925933,
+        "OFF__ALL": -0.012591853554025922,
+        "OFF__COMPLETE": 0.00010680082135466895,
+        "OFF__FUSE": -0.012737942630571264
+      },
+      "optimal_action_sets": {
+        "CF": [
+          "COMPLETE"
+        ],
+        "FC": [
+          "COMPLETE"
+        ]
+      },
+      "rewards": {
+        "CF": {
+          "ALL": -0.014519867639422701,
+          "COMPLETE": 0.0005885173456167125,
+          "FUSE": -0.015137818640013623,
+          "OFF": 0.0
+        },
+        "FC": {
+          "ALL": -0.0019280140853967787,
+          "COMPLETE": 0.0004817165242620436,
+          "FUSE": -0.002399876009442359,
+          "OFF": 0.0
+        }
+      },
+      "scene_id": "ai_001_001"
+    },
+    {
+      "beneficial_action_flip": false,
+      "continuation_id": "7",
+      "gamma": {
+        "COMPLETE__ALL": 2.455955458779968e-06,
+        "FUSE__ALL": 5.5976336787999514e-08,
+        "FUSE__COMPLETE": -2.3999791219919686e-06,
+        "OFF__ALL": 2.435948302070834e-06,
+        "OFF__COMPLETE": -2.0007156709134222e-08,
+        "OFF__FUSE": 2.3799719652828344e-06
+      },
+      "optimal_action_sets": {
+        "CF": [
+          "ALL"
+        ],
+        "FC": [
+          "ALL"
+        ]
+      },
+      "rewards": {
+        "CF": {
+          "ALL": 0.0016348061275460735,
+          "COMPLETE": 3.595166840242303e-05,
+          "FUSE": 0.0015987534401368242,
+          "OFF": 0.0
+        },
+        "FC": {
+          "ALL": 0.0016323701792440026,
+          "COMPLETE": 3.5971675559132166e-05,
+          "FUSE": 0.0015963734681715414,
+          "OFF": 0.0
+        }
+      },
+      "scene_id": "ai_002_001"
+    },
+    {
+      "beneficial_action_flip": false,
+      "continuation_id": "7",
+      "gamma": {
+        "COMPLETE__ALL": -7.599634402766231e-05,
+        "FUSE__ALL": 0.0,
+        "FUSE__COMPLETE": 7.599634402766231e-05,
+        "OFF__ALL": -7.599634402766231e-05,
+        "OFF__COMPLETE": 0.0,
+        "OFF__FUSE": -7.599634402766231e-05
+      },
+      "optimal_action_sets": {
+        "CF": [
+          "FUSE",
+          "ALL"
+        ],
+        "FC": [
+          "FUSE",
+          "ALL"
+        ]
+      },
+      "rewards": {
+        "CF": {
+          "ALL": 6.058131904373987e-05,
+          "COMPLETE": 0.0,
+          "FUSE": 6.058131904373987e-05,
+          "OFF": 0.0
+        },
+        "FC": {
+          "ALL": 0.00013657766307140218,
+          "COMPLETE": 0.0,
+          "FUSE": 0.00013657766307140218,
+          "OFF": 0.0
+        }
+      },
+      "scene_id": "ai_003_001"
+    }
+  ],
+  "per_scene": {
+    "ai_001_001": {
+      "action_means": {
+        "ALL": -0.00822394086240974,
+        "COMPLETE": 0.0005351169349393781,
+        "FUSE": -0.00876884732472799,
+        "OFF": 0.0
+      },
+      "best_fixed_action": "COMPLETE",
+      "global_action_gap": 0.0,
+      "hindsight_global_action_gain": 0.0005351169349393781,
+      "observation_only_oracle_gain": 0.0005351169349393781,
+      "state_dependent_action_gap": 0.0,
+      "write_oracle_gain": 0.0005351169349393781
+    },
+    "ai_002_001": {
+      "action_means": {
+        "ALL": 0.001633588153395038,
+        "COMPLETE": 3.59616719807776e-05,
+        "FUSE": 0.0015975634541541828,
+        "OFF": 0.0
+      },
+      "best_fixed_action": "ALL",
+      "global_action_gap": 0.0,
+      "hindsight_global_action_gain": 0.001633588153395038,
+      "observation_only_oracle_gain": 0.001633588153395038,
+      "state_dependent_action_gap": 0.0,
+      "write_oracle_gain": 0.001633588153395038
+    },
+    "ai_003_001": {
+      "action_means": {
+        "ALL": 9.857949105757102e-05,
+        "COMPLETE": 0.0,
+        "FUSE": 9.857949105757102e-05,
+        "OFF": 0.0
+      },
+      "best_fixed_action": "FUSE",
+      "global_action_gap": 0.0,
+      "hindsight_global_action_gain": 9.857949105757102e-05,
+      "observation_only_oracle_gain": 9.857949105757102e-05,
+      "state_dependent_action_gap": 0.0,
+      "write_oracle_gain": 9.857949105757102e-05
+    }
+  },
+  "scenes_with_beneficial_flip": 0,
+  "schema": "mcss.mechanism.history_statistics.v1",
+  "state_dependent_action_gap": 0.0,
+  "tie_tolerance": 1e-08,
+  "write_oracle_gain": 0.0007557615264639957
+}

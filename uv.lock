@@ -902,6 +902,7 @@ dependencies = [
 
 [package.optional-dependencies]
 dev = [
+    { name = "matplotlib" },
     { name = "opencv-python-headless" },
     { name = "pytest" },
     { name = "pytest-cov" },
@@ -922,6 +923,7 @@ requires-dist = [
     { name = "kornia", specifier = ">=0.8.1,<0.9" },
     { name = "lpips", marker = "extra == 'eval'", specifier = ">=0.1.4" },
     { name = "mapanything", marker = "extra == 'mapanything'", editable = "third_party/map-anything" },
+    { name = "matplotlib", marker = "extra == 'dev'", specifier = ">=3.8" },
     { name = "matplotlib", marker = "extra == 'eval'", specifier = ">=3.8" },
     { name = "numpy", specifier = ">=1.26" },
     { name = "opencv-python-headless", marker = "extra == 'dev'", specifier = ">=4.10" },

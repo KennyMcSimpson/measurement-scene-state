@@ -1,0 +1,88 @@
+{
+  "definition": "Pearson correlation of flattened density logits; no gate uses it",
+  "descriptive_only": true,
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C0_20260928/states.pt": "aa0d1130381990afab595fac2129bd9d11d3a8aceab9c185cbbf56ca2efa565f",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C0_20260929/states.pt": "a379484da49b30ebb583022994610437a71b7e4b354e871bdbccd3b44072293d",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C0_20260930/states.pt": "dc93b5d11cd1921e430946a5dbde9ce5dec5501c9803678f883ea050b43429a2",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C1_20260928/states.pt": "0e6120746d2431bed206874a56eed01f36d4c2d0dae9cde967bf8377d8a6856f",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C1_20260929/states.pt": "f128403c7cdbe911cae41d31a5d8fce77cc975049aae936aa1b788f3f09e61f5",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C1_20260930/states.pt": "3c4d0e5278ee4413f5cc69a1b8b87ca692516157290e776b9042308bc47befbf",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C2_20260928/states.pt": "57f15efa7fc205923f82a0803dc76b9281f46402a7694bd78f72503da9fc2e0e",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C2_20260929/states.pt": "ae0dda2b45166208c64fc74c720b9800156efb81c376e1c994fcd3171710efb9",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/selected_dev/C2_20260930/states.pt": "b6c87aa07662c39164d2456dc04b94cd7b625e9bee05645a055b79e3f23cafbe"
+  },
+  "per_run": {
+    "C0_20260928": {
+      "across_scene_A": 0.577563940629872,
+      "direct_A_vs_anchor_A": -0.024510430633088644,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.67693107457156
+    },
+    "C0_20260929": {
+      "across_scene_A": 0.5782740404952004,
+      "direct_A_vs_anchor_A": 0.02928508038568765,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6935187053464797
+    },
+    "C0_20260930": {
+      "across_scene_A": 0.635269694611109,
+      "direct_A_vs_anchor_A": -0.14786318131640439,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6853492660382078
+    },
+    "C1_20260928": {
+      "across_scene_A": 0.1467384804117097,
+      "direct_A_vs_anchor_A": 0.18953385665391634,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.538277812742178
+    },
+    "C1_20260929": {
+      "across_scene_A": 0.3907423720798389,
+      "direct_A_vs_anchor_A": 0.13924134280756056,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6180344617923018
+    },
+    "C1_20260930": {
+      "across_scene_A": 0.5588401115552158,
+      "direct_A_vs_anchor_A": 0.3198322259390643,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7414450991510415
+    },
+    "C2_20260928": {
+      "across_scene_A": 0.4905558284656994,
+      "direct_A_vs_anchor_A": 0.14465354361366306,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6591734015418764
+    },
+    "C2_20260929": {
+      "across_scene_A": 0.5648037543450289,
+      "direct_A_vs_anchor_A": 0.20997893046230265,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7562950656312923
+    },
+    "C2_20260930": {
+      "across_scene_A": 0.6971377009838927,
+      "direct_A_vs_anchor_A": 0.3808318353670642,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.8181553998891513
+    }
+  },
+  "per_variant_mean_over_seeds": {
+    "C0": {
+      "across_scene_A": 0.5970358919120605,
+      "direct_A_vs_anchor_A": -0.047696177187935125,
+      "within_scene_A_B": 0.6852663486520826
+    },
+    "C1": {
+      "across_scene_A": 0.3654403213489215,
+      "direct_A_vs_anchor_A": 0.21620247513351373,
+      "within_scene_A_B": 0.6325857912285071
+    },
+    "C2": {
+      "across_scene_A": 0.5841657612648737,
+      "direct_A_vs_anchor_A": 0.24515476981434334,
+      "within_scene_A_B": 0.7445412890207734
+    }
+  }
+}

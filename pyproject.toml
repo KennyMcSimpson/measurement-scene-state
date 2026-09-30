@@ -56,7 +56,7 @@ pythonpath = ["src"]
 [tool.ruff]
 line-length = 100
 target-version = "py311"
-extend-exclude = ["third_party", "backups", "outputs"]
+extend-exclude = ["third_party", "backups", "outputs", "docs/experiments"]
 
 [tool.ruff.lint]
 select = ["B", "E", "F", "I", "UP"]

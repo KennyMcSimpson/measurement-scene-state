@@ -1,0 +1,111 @@
+{
+  "C2_difference_from_C1": "frozen V2 surface term disabled (V2 C0 loss)",
+  "anchor_control": "anchor RGB + anchor depth, same full-role context-camera-derived bounds; a single view never reaches the >=2-view lifting support, so an anchor state of C1/C2 carries the single-view depth bypass and learned priors only",
+  "depth_bypass": {
+    "inputs": "context RGB, measured context depth, context cameras; no query",
+    "log_sigma_init": -0.6931471805599453,
+    "placement": "after the >=2-view support gate: one measured view suffices",
+    "sampling": "nearest pixel of the full-resolution measured ray-distance map"
+  },
+  "new_backbone_or_learned_matching": false,
+  "only_difference_C0_C1": "C1 adds the measured-depth bypass: 3 non-learned statistics per voxel (surface likelihood exp(-(d-D)^2/2s^2), free-space likelihood sigmoid((D-d)/s), valid-view fraction; d voxel-centre distance, D measured ray distance at the nearest pixel, s=exp(log_sigma)*mean voxel edge) through a zero-initialized bias-free 3->8 projection added after the >=2-view support gate, plus log_sigma (25 parameters). All shared parameters, initialization, the 4096 dense candidates, lifting, fusion, refinement, heads, renderer and bounds are unchanged; at initialization C1 and C0 produce identical states.",
+  "parameter_count": {
+    "C0": 5125,
+    "C1": 5150,
+    "C2": 5150
+  },
+  "shared_parameter_hash_by_seed": {
+    "20260928": "d1ab5f7b4e4687ff2bf79733a0310c07c87ac504ac438df5d7beac72c68640a4",
+    "20260929": "87b9eb714ca84fb63a452f12618af519d3697cf4f7c2178f78dff45e0c042b48",
+    "20260930": "9f32f06813f4492a283dfe6adf53594bc048326ef8dbecae513e977bcd56ee0a"
+  },
+  "state": "query-independent; all DEV states sealed before query load; >=2 queries/state",
+  "test_time_depth_used": true,
+  "test_time_input": "RGB+DEPTH+CAMERA (C0 reads RGB+CAMERA only)",
+  "variants": {
+    "C0": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "depth": false,
+      "label": "DENSE_SURFACE",
+      "loss": "C1"
+    },
+    "C1": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "depth": true,
+      "label": "DEPTH_SURFACE",
+      "loss": "C1"
+    },
+    "C2": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "depth": true,
+      "label": "DEPTH_NO_SURFACE",
+      "loss": "C0"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "C0": "V2 C1 loss: mean_A_B[RGB Charbonnier(eps=.001) + masked depth AbsRel] + .1 mean_A_B surface loss",
+  "C1": "identical to C0",
+  "C2": "identical to C0",
+  "authority": "mcss.mechanism_pilot.rgbd_resolution_carrier.training_loss: the frozen V2 C1 loss (mcss.mechanism_pilot.geometry_carrier.training_loss) accepting a registered g^3 state; identical at 16^3; the surface band keeps the frozen 16-grid spacing for every grid",
+  "lambda_surface": 0.1,
+  "regularization": 0,
+  "training_track": "RGB-D track: context depth is carrier input for every variant; TRAIN query depth is supervision only",
+  "v2_loss_contract_sha256": "caa6bde36ae64996c2d9108617e7cad55b04047bdbcb574e3c8a901e226266e7"
+}

@@ -1,0 +1,66 @@
+{
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "all_scientific_json_byte_exact": true,
+  "audit_script_sha256": "881ce6b8551391931a151d9f1ca1745f800d77029b02a20d87e14785f573af84",
+  "comparisons": {
+    "bootstrap_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "8b91c9d4722af29a79bb63d142d87bc34a0015f54af602094d48b22d0b32fb15",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/bootstrap_results.json",
+      "reproduced_sha256": "8b91c9d4722af29a79bb63d142d87bc34a0015f54af602094d48b22d0b32fb15"
+    },
+    "observability_analysis.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "8e0fbc99db77511f0559c531df2d4af2a64059399e4ff4c5474c21c4bc1e8d27",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/observability_analysis.json",
+      "reproduced_sha256": "8e0fbc99db77511f0559c531df2d4af2a64059399e4ff4c5474c21c4bc1e8d27"
+    },
+    "qualification_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "16e6a10f8760a3200ef1b154fe99d7a11b9d6eb989000ec867f8bc898d040628",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/qualification_results.json",
+      "reproduced_sha256": "16e6a10f8760a3200ef1b154fe99d7a11b9d6eb989000ec867f8bc898d040628"
+    },
+    "state_use_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "d5367c772a97290aa84acee3f3ec7f5e99be0e76e2001c10375b53a75f0d280e",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/state_use_results.json",
+      "reproduced_sha256": "d5367c772a97290aa84acee3f3ec7f5e99be0e76e2001c10375b53a75f0d280e"
+    },
+    "static_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "b80c7f58027b776d43ce9beec978f7319d88bd8c4b5d18907aa2530f48f0d14b",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/static_results.json",
+      "reproduced_sha256": "b80c7f58027b776d43ce9beec978f7319d88bd8c4b5d18907aa2530f48f0d14b"
+    },
+    "wrong_scene_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "ebc0bbb957ad2c62f370c6df3f9055e8e0040bf3b248fd0a4bf09be6eb411d28",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/wrong_scene_results.json",
+      "reproduced_sha256": "ebc0bbb957ad2c62f370c6df3f9055e8e0040bf3b248fd0a4bf09be6eb411d28"
+    }
+  },
+  "meaning": "Independent raw replay of same estimator, not independent estimator implementation",
+  "media_or_checkpoint_loaded": false,
+  "new_model_forward": false,
+  "original_artifacts_modified": false,
+  "raw_only": true,
+  "reproduction_inputs_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/audit/dev_state_use.json": "77ca1582dc7c6d60044139f4ecb23853321dfb081a4992a573763d5d989f0412",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/cost_analysis.json": "654ff5c89be5c97ece3608089ceff419b7f8f38c198277fcf55c5ba26bf63bd5",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/raw/dev_context_results.json": "32b5051338adc8fd902120a8cb4be7f71c65737b8cdf38464f8b2d072debcb88",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/raw/dev_matched_results.json": "7b574c860d3d9efdd9e6d92f15cbcf425ca0fa0408696ef331dfe0d7f3969155",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/raw/dev_query_results.json": "7f961328112177de76022b25237d8754567084e06c8a3683696ea00e246eb51a",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/raw/dev_region_results.json": "80ca8bef04db2c0078032ea74c6a15cfeb9b8091a4443a83fbd786fd32cb2fd8",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/raw/dev_static_matched_results.json": "ef24a0dd8e3a8da247ea4c5641d6a33c773ee4dc839c158e0c9bf03c46b8573b",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/scene_split.json": "4a111c072f2178740a709e5257e065d4fcbc5564d624a97f12b8b795731e1afc",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/training_contract.json": "7942ba3e795d2fe5230fda5b17bb9a424d8b5823d32cd839939eeac34ce0de6f",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-V12/training_curves.json": "f36fe1b9de1f8c3e304c531d67d43dd38103acd70a8acf6c2091a78ce370893b"
+  },
+  "reproduction_source_sha256": {
+    "/home/zonghan/measurement-scene-state/scripts/analyze_rgbd_width_carrier.py": "bccd48e35503c782b895321c252737e61b5404dddce162a4a632e7ff35018d22",
+    "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/geometry_carrier_statistics.py": "a4605d75d58ef9787f92b7ac17c23ff1d0f4e41ca01c9178ba059d1c4c62c1b1"
+  },
+  "scientific_json_count": 6,
+  "status": "PASS"
+}

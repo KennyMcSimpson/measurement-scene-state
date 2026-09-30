@@ -1,0 +1,30 @@
+{
+  "phase": "CONTEXT_ONLY_OPTIMIZATION_SANITY",
+  "created_utc": "2026-09-27T16:32:00.023314+00:00",
+  "scene": "ai_004_001",
+  "context": "A",
+  "tracks": [
+    "RGBD",
+    "RGB_ONLY"
+  ],
+  "grid": 8,
+  "bounds": "CURRENT_BOUNDS",
+  "renderer_samples": 64,
+  "steps": 150,
+  "learning_rate": 0.03,
+  "optimizer": "Adam",
+  "batch_rays": 1024,
+  "checkpoint_interval": 50,
+  "loss": "RGBMSE + (RGBD only) GT-valid AbsRel +1e-5 mean(softplus(density_logits)^2)+1e-4 physical-space TVmean(density,color)",
+  "clip": 1.0,
+  "query_access": false,
+  "final_holdout_access": false,
+  "intended_formal_budget": 1000,
+  "intended_grids": [
+    8,
+    16,
+    32
+  ],
+  "intended_renderer_secondary": "RGBD grids8/16, samples128, CURRENT_BOUNDS only; compare64 maincells",
+  "sanity": "nonzero finite gradients, state/outputchanges, RGB lossdecreases bothtracks, depthlossdecreasesRGBD, no allalpha collapse0or1. Context only; no scene-specific LR search."
+}

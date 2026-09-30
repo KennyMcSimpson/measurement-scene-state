@@ -1,5 +1,52 @@
 # Measurement Scene State / Inverse-JEPA + Dynamic-TTT research archive
 
+2026-09-30 [V16](outputs/EXP-3D-RGBD-VOLUME-DISJOINT-V16/README.md)：在与训练集 volume 不相交的 FRESH-V2 上，TRAIN72 carrier 的补全优势平均 +0.185 但极不一致（8 好 6 差，CI 跨零），未能证实补全依赖对训练 volume 的熟悉（分支 D）。
+
+2026-09-30 [V15](docs/experiments/EXP-3D-RGBD-WIDTH-DATA-V15/README.md)：在 127 个训练场景上把宽度从 32 加到 64，补全仍没有改善（−0.003，CI 跨零），组合与经典补洞打平（分支 C）；宽度 × 数据的 2×2 中两个因素都不改善补全。
+
+2026-09-30 [V14](docs/experiments/EXP-3D-RGBD-DATA-SCALE-V14/README.md)：训练场景从 72 增加到 127，改善了被看到区域的精度（NEAR 0.288→0.246），但补全略差（FAR 0.421→0.443）；组合方法与经典补洞打平（分支 C）。
+
+2026-09-30 [V13](outputs/EXP-3D-RGBD-VOLUME-V13/README.md)：状态体积之外的弃权回退（不透明度 < 0.5 改用调和插值补洞）在 79 个场景的远处 query 上稳定改善组合方法（+0.011，CI 下界 +0.005），但仍不能确立优于经典补洞（+0.016，CI 跨零，分支 B）。
+
+2026-09-30 [Replica 跨数据集迁移](outputs/EXP-3D-RGBD-REPLICA-TRANSFER-V1/README.md)：冻结的方法显著差于经典几何补洞（−0.225，分支 C），学到的状态没有迁移；[V12](docs/experiments/EXP-3D-RGBD-WIDTH-V12/README.md)：宽度 64 没有改善补全（分支 C）。
+
+2026-09-29 [EVAL-V4 复现](outputs/EXP-3D-RGBD-REPLICATION-EVAL-V4/README.md)：26 个新场景上，组合方法相对经典补洞 +0.010，CI 跨零，与 EVAL-V3 一致（分支 B）。[V10](docs/experiments/EXP-3D-RGB-PRIOR-BOUNDS-V10/README.md)：放宽 RGB-only 的 bounds 让 DEV 误差 0.603→0.461（CI 下界 +0.022），但仍与常数无法区分（分支 B）。
+
+2026-09-29 [V11](docs/experiments/EXP-3D-RGBD-COMPLETION-V11/README.md) 与 [INPAINT-V1](outputs/EXP-3D-RGBD-INPAINT-BASELINES-V1/README.md)：加宽 carrier 没有稳定改善补全（分支 C）；"调和插值补洞 + carrier 补看不到的区域"在 EVAL-V3 上 AbsRel 0.2325，数值上最好，但相对经典补洞的优势（+0.012）CI 跨零（分支 B）。
+
+2026-09-29 [Core B 第二轮](docs/experiments/EXP-3D-RGBD-DYNAMIC-WRITE-V2/README.md)：在可变视角训练的 carrier 上，直接缓存新帧让 DEV AbsRel 从 0.258 降到 0.205；学习写入不再有额外收益，也不带场景信息，分支 C。
+
+2026-09-29 [训练视角数 V9](docs/experiments/EXP-3D-RGBD-VIEWCOUNT-V9/README.md)：DEV AbsRel 0.259 / 0.257 / 0.275（固定 3 / 可变 3–7 / 固定 7 视角），VIEWCOUNT_GAIN +0.002，CI 跨零，分支 B。探索性诊断表明，让学到的状态超过几何的关键是补全质量；加宽 carrier 在未见场景上显著改善了补全。
+
+2026-09-29 [强几何基线对照](outputs/EXP-3D-RGBD-GEOMETRIC-BASELINES-V1/README.md)：已合格的 carrier 与直接深度重投影在整体上无法区分（分支 B）。重投影在被看到的区域准得多，carrier 在未被看到的区域更好，并显著优于同表示的非学习融合。
+
+2026-09-29 [Core B 第一轮](docs/experiments/EXP-3D-RGBD-DYNAMIC-WRITE-V1/README.md)：在冻结的合格 carrier 上学习写入规则。写入相对只缓存新帧 +0.061，但不优于静态状态和非学习的视角计数截断，也不是场景专属，分支 B。下一步用可变视角数训练 carrier（V9）。
+
+2026-09-29 [分辨率 V8](docs/experiments/EXP-3D-RGBD-RESOLUTION-V8/README.md)：16³→32³，DEV AbsRel 0.280→0.259（24³ 为 0.244），RESOLUTION_GAIN +0.021，CI 跨零，分支 B。不做 checkpoint 选择时 32³ 好 0.061。
+
+2026-09-29 [第二次独立资格验证](docs/experiments/EXP-3D-RGBD-FRESH-QUALIFICATION-V2/README.md)：V7 的 RGB-D carrier 在 17 个独立场景上 `QUALIFIED`。C1 AbsRel 0.290，BOUNDS_GAIN +0.145，相对常数 +0.300，四个冻结 gate 全部成立。Core A 静态 carrier 在 RGB-D 轨道上通过资格验证。
+
+2026-09-29 [bounds 规则 V7](docs/experiments/EXP-3D-RGBD-DEPTH-BOUNDS-V7/README.md)：改用测得上下文深度确定 bounds，DEV AbsRel 0.459→0.280（BOUNDS_GAIN +0.179，CI [+0.084, +0.279]）。C1 首次在全部 DEV 场景上显著优于常数深度，预注册分支 A。下一步在 FRESH-V2（17 个独立场景）上做资格验证。
+
+2026-09-29 [训练规模 V6](docs/experiments/EXP-3D-RGBD-TRAIN-SCALE-V6/README.md)：训练场景 24→72（CPU），DEV AbsRel 0.492→0.459。SCALE_GAIN +0.033，CI 跨零，分支 C。排除 NO_HIT 场景后，C1 比常数好 +0.111（CI >0），但只有 5/7 个场景不差于常数。下一步检验由测得深度确定的 bounds（V7）。
+
+2026-09-29 [非学习 RGB-D 融合对照](docs/experiments/EXP-3D-RGBD-NONLEARNED-FUSION-V1/README.md)：把测得深度直接体素化进同一 16³ 网格和 renderer，DEV 上为 0.596，比常数（0.507）还差。学到的 RGB-D carrier（0.503）显著优于它，说明学习有价值，瓶颈更可能在表示与渲染这一环。
+
+2026-09-29 [第一次独立资格验证](docs/experiments/EXP-3D-RGBD-FRESH-QUALIFICATION-V1/README.md)：V5 的 RGB-D carrier 在 5 个独立 Hypersim 场景上 `NOT_QUALIFIED`。深度收益没有复现（+0.006，CI 跨零；DEV 上为 +0.114），场景专属性与多视角融合则复现。DEV 选择偏差使 V5 的收益偏乐观，下一步检验训练规模（V6，24→72 个场景，CPU）。
+
+2026-09-29 [RGB-D 证据 carrier V5](docs/experiments/EXP-3D-RGBD-EVIDENCE-CARRIER-V5/README.md)：上下文深度经零初始化旁路进入状态（单因素），DEPTH_GAIN +0.114（CI [+0.065, +0.166]）。`DEPTH_STATUS`、`SCENE_SPECIFICITY_STATUS`、`STATIC_DEV_STATUS` 首次同时为 `SUPPORTED`。但 C1 仍未显著优于常数深度：排除 NO_HIT 场景后为 0.432，常数约 0.493。预注册分支 B。
+
+2026-09-29 [无几何参考再分析](docs/experiments/EXP-3D-READOUT-REFERENCE-REANALYSIS-V1/README.md)：预注册事后分析 V2–V4 全部 9 个 RGB-only carrier 的已封存 DEV 预测，无一优于只由 TRAIN 拟合的常数深度。2.37 m 常数的 DEV AbsRel≈0.507，carrier 为 0.61–0.65，全部显著更差；给定 GT 尺度后，深度形状也不如平面常数。RGB-only carrier 在 DEV 上没有携带可迁移的几何。
+
+2026-09-29 [plane-sweep carrier V4](docs/experiments/EXP-3D-PLANE-SWEEP-CARRIER-V4/README.md)：单因素加入零初始化的光度 plane-sweep 旁路，SWEEP_GAIN +0.0072，CI [−0.0041, +0.0168]，`NOT_ESTABLISHED`，分支 C。在多视角可观测区域有描述性改善：OBS2PLUS +0.040，CI [+0.004, +0.087]。TRAIN-only 诊断显示 32×40 光度线索在真实上下文上几乎不含深度信息。下一轮进入 RGB-D 轨道（V5）。
+
+2026-09-29 [稠密证据carrier V3](docs/experiments/EXP-3D-DENSE-EVIDENCE-CARRIER-V3/README.md)：证据候选128→4096（单因素），DEV收益+0.0101，CI跨零，`NOT_ESTABLISHED`；训练集深度AbsRel 0.490→0.339但DEV几乎不变，稠密模型均在500步最好，之后过拟合。预注册分支C：候选稀疏不是主因，下一轮研究几何推理式融合。
+
+2026-09-29 [16³ geometry-aware learned carrier V2](docs/experiments/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/README.md)：首次训练16³ learned carrier，C0/C1 matched（3 seeds）。表面监督收益+0.0195，95% CI [−0.025, +0.077]跨零，`NOT_ESTABLISHED`；wrong-scene与空间打乱不造成损伤，状态近似场景无关先验，full context未胜anchor。Dynamic TTT仍关闭。此前三轮direct-state归因（容量、优化与bounds、可观测性监督）已补入[EXPERIMENTS.md](EXPERIMENTS.md)。
+
+2026-09-28 [Support bottleneck归因与redesign gate](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/README.md)：7个旧曝光＋10个新开发场景完成oracle诊断。Volume-only相对gain为正，但完整context绝对改善CI跨零，约83.8%的gain增幅来自anchor变差；联合oracle未过门槛且支持不充分，结论`INCONCLUSIVE`。按协议未继续实景GT-free／matched retraining，最终holdout未开启，历史独立性另有阻塞。
+
+2026-09-27 [静态 carrier 归因与未见场景资格](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/README.md)：旧90条记录精确复现；7个未见场景 full-context AbsRel 0.7972，差于 anchor 0.6076，收益95% CI为[-0.2910, -0.0913]。ai003原始JPEG已全黑且A双视图支持为零；Residual完成训练但未建立通用改善。`STATIC_STATE_STATUS=NOT_ESTABLISHED`，未运行新Dynamic TTT。
 协作入口：先看 [当前结果与复现说明](docs/handoff/SHARED_WORKSPACE.md)。[三维从零复现](docs/handoff/3D_REPRODUCTION.md) 提供便携脚本；大报告先运行 `python scripts/restore_report_artifacts.py` 恢复，权重与数据不随 Git 分发。
 
 2026-09-27 [已训练权重机制补测](docs/experiments/EXP-3D-20260927-trained-state-history-v1/README.md)：同训练场景留出帧上，写入oracle AbsRel收益约0.000756，但有益历史动作翻转0/3、history额外空间0；静态context A AbsRel2.214，资格仍未建立。原训练query的1次翻转单列，不当独立证据。

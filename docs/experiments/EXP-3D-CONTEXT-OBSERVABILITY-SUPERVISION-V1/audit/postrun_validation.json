@@ -1,0 +1,32 @@
+{
+  "GT_access_after_all_seals": true,
+  "all_geometry_loss_components_checked": true,
+  "dynamic_ttt_run": false,
+  "final_holdout_touched": false,
+  "full_region_partition_and_empty_rows_preserved": true,
+  "matched_initialization_and_streams": 34,
+  "max_metric_absolute_differences": {
+    "coverage": 0.0,
+    "depth_absrel": 0.0,
+    "depth_delta1": 0.0,
+    "depth_rmse": 0.0,
+    "opacity": 0.0,
+    "rgb_mse": 0.0,
+    "rgb_ssim": 0.0
+  },
+  "metric_tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "n_context_rows": 408,
+  "n_formal_query_rows": 680,
+  "n_reference_rows": 272,
+  "n_region_rows": 5984,
+  "n_states": 136,
+  "new_carrier_trained": false,
+  "old_artifacts_unchanged": 11285,
+  "script_sha256": "294bfc82ea7968bd788bcc62747f009a5e80b796035a6edc86cfe627945a735c",
+  "statistics_reproduction": "SEPARATE_RAW_STATISTICS_AUDIT",
+  "status": "PASS",
+  "timestamps": "Auxiliary mtime chronology, not tamper-proof OS evidence"
+}

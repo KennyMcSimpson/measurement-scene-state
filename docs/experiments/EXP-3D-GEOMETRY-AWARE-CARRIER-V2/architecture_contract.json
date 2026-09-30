@@ -1,0 +1,41 @@
+{
+  "anchor_control": "anchor RGB only, same full-role context-camera-derived bounds",
+  "bounds": "same frozen_gt_free_bounds(context cameras, old TRAIN3 prior)",
+  "candidate_fraction_new16": 0.03125,
+  "candidate_fraction_old8": 0.25,
+  "candidate_semantics": "unchanged evenly-spaced flattened voxel IDs; normalized voxel centers",
+  "carrier": {
+    "expansion_dim": 16,
+    "feature_dim": 8,
+    "grid_size": [
+      16,
+      16,
+      16
+    ],
+    "hidden_dim": 8,
+    "local_bounds_m": [
+      [
+        -6.0,
+        -4.0,
+        0.05
+      ],
+      [
+        6.0,
+        4.0,
+        12.05
+      ]
+    ],
+    "token_count": 128
+  },
+  "inference_architecture_identical": true,
+  "new_backbone_or_fusion": false,
+  "parameter_count": 5125,
+  "prior_sha256": "5f1595be923f92c10b835204dfc9e96e851c1b312c05852eec41f6c270ec1003",
+  "samples": 64,
+  "single_view_support_limit": "unchanged lifting >=2 view support; anchor depends on bias/prior",
+  "state": "query-independent; all DEV states sealed before query load; >=2 queries/state",
+  "test_time_depth_used": false,
+  "test_time_input": "RGB+CAMERA",
+  "token_count": 128,
+  "variants_identical": true
+}

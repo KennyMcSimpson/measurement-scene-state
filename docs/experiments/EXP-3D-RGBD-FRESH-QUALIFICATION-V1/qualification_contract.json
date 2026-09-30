@@ -1,0 +1,30 @@
+{
+  "checkpoints": "the sealed V5 per-seed DEV selections, unchanged",
+  "device": "cpu",
+  "experiment": "EXP-3D-RGBD-FRESH-QUALIFICATION-V1",
+  "fresh_scene_count": 5,
+  "fresh_scene_ids": [
+    "ai_015_004",
+    "ai_022_010",
+    "ai_041_003",
+    "ai_051_004",
+    "ai_052_003"
+  ],
+  "num_threads": 1,
+  "primary_pair": [
+    "C0",
+    "C1"
+  ],
+  "seeds": [
+    20260928,
+    20260929,
+    20260930
+  ],
+  "training_run": false,
+  "v5_root": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-EVIDENCE-CARRIER-V5",
+  "variants": [
+    "C0",
+    "C1",
+    "C2"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "matched_variants": [
+    "C0",
+    "C1"
+  ],
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 6,
+    "old_files_unchanged": 0,
+    "query_rows": 960,
+    "static_rows_recomputed": 192,
+    "status": "PASS"
+  },
+  "query_rows": 960,
+  "real_DEV_read": false,
+  "region_variants": [
+    "C0",
+    "C1"
+  ],
+  "seconds": 25.703254225023557,
+  "seeds": 2,
+  "static_rows": 192,
+  "static_variants": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "status": "PASS",
+  "steps_per_run": 2,
+  "summary_free_fields": [
+    "FREE_SURFACE16_CHECKPOINT={'20260928': {'path': '/tmp/claude-geometry-synthetic-v3/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/checkpoints/C2_20260928/step_000002.pt', 'sha256': '5ce419d8a7a00456a8e40821b9375eb5d7ad09315e4625ea62e1b9f736ebbff8', 'step': 2}, '20260929': {'path': '/tmp/claude-geometry-synthetic-v3/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/checkpoints/C2_20260929/step_000002.pt', 'sha256': 'e2e70d1d52808b7f460736cd8a1cbebe8bd710d60cc521ea607acb6cc6b0ae1b', 'step': 2}}",
+    "FREE_SURFACE_QUERY_ABSREL=0.425048",
+    "FREE_SPACE_EXTRA_GAIN=-0.000002",
+    "FREE_SPACE_EXTRA_GAIN_CI=[-1.5239541728967465e-06, -1.5234885116371943e-06]"
+  ],
+  "synthetic_only": true,
+  "variants": [
+    "C0",
+    "C1",
+    "C2"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "full_suite": {
+    "tests": 718,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "passed": 717,
+    "seconds": 31.374
+  },
+  "command": ".venv/bin/python -m pytest -q --junitxml=outputs/EXP-3D-DIRECT-STATE-CAPACITY-V1/audit/pytest.xml",
+  "skip_reason": "Optional historical V5 step-4500 checkpoint absent in public repository; unrelated to current B-final checkpoint",
+  "new_direct_capacity_tests": 48,
+  "query_media_used_by_tests": false,
+  "all_tests_use_synthetic_fixtures_for_direct_capacity": true,
+  "ruff": {
+    "status": "PASS",
+    "command": ".venv/bin/ruff check src scripts tests"
+  }
+}

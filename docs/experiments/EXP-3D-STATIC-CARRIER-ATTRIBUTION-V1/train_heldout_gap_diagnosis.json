@@ -1,0 +1,1225 @@
+{
+  "scope": "POSTHOC_STATIC_ONLY_DATA_GEOMETRY_ATTRIBUTION_SAME_TRAIN_SCENES",
+  "model_inference_calls": 0,
+  "DYNAMIC_TTT_RUN": false,
+  "macro_context_A_absrel": {
+    "heldout_query": 2.213562180371435,
+    "training_query": 0.3315279588707268
+  },
+  "macro_heldout_minus_training_absrel": 1.8820342215007084,
+  "scenes": {
+    "ai_001_001": {
+      "support_counts": {
+        "anchor": {
+          "at_least_one": 4,
+          "at_least_two": 0,
+          "histogram": {
+            "0": 124,
+            "1": 4
+          }
+        },
+        "context_a": {
+          "at_least_one": 12,
+          "at_least_two": 4,
+          "histogram": {
+            "0": 116,
+            "1": 8,
+            "2": 4,
+            "3": 0
+          }
+        },
+        "context_a_plus_stream": {
+          "at_least_one": 14,
+          "at_least_two": 12,
+          "histogram": {
+            "0": 114,
+            "1": 2,
+            "2": 12,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          }
+        },
+        "context_b": {
+          "at_least_one": 17,
+          "at_least_two": 8,
+          "histogram": {
+            "0": 111,
+            "1": 9,
+            "2": 4,
+            "3": 4
+          }
+        },
+        "stream": {
+          "at_least_one": 10,
+          "at_least_two": 0,
+          "histogram": {
+            "0": 118,
+            "1": 10,
+            "2": 0
+          }
+        }
+      },
+      "cohorts": {
+        "heldout_query": {
+          "frame_ids": [
+            8,
+            9
+          ],
+          "frame_equal_means": {
+            "saved_context_A_depth_absrel": 0.5497848159255267,
+            "anchor_camera_baseline_m": 2.7426126059616323,
+            "anchor_view_angle_degrees": 73.60500281972298,
+            "inside_volume_fraction": 1.0,
+            "valid_GT_fraction": 1.0,
+            "candidate_neighborhood_fraction": 0.253662109375,
+            "A_supported_surface_fraction": 0.0,
+            "B_supported_surface_fraction": 0.0217529296875,
+            "common_frustum_fraction": 0.5727783203125,
+            "approx_depth_consistent_common_fraction": 0.496630859375,
+            "source_RGB_mean_0_255": 123.31114811367459,
+            "source_RGB_zero_pixel_fraction": 0.0,
+            "source_RGB_near_black_pixel_fraction": 0.0,
+            "depth_mean_m": 3.6519847218638457,
+            "mean_frame_depth_median_m": 3.906420946121216,
+            "mean_frame_depth_p95_m": 4.44033682346344,
+            "context_a_minimum_camera_baseline_m": 2.577005554286846,
+            "context_a_mean_camera_baseline_m": 2.691873334236401,
+            "context_a_minimum_view_angle_degrees": 29.926526165883924,
+            "context_a_mean_view_angle_degrees": 57.66251005066436,
+            "context_b_minimum_camera_baseline_m": 2.2401298959295364,
+            "context_b_mean_camera_baseline_m": 2.6498089853052478,
+            "context_b_minimum_view_angle_degrees": 26.339129888941216,
+            "context_b_mean_view_angle_degrees": 55.572674064698276
+          },
+          "per_frame": [
+            {
+              "frame_id": 8,
+              "saved_context_A_depth_absrel": 0.7391114453018843,
+              "anchor_camera_baseline_m": 2.0668612835865585,
+              "anchor_view_angle_degrees": 57.20732511718119,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 1.9876399788891697,
+                  "mean_camera_baseline_m": 2.060314385978408,
+                  "minimum_view_angle_degrees": 28.633524532111526,
+                  "mean_view_angle_degrees": 46.40220371902126
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 1.5541779291831357,
+                  "mean_camera_baseline_m": 2.0223466741757368,
+                  "minimum_view_angle_degrees": 13.222794655009919,
+                  "mean_view_angle_degrees": 40.829237377810806
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 4.233202934265137,
+                "mean": 3.451760714202828,
+                "p50": 3.765673875808716,
+                "p95": 4.044150567054748
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.31796875,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.026708984375,
+              "common_frustum_fraction": 0.69140625,
+              "approx_depth_consistent_common_fraction": 0.6171875,
+              "source_RGB_mean_0_255": 126.90445158216689,
+              "source_RGB_zero_pixel_fraction": 0.0,
+              "source_RGB_near_black_pixel_fraction": 0.0
+            },
+            {
+              "frame_id": 9,
+              "saved_context_A_depth_absrel": 0.3604581865491692,
+              "anchor_camera_baseline_m": 3.4183639283367064,
+              "anchor_view_angle_degrees": 90.00268052226477,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 3.1663711296845225,
+                  "mean_camera_baseline_m": 3.323432282494394,
+                  "minimum_view_angle_degrees": 31.219527799656323,
+                  "mean_view_angle_degrees": 68.92281638230746
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 2.9260818626759373,
+                  "mean_camera_baseline_m": 3.277271296434759,
+                  "minimum_view_angle_degrees": 39.45546512287251,
+                  "mean_view_angle_degrees": 70.31611075158575
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 5.15625,
+                "mean": 3.8522087295248637,
+                "p50": 4.047168016433716,
+                "p95": 4.836523079872132
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.18935546875,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.016796875,
+              "common_frustum_fraction": 0.454150390625,
+              "approx_depth_consistent_common_fraction": 0.37607421875,
+              "source_RGB_mean_0_255": 119.7178446451823,
+              "source_RGB_zero_pixel_fraction": 0.0,
+              "source_RGB_near_black_pixel_fraction": 0.0
+            }
+          ]
+        },
+        "training_query": {
+          "frame_ids": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_equal_means": {
+            "saved_context_A_depth_absrel": 0.4164024997555591,
+            "anchor_camera_baseline_m": 2.5449374088185985,
+            "anchor_view_angle_degrees": 86.26046732523923,
+            "inside_volume_fraction": 1.0,
+            "valid_GT_fraction": 1.0,
+            "candidate_neighborhood_fraction": 0.23171386718750003,
+            "A_supported_surface_fraction": 0.0,
+            "B_supported_surface_fraction": 0.0121337890625,
+            "common_frustum_fraction": 0.45587158203125,
+            "approx_depth_consistent_common_fraction": 0.39783935546875004,
+            "source_RGB_mean_0_255": 110.06744352976482,
+            "source_RGB_zero_pixel_fraction": 0.0,
+            "source_RGB_near_black_pixel_fraction": 0.0,
+            "depth_mean_m": 2.6851977094134782,
+            "mean_frame_depth_median_m": 2.8692382872104645,
+            "mean_frame_depth_p95_m": 3.927790516614914,
+            "context_a_minimum_camera_baseline_m": 2.2010277345994935,
+            "context_a_mean_camera_baseline_m": 2.395721421826626,
+            "context_a_minimum_view_angle_degrees": 31.035271974011582,
+            "context_a_mean_view_angle_degrees": 65.48257686901249,
+            "context_b_minimum_camera_baseline_m": 2.1120626073252438,
+            "context_b_mean_camera_baseline_m": 2.3896390918139683,
+            "context_b_minimum_view_angle_degrees": 41.981754226494814,
+            "context_b_mean_view_angle_degrees": 66.18919090956553
+          },
+          "per_frame": [
+            {
+              "frame_id": 12,
+              "saved_context_A_depth_absrel": 0.34842081985172974,
+              "anchor_camera_baseline_m": 1.290475637816759,
+              "anchor_view_angle_degrees": 40.58952657595683,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.9919531498609944,
+                  "mean_camera_baseline_m": 1.1539623009861888,
+                  "minimum_view_angle_degrees": 31.904542615315748,
+                  "mean_view_angle_degrees": 35.206742045750424
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.898742231082564,
+                  "mean_camera_baseline_m": 1.2092275078449137,
+                  "minimum_view_angle_degrees": 21.206704709589282,
+                  "mean_view_angle_degrees": 28.219038707659053
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 3.6806640625,
+                "mean": 2.7295909803768152,
+                "p50": 2.798828125,
+                "p95": 3.400390625
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.203662109375,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.033447265625,
+              "common_frustum_fraction": 0.7205078125,
+              "approx_depth_consistent_common_fraction": 0.654248046875,
+              "source_RGB_mean_0_255": 127.80392752753363,
+              "source_RGB_zero_pixel_fraction": 0.0,
+              "source_RGB_near_black_pixel_fraction": 0.0
+            },
+            {
+              "frame_id": 13,
+              "saved_context_A_depth_absrel": 0.4132180853205819,
+              "anchor_camera_baseline_m": 2.5922977693010076,
+              "anchor_view_angle_degrees": 120.35655330750475,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 2.230959316364166,
+                  "mean_camera_baseline_m": 2.437055573741292,
+                  "minimum_view_angle_degrees": 48.550688923137514,
+                  "mean_view_angle_degrees": 93.98109834891238
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 2.1529046163697956,
+                  "mean_camera_baseline_m": 2.4199014881080445,
+                  "minimum_view_angle_degrees": 67.74743521496978,
+                  "mean_view_angle_degrees": 97.23822353400543
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 4.184765815734863,
+                "mean": 2.432167635342921,
+                "p50": 2.773290991783142,
+                "p95": 3.640429735183716
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.22783203125,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.0,
+              "common_frustum_fraction": 0.148974609375,
+              "approx_depth_consistent_common_fraction": 0.137158203125,
+              "source_RGB_mean_0_255": 99.53071467081706,
+              "source_RGB_zero_pixel_fraction": 0.0,
+              "source_RGB_near_black_pixel_fraction": 0.0
+            },
+            {
+              "frame_id": 14,
+              "saved_context_A_depth_absrel": 0.6223864472636785,
+              "anchor_camera_baseline_m": 2.969156923972954,
+              "anchor_view_angle_degrees": 103.16355394225545,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 2.681030257973719,
+                  "mean_camera_baseline_m": 2.8563226652490488,
+                  "minimum_view_angle_degrees": 33.0677484001044,
+                  "mean_view_angle_degrees": 77.60846580748881
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 2.500492331392833,
+                  "mean_camera_baseline_m": 2.8208616864037044,
+                  "minimum_view_angle_degrees": 50.37158973079964,
+                  "mean_view_angle_degrees": 80.78802932804676
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 4.637890815734863,
+                "mean": 2.949508957040962,
+                "p50": 3.185546875,
+                "p95": 4.32989239692688
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.304248046875,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.00087890625,
+              "common_frustum_fraction": 0.257958984375,
+              "approx_depth_consistent_common_fraction": 0.212646484375,
+              "source_RGB_mean_0_255": 106.7007433573405,
+              "source_RGB_zero_pixel_fraction": 0.0,
+              "source_RGB_near_black_pixel_fraction": 0.0
+            },
+            {
+              "frame_id": 15,
+              "saved_context_A_depth_absrel": 0.28158464658624627,
+              "anchor_camera_baseline_m": 3.3278193041836728,
+              "anchor_view_angle_degrees": 80.93223547523989,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 2.9001682141990943,
+                  "mean_camera_baseline_m": 3.135545147329975,
+                  "minimum_view_angle_degrees": 10.618107957488675,
+                  "mean_view_angle_degrees": 55.13400127389832
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 2.8961112504557818,
+                  "mean_camera_baseline_m": 3.1085656848992103,
+                  "minimum_view_angle_degrees": 28.60128725062054,
+                  "mean_view_angle_degrees": 58.51147206855084
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 4.7109375,
+                "mean": 2.6295232648932143,
+                "p50": 2.719287157058716,
+                "p95": 4.34044930934906
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.19111328125,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.014208984375,
+              "common_frustum_fraction": 0.696044921875,
+              "approx_depth_consistent_common_fraction": 0.5873046875,
+              "source_RGB_mean_0_255": 106.23438856336806,
+              "source_RGB_zero_pixel_fraction": 0.0,
+              "source_RGB_near_black_pixel_fraction": 0.0
+            }
+          ]
+        }
+      },
+      "heldout_minus_training_absrel": 0.13338231616996765,
+      "interpretation": {
+        "supported_contributors": [
+          "SUPPORT FAILURE"
+        ],
+        "causal_gap_diagnosis": "UNKNOWN",
+        "reason": "Only 4/128 A candidates have >=2-view support. Neither cohort has a GT surface point within the fixed neighborhood of an A-supported candidate. Both cohorts lie inside the volume; heldout views are not farther in orientation from anchor. Sparse support is shared by both cohorts, so it does not uniquely explain the gap. Depth/view distributions differ; memorization remains untested."
+      },
+      "fraction_of_macro_gap": 0.023623785130327476
+    },
+    "ai_002_001": {
+      "support_counts": {
+        "anchor": {
+          "at_least_one": 4,
+          "at_least_two": 0,
+          "histogram": {
+            "0": 124,
+            "1": 4
+          }
+        },
+        "context_a": {
+          "at_least_one": 12,
+          "at_least_two": 6,
+          "histogram": {
+            "0": 116,
+            "1": 6,
+            "2": 6,
+            "3": 0
+          }
+        },
+        "context_a_plus_stream": {
+          "at_least_one": 19,
+          "at_least_two": 11,
+          "histogram": {
+            "0": 109,
+            "1": 8,
+            "2": 3,
+            "3": 4,
+            "4": 4,
+            "5": 0
+          }
+        },
+        "context_b": {
+          "at_least_one": 14,
+          "at_least_two": 7,
+          "histogram": {
+            "0": 114,
+            "1": 7,
+            "2": 7,
+            "3": 0
+          }
+        },
+        "stream": {
+          "at_least_one": 15,
+          "at_least_two": 9,
+          "histogram": {
+            "0": 113,
+            "1": 6,
+            "2": 9
+          }
+        }
+      },
+      "cohorts": {
+        "heldout_query": {
+          "frame_ids": [
+            8,
+            9
+          ],
+          "frame_equal_means": {
+            "saved_context_A_depth_absrel": 0.30833336141360995,
+            "anchor_camera_baseline_m": 1.2332209379353927,
+            "anchor_view_angle_degrees": 13.490298768933323,
+            "inside_volume_fraction": 0.522802734375,
+            "valid_GT_fraction": 1.0,
+            "candidate_neighborhood_fraction": 0.1251708984375,
+            "A_supported_surface_fraction": 0.10966796875,
+            "B_supported_surface_fraction": 0.0885986328125,
+            "common_frustum_fraction": 0.9973876953125,
+            "approx_depth_consistent_common_fraction": 0.8477783203125,
+            "source_RGB_mean_0_255": 63.86447313096788,
+            "source_RGB_zero_pixel_fraction": 0.0004405975341796875,
+            "source_RGB_near_black_pixel_fraction": 0.001705805460611979,
+            "depth_mean_m": 5.349387646620744,
+            "mean_frame_depth_median_m": 5.5080567598342896,
+            "mean_frame_depth_p95_m": 6.699189138412475,
+            "context_a_minimum_camera_baseline_m": 0.905922209827728,
+            "context_a_mean_camera_baseline_m": 1.1201022459422467,
+            "context_a_minimum_view_angle_degrees": 6.666488105669119,
+            "context_a_mean_view_angle_degrees": 12.063291777164064,
+            "context_b_minimum_camera_baseline_m": 0.7471885636644499,
+            "context_b_mean_camera_baseline_m": 1.3692386041175386,
+            "context_b_minimum_view_angle_degrees": 13.490298743116766,
+            "context_b_mean_view_angle_degrees": 28.56881820391786
+          },
+          "per_frame": [
+            {
+              "frame_id": 8,
+              "saved_context_A_depth_absrel": 0.30882462846537495,
+              "anchor_camera_baseline_m": 1.763698829362211,
+              "anchor_view_angle_degrees": 20.623488692319132,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 1.4191979252358053,
+                  "mean_camera_baseline_m": 1.5539124701144464,
+                  "minimum_view_angle_degrees": 6.975867405540529,
+                  "mean_view_angle_degrees": 13.15467702850666
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.7916340733742578,
+                  "mean_camera_baseline_m": 1.194031148432838,
+                  "minimum_view_angle_degrees": 20.623488680435823,
+                  "mean_view_angle_degrees": 25.99263508191697
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 10.922656059265137,
+                "mean": 5.145858177042101,
+                "p50": 5.28515625,
+                "p95": 6.111952757835388
+              },
+              "inside_volume_fraction": 0.50107421875,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 6.2463289552494174,
+                "mean": 0.5017390620491768,
+                "p50": 0.0,
+                "p95": 1.5388949138147832
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.104248046875,
+              "A_supported_surface_fraction": 0.10205078125,
+              "B_supported_surface_fraction": 0.10205078125,
+              "common_frustum_fraction": 1.0,
+              "approx_depth_consistent_common_fraction": 0.82412109375,
+              "source_RGB_mean_0_255": 63.73845206366645,
+              "source_RGB_zero_pixel_fraction": 0.00047556559244791674,
+              "source_RGB_near_black_pixel_fraction": 0.0018310546875
+            },
+            {
+              "frame_id": 9,
+              "saved_context_A_depth_absrel": 0.30784209436184495,
+              "anchor_camera_baseline_m": 0.7027430465085744,
+              "anchor_view_angle_degrees": 6.357108845547514,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.3926464944196507,
+                  "mean_camera_baseline_m": 0.686292021770047,
+                  "minimum_view_angle_degrees": 6.357108805797709,
+                  "mean_view_angle_degrees": 10.971906525821467
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.7027430539546419,
+                  "mean_camera_baseline_m": 1.5444460598022391,
+                  "minimum_view_angle_degrees": 6.357108805797709,
+                  "mean_view_angle_degrees": 31.145001325918752
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 13.112500190734863,
+                "mean": 5.552917116199387,
+                "p50": 5.730957269668579,
+                "p95": 7.286425518989562
+              },
+              "inside_volume_fraction": 0.54453125,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 6.915117731734458,
+                "mean": 0.45673274828515475,
+                "p50": 0.0,
+                "p95": 1.5463000382864922
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.14609375,
+              "A_supported_surface_fraction": 0.11728515625,
+              "B_supported_surface_fraction": 0.075146484375,
+              "common_frustum_fraction": 0.994775390625,
+              "approx_depth_consistent_common_fraction": 0.871435546875,
+              "source_RGB_mean_0_255": 63.99049419826932,
+              "source_RGB_zero_pixel_fraction": 0.00040562947591145826,
+              "source_RGB_near_black_pixel_fraction": 0.001580556233723958
+            }
+          ]
+        },
+        "training_query": {
+          "frame_ids": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_equal_means": {
+            "saved_context_A_depth_absrel": 0.13603262142940106,
+            "anchor_camera_baseline_m": 2.935173127507686,
+            "anchor_view_angle_degrees": 69.52893862669349,
+            "inside_volume_fraction": 0.8845703125,
+            "valid_GT_fraction": 1.0,
+            "candidate_neighborhood_fraction": 0.7146484375,
+            "A_supported_surface_fraction": 0.21697998046875,
+            "B_supported_surface_fraction": 0.0,
+            "common_frustum_fraction": 0.38736572265625,
+            "approx_depth_consistent_common_fraction": 0.35054931640625,
+            "source_RGB_mean_0_255": 117.24065801832411,
+            "source_RGB_zero_pixel_fraction": 2.2252400716145835e-06,
+            "source_RGB_near_black_pixel_fraction": 8.265177408854166e-06,
+            "depth_mean_m": 3.9812468412856106,
+            "mean_frame_depth_median_m": 3.9369262158870697,
+            "mean_frame_depth_p95_m": 5.459033095836638,
+            "context_a_minimum_camera_baseline_m": 2.273306437403865,
+            "context_a_mean_camera_baseline_m": 2.706355126424053,
+            "context_a_minimum_view_angle_degrees": 69.52893861943826,
+            "context_a_mean_view_angle_degrees": 79.53081522588427,
+            "context_b_minimum_camera_baseline_m": 0.9837093611957125,
+            "context_b_mean_camera_baseline_m": 2.051674395615934,
+            "context_b_minimum_view_angle_degrees": 69.52893861943826,
+            "context_b_mean_view_angle_degrees": 100.24901238879573
+          },
+          "per_frame": [
+            {
+              "frame_id": 12,
+              "saved_context_A_depth_absrel": 0.10642811283062499,
+              "anchor_camera_baseline_m": 2.826498542079636,
+              "anchor_view_angle_degrees": 68.47030528292622,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 2.137154738952182,
+                  "mean_camera_baseline_m": 2.5980552009753257,
+                  "minimum_view_angle_degrees": 68.47030528288349,
+                  "mean_view_angle_degrees": 78.60877585621621
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.8779793357084302,
+                  "mean_camera_baseline_m": 1.991769525348009,
+                  "minimum_view_angle_degrees": 68.47030528288349,
+                  "mean_view_angle_degrees": 99.47168221772448
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 4.672461032867432,
+                "mean": 3.7738029584870674,
+                "p50": 3.925244092941284,
+                "p95": 4.394921779632568
+              },
+              "inside_volume_fraction": 0.988134765625,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.07068537384346207,
+                "mean": 0.0003419364553064942,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.792919921875,
+              "A_supported_surface_fraction": 0.28447265625,
+              "B_supported_surface_fraction": 0.0,
+              "common_frustum_fraction": 0.435205078125,
+              "approx_depth_consistent_common_fraction": 0.40205078125,
+              "source_RGB_mean_0_255": 122.57198884752061,
+              "source_RGB_zero_pixel_fraction": 1.271565755208333e-06,
+              "source_RGB_near_black_pixel_fraction": 6.357828776041668e-06
+            },
+            {
+              "frame_id": 13,
+              "saved_context_A_depth_absrel": 0.07864180623794635,
+              "anchor_camera_baseline_m": 3.671339156029754,
+              "anchor_view_angle_degrees": 96.11671300934091,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 2.9760476960985436,
+                  "mean_camera_baseline_m": 3.462908860120205,
+                  "minimum_view_angle_degrees": 96.1167130094226,
+                  "mean_view_angle_degrees": 106.2700520230859
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 1.846215967271851,
+                  "mean_camera_baseline_m": 2.9089161142429134,
+                  "minimum_view_angle_degrees": 96.1167130094226,
+                  "mean_view_angle_degrees": 127.06987767224894
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 5.909570693969727,
+                "mean": 4.39477567038266,
+                "p50": 4.471874952316284,
+                "p95": 5.498632431030273
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.81083984375,
+              "A_supported_surface_fraction": 0.13369140625,
+              "B_supported_surface_fraction": 0.0,
+              "common_frustum_fraction": 0.22666015625,
+              "approx_depth_consistent_common_fraction": 0.222412109375,
+              "source_RGB_mean_0_255": 107.14296340942383,
+              "source_RGB_zero_pixel_fraction": 1.271565755208333e-06,
+              "source_RGB_near_black_pixel_fraction": 6.357828776041668e-06
+            },
+            {
+              "frame_id": 14,
+              "saved_context_A_depth_absrel": 0.0659039259522616,
+              "anchor_camera_baseline_m": 2.645844524316324,
+              "anchor_view_angle_degrees": 74.16347187768132,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 2.075703419480492,
+                  "mean_camera_baseline_m": 2.3983449347934593,
+                  "minimum_view_angle_degrees": 74.16347187398277,
+                  "mean_view_angle_degrees": 84.41915088213715
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.50927523487239,
+                  "mean_camera_baseline_m": 1.502257322979203,
+                  "minimum_view_angle_degrees": 74.16347187398277,
+                  "mean_view_angle_degrees": 105.42590400133417
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 3.996386766433716,
+                "mean": 3.0276530143688434,
+                "p50": 3.039160132408142,
+                "p95": 3.641406297683716
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.666943359375,
+              "A_supported_surface_fraction": 0.095556640625,
+              "B_supported_surface_fraction": 0.0,
+              "common_frustum_fraction": 0.11240234375,
+              "approx_depth_consistent_common_fraction": 0.105810546875,
+              "source_RGB_mean_0_255": 147.43243026733398,
+              "source_RGB_zero_pixel_fraction": 0.0,
+              "source_RGB_near_black_pixel_fraction": 0.0
+            },
+            {
+              "frame_id": 15,
+              "saved_context_A_depth_absrel": 0.2931566406967713,
+              "anchor_camera_baseline_m": 2.5970102876050296,
+              "anchor_view_angle_degrees": 39.3652643368255,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 1.9043198950842426,
+                  "mean_camera_baseline_m": 2.3661115098072223,
+                  "minimum_view_angle_degrees": 39.36526431146423,
+                  "mean_view_angle_degrees": 48.82528214209784
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.7013669069301787,
+                  "mean_camera_baseline_m": 1.8037546198936116,
+                  "minimum_view_angle_degrees": 39.36526431146423,
+                  "mean_view_angle_degrees": 69.02858566387533
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 12.983592987060547,
+                "mean": 4.728755721903871,
+                "p50": 4.311425685882568,
+                "p95": 8.301171874999994
+              },
+              "inside_volume_fraction": 0.550146484375,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 7.772023924644731,
+                "mean": 0.6988150241706631,
+                "p50": 0.0,
+                "p95": 3.7541150866367583
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.587890625,
+              "A_supported_surface_fraction": 0.35419921875,
+              "B_supported_surface_fraction": 0.0,
+              "common_frustum_fraction": 0.7751953125,
+              "approx_depth_consistent_common_fraction": 0.671923828125,
+              "source_RGB_mean_0_255": 91.815249549018,
+              "source_RGB_zero_pixel_fraction": 6.357828776041668e-06,
+              "source_RGB_near_black_pixel_fraction": 2.034505208333333e-05
+            }
+          ]
+        }
+      },
+      "heldout_minus_training_absrel": 0.1723007399842089,
+      "interpretation": {
+        "supported_contributors": [
+          "VOLUME COVERAGE",
+          "SUPPORT FAILURE"
+        ],
+        "causal_gap_diagnosis": "VOLUME COVERAGE",
+        "reason": "Heldout surfaces lie outside the modeled volume more often and have less A-supported neighborhood coverage, despite heldout cameras being closer to anchor and less rotated. This supports a coverage-distribution contribution, not a proven sole cause or simple farther-view extrapolation."
+      },
+      "fraction_of_macro_gap": 0.030516756464151615
+    },
+    "ai_003_001": {
+      "support_counts": {
+        "anchor": {
+          "at_least_one": 4,
+          "at_least_two": 0,
+          "histogram": {
+            "0": 124,
+            "1": 4
+          }
+        },
+        "context_a": {
+          "at_least_one": 13,
+          "at_least_two": 0,
+          "histogram": {
+            "0": 115,
+            "1": 13,
+            "2": 0,
+            "3": 0
+          }
+        },
+        "context_a_plus_stream": {
+          "at_least_one": 20,
+          "at_least_two": 4,
+          "histogram": {
+            "0": 108,
+            "1": 16,
+            "2": 4,
+            "3": 0,
+            "4": 0,
+            "5": 0
+          }
+        },
+        "context_b": {
+          "at_least_one": 10,
+          "at_least_two": 3,
+          "histogram": {
+            "0": 118,
+            "1": 7,
+            "2": 3,
+            "3": 0
+          }
+        },
+        "stream": {
+          "at_least_one": 11,
+          "at_least_two": 0,
+          "histogram": {
+            "0": 117,
+            "1": 11,
+            "2": 0
+          }
+        }
+      },
+      "cohorts": {
+        "heldout_query": {
+          "frame_ids": [
+            8,
+            9
+          ],
+          "frame_equal_means": {
+            "saved_context_A_depth_absrel": 5.7825683637751695,
+            "anchor_camera_baseline_m": 0.3195153423172778,
+            "anchor_view_angle_degrees": 60.37513778381767,
+            "inside_volume_fraction": 1.0,
+            "valid_GT_fraction": 1.0,
+            "candidate_neighborhood_fraction": 0.0,
+            "A_supported_surface_fraction": 0.0,
+            "B_supported_surface_fraction": 0.0,
+            "common_frustum_fraction": 0.33046875,
+            "approx_depth_consistent_common_fraction": 0.33046875,
+            "source_RGB_mean_0_255": 0.0,
+            "source_RGB_zero_pixel_fraction": 1.0,
+            "source_RGB_near_black_pixel_fraction": 1.0,
+            "depth_mean_m": 0.6795073255016177,
+            "mean_frame_depth_median_m": 0.57269287109375,
+            "mean_frame_depth_p95_m": 1.342413330078125,
+            "context_a_minimum_camera_baseline_m": 0.26859743358320487,
+            "context_a_mean_camera_baseline_m": 0.5529216227161637,
+            "context_a_minimum_view_angle_degrees": 60.375136920192574,
+            "context_a_mean_view_angle_degrees": 112.4432901247554,
+            "context_b_minimum_camera_baseline_m": 0.31951533002555715,
+            "context_b_mean_camera_baseline_m": 0.6726115679579963,
+            "context_b_minimum_view_angle_degrees": 60.375136920192574,
+            "context_b_mean_view_angle_degrees": 124.92395537421035
+          },
+          "per_frame": [
+            {
+              "frame_id": 8,
+              "saved_context_A_depth_absrel": 5.639621418771503,
+              "anchor_camera_baseline_m": 0.12253171603173142,
+              "anchor_view_angle_degrees": 55.48723496067163,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.12253171039822905,
+                  "mean_camera_baseline_m": 0.43843500439928623,
+                  "minimum_view_angle_degrees": 55.48723404668075,
+                  "mean_view_angle_degrees": 107.94732353109309
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.12253171039822905,
+                  "mean_camera_baseline_m": 0.4382782823627003,
+                  "minimum_view_angle_degrees": 55.48723404668075,
+                  "mean_view_angle_degrees": 130.85195832700742
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 1.161865234375,
+                "mean": 0.6195531696932448,
+                "p50": 0.580493152141571,
+                "p95": 1.04296875
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.0,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.0,
+              "common_frustum_fraction": 0.060546875,
+              "approx_depth_consistent_common_fraction": 0.060546875,
+              "source_RGB_mean_0_255": 0.0,
+              "source_RGB_zero_pixel_fraction": 1.0,
+              "source_RGB_near_black_pixel_fraction": 1.0
+            },
+            {
+              "frame_id": 9,
+              "saved_context_A_depth_absrel": 5.925515308778836,
+              "anchor_camera_baseline_m": 0.5164989686028242,
+              "anchor_view_angle_degrees": 65.26304060696371,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.41466315676818066,
+                  "mean_camera_baseline_m": 0.6674082410330412,
+                  "minimum_view_angle_degrees": 65.26303979370441,
+                  "mean_view_angle_degrees": 116.93925671841771
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.5164989496528852,
+                  "mean_camera_baseline_m": 0.9069448535532922,
+                  "minimum_view_angle_degrees": 65.26303979370441,
+                  "mean_view_angle_degrees": 118.99595242141329
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 1.91015625,
+                "mean": 0.7394614813099907,
+                "p50": 0.564892590045929,
+                "p95": 1.6418579101562498
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.0,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.0,
+              "common_frustum_fraction": 0.600390625,
+              "approx_depth_consistent_common_fraction": 0.600390625,
+              "source_RGB_mean_0_255": 0.0,
+              "source_RGB_zero_pixel_fraction": 1.0,
+              "source_RGB_near_black_pixel_fraction": 1.0
+            }
+          ]
+        },
+        "training_query": {
+          "frame_ids": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "frame_equal_means": {
+            "saved_context_A_depth_absrel": 0.4421487554272202,
+            "anchor_camera_baseline_m": 0.45077234813132505,
+            "anchor_view_angle_degrees": 107.60099789456824,
+            "inside_volume_fraction": 1.0,
+            "valid_GT_fraction": 1.0,
+            "candidate_neighborhood_fraction": 0.12999267578125,
+            "A_supported_surface_fraction": 0.0,
+            "B_supported_surface_fraction": 0.1203857421875,
+            "common_frustum_fraction": 0.99501953125,
+            "approx_depth_consistent_common_fraction": 0.86998291015625,
+            "source_RGB_mean_0_255": 0.0,
+            "source_RGB_zero_pixel_fraction": 1.0,
+            "source_RGB_near_black_pixel_fraction": 1.0,
+            "depth_mean_m": 0.6897345892790326,
+            "mean_frame_depth_median_m": 0.5055694729089737,
+            "mean_frame_depth_p95_m": 1.6169790655374525,
+            "context_a_minimum_camera_baseline_m": 0.2502968817625491,
+            "context_a_mean_camera_baseline_m": 0.5992792206178965,
+            "context_a_minimum_view_angle_degrees": 20.738141391796724,
+            "context_a_mean_view_angle_degrees": 72.91450646285101,
+            "context_b_minimum_camera_baseline_m": 0.43881146658767245,
+            "context_b_mean_camera_baseline_m": 0.7483843357232818,
+            "context_b_minimum_view_angle_degrees": 20.428120009215398,
+            "context_b_mean_view_angle_degrees": 50.93341685115109
+          },
+          "per_frame": [
+            {
+              "frame_id": 12,
+              "saved_context_A_depth_absrel": 0.4441153643033992,
+              "anchor_camera_baseline_m": 0.6711145432125162,
+              "anchor_view_angle_degrees": 109.66364668037666,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.305655093734188,
+                  "mean_camera_baseline_m": 0.7525078410317464,
+                  "minimum_view_angle_degrees": 26.741586875728327,
+                  "mean_view_angle_degrees": 78.97839701902602
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.6711145146809181,
+                  "mean_camera_baseline_m": 1.0865238401839796,
+                  "minimum_view_angle_degrees": 26.991205606224867,
+                  "mean_view_angle_degrees": 54.93610816737655
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 1.5976073741912842,
+                "mean": 0.7077723130088998,
+                "p50": 0.5800414979457855,
+                "p95": 1.45849609375
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.215625,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.19580078125,
+              "common_frustum_fraction": 0.998876953125,
+              "approx_depth_consistent_common_fraction": 0.813818359375,
+              "source_RGB_mean_0_255": 0.0,
+              "source_RGB_zero_pixel_fraction": 1.0,
+              "source_RGB_near_black_pixel_fraction": 1.0
+            },
+            {
+              "frame_id": 13,
+              "saved_context_A_depth_absrel": 0.3649598380960432,
+              "anchor_camera_baseline_m": 0.32987616166382344,
+              "anchor_view_angle_degrees": 118.7643092061945,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.3298761437894751,
+                  "mean_camera_baseline_m": 0.5126164212693429,
+                  "minimum_view_angle_degrees": 4.930509938318419,
+                  "mean_view_angle_degrees": 67.48340192540648
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.2820326900363409,
+                  "mean_camera_baseline_m": 0.38448674591746484,
+                  "minimum_view_angle_degrees": 8.903236363854319,
+                  "mean_view_angle_degrees": 45.55673975950349
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 2.35009765625,
+                "mean": 0.8448740200583416,
+                "p50": 0.5598145127296448,
+                "p95": 2.15625
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.125830078125,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.11689453125,
+              "common_frustum_fraction": 0.9857421875,
+              "approx_depth_consistent_common_fraction": 0.950390625,
+              "source_RGB_mean_0_255": 0.0,
+              "source_RGB_zero_pixel_fraction": 1.0,
+              "source_RGB_near_black_pixel_fraction": 1.0
+            },
+            {
+              "frame_id": 14,
+              "saved_context_A_depth_absrel": 0.45786446662983493,
+              "anchor_camera_baseline_m": 0.2177691514360974,
+              "anchor_view_angle_degrees": 120.30392894856868,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.21776914562428462,
+                  "mean_camera_baseline_m": 0.4890717485180353,
+                  "minimum_view_angle_degrees": 10.83288692812169,
+                  "mean_view_angle_degrees": 71.7479102347321
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.21776914562428462,
+                  "mean_camera_baseline_m": 0.540997586725445,
+                  "minimum_view_angle_degrees": 10.907706687971082,
+                  "mean_view_angle_degrees": 48.5990318240014
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 2.09619140625,
+                "mean": 0.7884068687213585,
+                "p50": 0.566650390625,
+                "p95": 1.88818359375
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.1443359375,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.13466796875,
+              "common_frustum_fraction": 0.995458984375,
+              "approx_depth_consistent_common_fraction": 0.931005859375,
+              "source_RGB_mean_0_255": 0.0,
+              "source_RGB_zero_pixel_fraction": 1.0,
+              "source_RGB_near_black_pixel_fraction": 1.0
+            },
+            {
+              "frame_id": 15,
+              "saved_context_A_depth_absrel": 0.5016553526796035,
+              "anchor_camera_baseline_m": 0.5843295362128633,
+              "anchor_view_angle_degrees": 81.67210674313311,
+              "context_camera_comparison": {
+                "context_a": {
+                  "minimum_camera_baseline_m": 0.14788714390224875,
+                  "mean_camera_baseline_m": 0.6429208716524615,
+                  "minimum_view_angle_degrees": 40.44758182501845,
+                  "mean_view_angle_degrees": 73.44831667223944
+                },
+                "context_b": {
+                  "minimum_camera_baseline_m": 0.5843295160091463,
+                  "mean_camera_baseline_m": 0.9815291700662375,
+                  "minimum_view_angle_degrees": 34.91033137881133,
+                  "mean_view_angle_degrees": 54.6417876537229
+                }
+              },
+              "depth_distribution_m": {
+                "count": 20480,
+                "max": 1.537011742591858,
+                "mean": 0.4178851553275308,
+                "p50": 0.3157714903354645,
+                "p95": 0.9649865746498105
+              },
+              "inside_volume_fraction": 1.0,
+              "outside_volume_distance_m": {
+                "count": 20480,
+                "max": 0.0,
+                "mean": 0.0,
+                "p50": 0.0,
+                "p95": 0.0
+              },
+              "valid_GT_fraction": 1.0,
+              "candidate_neighborhood_fraction": 0.0341796875,
+              "A_supported_surface_fraction": 0.0,
+              "B_supported_surface_fraction": 0.0341796875,
+              "common_frustum_fraction": 1.0,
+              "approx_depth_consistent_common_fraction": 0.784716796875,
+              "source_RGB_mean_0_255": 0.0,
+              "source_RGB_zero_pixel_fraction": 1.0,
+              "source_RGB_near_black_pixel_fraction": 1.0
+            }
+          ]
+        }
+      },
+      "heldout_minus_training_absrel": 5.34041960834795,
+      "interpretation": {
+        "supported_contributors": [
+          "DATA QUALITY",
+          "SUPPORT FAILURE"
+        ],
+        "causal_gap_diagnosis": "UNKNOWN",
+        "reason": "All source RGB frames are black and A has zero >=2-view candidate support in both cohorts. A equals anchor under this architecture. Both cohorts' GT surfaces lie inside the volume; invalid GT and outside-volume geometry do not explain the gap. Query orientations, context overlap and per-frame depth distributions differ. No controlled experiment separates learned prior/view dependence from training memorization; black source alone does not identify why only heldout depth collapses."
+      },
+      "fraction_of_macro_gap": 0.945859458405521
+    }
+  },
+  "neighborhood_rule": "one voxel HALF diagonal, fixed before metrics; centers eligible at >=2 view frustum support",
+  "neighborhood_radius_m": 1.172603964805603,
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/data/manifest.json": "50a51f0ac7a327481586769f47f0afa3a61db9727716cda701a47a2d4233c38a",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/geometry_audit/volume_coverage.json": "01ef124408ff6fb7565cef53afaba21b51220936b3ce218660ee36df1dd73d7a",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/geometry_audit/support_audit.json": "a3dbd9a8b9880275effec42d477e0f00ab8a9e2faeb3c9b80b69c3742cdfc5c3",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/rgb_audit/frame_audit.json": "f63969d14050139b569b5f770de7ad0fefd3c27ce93d5c308e4242a0f0ff7574",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-trained-state-history-v1/run/static_state_results.json": "61ed082299f71d7c631c0d1ef04f6ebe7d15299a4ca76bccfae7fd19c4e7e046"
+  },
+  "limits": [
+    "No causal overfitting conclusion from train/heldout score gap alone.",
+    "Both query cohorts belong to carrier training scenes; frame-heldout is not unseen-scene validation.",
+    "Candidate-neighborhood support is a fixed geometric proxy, not a test of all learned receptive fields.",
+    "Context overlap uses approximate nearest-depth consistency, not exact visibility.",
+    "Depth medians/p95 shown in means are means of frame quantiles, not pooled-pixel quantiles.",
+    "Saved static scores are previous locked B-final outputs; no rerender or checkpoint selection here."
+  ]
+}

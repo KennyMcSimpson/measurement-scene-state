@@ -1,0 +1,41 @@
+{
+  "diagnostic_GT_access_count": 32,
+  "dynamic_ttt_run": false,
+  "note": "Normalization is a post-hoc renderer diagnostic and cannot replace preregistered results",
+  "old_reproduction_exact": true,
+  "old_reproduction_rows": 90,
+  "runs": {
+    "old_static": {
+      "all_sealed_before_queries": true,
+      "bootstrap_recomputed_exact": true,
+      "diagnostic_predictions_exact_original": true,
+      "diagnostic_rows": 72,
+      "dynamic_ttt_run": false,
+      "input_hashes": "PASS",
+      "raw_rows": 234,
+      "sealed_state_hashes": "PASS",
+      "source_hashes": "PASS",
+      "state_archive_sha256": "b5f14b00511f705f3d8f534347774a2d41d42566f7a69a8f00ae33a54bf5bed2",
+      "status": "PASS",
+      "writes": 0
+    },
+    "unseen_static": {
+      "all_sealed_before_queries": true,
+      "bootstrap_recomputed_exact": true,
+      "diagnostic_predictions_exact_original": true,
+      "diagnostic_rows": 56,
+      "dynamic_ttt_run": false,
+      "input_hashes": "PASS",
+      "raw_rows": 182,
+      "sealed_state_hashes": "PASS",
+      "source_hashes": "PASS",
+      "state_archive_sha256": "5eda85475f79a7bd69c06a04fc8fe9526a967dbb1ed60f044236d53d9e7a3ee9",
+      "status": "PASS",
+      "writes": 0
+    }
+  },
+  "script_sha256": "03d2837821cec08e11dc325f6b979b472392cfed22ab135aafc58a70807c9409",
+  "status": "PASS",
+  "executed_script_sha256": "5733f42be7251273fa958c99afd053aa4d6fea13e882b301db3ded5bf6393c78",
+  "post_execution_edit": "formatting and local variable names only"
+}

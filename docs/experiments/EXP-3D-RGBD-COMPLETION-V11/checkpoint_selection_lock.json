@@ -1,0 +1,14 @@
+{
+  "allowed_partitions": [
+    "DEV"
+  ],
+  "context_query_gap": "reported and monitored; no posthoc threshold",
+  "eligible": "finite metrics and bounded RGB; per-scene coverage>=.99*ray_hitfraction; hit-weighted opacity>=.05 when hits exist; RGB MSE<=1.25*constant0.5RGB MSE",
+  "fresh_qualification_access": false,
+  "independent_per_variant_seed": true,
+  "metric": "DEV scene-macro depth AbsRel of direct A/B states",
+  "no_eligible": "NO_ELIGIBLE_CHECKPOINT, no fallback or gate relaxation",
+  "no_hit": "retained in all GT-valid primary metrics; NO_HIT is not model collapse",
+  "tie_break": "earliest step",
+  "tie_tolerance": 1e-08
+}

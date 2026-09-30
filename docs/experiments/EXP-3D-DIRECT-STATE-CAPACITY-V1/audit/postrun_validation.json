@@ -1,0 +1,2215 @@
+{
+  "RGB_ONLY_optimizer_never_reads_depth": true,
+  "actual_resolution_sweep_only_grid_changes": true,
+  "actual_samples_diagnostic_only_8_16_RGBD": true,
+  "all_selected_checkpoints_minimum_full_objective_earliest_tie": true,
+  "audit_script_sha256": "71ef64d55afaab603bc93d0c62149b93269563291bd1c828ffc05a43eb33c4aa",
+  "baseline_checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+  "baseline_checkpoint_unchanged": true,
+  "completion_plan_state_source_hashes_match": true,
+  "context_role_ids_only": true,
+  "dynamic_ttt_run": false,
+  "filesystem_chronology_auxiliary": {
+    "context_completion_before_context_evaluation": true,
+    "context_evaluation_before_oracle_optimization": true,
+    "context_evaluation_integrity": 1790528473140815392,
+    "context_evaluation_lock": 1790528373570213296,
+    "first_oracle_optimization_lock": 1790528501743619772,
+    "latest_context_state_completion": 1790528357685829441,
+    "limitation": "Auxiliary chronology evidence only; OS file timestamps are mutable and not tamper-proof",
+    "oracle_completion_before_oracle_evaluation": true,
+    "oracle_evaluation_lock": 1790528837036464598,
+    "oracle_optimization_complete": 1790528826271084225,
+    "unit": "filesystem st_mtime_ns"
+  },
+  "final_holdout_touched": false,
+  "metric_recomputation_tolerance": {
+    "atol": 1e-06,
+    "rtol": 1e-05
+  },
+  "new_carrier_trained": false,
+  "optimization_checks": [
+    {
+      "earliest_minimum_objective": 0.21839769712783688,
+      "key": "ai_004_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.016336839590076126,
+      "key": "ai_004_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2466293101122788,
+      "key": "ai_004_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.018945690885569397,
+      "key": "ai_004_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.26335639195409993,
+      "key": "ai_006_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.05815730818455146,
+      "key": "ai_006_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2895680965525874,
+      "key": "ai_006_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.059077828608860725,
+      "key": "ai_006_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1634124172914006,
+      "key": "ai_007_002__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02910918408742873,
+      "key": "ai_007_002__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.19875187823203727,
+      "key": "ai_007_002__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.030856806697071686,
+      "key": "ai_007_002__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1936175997327761,
+      "key": "ai_008_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012973388720153405,
+      "key": "ai_008_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1321409367364443,
+      "key": "ai_008_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.010530678314777712,
+      "key": "ai_008_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3986164741327499,
+      "key": "ai_009_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.029310997060141137,
+      "key": "ai_009_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4006748768441281,
+      "key": "ai_009_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.028672215006372424,
+      "key": "ai_009_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12036792271149654,
+      "key": "ai_010_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.018516347698217337,
+      "key": "ai_010_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09742822184646988,
+      "key": "ai_010_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.014420888669337727,
+      "key": "ai_010_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.43557626268836047,
+      "key": "ai_011_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04357048155264541,
+      "key": "ai_011_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4555559831157249,
+      "key": "ai_011_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.046329392748642326,
+      "key": "ai_011_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2418457602755039,
+      "key": "ai_012_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03690846197666057,
+      "key": "ai_012_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21496693084482105,
+      "key": "ai_012_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03774321311975655,
+      "key": "ai_012_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2036032769935749,
+      "key": "ai_014_003__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.037946046535216736,
+      "key": "ai_014_003__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17590216849615292,
+      "key": "ai_014_003__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04990761926189104,
+      "key": "ai_014_003__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.22712579192499993,
+      "key": "ai_016_002__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.042387813742485986,
+      "key": "ai_016_002__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2399055866393406,
+      "key": "ai_016_002__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.044132471104724874,
+      "key": "ai_016_002__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3511285208897802,
+      "key": "ai_018_002__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04620717099751346,
+      "key": "ai_018_002__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.45319726931711063,
+      "key": "ai_018_002__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.045829303681966846,
+      "key": "ai_018_002__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.19139767280988357,
+      "key": "ai_021_002__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.00615472117679019,
+      "key": "ai_021_002__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15325914596566387,
+      "key": "ai_021_002__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.003867197353914283,
+      "key": "ai_021_002__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08970833221622646,
+      "key": "ai_028_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.020064594785435475,
+      "key": "ai_028_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08419558626240663,
+      "key": "ai_028_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.019177893735953452,
+      "key": "ai_028_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1923761119120172,
+      "key": "ai_030_002__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02436276636290131,
+      "key": "ai_030_002__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21074774178123334,
+      "key": "ai_030_002__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03241701041843044,
+      "key": "ai_030_002__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0751404347208639,
+      "key": "ai_032_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.018910295701789436,
+      "key": "ai_032_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16269107980527528,
+      "key": "ai_032_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.029766854069991192,
+      "key": "ai_032_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1625308317699819,
+      "key": "ai_034_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02655783466258678,
+      "key": "ai_034_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17410035359838122,
+      "key": "ai_034_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02776543138740332,
+      "key": "ai_034_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21737268809786958,
+      "key": "ai_036_001__A__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.034018189567965845,
+      "key": "ai_036_001__A__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.28072930513784133,
+      "key": "ai_036_001__B__RGBD__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04167623160962345,
+      "key": "ai_036_001__B__RGB_ONLY__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16214849290450947,
+      "key": "ai_004_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.009791560315049234,
+      "key": "ai_004_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.18127533902835302,
+      "key": "ai_004_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.011857162507415827,
+      "key": "ai_004_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.20116057902681253,
+      "key": "ai_006_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.044713199101776506,
+      "key": "ai_006_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.22265636860756785,
+      "key": "ai_006_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0464786625377504,
+      "key": "ai_006_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11704266159748895,
+      "key": "ai_007_002__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.017418538360652748,
+      "key": "ai_007_002__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11945379930095942,
+      "key": "ai_007_002__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.017186393109780814,
+      "key": "ai_007_002__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11734386217831343,
+      "key": "ai_008_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0070810624118166745,
+      "key": "ai_008_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09861935318579829,
+      "key": "ai_008_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.006648836098368823,
+      "key": "ai_008_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.36543311504934545,
+      "key": "ai_009_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.024003650835826798,
+      "key": "ai_009_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.36533827649116724,
+      "key": "ai_009_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.023676800804241793,
+      "key": "ai_009_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07606414279980526,
+      "key": "ai_010_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.013886279830452016,
+      "key": "ai_010_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.060840050575158476,
+      "key": "ai_010_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.010383882320214373,
+      "key": "ai_010_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3853173784984851,
+      "key": "ai_011_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03362615004480176,
+      "key": "ai_011_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4037912191078552,
+      "key": "ai_011_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0367868106305347,
+      "key": "ai_011_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15599639723669295,
+      "key": "ai_012_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.021657030420707695,
+      "key": "ai_012_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.14443654062937034,
+      "key": "ai_012_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.021425456669142782,
+      "key": "ai_012_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1212433524041747,
+      "key": "ai_014_003__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.018575190797370546,
+      "key": "ai_014_003__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11403784017190143,
+      "key": "ai_014_003__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02553642365479997,
+      "key": "ai_014_003__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17406842076255782,
+      "key": "ai_016_002__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.028384301780655128,
+      "key": "ai_016_002__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1838951512022677,
+      "key": "ai_016_002__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.030145444515922767,
+      "key": "ai_016_002__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2733111366899738,
+      "key": "ai_018_002__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03105818309256089,
+      "key": "ai_018_002__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.36353251370082,
+      "key": "ai_018_002__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.033437120942471664,
+      "key": "ai_018_002__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.14376867921988984,
+      "key": "ai_021_002__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0042377509287992625,
+      "key": "ai_021_002__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08646592586640811,
+      "key": "ai_021_002__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0025147220755267576,
+      "key": "ai_021_002__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.05832642671448412,
+      "key": "ai_028_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.015726433812596953,
+      "key": "ai_028_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.051497707345333765,
+      "key": "ai_028_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.014021297888575646,
+      "key": "ai_028_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.14099258994489597,
+      "key": "ai_030_002__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.016243883401330095,
+      "key": "ai_030_002__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16232941805646986,
+      "key": "ai_030_002__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0217331867392204,
+      "key": "ai_030_002__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04126222598473153,
+      "key": "ai_032_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.00985303611572211,
+      "key": "ai_032_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13419002194471735,
+      "key": "ai_032_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.01847706755725085,
+      "key": "ai_032_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11005843651607089,
+      "key": "ai_034_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.020867477966567093,
+      "key": "ai_034_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11421771476088907,
+      "key": "ai_034_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.020857909840439486,
+      "key": "ai_034_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13337284080383444,
+      "key": "ai_036_001__A__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.025962959495882388,
+      "key": "ai_036_001__A__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1811398017128037,
+      "key": "ai_036_001__B__RGBD__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.029921444394797922,
+      "key": "ai_036_001__B__RGB_ONLY__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12754837572478708,
+      "key": "ai_004_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.005774300837644356,
+      "key": "ai_004_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13984186571472382,
+      "key": "ai_004_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.006408001784075168,
+      "key": "ai_004_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15718495935749766,
+      "key": "ai_006_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0298376857805124,
+      "key": "ai_006_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17751594292373435,
+      "key": "ai_006_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03199624741973821,
+      "key": "ai_006_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09498405231324354,
+      "key": "ai_007_002__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.010245573646655733,
+      "key": "ai_007_002__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09705080105290098,
+      "key": "ai_007_002__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.010387756878238482,
+      "key": "ai_007_002__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09765318005787169,
+      "key": "ai_008_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.004316241446849745,
+      "key": "ai_008_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08289072922586153,
+      "key": "ai_008_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.004210462210266996,
+      "key": "ai_008_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3515109749016222,
+      "key": "ai_009_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.018738693329578383,
+      "key": "ai_009_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.35079064252849657,
+      "key": "ai_009_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.018104211435396186,
+      "key": "ai_009_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.05585014854380764,
+      "key": "ai_010_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.00858043348149901,
+      "key": "ai_010_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04551637478374081,
+      "key": "ai_010_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.006047604296145437,
+      "key": "ai_010_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3421703511289076,
+      "key": "ai_011_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.023414030236987553,
+      "key": "ai_011_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3646887999035244,
+      "key": "ai_011_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02528640631123077,
+      "key": "ai_011_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11362276327825532,
+      "key": "ai_012_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012010725477496938,
+      "key": "ai_012_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09889054314201834,
+      "key": "ai_012_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.013081491334135838,
+      "key": "ai_012_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08069885949419889,
+      "key": "ai_014_003__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.008429470761863437,
+      "key": "ai_014_003__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07339057596667165,
+      "key": "ai_014_003__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012027873769208478,
+      "key": "ai_014_003__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15336737980582352,
+      "key": "ai_016_002__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02022720208891163,
+      "key": "ai_016_002__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16150385888272506,
+      "key": "ai_016_002__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.021581533488764158,
+      "key": "ai_016_002__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.22367769716481609,
+      "key": "ai_018_002__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.022952137671866997,
+      "key": "ai_018_002__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.29726749425574867,
+      "key": "ai_018_002__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.023984735219589007,
+      "key": "ai_018_002__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12045578344016879,
+      "key": "ai_021_002__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0024658387125479444,
+      "key": "ai_021_002__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06754950567786484,
+      "key": "ai_021_002__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0011660255901006166,
+      "key": "ai_021_002__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03872597796980699,
+      "key": "ai_028_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012322909300867954,
+      "key": "ai_028_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03478116740528397,
+      "key": "ai_028_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.010860866017355874,
+      "key": "ai_028_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11881141857884359,
+      "key": "ai_030_002__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012039537132053132,
+      "key": "ai_030_002__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13969690479668012,
+      "key": "ai_030_002__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.015378095637546114,
+      "key": "ai_030_002__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.021980829881067622,
+      "key": "ai_032_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.005441393394236608,
+      "key": "ai_032_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0464808241128291,
+      "key": "ai_032_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.007222298958367901,
+      "key": "ai_032_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07319994875203217,
+      "key": "ai_034_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.014056409410659398,
+      "key": "ai_034_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07631193457661235,
+      "key": "ai_034_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.013553756669534778,
+      "key": "ai_034_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.10524709624369279,
+      "key": "ai_036_001__A__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.01876460652977888,
+      "key": "ai_036_001__A__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1389968948479994,
+      "key": "ai_036_001__B__RGBD__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.021109400433609458,
+      "key": "ai_036_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15503544724700205,
+      "key": "ai_004_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.011531686394543309,
+      "key": "ai_004_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1652123143850518,
+      "key": "ai_004_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012840821830225953,
+      "key": "ai_004_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13368033491327272,
+      "key": "ai_006_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.046086666804815955,
+      "key": "ai_006_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1349021035411473,
+      "key": "ai_006_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04587408274965128,
+      "key": "ai_006_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09489785848331718,
+      "key": "ai_007_002__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02001808519513967,
+      "key": "ai_007_002__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12081258595619376,
+      "key": "ai_007_002__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.01974241758628826,
+      "key": "ai_007_002__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.10135007357390956,
+      "key": "ai_008_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0064685305487122,
+      "key": "ai_008_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09939477841374658,
+      "key": "ai_008_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.007155279151144593,
+      "key": "ai_008_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.384231524618675,
+      "key": "ai_009_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.026501522484613814,
+      "key": "ai_009_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.38008224975782906,
+      "key": "ai_009_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02601642705994891,
+      "key": "ai_009_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07646333464266111,
+      "key": "ai_010_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.015325683042950308,
+      "key": "ai_010_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06104654034619064,
+      "key": "ai_010_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012454451214580331,
+      "key": "ai_010_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4262696144735312,
+      "key": "ai_011_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03736714719998417,
+      "key": "ai_011_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4158466420204301,
+      "key": "ai_011_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03991561194901199,
+      "key": "ai_011_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13672672101929673,
+      "key": "ai_012_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02412391016162777,
+      "key": "ai_012_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.10296049417374889,
+      "key": "ai_012_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02312807827644671,
+      "key": "ai_012_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12127241533889901,
+      "key": "ai_014_003__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02164389993510364,
+      "key": "ai_014_003__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12951423324799785,
+      "key": "ai_014_003__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02844919640532074,
+      "key": "ai_014_003__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.19104573358154275,
+      "key": "ai_016_002__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03213766757350337,
+      "key": "ai_016_002__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2019650486289743,
+      "key": "ai_016_002__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03408943840137605,
+      "key": "ai_016_002__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.18703779938434373,
+      "key": "ai_018_002__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.032962348845709734,
+      "key": "ai_018_002__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.22870850424891465,
+      "key": "ai_018_002__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03198117160257728,
+      "key": "ai_018_002__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11034266321221367,
+      "key": "ai_021_002__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.004448190355712238,
+      "key": "ai_021_002__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13150438731730293,
+      "key": "ai_021_002__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.0029733873795824667,
+      "key": "ai_021_002__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06434558531861209,
+      "key": "ai_028_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.01656407792288519,
+      "key": "ai_028_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.05598919012821473,
+      "key": "ai_028_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.01649342050877749,
+      "key": "ai_028_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12085498411615844,
+      "key": "ai_030_002__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.01898914265038911,
+      "key": "ai_030_002__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.18734414911790132,
+      "key": "ai_030_002__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02474281946536697,
+      "key": "ai_030_002__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06706675937360462,
+      "key": "ai_032_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.013045075359696057,
+      "key": "ai_032_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15979649182797098,
+      "key": "ai_032_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02352849165617954,
+      "key": "ai_032_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1110371420615896,
+      "key": "ai_034_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02041898766935143,
+      "key": "ai_034_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11966748450310358,
+      "key": "ai_034_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02165605933914776,
+      "key": "ai_034_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16471202943842703,
+      "key": "ai_036_001__A__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.028614276125881587,
+      "key": "ai_036_001__A__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2233566230017459,
+      "key": "ai_036_001__B__RGBD__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03387485391722293,
+      "key": "ai_036_001__B__RGB_ONLY__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21841586685817,
+      "key": "ai_004_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.24667690067786413,
+      "key": "ai_004_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.26339509523240845,
+      "key": "ai_006_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2896183663038149,
+      "key": "ai_006_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1634188293932851,
+      "key": "ai_007_002__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.19874880970177922,
+      "key": "ai_007_002__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.19371101497211687,
+      "key": "ai_008_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13215999661297248,
+      "key": "ai_008_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.398675026672419,
+      "key": "ai_009_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4007215006785886,
+      "key": "ai_009_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12038890375430734,
+      "key": "ai_010_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09748626894567375,
+      "key": "ai_010_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4356174008249827,
+      "key": "ai_011_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4555811120900519,
+      "key": "ai_011_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.24181417120525717,
+      "key": "ai_012_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2149927426908107,
+      "key": "ai_012_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2036140795889272,
+      "key": "ai_014_003__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17591247560970563,
+      "key": "ai_014_003__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2271677204810985,
+      "key": "ai_016_002__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.23996302012855297,
+      "key": "ai_016_002__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.35111656706802097,
+      "key": "ai_018_002__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4532020801508748,
+      "key": "ai_018_002__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1914524590911848,
+      "key": "ai_021_002__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15326170916960108,
+      "key": "ai_021_002__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08973495830881195,
+      "key": "ai_028_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08418801588122733,
+      "key": "ai_028_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.19244416824003566,
+      "key": "ai_030_002__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21082620403952507,
+      "key": "ai_030_002__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07508936673718078,
+      "key": "ai_032_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1626058323745383,
+      "key": "ai_032_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16254906334531066,
+      "key": "ai_034_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17412074030920244,
+      "key": "ai_034_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21735899256066962,
+      "key": "ai_036_001__A__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.28093292007470155,
+      "key": "ai_036_001__B__RGBD__g8__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.162281493407466,
+      "key": "ai_004_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.18132950116741706,
+      "key": "ai_004_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.20118878873860618,
+      "key": "ai_006_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2227115811726738,
+      "key": "ai_006_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11705575432658577,
+      "key": "ai_007_002__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1194875597452276,
+      "key": "ai_007_002__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11742784591588133,
+      "key": "ai_008_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09867708884430612,
+      "key": "ai_008_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3655019733632558,
+      "key": "ai_009_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.36536324661931013,
+      "key": "ai_009_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07610919716510883,
+      "key": "ai_010_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06084470985442749,
+      "key": "ai_010_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3854189780039527,
+      "key": "ai_011_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.40383573866565714,
+      "key": "ai_011_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15600844521834414,
+      "key": "ai_012_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1444882820729011,
+      "key": "ai_012_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12119778952376994,
+      "key": "ai_014_003__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11399550229204275,
+      "key": "ai_014_003__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17410390211506582,
+      "key": "ai_016_002__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.18398025363166504,
+      "key": "ai_016_002__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2734082738474997,
+      "key": "ai_018_002__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3635979433232953,
+      "key": "ai_018_002__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1438532247096494,
+      "key": "ai_021_002__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08649128858402642,
+      "key": "ai_021_002__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.058322225268178346,
+      "key": "ai_028_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.05146140300894331,
+      "key": "ai_028_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1410777080435461,
+      "key": "ai_030_002__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16240397568714496,
+      "key": "ai_030_002__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.041274585268062464,
+      "key": "ai_032_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13407793871301693,
+      "key": "ai_032_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11009606222445048,
+      "key": "ai_034_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1142240796184827,
+      "key": "ai_034_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1333539764173717,
+      "key": "ai_036_001__A__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.18113168467001137,
+      "key": "ai_036_001__B__RGBD__g16__s128__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.30896892200013343,
+      "key": "ai_004_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21354089679734897,
+      "key": "ai_006_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.5088023508666083,
+      "key": "ai_007_002__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.5131951909228519,
+      "key": "ai_008_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 1.1329367976338898,
+      "key": "ai_009_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2547031590152463,
+      "key": "ai_010_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4544426436988727,
+      "key": "ai_011_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.6878252252245147,
+      "key": "ai_012_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2134559749305481,
+      "key": "ai_014_003__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.14192725899629294,
+      "key": "ai_016_002__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.5943532180037437,
+      "key": "ai_018_002__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.028908233606489378,
+      "key": "ai_021_002__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1036387583535543,
+      "key": "ai_028_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.14760756676405434,
+      "key": "ai_030_002__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.02483170402192627,
+      "key": "ai_032_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.22298542680541644,
+      "key": "ai_034_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2152983328588758,
+      "key": "ai_036_001__joint_query__QUERY_ORACLE__g8__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.24276363117237978,
+      "key": "ai_004_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16870888813064083,
+      "key": "ai_006_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.4349664135796047,
+      "key": "ai_007_002__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.41841735132911706,
+      "key": "ai_008_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 1.1329368745342248,
+      "key": "ai_009_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.19797145415621947,
+      "key": "ai_010_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.40726627648960534,
+      "key": "ai_011_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.6485897385777206,
+      "key": "ai_012_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1191624413811951,
+      "key": "ai_014_003__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1074979379605793,
+      "key": "ai_016_002__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.5179637635417749,
+      "key": "ai_018_002__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.018291745499664103,
+      "key": "ai_021_002__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06406603520081262,
+      "key": "ai_028_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06770936334723957,
+      "key": "ai_030_002__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.016036103136684687,
+      "key": "ai_032_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.14756974086440344,
+      "key": "ai_034_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.14489279590833307,
+      "key": "ai_036_001__joint_query__QUERY_ORACLE__g16__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.195122290513585,
+      "key": "ai_004_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1334672555902216,
+      "key": "ai_006_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.375884168488119,
+      "key": "ai_007_002__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.36681081671595167,
+      "key": "ai_008_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 1.1329369141565817,
+      "key": "ai_009_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.15748619717579215,
+      "key": "ai_010_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3810567541318316,
+      "key": "ai_011_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.6079892244673829,
+      "key": "ai_012_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.07474784350561095,
+      "key": "ai_014_003__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.09404152808347134,
+      "key": "ai_016_002__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.45996858045309635,
+      "key": "ai_018_002__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.012338009235827485,
+      "key": "ai_021_002__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.046283014005166476,
+      "key": "ai_028_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.034858103877559186,
+      "key": "ai_030_002__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.009561399412450555,
+      "key": "ai_032_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.10077284967914807,
+      "key": "ai_034_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1161672017478916,
+      "key": "ai_036_001__joint_query__QUERY_ORACLE__g32__s64__CURRENT_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21167359658730678,
+      "key": "ai_004_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.18946875300657526,
+      "key": "ai_004_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11222250922146486,
+      "key": "ai_006_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.10975708503683564,
+      "key": "ai_006_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1998332976436359,
+      "key": "ai_007_002__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2342765941793914,
+      "key": "ai_007_002__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2535777017707005,
+      "key": "ai_008_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.3949471248182817,
+      "key": "ai_008_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 1.1329367976338898,
+      "key": "ai_009_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 1.1329367976338898,
+      "key": "ai_009_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.22263646299415418,
+      "key": "ai_010_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.21822568323596556,
+      "key": "ai_010_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.5079893679781216,
+      "key": "ai_011_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.46644988595564585,
+      "key": "ai_011_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.12027976920362561,
+      "key": "ai_012_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.08672821954824031,
+      "key": "ai_012_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.17600081358250463,
+      "key": "ai_014_003__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1804829552726005,
+      "key": "ai_014_003__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13122052974649703,
+      "key": "ai_016_002__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.13772844780469315,
+      "key": "ai_016_002__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2488357027294114,
+      "key": "ai_018_002__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1915084404841764,
+      "key": "ai_018_002__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.04949847020325251,
+      "key": "ai_021_002__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.03553956529212883,
+      "key": "ai_021_002__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06439100758507266,
+      "key": "ai_028_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.06585946741397493,
+      "key": "ai_028_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.11466983278442058,
+      "key": "ai_030_002__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2651559341087704,
+      "key": "ai_030_002__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.019508285545452964,
+      "key": "ai_032_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.020338095523766243,
+      "key": "ai_032_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.26074418435875135,
+      "key": "ai_034_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.2598636849829256,
+      "key": "ai_034_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.16927853582431446,
+      "key": "ai_036_001__A__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    },
+    {
+      "earliest_minimum_objective": 0.1527020490035754,
+      "key": "ai_036_001__B__QUERY_ORACLE__g8__s64__PREDECLARED_GEOMETRY_BOUNDS",
+      "selected_step": 1000
+    }
+  ],
+  "optimized_state_count": 425,
+  "phases": {
+    "context": {
+      "all_evaluator_queries_after_complete_seal": true,
+      "metric_exact_row_counts": {
+        "coverage": 1360,
+        "depth_absrel": 1360,
+        "depth_delta1": 1360,
+        "depth_rmse": 1360,
+        "opacity": 1360,
+        "rgb_mse": 1360,
+        "rgb_ssim": 1360
+      },
+      "metrics_max_absolute_error": {
+        "coverage": 0.0,
+        "depth_absrel": 0.0,
+        "depth_delta1": 0.0,
+        "depth_rmse": 0.0,
+        "opacity": 0.0,
+        "rgb_mse": 0.0,
+        "rgb_ssim": 0.0
+      },
+      "rows_recomputed": 1360,
+      "shared_state_across_queries": true,
+      "states": 340,
+      "wrong_scene_preserves_camera": true
+    },
+    "oracle": {
+      "all_evaluator_queries_after_complete_seal": true,
+      "metric_exact_row_counts": {
+        "coverage": 170,
+        "depth_absrel": 170,
+        "depth_delta1": 170,
+        "depth_rmse": 170,
+        "opacity": 170,
+        "rgb_mse": 170,
+        "rgb_ssim": 170
+      },
+      "metrics_max_absolute_error": {
+        "coverage": 0.0,
+        "depth_absrel": 0.0,
+        "depth_delta1": 0.0,
+        "depth_rmse": 0.0,
+        "opacity": 0.0,
+        "rgb_mse": 0.0,
+        "rgb_ssim": 0.0
+      },
+      "rows_recomputed": 170,
+      "shared_state_across_queries": true,
+      "states": 85,
+      "wrong_scene_preserves_camera": true
+    }
+  },
+  "preregistration_config_and_state_plan_hashes_match": true,
+  "query_oracle_explicitly_separate": true,
+  "statistics_reproduction": "SEPARATE_INDEPENDENT_ANALYSIS_AUDIT",
+  "status": "PASS"
+}

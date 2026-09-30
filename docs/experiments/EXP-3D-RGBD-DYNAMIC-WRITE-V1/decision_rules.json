@@ -1,0 +1,20 @@
+{
+  "BEYOND_CLAMP_STATUS": "gate on BEYOND_CLAMP_GAIN = OFF_CLAMP3 - ALL",
+  "STREAM_STATUS": "gate on STREAM_WRITE_GAIN = NO_STREAM - ALL",
+  "WRITE_SPECIFICITY_STATUS": "ALL_WRONG_SCENE - ALL has CIlo>0 -> SUPPORTED",
+  "WRITE_STATUS": "gate on WRITE_GAIN = OFF - ALL (primary)",
+  "aggregation": "per seed: scene mean of role means of query AbsRel; seeds equally weighted within scene",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "physical scene"
+  },
+  "descriptive": "STREAM_CACHE_EFFECT = NO_STREAM - OFF; CLAMP_EFFECT = OFF - OFF_CLAMP3; FUSE and COMPLETE gains over OFF; TRAINING_GAIN = ALL_UNTRAINED - ALL; per-seed gains; fast-weight norms; delta1",
+  "final_holdout": "never opened",
+  "gate": "frozen V2 primary-contrast checks: mean>0, CIlo>0, >=75% scenes non-worse; every LOSO mean >0; positive top1 share <=.5; sealed-state integrity PASS; status HARMFUL / SUPPORTED / PARTIAL / NOT_ESTABLISHED as in geometry_carrier_statistics",
+  "interpretation": {
+    "A": "WRITE, STREAM and BEYOND_CLAMP SUPPORTED and WRITE_SPECIFICITY SUPPORTED: learned writes add scene-specific information beyond caching, beyond the static state and beyond a count fix; next an independent Core B qualification",
+    "B": "WRITE_STATUS SUPPORTED, not A: writes mainly repair the carrier's view-count shift; next train the static carrier with variable view counts, then retest",
+    "C": "otherwise: the frozen write design does not help; next redesign the write"
+  }
+}

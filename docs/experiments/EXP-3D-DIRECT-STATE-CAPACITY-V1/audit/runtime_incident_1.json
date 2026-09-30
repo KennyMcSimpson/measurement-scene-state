@@ -1,0 +1,17 @@
+{
+  "utc": "2026-09-27T16:46:48.754627+00:00",
+  "exit_code": 139,
+  "error": "segmentation fault; no Python stack",
+  "completed_states_hashes_verified": 143,
+  "partial_states": [
+    {
+      "key": "ai_006_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "preserved": "outputs/EXP-3D-DIRECT-STATE-CAPACITY-V1/audit/interrupted_attempt_1/ai_006_001__B__RGB_ONLY__g32__s64__CURRENT_BOUNDS",
+      "only_lock_no_state_or_result": true
+    }
+  ],
+  "nvidia_smi": "GPU responsive, no excessive GPU memory; unrelated shared process not modified",
+  "kernel_log": "not available to current user",
+  "recovery": "same frozen configuration, sources, scene order, seeds; rerun only incomplete state and remaining plan with Python faulthandler enabled",
+  "query_evaluation_started": false
+}

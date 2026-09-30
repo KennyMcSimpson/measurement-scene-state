@@ -1,0 +1,62 @@
+{
+  "definition": "Pearson correlation of flattened density logits; no gate uses it",
+  "descriptive_only": true,
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/raw/selected_dev/C0_20260928/states.pt": "db2d52c2dafeadb3403c569b2837b1d6a463f6db5dafadb6b5b885c7a8662ae7",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/raw/selected_dev/C0_20260929/states.pt": "b18dbf67e2be8bb1b64ea615aefa2685aab22aab39038bb0bf5600a624485f85",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/raw/selected_dev/C0_20260930/states.pt": "d0b3b0ef5c5e3f6ebba249dfd35693dfdb8e74da469c6c90172ad8c58cbf2b08",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/raw/selected_dev/C1_20260928/states.pt": "9ac49eefbf46eeb3dcc81fdb0637c24f6151fe06fc475ddaf7d97945f79d1b63",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/raw/selected_dev/C1_20260929/states.pt": "9f2d7634f114d4588a3ac75cbc9fe647df9de6ba5e8c477c5280c34af168e3fe",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/raw/selected_dev/C1_20260930/states.pt": "a773cd2df10229c03cb72adfb9506ab7629334ef3ecc98c3c66af73e8dc98710"
+  },
+  "per_run": {
+    "C0_20260928": {
+      "across_scene_A": 0.2330691509751567,
+      "direct_A_vs_anchor_A": 0.6864028020470592,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6062823458669259
+    },
+    "C0_20260929": {
+      "across_scene_A": 0.26383058707918045,
+      "direct_A_vs_anchor_A": 0.6698039244378244,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6073772109151228
+    },
+    "C0_20260930": {
+      "across_scene_A": 0.3036368927206062,
+      "direct_A_vs_anchor_A": 0.6388475105851092,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6599657287514513
+    },
+    "C1_20260928": {
+      "across_scene_A": 0.36190095392758787,
+      "direct_A_vs_anchor_A": 0.7857714051474796,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7161731181211141
+    },
+    "C1_20260929": {
+      "across_scene_A": 0.32065836122101515,
+      "direct_A_vs_anchor_A": 0.7469384959965069,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.652805250933656
+    },
+    "C1_20260930": {
+      "across_scene_A": 0.3026209580623555,
+      "direct_A_vs_anchor_A": 0.6830222803253068,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6311686876832402
+    }
+  },
+  "per_variant_mean_over_seeds": {
+    "C0": {
+      "across_scene_A": 0.26684554359164775,
+      "direct_A_vs_anchor_A": 0.665018079023331,
+      "within_scene_A_B": 0.6245417618445
+    },
+    "C1": {
+      "across_scene_A": 0.3283934244036528,
+      "direct_A_vs_anchor_A": 0.7385773938230976,
+      "within_scene_A_B": 0.6667156855793368
+    }
+  }
+}

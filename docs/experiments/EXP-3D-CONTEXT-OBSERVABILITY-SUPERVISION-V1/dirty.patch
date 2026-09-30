@@ -1,0 +1,44 @@
+diff --git a/EXPERIMENTS.md b/EXPERIMENTS.md
+index 44e6321..6984844 100644
+--- a/EXPERIMENTS.md
++++ b/EXPERIMENTS.md
+@@ -1,5 +1,25 @@
+ # 实验注册表
+ 
++## EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1（2026-09-28）
++
++- [完整报告](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/README.md)、[终端摘要](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/STATUS.md)、[复现命令](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/commands.sh)。
++- 旧987文件封存且统计精确复算；旧7场景标为REDESIGN_DEV_EXPOSED。新锁12DEV＋12HOLDOUT，几何合格分别10/8，不替换；holdout历史曝光无法排除，独立性未解决。
++- 固定8³/128/旧B-final完成R0、oracle-volume、oracle-support、联合四组，17个开发场景、680行。
++- Volume-only full-context gain +0.115349 [0.014210,0.217646]；绝对full-context改善仅0.034169且CI跨零，83.8%相对增幅是anchor变差的代数贡献。
++- 联合gain +0.089622 [−0.026782,0.216702]；query surface support66.22%未达75%充分性门槛。SUPPORT_BOTTLENECK_STATUS=INCONCLUSIVE，不能声称理想支持都无效或network是唯一原因。
++- 按冻结规则停止：GT-free实景实验、matched retraining、final holdout均未运行；STATIC_STATE_STATUS=NOT_ESTABLISHED；DYNAMIC_TTT_RUN=false。
++- 669测试通过，1可选历史checkpoint测试跳过；680预测文件重算全部主指标完全一致；报告、raw、锁、图、命令及完整性证据齐全。
++
++## EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1（2026-09-27）
++
++- [完整报告](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/README.md)、[状态](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/STATUS.md)、[复现命令](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/commands.sh)。
++- 固定1000A+600B B-final；仅static，旧90条精确复现，ai003保留。
++- 锁定8个独立源资产候选，7个满足先验质量/几何规则，全部未参与此checkpoint训练；未打开保护集。供应商跨资产复用无法完全排除。
++- 未见场景full-context相对anchor的AbsRel收益−0.189671，scene-bootstrap 95% CI [−0.291047, −0.091291]；wrong-scene damage CI跨0。
++- Residual 308参数，30,000步训练，训练侧验证选择7,500步；平均A/B未见AbsRel由0.797229变为0.852789，无通用改善证据。
++- 已发现source-black、观察支持与查询体积覆盖限制，不能直接归因为过拟合或固定decoder。`STATIC_STATE_STATUS=NOT_ESTABLISHED`；`DYNAMIC_TTT_RUN=false`。
++- 610测试通过，1历史可选checkpoint测试跳过。原始记录、锁定记录、GT日志、审计、曲线和artifact hashes保留；报告raw可离线精确重算统计。
++
+ ## EXP-2D-followup-20260927
+ 
+ - **状态**：POST_HOC_DISCOVERY_ONLY；保留V2全部冻结产物。
+diff --git a/README.md b/README.md
+index ee30547..f66cd4a 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,9 @@
+ # Measurement Scene State / Inverse-JEPA + Dynamic-TTT research archive
+ 
++
++2026-09-28 [Support bottleneck归因与redesign gate](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/README.md)：7个旧曝光＋10个新开发场景完成oracle诊断。Volume-only相对gain为正，但完整context绝对改善CI跨零，约83.8%的gain增幅来自anchor变差；联合oracle未过门槛且支持不充分，结论`INCONCLUSIVE`。按协议未继续实景GT-free／matched retraining，最终holdout未开启，历史独立性另有阻塞。
++
++2026-09-27 [静态 carrier 归因与未见场景资格](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/README.md)：旧90条记录精确复现；7个未见场景 full-context AbsRel 0.7972，差于 anchor 0.6076，收益95% CI为[-0.2910, -0.0913]。ai003原始JPEG已全黑且A双视图支持为零；Residual完成训练但未建立通用改善。`STATIC_STATE_STATUS=NOT_ESTABLISHED`，未运行新Dynamic TTT。
+ 协作入口：先看 [当前结果与复现说明](docs/handoff/SHARED_WORKSPACE.md)。[三维从零复现](docs/handoff/3D_REPRODUCTION.md) 提供便携脚本；大报告先运行 `python scripts/restore_report_artifacts.py` 恢复，权重与数据不随 Git 分发。
+ 
+ 2026-09-27 [已训练权重机制补测](docs/experiments/EXP-3D-20260927-trained-state-history-v1/README.md)：同训练场景留出帧上，写入oracle AbsRel收益约0.000756，但有益历史动作翻转0/3、history额外空间0；静态context A AbsRel2.214，资格仍未建立。原训练query的1次翻转单列，不当独立证据。

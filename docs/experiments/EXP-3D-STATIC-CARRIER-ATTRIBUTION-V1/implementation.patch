@@ -1,0 +1,4017 @@
+diff --git a/EXPERIMENTS.md b/EXPERIMENTS.md
+index 44e6321..0dcd83d 100644
+--- a/EXPERIMENTS.md
++++ b/EXPERIMENTS.md
+@@ -1,5 +1,15 @@
+ # 实验注册表
+ 
++## EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1（2026-09-27）
++
++- [完整报告](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/README.md)、[状态](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/STATUS.md)、[复现命令](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/commands.sh)。
++- 固定1000A+600B B-final；仅static，旧90条精确复现，ai003保留。
++- 锁定8个独立源资产候选，7个满足先验质量/几何规则，全部未参与此checkpoint训练；未打开保护集。供应商跨资产复用无法完全排除。
++- 未见场景full-context相对anchor的AbsRel收益−0.189671，scene-bootstrap 95% CI [−0.291047, −0.091291]；wrong-scene damage CI跨0。
++- Residual 308参数，30,000步训练，训练侧验证选择7,500步；平均A/B未见AbsRel由0.797229变为0.852789，无通用改善证据。
++- 已发现source-black、观察支持与查询体积覆盖限制，不能直接归因为过拟合或固定decoder。`STATIC_STATE_STATUS=NOT_ESTABLISHED`；`DYNAMIC_TTT_RUN=false`。
++- 610测试通过，1历史可选checkpoint测试跳过。原始记录、锁定记录、GT日志、审计、曲线和artifact hashes保留；报告raw可离线精确重算统计。
++
+ ## EXP-2D-followup-20260927
+ 
+ - **状态**：POST_HOC_DISCOVERY_ONLY；保留V2全部冻结产物。
+diff --git a/README.md b/README.md
+index ee30547..0431627 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,7 @@
+ # Measurement Scene State / Inverse-JEPA + Dynamic-TTT research archive
+ 
++
++2026-09-27 [静态 carrier 归因与未见场景资格](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/README.md)：旧90条记录精确复现；7个未见场景 full-context AbsRel 0.7972，差于 anchor 0.6076，收益95% CI为[-0.2910, -0.0913]。ai003原始JPEG已全黑且A双视图支持为零；Residual完成训练但未建立通用改善。`STATIC_STATE_STATUS=NOT_ESTABLISHED`，未运行新Dynamic TTT。
+ 协作入口：先看 [当前结果与复现说明](docs/handoff/SHARED_WORKSPACE.md)。[三维从零复现](docs/handoff/3D_REPRODUCTION.md) 提供便携脚本；大报告先运行 `python scripts/restore_report_artifacts.py` 恢复，权重与数据不随 Git 分发。
+ 
+ 2026-09-27 [已训练权重机制补测](docs/experiments/EXP-3D-20260927-trained-state-history-v1/README.md)：同训练场景留出帧上，写入oracle AbsRel收益约0.000756，但有益历史动作翻转0/3、history额外空间0；静态context A AbsRel2.214，资格仍未建立。原训练query的1次翻转单列，不当独立证据。
+diff --git a/scripts/analyze_static_gap.py b/scripts/analyze_static_gap.py
+new file mode 100644
+index 0000000..e181385
+--- /dev/null
++++ b/scripts/analyze_static_gap.py
+@@ -0,0 +1,300 @@
++"""Recompute TRAIN-query/frame-heldout diagnostics from audited data and saved static raw.
++
++No model initialization, checkpoint loading, inference, or Dynamic TTT is performed.
++"""
++
++import argparse
++import hashlib
++import json
++from pathlib import Path
++
++import numpy as np
++
++COHORTS = {"heldout_query": (8, 9), "training_query": (12, 13, 14, 15)}
++
++
++def read(path):
++    return json.loads(Path(path).read_text())
++
++
++def angle(left, right):
++    left, right = np.asarray(left, dtype=float), np.asarray(right, dtype=float)
++    cosine = np.dot(left, right) / (np.linalg.norm(left) * np.linalg.norm(right))
++    return float(np.degrees(np.arccos(np.clip(cosine, -1, 1))))
++
++
++def analyze(manifest_path, experiment, previous_raw):
++    manifest_path, experiment, previous_raw = (
++        Path(manifest_path),
++        Path(experiment),
++        Path(previous_raw),
++    )
++    inputs = [
++        manifest_path,
++        experiment / "geometry_audit/volume_coverage.json",
++        experiment / "geometry_audit/support_audit.json",
++        experiment / "rgb_audit/frame_audit.json",
++        previous_raw,
++    ]
++    manifest, volume, support, rgb, raw = map(read, inputs)
++    assert all(s["split"] == "train" for s in manifest["scenes"])
++    vg = {(r["scene_id"], r["frame_id"]): r for r in volume["frames"]}
++    rg = {(r["scene_id"], r["frame_id"]): r for r in rgb}
++    sr = {(r["scene_id"], r["query_id"]): r for r in raw if r["method"] == "A"}
++    results = {}
++    for scene in manifest["scenes"]:
++        sid = scene["scene_id"]
++        frames = {f["frame_id"]: f for f in scene["frames"]}
++        groups = {label: scene["roles"][label] for label in ("context_a", "context_b")}
++        result = {"support_counts": support[sid], "cohorts": {}}
++        for label, ids in COHORTS.items():
++            records = []
++            for fid in ids:
++                v, r, score = vg[sid, fid], rg[sid, fid], sr[sid, fid]
++                pose = np.asarray(frames[fid]["c2w"])
++                camera = {}
++                for group, context_ids in groups.items():
++                    poses = [np.asarray(frames[i]["c2w"]) for i in context_ids]
++                    distances = [float(np.linalg.norm(pose[:3, 3] - p[:3, 3])) for p in poses]
++                    angles = [angle(pose[:3, 2], p[:3, 2]) for p in poses]
++                    camera[group] = {
++                        "minimum_camera_baseline_m": min(distances),
++                        "mean_camera_baseline_m": float(np.mean(distances)),
++                        "minimum_view_angle_degrees": min(angles),
++                        "mean_view_angle_degrees": float(np.mean(angles)),
++                    }
++                records.append(
++                    {
++                        "frame_id": fid,
++                        "saved_context_A_depth_absrel": score["depth_absrel"],
++                        "anchor_camera_baseline_m": v["anchor_camera_baseline_m"],
++                        "anchor_view_angle_degrees": angle(v["anchor_relative_forward"], [0, 0, 1]),
++                        "context_camera_comparison": camera,
++                        "depth_distribution_m": v["depth_m"],
++                        "inside_volume_fraction": v["inside_volume_fraction"],
++                        "outside_volume_distance_m": v["outside_distance_m"],
++                        "valid_GT_fraction": v["valid_GT_fraction"],
++                        "candidate_neighborhood_fraction": v["any_candidate_neighborhood_fraction"],
++                        "A_supported_surface_fraction": v["context_supported_neighborhood"][
++                            "context_a"
++                        ]["surface_support_fraction"],
++                        "B_supported_surface_fraction": v["context_supported_neighborhood"][
++                            "context_b"
++                        ]["surface_support_fraction"],
++                        "common_frustum_fraction": score["region_counts"]["common_frustum"]
++                        / score["region_pixel_count"],
++                        "approx_depth_consistent_common_fraction": score["region_counts"][
++                            "depth_consistent_common"
++                        ]
++                        / score["region_pixel_count"],
++                        "source_RGB_mean_0_255": r["source_rgb"]["mean"],
++                        "source_RGB_zero_pixel_fraction": r["source_rgb"][
++                            "exact_zero_pixels_percent"
++                        ]
++                        / 100,
++                        "source_RGB_near_black_pixel_fraction": r["source_rgb"][
++                            "near_black_pixels_percent"
++                        ]
++                        / 100,
++                    }
++                )
++            numeric = [
++                k for k, v in records[0].items() if isinstance(v, (int, float)) and k != "frame_id"
++            ]
++            means = {k: float(np.mean([r[k] for r in records])) for k in numeric}
++            means.update(
++                {
++                    "depth_mean_m": float(
++                        np.mean([r["depth_distribution_m"]["mean"] for r in records])
++                    ),
++                    "mean_frame_depth_median_m": float(
++                        np.mean([r["depth_distribution_m"]["p50"] for r in records])
++                    ),
++                    "mean_frame_depth_p95_m": float(
++                        np.mean([r["depth_distribution_m"]["p95"] for r in records])
++                    ),
++                }
++            )
++            for group in groups:
++                for key in camera[group]:
++                    means[f"{group}_{key}"] = float(
++                        np.mean([r["context_camera_comparison"][group][key] for r in records])
++                    )
++            result["cohorts"][label] = {
++                "frame_ids": ids,
++                "frame_equal_means": means,
++                "per_frame": records,
++            }
++        a = result["cohorts"]["heldout_query"]["frame_equal_means"]
++        b = result["cohorts"]["training_query"]["frame_equal_means"]
++        result["heldout_minus_training_absrel"] = (
++            a["saved_context_A_depth_absrel"] - b["saved_context_A_depth_absrel"]
++        )
++        results[sid] = result
++    # Descriptive attribution of this locked cohort, explicitly not a fitted classifier.
++    interpretations = {
++        "ai_001_001": {
++            "supported_contributors": ["SUPPORT FAILURE"],
++            "causal_gap_diagnosis": "UNKNOWN",
++            "reason": (
++                "Only 4/128 A candidates have >=2-view support. Neither cohort has a GT "
++                "surface point within the fixed neighborhood of an A-supported candidate. "
++                "Both cohorts lie inside the volume; heldout views are not farther in "
++                "orientation from anchor. Sparse support is shared by both cohorts, so it "
++                "does not uniquely explain the gap. Depth/view distributions differ; "
++                "memorization remains untested."
++            ),
++        },
++        "ai_002_001": {
++            "supported_contributors": ["VOLUME COVERAGE", "SUPPORT FAILURE"],
++            "causal_gap_diagnosis": "VOLUME COVERAGE",
++            "reason": (
++                "Heldout surfaces lie outside the modeled volume more often and have less "
++                "A-supported neighborhood coverage, despite heldout cameras being closer to "
++                "anchor and less rotated. This supports a coverage-distribution "
++                "contribution, not a proven sole cause or simple farther-view extrapolation."
++            ),
++        },
++        "ai_003_001": {
++            "supported_contributors": ["DATA QUALITY", "SUPPORT FAILURE"],
++            "causal_gap_diagnosis": "UNKNOWN",
++            "reason": (
++                "All source RGB frames are black and A has zero >=2-view candidate support "
++                "in both cohorts. A equals anchor under this architecture. Both cohorts' GT "
++                "surfaces lie inside the volume; invalid GT and outside-volume geometry do "
++                "not explain the gap. Query orientations, context overlap and per-frame "
++                "depth distributions differ. No controlled experiment separates learned "
++                "prior/view dependence from training memorization; black source alone does "
++                "not identify why only heldout depth collapses."
++            ),
++        },
++    }
++    for sid, result in results.items():
++        result["interpretation"] = interpretations.get(sid, {"causal_gap_diagnosis": "UNKNOWN"})
++    macro = {
++        label: float(
++            np.mean(
++                [
++                    r["cohorts"][label]["frame_equal_means"]["saved_context_A_depth_absrel"]
++                    for r in results.values()
++                ]
++            )
++        )
++        for label in COHORTS
++    }
++    total_gap = macro["heldout_query"] - macro["training_query"]
++    for result in results.values():
++        result["fraction_of_macro_gap"] = (
++            (result["heldout_minus_training_absrel"] / len(results) / total_gap)
++            if total_gap
++            else None
++        )
++    report = {
++        "scope": "POSTHOC_STATIC_ONLY_DATA_GEOMETRY_ATTRIBUTION_SAME_TRAIN_SCENES",
++        "model_inference_calls": 0,
++        "DYNAMIC_TTT_RUN": False,
++        "macro_context_A_absrel": macro,
++        "macro_heldout_minus_training_absrel": total_gap,
++        "scenes": results,
++        "neighborhood_rule": volume["neighborhood_rule"],
++        "neighborhood_radius_m": volume["radius_m"],
++        "input_sha256": {
++            str(p.resolve()): hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs
++        },
++        "limits": [
++            "No causal overfitting conclusion from train/heldout score gap alone.",
++            (
++                "Both query cohorts belong to carrier training scenes; frame-heldout is not "
++                "unseen-scene validation."
++            ),
++            (
++                "Candidate-neighborhood support is a fixed geometric proxy, not a test of "
++                "all learned receptive fields."
++            ),
++            "Context overlap uses approximate nearest-depth consistency, not exact visibility.",
++            (
++                "Depth medians/p95 shown in means are means of frame quantiles, not "
++                "pooled-pixel quantiles."
++            ),
++            (
++                "Saved static scores are previous locked B-final outputs; no rerender or "
++                "checkpoint selection here."
++            ),
++        ],
++    }
++    output = experiment / "train_heldout_gap_diagnosis.json"
++    output.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
++    lines = [
++        "# Train-query versus frame-heldout gap",
++        "",
++        (
++            "Static-only attribution using existing audited data and saved predictions; "
++            "no model rerun."
++        ),
++        "",
++        (
++            f"Context A scene-macro AbsRel: training queries {macro['training_query']:.6f}, "
++            f"heldout queries {macro['heldout_query']:.6f}; gap {total_gap:.6f}. "
++            "Both use the same three TRAIN scenes."
++        ),
++        "",
++    ]
++    keys = [
++        "saved_context_A_depth_absrel",
++        "anchor_camera_baseline_m",
++        "anchor_view_angle_degrees",
++        "context_a_minimum_camera_baseline_m",
++        "context_a_minimum_view_angle_degrees",
++        "depth_mean_m",
++        "mean_frame_depth_median_m",
++        "mean_frame_depth_p95_m",
++        "inside_volume_fraction",
++        "valid_GT_fraction",
++        "A_supported_surface_fraction",
++        "B_supported_surface_fraction",
++        "approx_depth_consistent_common_fraction",
++        "source_RGB_zero_pixel_fraction",
++    ]
++    for sid, result in results.items():
++        lines += [f"## {sid}", "", "| Quantity | Heldout 8,9 | Training 12–15 |", "|---|---:|---:|"]
++        for key in keys:
++            values = [result["cohorts"][label]["frame_equal_means"][key] for label in COHORTS]
++            lines.append(f"| {key} | {values[0]:.6f} | {values[1]:.6f} |")
++        lines += [
++            "",
++            (
++                f"A/B >=2-view supported candidates: {support[sid]['context_a']['at_least_two']}/"
++                f"{support[sid]['context_b']['at_least_two']} of 128. "
++                f"Gap contribution: {result['fraction_of_macro_gap']:.2%}."
++            ),
++            "",
++            (
++                "Observed contributors: "
++                f"{', '.join(result['interpretation']['supported_contributors'])}. "
++                f"Gap attribution: {result['interpretation']['causal_gap_diagnosis']}."
++            ),
++            "",
++            result["interpretation"]["reason"],
++            "",
++        ]
++    lines += ["## Limits", ""] + [f"- {s}" for s in report["limits"]]
++    output.with_suffix(".md").write_text("\n".join(lines) + "\n")
++    return report
++
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--manifest", required=True)
++    parser.add_argument("--experiment", required=True)
++    parser.add_argument("--previous-static-raw", required=True)
++    args = parser.parse_args()
++    result = analyze(args.manifest, args.experiment, args.previous_static_raw)
++    print(
++        json.dumps(
++            {
++                "macro": result["macro_context_A_absrel"],
++                "gap": result["macro_heldout_minus_training_absrel"],
++            },
++            indent=2,
++        )
++    )
+diff --git a/scripts/audit_static_geometry.py b/scripts/audit_static_geometry.py
+new file mode 100644
+index 0000000..021fc98
+--- /dev/null
++++ b/scripts/audit_static_geometry.py
+@@ -0,0 +1,21 @@
++#!/usr/bin/env python3
++"""Run the score-independent static geometry audit for any compatible manifest."""
++
++import argparse
++import json
++
++from mcss.mechanism_pilot.static_geometry import audit_manifest
++
++if __name__ == "__main__":
++    p = argparse.ArgumentParser()
++    p.add_argument("--manifest", required=True)
++    p.add_argument("--checkpoint", required=True)
++    p.add_argument("--output-dir", required=True)
++    p.add_argument("--metadata-csv")
++    a = p.parse_args()
++    print(
++        json.dumps(
++            audit_manifest(a.manifest, a.checkpoint, a.output_dir, metadata_csv=a.metadata_csv),
++            indent=2,
++        )
++    )
+diff --git a/scripts/audit_static_opacity.py b/scripts/audit_static_opacity.py
+new file mode 100644
+index 0000000..3fac8fe
+--- /dev/null
++++ b/scripts/audit_static_opacity.py
+@@ -0,0 +1,249 @@
++"""Post-hoc diagnostic only: opacity-conditioned depth, never qualification metrics."""
++
++import argparse
++import json
++from pathlib import Path
++
++import numpy as np
++import torch
++
++from mcss.dynamic.feedback import batched_camera
++from mcss.dynamic.types import hash_scene_state, hash_value
++from mcss.geometry import transform_cameras
++from mcss.measurements import FixedMeasurementRenderer
++from mcss.mechanism_pilot.small_training import TrainScene, sha, write_json
++from mcss.mechanism_pilot.static_evaluation import summarize
++from mcss.mechanism_pilot.statistics import paired_scene_bootstrap
++
++
++def depth_metrics(prediction, truth, mask):
++    if not mask.any():
++        return None
++    p = prediction[mask].double()
++    t = truth[mask].double()
++    return {
++        "depth_absrel": float(((p - t).abs() / t).mean()),
++        "depth_rmse": float((p - t).square().mean().sqrt()),
++        "n_pixels": int(mask.sum()),
++    }
++
++
++def macro(rows, metric_key):
++    result = {}
++    for cohort in sorted({r["cohort"] for r in rows}):
++        group = [r for r in rows if r["cohort"] == cohort]
++        for method in ["A", "B", "anchor", "wrong_scene"]:
++            values = {}
++            for sid in sorted({r["scene_id"] for r in group}):
++                rr = [
++                    r[metric_key] for r in group if r["scene_id"] == sid and r["method"] == method
++                ]
++                values[sid] = (
++                    None
++                    if any(r is None for r in rr)
++                    else float(np.mean([r["depth_absrel"] for r in rr]))
++                )
++            result[f"{cohort}/{method}"] = {
++                "per_scene": values,
++                "mean": None
++                if any(v is None for v in values.values())
++                else float(np.mean(list(values.values()))),
++            }
++        for left, right in [("anchor", "A"), ("anchor", "B"), ("wrong_scene", "A")]:
++            left_values = result[f"{cohort}/{left}"]["per_scene"]
++            right_values = result[f"{cohort}/{right}"]["per_scene"]
++            result[f"{cohort}/{left}_minus_{right}"] = (
++                None
++                if any(left_values[s] is None or right_values[s] is None for s in left_values)
++                else paired_scene_bootstrap(
++                    {s: left_values[s] - right_values[s] for s in left_values}
++                )
++            )
++    return result
++
++
++@torch.no_grad()
++def run(root, device="cuda"):
++    root = Path(root)
++    destination = root / "opacity_diagnostic.json"
++    if destination.exists():
++        raise FileExistsError(destination)
++    all_diagnostics, audits, access = {}, {}, []
++    renderer = FixedMeasurementRenderer(n_samples=64, ray_chunk_size=2048).to(device)
++    for name in ["old_static", "unseen_static"]:
++        run_dir = root / name
++        lock = json.loads((run_dir / "lock.json").read_text())
++        assert all(sha(Path(p)) == h for p, h in lock["input_sha256"].items())
++        assert all(sha(Path(p)) == h for p, h in lock["source_sha256"].items())
++        manifest_path = next(Path(p) for p in lock["input_sha256"] if p.endswith("/manifest.json"))
++        manifest = json.loads(manifest_path.read_text())
++        states = torch.load(run_dir / "sealed_states.pt", map_location=device, weights_only=False)
++        seal_hash = sha(run_dir / "sealed_states.pt")
++        original = json.loads((run_dir / "static_results.json").read_text())
++        original_index = {
++            (r["scene_id"], r["cohort"], r["query_id"], r["method"]): r for r in original
++        }
++        assert summarize(original) == json.loads((run_dir / "bootstrap_results.json").read_text())
++        events = json.loads((run_dir / "sealed_query_access.json").read_text())
++        n_states = len(states)
++        assert all(e["event"] == "seal" for e in events[:n_states])
++        assert all(e["event"] != "seal" for e in events[n_states:])
++        assert len({e["candidate_id"] for e in events[:n_states]}) == n_states
++        assert all(hash_scene_state(s.scene_state) == s.state_hash for s in states.values())
++        integrity = json.loads((run_dir / "integrity.json").read_text())
++        assert integrity["writes"] == 0 and integrity["dynamic_ttt_run"] is False
++        records = manifest["scenes"]
++        rows = []
++        for scene_index, record in enumerate(records):
++            sid = record["scene_id"]
++            scene = TrainScene(record, manifest["image_size"], manifest_path.parent, device, [])
++            anchor = states[f"{sid}/A"].anchor_c2w
++            for cohort, query_ids in lock["scopes"][sid].items():
++                for fid in query_ids:
++                    frame = scene.frames[fid]
++                    camera = batched_camera(
++                        transform_cameras(scene.camera(frame), torch.linalg.inv(anchor))
++                    )
++                    camera_hash = hash_value(camera)
++                    depth_path = scene.path(frame, "depth")
++                    depth = torch.from_numpy(np.load(depth_path)).float().to(device).squeeze()
++                    valid = torch.isfinite(depth) & (depth > 0)
++                    access.append(
++                        {
++                            "run": name,
++                            "scene_id": sid,
++                            "query_id": fid,
++                            "cohort": cohort,
++                            "kind": "posthoc_diagnostic_GT_depth",
++                            "path": str(depth_path),
++                            "sha256": sha(depth_path),
++                            "sealed_before_access": True,
++                        }
++                    )
++                    predictions = {}
++                    for method in ["A", "B", "anchor", "wrong_scene"]:
++                        source_sid = (
++                            records[(scene_index + 1) % len(records)]["scene_id"]
++                            if method == "wrong_scene"
++                            else sid
++                        )
++                        key = f"{source_sid}/{'A' if method == 'wrong_scene' else method}"
++                        state = states[key]
++                        prediction = renderer(
++                            state.scene_state, camera, ("rgb", "depth", "visibility")
++                        )
++                        ref = original_index[sid, cohort, fid, method]
++                        assert camera_hash == hash_value(camera) == ref["query_camera_hash"]
++                        assert (
++                            hash_value({"rgb": prediction["rgb"], "depth": prediction["depth"]})
++                            == ref["prediction_hash"]
++                        )
++                        assert hash_scene_state(state.scene_state) == state.state_hash
++                        predictions[method] = prediction
++                    joint = valid.clone()
++                    for pred in predictions.values():
++                        joint &= pred["visibility"].squeeze() >= 0.95
++                    for method, pred in predictions.items():
++                        d, alpha = pred["depth"].squeeze(), pred["visibility"].squeeze()
++                        norm = d / alpha.clamp_min(1e-6)
++                        rows.append(
++                            {
++                                "scene_id": sid,
++                                "cohort": cohort,
++                                "query_id": fid,
++                                "method": method,
++                                "query_camera_hash": camera_hash,
++                                "raw_all_GTvalid": depth_metrics(d, depth, valid),
++                                "normalized_all_GTvalid": depth_metrics(norm, depth, valid),
++                                "raw_joint_alpha95": depth_metrics(d, depth, joint),
++                                "normalized_joint_alpha95": depth_metrics(norm, depth, joint),
++                                "joint_alpha95_count": int(joint.sum()),
++                                "valid_count": int(valid.sum()),
++                                "mean_alpha": float(alpha[valid].mean()),
++                                "fraction_alpha_below_095": float(
++                                    (alpha[valid] < 0.95).float().mean()
++                                ),
++                                "fraction_alpha_below_1e6": float(
++                                    (alpha[valid] < 1e-6).float().mean()
++                                ),
++                            }
++                        )
++        assert sha(run_dir / "sealed_states.pt") == seal_hash
++        assert all(hash_scene_state(s.scene_state) == s.state_hash for s in states.values())
++        assert all(sha(Path(p)) == h for p, h in lock["input_sha256"].items())
++        assert all(sha(Path(p)) == h for p, h in lock["source_sha256"].items())
++        all_diagnostics[name] = {
++            "rows": rows,
++            "summary": {
++                key: macro(rows, key)
++                for key in [
++                    "raw_all_GTvalid",
++                    "normalized_all_GTvalid",
++                    "raw_joint_alpha95",
++                    "normalized_joint_alpha95",
++                ]
++            },
++        }
++        audits[name] = {
++            "status": "PASS",
++            "input_hashes": "PASS",
++            "source_hashes": "PASS",
++            "sealed_state_hashes": "PASS",
++            "all_sealed_before_queries": True,
++            "bootstrap_recomputed_exact": True,
++            "diagnostic_predictions_exact_original": True,
++            "writes": 0,
++            "dynamic_ttt_run": False,
++            "raw_rows": len(original),
++            "diagnostic_rows": len(rows),
++            "state_archive_sha256": seal_hash,
++        }
++    previous = json.loads((root / "old_static_reproduction.json").read_text())
++    old = json.loads(Path(previous["old_result_path"]).read_text())
++    new = json.loads((root / "old_static/static_results.json").read_text())
++    new_idx = {(r["scene_id"], r["query_id"], r["method"]): r for r in new}
++    for r in old:
++        n = new_idx[r["scene_id"], r["query_id"], r["method"]]
++        assert all(r[k] == n[k] for k in previous["metrics"])
++        assert r["query_camera_hash"] == n["query_camera_hash"]
++    assert len(old) == 90
++    write_json(
++        destination,
++        {
++            "status": "DIAGNOSTIC_ONLY_NOT_PRIMARY_METRICS",
++            "normalization": "sum(w*t)/clamp(sum(w), min=1e-6); no GT-valid pixel removal",
++            "joint_subset_warning": (
++                "ALL FOUR methods alpha>=.95 is prediction-conditioned; "
++                "cannot serve as primary qualification or fairness claim"
++            ),
++            "unchanged_primary_qualification": True,
++            "runs": all_diagnostics,
++        },
++    )
++    write_json(root / "opacity_GT_access.json", access)
++    write_json(
++        root / "final_independent_audit.json",
++        {
++            "status": "PASS",
++            "runs": audits,
++            "old_reproduction_rows": 90,
++            "old_reproduction_exact": True,
++            "diagnostic_GT_access_count": len(access),
++            "dynamic_ttt_run": False,
++            "script_sha256": sha(Path(__file__)),
++            "note": (
++                "Normalization is a post-hoc renderer diagnostic "
++                "and cannot replace preregistered results"
++            ),
++        },
++    )
++    return {name: value["summary"] for name, value in all_diagnostics.items()}
++
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--root", required=True)
++    parser.add_argument("--device", default="cuda", choices=["cpu", "cuda"])
++    args = parser.parse_args()
++    run(args.root, args.device)
++    print("Opacity diagnostic and independent audit: PASS")
+diff --git a/scripts/audit_static_rgb.py b/scripts/audit_static_rgb.py
+new file mode 100644
+index 0000000..3e195c6
+--- /dev/null
++++ b/scripts/audit_static_rgb.py
+@@ -0,0 +1,14 @@
++"""Audit source-to-input RGB without carrier inference or frame filtering."""
++
++import argparse
++import json
++
++from mcss.mechanism_pilot.rgb_audit import audit_rgb_chain
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--manifest", required=True)
++    parser.add_argument("--output", required=True)
++    parser.add_argument("--official-metadata")
++    args = parser.parse_args()
++    print(json.dumps(audit_rgb_chain(args.manifest, args.output, args.official_metadata), indent=2))
+diff --git a/scripts/audit_static_unseen_independence.py b/scripts/audit_static_unseen_independence.py
+new file mode 100644
+index 0000000..198fe7d
+--- /dev/null
++++ b/scripts/audit_static_unseen_independence.py
+@@ -0,0 +1,154 @@
++#!/usr/bin/env python3
++"""Independently cross-check frozen unseen roles, identities, and allowed media."""
++
++import argparse
++import csv
++import json
++import re
++from pathlib import Path
++
++from mcss.mechanism_pilot.small_training import sha, write_json
++from mcss.mechanism_pilot.unseen_data import asset_identity, source_assets
++
++
++def audit(root):
++    root = Path(root)
++    data = root / "unseen_data"
++    candidate = json.loads((data / "candidate_lock.json").read_text())
++    member_lock = json.loads((data / "data_lock.json").read_text())
++    role = json.loads((data / "role_lock.json").read_text())
++    manifest = json.loads((data / "manifest.json").read_text())
++    assets = source_assets(root / "metadata/upstream_dataset_config.py")
++    train = candidate["train_scene_ids"]
++    selected = candidate["candidate_scene_ids"]
++    qualified = [r["scene_id"] for r in manifest["scenes"]]
++    with Path("configs/hypersim_er_partitions.csv").open() as f:
++        partitions = {r["scene_name"]: r for r in csv.DictReader(f)}
++    with (root / "rgb_audit/official_metadata/metadata_images_split_scene_v1.csv").open() as f:
++        official = {
++            (r["scene_name"], r["camera_name"], int(r["frame_id"])): r for r in csv.DictReader(f)
++        }
++    with (root / "rgb_audit/official_metadata/metadata_camera_trajectories.csv").open() as f:
++        trajectories = {r["Animation"]: r for r in csv.DictReader(f)}
++    source_hash_mismatch = [p for p, h in candidate["source_sha256"].items() if sha(Path(p)) != h]
++    accesses = [json.loads(x) for x in (data / "access.jsonl").read_text().splitlines()]
++    downloads = [r for r in accesses if r["operation"] == "download"]
++    bad_media, bad_roles = [], []
++    for plan in member_lock["scenes"]:
++        sid = plan["scene_id"]
++        for member in plan["members"]:
++            match = re.search(r"/frame\.(\d{4})\.", member)
++            if match:
++                row = official.get((sid, "cam_00", int(match[1])))
++                if (
++                    not row
++                    or row["included_in_public_release"] != "True"
++                    or row["split_partition_name"] != "train"
++                ):
++                    bad_media.append(member)
++    for s in manifest["scenes"]:
++        r = s["roles"]
++        if r != role["roles"][s["scene_id"]] or set(r["primary_query"]) & (
++            set(r["context_a"]) | set(r["context_b"])
++        ):
++            bad_roles.append(s["scene_id"])
++    source_rows = {
++        s: {
++            "archive_file": assets[s]["archive_file"],
++            "asset_file": assets[s]["asset_file"],
++            "volume": s.split("_")[1],
++        }
++        for s in train + selected
++    }
++    identities = [asset_identity(assets[s]) for s in train + selected]
++    first_download = min(r["time"] for r in downloads)
++    static_lock = root / "unseen_static/lock.json"
++    static_lock_mtime = static_lock.stat().st_mtime if static_lock.exists() else None
++    checks = {
++        "train_scene_overlap_absent": not set(train) & set(selected),
++        "source_asset_pairs_all_distinct": len(identities) == len(set(identities)),
++        "training_volumes_disjoint": not {s.split("_")[1] for s in train}
++        & {s.split("_")[1] for s in selected},
++        "source_hashes_unchanged": not source_hash_mismatch,
++        "candidate_lock_hash_matches_data_lock": sha(data / "candidate_lock.json")
++        == member_lock["candidate_lock_sha256"],
++        "data_lock_hash_matches_manifest": sha(data / "data_lock.json")
++        == manifest["data_lock_sha256"],
++        "manifest_hash_matches_role_lock": sha(data / "manifest.json") == role["manifest_sha256"],
++        "only_locked_candidates_downloaded": {r["scene_id"] for r in downloads} == set(selected),
++        "all_candidate_protocol_partitions_train": all(
++            partitions[s]["protocol_partition"] == "train" for s in selected
++        ),
++        "all_candidate_trajectories_non_BAD": all(
++            "BAD" not in trajectories[s + "_cam_00"]["Scene type"].upper() for s in selected
++        ),
++        "all_media_official_included_train": not bad_media,
++        "candidate_then_members_then_download_order": candidate["created_unix"]
++        < member_lock["created_unix"]
++        < first_download,
++        "locked_roles_identical_and_queries_disjoint": not bad_roles,
++        "role_lock_before_static_lock_local_mtime": static_lock_mtime is not None
++        and role["created_unix"] < static_lock_mtime,
++        "qualified_scenes_subset_frozen_candidates": set(qualified) <= set(selected),
++    }
++    report = {
++        "status": "PASS_WITH_PHYSICAL_IDENTITY_LIMITATION" if all(checks.values()) else "FAIL",
++        "checks": checks,
++        "train_scene_ids": train,
++        "candidate_scene_ids": selected,
++        "qualified_scene_ids": qualified,
++        "source_asset_mapping": source_rows,
++        "previously_observed": candidate["previously_observed"],
++        "independence_scope": (
++            "Unseen to this frozen B-final checkpoint; ai_007_002 has prior "
++            "project exposure and is not claimed globally virgin."
++        ),
++        "physical_identity_evidence": (
++            "Distinct official archive/asset pairs and volumes; source mappings "
++            "immutable by SHA256."
++        ),
++        "physical_identity_limit": (
++            "Vendor content duplication across different source assets cannot be"
++            " ruled out; no claim of externally certified physical-location "
++            "uniqueness."
++        ),
++        "source_url": (
++            "https://github.com/apple/ml-hypersim/blob/main/evermotion_dataset/_dataset_config.py"
++        ),
++        "candidate_lock_url_erratum": str(data / "preparation_notes.json"),
++        "protected_test_media_opened": False,
++        "bad_media": bad_media,
++        "bad_roles": bad_roles,
++        "source_hash_mismatch": source_hash_mismatch,
++        "order_evidence": {
++            "candidate_unix": candidate["created_unix"],
++            "members_unix": member_lock["created_unix"],
++            "first_media_download_unix": first_download,
++            "role_lock_unix": role["created_unix"],
++            "static_lock_mtime_unix": static_lock_mtime,
++            "limitation": (
++                "Local operation timestamps and file mtime; not an external "
++                "cryptographic timestamp service."
++            ),
++        },
++        "artifact_sha256": {
++            str(p): sha(p)
++            for p in (
++                data / "candidate_lock.json",
++                data / "data_lock.json",
++                data / "role_lock.json",
++                data / "manifest.json",
++                data / "access.jsonl",
++                root / "metadata/upstream_dataset_config.py",
++            )
++        },
++    }
++    write_json(root / "unseen_independence_audit.json", report)
++    return report
++
++
++if __name__ == "__main__":
++    p = argparse.ArgumentParser()
++    p.add_argument("--experiment", required=True)
++    a = p.parse_args()
++    print(json.dumps(audit(a.experiment), indent=2))
+diff --git a/scripts/prepare_static_unseen.py b/scripts/prepare_static_unseen.py
+new file mode 100644
+index 0000000..cf0f741
+--- /dev/null
++++ b/scripts/prepare_static_unseen.py
+@@ -0,0 +1,30 @@
++#!/usr/bin/env python3
++"""Prepare and seal metadata-selected unseen development data, without model outputs."""
++
++import argparse
++
++from mcss.mechanism_pilot.unseen_data import prepare_unseen
++
++if __name__ == "__main__":
++    p = argparse.ArgumentParser()
++    for name in (
++        "output",
++        "experiment",
++        "checkpoint",
++        "training-dir",
++        "training-manifest",
++        "partitions",
++        "calibration",
++    ):
++        p.add_argument("--" + name, required=True)
++    a = p.parse_args()
++    result = prepare_unseen(
++        a.output,
++        a.experiment,
++        a.checkpoint,
++        a.training_dir,
++        a.training_manifest,
++        a.partitions,
++        a.calibration,
++    )
++    print(result["UNSEEN_DEV_STATUS"], len(result["scenes"]))
+diff --git a/scripts/report_static_attribution.py b/scripts/report_static_attribution.py
+new file mode 100644
+index 0000000..0ef9f6d
+--- /dev/null
++++ b/scripts/report_static_attribution.py
+@@ -0,0 +1,556 @@
++"""Regenerate the static qualification report and summaries from frozen raw results."""
++
++from __future__ import annotations
++
++import argparse
++import csv
++import gzip
++import json
++import shutil
++from pathlib import Path
++
++import numpy as np
++
++from mcss.mechanism_pilot.small_training import sha, write_json
++from mcss.mechanism_pilot.static_evaluation import summarize
++from mcss.mechanism_pilot.statistics import paired_scene_bootstrap
++
++
++def report(root: Path, docs: Path):
++    def load(name):
++        return json.loads((root / name).read_text())
++
++    old_raw = load("old_static/static_results.json")
++    new_raw = load("unseen_static/static_results.json")
++    old, new = summarize(old_raw), summarize(new_raw)
++    assert old == load("old_static/bootstrap_results.json")
++    assert new == load("unseen_static/bootstrap_results.json")
++    result = {"old": old, "unseen": new}
++    primary = new["primary"]
++    methods, pairs = primary["methods"], primary["paired_depth_absrel"]
++
++    def metric(name, metric_name="depth_absrel"):
++        return methods[name]["full_image"]["metrics"][metric_name]["mean"]
++
++    def by_scene(name):
++        return methods[name]["full_image"]["metrics"]["depth_absrel"]["per_scene"]
++
++    scenes = sorted(by_scene("A"))
++    fixed = (metric("A") + metric("B")) / 2
++    residual = (metric("Residual_A") + metric("Residual_B")) / 2
++    # Same locked average of A/B as the primary full-context comparison.
++    residual_delta = paired_scene_bootstrap(
++        {
++            s: (
++                by_scene("Residual_A")[s]
++                + by_scene("Residual_B")[s]
++                - by_scene("A")[s]
++                - by_scene("B")[s]
++            )
++            / 2
++            for s in scenes
++        }
++    )
++    result["residual_average_AB_minus_fixed"] = residual_delta
++    write_json(root / "static_results.json", {"old": old_raw, "unseen": new_raw})
++    write_json(root / "bootstrap_results.json", result)
++    write_json(
++        root / "residual_control.json",
++        {
++            "training": load("residual_30000/summary.json"),
++            "pilot": load("residual/summary.json"),
++            "budget_amendment": load("residual_training_amendment.json"),
++            "average_AB_minus_fixed": residual_delta,
++            "per_context_and_state_controls": {
++                k: v for k, v in pairs.items() if k.startswith("residual")
++            },
++            "interpretation": "B improves; A worsens; average AB CI crosses zero. "
++            "Shuffled/zero controls do not reliably hurt A. No general fixed-decoder "
++            "bottleneck or successful state-dependent residual qualification is established.",
++            "limitation": "Shared residual controls use A; B-specific bypass attribution "
++            "not tested. Averaged loss is diagnostic across the two predeclared contexts; "
++            "not selecting B post hoc.",
++        },
++    )
++    write_json(
++        root / "dataset_manifest.json",
++        {
++            "old": json.loads(
++                Path("outputs/EXP-3D-20260927-small-training-v1/data/manifest.json").read_text()
++            ),
++            "unseen": load("unseen_data/manifest.json"),
++        },
++    )
++    write_json(
++        root / "scene_split.json",
++        {
++            "TRAIN_SCENE_SET": ["ai_001_001", "ai_002_001", "ai_003_001"],
++            "UNSEEN_DEV_SCENE_SET": scenes,
++            "candidate_lock": load("unseen_data/candidate_lock.json"),
++            "roles": load("unseen_data/role_lock.json"),
++            "qualification_split": "Research dev drawn only from official and repository train; "
++            "never checkpoint training. Existing protected/test/official validation not opened.",
++        },
++    )
++    write_json(
++        root / "data_quality_audit.json",
++        {
++            "old_rgb": load("rgb_audit/integrity.json"),
++            "ai003": load("rgb_audit/ai003_black_root_cause.json"),
++            "official_status": load("rgb_audit/official_source_validity.json"),
++            "unseen": load("unseen_data/frame_quality.json"),
++            "unseen_native_geometry": load("unseen_data/geometry_checks.json"),
++            "no_old_scene_removed": True,
++        },
++    )
++    for target, source in {
++        "support_audit.json": "support_audit.json",
++        "geometry_audit.json": "geometry_audit.json",
++        "camera_geometry_audit.json": "camera_geometry_audit.json",
++        "volume_coverage.json": "volume_coverage.json",
++    }.items():
++        write_json(
++            root / target,
++            {
++                "old": load("geometry_audit/" + source),
++                "unseen": load("unseen_geometry_audit/" + source),
++            },
++        )
++    for source, target in [
++        ("rgb_audit/ai003_frame_audit.csv", "ai003_frame_audit.csv"),
++        ("rgb_audit/ai003_black_root_cause.json", "ai003_black_root_cause.json"),
++        ("geometry_audit/support_audit_ai_003_001.json", "support_audit_ai003.json"),
++        ("geometry_audit/depth_definition.md", "depth_definition.md"),
++    ]:
++        shutil.copy2(root / source, root / target)
++    checkpoint = load("old_static/lock.json")["checkpoint"]
++    write_json(
++        root / "checkpoint_manifest.json",
++        {
++            "carrier": checkpoint,
++            "residual": {
++                "path": str(root / "residual_30000/best.pt"),
++                "sha256": sha(root / "residual_30000/best.pt"),
++                "selected_step": 7500,
++            },
++            "previous_checkpoint_hash_match": True,
++            "carrier_retrained": False,
++        },
++    )
++    gain, damage = pairs["full_context_gain"], pairs["wrong_scene_damage"]
++    assert (
++        gain["ci95"][1] < 0 and damage["ci95"][0] < 0
++    )  # Recorded run, no success threshold tuning.
++    old_methods = old["primary"]["methods"]
++    old_values = {
++        k: old_methods[k]["full_image"]["metrics"]["depth_absrel"]["mean"]
++        for k in ("A", "B", "anchor")
++    }
++    status = {
++        "CHECKPOINT": checkpoint.get(
++            "path",
++            str(
++                root.parent
++                / "EXP-3D-20260927-centered-training-1000a-600b-v1/training/phase_b_final.pt"
++            ),
++        ),
++        "CHECKPOINT_HASH": checkpoint["sha256"],
++        "DATA_PIPELINE_STATUS": "PASS_SOURCE_BLACK_RETAINED",
++        "CAMERA_GEOMETRY_STATUS": "PASS_ELIGIBLE_COHORT",
++        "DEPTH_SEMANTICS_STATUS": "PASS_RAY_DISTANCE_UNCONDITIONAL_RENDER_DEPTH",
++        "PREVIOUS_DEPTH_METRIC_INVALID": False,
++        "VOLUME_COVERAGE_STATUS": "LIMITED_SOME_QUERY_SURFACES_UNCOVERED",
++        "AI003_BLACK_ROOT_CAUSE": "SOURCE_FRAME_IS_BLACK",
++        "AI003_SUPPORT_ROOT_CAUSE": "A_HAS_ZERO_TWO_VIEW_SUPPORTED_CANDIDATES",
++        "N_CHECKPOINT_TRAIN_SCENES": 3,
++        "N_UNSEEN_DEV_SCENES": len(scenes),
++        "UNSEEN_DEV_STATUS": "EVALUATED",
++        "OLD_CONTEXT_A_ABSREL": old_values["A"],
++        "OLD_CONTEXT_B_ABSREL": old_values["B"],
++        "OLD_ANCHOR_ABSREL": old_values["anchor"],
++        "UNSEEN_FIXED_A_ABSREL": metric("A"),
++        "UNSEEN_FIXED_B_ABSREL": metric("B"),
++        "UNSEEN_ANCHOR_ABSREL": metric("anchor"),
++        "UNSEEN_WRONG_SCENE_ABSREL": metric("wrong_scene"),
++        "FULL_CONTEXT_MINUS_ANCHOR_GAIN": gain["mean"],
++        "FULL_CONTEXT_MINUS_ANCHOR_CI": gain["ci95"],
++        "WRONG_SCENE_DAMAGE": damage["mean"],
++        "WRONG_SCENE_DAMAGE_CI": damage["ci95"],
++        "R_FIXED_ABSREL": fixed,
++        "R_RESIDUAL_ABSREL": residual,
++        "R_RESIDUAL_MINUS_FIXED": residual - fixed,
++        "TRAIN_QUERY_ABSREL": old["secondary"]["methods"]["A"]["full_image"]["metrics"][
++            "depth_absrel"
++        ]["mean"],
++        "HELDOUT_QUERY_ABSREL": old_values["A"],
++        "TRAIN_HELDOUT_GAP_DIAGNOSIS": "CONSISTENT_WITH_SUPPORT_VIEW_AND_VOLUME_LIMITATIONS; "
++        "CAUSE_NOT_ISOLATED; SOURCE_BLACK_SHARED; MEMORIZATION_NOT_IDENTIFIED",
++        "STATIC_STATE_STATUS": "NOT_ESTABLISHED",
++        "CARRIER_STATUS": "NOT_QUALIFIED_FOR_UNSEEN_GEOMETRY",
++        "DYNAMIC_TTT_RUN": False,
++        "TESTS": load("tests.json")["summary"],
++        "FINAL_INTEGRITY": "PASS",
++        "REPORT_DIR": str(docs.resolve()),
++    }
++    write_json(root / "status.json", status)
++    terminal = (
++        "=" * 60 + "\n3D STATIC CARRIER ATTRIBUTION + UNSEEN QUALIFICATION\n" + "=" * 60 + "\n"
++    )
++    terminal += (
++        "\n".join(
++            f"{k}={json.dumps(v, ensure_ascii=False) if not isinstance(v, str) else v}"
++            for k, v in status.items()
++        )
++        + "\n"
++    )
++    (root / "STATUS.md").write_text("```text\n" + terminal + "```\n")
++    (root / "terminal_summary.txt").write_text(terminal)
++    table = (
++        "| Method | Depth AbsRel ↓ | RGB MSE ↓ | SSIM ↑ | RMSE ↓ | δ1 ↑ | Opacity | Coverage |\n"
++    )
++    table += "|---|---:|---:|---:|---:|---:|---:|---:|\n"
++    for name in [
++        "A",
++        "B",
++        "anchor",
++        "prior",
++        "wrong_scene",
++        "Residual_A",
++        "Residual_B",
++        "Residual_shuffled",
++        "Residual_zero",
++        "feature_shuffle",
++        "channel_permutation",
++        "state_mask",
++    ]:
++        table += (
++            "| "
++            + name
++            + " | "
++            + " | ".join(
++                f"{metric(name, m):.6f}"
++                for m in [
++                    "depth_absrel",
++                    "rgb_mse",
++                    "rgb_ssim",
++                    "depth_rmse",
++                    "depth_delta1",
++                    "opacity",
++                    "coverage",
++                ]
++            )
++            + " |\n"
++        )
++    scene_table = (
++        "| Scene | A | B | Anchor | Wrong scene | Full-context gain | Residual A | Residual B |\n"
++    )
++    scene_table += "|---|---:|---:|---:|---:|---:|---:|---:|\n"
++    for scene in scenes:
++        vals = [by_scene(n)[scene] for n in ("A", "B", "anchor", "wrong_scene")]
++        vals += [
++            gain["per_scene"][scene],
++            by_scene("Residual_A")[scene],
++            by_scene("Residual_B")[scene],
++        ]
++        scene_table += f"| {scene} | " + " | ".join(f"{v:.6f}" for v in vals) + " |\n"
++    diagnostic = {}
++    for name in [
++        "feature_shuffle",
++        "channel_permutation",
++        "state_mask",
++        "wrong_scene",
++        "Residual_channel_permutation",
++    ]:
++        selected = [r for r in new_raw if r["method"] == name]
++        diagnostic[name] = {
++            k: float(np.mean([r["prediction_change_from_A"][k]["rms"] for r in selected]))
++            for k in ["rgb", "depth"]
++        }
++    write_json(
++        root / "state_use_diagnostics.json",
++        {
++            "diagnostic_only": True,
++            "mean_prediction_rms_difference_vs_fixed_A": diagnostic,
++            "note": "Feature-channel permutation leaves fixed renderer unchanged by design: "
++            "typed density/color fields are unchanged. Residual can read feature channels. "
++            "Different output is sensitivity, not proof of useful scene understanding.",
++        },
++    )
++    with (root / "static_results.csv").open("w") as f:
++        fields = [
++            "dataset",
++            "scene_id",
++            "query_id",
++            "cohort",
++            "method",
++            "rgb_mse",
++            "rgb_ssim",
++            "depth_absrel",
++            "depth_rmse",
++            "depth_delta1",
++            "opacity",
++            "coverage",
++            "seconds",
++        ]
++        writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
++        writer.writeheader()
++        for dataset, rows in [("old", old_raw), ("unseen", new_raw)]:
++            writer.writerows({"dataset": dataset, **r} for r in rows)
++    readme = f"""# EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1
++
++**STATIC_STATE_STATUS=NOT_ESTABLISHED.** The frozen 1000A+600B B-final carrier does not
++qualify for unseen-scene geometry. Seven checkpoint-unseen scenes were evaluated;
++full context is worse than anchor in six scenes and ties in one. No Dynamic TTT,
++controller training, write-rule tuning or new history experiment was run.
++
++## Frozen experiment and data
++
++Carrier SHA256 `{checkpoint["sha256"]}` exactly matches the previous experiment.
++8³ volume, 128 candidates, centered bounds, RGB preprocessing, calibrated metric
++cameras, normalized-ray depth and 64 renderer samples remain unchanged. Old A/B
++roles and primary frames 8/9 are retained. All 90 old static rows reproduce exactly
++for RGB MSE/SSIM, depth AbsRel/RMSE/δ1, opacity and coverage, with identical query-camera hashes.
++
++The prelocked eight candidates came only from the existing research-train and
++Hypersim official-train pools. Seven qualified. ai_005_003 failed the pre-existing
++10 mm native-position p95 check (11.24169 mm); this is a threshold failure, not proof
++of a camera bug. It was retained and never replaced after selection. Frame quality
++and A/B feasibility used only metadata, RGB/depth validity and cameras; no model score.
++Download: 81,591,203 bytes using bounded HTTP ranges, no full archive.
++
++Checkpoint-unseen IDs: {", ".join(scenes)}. Training IDs are ai_001_001, ai_002_001,
++ai_003_001, verified against manifest, logs and checkpoint provenance. Official
++volume/archive/asset identities are distinct; supplier reuse across distinct assets
++cannot be independently excluded. ai_007_002 has an older `previously_observed` flag:
++it is unseen to this checkpoint, not claimed historically unobserved by all researchers.
++No protected/test or official validation split was opened. See `scene_split.json`,
++`unseen_independence_audit.json`, and the preserved candidate/data/role locks.
++
++## Unseen qualification
++
++All rows use scene-equal means; primary full-context error is the predeclared average
++of A and B. Positive gain means anchor error minus full-context error. Bootstrap
++resamples seven paired scenes, 10,000 draws, seed 20260927, percentile 95% CI.
++
++{table}
++
++Full-context gain: **{gain["mean"]:.6f}**, CI **[{gain["ci95"][0]:.6f}, {gain["ci95"][1]:.6f}]**.
++Wrong-scene damage relative to A: **{damage["mean"]:.6f}**, CI
++**[{damage["ci95"][0]:.6f}, {damage["ci95"][1]:.6f}]**. Both qualification requirements fail.
++Every leave-one-scene-out full-context gain remains negative; this failure is not
++caused by one scene. All states were sealed before query/GT access and served two
++queries unchanged. That structural property alone does not establish useful state.
++
++{scene_table}
++
++Metrics include every GT-valid depth pixel, including uncovered rays. Coverage means
++opacity >1e-6, not true visibility. A/B have higher mean opacity than anchor, yet worse
++depth. Since rendered depth is the unnormalized sum(weights * ray distance), opacity
++can affect apparent accuracy; no claim of opacity-independent geometry success is
++made. `opacity_diagnostic.json` reports separately labeled diagnostic normalization
++and common-high-opacity checks. They do not replace the frozen primary metric.
++In that diagnostic, A/B/anchor AbsRel is .805089/.748956/.544680: anchor still wins.
++The joint high-opacity subset is empty for some scenes; its full-cohort macro is null.
++Common-visible and volume/support bucket metrics are in `bootstrap_results.json` and
++raw records, including empty-mask counts. Missing scenes are not silently removed
++from regional macros. Per-object metrics are unavailable because object segmentation
++was not acquired; per-support-bucket metrics are supplied as requested.
++
++## Why did ai_003_001 fail?
++
++1. **Why is query RGB black?** All published source JPEGs 0–15 are already exactly
++   zero RGB. PIL/OpenCV agree; resizing and model/evaluator tensors preserve them.
++   ROOT_CAUSE=SOURCE_FRAME_IS_BLACK. Official metadata includes these images as train,
++   with no exclusion and a non-BAD camera. Why the published source is black—render
++   failure, transition, or another source issue—remains **UNKNOWN**. It is not evidence
++   of a decoder/range/preprocessing bug. ai003 was never removed.
++2. **Why no A two-view support?** Projection of all 128 candidates through cameras
++   0/1/2 gives 13 single-view candidates and **zero** candidates with >=2 supporting
++   views. B has 3 such candidates. The full coordinate/projection/validity records are
++   in `support_audit_ai003.json`. A+stream has 4, but that does not repair static A.
++3. **Why A equals anchor?** The current fusion/completion path needs two-view support.
++   With none, both materialize the same prior branch and give identical predictions.
++   This is expected behavior of the frozen carrier, not a newly discovered code bug.
++   Primary GT surfaces are 100% inside its volume; A-supported surface neighborhoods
++   are 0%. Inside the box does not imply observed support.
++
++Unseen geometry also reveals coverage failure: ai009 primary GT surfaces are 0%
++inside the volume on both queries; ai007 query 15 is only 0.06% inside, and ai008
++queries are 30.2% and 6.67% inside. Geometry feasibility of the context does not ensure
++query coverage. These scenes stay in the locked primary cohort; no post-score
++filtering or volume expansion is applied. Thus support design is an evidenced
++bottleneck; representation and training contributions are not isolated.
++
++Camera/depth audit found no convention/unit/resize bug: old projection roundtrip max
++1.17e-11 pixels, ray-depth roundtrip max 3.55e-15 m; native GT positions satisfy the
++locked check. PREVIOUS_DEPTH_METRIC_INVALID=false. Depth is metric ray distance;
++opacity normalization is a separate readout question. All old scenes received the
++same audit. See `depth_definition.md`, `geometry_audit.json`, `volume_coverage.json`.
++
++## Residual readout and state-use attribution
++
++The existing 308-parameter 14→16→4 residual head uses exactly the same frozen states
++as R-Fixed. Adam lr=.001, clip=1; only original three training scenes, query frames
++12–14 for fitting and 15 for train-side validation, A/B contexts. The initial
++3,000-step pilot was still improving, so a documented budget-only amendment extended
++fresh same-seed training to 30,000 **before any residual primary/unseen evaluation**.
++First 3,000 logs match exactly. The fixed validation rule selected step **7,500**.
++No unseen/8–9 label was used for residual training or selection.
++
++Selected train-side validation objective: .303350 versus .375932 initially; terminal
++30,000-step validation worsened to .423491. The final 3,000-step training window still
++improved 1.45%; global convergence is not established. This control is trained and
++validated, but its limited capacity/training does not rule out every possible readout.
++Head linear operations: 11,796,480 FLOPs per 128×160 query (multiply+add=2; excludes
++renderer/activation). Measured fixed 5.21 ms, residual 10.81 ms including state safety
++checks; head alone .0478 ms. See training curves, audit and timing definitions.
++
++Average A/B: Fixed {fixed:.6f}, Residual {residual:.6f}; Residual−Fixed
++{residual - fixed:.6f}, CI [{residual_delta["ci95"][0]:.6f}, {residual_delta["ci95"][1]:.6f}].
++B improves by {-pairs["residual_minus_fixed_B"]["mean"]:.6f}, while A worsens by
++{pairs["residual_minus_fixed_A"]["mean"]:.6f}; selecting B as a new primary method after
++seeing this would be invalid. Residual A replacement/zero-state do not reliably hurt
++performance and zero-state even has lower macro AbsRel. Query-conditioned prior or
++bypass remains plausible; this does not establish useful scene-specific information
++or a general fixed-decoder bottleneck. B-specific bypass was not separately tested.
++
++Context-feature spatial shuffle, feature-channel reversal and zero-evidence state
++masking are diagnostic only. Prediction RMS/hash changes, not just latent changes,
++are saved. Channel reversal leaves fixed typed-field rendering unchanged by design;
++its residual effect must not be read as a fixed-renderer bug. No state was mutated.
++
++## Train-query versus heldout-query gap
++
++A AbsRel: 0.331528 on previously used 12–15 versus 2.213562 on 8–9. The macro gap
++1.882034 is 94.59% contributed by ai003. Both ai003 cohorts are black and have zero A
++support, so blackness alone cannot explain their difference. Heldout versus training
++nearest-A view angle is 60.38° versus 20.74°, and approximate common visibility is
++.3305 versus .8700. ai002 heldout volume coverage is .5228 versus .8846, with supported
++surface neighborhood .1097 versus .2170. This supports view/support and coverage
++limitations; it does not isolate training memorization. ai001 has a remaining
++unexplained gap. Full per-frame baseline, view, depth, validity and overlap statistics
++are in `train_heldout_gap_diagnosis.json` and its narrative report.
++
++## Reproduction, tests and limitations
++
++Run `commands.sh summary` from the repository root for raw-only statistics, or
++`commands.sh full` with a fresh output directory for downloads, training, inference,
++scripted audits and tests. The full mode ends with regenerated statistics; it does
++not recreate the manually collected official-source-validity notes or the curated
++environment/test/provenance report. Those original records are archived separately;
++new repetitions must record their own environment and execution results. Archived
++locks/raw reproduce all summaries via `scripts/report_static_attribution.py`. Tests:
++**{status["TESTS"]}**. The single historical V5 checkpoint test is skipped because that
++optional checkpoint is unavailable. New tests cover RGB preservation, camera/depth
++roundtrips, scene/query isolation, residual immutability, unchanged replacement camera,
++scene bootstrap and score-independent quality/volume auditing. Full log: `tests.log`.
++
++For a clean checkout containing only the published report, recompute statistics with:
++
++```bash
++.venv/bin/python scripts/report_static_attribution.py --raw-only \
++  --output docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1 \
++  --docs /tmp/static-attribution-recomputed
++```
++
++Raw model results are in `static_results.json`/CSV; all official statistics can be
++regenerated without rerunning inference. `artifacts/` stores deterministic gzip copies
++of detailed audit/lock/training records; `artifact_manifest.json` maps them to output
++paths with original SHA256. Local full states, media, native geometry arrays and both
++residual checkpoints remain under outputs. Checkpoints/data are not duplicated into
++Git docs; downloading requires the published Hypersim source and original carrier
++artifacts described in the previous training report. `commands.sh` downloads pinned
++metadata and invokes bounded data preparation. Source asset identity is audited but
++not a forensic guarantee against supplier reuse. Seven dev scenes and sparse candidate
++coverage limit scope. Negative qualification is not a proof that all shared states or
++all visible signals are impossible. **Dynamic TTT remains closed for this carrier.**
++"""
++    (root / "README.md").write_text(readme)
++    docs.mkdir(parents=True, exist_ok=True)
++    # Archive all textual run evidence; large media/native arrays/checkpoints remain local.
++    artifacts = docs / "artifacts"
++    artifacts.mkdir(exist_ok=True)
++    manifest = []
++    for directory in [
++        "old_static",
++        "unseen_static",
++        "residual",
++        "residual_30000",
++        "rgb_audit",
++        "geometry_audit",
++        "unseen_geometry_audit",
++        "unseen_data",
++        "metadata",
++    ]:
++        for path in sorted((root / directory).rglob("*")):
++            if not path.is_file() or path.suffix not in {
++                ".json",
++                ".jsonl",
++                ".csv",
++                ".md",
++                ".log",
++                ".py",
++            }:
++                continue
++            if "raw" in path.relative_to(root / directory).parts or "prepared" in path.parts:
++                continue
++            rel = path.relative_to(root)
++            target = artifacts / (str(rel) + ".gz")
++            target.parent.mkdir(parents=True, exist_ok=True)
++            target.write_bytes(gzip.compress(path.read_bytes(), mtime=0))
++            manifest.append(
++                {
++                    "output_relative_path": str(rel),
++                    "artifact": str(target.relative_to(docs)),
++                    "sha256": sha(path),
++                    "compressed_sha256": sha(target),
++                }
++            )
++    write_json(root / "artifact_manifest.json", manifest)
++    for path in sorted(root.iterdir()):
++        if path.is_file() and path.suffix in {
++            ".json",
++            ".md",
++            ".csv",
++            ".sh",
++            ".txt",
++            ".patch",
++            ".log",
++        }:
++            shutil.copy2(path, docs / path.name)
++    shutil.copy2(root / "residual_30000/training_curve.png", docs / "residual_training_curve.png")
++    print(terminal)
++
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--output", type=Path, required=True)
++    parser.add_argument("--docs", type=Path, required=True)
++    parser.add_argument("--raw-only", action="store_true")
++    args = parser.parse_args()
++    if args.raw_only:
++        if (args.output / "old_static/static_results.json").exists():
++            raw = {
++                k: json.loads((args.output / f"{v}/static_results.json").read_text())
++                for k, v in [("old", "old_static"), ("unseen", "unseen_static")]
++            }
++        else:
++            raw = json.loads((args.output / "static_results.json").read_text())
++        summaries = {k: summarize(v) for k, v in raw.items()}
++        pm = summaries["unseen"]["primary"]["methods"]
++        ps = {
++            k: pm[k]["full_image"]["metrics"]["depth_absrel"]["per_scene"]
++            for k in ("A", "B", "Residual_A", "Residual_B")
++        }
++        summaries["residual_average_AB_minus_fixed"] = paired_scene_bootstrap(
++            {
++                sid: (ps["Residual_A"][sid] + ps["Residual_B"][sid] - ps["A"][sid] - ps["B"][sid])
++                / 2
++                for sid in ps["A"]
++            }
++        )
++        args.docs.mkdir(parents=True, exist_ok=True)
++        write_json(args.docs / "bootstrap_results.json", summaries)
++        print("Regenerated paired scene statistics from raw without inference:", args.docs)
++    else:
++        report(args.output, args.docs)
+diff --git a/scripts/run_static_attribution.py b/scripts/run_static_attribution.py
+new file mode 100644
+index 0000000..c925ac9
+--- /dev/null
++++ b/scripts/run_static_attribution.py
+@@ -0,0 +1,23 @@
++"""Run static qualification; no history branches, dynamic actions, or controller."""
++
++import argparse
++
++from mcss.mechanism_pilot.static_evaluation import run_static
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--manifest", required=True)
++    parser.add_argument("--checkpoint", required=True)
++    parser.add_argument("--output", required=True)
++    parser.add_argument("--residual-checkpoint")
++    parser.add_argument("--device", choices=["cpu", "cuda"], default="cuda")
++    parser.add_argument("--unseen", action="store_true")
++    args = parser.parse_args()
++    run_static(
++        args.manifest,
++        args.checkpoint,
++        args.output,
++        residual_path=args.residual_checkpoint,
++        device=args.device,
++        unseen=args.unseen,
++    )
+diff --git a/scripts/train_static_residual.py b/scripts/train_static_residual.py
+new file mode 100644
+index 0000000..8dc4aec
+--- /dev/null
++++ b/scripts/train_static_residual.py
+@@ -0,0 +1,27 @@
++"""Train the fixed-budget static residual control on checkpoint training scenes only."""
++
++import argparse
++import json
++
++from mcss.mechanism_pilot.static_residual import ResidualTrainingConfig, train_residual
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--manifest", required=True)
++    parser.add_argument("--carrier-checkpoint", required=True)
++    parser.add_argument("--output-dir", required=True)
++    parser.add_argument("--device", default="cuda", choices=("cuda", "cpu"))
++    parser.add_argument("--steps", type=int, default=3000)
++    args = parser.parse_args()
++    print(
++        json.dumps(
++            train_residual(
++                args.manifest,
++                args.carrier_checkpoint,
++                args.output_dir,
++                device=args.device,
++                config=ResidualTrainingConfig(steps=args.steps),
++            ),
++            indent=2,
++        )
++    )
+diff --git a/src/mcss/mechanism_pilot/rgb_audit.py b/src/mcss/mechanism_pilot/rgb_audit.py
+new file mode 100644
+index 0000000..1d468ee
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/rgb_audit.py
+@@ -0,0 +1,251 @@
++"""Read-only RGB provenance audit; no carrier predictions or frame exclusions."""
++
++from __future__ import annotations
++
++import csv
++import hashlib
++import json
++from pathlib import Path
++
++import numpy as np
++import torch
++from PIL import Image
++
++from mcss.mechanism_pilot.data_prep import resize_rgb_depth
++from mcss.mechanism_pilot.small_training import TrainScene
++
++
++def rgb_statistics(array: np.ndarray, *, scale: float = 255.0) -> dict:
++    """Record RGB pixel statistics before any preprocessing; near-black <= 1/255."""
++    x = np.asarray(array)
++    if x.ndim != 3 or x.shape[-1] != 3:
++        raise ValueError("Expected HWC RGB")
++    finite = np.isfinite(x)
++    values = x[finite].astype(np.float64)
++    pixel_finite = finite.all(-1)
++    return {
++        "dimensions_hw": list(x.shape[:2]),
++        "shape": list(x.shape),
++        "dtype": str(x.dtype),
++        "min": float(values.min()) if values.size else None,
++        "max": float(values.max()) if values.size else None,
++        "mean": float(values.mean()) if values.size else None,
++        "std": float(values.std()) if values.size else None,
++        "exact_zero_pixels_percent": float(((x == 0).all(-1) & pixel_finite).mean() * 100),
++        "near_black_pixels_percent": float(
++            ((x >= 0).all(-1) & (x <= scale / 255).all(-1) & pixel_finite).mean() * 100
++        ),
++        "near_black_definition": "all RGB channels in [0,1/255] of declared full range",
++        "unique_rgb_values": int(np.unique(x.reshape(-1, 3), axis=0).shape[0]),
++        "nan_values": int(np.isnan(x).sum()),
++        "inf_values": int(np.isinf(x).sum()),
++        "declared_full_range": scale,
++    }
++
++
++def file_record(path: Path) -> dict:
++    return {
++        "path": str(path.resolve()),
++        "bytes": path.stat().st_size,
++        "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
++    }
++
++
++def classify_black_frame(row: dict) -> str:
++    """Localize a black prepared frame without guessing the dataset's render cause."""
++    if not row["frame_mapping_valid"]:
++        return "FRAME_MAPPING_ERROR"
++    if row["decoder_black_agreement"] is False:
++        return "DECODER_ERROR"
++    tensor = row["model_input"]
++    if (
++        tensor["min"] is None
++        or tensor["min"] < 0
++        or tensor["max"] > 1
++        or tensor["nan_values"]
++        or tensor["inf_values"]
++    ):
++        return "RANGE_ERROR"
++    if not row["prepared_matches_recomputed_resize"]:
++        return "PREPROCESSING_ERROR"
++    if row["source_rgb"]["max"] == 0 and row["prepared_rgb"]["max"] == 0:
++        return "SOURCE_FRAME_IS_BLACK"
++    return "UNKNOWN"
++
++
++def _official_rows(directory: Path | None, scene: str, frame: int) -> dict:
++    if directory is None:
++        return {"status": "NOT_CHECKED"}
++    result = {}
++    for name in (
++        "metadata_images.csv",
++        "metadata_images_split_scene_v1.csv",
++        "metadata_camera_trajectories.csv",
++    ):
++        path = directory / name
++        if not path.is_file():
++            result[name] = {"status": "MISSING"}
++            continue
++        with path.open() as handle:
++            records = list(csv.DictReader(handle))
++        if name == "metadata_camera_trajectories.csv":
++            matches = [
++                r
++                for r in records
++                if r.get("Animation") == f"{scene}_cam_00"
++                or (r.get("scene_name") == scene and r.get("camera_name") == "cam_00")
++            ]
++        else:
++            matches = [
++                r
++                for r in records
++                if r.get("scene_name") == scene
++                and r.get("camera_name") == "cam_00"
++                and str(r.get("frame_id", "")).lstrip("0") == str(frame).lstrip("0")
++            ]
++        result[name] = {"matching_rows": matches}
++    return result
++
++
++def audit_rgb_chain(manifest_path, output_dir, official_metadata_dir=None) -> dict:
++    """Audit existing source JPEGs and exact current preparation/loader outputs."""
++    manifest_path, output = Path(manifest_path).resolve(), Path(output_dir)
++    output.mkdir(parents=True, exist_ok=True)
++    if (output / "frame_audit.json").exists():
++        raise FileExistsError("Keep previous audit; use a fresh output directory")
++    metadata = Path(official_metadata_dir) if official_metadata_dir else None
++    manifest = json.loads(manifest_path.read_text())
++    rows = []
++    for record in manifest["scenes"]:
++        scene = TrainScene(record, manifest["image_size"], manifest_path.parent, "cpu", [])
++        for frame in record["frames"]:
++            fid = frame["frame_id"]
++            source = (
++                manifest_path.parent
++                / "raw"
++                / record["scene_id"]
++                / f"images/scene_cam_00_final_preview/frame.{fid:04d}.color.jpg"
++            )
++            prepared = scene.path(frame, "rgb")
++            with Image.open(source) as image:
++                image.load()
++                native = np.array(image)
++                rgb = np.array(image.convert("RGB"))
++                source_mode, source_format = image.mode, image.format
++            with Image.open(prepared) as image:
++                saved = np.array(image.convert("RGB"))
++            resized, _ = resize_rgb_depth(
++                rgb, np.ones(rgb.shape[:2], np.float32), tuple(manifest["image_size"])
++            )
++            tensor = scene.rgb(frame)
++            evaluator = scene.rgb(frame)
++            decoder = {"status": "UNAVAILABLE"}
++            try:
++                import cv2
++
++                other = cv2.imread(str(source), cv2.IMREAD_COLOR)
++                if other is None:
++                    raise ValueError("Independent OpenCV decoder failed")
++                other = other[..., ::-1]
++                decoder = {
++                    "status": "DECODED",
++                    "rgb": rgb_statistics(other),
++                    "exact_pixel_match": bool(np.array_equal(rgb, other)),
++                }
++            except ImportError:
++                pass
++            row = {
++                "scene_id": record["scene_id"],
++                "frame_id": fid,
++                "source_file": file_record(source),
++                "prepared_file": file_record(prepared),
++                "source_format": source_format,
++                "source_mode": source_mode,
++                "native_array_shape": list(native.shape),
++                "native_array_dtype": str(native.dtype),
++                "source_rgb": rgb_statistics(rgb),
++                "recomputed_resize_rgb": rgb_statistics(resized),
++                "prepared_rgb": rgb_statistics(saved),
++                "model_input": rgb_statistics(tensor.permute(1, 2, 0).numpy(), scale=1),
++                "evaluator_input": rgb_statistics(evaluator.permute(1, 2, 0).numpy(), scale=1),
++                "model_evaluator_tensors_equal": bool(torch.equal(tensor, evaluator)),
++                "prepared_matches_recomputed_resize": bool(np.array_equal(saved, resized)),
++                "independent_decoder": decoder,
++                "decoder_black_agreement": None
++                if decoder["status"] != "DECODED"
++                else bool((decoder["rgb"]["max"] == 0) == (rgb.max() == 0)),
++                "frame_mapping_valid": prepared.stem == f"{fid:04d}"
++                and prepared.parent.name == record["scene_id"],
++                "official_metadata": _official_rows(metadata, record["scene_id"], fid),
++            }
++            row["ROOT_CAUSE"] = classify_black_frame(row)
++            rows.append(row)
++    ai003 = [r for r in rows if r["scene_id"] == "ai_003_001"]
++    black = [r for r in ai003 if r["prepared_rgb"]["max"] == 0]
++    verdict = (
++        "SOURCE_FRAME_IS_BLACK"
++        if black and all(r["ROOT_CAUSE"] == "SOURCE_FRAME_IS_BLACK" for r in black)
++        else "UNKNOWN"
++    )
++    root_cause = {
++        "ROOT_CAUSE": verdict,
++        "black_frames": [r["frame_id"] for r in black],
++        "frames_audited": len(ai003),
++        "render_failure_status": "UNKNOWN_NOT_INFERRED_FROM_BLACK_PIXELS",
++        "frame_exclusion_applied": False,
++        "RGB_PREPROCESSING_CHANGED": False,
++        "scope": "Existing TRAIN media only, all frames retained; no model outputs used",
++        "source_is": "Published final_preview JPEG; not the linear HDR color buffer",
++        "official_metadata_directory": str(metadata) if metadata else None,
++        "near_black_rule": "descriptive only, all channels <= 1/255; not an exclusion rule",
++        "future_unseen_quality_rule": (
++            "official included; camera not BAD; finite positive depth >= .95; "
++            "reject all-black or >99.9% pixels all RGB channels <=2/255; no model scores"
++        ),
++        "future_rule_applied_to_existing_train": False,
++    }
++    for name, data in (("frame_audit.json", rows), ("ai003_black_root_cause.json", root_cause)):
++        (output / name).write_text(json.dumps(data, indent=2, allow_nan=False) + "\n")
++    fields = [
++        "scene_id",
++        "frame_id",
++        "stage",
++        "path",
++        "file_size",
++        "sha256",
++        "dimensions_hw",
++        "dtype",
++        "min",
++        "max",
++        "mean",
++        "std",
++        "exact_zero_pixels_percent",
++        "near_black_pixels_percent",
++        "unique_rgb_values",
++        "nan_values",
++        "inf_values",
++    ]
++    with (output / "ai003_frame_audit.csv").open("w", newline="") as handle:
++        writer = csv.DictWriter(handle, fieldnames=fields)
++        writer.writeheader()
++        for r in ai003:
++            for stage in (
++                "source_rgb",
++                "recomputed_resize_rgb",
++                "prepared_rgb",
++                "model_input",
++                "evaluator_input",
++            ):
++                file = r["source_file" if stage == "source_rgb" else "prepared_file"]
++                writer.writerow(
++                    {
++                        "scene_id": r["scene_id"],
++                        "frame_id": r["frame_id"],
++                        "stage": stage,
++                        "path": file["path"],
++                        "file_size": file["bytes"],
++                        "sha256": file["sha256"],
++                        **{k: r[stage][k] for k in fields[6:]},
++                    }
++                )
++    return root_cause
+diff --git a/src/mcss/mechanism_pilot/static_evaluation.py b/src/mcss/mechanism_pilot/static_evaluation.py
+new file mode 100644
+index 0000000..5ca0760
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/static_evaluation.py
+@@ -0,0 +1,518 @@
++"""Static-only sealed carrier qualification and readout attribution; no write actions."""
++
++from __future__ import annotations
++
++import json
++import time
++from dataclasses import asdict
++from pathlib import Path
++
++import numpy as np
++import torch
++
++from mcss.dynamic.cache import ObservationCache
++from mcss.dynamic.checkpoint import load_dynamic_checkpoint
++from mcss.dynamic.feedback import anchored_observation, batched_camera
++from mcss.dynamic.types import (
++    OnlineObservation,
++    SealedScene,
++    clone_scene_state,
++    hash_fast_content,
++    hash_scene_state,
++    hash_value,
++)
++from mcss.geometry import generate_rays, transform_cameras, transform_points
++from mcss.measurements import FixedMeasurementRenderer
++from mcss.mechanism_pilot.contracts import EvaluationLedger
++from mcss.mechanism_pilot.small_training import AccessLog, TrainScene, sha, write_json
++from mcss.mechanism_pilot.static_geometry import volume_geometry
++from mcss.mechanism_pilot.static_residual import load_residual_checkpoint, zero_state_like
++from mcss.mechanism_pilot.statistics import measurement_metrics, paired_scene_bootstrap
++from mcss.mechanism_pilot.visibility import common_visibility_masks
++
++METRICS = (
++    "rgb_mse",
++    "rgb_psnr",
++    "rgb_ssim",
++    "depth_absrel",
++    "depth_rmse",
++    "depth_delta1",
++    "opacity",
++    "coverage",
++    "valid_depth_fraction",
++)
++
++
++def validate_static_roles(scene, checkpoint_train_scenes, *, unseen=False):
++    sid, roles = scene["scene_id"], scene["roles"]
++    a, b = roles["context_a"], roles["context_b"]
++    if not a or len(a) != len(b) or a[0] != b[0] or set(a) & set(b) != {a[0]}:
++        raise ValueError("Contexts must share only the coordinate anchor and match sizes")
++    primary = roles.get("primary_query", [8, 9])
++    secondary = roles.get("secondary_query", [12, 13, 14, 15])
++    if not primary or (set(a) | set(b)) & set(primary + secondary):
++        raise PermissionError("Query cannot enter state construction")
++    if set(primary) & set(secondary):
++        raise ValueError("Query cohorts overlap")
++    if unseen and (sid in checkpoint_train_scenes or scene.get("split") != "dev"):
++        raise PermissionError("Unseen qualification overlaps checkpoint training or is not dev")
++    if unseen and not scene.get("physical_scene_id"):
++        raise PermissionError("Unseen scene requires audited source-asset identity")
++    return {"primary": primary, "secondary": secondary}
++
++
++@torch.no_grad()
++def construct(carrier, observations, episode, *, shuffle=False):
++    anchor = observations[0].camera.c2w
++    cache = ObservationCache(episode, observations[0].scene_id)
++    fast = carrier.initial_fast(episode)
++    for observation in observations:
++        arrived = anchored_observation(observation, anchor)
++        feature = carrier.encode(arrived)
++        if shuffle:
++            generator = torch.Generator(device="cpu").manual_seed(20260927 + observation.frame_id)
++            order = torch.randperm(feature.shape[-2] * feature.shape[-1], generator=generator).to(
++                feature.device
++            )
++            feature = feature.flatten(1)[:, order].reshape_as(feature)
++        cache = cache.append(arrived, feature)
++    state = carrier.materialize(cache, fast)
++    assert not fast.delta_fuse.any() and not fast.delta_complete.any()
++    return state, anchor, fast
++
++
++def summarize(rows):
++    """Scene-equal summaries and paired deltas, cohorts kept separate."""
++    result = {}
++    for cohort in sorted({r["cohort"] for r in rows}):
++        subset = [r for r in rows if r["cohort"] == cohort]
++        methods = {}
++        for name in sorted({r["method"] for r in subset}):
++            selected = [r for r in subset if r["method"] == name]
++            scenes = sorted({r["scene_id"] for r in selected})
++            methods[name] = {}
++            for region in [
++                "full_image",
++                "common_visible",
++                "inside_volume_supported",
++                "inside_volume_unsupported",
++                "outside_volume",
++            ]:
++                rr = (
++                    selected
++                    if region == "full_image"
++                    else [
++                        {"scene_id": r["scene_id"], **r[region]}
++                        for r in selected
++                        if r[region] is not None
++                    ]
++                )
++                mm = {}
++                for metric in METRICS:
++                    per_scene = {}
++                    for sid in scenes:
++                        values = [r[metric] for r in rr if r["scene_id"] == sid]
++                        per_scene[sid] = (
++                            None
++                            if not values or any(v is None for v in values)
++                            else float(np.mean(values))
++                        )
++                    mm[metric] = {
++                        "per_scene": per_scene,
++                        "mean": None
++                        if any(v is None for v in per_scene.values())
++                        else float(np.mean(list(per_scene.values()))),
++                    }
++                methods[name][region] = {
++                    "metrics": mm,
++                    "eligible_queries": len(rr),
++                    "total_queries": len(selected),
++                }
++        paired = {}
++        base = {
++            s: methods["A"]["full_image"]["metrics"]["depth_absrel"]["per_scene"][s] for s in scenes
++        }
++
++        def values(name, methods=methods):
++            return methods[name]["full_image"]["metrics"]["depth_absrel"]["per_scene"]
++
++        for label, left, right in [
++            ("anchor_minus_A", "anchor", "A"),
++            ("anchor_minus_B", "anchor", "B"),
++            ("wrong_scene_damage", "wrong_scene", "A"),
++            ("B_minus_A", "B", "A"),
++        ]:
++            left_values, right_values = values(left), values(right)
++            paired[label] = paired_scene_bootstrap(
++                {s: left_values[s] - right_values[s] for s in base}
++            )
++        paired["full_context_gain"] = paired_scene_bootstrap(
++            {s: values("anchor")[s] - (values("A")[s] + values("B")[s]) / 2 for s in base}
++        )
++        if "Residual_A" in methods:
++            for label, left, right in [
++                ("residual_minus_fixed_A", "Residual_A", "A"),
++                ("residual_minus_fixed_B", "Residual_B", "B"),
++                ("residual_state_shuffle_damage", "Residual_shuffled", "Residual_A"),
++                ("residual_zero_state_damage", "Residual_zero", "Residual_A"),
++            ]:
++                paired[label] = paired_scene_bootstrap(
++                    {s: values(left)[s] - values(right)[s] for s in base}
++                )
++        result[cohort] = {
++            "methods": methods,
++            "paired_depth_absrel": paired,
++            "common_region_note": (
++                "Only nonempty query masks averaged; missing scenes produce null macro"
++            ),
++        }
++    return result
++
++
++@torch.no_grad()
++def run_static(
++    manifest_path, carrier_path, output_dir, *, residual_path=None, device="cuda", unseen=False
++):
++    manifest_path, carrier_path, output = map(Path, (manifest_path, carrier_path, output_dir))
++    if output.exists() and any(output.iterdir()):
++        raise FileExistsError("Refusing to overwrite static evaluation")
++    output.mkdir(parents=True, exist_ok=True)
++    manifest = json.loads(manifest_path.read_text())
++    carrier, writer, metadata = load_dynamic_checkpoint(carrier_path, device=device)
++    carrier.eval().requires_grad_(False)
++    renderer = FixedMeasurementRenderer(n_samples=64, ray_chunk_size=2048).to(device)
++    training_scenes = metadata["provenance"]["training_scenes"]
++    scopes = {
++        s["scene_id"]: validate_static_roles(s, training_scenes, unseen=unseen)
++        for s in manifest["scenes"]
++    }
++    if unseen and len(manifest["scenes"]) < 6:
++        raise PermissionError("At least six eligible unseen scenes required for qualification")
++    if unseen and len({s["physical_scene_id"] for s in manifest["scenes"]}) != len(
++        manifest["scenes"]
++    ):
++        raise PermissionError("Repeated physical/source asset in unseen cohort")
++    residual = None
++    if residual_path:
++        residual, residual_meta = load_residual_checkpoint(
++            residual_path, carrier_sha256=metadata["sha256"], device=device
++        )
++    input_hashes = {
++        str(manifest_path.resolve()): sha(manifest_path),
++        str(carrier_path.resolve()): sha(carrier_path),
++    }
++    if residual_path:
++        input_hashes[str(Path(residual_path).resolve())] = sha(Path(residual_path))
++    for record in manifest["scenes"]:
++        for frame in record["frames"]:
++            for key in ["rgb", "depth"]:
++                path = Path(frame[key])
++                path = path if path.is_absolute() else manifest_path.parent / path
++                input_hashes[str(path.resolve())] = sha(path)
++    source_hashes = {str(p): sha(p) for p in Path(__file__).resolve().parents[1].rglob("*.py")}
++    write_json(
++        output / "lock.json",
++        {
++            "checkpoint": metadata,
++            "manifest_sha256": sha(manifest_path),
++            "residual_sha256": sha(Path(residual_path)) if residual_path else None,
++            "carrier": asdict(carrier.config),
++            "scopes": scopes,
++            "unseen": unseen,
++            "input_sha256": input_hashes,
++            "source_sha256": source_hashes,
++            "dynamic_ttt_run": False,
++        },
++    )
++    access = AccessLog(output / "label_access.jsonl")
++    scenes = {
++        r["scene_id"]: TrainScene(r, manifest["image_size"], manifest_path.parent, device, [])
++        for r in manifest["scenes"]
++    }
++    states, observations, state_diffs = {}, {}, []
++    start = time.perf_counter()
++    config_hash = hash_value({"carrier": asdict(carrier.config), "samples": 64})
++    for sid, scene in scenes.items():
++        roles = scene.record["roles"]
++        obs = {}
++        for fid in sorted(set(roles["context_a"] + roles["context_b"])):
++            f = scene.frames[fid]
++            access.append(
++                {
++                    "scene_id": sid,
++                    "frame_id": fid,
++                    "kind": "arrived_rgb_camera",
++                    "stage": "construction",
++                }
++            )
++            obs[fid] = OnlineObservation(sid, fid, scene.rgb(f), scene.camera(f))
++        observations[sid] = obs
++        plans = [
++            ("A", roles["context_a"], False),
++            ("B", roles["context_b"], False),
++            ("anchor", roles["context_a"][:1], False),
++            ("feature_shuffle", roles["context_a"], True),
++        ]
++        materialized = {}
++        for name, ids, shuffle in plans:
++            state, anchor, fast = construct(
++                carrier, [obs[i] for i in ids], f"{sid}-{name}", shuffle=shuffle
++            )
++            materialized[name] = state
++            states[f"{sid}/{name}"] = SealedScene(
++                f"{sid}-{name}",
++                sid,
++                scene.record["split"],
++                "static-query",
++                state,
++                hash_scene_state(state),
++                tuple(ids),
++                metadata["sha256"],
++                config_hash,
++                hash_fast_content(fast),
++                anchor.clone(),
++            )
++        for name in ["channel_permutation", "state_mask"]:
++            state = (
++                clone_scene_state(materialized["A"])
++                if name == "channel_permutation"
++                else zero_state_like(materialized["A"])
++            )
++            if name == "channel_permutation":
++                state.features.copy_(state.features.flip(1))
++            states[f"{sid}/{name}"] = SealedScene(
++                f"{sid}-{name}",
++                sid,
++                scene.record["split"],
++                "static-query",
++                state,
++                hash_scene_state(state),
++                tuple(roles["context_a"]),
++                metadata["sha256"],
++                config_hash,
++                hash_fast_content(fast),
++                anchor.clone(),
++            )
++        state_diffs.append(
++            {
++                "scene_id": sid,
++                "A_equals_anchor": hash_scene_state(materialized["A"])
++                == hash_scene_state(materialized["anchor"]),
++                "diagnostic_only": ["feature_shuffle", "channel_permutation", "state_mask"],
++                "channel_permutation_note": (
++                    "Feature-only negative control: fixed renderer reads typed fields, "
++                    "residual can read features"
++                ),
++            }
++        )
++    ledger = EvaluationLedger(states.keys())
++    for key, state in states.items():
++        ledger.seal(key, state)
++    write_json(
++        output / "state_manifest.json",
++        {
++            k: {"state_hash": s.state_hash, "observed_ids": s.observed_ids}
++            for k, s in states.items()
++        },
++    )
++    torch.save(states, output / "sealed_states.pt")
++    write_json(output / "state_diagnostics.json", state_diffs)
++    rows = []
++    ids = list(scenes)
++    candidate = carrier._candidate_points
++    bounds = carrier._bounds.reshape(2, 3)
++    radius = float(((bounds[1] - bounds[0]) / torch.tensor([8, 8, 8], device=device)).norm() / 2)
++    for ix, (sid, scene) in enumerate(scenes.items()):
++        obs, roles = observations[sid], scene.record["roles"]
++
++        def depth_load(fid, kind, sid=sid, scene=scene):
++            access.append(
++                {"scene_id": sid, "frame_id": fid, "kind": kind, "stage": "sealed_evaluator"}
++            )
++            return (
++                torch.from_numpy(np.load(scene.path(scene.frames[fid], "depth")))
++                .float()
++                .to(device)
++                .squeeze()
++            )
++
++        contexts = {}
++        for role in ["context_a", "context_b"]:
++            contexts[role] = [
++                (
++                    obs[i].camera,
++                    ledger.read_query_ground_truth(
++                        f"visibility-{sid}-{i}",
++                        lambda i=i, depth_load=depth_load: depth_load(
++                            i, "context_GT_visibility_only"
++                        ),
++                    ),
++                )
++                for i in roles[role]
++            ]
++        anchor = states[f"{sid}/A"].anchor_c2w
++        from mcss.geometry import project_world
++
++        support = (
++            torch.stack(
++                [
++                    project_world(candidate, anchored_observation(obs[i], anchor).camera)[2]
++                    for i in roles["context_a"]
++                ]
++            ).sum(0)
++            >= 2
++        )
++        for cohort, query_ids in scopes[sid].items():
++            for fid in query_ids:
++                frame = scene.frames[fid]
++
++                def camera_loader(sid=sid, fid=fid, scene=scene, frame=frame):
++                    access.append(
++                        {
++                            "scene_id": sid,
++                            "frame_id": fid,
++                            "kind": "query_camera",
++                            "stage": "sealed_evaluator",
++                        }
++                    )
++                    return scene.camera(frame)
++
++                world_camera = ledger.read_query_camera(f"{sid}-{fid}", camera_loader)
++
++                def truth_loader(fid=fid, scene=scene, frame=frame, depth_load=depth_load):
++                    depth = depth_load(fid, "query_GT_rgb_depth")
++                    return scene.rgb(frame), depth
++
++                truth, depth = ledger.read_query_ground_truth(f"{sid}-{fid}", truth_loader)
++                common = common_visibility_masks(
++                    world_camera, depth, contexts["context_a"], contexts["context_b"]
++                )["depth_consistent_common"]
++                camera = batched_camera(transform_cameras(world_camera, torch.linalg.inv(anchor)))
++                camera_hash = hash_value(camera)
++                origins, directions = generate_rays(world_camera)
++                valid = torch.isfinite(depth) & (depth > 0)
++                points = transform_points(
++                    (origins + directions * torch.where(valid, depth, 0)[..., None]).reshape(-1, 3),
++                    torch.linalg.inv(anchor),
++                )
++                outside, nearest, nearest_supported, has_support = volume_geometry(
++                    points.cpu(), candidate.cpu(), bounds.cpu(), support.cpu(), radius
++                )
++                inside = (outside == 0).reshape(depth.shape).to(device) & valid
++                supported = has_support.reshape(depth.shape).to(device) & valid
++                regions = {
++                    "common_visible": common,
++                    "inside_volume_supported": inside & supported,
++                    "inside_volume_unsupported": inside & ~supported,
++                    "outside_volume": valid & ~inside,
++                }
++                methods = [
++                    ("A", f"{sid}/A", False),
++                    ("B", f"{sid}/B", False),
++                    ("anchor", f"{sid}/anchor", False),
++                    ("wrong_scene", f"{ids[(ix + 1) % len(ids)]}/A", False),
++                    ("prior", None, False),
++                    ("feature_shuffle", f"{sid}/feature_shuffle", False),
++                    ("channel_permutation", f"{sid}/channel_permutation", False),
++                    ("state_mask", f"{sid}/state_mask", False),
++                ]
++                if residual:
++                    methods += [
++                        ("Residual_A", f"{sid}/A", True),
++                        ("Residual_B", f"{sid}/B", True),
++                        ("Residual_shuffled", f"{ids[(ix + 1) % len(ids)]}/A", True),
++                        ("Residual_zero", f"{sid}/state_mask", True),
++                        ("Residual_channel_permutation", f"{sid}/channel_permutation", True),
++                    ]
++                reference_prediction = None
++                for name, state_key, use_residual in methods:
++                    tick = time.perf_counter()
++                    if state_key is None:
++                        pred = {
++                            "rgb": torch.full_like(truth[None, None], 0.5),
++                            "depth": torch.full_like(depth[None, None, None], 5.0),
++                            "visibility": torch.ones_like(depth[None, None, None]),
++                        }
++                    else:
++                        sealed = states[state_key]
++                        before = hash_scene_state(sealed.scene_state)
++                        pred = (
++                            residual(sealed.scene_state, camera)
++                            if use_residual
++                            else renderer(
++                                sealed.scene_state, camera, ("rgb", "depth", "visibility")
++                            )
++                        )
++                        assert hash_scene_state(sealed.scene_state) == before == sealed.state_hash
++                    if device == "cuda":
++                        torch.cuda.synchronize()
++                    args = (
++                        pred["rgb"][0, 0],
++                        truth,
++                        pred["depth"][0, 0, 0],
++                        depth,
++                        pred["visibility"][0, 0, 0],
++                    )
++                    row = {
++                        "scene_id": sid,
++                        "query_id": fid,
++                        "cohort": cohort,
++                        "method": name,
++                        "split": scene.record["split"],
++                        "query_camera_hash": camera_hash,
++                        "seconds": time.perf_counter() - tick,
++                        **measurement_metrics(*args),
++                    }
++                    row.update(
++                        {
++                            region: measurement_metrics(*args, region_mask=mask.cpu().numpy())
++                            if mask.any()
++                            else None
++                            for region, mask in regions.items()
++                        }
++                    )
++                    row["support_bucket_counts"] = {
++                        region: int(mask.sum()) for region, mask in regions.items()
++                    }
++                    if name == "A":
++                        reference_prediction = {k: pred[k].clone() for k in ("rgb", "depth")}
++                    row["prediction_change_from_A"] = {
++                        k: {
++                            "rms": float(
++                                (pred[k] - reference_prediction[k]).square().mean().sqrt()
++                            ),
++                            "max_abs": float((pred[k] - reference_prediction[k]).abs().max()),
++                        }
++                        for k in ("rgb", "depth")
++                    }
++                    row["prediction_hash"] = hash_value(
++                        {"rgb": pred["rgb"], "depth": pred["depth"]}
++                    )
++                    rows.append(row)
++                    assert camera_hash == hash_value(camera)
++    ledger.assert_ready()
++    write_json(output / "static_results.json", rows)
++    write_json(output / "bootstrap_results.json", summarize(rows))
++    write_json(output / "sealed_query_access.json", ledger.events)
++    assert sha(carrier_path) == metadata["sha256"]
++    assert all(sha(Path(p)) == h for p, h in input_hashes.items())
++    assert all(sha(Path(p)) == h for p, h in source_hashes.items())
++    write_json(
++        output / "integrity.json",
++        {
++            "status": "PASS",
++            "checkpoint_unchanged": True,
++            "inputs_unchanged": True,
++            "sources_unchanged": True,
++            "states_sealed_before_query": True,
++            "dynamic_ttt_run": False,
++            "writes": 0,
++            "n_scenes": len(scenes),
++            "rows": len(rows),
++            "elapsed_seconds": time.perf_counter() - start,
++            "residual_parameters": sum(p.numel() for p in residual.head.parameters())
++            if residual
++            else 0,
++        },
++    )
++    return rows
+diff --git a/src/mcss/mechanism_pilot/static_geometry.py b/src/mcss/mechanism_pilot/static_geometry.py
+new file mode 100644
+index 0000000..f7cc07c
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/static_geometry.py
+@@ -0,0 +1,394 @@
++"""Score-independent camera, frustum support and GT surface coverage audits.
++
++No prediction, action, gradient, RGB, or metric ranking is used by this module.
++The frozen checkpoint supplies only its geometric buffers and configuration.
++"""
++
++from __future__ import annotations
++
++import json
++from pathlib import Path
++
++import h5py
++import numpy as np
++import torch
++
++from mcss.dynamic.checkpoint import load_dynamic_checkpoint
++from mcss.geometry import generate_rays, project_world, transform_cameras, transform_points
++from mcss.mechanism_pilot.calibration import calibrated_intrinsics, published_scene_metadata
++from mcss.mechanism_pilot.small_training import sha, write_json
++from mcss.types import Cameras
++
++
++def summary(values):
++    a = np.asarray(values, dtype=float).reshape(-1)
++    a = a[np.isfinite(a)]
++    return {
++        "count": int(a.size),
++        "mean": float(a.mean()) if a.size else None,
++        "max": float(a.max()) if a.size else None,
++        "p50": float(np.quantile(a, 0.5)) if a.size else None,
++        "p95": float(np.quantile(a, 0.95)) if a.size else None,
++    }
++
++
++def depth_to_ray_distance(depth, camera, *, semantics):
++    """Explicit conversion; dataset Hypersim depth_meters already is ray distance."""
++    if semantics == "ray_distance_meters":
++        return depth.clone()
++    if semantics != "camera_z_meters":
++        raise ValueError("Unrecognized depth semantics")
++    _, rays = generate_rays(camera)
++    camera_rays = rays @ torch.linalg.inv(camera.c2w[:3, :3]).T
++    return depth / camera_rays[..., 2]
++
++
++def surface_geometry(camera, depth):
++    origins, rays = generate_rays(camera)
++    valid = torch.isfinite(depth) & (depth > 0)
++    points = origins[valid] + rays[valid] * depth[valid, None]
++    pixels, z, _ = project_world(points, camera)
++    expected = valid.nonzero()[:, [1, 0]].to(pixels)
++    recovered = torch.linalg.vector_norm(points - origins[valid], dim=-1)
++    return (
++        points,
++        valid,
++        pixels,
++        z,
++        (pixels - expected).norm(dim=-1),
++        (recovered - depth[valid]).abs(),
++    )
++
++
++def volume_geometry(points, candidates, bounds, supported, radius):
++    """Nearest candidate/supported-candidate radius is predeclared, never score tuned."""
++    outside = torch.maximum(bounds[0] - points, points - bounds[1]).clamp_min(0).norm(dim=-1)
++    distance = torch.cdist(points, candidates)
++    nearest = distance.amin(-1)
++    support_distance = (
++        distance[:, supported].amin(-1)
++        if supported.any()
++        else torch.full_like(nearest, float("inf"))
++    )
++    return outside, nearest, support_distance, support_distance <= radius
++
++
++def support_audit(candidates, bounds, cameras, anchor_pose):
++    records, masks = [], []
++    for frame_id, camera in cameras:
++        anchored = transform_cameras(camera, torch.linalg.inv(anchor_pose))
++        pixels, z, valid = project_world(candidates, anchored)
++        finite = torch.isfinite(pixels).all(-1) & torch.isfinite(z)
++        valid &= finite
++        h, w = camera.image_size
++        rectangle = (
++            (pixels[:, 0] >= 0)
++            & (pixels[:, 0] <= w - 1)
++            & (pixels[:, 1] >= 0)
++            & (pixels[:, 1] <= h - 1)
++        )
++        masks.append(valid)
++        records.append(
++            {
++                "frame_id": frame_id,
++                "projected_uv": pixels.tolist(),
++                "camera_z": z.tolist(),
++                "in_front": (z > torch.finfo(z.dtype).eps).tolist(),
++                "inside_image_rectangle": rectangle.tolist(),
++                "finite": finite.tolist(),
++                "sampled_feature_valid": valid.tolist(),
++                "failure_counts": {
++                    "nonfinite": int((~finite).sum()),
++                    "behind_or_zero_z": int((z <= torch.finfo(z.dtype).eps).sum()),
++                    "front_but_outside_image": int(
++                        ((z > torch.finfo(z.dtype).eps) & ~rectangle & finite).sum()
++                    ),
++                },
++            }
++        )
++    counts = torch.stack(masks).sum(0)
++    used = counts >= 2
++    return {
++        "candidate_anchor_xyz": candidates.tolist(),
++        "candidate_world_xyz": transform_points(candidates, anchor_pose).tolist(),
++        "within_volume": ((candidates >= bounds[0]) & (candidates <= bounds[1])).all(-1).tolist(),
++        "cameras": records,
++        "support_count": counts.tolist(),
++        "used_by_fuse": used.tolist(),
++        "used_by_complete": used.tolist(),
++        "at_least_one": int((counts >= 1).sum()),
++        "at_least_two": int(used.sum()),
++        "histogram": {str(i): int((counts == i).sum()) for i in range(len(cameras) + 1)},
++        "spatial_distribution_supported_anchor_xyz": candidates[used].tolist(),
++    }, used
++
++
++def audit_manifest(
++    manifest_path,
++    checkpoint_path,
++    output_dir,
++    *,
++    primary_frames=(8, 9),
++    secondary_frames=(12, 13, 14, 15),
++    seed=20260927,
++    metadata_csv=None,
++):
++    manifest_path, output_dir = Path(manifest_path), Path(output_dir)
++    output_dir.mkdir(parents=True, exist_ok=True)
++    manifest = json.loads(manifest_path.read_text())
++    if manifest.get("depth_semantics") != "ray_distance_meters":
++        raise ValueError("Audit requires explicit metric ray-distance manifest")
++    carrier, _, checkpoint = load_dynamic_checkpoint(checkpoint_path)
++    candidates, bounds = carrier._candidate_points.detach(), carrier._bounds.detach().reshape(2, 3)
++    grid = carrier.config.grid_size
++    voxel = (bounds[1] - bounds[0]) / torch.tensor([grid[2], grid[1], grid[0]])
++    radius = float(voxel.norm() / 2)
++    metadata = published_scene_metadata(metadata_csv) if metadata_csv else {}
++    camera_rows, coverage_rows, support_rows, access, sampled_rows = [], [], {}, [], []
++    rng = np.random.default_rng(seed)
++    for scene in manifest["scenes"]:
++        sid = scene["scene_id"]
++        frames = {f["frame_id"]: f for f in scene["frames"]}
++        size = tuple(manifest["image_size"])
++        cameras = {
++            i: Cameras(
++                torch.tensor(f["intrinsics"], dtype=torch.float32),
++                torch.tensor(f["c2w"], dtype=torch.float32),
++                size,
++            )
++            for i, f in frames.items()
++        }
++        anchor_id = scene["roles"]["context_a"][0]
++        anchor = cameras[anchor_id].c2w
++        groups = {k: scene["roles"].get(k, []) for k in ("context_a", "context_b", "stream")}
++        groups["anchor"] = [anchor_id]
++        groups["context_a_plus_stream"] = sorted(set(groups["context_a"] + groups["stream"]))
++        scene_support, supported = {}, {}
++        for role, ids in groups.items():
++            if not ids:
++                continue
++            scene_support[role], supported[role] = support_audit(
++                candidates, bounds, [(i, cameras[i]) for i in ids], anchor
++            )
++        scene_support["A_B_supported_intersection"] = int(
++            (supported["context_a"] & supported["context_b"]).sum()
++        )
++        scene_support["definition"] = (
++            "Geometric finite in-frustum sampling eligibility; not occlusion visi"
++            "bility or evidence of a surface. Feature values are not inspected. B"
++            "oth branches require >=2 views."
++        )
++        support_rows[sid] = {
++            r: {
++                k: v
++                for k, v in record.items()
++                if k in ("at_least_one", "at_least_two", "histogram")
++            }
++            for r, record in scene_support.items()
++            if isinstance(record, dict)
++        }
++        write_json(output_dir / f"support_audit_{sid}.json", scene_support)
++        for frame_id, frame in frames.items():
++            path = Path(frame["depth"])
++            if not path.is_absolute():
++                path = manifest_path.parent / path
++            access.append(
++                {
++                    "scene_id": sid,
++                    "frame_id": frame_id,
++                    "kind": "GT_depth_camera",
++                    "purpose": "static_geometry_audit_not_model_selection",
++                    "path": str(path),
++                    "sha256": sha(path),
++                }
++            )
++            depth = torch.tensor(np.load(path).squeeze(), dtype=torch.float64)
++            camera = cameras[frame_id].to(dtype=torch.float64)
++            points, valid, pixels, z, pe, de = surface_geometry(camera, depth)
++            anchored_points = transform_points(points, torch.linalg.inv(anchor.double()))
++            outside, nearest, _, _ = volume_geometry(
++                anchored_points,
++                candidates.double(),
++                bounds.double(),
++                supported["context_a"],
++                radius,
++            )
++            relative = torch.linalg.inv(anchor.double()) @ camera.c2w
++            row = {
++                "scene_id": sid,
++                "frame_id": frame_id,
++                "roles": [k for k, ids in groups.items() if frame_id in ids],
++                "primary": frame_id in scene["roles"].get("primary_query", primary_frames),
++                "secondary": frame_id in scene["roles"].get("secondary_query", secondary_frames),
++                "valid_GT_fraction": float(valid.double().mean()),
++                "depth_m": summary(depth[valid].numpy()),
++                "inside_volume_fraction": float((outside == 0).double().mean()),
++                "outside_distance_m": summary(outside.numpy()),
++                "nearest_candidate_distance_m": summary(nearest.numpy()),
++                "any_candidate_neighborhood_fraction": float((nearest <= radius).double().mean()),
++                "anchor_camera_baseline_m": float(relative[:3, 3].norm()),
++                "anchor_relative_forward": relative[:3, 2].tolist(),
++                "context_supported_neighborhood": {},
++            }
++            arrays = {
++                "valid_pixel_yx": valid.nonzero().numpy(),
++                "surface_anchor_xyz": anchored_points.numpy(),
++                "outside_distance_m": outside.numpy(),
++                "nearest_candidate_distance_m": nearest.numpy(),
++            }
++            for role, mask in supported.items():
++                _, _, ds, covered = volume_geometry(
++                    anchored_points, candidates.double(), bounds.double(), mask, radius
++                )
++                row["context_supported_neighborhood"][role] = {
++                    "surface_support_fraction": float(covered.double().mean()),
++                    "no_candidate_neighborhood_support_fraction": float((~covered).double().mean()),
++                    "nearest_supported_distance_m": summary(ds.numpy()),
++                }
++                arrays[f"{role}_nearest_supported_m"] = ds.numpy()
++            np.savez_compressed(output_dir / f"{sid}_{frame_id:04d}_geometry_raw.npz", **arrays)
++            coverage_rows.append(row)
++            camera_rows.append(
++                {
++                    "scene_id": sid,
++                    "frame_id": frame_id,
++                    "projection_roundtrip_mean": float(pe.mean()),
++                    "projection_roundtrip_max": float(pe.max()),
++                    "depth_roundtrip_mean": float(de.mean()),
++                    "depth_roundtrip_max": float(de.max()),
++                    "pose_rotation_orthogonality_max": float(
++                        (camera.c2w[:3, :3].T @ camera.c2w[:3, :3] - torch.eye(3)).abs().max()
++                    ),
++                    "camera_z_to_ray_ratio": summary((z / depth[valid]).numpy()),
++                }
++            )
++            origins, rays = generate_rays(camera)
++            valid_yx = valid.nonzero()
++            for ix in rng.choice(len(points), size=min(8, len(points)), replace=False):
++                y, x = valid_yx[ix].tolist()
++                sampled_rows.append(
++                    {
++                        "scene_id": sid,
++                        "frame_id": frame_id,
++                        "pixel_xy": [x, y],
++                        "camera_ray_world": rays[y, x].tolist(),
++                        "GT_ray_distance_m": float(depth[y, x]),
++                        "world_point": points[ix].tolist(),
++                        "reprojected_xy": pixels[ix].tolist(),
++                        "camera_z_m": float(z[ix]),
++                        "renderer_ray_parameter_t_m": float(depth[y, x]),
++                    }
++                )
++        # Independent native GT position validation, when downloaded; never model prediction.
++        raw = manifest_path.parent / "raw" / sid / "images" / "scene_cam_00_geometry_hdf5"
++        position_file = raw / f"frame.{anchor_id:04d}.position.hdf5"
++        depth_file = raw / f"frame.{anchor_id:04d}.depth_meters.hdf5"
++        if sid in metadata and position_file.exists() and depth_file.exists():
++            for native_path in (position_file, depth_file):
++                access.append(
++                    {
++                        "scene_id": sid,
++                        "frame_id": anchor_id,
++                        "kind": "native_GT_position_or_depth",
++                        "purpose": "independent_depth_units_audit",
++                        "path": str(native_path),
++                        "sha256": sha(native_path),
++                    }
++                )
++            with h5py.File(position_file) as f:
++                position = np.array(f["dataset"]) * float(
++                    metadata[sid]["settings_units_info_meters_scale"]
++                )
++            with h5py.File(depth_file) as f:
++                native_depth = torch.tensor(np.array(f["dataset"]), dtype=torch.float64)
++            native_k = torch.tensor(
++                calibrated_intrinsics(metadata[sid], native_depth.shape), dtype=torch.float64
++            )
++            native_cam = Cameras(native_k, anchor.double(), tuple(native_depth.shape))
++            orig, rays = generate_rays(native_cam)
++            expected = orig + rays * native_depth[..., None]
++            good = (
++                np.isfinite(position).all(-1)
++                & np.isfinite(native_depth.numpy())
++                & (native_depth.numpy() > 0)
++            )
++            error = np.linalg.norm(expected.numpy()[good] - position[good], axis=-1)
++            resized_k = torch.tensor(
++                calibrated_intrinsics(metadata[sid], size), dtype=torch.float64
++            )
++            result = {
++                "scene_id": sid,
++                "native_position_error_m": summary(error),
++                "resize_intrinsics_max_error": float(
++                    (resized_k - cameras[anchor_id].intrinsics.double()).abs().max()
++                ),
++                "position_units_multiplier": float(
++                    metadata[sid]["settings_units_info_meters_scale"]
++                ),
++                "GT_depth_conversion": "identity already meters",
++                "position_file_sha256": sha(position_file),
++                "depth_file_sha256": sha(depth_file),
++            }
++        else:
++            result = {
++                "scene_id": sid,
++                "native_position_check": "UNAVAILABLE",
++                "reason": "Native depth/position or published metadata absent",
++            }
++        write_json(output_dir / f"native_geometry_{sid}.json", result)
++    write_json(output_dir / "support_audit.json", support_rows)
++    write_json(output_dir / "camera_geometry_audit.json", camera_rows)
++    write_json(
++        output_dir / "volume_coverage.json",
++        {
++            "neighborhood_rule": (
++                "one voxel HALF diagonal, fixed before metrics; "
++                "centers eligible at >=2 view frustum support"
++            ),
++            "radius_m": radius,
++            "voxel_xyz_m": voxel.tolist(),
++            "frames": coverage_rows,
++        },
++    )
++    write_json(output_dir / "sampled_GT_pixels.json", sampled_rows)
++    (output_dir / "geometry_gt_access.jsonl").write_text(
++        "".join(json.dumps(r) + "\n" for r in access)
++    )
++    report = {
++        "checkpoint_sha256": checkpoint["sha256"],
++        "manifest_sha256": sha(manifest_path),
++        "geometry_frame": (
++            "anchor camera coordinates for volume; "
++            "explicit world coordinates retained for candidate audit"
++        ),
++        "projection_roundtrip_max": max(r["projection_roundtrip_max"] for r in camera_rows),
++        "depth_roundtrip_max": max(r["depth_roundtrip_max"] for r in camera_rows),
++        "PREVIOUS_DEPTH_METRIC_INVALID": False,
++        "semantics": (
++            "GT and renderer use metric normalized-ray parameter. "
++            "Renderer depth is UNCONDITIONAL sum(weights*t), not opacity-normalized; "
++            "low opacity is a measurement bottleneck, not ray/z conversion bug."
++        ),
++        "model_predictions_read": False,
++        "DYNAMIC_TTT_RUN": False,
++        "seed": seed,
++    }
++    write_json(output_dir / "geometry_audit.json", report)
++    (output_dir / "depth_definition.md").write_text(
++        "# Depth definition\n\nHypersim `depth_meters` is distance along the un"
++        "it camera ray in meters. The stored array is used unchanged; asset-u"
++        "nit scale applies to camera translations and native position, not to"
++        " depth_meters. OpenGL camera axes are converted to OpenCV x-right/y-"
++        "down/z-forward in data preparation. Per-scene published inverse proj"
++        "ection and integer pixel centers with half-pixel resize define K.\n\nG"
++        "T world point = camera origin + normalize(R K^-1 [u,v,1]) * depth. C"
++        "amera-z is ray distance times camera-ray z and is generally differen"
++        "t. The renderer uses normalized rays and metric samples t, but retur"
++        "ns sum(w*t), with zero contribution from escaped mass. It does not d"
++        "ivide by opacity. Comparing this unconditional estimate against GT r"
++        "ay distance retains the frozen metric and exposes opacity/coverage f"
++        "ailure; no hidden rescaling or depth semantics change is made. Nativ"
++        "e GT position and dataset camera round-trips are checked independent"
++        "ly from any model prediction.\n"
++    )
++    return report
+diff --git a/src/mcss/mechanism_pilot/static_residual.py b/src/mcss/mechanism_pilot/static_residual.py
+new file mode 100644
+index 0000000..dff91c7
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/static_residual.py
+@@ -0,0 +1,349 @@
++"""Frozen-carrier residual control; training-side labels only, no dynamic writes."""
++
++from __future__ import annotations
++
++import json
++import time
++from dataclasses import asdict, dataclass
++from pathlib import Path
++
++import numpy as np
++import torch
++
++from mcss.dynamic.checkpoint import load_dynamic_checkpoint
++from mcss.dynamic.types import hash_scene_state, hash_value
++from mcss.geometry import generate_rays, transform_cameras
++from mcss.measurements import FixedMeasurementRenderer
++from mcss.mechanism_pilot.contracts import ResidualReadoutControl
++from mcss.mechanism_pilot.small_training import AccessLog, TrainScene, sha, write_json
++from mcss.training.grounded import build_grounded_state
++from mcss.types import SceneState
++
++SCHEMA = "mcss.static_residual.v1"
++ZERO_STATE_DEFINITION = (
++    "same bounds; density_logits=-100; color/features/log_variance=0; no evidence payload"
++)
++
++
++@dataclass(frozen=True)
++class ResidualTrainingConfig:
++    seed: int = 20260927
++    steps: int = 3000
++    learning_rate: float = 1e-3
++    gradient_clip: float = 1.0
++    validation_interval: int = 250
++    renderer_samples: int = 64
++    ray_chunk_size: int = 2048
++
++
++def validate_training_manifest(manifest, training_scenes):
++    """Identity firewall runs before loading any RGB/depth from manifest."""
++    rows = manifest["scenes"]
++    actual = [row["scene_id"] for row in rows]
++    if len(actual) != len(set(actual)) or set(actual) != set(training_scenes):
++        raise PermissionError(
++            "Residual training scene identities must equal checkpoint train allowlist"
++        )
++    for row in rows:
++        if row.get("split") != "train":
++            raise PermissionError("Residual trainer rejects unseen/dev/test scene records")
++        if row["roles"]["query"] != [12, 13, 14, 15]:
++            raise ValueError("Locked residual train/validation query split changed")
++        context = set(row["roles"]["context_a"]) | set(row["roles"]["context_b"])
++        if context.intersection([8, 9, 12, 13, 14, 15]):
++            raise PermissionError("Query entered state construction")
++
++
++def zero_state_like(state):
++    """DIAGNOSTIC ONLY: empty near-transparent volume, identical coordinate bounds."""
++    return SceneState(
++        torch.full_like(state.density_logits, -100),
++        torch.zeros_like(state.color),
++        torch.zeros_like(state.log_variance),
++        state.bounds.detach().clone(),
++        features=None if state.features is None else torch.zeros_like(state.features),
++    )
++
++
++def cache_readout(model, state, cameras):
++    """Cache detached immutable fixed measurement inputs; no GT accepted."""
++    state_hash, camera_hash = hash_scene_state(state), hash_value(cameras)
++    with torch.no_grad():
++        base = model.renderer(state, cameras, {"rgb", "depth", "visibility"})
++        features = model.renderer.render_features(state, cameras)
++        origins, directions = generate_rays(cameras)
++        rays = torch.cat((origins, directions), dim=-1).permute(0, 1, 4, 2, 3)
++        combined = torch.cat((features, rays), dim=2).detach()
++    if state_hash != hash_scene_state(state) or camera_hash != hash_value(cameras):
++        raise RuntimeError("Cache construction mutated shared inputs")
++    return {
++        "base": base,
++        "combined": combined,
++        "state_hash": state_hash,
++        "camera_hash": camera_hash,
++    }
++
++
++def cached_forward(model, cache):
++    combined, base = cache["combined"], cache["base"]
++    batch, views, channels, height, width = combined.shape
++    residual = model.head(combined.reshape(batch * views, channels, height, width))
++    residual = residual.reshape(batch, views, 4, height, width)
++    result = dict(base)
++    result["rgb"] = (base["rgb"] + residual[:, :, :3]).clamp(0, 1)
++    result["depth"] = (base["depth"] + residual[:, :, 3:4]).clamp_min(0)
++    return result
++
++
++def supervised_loss(prediction, rgb, depth):
++    valid = torch.isfinite(depth) & (depth > 0)
++    if not valid.any():
++        raise ValueError("No valid train depth")
++    rgb_mse = (prediction["rgb"] - rgb).square().mean()
++    absrel = ((prediction["depth"][valid] - depth[valid]).abs() / depth[valid]).mean()
++    return rgb_mse + absrel, {
++        "rgb_mse": float(rgb_mse.detach()),
++        "depth_absrel": float(absrel.detach()),
++    }
++
++
++def load_residual_checkpoint(path, *, carrier_sha256, device="cpu"):
++    payload = torch.load(path, map_location=device, weights_only=True)
++    if payload.get("schema") != SCHEMA or payload["carrier_sha256"] != carrier_sha256:
++        raise ValueError("Residual schema/carrier checkpoint mismatch")
++    config = ResidualTrainingConfig(**payload["config"])
++    renderer = FixedMeasurementRenderer(
++        n_samples=config.renderer_samples, ray_chunk_size=config.ray_chunk_size
++    ).to(device)
++    model = ResidualReadoutControl(payload["feature_dim"], renderer).to(device)
++    model.head.load_state_dict(payload["head_state_dict"], strict=True)
++    model.eval().requires_grad_(False)
++    model.training_status = "TRAINED_FROZEN_TRAIN_SIDE_SELECTED"
++    return model, payload
++
++
++def train_residual(manifest_path, carrier_path, output_dir, *, device="cuda", config=None):
++    config = config or ResidualTrainingConfig()
++    if min(config.steps, config.validation_interval) <= 0:
++        raise ValueError("Positive training and validation budgets required")
++    manifest_path, carrier_path, output = map(Path, (manifest_path, carrier_path, output_dir))
++    if output.exists() and any(output.iterdir()):
++        raise FileExistsError("Preserve previous residual results")
++    output.mkdir(parents=True, exist_ok=True)
++    manifest = json.loads(manifest_path.read_text())
++    carrier, _, metadata = load_dynamic_checkpoint(carrier_path, device=device)
++    training_scenes = metadata["provenance"]["training_scenes"]
++    validate_training_manifest(manifest, training_scenes)
++    torch.manual_seed(config.seed)
++    np.random.seed(config.seed)
++    carrier.eval().requires_grad_(False)
++    renderer = FixedMeasurementRenderer(
++        n_samples=config.renderer_samples, ray_chunk_size=config.ray_chunk_size
++    ).to(device)
++    model = ResidualReadoutControl(carrier.config.feature_dim, renderer).to(device)
++    carrier_before = hash_value(carrier.state_dict())
++    log = AccessLog(output / "label_access.jsonl")
++    write_json(
++        output / "lock.json",
++        {
++            "config": asdict(config),
++            "carrier_sha256": sha(carrier_path),
++            "manifest_sha256": sha(manifest_path),
++            "training_scenes": training_scenes,
++            "train_query_ids": [12, 13, 14],
++            "validation_query_ids": [15],
++            "validation_caveat": (
++                "15 was seen by frozen carrier; held out only from residual optimizer"
++            ),
++            "primary_query_ids_never_loaded": [8, 9],
++            "zero_state_definition": ZERO_STATE_DEFINITION,
++            "selection": "lowest equal scene/context mean RGB MSE + depth AbsRel on query 15",
++            "architecture": "existing ResidualReadoutControl unchanged",
++        },
++    )
++    train, validation, cached_checks = [], [], []
++    start = time.perf_counter()
++    for row in manifest["scenes"]:
++        scene = TrainScene(row, manifest["image_size"], manifest_path.parent, device, log)
++        for role in ("context_a", "context_b"):
++            with torch.no_grad():
++                state, anchor = build_grounded_state(
++                    carrier, scene.observations(role), f"residual:{row['scene_id']}:{role}"
++                )
++            for slot in range(4):
++                frame_id, camera, rgb, depth = scene.query(
++                    slot, "residual_validation" if slot == 3 else "residual_optimizer_training"
++                )
++                local = transform_cameras(camera, torch.linalg.inv(anchor))
++                cache = cache_readout(model, state, local)
++                with torch.no_grad():
++                    direct, cached = model(state, local), cached_forward(model, cache)
++                exact = all(torch.equal(direct[k], cached[k]) for k in direct)
++                if not exact:
++                    raise RuntimeError("Cached readout differs from original forward")
++                item = {
++                    "scene_id": row["scene_id"],
++                    "context": role,
++                    "query_id": frame_id,
++                    "cache": cache,
++                    "rgb": rgb,
++                    "depth": depth,
++                    "state": state,
++                    "camera": local,
++                }
++                (validation if slot == 3 else train).append(item)
++                cached_checks.append(
++                    {
++                        "scene_id": row["scene_id"],
++                        "context": role,
++                        "query_id": frame_id,
++                        "initial_exact": exact,
++                    }
++                )
++    cache_seconds = time.perf_counter() - start
++    optimizer = torch.optim.Adam(model.head.parameters(), lr=config.learning_rate)
++    best, best_step = float("inf"), None
++    curves = []
++    optimizer_start = time.perf_counter()
++
++    def evaluate(step):
++        nonlocal best, best_step
++        with torch.no_grad():
++            losses = [
++                float(supervised_loss(cached_forward(model, r["cache"]), r["rgb"], r["depth"])[0])
++                for r in validation
++            ]
++            training_loss = np.mean(
++                [
++                    float(
++                        supervised_loss(cached_forward(model, r["cache"]), r["rgb"], r["depth"])[0]
++                    )
++                    for r in train
++                ]
++            )
++        val_loss = float(np.mean(losses))
++        curves.append(
++            {
++                "step": step,
++                "train_mean_loss": float(training_loss),
++                "validation_mean_loss": val_loss,
++                "validation_per_item": losses,
++            }
++        )
++        if val_loss < best:
++            best, best_step = val_loss, step
++            torch.save(
++                {
++                    "schema": SCHEMA,
++                    "head_state_dict": model.head.state_dict(),
++                    "feature_dim": carrier.config.feature_dim,
++                    "config": asdict(config),
++                    "carrier_sha256": sha(carrier_path),
++                    "manifest_sha256": sha(manifest_path),
++                    "training_scenes": training_scenes,
++                    "selected_step": step,
++                    "validation_loss": val_loss,
++                },
++                output / "best.pt",
++            )
++        write_json(output / "validation_curve.json", curves)
++
++    evaluate(0)
++    with (output / "training.jsonl").open("w") as handle:
++        for step in range(config.steps):
++            row = train[step % len(train)]
++            optimizer.zero_grad(set_to_none=True)
++            loss, terms = supervised_loss(
++                cached_forward(model, row["cache"]), row["rgb"], row["depth"]
++            )
++            loss.backward()
++            norm = torch.nn.utils.clip_grad_norm_(model.head.parameters(), config.gradient_clip)
++            if not torch.isfinite(norm) or not torch.isfinite(loss):
++                raise RuntimeError("Nonfinite residual optimization")
++            optimizer.step()
++            handle.write(
++                json.dumps(
++                    {
++                        "step": step + 1,
++                        "scene_id": row["scene_id"],
++                        "context": row["context"],
++                        "query_id": row["query_id"],
++                        "loss": float(loss.detach()),
++                        "gradient_norm": float(norm),
++                        **terms,
++                    }
++                )
++                + "\n"
++            )
++            if (step + 1) % config.validation_interval == 0 or step + 1 == config.steps:
++                evaluate(step + 1)
++    optimizer_seconds = time.perf_counter() - optimizer_start
++    model, _ = load_residual_checkpoint(
++        output / "best.pt", carrier_sha256=sha(carrier_path), device=device
++    )
++    with torch.no_grad():
++        for row in train + validation:
++            direct, cached = model(row["state"], row["camera"]), cached_forward(model, row["cache"])
++            if not all(torch.equal(direct[k], cached[k]) for k in direct):
++                raise RuntimeError("Trained checkpoint cache/direct mismatch")
++    if (
++        hash_value(carrier.state_dict()) != carrier_before
++        or sha(carrier_path) != metadata["sha256"]
++    ):
++        raise RuntimeError("Frozen carrier modified")
++    parameters = sum(p.numel() for p in model.head.parameters())
++    height, width = manifest["image_size"]
++    sync = (lambda: torch.cuda.synchronize()) if str(device).startswith("cuda") else lambda: None
++    row = train[0]
++    timings = {}
++    with torch.no_grad():
++        for name, call in (
++            ("head_only", lambda: cached_forward(model, row["cache"])),
++            (
++                "fixed",
++                lambda: renderer(row["state"], row["camera"], {"rgb", "depth", "visibility"}),
++            ),
++            ("residual_full", lambda: model(row["state"], row["camera"])),
++        ):
++            for _ in range(3):
++                call()
++            sync()
++            clock = time.perf_counter()
++            for _ in range(20):
++                call()
++            sync()
++            timings[name + "_seconds_per_query"] = (time.perf_counter() - clock) / 20
++    recent = curves[-min(3, len(curves)) :]
++    improvement = (recent[0]["train_mean_loss"] - recent[-1]["train_mean_loss"]) / max(
++        recent[0]["train_mean_loss"], 1e-12
++    )
++    summary = {
++        "status": "TRAINED_FROZEN",
++        "selected_step": best_step,
++        "validation_loss": best,
++        "steps_completed": config.steps,
++        "parameters": parameters,
++        "head_linear_flops_per_query": 2
++        * height
++        * width
++        * ((carrier.config.feature_dim + 6) * 16 + 16 * 4),
++        "flops_definition": "multiply+add=2; excludes SiLU/bias/clamp/renderer",
++        "cache_seconds": cache_seconds,
++        "optimizer_seconds": optimizer_seconds,
++        **timings,
++        "training_convergence": "NOT_ESTABLISHED"
++        if improvement > 0.01
++        else "RECENT_TRAIN_LOSS_PLATEAU",
++        "recent_relative_train_loss_improvement": improvement,
++        "convergence_note": (
++            "fixed budget; plateau is not proof of global optimum or sufficient capacity"
++        ),
++        "carrier_unchanged": True,
++        "cache_exact_initial_and_selected": True,
++        "checkpoint_sha256": sha(output / "best.pt"),
++        "dynamic_ttt_run": False,
++        "zero_state_definition": ZERO_STATE_DEFINITION,
++    }
++    write_json(output / "cache_equivalence.json", cached_checks)
++    write_json(output / "summary.json", summary)
++    return summary
+diff --git a/src/mcss/mechanism_pilot/unseen_data.py b/src/mcss/mechanism_pilot/unseen_data.py
+new file mode 100644
+index 0000000..7dee5b8
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/unseen_data.py
+@@ -0,0 +1,465 @@
++"""Bounded unseen-development preparation; selection uses metadata and geometry only."""
++
++from __future__ import annotations
++
++import ast
++import csv
++import itertools
++import json
++import re
++import time
++import zipfile
++from pathlib import Path
++
++import h5py
++import numpy as np
++import requests
++import torch
++from PIL import Image
++
++from mcss.data.hypersim import convert_hypersim_pose
++from mcss.dynamic.checkpoint import load_dynamic_checkpoint
++from mcss.mechanism_pilot.calibration import calibrated_intrinsics, published_scene_metadata
++from mcss.mechanism_pilot.data_prep import BoundedRangeReader, check_geometry, resize_rgb_depth
++from mcss.mechanism_pilot.small_training import sha, write_json
++from mcss.mechanism_pilot.spatial import observed_camera_support
++from mcss.types import Cameras
++
++
++def source_assets(path):
++    """Extract literal upstream scenes.append dictionaries WITHOUT executing source."""
++    result = {}
++    for node in ast.walk(ast.parse(Path(path).read_text())):
++        if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute):
++            if (
++                isinstance(node.func.value, ast.Name)
++                and node.func.value.id == "scenes"
++                and node.func.attr == "append"
++                and len(node.args) == 1
++            ):
++                try:
++                    row = ast.literal_eval(node.args[0])
++                except (ValueError, TypeError):
++                    continue  # Never execute nonliteral upstream path expressions.
++                result[row["name"]] = row
++    return result
++
++
++def asset_identity(row):
++    return (
++        row["archive_file"].replace("\\", "/").casefold(),
++        row["asset_file"].replace("\\", "/").casefold(),
++    )
++
++
++def validate_unseen(train_ids, selected_ids, assets):
++    if set(train_ids) & set(selected_ids):
++        raise ValueError("Unseen scene appears in checkpoint training manifest")
++    identities = [asset_identity(assets[s]) for s in list(train_ids) + list(selected_ids)]
++    if len(identities) != len(set(identities)):
++        raise ValueError("Source asset identity overlap or duplicate")
++    train_volumes = {s.split("_")[1] for s in train_ids}
++    if any(s.split("_")[1] in train_volumes for s in selected_ids):
++        raise ValueError("Unseen volume overlaps training asset volume")
++
++
++def frame_quality(rgb, depth):
++    finite_rgb = bool(np.isfinite(rgb).all())
++    black_fraction = float((rgb <= 2).all(-1).mean())
++    valid_depth_fraction = float((np.isfinite(depth) & (depth > 0)).mean())
++    return {
++        "finite_rgb": finite_rgb,
++        "near_black_fraction": black_fraction,
++        "valid_depth_fraction": valid_depth_fraction,
++        "eligible": finite_rgb and black_fraction <= 0.999 and valid_depth_fraction >= 0.95,
++    }
++
++
++def select_roles(frames, quality, candidates):
++    valid = sorted(f["frame_id"] for f in frames if quality[f["frame_id"]]["eligible"])
++    if len(valid) < 7:
++        return None, {"status": "INELIGIBLE", "reason": "fewer_than_7_quality_frames"}
++    anchor, query = valid[0], valid[-2:]
++    rows = {f["frame_id"]: f for f in frames}
++
++    def camera(i):
++        f = rows[i]
++        return Cameras(torch.tensor(f["intrinsics"]), torch.tensor(f["c2w"]), (128, 160))
++
++    anchor_camera = camera(anchor)
++    options = []
++    for pair in itertools.combinations([i for i in valid if i != anchor and i not in query], 2):
++        support = observed_camera_support(candidates, [anchor_camera] + [camera(i) for i in pair])[
++            "supported_candidates"
++        ]
++        baseline = (
++            sum(float((camera(i).c2w[:3, 3] - anchor_camera.c2w[:3, 3]).norm()) for i in pair) / 2
++        )
++        options.append((pair, support, baseline))
++    eligible = []
++    for a, b in itertools.combinations(options, 2):
++        if set(a[0]) & set(b[0]):
++            continue
++        key = (-min(a[1], b[1]), abs(a[1] - b[1]), abs(a[2] - b[2]), a[0], b[0])
++        eligible.append((key, a, b))
++    _, a, b = min(eligible)
++    diagnostics = {
++        "status": "ELIGIBLE" if min(a[1], b[1]) >= 2 else "INELIGIBLE",
++        "reason": None if min(a[1], b[1]) >= 2 else "less_than_2_supported_candidates",
++        "context_a_supported": a[1],
++        "context_b_supported": b[1],
++        "context_a_baseline_m": a[2],
++        "context_b_baseline_m": b[2],
++        "quality_frame_ids": valid,
++        "geometry_pairings_considered": len(eligible),
++    }
++    roles = {
++        "context_a": [anchor, *a[0]],
++        "context_b": [anchor, *b[0]],
++        "primary_query": query,
++        "query": query,
++        "secondary_query": [],
++        "stream": [],
++    }
++    return roles, diagnostics
++
++
++def csv_rows(path):
++    with Path(path).open(newline="") as f:
++        return list(csv.DictReader(f))
++
++
++def select_members(scene, infos, allowed_ids):
++    names = {x.filename: x for x in infos}
++    rgb, depth = {}, {}
++    for name in names:
++        m = re.fullmatch(
++            re.escape(scene) + r"/images/scene_cam_00_final_preview/frame\.(\d{4})\.color\.jpg",
++            name,
++        )
++        if m:
++            rgb[int(m[1])] = name
++        m = re.fullmatch(
++            re.escape(scene)
++            + r"/images/scene_cam_00_geometry_hdf5/frame\.(\d{4})\.depth_meters\.hdf5",
++            name,
++        )
++        if m:
++            depth[int(m[1])] = name
++    ids = sorted(rgb.keys() & depth.keys() & set(allowed_ids))[:16]
++    if len(ids) < 16:
++        raise ValueError("Fewer than 16 officially included train RGB/depth frames")
++    members = [f"{scene}/_detail/metadata_scene.csv"] + [
++        f"{scene}/_detail/cam_00/camera_keyframe_{k}.hdf5"
++        for k in ("frame_indices", "positions", "orientations")
++    ]
++    members += [n for i in ids for n in (rgb[i], depth[i])]
++    members += [f"{scene}/images/scene_cam_00_geometry_hdf5/frame.{ids[0]:04d}.position.hdf5"]
++    if any(n not in names for n in members):
++        raise ValueError("Missing camera/GT position metadata")
++    return {
++        "scene_id": scene,
++        "frame_ids": ids,
++        "members": members,
++        "compressed_bytes": sum(names[n].compress_size for n in members),
++        "uncompressed_bytes": sum(names[n].file_size for n in members),
++        "member_metadata": [
++            {"name": n, "crc32": names[n].CRC, "bytes": names[n].file_size} for n in members
++        ],
++    }
++
++
++def prepare_unseen(
++    output, experiment, checkpoint_path, training_dir, training_manifest, partitions, calibration
++):
++    output, experiment, training_dir = Path(output), Path(experiment), Path(training_dir)
++    if output.exists():
++        raise FileExistsError("Refusing overwrite of locked unseen cohort")
++    metadata = experiment / "rgb_audit/official_metadata"
++    upstream = experiment / "metadata/upstream_dataset_config.py"
++    assets = source_assets(upstream)
++    train_manifest = json.loads(Path(training_manifest).read_text())
++    train_ids = sorted(s["scene_id"] for s in train_manifest["scenes"])
++    log_ids = sorted(
++        {
++            json.loads(s)["scene_id"]
++            for s in (training_dir / "training.jsonl").read_text().splitlines()
++        }
++    )
++    training_summary = json.loads((training_dir / "summary.json").read_text())
++    if (
++        train_ids != ["ai_001_001", "ai_002_001", "ai_003_001"]
++        or train_ids != log_ids
++        or training_summary["n_train_scenes"] != 3
++    ):
++        raise ValueError("Training identities not consistent")
++    carrier, _, checkpoint = load_dynamic_checkpoint(checkpoint_path)
++    if checkpoint["sha256"] != training_summary["checkpoint_sha256"]["phase_b_final"]:
++        raise ValueError("Checkpoint hash mismatch")
++    partition_rows = csv_rows(partitions)
++    trajectories = {
++        r["Animation"]: r for r in csv_rows(metadata / "metadata_camera_trajectories.csv")
++    }
++    split_rows = csv_rows(metadata / "metadata_images_split_scene_v1.csv")
++    allowed = {}
++    for row in split_rows:
++        if (
++            row["camera_name"] == "cam_00"
++            and row["included_in_public_release"] == "True"
++            and row["split_partition_name"] == "train"
++        ):
++            allowed.setdefault(row["scene_name"], []).append(int(row["frame_id"]))
++    selected, volumes = [], {s.split("_")[1] for s in train_ids}
++    for row in sorted(partition_rows, key=lambda r: r["scene_name"]):
++        scene = row["scene_name"]
++        volume = scene.split("_")[1]
++        if (
++            volume in volumes
++            or row["protocol_partition"] != "train"
++            or scene not in assets
++            or len(allowed.get(scene, [])) < 16
++        ):
++            continue
++        trajectory = trajectories.get(scene + "_cam_00")
++        if trajectory is None or "BAD" in trajectory["Scene type"].upper():
++            continue
++        selected.append(scene)
++        volumes.add(volume)
++        if len(selected) == 8:
++            break
++    validate_unseen(train_ids, selected, assets)
++    output.mkdir(parents=True)
++    source_paths = [
++        upstream,
++        Path(partitions),
++        metadata / "metadata_camera_trajectories.csv",
++        metadata / "metadata_images_split_scene_v1.csv",
++        Path(training_manifest),
++        training_dir / "summary.json",
++        training_dir / "training.jsonl",
++        Path(calibration),
++    ]
++    lock = {
++        "schema": "mcss.unseen_static.candidates.v1",
++        "created_unix": time.time(),
++        "checkpoint_sha256": checkpoint["sha256"],
++        "train_scene_ids": train_ids,
++        "candidate_scene_ids": selected,
++        "assets": {s: assets[s] for s in train_ids + selected},
++        "selection": (
++            "lexicographic first eligible protocol-train cam00 non-BAD scene "
++            "from each distinct untrained asset volume; 8 fixed candidates, no "
++            "replacement"
++        ),
++        "physical_identity_limit": (
++            "Distinct official volume/archive/asset identities; vendor cross-"
++            "asset content reuse cannot be independently ruled out."
++        ),
++        "previously_observed": {
++            r["scene_name"]: r["previously_observed"]
++            for r in partition_rows
++            if r["scene_name"] in selected
++        },
++        "source_sha256": {str(p): sha(p) for p in source_paths},
++        "upstream_url": "https://github.com/apple/ml-hypersim/blob/main/evermotion_dataset/_dataset_config.py",
++        "data_budget_bytes": 2 * 1024**3,
++        "quality_rule": (
++            "finite RGB, >99.9 percent pixels all channels <=2/255 rejected; "
++            "finite positive native depth fraction >=0.95; no scores"
++        ),
++        "role_rule": (
++            "first quality frame anchor, last two quality frames queries; "
++            "enumerate disjoint pairs from remaining frames. Maximize "
++            "min(A_support,B_support), minimize support gap, then mean baseline "
++            "gap, then lex frame IDs. At least 7 quality frames; each context "
++            ">=2 supported candidates. This minimum is not a quality proof."
++        ),
++        "model_predictions_read": False,
++    }
++    write_json(output / "candidate_lock.json", lock)
++    print("CANDIDATE_LOCKED " + json.dumps(selected), flush=True)
++    sessions, readers, archives, plans = [], [], [], []
++    shared_budget = [0]
++    calibration_rows = published_scene_metadata(calibration)
++    try:
++        for scene in selected:
++            session = requests.Session()
++            url = f"https://docs-assets.developer.apple.com/ml-research/datasets/hypersim/v1/scenes/{scene}.zip"
++            reader = BoundedRangeReader(url, session)
++            reader.shared_budget = shared_budget
++            archive = zipfile.ZipFile(reader)
++            plan = select_members(scene, archive.infolist(), allowed[scene])
++            plan.update(url=url, etag=reader.etag, archive_bytes=reader.size)
++            sessions.append(session)
++            readers.append(reader)
++            archives.append(archive)
++            plans.append(plan)
++            print("MEMBER_PLAN " + scene, flush=True)
++        if sum(p["compressed_bytes"] + p["uncompressed_bytes"] for p in plans) > 2 * 1024**3:
++            raise ValueError("Selected data exceeds 2GiB bound")
++        write_json(
++            output / "data_lock.json",
++            {
++                "created_unix": time.time(),
++                "candidate_lock_sha256": sha(output / "candidate_lock.json"),
++                "scenes": plans,
++            },
++        )
++        print("ALL_MEMBERS_LOCKED", flush=True)
++        hashes, quality_rows, feasibility, scenes, geometry = {}, {}, {}, [], []
++        with (output / "access.jsonl").open("x") as log:
++
++            def access(sid, path, operation):
++                log.write(
++                    json.dumps(
++                        {
++                            "time": time.time(),
++                            "scene_id": sid,
++                            "path": str(path),
++                            "operation": operation,
++                            "purpose": "unseen_data_geometry_only",
++                            "official_split": "train",
++                        }
++                    )
++                    + "\n"
++                )
++                log.flush()
++
++            for plan, archive, _reader in zip(plans, archives, readers, strict=True):
++                sid = plan["scene_id"]
++                for member in plan["members"]:
++                    dest = output / "raw" / member
++                    dest.parent.mkdir(parents=True, exist_ok=True)
++                    access(sid, member, "download")
++                    dest.write_bytes(archive.read(member))
++                    hashes[str(dest.relative_to(output))] = sha(dest)
++                raw = output / "raw" / sid
++                units = {
++                    r["parameter_name"]: r["parameter_value"]
++                    for r in csv_rows(raw / "_detail/metadata_scene.csv")
++                }
++                scale = float(units["meters_per_asset_unit"])
++                if not np.isclose(
++                    scale,
++                    float(calibration_rows[sid]["settings_units_info_meters_scale"]),
++                    rtol=1e-6,
++                ):
++                    raise ValueError("Native calibration scale mismatch")
++
++                def hdf(path, sid=sid):
++                    access(sid, path, "decode_hdf5")
++                    with h5py.File(path) as f:
++                        return np.array(f["dataset"])
++
++                ids = hdf(raw / "_detail/cam_00/camera_keyframe_frame_indices.hdf5").reshape(-1)
++                poses = hdf(raw / "_detail/cam_00/camera_keyframe_positions.hdf5")
++                rotations = hdf(raw / "_detail/cam_00/camera_keyframe_orientations.hdf5")
++                mapping = {int(i): j for j, i in enumerate(ids)}
++                frames, quality = [], {}
++                prepared = output / "prepared" / sid
++                prepared.mkdir(parents=True)
++                for fid in plan["frame_ids"]:
++                    rgbpath = raw / f"images/scene_cam_00_final_preview/frame.{fid:04d}.color.jpg"
++                    access(sid, rgbpath, "decode_RGB")
++                    with Image.open(rgbpath) as im:
++                        rgb = np.asarray(im.convert("RGB"))
++                    depth = hdf(
++                        raw / f"images/scene_cam_00_geometry_hdf5/frame.{fid:04d}.depth_meters.hdf5"
++                    )
++                    quality[fid] = frame_quality(rgb, depth)
++                    if rgb.shape[:2] != depth.shape:
++                        raise ValueError("Native RGB/depth dimensions disagree")
++                    pose = convert_hypersim_pose(
++                        rotations[mapping[fid]], poses[mapping[fid]], meters_per_asset_unit=scale
++                    )
++                    if fid == plan["frame_ids"][0]:
++                        position = hdf(
++                            raw / f"images/scene_cam_00_geometry_hdf5/frame.{fid:04d}.position.hdf5"
++                        )
++                        try:
++                            geometry.append(
++                                check_geometry(
++                                    sid,
++                                    depth,
++                                    position,
++                                    pose,
++                                    calibrated_intrinsics(calibration_rows[sid], depth.shape),
++                                    scale,
++                                )
++                            )
++                        except ValueError as exc:
++                            geometry.append({"scene_id": sid, "status": "FAIL", "error": str(exc)})
++                    rgb_small, depth_small = resize_rgb_depth(rgb, depth)
++                    rgb_out, depth_out = prepared / f"{fid:04d}.png", prepared / f"{fid:04d}.npy"
++                    Image.fromarray(rgb_small).save(rgb_out)
++                    np.save(depth_out, depth_small)
++                    for path in (rgb_out, depth_out):
++                        hashes[str(path.relative_to(output))] = sha(path)
++                    frames.append(
++                        {
++                            "frame_id": fid,
++                            "rgb": str(rgb_out.resolve()),
++                            "depth": str(depth_out.resolve()),
++                            "intrinsics": calibrated_intrinsics(
++                                calibration_rows[sid], (128, 160)
++                            ).tolist(),
++                            "c2w": pose.tolist(),
++                        }
++                    )
++                roles, diagnostic = select_roles(
++                    frames, quality, carrier._candidate_points.detach()
++                )
++                if any(r.get("status") == "FAIL" and r["scene_id"] == sid for r in geometry):
++                    diagnostic.update(status="INELIGIBLE", reason="native_geometry_check_failed")
++                quality_rows[sid], feasibility[sid] = quality, diagnostic
++                if diagnostic["status"] == "ELIGIBLE":
++                    scenes.append(
++                        {
++                            "scene_id": sid,
++                            "split": "dev",
++                            "physical_scene_id": "|".join(asset_identity(assets[sid])),
++                            "frames": frames,
++                            "roles": roles,
++                        }
++                    )
++                write_json(output / "progress_quality.json", quality_rows)
++                write_json(output / "progress_feasibility.json", feasibility)
++                print("PREPARED " + sid + " " + json.dumps(diagnostic), flush=True)
++        status = "READY" if len(scenes) >= 6 else "BLOCKED_INSUFFICIENT_DATA"
++        manifest = {
++            "schema": "mcss.static_unseen.data.v1",
++            "image_size": [128, 160],
++            "depth_semantics": "ray_distance_meters",
++            "scenes": scenes,
++            "UNSEEN_DEV_STATUS": status,
++            "candidate_lock_sha256": sha(output / "candidate_lock.json"),
++            "data_lock_sha256": sha(output / "data_lock.json"),
++            "model_predictions_read": False,
++        }
++        write_json(output / "manifest.json", manifest)
++        write_json(output / "frame_quality.json", quality_rows)
++        write_json(output / "support_feasibility.json", feasibility)
++        write_json(output / "geometry_checks.json", geometry)
++        write_json(output / "hashes.json", hashes)
++        write_json(
++            output / "role_lock.json",
++            {
++                "created_unix": time.time(),
++                "manifest_sha256": sha(output / "manifest.json"),
++                "roles": {s["scene_id"]: s["roles"] for s in scenes},
++                "N_UNSEEN_DEV_SCENES": len(scenes),
++                "UNSEEN_DEV_STATUS": status,
++            },
++        )
++        write_json(
++            output / "download_cost.json",
++            {
++                "network_bytes": sum(r.transferred for r in readers),
++                "budget_accounted_bytes": shared_budget[0],
++                "full_archives_downloaded": False,
++            },
++        )
++        return manifest
++    finally:
++        for obj in archives + readers + sessions:
++            obj.close()
+diff --git a/tests/test_static_evaluation.py b/tests/test_static_evaluation.py
+new file mode 100644
+index 0000000..74b2fc8
+--- /dev/null
++++ b/tests/test_static_evaluation.py
+@@ -0,0 +1,200 @@
++"""Independent static evaluation identity, sealing and scene-statistic regressions."""
++
++import json
++from copy import deepcopy
++
++import numpy as np
++import pytest
++import torch
++from PIL import Image
++
++from mcss.dynamic.carrier import DynamicSceneCarrier
++from mcss.dynamic.checkpoint import save_dynamic_checkpoint
++from mcss.dynamic.config import CarrierConfig, WriteConfig
++from mcss.dynamic.types import hash_scene_state, hash_value
++from mcss.dynamic.write_rule import DirectWriteRule
++from mcss.measurements import FixedMeasurementRenderer
++from mcss.mechanism_pilot.static_evaluation import (
++    METRICS,
++    run_static,
++    summarize,
++    validate_static_roles,
++)
++
++
++def scene_record(scene_id="scene0"):
++    return {
++        "scene_id": scene_id,
++        "split": "train",
++        "roles": {
++            "context_a": [0, 1, 2],
++            "context_b": [0, 3, 4],
++            "primary_query": [8, 9],
++            "secondary_query": [12],
++        },
++    }
++
++
++@pytest.mark.parametrize(
++    "kind",
++    [
++        "primary_leak",
++        "secondary_leak",
++        "cohort_overlap",
++        "training_identity",
++        "nondev",
++        "missing_physical",
++    ],
++)
++def test_role_and_unseen_identity_firewall(kind):
++    row = scene_record()
++    row.update(split="dev", physical_scene_id="asset0")
++    trained = ["trained_other"]
++    if kind == "primary_leak":
++        row["roles"]["primary_query"] = [2, 9]
++    elif kind == "secondary_leak":
++        row["roles"]["secondary_query"] = [3]
++    elif kind == "cohort_overlap":
++        row["roles"]["secondary_query"] = [8]
++    elif kind == "training_identity":
++        trained = ["scene0"]
++    elif kind == "nondev":
++        row["split"] = "test"
++    else:
++        del row["physical_scene_id"]
++    with pytest.raises((ValueError, PermissionError)):
++        validate_static_roles(row, trained, unseen=True)
++
++
++def test_scene_equal_summary_and_scene_bootstrap_not_query_weighted():
++    rows = []
++    for scene, n, a in [("many_queries", 7, 1.0), ("one_query", 1, 3.0)]:
++        for query in range(n):
++            for method, offset in [("A", 0.0), ("B", 0.2), ("anchor", 1.0), ("wrong_scene", 2.0)]:
++                row = {
++                    "scene_id": scene,
++                    "query_id": query,
++                    "cohort": "primary",
++                    "method": method,
++                    **dict.fromkeys(METRICS, a + offset),
++                }
++                for region in [
++                    "common_visible",
++                    "inside_volume_supported",
++                    "inside_volume_unsupported",
++                    "outside_volume",
++                ]:
++                    row[region] = None
++                rows.append(row)
++    result = summarize(rows)["primary"]
++    assert result["methods"]["A"]["full_image"]["metrics"]["depth_absrel"]["mean"] == 2.0
++    gain = result["paired_depth_absrel"]["anchor_minus_A"]
++    assert gain["mean"] == 1.0 and gain["ci95"] == [1.0, 1.0]
++    assert gain["unit"] == "scene" and gain["n_scenes"] == 2 and gain["draws"] == 10000
++    assert result["methods"]["A"]["common_visible"]["metrics"]["depth_absrel"]["mean"] is None
++    assert summarize(deepcopy(rows)) == summarize(rows)
++
++
++def test_static_end_to_end_seals_before_queries_and_preserves_wrong_scene_camera(
++    tmp_path, monkeypatch
++):
++    torch.set_num_threads(1)
++    scenes = []
++    for scene_index in range(3):
++        scene = scene_record(f"scene{scene_index}")
++        scene["frames"] = []
++        angle = 0.2 * scene_index
++        rotation = np.array(
++            [
++                [np.cos(angle), 0.0, np.sin(angle)],
++                [0.0, 1.0, 0.0],
++                [-np.sin(angle), 0.0, np.cos(angle)],
++            ]
++        )
++        for fid in [0, 1, 2, 3, 4, 8, 9, 12]:
++            rgb, depth = (
++                tmp_path / f"{scene_index}_{fid}.png",
++                tmp_path / f"{scene_index}_{fid}.npy",
++            )
++            Image.fromarray(np.full((4, 4, 3), 50 + 30 * scene_index, np.uint8)).save(rgb)
++            np.save(depth, np.full((4, 4), 3.0, np.float32))
++            pose = np.eye(4)
++            pose[:3, :3] = rotation
++            pose[:3, 3] = [scene_index * 4.0 + fid * 0.02, scene_index * 2.0, 0.4 * scene_index]
++            scene["frames"].append(
++                {
++                    "frame_id": fid,
++                    "rgb": str(rgb),
++                    "depth": str(depth),
++                    "intrinsics": [[4.0, 0.0, 2.0], [0.0, 4.0, 2.0], [0.0, 0.0, 1.0]],
++                    "c2w": pose.tolist(),
++                }
++            )
++        scenes.append(scene)
++    manifest = tmp_path / "manifest.json"
++    manifest.write_text(json.dumps({"image_size": [4, 4], "scenes": scenes}))
++    config = CarrierConfig()
++    checkpoint = tmp_path / "carrier.pt"
++    save_dynamic_checkpoint(
++        checkpoint,
++        DynamicSceneCarrier(config),
++        DirectWriteRule(config, WriteConfig()),
++        phase="B",
++        provenance={"training_scenes": [s["scene_id"] for s in scenes]},
++    )
++    calls = []
++    original_forward = FixedMeasurementRenderer.forward
++
++    def spy(renderer, state, camera, measurements):
++        calls.append((hash_scene_state(state), hash_value(camera), camera.c2w.clone()))
++        return original_forward(renderer, state, camera, measurements)
++
++    def no_writes(*args, **kwargs):
++        raise AssertionError("Static protocol invoked a dynamic write")
++
++    monkeypatch.setattr(FixedMeasurementRenderer, "forward", spy)
++    monkeypatch.setattr(DirectWriteRule, "propose", no_writes)
++    output = tmp_path / "results"
++    rows = run_static(manifest, checkpoint, output, device="cpu")
++    assert len(rows) == 3 * 3 * 8
++    events = json.loads((output / "sealed_query_access.json").read_text())
++    assert all(e["event"] == "seal" for e in events[:18])
++    assert all(e["event"] != "seal" for e in events[18:])
++    stored = torch.load(output / "sealed_states.pt", weights_only=False)
++    state_manifest = json.loads((output / "state_manifest.json").read_text())
++    for key, state in stored.items():
++        assert hash_scene_state(state.scene_state) == state_manifest[key]["state_hash"]
++        assert not set(state.observed_ids).intersection([8, 9, 12])
++    rendered_rows = [row for row in rows if row["method"] != "prior"]
++    assert len(calls) == len(rendered_rows)
++    for index, scene in enumerate(scenes):
++        sid = scene["scene_id"]
++        for query in [8, 9, 12]:
++            group = [r for r in rows if r["scene_id"] == sid and r["query_id"] == query]
++            assert len({r["query_camera_hash"] for r in group}) == 1
++            paired_calls = {
++                r["method"]: call
++                for r, call in zip(rendered_rows, calls, strict=True)
++                if r["scene_id"] == sid and r["query_id"] == query
++            }
++            assert torch.equal(paired_calls["A"][2], paired_calls["wrong_scene"][2])
++            assert (
++                paired_calls["wrong_scene"][0]
++                == stored[f"{scenes[(index + 1) % 3]['scene_id']}/A"].state_hash
++            )
++            for row in group:
++                counts = row["support_bucket_counts"]
++                assert (
++                    sum(
++                        counts[k]
++                        for k in [
++                            "inside_volume_supported",
++                            "inside_volume_unsupported",
++                            "outside_volume",
++                        ]
++                    )
++                    == row["depth_valid_count"]
++                )
++    integrity = json.loads((output / "integrity.json").read_text())
++    assert integrity["states_sealed_before_query"] and integrity["writes"] == 0
++    assert integrity["inputs_unchanged"] and not integrity["dynamic_ttt_run"]
+diff --git a/tests/test_static_geometry.py b/tests/test_static_geometry.py
+new file mode 100644
+index 0000000..adfd26c
+--- /dev/null
++++ b/tests/test_static_geometry.py
+@@ -0,0 +1,62 @@
++import pytest
++import torch
++
++from mcss.geometry import make_intrinsics
++from mcss.mechanism_pilot.static_geometry import (
++    depth_to_ray_distance,
++    support_audit,
++    surface_geometry,
++    volume_geometry,
++)
++from mcss.types import Cameras
++
++
++def camera():
++    return Cameras(
++        make_intrinsics((8, 10), 60).double(), torch.eye(4, dtype=torch.float64), (8, 10)
++    )
++
++
++def test_projection_depth_roundtrip_uses_gt_unit_ray():
++    c = camera()
++    depth = torch.full((8, 10), 3.0, dtype=torch.float64)
++    _, _, _, z, pe, de = surface_geometry(c, depth)
++    assert pe.max() < 1e-10
++    assert de.max() < 1e-10
++    assert z.min() < 3
++
++
++def test_camera_z_conversion_differs_off_axis():
++    c = camera()
++    z = torch.ones((8, 10), dtype=torch.float64)
++    ray = depth_to_ray_distance(z, c, semantics="camera_z_meters")
++    assert ray.min() > 1
++    assert torch.equal(depth_to_ray_distance(ray, c, semantics="ray_distance_meters"), ray)
++    with pytest.raises(ValueError):
++        depth_to_ray_distance(z, c, semantics="unknown")
++
++
++def test_volume_geometry_is_score_independent_and_empty_support_explicit():
++    points = torch.tensor([[0.0, 0.0, 0.0], [3.0, 0.0, 0.0]])
++    centers = torch.tensor([[0.0, 0.0, 0.0]])
++    bounds = torch.tensor([[-1.0, -1.0, -1.0], [1.0, 1.0, 1.0]])
++    outside, nearest, distance, covered = volume_geometry(
++        points, centers, bounds, torch.tensor([False]), 0.5
++    )
++    assert outside.tolist() == [0.0, 2.0]
++    assert nearest.tolist() == [0.0, 3.0]
++    assert torch.isinf(distance).all()
++    assert not covered.any()
++
++
++def test_frustum_support_requires_two_views_and_world_anchor_translation():
++    c = camera()
++    c.c2w[0, 3] = 7
++    p = torch.tensor([[0.0, 0.0, 2.0], [0.0, 0.0, -2.0]], dtype=torch.float64)
++    bounds = torch.tensor([[-3.0, -3.0, -3.0], [3.0, 3.0, 3.0]], dtype=torch.float64)
++    one, mask = support_audit(p, bounds, [(0, c)], c.c2w)
++    assert not mask.any()
++    two, mask = support_audit(p, bounds, [(0, c), (1, c)], c.c2w)
++    assert mask.tolist() == [True, False]
++    assert one["candidate_world_xyz"][0] == [7.0, 0.0, 2.0]
++    assert two["support_count"] == [2, 0]
+diff --git a/tests/test_static_residual.py b/tests/test_static_residual.py
+new file mode 100644
+index 0000000..7f2b0c9
+--- /dev/null
++++ b/tests/test_static_residual.py
+@@ -0,0 +1,112 @@
++"""Residual control identity, state privacy and exact cached-readout regressions."""
++
++from dataclasses import asdict
++
++import pytest
++import torch
++
++from mcss.dynamic.types import hash_scene_state, hash_value
++from mcss.measurements import FixedMeasurementRenderer
++from mcss.mechanism_pilot.contracts import ResidualReadoutControl
++from mcss.mechanism_pilot.static_residual import (
++    SCHEMA,
++    ResidualTrainingConfig,
++    cache_readout,
++    cached_forward,
++    load_residual_checkpoint,
++    supervised_loss,
++    validate_training_manifest,
++    zero_state_like,
++)
++from mcss.types import Cameras, SceneState
++
++
++def fixture():
++    state = SceneState(
++        torch.zeros(1, 1, 2, 2, 2),
++        torch.full((1, 3, 2, 2, 2), 0.4),
++        torch.zeros(1, 1, 2, 2, 2),
++        torch.tensor([[[-1.0, -1.0, 1.0], [1.0, 1.0, 3.0]]]),
++        features=torch.randn(1, 8, 2, 2, 2),
++    )
++    camera = Cameras(
++        torch.tensor([[[[4.0, 0.0, 2.0], [0.0, 4.0, 2.0], [0.0, 0.0, 1.0]]]]),
++        torch.eye(4)[None, None],
++        (4, 4),
++    )
++    model = ResidualReadoutControl(8, FixedMeasurementRenderer(n_samples=4))
++    return state, camera, model
++
++
++def test_cache_matches_nonzero_head_forward_and_preserves_state_camera():
++    state, camera, model = fixture()
++    torch.nn.init.normal_(model.head[-1].weight, std=0.01)
++    before = hash_scene_state(state), hash_value(camera)
++    cache = cache_readout(model, state, camera)
++    direct, cached = model(state, camera), cached_forward(model, cache)
++    assert all(torch.equal(direct[k], cached[k]) for k in direct)
++    loss, _ = supervised_loss(
++        cached, torch.zeros_like(cached["rgb"]), torch.ones_like(cached["depth"])
++    )
++    loss.backward()
++    assert model.head[-1].weight.grad.abs().sum() > 0
++    assert before == (hash_scene_state(state), hash_value(camera))
++    assert state.features.grad is None
++
++
++@pytest.mark.parametrize("bad", ["unseen", "dev", "query_context"])
++def test_training_identity_firewall(bad):
++    row = {
++        "scene_id": "train1",
++        "split": "train",
++        "roles": {"query": [12, 13, 14, 15], "context_a": [0, 1, 2], "context_b": [0, 3, 4]},
++    }
++    if bad == "unseen":
++        row["scene_id"] = "unseen"
++    elif bad == "dev":
++        row["split"] = "dev"
++    else:
++        row["roles"]["context_a"] = [0, 1, 8]
++    with pytest.raises(PermissionError):
++        validate_training_manifest({"scenes": [row]}, ["train1"])
++
++
++def test_training_identity_accepts_only_explicit_allowlist():
++    row = {
++        "scene_id": "train1",
++        "split": "train",
++        "roles": {"query": [12, 13, 14, 15], "context_a": [0, 1, 2], "context_b": [0, 3, 4]},
++    }
++    validate_training_manifest({"scenes": [row]}, ["train1"])
++
++
++def test_zero_state_is_empty_and_preserves_geometry():
++    state, camera, model = fixture()
++    before = hash_scene_state(state)
++    zero = zero_state_like(state)
++    assert torch.equal(zero.bounds, state.bounds)
++    assert torch.count_nonzero(zero.features) == 0
++    assert torch.all(zero.density_logits == -100)
++    assert before == hash_scene_state(state)
++    assert model(zero, camera)["depth"].max() < 1e-20
++
++
++def test_checkpoint_restores_freezes_and_binds_carrier(tmp_path):
++    state, camera, model = fixture()
++    config = ResidualTrainingConfig(renderer_samples=4)
++    path = tmp_path / "residual.pt"
++    torch.save(
++        {
++            "schema": SCHEMA,
++            "carrier_sha256": "bound",
++            "config": asdict(config),
++            "feature_dim": 8,
++            "head_state_dict": model.head.state_dict(),
++        },
++        path,
++    )
++    loaded, _ = load_residual_checkpoint(path, carrier_sha256="bound")
++    assert not loaded.training and all(not p.requires_grad for p in loaded.parameters())
++    assert torch.equal(model(state, camera)["rgb"], loaded(state, camera)["rgb"])
++    with pytest.raises(ValueError):
++        load_residual_checkpoint(path, carrier_sha256="wrong")
+diff --git a/tests/test_static_rgb_audit.py b/tests/test_static_rgb_audit.py
+new file mode 100644
+index 0000000..d0d8bf9
+--- /dev/null
++++ b/tests/test_static_rgb_audit.py
+@@ -0,0 +1,86 @@
++import json
++from copy import deepcopy
++
++import numpy as np
++import pytest
++from PIL import Image
++
++from mcss.mechanism_pilot.data_prep import resize_rgb_depth
++from mcss.mechanism_pilot.rgb_audit import (
++    audit_rgb_chain,
++    classify_black_frame,
++    rgb_statistics,
++)
++
++
++def test_raw_statistics_preserved_before_preprocessing(tmp_path):
++    raw = tmp_path / "raw/ai_003_001/images/scene_cam_00_final_preview"
++    prepared = tmp_path / "prepared/ai_003_001"
++    raw.mkdir(parents=True)
++    prepared.mkdir(parents=True)
++    frames = []
++    for fid in (0, 1):
++        image = np.zeros((7, 9, 3), dtype=np.uint8)
++        if fid:
++            image[:, :4] = [255, 130, 70]
++        source = raw / f"frame.{fid:04d}.color.jpg"
++        Image.fromarray(image).save(source)
++        with Image.open(source) as im:
++            original = np.array(im.convert("RGB"))
++        resized, _ = resize_rgb_depth(original, np.ones((7, 9)), (3, 4))
++        target = prepared / f"{fid:04d}.png"
++        Image.fromarray(resized).save(target)
++        frames.append({"frame_id": fid, "rgb": str(target)})
++    manifest = tmp_path / "manifest.json"
++    manifest.write_text(
++        json.dumps({"image_size": [3, 4], "scenes": [{"scene_id": "ai_003_001", "frames": frames}]})
++    )
++    output = tmp_path / "audit"
++    result = audit_rgb_chain(manifest, output)
++    rows = json.loads((output / "frame_audit.json").read_text())
++    assert result["ROOT_CAUSE"] == "SOURCE_FRAME_IS_BLACK"
++    assert result["black_frames"] == [0]
++    assert rows[1]["source_rgb"] == rgb_statistics(original)
++    assert rows[1]["source_rgb"]["dimensions_hw"] == [7, 9]
++    assert rows[1]["prepared_rgb"]["dimensions_hw"] == [3, 4]
++    assert all(r["prepared_matches_recomputed_resize"] for r in rows)
++    assert all(r["model_evaluator_tensors_equal"] for r in rows)
++    assert len((output / "ai003_frame_audit.csv").read_text().splitlines()) == 11
++    with pytest.raises(FileExistsError):
++        audit_rgb_chain(manifest, output)
++
++
++def test_stats_distinguish_black_pixels_from_zero_channels_and_invalid():
++    image = np.array([[[0, 0, 0], [0, 255, 0], [1, 1, 1], [2, 2, 2]]], np.uint8)
++    stats = rgb_statistics(image)
++    assert stats["exact_zero_pixels_percent"] == 25
++    assert stats["near_black_pixels_percent"] == 50
++    assert stats["unique_rgb_values"] == 4
++    invalid = rgb_statistics(np.array([[[np.nan, np.inf, 0]]]), scale=1)
++    assert invalid["nan_values"] == invalid["inf_values"] == 1
++    assert invalid["exact_zero_pixels_percent"] == 0
++
++
++@pytest.mark.parametrize(
++    "field,value,expected",
++    [
++        ("frame_mapping_valid", False, "FRAME_MAPPING_ERROR"),
++        ("decoder_black_agreement", False, "DECODER_ERROR"),
++        ("prepared_matches_recomputed_resize", False, "PREPROCESSING_ERROR"),
++    ],
++)
++def test_quality_root_cause_independent_of_model_score(field, value, expected):
++    row = {
++        "frame_mapping_valid": True,
++        "decoder_black_agreement": True,
++        "prepared_matches_recomputed_resize": True,
++        "source_rgb": {"max": 0},
++        "prepared_rgb": {"max": 0},
++        "model_input": {"min": 0, "max": 0, "nan_values": 0, "inf_values": 0},
++    }
++    assert classify_black_frame(row) == "SOURCE_FRAME_IS_BLACK"
++    changed = deepcopy(row)
++    changed[field] = value
++    assert classify_black_frame(changed) == expected
++    changed["model_score"] = 999
++    assert classify_black_frame(changed) == expected
+diff --git a/tests/test_static_unseen.py b/tests/test_static_unseen.py
+new file mode 100644
+index 0000000..a829caf
+--- /dev/null
++++ b/tests/test_static_unseen.py
+@@ -0,0 +1,60 @@
++import numpy as np
++import pytest
++import torch
++
++from mcss.mechanism_pilot.unseen_data import (
++    frame_quality,
++    select_roles,
++    source_assets,
++    validate_unseen,
++)
++
++
++def test_upstream_literal_only_never_executes(tmp_path):
++    p = tmp_path / "upstream.py"
++    p.write_text(
++        "raise RuntimeError('must not execute')\n"
++        "scenes.append({'name':'a','archive_file':'x','asset_file':'y'})\n"
++        "scenes.append({'name':'b','asset_file':do_not_run()})\n"
++    )
++    assert list(source_assets(p)) == ["a"]
++
++
++def test_unseen_source_asset_and_scene_disjointness():
++    assets = {
++        "ai_001_001": {"archive_file": "train.rar", "asset_file": "x"},
++        "ai_004_001": {"archive_file": "dev.rar", "asset_file": "x"},
++    }
++    validate_unseen(["ai_001_001"], ["ai_004_001"], assets)
++    with pytest.raises(ValueError, match="checkpoint training"):
++        validate_unseen(["ai_001_001"], ["ai_001_001"], assets)
++    assets["ai_004_001"]["archive_file"] = "TRAIN.RAR"
++    with pytest.raises(ValueError, match="asset identity"):
++        validate_unseen(["ai_001_001"], ["ai_004_001"], assets)
++
++
++def test_quality_rule_has_no_model_score_and_rejects_black_native_data():
++    depth = np.ones((4, 4))
++    assert not frame_quality(np.zeros((4, 4, 3)), depth)["eligible"]
++    assert frame_quality(np.full((4, 4, 3), 3), depth)["eligible"]
++    depth[0, 0] = np.nan
++    assert not frame_quality(np.full((4, 4, 3), 255), depth)["eligible"]
++
++
++def test_role_selection_keeps_query_outside_context():
++    frames = [
++        {
++            "frame_id": i,
++            "intrinsics": [[100.0, 0.0, 79.5], [0.0, 100.0, 63.5], [0.0, 0.0, 1.0]],
++            "c2w": torch.eye(4).tolist(),
++        }
++        for i in range(8)
++    ]
++    quality = {i: {"eligible": True} for i in range(8)}
++    roles, diag = select_roles(frames, quality, torch.tensor([[0.0, 0.0, 1.0], [0.1, 0.0, 1.0]]))
++    assert diag["status"] == "ELIGIBLE"
++    assert roles["primary_query"] == [6, 7]
++    assert not set(roles["primary_query"]) & (set(roles["context_a"]) | set(roles["context_b"]))
++    assert set(roles["context_a"]) & set(roles["context_b"]) == {0}
++    assert roles["context_a"] == [0, 1, 2]
++    assert roles["context_b"] == [0, 3, 4]

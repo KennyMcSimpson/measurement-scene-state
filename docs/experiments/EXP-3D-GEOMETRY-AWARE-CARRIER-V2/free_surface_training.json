@@ -1,0 +1,71 @@
+[
+  {
+    "data_ray_stream_sha256": "7f30070d35bc030c5fe12e3f1ba136b438624f8ca5e552cb4b53d2d1c414f131",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_state_dict_hash": "ed7e2c2f995ffa3548718156b973e6e5c0a84ef2d041c97b5b127b85fc34546c",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": 104656384,
+    "peak_cuda_reserved_bytes": 136314880,
+    "preregistration_sha256": "f165a13438812c8d73ece3cc9e9a33c1d0a8dab33669da4dbe530df810037935",
+    "seed": 20260928,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/checkpoints/C2_20260928/step_003000.pt",
+      "checkpoint_sha256": "aaddea72bebd6a5dc7133df01cc1d1f32a23b5ce57bcd663888c923131ac105a",
+      "dev_query_absrel": 0.6235734413918449,
+      "selected_step": 3000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 3000,
+    "variant": "C2",
+    "wall_seconds": 226.58689462998882,
+    "writer_updates": false
+  },
+  {
+    "data_ray_stream_sha256": "5750334579f2ff74d1c0425fd07a8d45606afcc520515371d8efaf34b95b9103",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_state_dict_hash": "456d8400427301b9953751acb660c56c2c6728fedddddba97acdbf256766c7c8",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": 104656384,
+    "peak_cuda_reserved_bytes": 136314880,
+    "preregistration_sha256": "f165a13438812c8d73ece3cc9e9a33c1d0a8dab33669da4dbe530df810037935",
+    "seed": 20260929,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/checkpoints/C2_20260929/step_001000.pt",
+      "checkpoint_sha256": "7c02b9308f5fc09eb521093b3a821da30dd2a34caa9e2535c8b4ee52c18c47da",
+      "dev_query_absrel": 0.64228471757487,
+      "selected_step": 1000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 3000,
+    "variant": "C2",
+    "wall_seconds": 231.24577400897397,
+    "writer_updates": false
+  },
+  {
+    "data_ray_stream_sha256": "1c99f2630aee9925f56239c91f38a592b3999daf7633755fda6b89f8568eee7d",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_state_dict_hash": "73c27c0b4dfa51cf539bf8bcdc3fd2fc87f543cf92842058ba0a7260379bf895",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": 104656384,
+    "peak_cuda_reserved_bytes": 136314880,
+    "preregistration_sha256": "f165a13438812c8d73ece3cc9e9a33c1d0a8dab33669da4dbe530df810037935",
+    "seed": 20260930,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/checkpoints/C2_20260930/step_001000.pt",
+      "checkpoint_sha256": "0c9da9e3c0b3d3736fc714620e6051b858d5acbec42536c97a5e186d654c91fd",
+      "dev_query_absrel": 0.6247964194757081,
+      "selected_step": 1000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 3000,
+    "variant": "C2",
+    "wall_seconds": 229.91334982402623,
+    "writer_updates": false
+  }
+]

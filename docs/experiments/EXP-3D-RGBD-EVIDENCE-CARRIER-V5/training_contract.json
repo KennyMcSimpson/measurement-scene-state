@@ -1,0 +1,103 @@
+{
+  "augmentation": "none",
+  "batch_rays": 1024,
+  "batch_scenes": 1,
+  "checkpoint_rationale": "identical to V4 (V3 dense runs peaked at 500 steps)",
+  "checkpoint_selection": "independent per variant/seed using the frozen V2 DEV rule; never best seed",
+  "checkpoint_steps": [
+    100,
+    200,
+    300,
+    500,
+    750,
+    1000,
+    1500,
+    2000
+  ],
+  "context_input": "context RGB + measured context ray distance + cameras (RGB-D track); query depth never enters construction",
+  "context_roles": "independent A/B states, equal loss weights",
+  "cpu_affinity": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "dev_reuse": "the 8 DEV scenes were evaluated in V2, V3 and V4; V5 is a DEV mechanism diagnostic on the RGB-D track, not a qualification round",
+  "dynamic_ttt_run": false,
+  "execution": "seeds sequential; the C0/C1/C2 runs of one seed concurrently (identical contention); each (re)start waits until the shared GPU has min_free_gpu_mib free",
+  "experiment": "EXP-3D-RGBD-EVIDENCE-CARRIER-V5",
+  "fresh_qualification_included": false,
+  "gradient_clip": 1.0,
+  "image_size": [
+    128,
+    160
+  ],
+  "infrastructure_failure_policy": "a signal-terminated run, or a run whose log shows a fixed CUDA resource-allocation signature, is moved to audit/failed_attempts with an incident record and rerun from scratch with identical variant/seed/config, at most infrastructure_retries times per run counted across runner invocations; archived checkpoints and DEV curves are never used; any other Python error is never retried; a failed C0/C1 run stops the experiment",
+  "infrastructure_retries": 2,
+  "initialize": "from scratch; identical per-seed shared parameters for all variants; the depth bypass starts at zero without consuming the RNG",
+  "learning_rate": 0.001,
+  "lr_schedule": "constant",
+  "min_free_gpu_mib": 3072,
+  "num_threads": 1,
+  "optimizer": "Adam",
+  "parallel_workers": 3,
+  "precision": "FP32",
+  "primary_contrast": "DEPTH_GAIN = AbsRel(C0 dense+surface) - AbsRel(C1 depth+surface)",
+  "primary_method": "C1",
+  "primary_pair": [
+    "C0",
+    "C1"
+  ],
+  "sampling": "seeded scene permutation cycled; primary query slot cycles per scene visit; uniform with-replacement rays, identical indices for A/B and all variants",
+  "secondary_contrast": "SURFACE_WITH_DEPTH_GAIN = AbsRel(C2) - AbsRel(C1); descriptive only",
+  "seed_handling": "all seeds equally weighted within scene; each seed reported",
+  "seeds": [
+    20260928,
+    20260929,
+    20260930
+  ],
+  "statistics": "frozen V2 estimator (geometry_carrier_statistics); its SURFACE_* fields denote the primary C0-C1 contrast, i.e. DEPTH in V5",
+  "steps": 2000,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "train_targets": "TRAIN primary_query2 RGB+ray-distance depth; never carrier input",
+  "variant_specs": {
+    "C0": {
+      "depth": false,
+      "label": "DENSE_SURFACE",
+      "loss": "C1"
+    },
+    "C1": {
+      "depth": true,
+      "label": "DEPTH_SURFACE",
+      "loss": "C1"
+    },
+    "C2": {
+      "depth": true,
+      "label": "DEPTH_NO_SURFACE",
+      "loss": "C0"
+    }
+  },
+  "variants": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "weight_decay": 0,
+  "writer_updates": false
+}

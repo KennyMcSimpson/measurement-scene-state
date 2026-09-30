@@ -1,0 +1,15 @@
+{
+  "summary": "610 passed, 1 skipped",
+  "command": ".venv/bin/pytest -q",
+  "seconds": 25.4,
+  "skip_reason": "Optional historical V5 step-4500 checkpoint not distributed",
+  "lint": "All checks passed!\n",
+  "new_tests": 28,
+  "new_test_files": [
+    "tests/test_static_rgb_audit.py",
+    "tests/test_static_geometry.py",
+    "tests/test_static_unseen.py",
+    "tests/test_static_residual.py",
+    "tests/test_static_evaluation.py"
+  ]
+}

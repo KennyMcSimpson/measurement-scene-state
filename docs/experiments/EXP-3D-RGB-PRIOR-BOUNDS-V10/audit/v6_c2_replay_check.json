@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "purpose": "the V10 RGB-only code path (dense 16^3 carrier, V10 build_state and training_loss, RGB_ONLY SceneData with the frozen V2 prior) replays the first V6 C2 training steps (seed 20260928, TRAIN72) bit-for-bit",
+  "rows": [
+    {
+      "step": 1,
+      "scene_v10": "ai_005_006",
+      "scene_v6": "ai_005_006",
+      "loss_v10": 1.3287794589996338,
+      "loss_v6": 1.3287794589996338,
+      "match": "EXACT"
+    },
+    {
+      "step": 2,
+      "scene_v10": "ai_043_005",
+      "scene_v6": "ai_043_005",
+      "loss_v10": 1.4244227409362793,
+      "loss_v6": 1.4244227409362793,
+      "match": "EXACT"
+    },
+    {
+      "step": 3,
+      "scene_v10": "ai_054_006",
+      "scene_v6": "ai_054_006",
+      "loss_v10": 1.06282377243042,
+      "loss_v6": 1.06282377243042,
+      "match": "EXACT"
+    }
+  ],
+  "code_sha256": {
+    "src/mcss/mechanism_pilot/rgb_prior_bounds_carrier.py": "25fbd41e792771c2e48d696a92e07ad444a2d84b3c79954fe5d85abb90c62c40",
+    "src/mcss/mechanism_pilot/rgbd_resolution_carrier.py": "f661c0a0c9dcdb872471e491585a5d17ecf695db5fecd057d647bab9f8eec4c5",
+    "src/mcss/mechanism_pilot/geometry_carrier_experiment.py": "dd440a78aad5e251fcaf9987154c362fe9222a536f4c27fcfc2e71254800246f",
+    "/tmp/claude_v10_repro_check.py": "025ef6833182e6fec65df5d7012828c56ab7a2bcc4c8058fba1b5f65cd21e13d"
+  },
+  "v6_log": "outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/checkpoints/C2_20260928/training.jsonl",
+  "reads": "TRAIN72 media only (context RGB/cameras; query RGB+depth targets); no DEV, FRESH or protected scene",
+  "written_before_v10_freeze": true
+}

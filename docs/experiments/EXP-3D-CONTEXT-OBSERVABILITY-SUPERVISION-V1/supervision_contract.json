@@ -1,0 +1,37 @@
+{
+  "behind_surface": "UNKNOWN_NOT_EMPTY",
+  "bounds": "EXACT_PREVIOUS_FROZEN_GT_FREE_BOUNDS",
+  "budget": 10000,
+  "context_only": true,
+  "controls": {
+    "spatial_shuffle": "S3 joint spatial permutation all state fields, fixed seed20260927",
+    "wrong_scene": "all S0-S3, cyclic sorted scene donor matching role/variant; recipient camera unchanged",
+    "zero": "S3 density_logits=-1e6,color=0,geometry/bounds/camera unchanged"
+  },
+  "fixed_final_not_objective_selected": true,
+  "free_loss": "Per valid context-depth ray: mean alpha over t < depth-tau; empty sample subset gives0. Average over ALL valid context-depth rays including rays missing bounds. No post-surface free-space labels.",
+  "grid": 16,
+  "init": "old DirectState density_logits=-2 color_logits=0 logvariance=-3",
+  "old_loss_retained": true,
+  "primary": "S3_PREDECLARED_NOT_HINDSIGHT_BEST",
+  "query_GT_allowed_in_loss": false,
+  "samples": 64,
+  "sampling": "same old seed per scene|role|RGBD and local torch.Generator; same 1024 randint indices per step across all variants; SHA256 full little-endian int64 index stream",
+  "selection": "FIXED_BUDGET",
+  "smoke": "Synthetic engineering stability/gradient/equivalence only; fixed .1/.1 defaults, no real query tuning",
+  "surface_loss": "Mean -log(sum weights where abs(t-depth)<=tau +1e-8) only over valid-depth hit rays with >=1 band sample. Out-of-bounds/empty-band rays excluded from this additional term only and counted; all retained in RGB/rendered-depth task loss and overall evaluation.",
+  "tau_surface": ".5 * L2norm((bounds_max-bounds_min)/16); physical voxel spacing matches existing renderer/regularizer",
+  "variants": {
+    "S0": "RENDER_ONLY",
+    "S1": "FREE_SPACE",
+    "S2": "SURFACE",
+    "S3": "FREE_SPACE_PLUS_SURFACE"
+  },
+  "weight_search": false,
+  "weights": {
+    "epsilon": 1e-08,
+    "lambda_free": 0.1,
+    "lambda_surface": 0.1
+  },
+  "weights_selected_from_query": false
+}

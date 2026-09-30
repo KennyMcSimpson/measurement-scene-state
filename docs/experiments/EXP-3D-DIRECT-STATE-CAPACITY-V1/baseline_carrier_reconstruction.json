@@ -1,0 +1,643 @@
+{
+  "carrier_training": false,
+  "checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+  "checkpoint_unchanged": true,
+  "final_holdout_loaded": false,
+  "prior": "Frozen analytic rgb=0.5 depth=5 opacity=1, already replayed exactly in136row baseline; no carrier state exists for this prior.",
+  "query_GT_or_camera_loaded": false,
+  "reconstructed_states": 51,
+  "rows": [
+    {
+      "actual_state_hash": "30a065a56be0b9372c3155a2ee6538f1c17db541ab2495e1b3862e8244c6e1b1",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        1,
+        2
+      ],
+      "previous_state_hash": "30a065a56be0b9372c3155a2ee6538f1c17db541ab2495e1b3862e8244c6e1b1",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_004_001"
+    },
+    {
+      "actual_state_hash": "904983901c062fb47810d517cad50595feae279295bf97fcc404d17bf7bae6a0",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        3,
+        10
+      ],
+      "previous_state_hash": "904983901c062fb47810d517cad50595feae279295bf97fcc404d17bf7bae6a0",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_004_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_004_001"
+    },
+    {
+      "actual_state_hash": "16906f224f5ddd610b38b75b2efb363608fe3a86338857cc9f20dad1212ef9fb",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        4,
+        12
+      ],
+      "previous_state_hash": "16906f224f5ddd610b38b75b2efb363608fe3a86338857cc9f20dad1212ef9fb",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_006_001"
+    },
+    {
+      "actual_state_hash": "b7937e56d8c8fc2faf7c5b4bb8b6ed8230bf4e11148fece19627e8b3681d16e0",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        8,
+        11
+      ],
+      "previous_state_hash": "b7937e56d8c8fc2faf7c5b4bb8b6ed8230bf4e11148fece19627e8b3681d16e0",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_006_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_006_001"
+    },
+    {
+      "actual_state_hash": "705e4d7d62aacbdacc85fd0655c2d485ae2fd28b9dc700f5539c6e27ea485dca",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        6,
+        9
+      ],
+      "previous_state_hash": "705e4d7d62aacbdacc85fd0655c2d485ae2fd28b9dc700f5539c6e27ea485dca",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_007_002"
+    },
+    {
+      "actual_state_hash": "824fe0322b191d7f8cef21e300196e652a214b3f591258c1d2807c03a124abae",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        8,
+        11
+      ],
+      "previous_state_hash": "824fe0322b191d7f8cef21e300196e652a214b3f591258c1d2807c03a124abae",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_007_002"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_007_002"
+    },
+    {
+      "actual_state_hash": "207c9ee857e02a37e70f0f6c6b8e7c83d68b7cbb4f19d870ee8c5af07a596b7e",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        4,
+        5
+      ],
+      "previous_state_hash": "207c9ee857e02a37e70f0f6c6b8e7c83d68b7cbb4f19d870ee8c5af07a596b7e",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_008_001"
+    },
+    {
+      "actual_state_hash": "385960356f4921e49394b263ad7b75f4eef15eda8bd9191fb10e9eac13681c35",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        6,
+        8
+      ],
+      "previous_state_hash": "385960356f4921e49394b263ad7b75f4eef15eda8bd9191fb10e9eac13681c35",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_008_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_008_001"
+    },
+    {
+      "actual_state_hash": "98f780f2481eb2a40beb580a8f07147ac0e6be0dab72a2b8bf6f631bcae3227d",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        1,
+        2
+      ],
+      "previous_state_hash": "98f780f2481eb2a40beb580a8f07147ac0e6be0dab72a2b8bf6f631bcae3227d",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_009_001"
+    },
+    {
+      "actual_state_hash": "1e2e8bd6723b1d8cd07e24b051c29d79e848eb48a297a47112a1909996748e88",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        3,
+        5
+      ],
+      "previous_state_hash": "1e2e8bd6723b1d8cd07e24b051c29d79e848eb48a297a47112a1909996748e88",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_009_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_009_001"
+    },
+    {
+      "actual_state_hash": "e10b7b3518d6c5e29d8e0d804f90eff3e702f23c86938af7ca0d56eac9fe095a",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        7,
+        10
+      ],
+      "previous_state_hash": "e10b7b3518d6c5e29d8e0d804f90eff3e702f23c86938af7ca0d56eac9fe095a",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_010_001"
+    },
+    {
+      "actual_state_hash": "e97d0e236ffd06207105aaf3ecab746a80ee2dae4b0677cdcf169b001a2089ae",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        8,
+        11
+      ],
+      "previous_state_hash": "e97d0e236ffd06207105aaf3ecab746a80ee2dae4b0677cdcf169b001a2089ae",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_010_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_010_001"
+    },
+    {
+      "actual_state_hash": "caaea4acf4dcf4ee798cd5ff5f0557dfcf3d9f87206f1b203550a66709e4d322",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        2,
+        3
+      ],
+      "previous_state_hash": "caaea4acf4dcf4ee798cd5ff5f0557dfcf3d9f87206f1b203550a66709e4d322",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_011_001"
+    },
+    {
+      "actual_state_hash": "d0b49dde47351020d3a311cfd6ed370c2e79606b8596b5e64976a9dc115e2f3f",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        8,
+        10
+      ],
+      "previous_state_hash": "d0b49dde47351020d3a311cfd6ed370c2e79606b8596b5e64976a9dc115e2f3f",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_011_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_011_001"
+    },
+    {
+      "actual_state_hash": "9e4cb9be35a2955258fd47beb457dac4ef1dfb2ceeeb98a7a0f6cb4876c96ee3",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        1,
+        9
+      ],
+      "previous_state_hash": "9e4cb9be35a2955258fd47beb457dac4ef1dfb2ceeeb98a7a0f6cb4876c96ee3",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_012_001"
+    },
+    {
+      "actual_state_hash": "cfd13fa32752b1ede5a18a7a466f386cac0b088afb2d80196fc5fcef093d89ea",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        3,
+        4
+      ],
+      "previous_state_hash": "cfd13fa32752b1ede5a18a7a466f386cac0b088afb2d80196fc5fcef093d89ea",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_012_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_012_001"
+    },
+    {
+      "actual_state_hash": "fd0afc193a73f2cbd1124de80f974efc3bf5d43fb9a561aea02aa97f789e11a0",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        3,
+        7
+      ],
+      "previous_state_hash": "fd0afc193a73f2cbd1124de80f974efc3bf5d43fb9a561aea02aa97f789e11a0",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_014_003"
+    },
+    {
+      "actual_state_hash": "828f4e1daf45b2abd09a81379e829dcd80d39ce4a373e02070efe86aa30097b8",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        4,
+        5
+      ],
+      "previous_state_hash": "828f4e1daf45b2abd09a81379e829dcd80d39ce4a373e02070efe86aa30097b8",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_014_003"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_014_003"
+    },
+    {
+      "actual_state_hash": "86cc0c05214586eb8770143c97867e1faa0f4775ef9748cc6b6baf9700a194c4",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        3,
+        10
+      ],
+      "previous_state_hash": "86cc0c05214586eb8770143c97867e1faa0f4775ef9748cc6b6baf9700a194c4",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_016_002"
+    },
+    {
+      "actual_state_hash": "922c94f6116eccc545ed209b7b7f57cd7856fbe60f19a9e1cba5f590b818529e",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        4,
+        9
+      ],
+      "previous_state_hash": "922c94f6116eccc545ed209b7b7f57cd7856fbe60f19a9e1cba5f590b818529e",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_016_002"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_016_002"
+    },
+    {
+      "actual_state_hash": "00e5286bce395f69d1aadc21522f2b124aeb03768f0a66883f8154476c4eb2ed",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        1,
+        7
+      ],
+      "previous_state_hash": "00e5286bce395f69d1aadc21522f2b124aeb03768f0a66883f8154476c4eb2ed",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_018_002"
+    },
+    {
+      "actual_state_hash": "6459d93597f201d3259e234533f90caa543328efb55c8f3a6d96a5712560d3c8",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        6,
+        8
+      ],
+      "previous_state_hash": "6459d93597f201d3259e234533f90caa543328efb55c8f3a6d96a5712560d3c8",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_018_002"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_018_002"
+    },
+    {
+      "actual_state_hash": "ab94f24f61cd02a1ecfffd125026238a04e0f36d7f95ec44cd48cb1d234ece39",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        6,
+        7
+      ],
+      "previous_state_hash": "ab94f24f61cd02a1ecfffd125026238a04e0f36d7f95ec44cd48cb1d234ece39",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_021_002"
+    },
+    {
+      "actual_state_hash": "3fbcad806eea97f1df19cb69788e062dec4056b95912fac9e814f6cf5acb234c",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        12,
+        13
+      ],
+      "previous_state_hash": "3fbcad806eea97f1df19cb69788e062dec4056b95912fac9e814f6cf5acb234c",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_021_002"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_021_002"
+    },
+    {
+      "actual_state_hash": "e5813fb05f5ffcff3692c3cfc9a4233a2a5ddd1c6544e21fbca5f95452ea7270",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        4,
+        5
+      ],
+      "previous_state_hash": "e5813fb05f5ffcff3692c3cfc9a4233a2a5ddd1c6544e21fbca5f95452ea7270",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_028_001"
+    },
+    {
+      "actual_state_hash": "ff569ad8f1f5c6e56598c704f0b16480795060787e53ff04893b55e890ba444a",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        8,
+        13
+      ],
+      "previous_state_hash": "ff569ad8f1f5c6e56598c704f0b16480795060787e53ff04893b55e890ba444a",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_028_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_028_001"
+    },
+    {
+      "actual_state_hash": "5fe544e1e00ae60350a384e143c751c29fdd58b6b2afb10cac272e5c5991de0c",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        1,
+        5
+      ],
+      "previous_state_hash": "5fe544e1e00ae60350a384e143c751c29fdd58b6b2afb10cac272e5c5991de0c",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_030_002"
+    },
+    {
+      "actual_state_hash": "413c95508b8bc7c092ee3864129118d38534b16757c2cc1c601e1a100f26ca1c",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        2,
+        3
+      ],
+      "previous_state_hash": "413c95508b8bc7c092ee3864129118d38534b16757c2cc1c601e1a100f26ca1c",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_030_002"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_030_002"
+    },
+    {
+      "actual_state_hash": "8992210146d819818c9bdb48d82059f9b900617fc018ad885fb48f982fd96017",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        3,
+        9
+      ],
+      "previous_state_hash": "8992210146d819818c9bdb48d82059f9b900617fc018ad885fb48f982fd96017",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_032_001"
+    },
+    {
+      "actual_state_hash": "f5a536ef64bbd85183fcaf674c22e9210e01a9f68522760f4d5ebfa39af1cca2",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        4,
+        5
+      ],
+      "previous_state_hash": "f5a536ef64bbd85183fcaf674c22e9210e01a9f68522760f4d5ebfa39af1cca2",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_032_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_032_001"
+    },
+    {
+      "actual_state_hash": "23283abad9a10103d56c213e2f245fd1e126885f4316aa3561ee1ba67c1da88d",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        5,
+        6
+      ],
+      "previous_state_hash": "23283abad9a10103d56c213e2f245fd1e126885f4316aa3561ee1ba67c1da88d",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_034_001"
+    },
+    {
+      "actual_state_hash": "146840b5f26462a91042cea4b7b4d0d813ac4dccafb69c6b56bff28d76f254a5",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        9,
+        12
+      ],
+      "previous_state_hash": "146840b5f26462a91042cea4b7b4d0d813ac4dccafb69c6b56bff28d76f254a5",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_034_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_034_001"
+    },
+    {
+      "actual_state_hash": "b6137fdb6f91e1c2a982e8b38ca24e8e4d12d0a6c8b1a96b4f51b665b5cdff1a",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        2,
+        3
+      ],
+      "previous_state_hash": "b6137fdb6f91e1c2a982e8b38ca24e8e4d12d0a6c8b1a96b4f51b665b5cdff1a",
+      "query_access": false,
+      "role": "A",
+      "scene_id": "ai_036_001"
+    },
+    {
+      "actual_state_hash": "7190e2808fd6aead8c1757dfc33ae25a6b27906d9d16c31b74131057f34ff5ab",
+      "exact": true,
+      "observed_frame_ids": [
+        0,
+        4,
+        5
+      ],
+      "previous_state_hash": "7190e2808fd6aead8c1757dfc33ae25a6b27906d9d16c31b74131057f34ff5ab",
+      "query_access": false,
+      "role": "B",
+      "scene_id": "ai_036_001"
+    },
+    {
+      "actual_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "exact": true,
+      "observed_frame_ids": [
+        0
+      ],
+      "previous_state_hash": "25e7ce68031d5867bbb613e3b7228d9bf8f618f0db84180495451bea5f8b774a",
+      "query_access": false,
+      "role": "anchor",
+      "scene_id": "ai_036_001"
+    }
+  ],
+  "status": "PASS",
+  "writer_instantiated": false,
+  "writer_invoked": false
+}

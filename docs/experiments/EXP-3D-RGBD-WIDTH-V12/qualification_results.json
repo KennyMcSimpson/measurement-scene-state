@@ -1,0 +1,25 @@
+{
+  "DEV_does_not_establish_final_static_qualification": true,
+  "DYNAMIC_TTT_NEXT_STAGE_ALLOWED": false,
+  "FINAL_STATIC_STATUS": "NOT_ESTABLISHED",
+  "FRESH_QUALIFICATION_INDEPENDENCE": "BLOCKED_INDEPENDENCE_UNRESOLVED",
+  "FRESH_QUALIFICATION_OPENED": false,
+  "SEED_ROBUSTNESS": "NOT_ESTABLISHED",
+  "STATIC_DEV_STATUS": "NOT_ESTABLISHED",
+  "SURFACE_TRAINING_STATUS": "NOT_ESTABLISHED",
+  "static_checks": {
+    "full_context_mean_ci_scene_consistency": false,
+    "shared_sealed_state_integrity": true,
+    "static_opacity_artifact_gate": false,
+    "wrong_scene_ci_positive": true
+  },
+  "surface_checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "opacity_artifact_gate": false,
+    "positive_top1_share_at_most_0_5": true,
+    "spatial_shuffle_ci_positive": true,
+    "state_integrity": true,
+    "wrong_scene_ci_positive": true
+  }
+}

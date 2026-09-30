@@ -1,0 +1,32 @@
+{
+  "bounds_rule": "CONTEXT_DEPTH (the V7 C1 and V9 rule, from the warmup context only)",
+  "carrier_qualification": "V9 carriers are DEV-round successors of the V7 C1 recipe (QUALIFIED on FRESH-V2); they are not independently qualified",
+  "carrier_variant": "C1",
+  "carriers": {
+    "20260928": {
+      "carrier_trainable_parameters": 0,
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/checkpoints/C1_20260928/step_004000.pt",
+      "sha256": "dd28ae2d945dc8dc664ba1f45d01d62c86017f9dc0dcf719c2c527fecbd2e12f",
+      "step": 4000,
+      "write_rule_parameters": 528
+    },
+    "20260929": {
+      "carrier_trainable_parameters": 0,
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/checkpoints/C1_20260929/step_005000.pt",
+      "sha256": "7744cd32cb7dfd416ac18d85d95697ec488f6aedc62bc53b0d2d77428d5d9cb5",
+      "step": 5000,
+      "write_rule_parameters": 528
+    },
+    "20260930": {
+      "carrier_trainable_parameters": 0,
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/checkpoints/C1_20260930/step_004000.pt",
+      "sha256": "9201838cae05e39314f4067a7e6cc3dfe433e89258248b56e7d46ddb4d046355",
+      "step": 4000,
+      "write_rule_parameters": 528
+    }
+  },
+  "qualification_results_sha256": "1a366785e3cd3d8f2fde4bd68d18d10d6df87d2faf80cd7cabd0b0aefab3e9d3",
+  "slow_carrier_updated": false,
+  "source": "sealed V9 C1 per-seed DEV selections, chosen by PLAN_BEFORE_V9_RESULTS.md (sha256 42c83ceca313ba4debe8befb9f5daaf06293978a912dea5fa6f23cd55a9b414a): V9 C1 if the V9 VIEWCOUNT_GAIN point estimate is >0, else V9 C0; VIEWCOUNT_GAIN=0.00194683660766561",
+  "v9_preregistration_sha256": "565f7750c4a76eb93358a8d869c62e918746caeb580f777d29c315008daad7d0"
+}

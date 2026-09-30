@@ -1,0 +1,76 @@
+{
+  "all_steps_finite": true,
+  "bounds": [
+    [
+      -2.0,
+      -2.0,
+      0.10000000149011612
+    ],
+    [
+      2.0,
+      2.0,
+      4.0
+    ]
+  ],
+  "config": {
+    "batch_rays": 8,
+    "checkpoint_interval": 100,
+    "density_l2_weight": 1e-05,
+    "depth_weight": 1.0,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.03,
+    "rgb_weight": 1.0,
+    "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE",
+    "steps": 100,
+    "tv_weight": 0.0001
+  },
+  "engineering_fixture": true,
+  "epsilon": 1e-08,
+  "final_context_metrics": {
+    "alpha_one_fraction": 0.0,
+    "alpha_zero_fraction": 0.0,
+    "context_objective": 0.003045073535759002,
+    "empty_band_hit_rays": 0,
+    "free_empty_rays": 0,
+    "free_samples": 100,
+    "loss_depth": 0.003038167953491211,
+    "loss_free": 0.0057751783169806,
+    "loss_rgb": 1.7572424440004397e-06,
+    "loss_surface": 1.9069018363952637,
+    "opacity": 0.765690803527832,
+    "regularization": 5.148339823790593e-06,
+    "render_objective": 0.003045073535759002,
+    "step": 100,
+    "surface_eligible_rays": 4,
+    "surface_samples": 25,
+    "valid_depth_rays": 4,
+    "valid_hit_rays": 4,
+    "valid_miss_rays": 0
+  },
+  "frame_ids": [
+    0
+  ],
+  "grid": 16,
+  "initial_state_hash": "8e8d0d44d9338f301fee6e59ac07abb9fcafc5c20927ffb8e1c4438727100b77",
+  "lambda_free": 0.1,
+  "lambda_surface": 0.1,
+  "peak_cuda_allocated_bytes": 9331712,
+  "peak_cuda_reserved_bytes": 23068672,
+  "query_access": false,
+  "query_selection": false,
+  "ray_stream_encoding": "step order, little-endian int64 flattened sampled indices",
+  "ray_stream_sha256": "dc68a2c1edead6f7a321ddde689091f41904d7208de1cc8f36b4f7bc7042028c",
+  "sampled_ray_count": 800,
+  "samples": 64,
+  "seconds": 0.6908046969911084,
+  "seed": 20260927,
+  "selected_step": 100,
+  "selection": "FIXED_BUDGET",
+  "state_file_sha256": "0fd8ecef3d6cc85c7435bbe2b4d78e5af838afa34f4567605846d877f13afa43",
+  "state_hash": "5e37b2be6bc41cb00b36de60e51cb356d40afb9bf0ff2d4afa6c0f5dfdf8d1c9",
+  "status": "PASS",
+  "steps_completed": 100,
+  "supervision": "CONTEXT_ONLY_RGBD",
+  "tau_surface": 0.21471728384494781,
+  "variant": "S0"
+}

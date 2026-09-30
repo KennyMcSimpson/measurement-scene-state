@@ -1,0 +1,48 @@
+[
+  {
+    "data_ray_stream_sha256": "caac8b4b3027307b1055cf417b159b97aecc7d18ef1a2343f34edc3ec979041d",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_state_dict_hash": "ed7e2c2f995ffa3548718156b973e6e5c0a84ef2d041c97b5b127b85fc34546c",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": null,
+    "peak_cuda_reserved_bytes": null,
+    "preregistration_sha256": "31692d88e57fc426d9b0cda503662785117e9bbf4a7c22247f3fc60576f56d06",
+    "seed": 20260928,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/audit/synthetic_full_pipeline/checkpoints/C0_20260928/step_000002.pt",
+      "checkpoint_sha256": "a9019c5a280fa4ece578a56de6d1ba21e83dc0167957f14c986cc7707422180a",
+      "dev_query_absrel": 0.42910218611359596,
+      "selected_step": 2,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 2,
+    "variant": "C0",
+    "wall_seconds": 2.517214878986124,
+    "writer_updates": false
+  },
+  {
+    "data_ray_stream_sha256": "d0f084bf3b1cdaa3a3a335be509d6d7e2e8be9370339c386a7d7dce676f6846c",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_state_dict_hash": "456d8400427301b9953751acb660c56c2c6728fedddddba97acdbf256766c7c8",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": null,
+    "peak_cuda_reserved_bytes": null,
+    "preregistration_sha256": "31692d88e57fc426d9b0cda503662785117e9bbf4a7c22247f3fc60576f56d06",
+    "seed": 20260929,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/audit/synthetic_full_pipeline/checkpoints/C0_20260929/step_000002.pt",
+      "checkpoint_sha256": "605a787dfb1928c3587b53828c9a27b57a652a1ba63fbf322cfc9f7f236e7c91",
+      "dev_query_absrel": 0.42142731401448447,
+      "selected_step": 2,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 2,
+    "variant": "C0",
+    "wall_seconds": 2.5025853269617073,
+    "writer_updates": false
+  }
+]

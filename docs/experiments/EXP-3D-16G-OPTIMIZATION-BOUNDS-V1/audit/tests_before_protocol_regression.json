@@ -1,0 +1,31 @@
+{
+  "analysis_source_lock_unchanged": true,
+  "collected": 753,
+  "command": ".venv/bin/pytest -q",
+  "exit_code": 0,
+  "failed": 0,
+  "frozen_optimizer_modified_during_testing": false,
+  "log_path": "outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/full_pytest.log",
+  "log_sha256": "9e328d8a5c48ea03618f79776e5c11daf46e7c61fec3f272b52f48107249191b",
+  "new_statistics_synthetic_tests": {
+    "command": ".venv/bin/pytest -q tests/test_optimization_bounds_statistics.py",
+    "failed": 0,
+    "passed": 20
+  },
+  "passed": 752,
+  "platform": "Linux-6.11.0-13-generic-x86_64-with-glibc2.40",
+  "pytest_reported_seconds": 40.28,
+  "python": "3.12.7 (main, Nov  6 2024, 18:29:01) [GCC 14.2.0]",
+  "recorded_utc": "2026-09-27T17:43:21.847481+00:00",
+  "ruff": {
+    "command": ".venv/bin/ruff check src/mcss/mechanism_pilot/optimization_bounds_statistics.py scripts/analyze_optimization_bounds.py tests/test_optimization_bounds_statistics.py",
+    "status": "PASS"
+  },
+  "shell_command": ".venv/bin/pytest -q > outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/full_pytest.log 2>&1",
+  "skip_reasons": [
+    "SKIPPED [1] tests/test_v5_checkpoint_compatibility.py:15: Optional historical V5 step-4500 checkpoint is not distributed in the public repository; restore the original checkpoint to run strict compatibility checks"
+  ],
+  "skipped": 1,
+  "status": "PASS",
+  "working_directory": "/home/zonghan/measurement-scene-state"
+}

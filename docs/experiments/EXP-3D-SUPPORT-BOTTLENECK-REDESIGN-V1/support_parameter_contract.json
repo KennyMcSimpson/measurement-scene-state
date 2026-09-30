@@ -1,0 +1,143 @@
+{
+  "schema": "mcss.support_redesign.parameter_contract.v1",
+  "checkpoint_schema": "mcss.dynamic.v1",
+  "classes_are_not_mutually_exclusive": true,
+  "runtime_only": [
+    {
+      "parameters": [
+        "observation_cache",
+        "episode fast offsets fixed zero",
+        "shared anchor transform",
+        "query cameras at fixed evaluator only"
+      ],
+      "meaning": "Can change with legal arrived observations under frozen support rule. This does not authorize query conditioning of scene construction."
+    }
+  ],
+  "architecture_coupled": [
+    {
+      "parameters": [
+        "grid_size=(8,8,8)",
+        "token_count=128",
+        "candidate IDs unique within 0..511",
+        "feature_dim=8",
+        "hidden_dim=8",
+        "expansion_dim=16",
+        "statistics_dim=23"
+      ],
+      "meaning": "Fixed representation/sampling budget and typed tensor topology. Some grid/token changes happen to fit the same learned matrix dimensions but still alter declared state architecture, compute, and experiment definition; forbidden for same-architecture diagnostic."
+    }
+  ],
+  "training_distribution_coupled": [
+    {
+      "parameters": [
+        "local_bounds_m",
+        "candidate allocation/IDs and ordering",
+        "normalized_xyz geometry features",
+        "context selection/exposure pattern",
+        "camera-derived near/far constants"
+      ],
+      "meaning": "Representable at runtime with compatible shapes, but learned projections/convolutions were trained with a specific spatial/exposure distribution. Frozen-carrier results are out-of-distribution DIAGNOSTIC ONLY; a promising deployable redesign requires matched retraining before a fair method conclusion."
+    }
+  ],
+  "runtime_geometry_buffers": {
+    "_bounds": {
+      "shape": [
+        1,
+        2,
+        3
+      ],
+      "purpose": "Metric support for typed state and fixed renderer. Must match declared bounds."
+    },
+    "_candidate_ids": {
+      "shape": [
+        128
+      ],
+      "dtype": "int64",
+      "purpose": "Unique flattened D,H,W cell IDs; determines scatter and gather location in dense feature volume."
+    },
+    "_candidate_points": {
+      "shape": [
+        128,
+        3
+      ],
+      "purpose": "Actual metric lifting points corresponding EXACTLY to the same IDs cell centers; moving points without scatter-location change is not a coherent oracle."
+    },
+    "_candidate_normalized_xyz": {
+      "shape": [
+        128,
+        3
+      ],
+      "purpose": "2*cell_center_fraction-1, used in per-candidate observed feature statistics. Must be rebuilt with IDs."
+    }
+  },
+  "consistency_equations": [
+    "d=id//(H*W); h=(id//W)%H; w=id%W",
+    "fraction_xyz=((w+.5)/W,(h+.5)/H,(d+.5)/D)",
+    "candidate_points=bounds_min+fraction_xyz*(bounds_max-bounds_min)",
+    "candidate_normalized_xyz=2*fraction_xyz-1",
+    "scatter and gather must use the exact same ordered IDs as feature lifting"
+  ],
+  "checkpoint_loading": {
+    "old_checkpoint_immutable": true,
+    "strict_loader_checks": "checkpoint.py reconstructs original deterministic evenly spaced IDs and validates all four geometry buffers against CarrierConfig before state_dict loading.",
+    "bounds_change": "Construct diagnostic geometry coherently; never copy old geometric buffers over a carrier whose config says different bounds.",
+    "allocation_change": "Arbitrary selected IDs cannot roundtrip under current mcss.dynamic.v1 loader. Do not loosen old loader or pretend modified geometry is the old B-final. Use a separately declared runtime diagnostic adapter/manifest; redesigned saved carrier requires a schema representing its allocation contract.",
+    "learned_parameters": "All carrier learned tensors, including frozen CNN, projections, refinement and typed heads, must remain byte-identical in oracle diagnostics."
+  },
+  "oracle_preseal_exception": {
+    "required_by_user_section": "4.1 explicitly authorizes primary query GT surfaces for offline oracle bounds; 26.12 says query GT only after seal. The former is a necessary narrow exception for oracle construction.",
+    "oracle_only": true,
+    "allowed_roles": [
+      "REDESIGN_DEV_EXPOSED",
+      "REDESIGN_DEV"
+    ],
+    "denied_roles": [
+      "FINAL_QUALIFICATION_HOLDOUT"
+    ],
+    "allowed_inputs": "Predeclared context/query camera and metric GT depth solely for oracle geometry selection; no task prediction/loss/ranking selection.",
+    "required_log": "Separate oracle_geometry_preseal_GT_access events before state seal. Do not report SEALED_QUERY_LEAKAGE=false as if oracle were deployable.",
+    "deployable_rule": "R0/R1/R2/R3 and their combinations may use only arrived RGB/cameras/frozen features plus TRAIN-frozen global constants; query GT permitted only post-state-seal evaluation.",
+    "test12_scope": "Strict postseal query GT test applies to all deployable paths; a separate test verifies whitelist-scoped oracle exception and final-holdout denial."
+  },
+  "fixed_budget_oracle_design_recommendations": {
+    "factorial_rows": [
+      "CURRENT",
+      "ORACLE_VOLUME_ONLY",
+      "ORACLE_SUPPORT_ONLY",
+      "ORACLE_VOLUME_PLUS_SUPPORT"
+    ],
+    "volume": "Use one deterministic scene-level query-GT AABB with a frozen numerical padding/minimum extent; same bounds for A/B/anchor to isolate context contribution. Report center, extent, voxel sizes, physical volume and surface-inside fraction. Same 512 cells does not mean unchanged metric resolution/physical support.",
+    "candidate_pool": "All 512 legal cell centers of the chosen volume. Rank using a locked depth-consistent context support/surface-distance rule with deterministic ID ties, select 128 unique IDs; never insert arbitrary off-grid points that scatter elsewhere.",
+    "same_context_geometry": "Prefer a scene-shared oracle geometry computed once with explicitly logged labels and applied equally to A/B/anchor. If allocation differs by context, name and report that extra factor; do not hide it in full-versus-anchor.",
+    "scarcity": "If fewer than128 eligible centers exist, retain candidate count by locked geometry-only fallback, report useful counts and padded unsupported counts; never claim all128 supported.",
+    "surface_visibility": "At-least-two frusta is not occlusion visibility. Report separate depth-consistency test and neighborhood distance with fixed tolerance/radius.",
+    "wrong_scene": "Keep target query camera unchanged. Wrong-scene state brings its donor bounds/geometry; log both since changing geometry as well as content broadens the attribution.",
+    "retraining": "Promising shape-compatible support changes still alter training distribution. Matched same3-scene/current-versus-redesign, same seeds/steps/loss/optimizer/selection is needed; keep source-black ai003.",
+    "negative_result_limit": "If combined oracle still fails to supply adequate actual surface/two-view support at fixed8^3/128, failure cannot establish ideal-support impossibility. Mark tested intervention insufficient or INCONCLUSIVE, not all-support mechanisms disproved."
+  },
+  "frozen_for_this_task": [
+    "all old src/docs/outputs",
+    "old carrier and trained residual checkpoint",
+    "renderer",
+    "zero fast offsets",
+    "all observation/query role locks"
+  ],
+  "dynamic_ttt_permitted": false,
+  "source_files": {
+    "src/mcss/dynamic/carrier.py": "8e667a914b19dc674f5109ca575e1dfa46d08b869cfa103807a98fdab573bce2",
+    "src/mcss/dynamic/config.py": "2bb94a0bcfc384f22bcad9454fafc7d21db4699cca7e9b73ff365880efe34fc9",
+    "src/mcss/dynamic/checkpoint.py": "0c021a697a5ddd017722d70e287f8e439d08d55386da9a786f19f12cfcc79ce5",
+    "src/mcss/dynamic/lifting.py": "e46ebbc320a4a3e2ce1f8726ad62aaf1803fb93a81e05a1068feb71958f5a2dc"
+  },
+  "declared_oracle_implementation_review": {
+    "status": "ACCEPTABLE_AS_EXPLICIT_DIAGNOSTIC_NOT_DEPLOYABLE",
+    "candidate_pool": "512 legal voxel centers, 128 unique IDs, points/normalized/IDs/bounds synchronized",
+    "volume_rule": "Query GT surface AABB, minimum metric extent1m and fixed5%padding; log volume and voxel resolution changes",
+    "allocation_rule": "Per-context ordering: >=2-frustum eligibility, nearest observed GT surface distance, viewcount/ID deterministic tie-break",
+    "per_context_allocation_limit": "Allocation varies with context and its observed GT. Full-context-vs-anchor therefore tests context plus its oracle-dependent geometry, not isolated context evidence under shared fixed geometry; this must be explicit. It remains allowed as the requested oracle candidate-support diagnostic.",
+    "adequacy_rule_pre_model": "Combined >=2-view fraction mean>=0.9 AND query-GT neighborhood support>=0.75 AND inside fraction>=0.999, frozen before model scores. Record both macro and per-scene/context adequacy to avoid hiding weak subsets.",
+    "failed_adequacy_interpretation": "INCONCLUSIVE_SUPPORT_NOT_FULLY_REPAIRED; stop rather than expand geometry search. No ideal-support impossibility or universal representation incapability claim.",
+    "adequate_but_failed_task_interpretation": "Tested fixed8^3/128 frozen trained representation fails even this adequate intervention; training-distribution mismatch and representation remain entangled.",
+    "holdout": "Never apply this oracle to FINAL_HOLDOUT."
+  }
+}

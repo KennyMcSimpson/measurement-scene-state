@@ -1,0 +1,20 @@
+{
+  "bootstrap": {
+    "ci": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "physical scene"
+  },
+  "dynamic_ttt_next_stage_allowed": false,
+  "empty_mask": "null conditional error, coverage disclosed; full primary scene stays",
+  "final_static_status_if_no_fresh": "NOT_ESTABLISHED",
+  "fresh_open_gate": "SURFACE_SUPPORTED and STATIC_SUPPORTED and provenance VERIFIED; no PARTIAL opening exception",
+  "fresh_opened": false,
+  "fresh_status": "BLOCKED_INDEPENDENCE_UNRESOLVED",
+  "historical_design_information": "Before training, old S0 raw reveals fixed DEV ai_009_001 both-role query rays miss bounds. Preserve cohort and bounds; geometric miss distinguished from learned opacity collapse, no post-V2-outcome threshold change.",
+  "opacity_gate": "each scene both coverage>=.99 hitfraction, C1drop<=.01; common-mask and depth/opacity-normalized gains CIlo>0 with >=75% scene coverage",
+  "secondary_C2": "FREE_SPACE_EXTRA_GAIN=C1-C2 query AbsRel with scene bootstrap CI; reported only; cannot change PRIMARY_METHOD=C1 or any gate",
+  "static_opacity_gate": "C1 coverage>=.99 hitfraction every scene; C1 anchor-minus-direct AbsRel on the common GT-valid mask where anchor and direct opacity>1e-6, and its depth/opacity-normalized version, both CIlo>0 with >=75% scene coverage",
+  "static_supported": "C1 anchor-full gain>0 CIlo>0 >=.75 nonworse; wrong CIlo>0; multiple queries/same state audit; static opacity gate",
+  "surface_supported": "gain>0;CIlo>0;>=.75 nonworse; all leave-one-scene-out gains>0; top1 positive gain share<=.5; C1wrong and shuffle damage CIlo>0; opacity gate; state audits PASS"
+}

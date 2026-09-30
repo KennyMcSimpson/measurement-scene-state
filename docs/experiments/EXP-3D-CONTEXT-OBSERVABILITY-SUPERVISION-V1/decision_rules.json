@@ -1,0 +1,82 @@
+{
+  "BEST_SUPERVISION_MEANING": "PREDECLARED_PRIMARY_NOT_QUERY_WINNER",
+  "DYNAMIC_TTT_RUN": false,
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "NEW_CARRIER_TRAINED": false,
+  "controls": {
+    "spatial_shuffle": [
+      "S3"
+    ],
+    "wrong_scene": [
+      "S0",
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "zero": [
+      "S3"
+    ]
+  },
+  "frozen_before_formal": true,
+  "gap_closure_fraction": "ratio of scene-macro GAP_CLOSED / scene-macro BASE_GAP; recompute ratio within each paired bootstrap draw; zero/nonpositive BASE_GAP makes fraction undefined; descriptive, no theoretical-optimum claim",
+  "geometry_rules": {
+    "COMPLEMENTARY": "S3 better than each of S0,S1,S2 by stable practical gain.",
+    "FREE_SPACE_DOMINANT": "S1 better than S0 stable; S2 better than S0 not stable; S1 better than S2 stable.",
+    "HARMFUL": "S3 worse than S0 by stable practical gain in reverse.",
+    "INCONCLUSIVE": "All remaining patterns; do not force a dominant attribution.",
+    "NO_CLEAR_GAIN": "None of S1,S2,S3 has established stable gain over S0; absence of established gain is not evidence of zero effect.",
+    "SURFACE_DOMINANT": "S2 better than S0 stable; S1 better than S0 not stable; S2 better than S1 stable.",
+    "precedence": [
+      "HARMFUL",
+      "COMPLEMENTARY",
+      "FREE_SPACE_DOMINANT",
+      "SURFACE_DOMINANT",
+      "NO_CLEAR_GAIN",
+      "INCONCLUSIVE"
+    ]
+  },
+  "independence": "17CAPACITY_DEV_EXPOSED attribution only",
+  "observability_rules": {
+    "equivalence_margin": 0.02,
+    "mixed_low_support_positive_share_min": 0.5,
+    "observed_gap_min": 0.02,
+    "precedence": "If OBS2PLUS coverage<.75 => INCONCLUSIVE. If OBS2 gap mean>=.02 and CIlo>0: low-support union coverage>=.75 and positive share>=.50 => MIXED; otherwise OBSERVED_REGION_FAILURE. Otherwise OBS2 gap CI entirely[-.02,.02] plus union coverage>=.75 plus positive share>=.75 => UNOBSERVED_REGION_DOMINANT; else INCONCLUSIVE.",
+    "source": "S0 minus ORACLE",
+    "unobserved_positive_share_min": 0.75
+  },
+  "primary_variant": "S3",
+  "recommendation_rules": {
+    "geometry_aware": "S3vsS0 stable gain AND S3 wrong-scene damage CIlo>0 AND S3 spatial-shuffle damage CIlo>0. Only recommend a future separate experiment, not independent qualification or authorization to train this round.",
+    "per_scene_spearman": "Average per-query Spearman coefficients within role then A/B equally; if any locked role/query coefficient is null, the entire scene value is null. Retain all17 scene keys and require >=75%scene coverage for correlation-based classification.",
+    "visibility_aware": "OBSERVED_REGION_FAILURE/MIXED=>inconclusive. Otherwise OBS2 gap CI entirely[-.02,.02], OBS01 and OBS2 scene coverage>=.75, conditional(S0 OBS01 minus S0 OBS2) mean>=.02 and CIlo>0 with paired coverage>=.75, and S0 per-scene visible-view-count/AbsRel Spearman mean CIhi<0 with correlation scene coverage>=.75 =>true. Otherwise inconclusive; never infer visibility useless."
+  },
+  "region_rules": {
+    "additive_contribution": "C uses all17 scenes including zeros for empty regions; OBS0+OBS1+OBS2PLUS must reconstruct overall.",
+    "conditional_bootstrap": "Resample all17 scene indices; in each draw divide sum covered E by covered multiplicity; report all-empty draws undefined, never zero fill.",
+    "conditional_mean": "Scene conditional value E=C/F, with C=mean_role_query(region AbsRel sum / totalvalid) and F=mean_role_query(region pixels / totalvalid); mean E only among covered scenes, always retain all scene keys and empty counts.",
+    "empty_scene_conditional_value": null,
+    "low_support_union": "OBS01; require union coverage>=.75 for mixed/unobserved-dominant classification",
+    "mask_identity": "All direct variants share the same per-query region pixel counts and totalvalid.",
+    "minimum_scene_coverage": 0.75,
+    "positive_gap_share": "sum_scene,region_in_OBS0_OBS1 max(C_context-C_oracle,0) / sum_scene,region_in_OBS0_OBS1_OBS2PLUS max(C_context-C_oracle,0). Descriptive positive-contribution share, not a signed net-gap fraction."
+  },
+  "schema": "observability_supervision_decision_rules.v1",
+  "stable_gain": {
+    "ci_lower_strictly_positive": true,
+    "mean_min": 0.02,
+    "scene_nonworse_fraction_min": 0.75
+  },
+  "statistics": {
+    "CI": "95percentilepaired",
+    "draws": 10000,
+    "seed": 20260927,
+    "tie": 1e-08,
+    "unit": "scene after query then A/B averaging"
+  },
+  "variants": [
+    "S0",
+    "S1",
+    "S2",
+    "S3"
+  ]
+}

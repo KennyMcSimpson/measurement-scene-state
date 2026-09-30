@@ -1,0 +1,136 @@
+{
+  "artifact_sha256": {
+    "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/metadata/upstream_dataset_config.py": "b51c437a420ce566c0b3be18de3c3e61754ad33d677556a45b2095c36fb5845b",
+    "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/access.jsonl": "844ae406d4dcb16d197e5e4b89cbd40723405d301a3ecb4b33f8278a79ae1fc8",
+    "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/candidate_lock.json": "28c8d619cc70dceb6d3f1da1f1483d74e7556c534a42ad6ccaeece3d656cd6ab",
+    "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/data_lock.json": "0f1fb3539f602fbb88802e02650fc80b4cd672fbef64a51199fb9f4b81d68f45",
+    "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/manifest.json": "91e4200e42425538b7dd46c091be800290fd148d1426dde7246768bc0347a7c8",
+    "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/role_lock.json": "789ccb90701596743ca8a9282c82f01a14f6c2028cd0c426325998103510d79d"
+  },
+  "bad_media": [],
+  "bad_roles": [],
+  "candidate_lock_url_erratum": "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/preparation_notes.json",
+  "candidate_scene_ids": [
+    "ai_004_001",
+    "ai_005_003",
+    "ai_006_001",
+    "ai_007_002",
+    "ai_008_001",
+    "ai_009_001",
+    "ai_010_001",
+    "ai_011_001"
+  ],
+  "checks": {
+    "all_candidate_protocol_partitions_train": true,
+    "all_candidate_trajectories_non_BAD": true,
+    "all_media_official_included_train": true,
+    "candidate_lock_hash_matches_data_lock": true,
+    "candidate_then_members_then_download_order": true,
+    "data_lock_hash_matches_manifest": true,
+    "locked_roles_identical_and_queries_disjoint": true,
+    "manifest_hash_matches_role_lock": true,
+    "only_locked_candidates_downloaded": true,
+    "qualified_scenes_subset_frozen_candidates": true,
+    "role_lock_before_static_lock_local_mtime": true,
+    "source_asset_pairs_all_distinct": true,
+    "source_hashes_unchanged": true,
+    "train_scene_overlap_absent": true,
+    "training_volumes_disjoint": true
+  },
+  "independence_scope": "Unseen to this frozen B-final checkpoint; ai_007_002 has prior project exposure and is not claimed globally virgin.",
+  "order_evidence": {
+    "candidate_unix": 1790490512.497612,
+    "first_media_download_unix": 1790490518.9205065,
+    "limitation": "Local operation timestamps and file mtime; not an external cryptographic timestamp service.",
+    "members_unix": 1790490518.9196653,
+    "role_lock_unix": 1790490593.6677082,
+    "static_lock_mtime_unix": 1790490863.5017443
+  },
+  "physical_identity_evidence": "Distinct official archive/asset pairs and volumes; source mappings immutable by SHA256.",
+  "physical_identity_limit": "Vendor content duplication across different source assets cannot be ruled out; no claim of externally certified physical-location uniqueness.",
+  "previously_observed": {
+    "ai_004_001": "False",
+    "ai_005_003": "False",
+    "ai_006_001": "False",
+    "ai_007_002": "True",
+    "ai_008_001": "False",
+    "ai_009_001": "False",
+    "ai_010_001": "False",
+    "ai_011_001": "False"
+  },
+  "protected_test_media_opened": false,
+  "qualified_scene_ids": [
+    "ai_004_001",
+    "ai_006_001",
+    "ai_007_002",
+    "ai_008_001",
+    "ai_009_001",
+    "ai_010_001",
+    "ai_011_001"
+  ],
+  "source_asset_mapping": {
+    "ai_001_001": {
+      "archive_file": "AI1_001.rar",
+      "asset_file": "01",
+      "volume": "001"
+    },
+    "ai_002_001": {
+      "archive_file": "AI2_001.rar",
+      "asset_file": "001",
+      "volume": "002"
+    },
+    "ai_003_001": {
+      "archive_file": "AI3_01.rar",
+      "asset_file": "01",
+      "volume": "003"
+    },
+    "ai_004_001": {
+      "archive_file": "AI4_001.rar",
+      "asset_file": "001",
+      "volume": "004"
+    },
+    "ai_005_003": {
+      "archive_file": "AI5_003.rar",
+      "asset_file": "SCENE 03",
+      "volume": "005"
+    },
+    "ai_006_001": {
+      "archive_file": "AI6_001.rar",
+      "asset_file": "001",
+      "volume": "006"
+    },
+    "ai_007_002": {
+      "archive_file": "AI7_02.RAR",
+      "asset_file": "02",
+      "volume": "007"
+    },
+    "ai_008_001": {
+      "archive_file": "AI8_01.rar",
+      "asset_file": "01",
+      "volume": "008"
+    },
+    "ai_009_001": {
+      "archive_file": "AI9_SCENE 01.rar",
+      "asset_file": "SCENE 01",
+      "volume": "009"
+    },
+    "ai_010_001": {
+      "archive_file": "AI10_001.RAR",
+      "asset_file": "001",
+      "volume": "010"
+    },
+    "ai_011_001": {
+      "archive_file": "AI11_01.rar",
+      "asset_file": "01",
+      "volume": "011"
+    }
+  },
+  "source_hash_mismatch": [],
+  "source_url": "https://github.com/apple/ml-hypersim/blob/main/evermotion_dataset/_dataset_config.py",
+  "status": "PASS_WITH_PHYSICAL_IDENTITY_LIMITATION",
+  "train_scene_ids": [
+    "ai_001_001",
+    "ai_002_001",
+    "ai_003_001"
+  ]
+}

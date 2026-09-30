@@ -1,0 +1,57 @@
+{
+  "GT_free_runtime_cost": null,
+  "GT_oracle_search_cost_included_in_total_run_time": true,
+  "data_download": {
+    "budget_accounted_bytes": 220495946,
+    "full_archives_downloaded": false,
+    "network_bytes": 220495946
+  },
+  "designs": {
+    "ORACLE_SUPPORT": {
+      "candidate_budget": 128,
+      "density_voxels": 512,
+      "mean_AB_volume_m3": 1152.0,
+      "mean_renderer_and_state_hash_seconds": 0.010621979794129455,
+      "oracle_lattice_search_size": 512
+    },
+    "ORACLE_VOLUME": {
+      "candidate_budget": 128,
+      "density_voxels": 512,
+      "mean_AB_volume_m3": 3825.243693994898,
+      "mean_renderer_and_state_hash_seconds": 0.01023223171924816,
+      "oracle_lattice_search_size": 512
+    },
+    "ORACLE_VOLUME_SUPPORT": {
+      "candidate_budget": 128,
+      "density_voxels": 512,
+      "mean_AB_volume_m3": 3825.243693994898,
+      "mean_renderer_and_state_hash_seconds": 0.009296055893441114,
+      "oracle_lattice_search_size": 512
+    },
+    "R0": {
+      "candidate_budget": 128,
+      "density_voxels": 512,
+      "mean_AB_volume_m3": 1152.0,
+      "mean_renderer_and_state_hash_seconds": 0.009992652766146314,
+      "oracle_lattice_search_size": 512
+    }
+  },
+  "formal_run": {
+    "all_evaluation_labels_after_complete_seal": true,
+    "checkpoint_unchanged": true,
+    "dynamic_ttt_run": false,
+    "final_holdout_access": false,
+    "n_scenes": 17,
+    "oracle_preseal_exception_explicit": true,
+    "parameters_unchanged": true,
+    "rows": 680,
+    "seconds": 18.44643366296077,
+    "source_input_hashes_unchanged": true,
+    "status": "PASS",
+    "writes": 0
+  },
+  "formal_run_peak_GPU_memory": null,
+  "peak_memory_status": "NOT_MEASURED; do not infer peak memory from tensor budget",
+  "prediction_files_bytes": 157155958,
+  "retraining_cost": null
+}

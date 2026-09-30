@@ -1,0 +1,56 @@
+{
+  "matched_variants": [
+    "C0",
+    "C1"
+  ],
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 6,
+    "old_files_unchanged": 0,
+    "query_rows": 960,
+    "static_rows_recomputed": 192,
+    "status": "PASS"
+  },
+  "query_rows": 960,
+  "real_DEV_read": false,
+  "region_variants": [
+    "C0",
+    "C1"
+  ],
+  "seconds": 32.98145783197833,
+  "seeds": 2,
+  "static_rows": 192,
+  "static_variants": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "status": "PASS",
+  "steps_per_run": 2,
+  "summary_free_fields": [
+    "DENSITY_GAIN=-0.006281",
+    "DENSITY_GAIN_CI=[-0.006280960194999366, -0.006280958739807815]",
+    "OBS2PLUS_DENSITY_GAIN=-0.007195",
+    "DENSITY_STATUS=HARMFUL",
+    "SCENE_SPECIFICITY_STATUS=NOT_ESTABLISHED",
+    "INTERPRETATION_BRANCH=C"
+  ],
+  "synthetic_only": true,
+  "variants": [
+    "C0",
+    "C1",
+    "C2"
+  ]
+}

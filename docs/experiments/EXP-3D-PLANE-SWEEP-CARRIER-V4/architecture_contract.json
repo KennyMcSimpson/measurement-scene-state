@@ -1,0 +1,123 @@
+{
+  "C2_difference_from_C1": "frozen V2 surface term disabled (V2 C0 loss)",
+  "anchor_control": "anchor RGB only, same full-role context-camera-derived bounds; a single view never reaches the >=2-view support, so anchor states are prior-only",
+  "new_backbone_or_learned_matching": false,
+  "only_difference_C0_C1": "C1 adds the plane-sweep bypass: 3 non-learned statistics (surface likelihood, free-space likelihood, valid-reference fraction) through a zero-initialized bias-free 3->16 projection added before the fuse_up GELU, plus log_tau (49 parameters). All shared parameters, initialization, the 4096 dense candidates, lifting, fusion, refinement, heads, renderer and bounds are unchanged; at initialization C1 and C0 produce identical states.",
+  "parameter_count": {
+    "C0": 5125,
+    "C1": 5174,
+    "C2": 5174
+  },
+  "plane_sweep": {
+    "cost": "mean over RGB of population variance of reference and valid source colors at 32x40 (area-downsampled views, scaled intrinsics)",
+    "depth_range_m": [
+      0.21425169706344604,
+      5.672044978141789
+    ],
+    "depth_range_source": "frozen TRAIN prior (train_depth_prior.json)",
+    "inputs": "context RGB, context cameras, TRAIN prior; no depth or query",
+    "log_tau_init": -4.605170185988091,
+    "planes": 32,
+    "planes_spacing": "uniform in inverse z-depth",
+    "probability": "softmax over valid planes of -cost/exp(log_tau)",
+    "reference_size": [
+      32,
+      40
+    ],
+    "voxel_statistics": "mean over valid references of D*P(z) and P(depth>z), plus valid-reference fraction; zeros without a valid reference"
+  },
+  "shared_parameter_hash_by_seed": {
+    "20260928": "d1ab5f7b4e4687ff2bf79733a0310c07c87ac504ac438df5d7beac72c68640a4",
+    "20260929": "87b9eb714ca84fb63a452f12618af519d3697cf4f7c2178f78dff45e0c042b48",
+    "20260930": "9f32f06813f4492a283dfe6adf53594bc048326ef8dbecae513e977bcd56ee0a"
+  },
+  "state": "query-independent; all DEV states sealed before query load; >=2 queries/state",
+  "test_time_depth_used": false,
+  "test_time_input": "RGB+CAMERA",
+  "variants": {
+    "C0": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "label": "DENSE_SURFACE",
+      "loss": "C1",
+      "sweep": false
+    },
+    "C1": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "label": "SWEEP_SURFACE",
+      "loss": "C1",
+      "sweep": true
+    },
+    "C2": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "label": "SWEEP_NO_SURFACE",
+      "loss": "C0",
+      "sweep": true
+    }
+  }
+}

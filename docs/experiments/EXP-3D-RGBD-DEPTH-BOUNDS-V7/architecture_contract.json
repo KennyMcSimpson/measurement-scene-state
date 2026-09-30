@@ -1,0 +1,114 @@
+{
+  "C2_difference_from_C1": "context-depth hull with 1% per-axis quantile tails removed (cameras kept inside): finer voxels, lower coverage; secondary, never a gate",
+  "anchor_control": "anchor RGB + anchor depth, same full-role context-camera-derived bounds; a single view never reaches the >=2-view lifting support, so an anchor state of C1/C2 carries the single-view depth bypass and learned priors only",
+  "depth_bypass": {
+    "inputs": "context RGB, measured context depth, context cameras; no query",
+    "log_sigma_init": -0.6931471805599453,
+    "placement": "after the >=2-view support gate: one measured view suffices",
+    "sampling": "nearest pixel of the full-resolution measured ray-distance map"
+  },
+  "new_backbone_or_learned_matching": false,
+  "only_difference_C0_C1": "C1 differs from C0 only by the rule that sets each state's bounds: the hull of the measured context depth and context cameras (anchor frame, frozen x1.1 padding, >=1 m) instead of context-camera rays cast to the frozen TRAIN prior; the V6 C1 recipe (V5 C1 model and loss, TRAIN72, 6000 steps, per-seed initialization) is identical, in training and in evaluation.",
+  "parameter_count": {
+    "C0": 5150,
+    "C1": 5150,
+    "C2": 5150
+  },
+  "shared_parameter_hash_by_seed": {
+    "20260928": "d1ab5f7b4e4687ff2bf79733a0310c07c87ac504ac438df5d7beac72c68640a4",
+    "20260929": "87b9eb714ca84fb63a452f12618af519d3697cf4f7c2178f78dff45e0c042b48",
+    "20260930": "9f32f06813f4492a283dfe6adf53594bc048326ef8dbecae513e977bcd56ee0a"
+  },
+  "state": "query-independent; all DEV states sealed before query load; >=2 queries/state",
+  "test_time_depth_used": true,
+  "test_time_input": "RGB+DEPTH+CAMERA for every variant",
+  "variants": {
+    "C0": {
+      "bounds": "FROZEN",
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "label": "FROZEN_BOUNDS",
+      "model": "C1",
+      "train": "TRAIN72"
+    },
+    "C1": {
+      "bounds": "CONTEXT_DEPTH",
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "label": "DEPTH_BOUNDS",
+      "model": "C1",
+      "train": "TRAIN72"
+    },
+    "C2": {
+      "bounds": "CONTEXT_DEPTH_TRIM1",
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "label": "DEPTH_BOUNDS_TRIM1",
+      "model": "C1",
+      "train": "TRAIN72"
+    }
+  }
+}

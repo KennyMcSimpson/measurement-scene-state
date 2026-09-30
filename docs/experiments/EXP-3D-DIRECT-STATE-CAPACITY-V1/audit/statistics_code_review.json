@@ -1,0 +1,38 @@
+{
+  "archive_IO_review": {
+    "exact_all425_plan_keys_required": true,
+    "formal_query_results_read_by_reviewer": false,
+    "gzip_fallback": true,
+    "mathematics_source_unchanged": true,
+    "plain_JSON_preferred": true,
+    "provenance": "SHA only actual file paths loaded, including gzip/aggregate",
+    "status": "PASS",
+    "summary_source": "all individual files or one complete aggregate, never mixed"
+  },
+  "checks": {
+    "aggregation": "Query mean within role, then equally weight A/B, then equally weight all17 scenes. Joint-query oracle is a distinct diagnostic block.",
+    "bootstrap": "10000 shared scene-index draws seed20260927; CI of paired scene deltas, not differences between independently resampled means.",
+    "classification": "engineering_good .25 macro/.35 per-scene75%; stable gain>=.02, CI lower>0,>=75%nonworse; renderer threshold compares largest stable sample gain against max grid mean gain. Matches frozen engineering criteria.",
+    "concentration": "LOSO removes whole scene. Top1/top3 positive and absolute contributions both reported.",
+    "delta_directions": "Capacity and anchor gaps baseline-direct; resolution lowgrid-highgrid; renderer64-128; direct-carrier raw signed difference; control damage control-direct; generalization query-context. All consistent.",
+    "missing_nonfinite": "Metric failures raise, never silently omit.",
+    "selection": "No data-dependent scene/drop filtering; scene-group exact sets enforced. Figures show allscene per-scene gap and allgrid; oracle separated."
+  },
+  "findings": [
+    {
+      "action": "Assigned support_review to add optional manifest toanalyze, CLI mandatorymanifest, exact baseline/context/query andplannedstate guards+negative tests before formal analysis.",
+      "issue": "Baseline did not validate every method/query roster and context rows did not validate exact per-state frame/role roster; corrupt/incomplete raw could be silently reweighted.",
+      "resolution": "Manifest required whenever plan present; baseline exact fourmethod/query roster, context exact group/scene/role/frame andstatekey roster, query exact lockedIDs, unknown baseline methods fail closed. Reviewed corrected source before formal query analysis.",
+      "resolved": true,
+      "severity": "medium"
+    }
+  ],
+  "review_inputs": "source+preregistration+synthetic tests only; no formal query raw read",
+  "reviewed_source_sha256": {
+    "scripts/analyze_direct_capacity.py": "fe16ebf2f660ac24e0e8ea3800ff8b99e21253206e3d856e62ea227fba5f65ff",
+    "src/mcss/mechanism_pilot/direct_capacity_statistics.py": "adb8b2b41915b6733054119e50c8043b485ba773dfc2581ecc17a121d5a1ddc1",
+    "tests/test_direct_capacity_statistics.py": "7d7790173a8b5e95271b5255e3847a6a6d4f5f0e7ce41ff1eabb5a9d9557de6c"
+  },
+  "status": "PASS_INDEPENDENT_CODE_REVIEW",
+  "synthetic_tests": "22 passed after archive I/O additions; RuffPASS"
+}

@@ -1,0 +1,37 @@
+{
+  "bounds_hash_definition": "hash_value(float64[2,3] tensor)",
+  "camera_hash_definition": "hash_value(tuple of float64 Cameras in fixed context order)",
+  "context_roles_unchanged": true,
+  "current_bounds": [
+    [
+      -6.0,
+      -4.0,
+      -6.0
+    ],
+    [
+      6.0,
+      4.0,
+      6.0
+    ]
+  ],
+  "far_m": 5.672044978141789,
+  "inputs_allowed": [
+    "context_intrinsics",
+    "context_extrinsics",
+    "frozen_training_depth_prior"
+  ],
+  "inputs_forbidden": [
+    "context_depth_current_scene",
+    "query_camera",
+    "query_depth",
+    "query_rgb",
+    "carrier_prediction",
+    "query_score"
+  ],
+  "near_m": 0.21425169706344604,
+  "previous_bounds_artifact_sha256": "03388ad558b6eeb87c0b0e3d0edbb04762e4d00bf5bcbd8deed33c05410750ea",
+  "prior_hash": "5f1595be923f92c10b835204dfc9e96e851c1b312c05852eec41f6c270ec1003",
+  "rule": "all128x160 context unit rays at train q01/q99, anchor-camera coordinates, AABB5%per-side padding, minextent1m; float64 thenstateconsumerfloat32",
+  "source_sha256": "b4b2e428ce58a225b01035bb6e353b72ad354dd9866d8cc1c35d82d883e03d7b",
+  "status": "FROZEN_EXACT_PREVIOUS_ALTERNATIVE"
+}

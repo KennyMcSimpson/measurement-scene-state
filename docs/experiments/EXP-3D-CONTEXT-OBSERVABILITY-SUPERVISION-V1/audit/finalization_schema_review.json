@@ -1,0 +1,47 @@
+{
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "blockers": [],
+  "checks": {
+    "actual_summary_lock_completion_fields": true,
+    "aggregate_optimization_summaries_key_spec_summary": true,
+    "baseline_formal_evaluation_artifact_names": true,
+    "docs_no_pt_or_npz": true,
+    "formal_query680_context408_reference272_region5984": true,
+    "oldseal11285_count": true,
+    "prediction_sha_tensor_hash_camera_hash": true,
+    "raw_phase_wall_times_separate_from_worker_seconds": true,
+    "source_input_hash_field_names": true,
+    "source_snapshot_includes_untracked_scientific_files_and_tests": true,
+    "statistics_provenance_input_sha256_and_media_or_state_checkpoint_loaded": true
+  },
+  "completed_context_metadata_evidence": {
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_004_001__A__S0/completion.json": "8eb3484ce3d7c6c61b62a098f9b32b8b011d1e585f0c93184c5d6715a8c286bc",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_004_001__A__S0/lock.json": "91dac79fb0bec0e19c82e51c0d288e8ebc7f5d965a4adde0eaa3c8d8bb19fee4",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_004_001__A__S0/summary.json": "3d4bf3d05bb2f1700c7eff87e43a7b365dd1c0adaf19c57dd6630eb4d41b3acf",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_004_001__B__S0/completion.json": "8e84853c14448db2bdb676bb90d18cdba101b32a41a7cc0fced8d61ba48e8b3c",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_004_001__B__S0/lock.json": "35596b4b6f7ce1fadc13a395006f1650831c11448ee3512a3f1348a6144acd8e",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_004_001__B__S0/summary.json": "2070b9420e43b9a4a9b50002fd813e2a078cc8a1cfb4add91bee12de9f438545",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_006_001__A__S0/completion.json": "3726309b97326e47229d4e685b0592ecc837ffa5bb7312e8fc39ab0332e2b9f9",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_006_001__A__S0/lock.json": "3410ebd88c54a5ab0794da051d2015f6fe8edf32950bd5a71c6555a7ccd4077f",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_006_001__A__S0/summary.json": "c23f6cd17af9dd7aac9cd43333c5fdd579780df6ea69468094df234020938fd9",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_006_001__B__S0/completion.json": "ce382e662835347a6f5751521ae3d9a7b57d5cc6e12d6c26a659eb12b880b197",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_006_001__B__S0/lock.json": "085a369cb1e8c8d14fe3d450898e1ed31b8d5ac1c90445874fed185a6c8dfaaf",
+    "outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/checkpoints/ai_006_001__B__S0/summary.json": "cbba420f2878e66eefc022eb00422ad9d452020a57fcc7c29d106fa7df835e7b"
+  },
+  "cost_schema": [
+    "seconds",
+    "final_context_metrics",
+    "peak_cuda_allocated_bytes",
+    "peak_cuda_reserved_bytes"
+  ],
+  "files_reviewed": {
+    "scripts/analyze_observability_supervision.py": "b974c2cba6112ccd6c654047c8124f92b020232f816799f9ec67a01760a6c39a",
+    "scripts/audit_context_observability.py": "66f83f02c45aa8b3eba187501f03d48a3e8480d7937f4c15b5a7d4de443a87e2",
+    "scripts/audit_observability_supervision.py": "294bfc82ea7968bd788bcc62747f009a5e80b796035a6edc86cfe627945a735c",
+    "scripts/finalize_observability_supervision.py": "d304b67d746fc23aad81e2921967655295e21972229867f84429cc9f152bcef9",
+    "src/mcss/mechanism_pilot/observability_supervision_evaluation.py": "c6d7cd993131ff8c6c8db4f676dc6316666ed64ae9e3ab8cf8c815c8fd1d50f1"
+  },
+  "formal_execution_not_yet_audited": true,
+  "scope": "Read-only producer/consumer schema crosscheck, no query, prediction arrays, or state checkpoints loaded",
+  "status": "PASS"
+}

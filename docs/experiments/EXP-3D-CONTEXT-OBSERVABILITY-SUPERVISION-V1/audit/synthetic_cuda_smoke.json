@@ -1,0 +1,317 @@
+{
+  "status": "PASS",
+  "synthetic_only": true,
+  "query_data_read": false,
+  "weight_search": false,
+  "fixed_weights": [
+    0.1,
+    0.1
+  ],
+  "matched_init_and_ray_stream": true,
+  "results": {
+    "S0": {
+      "variant": "S0",
+      "seed": 20260927,
+      "config": {
+        "steps": 100,
+        "learning_rate": 0.03,
+        "batch_rays": 8,
+        "checkpoint_interval": 100,
+        "rgb_weight": 1.0,
+        "depth_weight": 1.0,
+        "density_l2_weight": 1e-05,
+        "tv_weight": 0.0001,
+        "gradient_clip": 1.0,
+        "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE"
+      },
+      "grid": 16,
+      "samples": 64,
+      "bounds": [
+        [
+          -2.0,
+          -2.0,
+          0.10000000149011612
+        ],
+        [
+          2.0,
+          2.0,
+          4.0
+        ]
+      ],
+      "tau_surface": 0.21471728384494781,
+      "lambda_free": 0.1,
+      "lambda_surface": 0.1,
+      "epsilon": 1e-08,
+      "frame_ids": [
+        0
+      ],
+      "supervision": "CONTEXT_ONLY_RGBD",
+      "initial_state_hash": "8e8d0d44d9338f301fee6e59ac07abb9fcafc5c20927ffb8e1c4438727100b77",
+      "selection": "FIXED_BUDGET",
+      "engineering_fixture": true,
+      "query_access": false,
+      "status": "PASS",
+      "selected_step": 100,
+      "steps_completed": 100,
+      "state_hash": "5e37b2be6bc41cb00b36de60e51cb356d40afb9bf0ff2d4afa6c0f5dfdf8d1c9",
+      "state_file_sha256": "0fd8ecef3d6cc85c7435bbe2b4d78e5af838afa34f4567605846d877f13afa43",
+      "ray_stream_sha256": "dc68a2c1edead6f7a321ddde689091f41904d7208de1cc8f36b4f7bc7042028c",
+      "ray_stream_encoding": "step order, little-endian int64 flattened sampled indices",
+      "sampled_ray_count": 800,
+      "final_context_metrics": {
+        "step": 100,
+        "loss_rgb": 1.7572424440004397e-06,
+        "loss_depth": 0.003038167953491211,
+        "regularization": 5.148339823790593e-06,
+        "opacity": 0.765690803527832,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.003045073535759002,
+        "render_objective": 0.003045073535759002,
+        "loss_free": 0.0057751783169806,
+        "loss_surface": 1.9069018363952637,
+        "valid_depth_rays": 4,
+        "valid_hit_rays": 4,
+        "surface_eligible_rays": 4,
+        "empty_band_hit_rays": 0,
+        "valid_miss_rays": 0,
+        "free_empty_rays": 0,
+        "free_samples": 100,
+        "surface_samples": 25
+      },
+      "all_steps_finite": true,
+      "seconds": 0.6908046969911084,
+      "query_selection": false,
+      "peak_cuda_allocated_bytes": 9331712,
+      "peak_cuda_reserved_bytes": 23068672
+    },
+    "S1": {
+      "variant": "S1",
+      "seed": 20260927,
+      "config": {
+        "steps": 100,
+        "learning_rate": 0.03,
+        "batch_rays": 8,
+        "checkpoint_interval": 100,
+        "rgb_weight": 1.0,
+        "depth_weight": 1.0,
+        "density_l2_weight": 1e-05,
+        "tv_weight": 0.0001,
+        "gradient_clip": 1.0,
+        "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE"
+      },
+      "grid": 16,
+      "samples": 64,
+      "bounds": [
+        [
+          -2.0,
+          -2.0,
+          0.10000000149011612
+        ],
+        [
+          2.0,
+          2.0,
+          4.0
+        ]
+      ],
+      "tau_surface": 0.21471728384494781,
+      "lambda_free": 0.1,
+      "lambda_surface": 0.1,
+      "epsilon": 1e-08,
+      "frame_ids": [
+        0
+      ],
+      "supervision": "CONTEXT_ONLY_RGBD",
+      "initial_state_hash": "8e8d0d44d9338f301fee6e59ac07abb9fcafc5c20927ffb8e1c4438727100b77",
+      "selection": "FIXED_BUDGET",
+      "engineering_fixture": true,
+      "query_access": false,
+      "status": "PASS",
+      "selected_step": 100,
+      "steps_completed": 100,
+      "state_hash": "1388bb5951d8c7d3f0da541871d6f06de51e0bb0f4fdcea40db283c3c4508b8b",
+      "state_file_sha256": "38e127340eb42a09e1b15c9a8f9f7b819605af2afcefd61266312c5e0df0f433",
+      "ray_stream_sha256": "dc68a2c1edead6f7a321ddde689091f41904d7208de1cc8f36b4f7bc7042028c",
+      "ray_stream_encoding": "step order, little-endian int64 flattened sampled indices",
+      "sampled_ray_count": 800,
+      "final_context_metrics": {
+        "step": 100,
+        "loss_rgb": 2.2972608348936774e-06,
+        "loss_depth": 0.003749340772628784,
+        "regularization": 5.135312221682398e-06,
+        "opacity": 0.7646259069442749,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.004317194469786045,
+        "render_objective": 0.0037567733456853603,
+        "loss_free": 0.005604211241006851,
+        "loss_surface": 1.906381607055664,
+        "valid_depth_rays": 4,
+        "valid_hit_rays": 4,
+        "surface_eligible_rays": 4,
+        "empty_band_hit_rays": 0,
+        "valid_miss_rays": 0,
+        "free_empty_rays": 0,
+        "free_samples": 100,
+        "surface_samples": 25
+      },
+      "all_steps_finite": true,
+      "seconds": 0.5152144989697263,
+      "query_selection": false,
+      "peak_cuda_allocated_bytes": 9357824,
+      "peak_cuda_reserved_bytes": 23068672
+    },
+    "S2": {
+      "variant": "S2",
+      "seed": 20260927,
+      "config": {
+        "steps": 100,
+        "learning_rate": 0.03,
+        "batch_rays": 8,
+        "checkpoint_interval": 100,
+        "rgb_weight": 1.0,
+        "depth_weight": 1.0,
+        "density_l2_weight": 1e-05,
+        "tv_weight": 0.0001,
+        "gradient_clip": 1.0,
+        "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE"
+      },
+      "grid": 16,
+      "samples": 64,
+      "bounds": [
+        [
+          -2.0,
+          -2.0,
+          0.10000000149011612
+        ],
+        [
+          2.0,
+          2.0,
+          4.0
+        ]
+      ],
+      "tau_surface": 0.21471728384494781,
+      "lambda_free": 0.1,
+      "lambda_surface": 0.1,
+      "epsilon": 1e-08,
+      "frame_ids": [
+        0
+      ],
+      "supervision": "CONTEXT_ONLY_RGBD",
+      "initial_state_hash": "8e8d0d44d9338f301fee6e59ac07abb9fcafc5c20927ffb8e1c4438727100b77",
+      "selection": "FIXED_BUDGET",
+      "engineering_fixture": true,
+      "query_access": false,
+      "status": "PASS",
+      "selected_step": 100,
+      "steps_completed": 100,
+      "state_hash": "5b4e9bf17c228635f0e944077d6646ef3dca87eb99fc916970d960b2658da031",
+      "state_file_sha256": "b0af2b13a0df8e3347c8245f089cbae56affd89440c0a7c0a0a5ef91791ce197",
+      "ray_stream_sha256": "dc68a2c1edead6f7a321ddde689091f41904d7208de1cc8f36b4f7bc7042028c",
+      "ray_stream_encoding": "step order, little-endian int64 flattened sampled indices",
+      "sampled_ray_count": 800,
+      "final_context_metrics": {
+        "step": 100,
+        "loss_rgb": 4.870120164923719e-07,
+        "loss_depth": 0.0038747191429138184,
+        "regularization": 6.045427653589286e-06,
+        "opacity": 0.7926238775253296,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.14273968912073087,
+        "render_objective": 0.0038812515825839,
+        "loss_free": 0.004646949004381895,
+        "loss_surface": 1.3885843753814697,
+        "valid_depth_rays": 4,
+        "valid_hit_rays": 4,
+        "surface_eligible_rays": 4,
+        "empty_band_hit_rays": 0,
+        "valid_miss_rays": 0,
+        "free_empty_rays": 0,
+        "free_samples": 100,
+        "surface_samples": 25
+      },
+      "all_steps_finite": true,
+      "seconds": 0.5082966620102525,
+      "query_selection": false,
+      "peak_cuda_allocated_bytes": 9350656,
+      "peak_cuda_reserved_bytes": 23068672
+    },
+    "S3": {
+      "variant": "S3",
+      "seed": 20260927,
+      "config": {
+        "steps": 100,
+        "learning_rate": 0.03,
+        "batch_rays": 8,
+        "checkpoint_interval": 100,
+        "rgb_weight": 1.0,
+        "depth_weight": 1.0,
+        "density_l2_weight": 1e-05,
+        "tv_weight": 0.0001,
+        "gradient_clip": 1.0,
+        "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE"
+      },
+      "grid": 16,
+      "samples": 64,
+      "bounds": [
+        [
+          -2.0,
+          -2.0,
+          0.10000000149011612
+        ],
+        [
+          2.0,
+          2.0,
+          4.0
+        ]
+      ],
+      "tau_surface": 0.21471728384494781,
+      "lambda_free": 0.1,
+      "lambda_surface": 0.1,
+      "epsilon": 1e-08,
+      "frame_ids": [
+        0
+      ],
+      "supervision": "CONTEXT_ONLY_RGBD",
+      "initial_state_hash": "8e8d0d44d9338f301fee6e59ac07abb9fcafc5c20927ffb8e1c4438727100b77",
+      "selection": "FIXED_BUDGET",
+      "engineering_fixture": true,
+      "query_access": false,
+      "status": "PASS",
+      "selected_step": 100,
+      "steps_completed": 100,
+      "state_hash": "c1fc2dea8081cdd63b618c4577de6322ad5965f37ea6540c607046addee61040",
+      "state_file_sha256": "d798e92951be586dc7beab28342e6c76fb6d97b40838c58e182721991edccc7b",
+      "ray_stream_sha256": "dc68a2c1edead6f7a321ddde689091f41904d7208de1cc8f36b4f7bc7042028c",
+      "ray_stream_encoding": "step order, little-endian int64 flattened sampled indices",
+      "sampled_ray_count": 800,
+      "final_context_metrics": {
+        "step": 100,
+        "loss_rgb": 4.908964115202252e-07,
+        "loss_depth": 0.004086166620254517,
+        "regularization": 6.043293069524225e-06,
+        "opacity": 0.7922803163528442,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.14328599333067588,
+        "render_objective": 0.004092700809735561,
+        "loss_free": 0.004575809463858604,
+        "loss_surface": 1.3873571157455444,
+        "valid_depth_rays": 4,
+        "valid_hit_rays": 4,
+        "surface_eligible_rays": 4,
+        "empty_band_hit_rays": 0,
+        "valid_miss_rays": 0,
+        "free_empty_rays": 0,
+        "free_samples": 100,
+        "surface_samples": 25
+      },
+      "all_steps_finite": true,
+      "seconds": 0.5074568970012479,
+      "query_selection": false,
+      "peak_cuda_allocated_bytes": 9348608,
+      "peak_cuda_reserved_bytes": 23068672
+    }
+  }
+}

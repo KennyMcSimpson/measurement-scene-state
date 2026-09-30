@@ -1,0 +1,233 @@
+{
+  "average_AB_minus_fixed": {
+    "ci95": [
+      -0.1782666622821029,
+      0.3878063703620486
+    ],
+    "draws": 10000,
+    "loso": {
+      "ai_004_001": 0.08488172616731038,
+      "ai_006_001": 0.0689161377618746,
+      "ai_007_002": -0.09500148284503455,
+      "ai_008_001": 0.1287012124377548,
+      "ai_009_001": 0.06905583710144922,
+      "ai_010_001": 0.06886886879240682,
+      "ai_011_001": 0.06350039778038868
+    },
+    "mean": 0.05556038531373571,
+    "n_scenes": 7,
+    "per_scene": {
+      "ai_004_001": -0.12036765980771236,
+      "ai_006_001": -0.02457412937509762,
+      "ai_007_002": 0.9589315942663572,
+      "ai_008_001": -0.3832845774303788,
+      "ai_009_001": -0.025412325412545345,
+      "ai_010_001": -0.02429051555829098,
+      "ai_011_001": 0.007920310513817863
+    },
+    "seed": 20260927,
+    "unit": "scene"
+  },
+  "budget_amendment": {
+    "all_other_hyperparameters_unchanged": true,
+    "checkpoint_selection": "minimum training-side validation loss, earliest tie, fixed full 30000 budget",
+    "created_utc": "2026-09-27T06:25:59.690031+00:00",
+    "if_not_converged": "report limitation, cannot infer representation failure from residual weakness",
+    "no_further_budget_expansion_planned": true,
+    "no_primary_or_unseen_scores_accessed": true,
+    "original_run_preserved": "residual/",
+    "reason": "3000-step preflight last500 train objective improves6.406%; user explicitly requires properly trained control; budget-only extension based solely on training-side curves",
+    "replacement_final_run": "residual_30000/",
+    "same_seed_fresh_initialization": true,
+    "steps": 30000,
+    "training_queries": [
+      12,
+      13,
+      14
+    ],
+    "type": "TRAINING_ADEQUACY_AMENDMENT_BEFORE_ANY_RESIDUAL_QUALIFICATION_EVALUATION",
+    "validation_interval": 250,
+    "validation_queries": [
+      15
+    ]
+  },
+  "interpretation": "B improves; A worsens; average AB CI crosses zero. Shuffled/zero controls do not reliably hurt A. No general fixed-decoder bottleneck or successful state-dependent residual qualification is established.",
+  "limitation": "Shared residual controls use A; B-specific bypass attribution not tested. Averaged loss is diagnostic across the two predeclared contexts; not selecting B post hoc.",
+  "per_context_and_state_controls": {
+    "residual_minus_fixed_A": {
+      "ci95": [
+        -0.20073676890039044,
+        0.8472285096734413
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_004_001": 0.26411020336202,
+        "ai_006_001": 0.2397525665261326,
+        "ai_007_002": -0.11938528933722797,
+        "ai_008_001": 0.28970650033003514,
+        "ai_009_001": 0.2303686229327093,
+        "ai_010_001": 0.22908821398946774,
+        "ai_011_001": 0.22315859438057375
+      },
+      "mean": 0.1938284874548158,
+      "n_scenes": 7,
+      "per_scene": {
+        "ai_004_001": -0.22786180798840927,
+        "ai_006_001": -0.08171598697308502,
+        "ai_007_002": 2.0731111482070785,
+        "ai_008_001": -0.3814395897965003,
+        "ai_009_001": -0.025412325412545345,
+        "ai_010_001": -0.017729871753095927,
+        "ai_011_001": 0.017847845900268
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "residual_minus_fixed_B": {
+      "ci95": [
+        -0.19454228621910172,
+        -0.0034744443439793027
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_004_001": -0.09434675102739916,
+        "ai_006_001": -0.10192029100238337,
+        "ai_007_002": -0.07061767635284105,
+        "ai_008_001": -0.032304075454525495,
+        "ai_009_001": -0.09225694872981083,
+        "ai_010_001": -0.09135047640465405,
+        "ai_011_001": -0.09615779881979636
+      },
+      "mean": -0.08270771682734433,
+      "n_scenes": 7,
+      "per_scene": {
+        "ai_004_001": -0.012873511627015333,
+        "ai_006_001": 0.03256772822288989,
+        "ai_007_002": -0.155247959674364,
+        "ai_008_001": -0.38512956506425733,
+        "ai_009_001": -0.025412325412545345,
+        "ai_010_001": -0.030851159363486036,
+        "ai_011_001": -0.002007224872632163
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "residual_state_shuffle_damage": {
+      "ci95": [
+        -1.0162607173000198,
+        0.14590268400564924
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_004_001": -0.34902131415727067,
+        "ai_006_001": -0.32735031442189916,
+        "ai_007_002": 0.056266644941454,
+        "ai_008_001": -0.3974390696531389,
+        "ai_009_001": -0.3404624931205705,
+        "ai_010_001": -0.3193499008668965,
+        "ai_011_001": -0.36541851144510124
+      },
+      "mean": -0.2918249941033461,
+      "n_scenes": 7,
+      "per_scene": {
+        "ai_004_001": 0.051352926220201045,
+        "ai_006_001": -0.07867307219202813,
+        "ai_007_002": -2.380374828372147,
+        "ai_008_001": 0.3418594591954104,
+        "ai_009_001": 0.0,
+        "ai_010_001": -0.12667555352204374,
+        "ai_011_001": 0.14973610994718445
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    },
+    "residual_zero_state_damage": {
+      "ci95": [
+        -1.1174521971621425,
+        0.11475483896242593
+      ],
+      "draws": 10000,
+      "loso": {
+        "ai_004_001": -0.37582709947114284,
+        "ai_006_001": -0.4121502960920416,
+        "ai_007_002": 0.04827738189198807,
+        "ai_008_001": -0.4216603466237255,
+        "ai_009_001": -0.38912314994231023,
+        "ai_010_001": -0.3685942797409653,
+        "ai_011_001": -0.41566110967566394
+      },
+      "mean": -0.3335341285219802,
+      "n_scenes": 7,
+      "per_scene": {
+        "ai_004_001": -0.07977630282700432,
+        "ai_006_001": 0.13816287689838858,
+        "ai_007_002": -2.62440319100579,
+        "ai_008_001": 0.1952231800884917,
+        "ai_009_001": 0.0,
+        "ai_010_001": -0.12317322120806973,
+        "ai_011_001": 0.15922775840012215
+      },
+      "seed": 20260927,
+      "unit": "scene"
+    }
+  },
+  "pilot": {
+    "cache_exact_initial_and_selected": true,
+    "cache_seconds": 1.1248917269986123,
+    "carrier_unchanged": true,
+    "checkpoint_sha256": "37220cec8fa056c8e654d0c052120bf5501a3a057154bccfe6a7b468a41fce09",
+    "convergence_note": "fixed budget; plateau is not proof of global optimum or sufficient capacity",
+    "dynamic_ttt_run": false,
+    "fixed_seconds_per_query": 0.004859288097941316,
+    "flops_definition": "multiply+add=2; excludes SiLU/bias/clamp/renderer",
+    "head_linear_flops_per_query": 11796480,
+    "head_only_seconds_per_query": 4.3831099173985424e-05,
+    "optimizer_seconds": 6.549762129026931,
+    "parameters": 308,
+    "recent_relative_train_loss_improvement": 0.06406269911871341,
+    "residual_full_seconds_per_query": 0.012592537800082937,
+    "selected_step": 3000,
+    "status": "TRAINED_FROZEN",
+    "steps_completed": 3000,
+    "training_convergence": "NOT_ESTABLISHED",
+    "validation_loss": 0.36509744822978973,
+    "zero_state_definition": "same bounds; density_logits=-100; color/features/log_variance=0; no evidence payload"
+  },
+  "training": {
+    "cache_exact_initial_and_selected": true,
+    "cache_seconds": 1.0641095149912871,
+    "carrier_unchanged": true,
+    "checkpoint_sha256": "6006cc8a003d29734bf5206d04fc2d7bbb4fe8551f0814bdd2a8d36281d3d31d",
+    "convergence_note": "fixed budget; plateau is not proof of global optimum or sufficient capacity",
+    "dynamic_ttt_run": false,
+    "fixed_seconds_per_query": 0.005208964349003508,
+    "flops_definition": "multiply+add=2; excludes SiLU/bias/clamp/renderer",
+    "head_linear_flops_per_query": 11796480,
+    "head_only_seconds_per_query": 4.783725016750395e-05,
+    "long_window_convergence": "NOT_ESTABLISHED_REMAINING_1.45_PERCENT_TRAIN_IMPROVEMENT",
+    "optimizer_seconds": 60.704605582985096,
+    "parameters": 308,
+    "recent_relative_train_loss_improvement": -0.008678557207431709,
+    "residual_full_seconds_per_query": 0.010806729650357737,
+    "selected_step": 7500,
+    "selection_interpretation": "Validation minimum at step7500; later training reduces fitting loss but worsens train-side heldout validation. Qualification uses step7500 only.",
+    "status": "TRAINED_FROZEN",
+    "steps_completed": 30000,
+    "training_adequacy_windows": {
+      "final3000": {
+        "mean_train_loss": 0.21446164169659218,
+        "mean_validation_loss": 0.4425245579332113,
+        "n_full_train_evaluations": 12
+      },
+      "previous3000": {
+        "mean_train_loss": 0.21762086978803083,
+        "mean_validation_loss": 0.42717818688187337,
+        "n_full_train_evaluations": 12
+      },
+      "relative_window_mean_train_improvement": 0.014517119127939475
+    },
+    "training_convergence": "RECENT_TRAIN_LOSS_PLATEAU",
+    "validation_loss": 0.303350197772185,
+    "zero_state_definition": "same bounds; density_logits=-100; color/features/log_variance=0; no evidence payload"
+  }
+}

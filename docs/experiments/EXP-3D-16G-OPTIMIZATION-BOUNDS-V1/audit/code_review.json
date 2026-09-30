@@ -1,0 +1,74 @@
+{
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "checks": {
+    "bounds34_exact_camera_prior_reconstruction": true,
+    "context_cli_validation": true,
+    "holdout_disjoint": true,
+    "oracle_gate_currently_closed": true,
+    "plan_chain_bounds_identity_and_states": true,
+    "plan_manifest_config_hashes": true,
+    "prereg_locked_hashes": true,
+    "prior_hash": true,
+    "secondary_gate_currently_closed": true,
+    "source_hashes": true
+  },
+  "counts": {
+    "context": {
+      "chains": 68,
+      "states": 408
+    },
+    "oracle": {
+      "chains": 51,
+      "states": 306
+    },
+    "secondary": {
+      "chains": 34,
+      "states": 68
+    }
+  },
+  "formal_query_or_media_read_by_this_audit": false,
+  "limitations": [
+    {
+      "detail": "CURRENT oracle role joint_query and GT-free oracle roles A/B imply different seeds because role enters seed hash. Oracle bounds contrast includes finite optimizer sampling differences. Main RGBD same-role bounds contrasts remain seed-matched. Do not silently change frozen seed; report limitation. BOUNDS_STATUS must rely on paired RGBD evidence only, never interpret oracle CURRENT-minus-GT-free as a pure bounds causal effect. Context RGBD-versus-QUERY_ORACLE at matching GT-free role also uses distinct track-derived seeds, in addition to different supervision; it is a diagnostic gap.",
+      "id": "ORACLE_UNPAIRED_RANDOM_RAYS_ACROSS_BOUNDS",
+      "severity": "interpretation"
+    },
+    {
+      "detail": "Loader and phase gates constrain the frozen execution path; they are not OS-level filesystem authorization or cryptographically authenticated phase markers.",
+      "id": "API_NOT_OS_SANDBOX",
+      "severity": "scope"
+    }
+  ],
+  "locked_file_sha256": {
+    "bounds_contract.json": "12afaace0108b337e2569c4f755535e1418c8d6fbe153c72ef5c10a038212f26",
+    "bounds_lock.json": "ff732a730cae5dab14f090bf55f903ad36d5f0a62bf69c23954526d43b204447",
+    "config.json": "52da8fbabcd4a96bb3f560e5f774dc6bb6efd3dbc5e8319d16c77f08c759000e",
+    "decision_rules.json": "3966e4c262dc0c538253eea3c79120689248adcac872fa9b6024029f35669e8b",
+    "optimization_budget_lock.json": "998624403ddd52c2bd01d12ecb81a1e1d79b8fefc45dd136d6bc2879fc0a3ae6",
+    "scene_manifest.json": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+    "state_plan.json": "3d91c428556afdda26cc2428e7936af19017e3d2090ddec7db94e485dae1f567"
+  },
+  "reasoning": {
+    "bounds": "34 float64 camera-only reconstructions match locked GT-free boxes exactly; all state and chain boxes match the two identities. Original shared context anchor, TRAIN q01/q99 prior, no current-scene depth/query camera.",
+    "phase_order": "CLI context completion precedes oracle gate via context evaluation PASS; secondary requires primary analysis PASS. Evaluator requires every planned phase state/completion hash and all CPU state seals before media hashing/query access.",
+    "plateau": "CLI objective=.001 gradient=.10 match prereg lock; last10% with full objective every100 and gradient every10; descriptive, never early stopping.",
+    "prefix": "A single local Generator with frozen scene|role|track seed drives one uninterrupted Adam trajectory to 10000. 1000/3000 outputs are copied prefix states; context-selected uses only full supervision checkpoints <= each budget, strict less-than earliest tie. No optimizer changes or reseeding at budgets.",
+    "query_isolation": "ContextOnlyLoader filters private media record to context IDs; RGB_ONLY removes depth paths and cannot request query. Only explicit oracle branch obtains query-supervised batch, gated after complete context evaluation. Optimizer has no query loader or score argument.",
+    "source_integrity": "All 11 configured source files and 7 preregistered input hashes match. Runner revalidates before and after each chain; evaluator rechecks frozen source/plan/config/completion/state/summary hashes."
+  },
+  "review_scope": "Read-only source/config/metadata audit; no formal media or query score access; no frozen source modifications",
+  "source_sha256": {
+    "scripts/run_optimization_bounds.py": "6d7e7afd22effe15217797cb7a528c9a96638e60177298b3da0305f09406ae18",
+    "src/mcss/dynamic/types.py": "9b741b2228620014ee3249ba9d2fc865b96c8feb4a87e66fc66104ff89d22b52",
+    "src/mcss/geometry.py": "7649de5bbc34f91945f2891849cd19c731a861b422e89a3c08fc932ab24c5155",
+    "src/mcss/measurements.py": "2d4f4bec2b1fb52aa0faf12dea44e04db1d56bfabbc73ea3460d90b21e518783",
+    "src/mcss/mechanism_pilot/budget_state_optimization.py": "33bfba615b1fe5789f266e7627dee92e1468a29eb4c90f27a5916d3c5fd4d10f",
+    "src/mcss/mechanism_pilot/direct_capacity_contracts.py": "7c89250db5ea1b7a341a71455240d72705bab5259e972cb5dc42ad13a0b5948f",
+    "src/mcss/mechanism_pilot/direct_capacity_evaluation.py": "65022b00b85c5bbcd2e18584d363b00817e03482a820fa6d30ba54147c3d2706",
+    "src/mcss/mechanism_pilot/direct_capacity_optimization.py": "0a8a1dcff441c0552a780072deaf7e83360051603b35b2791ce948da4d4d84d2",
+    "src/mcss/mechanism_pilot/optimization_bounds_contracts.py": "b4b2e428ce58a225b01035bb6e353b72ad354dd9866d8cc1c35d82d883e03d7b",
+    "src/mcss/mechanism_pilot/optimization_bounds_evaluation.py": "a77efb28217564b0aff1e546517d8aa51c2095903077fd16d36d83589dec5fdb",
+    "src/mcss/types.py": "8d92ed4241eaac40f3c128b6dddc3c991f0f9d03c6616aafcf81c8f51cca1dc1"
+  },
+  "status": "PASS"
+}

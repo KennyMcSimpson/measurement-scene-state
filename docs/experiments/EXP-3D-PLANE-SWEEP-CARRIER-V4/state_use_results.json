@@ -1,0 +1,479 @@
+{
+  "common_mask_gains": {
+    "depth_absrel": {
+      "absolute_top1_contribution": 0.21967070604403025,
+      "absolute_top3_contribution": 0.5905050652022349,
+      "bootstrap": {
+        "defined_draws": 10000,
+        "draws": 10000,
+        "seed": 20260928,
+        "undefined_empty_draws": 0,
+        "unit": "all scenes with coverage denominator recomputed each draw"
+      },
+      "ci95": [
+        -0.00510849145974667,
+        0.01892772480785032
+      ],
+      "empty_mask_scene_count": 1,
+      "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+      "improved_tied_worse": [
+        5,
+        0,
+        2
+      ],
+      "loso": {
+        "ai_008_001": 0.007021409627560787,
+        "ai_009_001": 0.00823869433459573,
+        "ai_011_001": 0.006467452477106589,
+        "ai_014_003": 0.010511071021870294,
+        "ai_016_002": 0.00643110467463708,
+        "ai_021_002": 0.008242509986431454,
+        "ai_032_001": 0.01367882726391221,
+        "ai_034_001": 0.005318485290651699
+      },
+      "mean": 0.00823869433459573,
+      "median": 0.015542402576805392,
+      "n_covered_scenes": 7,
+      "n_scenes": 8,
+      "negative": 2,
+      "per_scene": {
+        "ai_008_001": 0.015542402576805392,
+        "ai_009_001": null,
+        "ai_011_001": 0.018866145479530583,
+        "ai_014_003": -0.005395565789051648,
+        "ai_016_002": 0.019084232294347636,
+        "ai_021_002": 0.008215800423581388,
+        "ai_032_001": -0.024402103241303152,
+        "ai_034_001": 0.02575994859825992
+      },
+      "positive": 5,
+      "positive_top1_contribution": 0.2945053356110441,
+      "positive_top3_contribution": 0.728379987970284,
+      "scene_coverage": 0.875,
+      "tied": 0
+    },
+    "normalized_depth_absrel": {
+      "absolute_top1_contribution": 0.29963056630897417,
+      "absolute_top3_contribution": 0.625311087854407,
+      "bootstrap": {
+        "defined_draws": 10000,
+        "draws": 10000,
+        "seed": 20260928,
+        "undefined_empty_draws": 0,
+        "unit": "all scenes with coverage denominator recomputed each draw"
+      },
+      "ci95": [
+        -0.01996877663024514,
+        0.04947562254186114
+      ],
+      "empty_mask_scene_count": 1,
+      "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+      "improved_tied_worse": [
+        5,
+        0,
+        2
+      ],
+      "loso": {
+        "ai_008_001": 0.026886199260697408,
+        "ai_009_001": 0.015151717256130095,
+        "ai_011_001": 0.013396109475335954,
+        "ai_014_003": 0.024980752061338308,
+        "ai_016_002": 0.012290255429926853,
+        "ai_021_002": 0.012383793797581283,
+        "ai_032_001": 0.0024848671478290008,
+        "ai_034_001": 0.013640043620201853
+      },
+      "mean": 0.015151717256130095,
+      "median": 0.025685363940894934,
+      "n_covered_scenes": 7,
+      "n_scenes": 8,
+      "negative": 2,
+      "per_scene": {
+        "ai_008_001": -0.055255174771273785,
+        "ai_009_001": null,
+        "ai_011_001": 0.025685363940894934,
+        "ai_014_003": -0.04382249157511919,
+        "ai_016_002": 0.03232048821334954,
+        "ai_021_002": 0.031759258007422964,
+        "ai_032_001": 0.09115281790593666,
+        "ai_034_001": 0.024221759071699545
+      },
+      "positive": 5,
+      "positive_top1_contribution": 0.44434511516066494,
+      "positive_top3_contribution": 0.756716393065842,
+      "scene_coverage": 0.875,
+      "tied": 0
+    }
+  },
+  "coverage_gate_design": "Pre-training revision based on exposed historical ai_009_001 all-miss bounds; no V2 outcomes. Overall retains all scenes/pixels; no scene/role/bounds replacement.",
+  "input_audit": {
+    "fresh_qualification_opened": false,
+    "matched_initialization_and_streams": true,
+    "query_after_state_seal": true,
+    "recipient_camera_preserved": true,
+    "shared_state_multiple_queries": true,
+    "status": "PASS",
+    "test_time_depth_used": false
+  },
+  "no_hit_scenes": [
+    "ai_009_001"
+  ],
+  "normalized_depth_definition": "rendered_depth / opacity.clamp_min(1e-6), common GT-valid C0/C1 opacity>1e-6 mask; diagnostic only",
+  "opacity_artifact_gate": false,
+  "opacity_checks": {
+    "all_scenes_coverage_at_least_0_99_ray_hitfraction": true,
+    "all_scenes_coverage_drop_at_most_0_01": true,
+    "common_mask_gain_ci_positive_with_75pct_scene_coverage": false,
+    "opacity_normalized_gain_ci_positive_with_75pct_scene_coverage": false
+  },
+  "primary_metric_unchanged": true,
+  "ray_hitfraction_per_scene": {
+    "C0": {
+      "ai_008_001": 1.0,
+      "ai_009_001": 0.0,
+      "ai_011_001": 1.0,
+      "ai_014_003": 1.0,
+      "ai_016_002": 1.0,
+      "ai_021_002": 1.0,
+      "ai_032_001": 1.0,
+      "ai_034_001": 1.0
+    },
+    "C1": {
+      "ai_008_001": 1.0,
+      "ai_009_001": 0.0,
+      "ai_011_001": 1.0,
+      "ai_014_003": 1.0,
+      "ai_016_002": 1.0,
+      "ai_021_002": 1.0,
+      "ai_032_001": 1.0,
+      "ai_034_001": 1.0
+    }
+  },
+  "static_common_mask_definition": "per variant anchor-minus-direct on GT-valid pixels where both anchor and direct opacity>1e-6; normalized uses depth/opacity.clamp_min(1e-6); empty masks null; gate for STATIC_DEV_STATUS only",
+  "static_common_mask_gains": {
+    "C0": {
+      "depth_absrel": {
+        "absolute_top1_contribution": 0.2997428562586045,
+        "absolute_top3_contribution": 0.6123919155699445,
+        "bootstrap": {
+          "defined_draws": 10000,
+          "draws": 10000,
+          "seed": 20260928,
+          "undefined_empty_draws": 0,
+          "unit": "all scenes with coverage denominator recomputed each draw"
+        },
+        "ci95": [
+          -0.06799986765331599,
+          0.13593767857698089
+        ],
+        "empty_mask_scene_count": 1,
+        "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+        "improved_tied_worse": [
+          4,
+          0,
+          3
+        ],
+        "loso": {
+          "ai_008_001": -0.005381180573734527,
+          "ai_009_001": 0.03265640263413838,
+          "ai_011_001": 0.02228204821919751,
+          "ai_014_003": 0.056686771702851725,
+          "ai_016_002": 0.020923479404838092,
+          "ai_021_002": 0.06486397546802286,
+          "ai_032_001": 0.02299326716599535,
+          "ai_034_001": 0.046226457051797655
+        },
+        "mean": 0.03265640263413838,
+        "median": 0.09063521544299658,
+        "n_covered_scenes": 7,
+        "n_scenes": 8,
+        "negative": 3,
+        "per_scene": {
+          "ai_008_001": 0.26088190188137583,
+          "ai_009_001": null,
+          "ai_011_001": 0.09490252912378361,
+          "ai_014_003": -0.11152581177814169,
+          "ai_016_002": 0.10305394200994011,
+          "ai_021_002": -0.1605890343691685,
+          "ai_032_001": 0.09063521544299658,
+          "ai_034_001": -0.04876392387181727
+        },
+        "positive": 4,
+        "positive_top1_contribution": 0.47478515321081927,
+        "positive_top3_contribution": 0.8350508243765958,
+        "scene_coverage": 0.875,
+        "tied": 0
+      },
+      "normalized_depth_absrel": {
+        "absolute_top1_contribution": 0.30798778316028735,
+        "absolute_top3_contribution": 0.753388622976271,
+        "bootstrap": {
+          "defined_draws": 10000,
+          "draws": 10000,
+          "seed": 20260928,
+          "undefined_empty_draws": 0,
+          "unit": "all scenes with coverage denominator recomputed each draw"
+        },
+        "ci95": [
+          -0.15887981098137352,
+          0.12841883109987734
+        ],
+        "empty_mask_scene_count": 1,
+        "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+        "improved_tied_worse": [
+          3,
+          0,
+          4
+        ],
+        "loso": {
+          "ai_008_001": -0.06754603377927175,
+          "ai_009_001": -0.013346364086863904,
+          "ai_011_001": -0.0296503093288685,
+          "ai_014_003": -0.009499037834060262,
+          "ai_016_002": -0.03172422539029778,
+          "ai_021_002": 0.012620481503700367,
+          "ai_032_001": 0.039863145741068744,
+          "ai_034_001": -0.00748856952031815
+        },
+        "mean": -0.013346364086863904,
+        "median": -0.036430321603685756,
+        "n_covered_scenes": 7,
+        "n_scenes": 8,
+        "negative": 4,
+        "per_scene": {
+          "ai_008_001": 0.31185165406758314,
+          "ai_009_001": null,
+          "ai_011_001": 0.08447730736516368,
+          "ai_014_003": -0.036430321603685756,
+          "ai_016_002": 0.09692080373373935,
+          "ai_021_002": -0.16914743763024953,
+          "ai_032_001": -0.3326034230544598,
+          "ai_034_001": -0.04849313148613843
+        },
+        "positive": 3,
+        "positive_top1_contribution": 0.632238829272071,
+        "positive_top3_contribution": 1.0,
+        "scene_coverage": 0.875,
+        "tied": 0
+      }
+    },
+    "C1": {
+      "depth_absrel": {
+        "absolute_top1_contribution": 0.30459748780448054,
+        "absolute_top3_contribution": 0.6007091309927757,
+        "bootstrap": {
+          "defined_draws": 10000,
+          "draws": 10000,
+          "seed": 20260928,
+          "undefined_empty_draws": 0,
+          "unit": "all scenes with coverage denominator recomputed each draw"
+        },
+        "ci95": [
+          -0.04043576752166661,
+          0.17426038959165904
+        ],
+        "empty_mask_scene_count": 1,
+        "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+        "improved_tied_worse": [
+          4,
+          0,
+          3
+        ],
+        "loso": {
+          "ai_008_001": 0.028594386462980386,
+          "ai_009_001": 0.06715533037001885,
+          "ai_011_001": 0.05562395246840298,
+          "ai_014_003": 0.09764612000790111,
+          "ai_016_002": 0.05337376582184139,
+          "ai_021_002": 0.09728431186925474,
+          "ai_032_001": 0.054954599124359994,
+          "ai_034_001": 0.08261017683539133
+        },
+        "mean": 0.06715533037001885,
+        "median": 0.13634359777971405,
+        "n_covered_scenes": 7,
+        "n_scenes": 8,
+        "negative": 3,
+        "per_scene": {
+          "ai_008_001": 0.2985209938122496,
+          "ai_009_001": null,
+          "ai_011_001": 0.13634359777971405,
+          "ai_014_003": -0.11578940745727473,
+          "ai_016_002": 0.14984471765908358,
+          "ai_021_002": -0.11361855862539649,
+          "ai_032_001": 0.14035971784397194,
+          "ai_034_001": -0.025573748422216047
+        },
+        "positive": 4,
+        "positive_top1_contribution": 0.4117138957214468,
+        "positive_top3_contribution": 0.8119577685920841,
+        "scene_coverage": 0.875,
+        "tied": 0
+      },
+      "normalized_depth_absrel": {
+        "absolute_top1_contribution": 0.2901992860350171,
+        "absolute_top3_contribution": 0.6509196308568597,
+        "bootstrap": {
+          "defined_draws": 10000,
+          "draws": 10000,
+          "seed": 20260928,
+          "undefined_empty_draws": 0,
+          "unit": "all scenes with coverage denominator recomputed each draw"
+        },
+        "ci95": [
+          -0.09219256366393742,
+          0.13215802932766307
+        ],
+        "empty_mask_scene_count": 1,
+        "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+        "improved_tied_worse": [
+          3,
+          0,
+          4
+        ],
+        "loso": {
+          "ai_008_001": -0.02292674995028603,
+          "ai_009_001": 0.018548864512313672,
+          "ai_011_001": 0.0016680444831164432,
+          "ai_014_003": 0.03167922254904135,
+          "ai_016_002": -0.0014274857559771297,
+          "ai_021_002": 0.042387213201602984,
+          "ai_032_001": 0.053969813702561674,
+          "ai_034_001": 0.024491993356136433
+        },
+        "mean": 0.018548864512313672,
+        "median": -0.017109908550622888,
+        "n_covered_scenes": 7,
+        "n_scenes": 8,
+        "negative": 4,
+        "per_scene": {
+          "ai_008_001": 0.2674025512879119,
+          "ai_009_001": null,
+          "ai_011_001": 0.11983378468749706,
+          "ai_014_003": -0.060233283708052365,
+          "ai_016_002": 0.1384069661220585,
+          "ai_021_002": -0.12448122762342217,
+          "ai_032_001": -0.1939768306291743,
+          "ai_034_001": -0.017109908550622888
+        },
+        "positive": 3,
+        "positive_top1_contribution": 0.5087148456394271,
+        "positive_top3_contribution": 1.0,
+        "scene_coverage": 0.875,
+        "tied": 0
+      }
+    },
+    "C2": {
+      "depth_absrel": {
+        "absolute_top1_contribution": 0.22080564343934367,
+        "absolute_top3_contribution": 0.603103799975968,
+        "bootstrap": {
+          "defined_draws": 10000,
+          "draws": 10000,
+          "seed": 20260928,
+          "undefined_empty_draws": 0,
+          "unit": "all scenes with coverage denominator recomputed each draw"
+        },
+        "ci95": [
+          -0.07254562752294287,
+          0.1779876040319417
+        ],
+        "empty_mask_scene_count": 1,
+        "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+        "improved_tied_worse": [
+          4,
+          0,
+          3
+        ],
+        "loso": {
+          "ai_008_001": 0.023983819765870967,
+          "ai_009_001": 0.05662841283653368,
+          "ai_011_001": 0.04051080922045433,
+          "ai_014_003": 0.10331133996903397,
+          "ai_016_002": 0.04099428796823939,
+          "ai_021_002": 0.08672550121404406,
+          "ai_032_001": 0.030450321531995155,
+          "ai_034_001": 0.07042281018609788
+        },
+        "mean": 0.05662841283653368,
+        "median": 0.15043316204629942,
+        "n_covered_scenes": 7,
+        "n_scenes": 8,
+        "negative": 3,
+        "per_scene": {
+          "ai_008_001": 0.25249597126050993,
+          "ai_009_001": null,
+          "ai_011_001": 0.15333403453300976,
+          "ai_014_003": -0.22346914995846812,
+          "ai_016_002": 0.15043316204629942,
+          "ai_021_002": -0.12395411742852858,
+          "ai_032_001": 0.2136969606637648,
+          "ai_034_001": -0.02613797126085149
+        },
+        "positive": 4,
+        "positive_top1_contribution": 0.3279338265881837,
+        "positive_top3_contribution": 0.8046221401896926,
+        "scene_coverage": 0.875,
+        "tied": 0
+      },
+      "normalized_depth_absrel": {
+        "absolute_top1_contribution": 0.21176214881339564,
+        "absolute_top3_contribution": 0.5602291477538998,
+        "bootstrap": {
+          "defined_draws": 10000,
+          "draws": 10000,
+          "seed": 20260928,
+          "undefined_empty_draws": 0,
+          "unit": "all scenes with coverage denominator recomputed each draw"
+        },
+        "ci95": [
+          -0.1312440067630941,
+          0.0771821747725112
+        ],
+        "empty_mask_scene_count": 1,
+        "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+        "improved_tied_worse": [
+          3,
+          0,
+          4
+        ],
+        "loso": {
+          "ai_008_001": -0.06665283849700389,
+          "ai_009_001": -0.029766061692637544,
+          "ai_011_001": -0.047960889541915276,
+          "ai_014_003": -0.0120653144325548,
+          "ai_016_002": -0.0518173648487654,
+          "ai_021_002": -0.011167544324233733,
+          "ai_032_001": -0.0010088571730739275,
+          "ai_034_001": -0.017689623030915775
+        },
+        "mean": -0.029766061692637544,
+        "median": -0.10222469366296816,
+        "n_covered_scenes": 7,
+        "n_scenes": 8,
+        "negative": 4,
+        "per_scene": {
+          "ai_008_001": 0.19155459913356054,
+          "ai_009_001": null,
+          "ai_011_001": 0.07940290540302886,
+          "ai_014_003": -0.135970545253134,
+          "ai_016_002": 0.10254175724412962,
+          "ai_021_002": -0.1413571659030604,
+          "ai_032_001": -0.20230928881001925,
+          "ai_034_001": -0.10222469366296816
+        },
+        "positive": 3,
+        "positive_top1_contribution": 0.512864732905475,
+        "positive_top3_contribution": 1.0,
+        "scene_coverage": 0.875,
+        "tied": 0
+      }
+    }
+  },
+  "static_opacity_artifact_gate": false,
+  "static_opacity_checks": {
+    "C1_all_scenes_coverage_at_least_0_99_ray_hitfraction": true,
+    "C1_anchor_direct_common_mask_gain_ci_positive_with_75pct_scene_coverage": false,
+    "C1_anchor_direct_normalized_gain_ci_positive_with_75pct_scene_coverage": false
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "definition": "Pearson correlation of flattened density logits; no gate uses it",
+  "descriptive_only": true,
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C0_20260928/states.pt": "d7c75596e4aa1453a1450f0621778b2450d02c254848a22cbd4bd1babdbdf620",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C0_20260929/states.pt": "bc1c2683f1ea4044c1cf08a75f07b06ad809bfa64c1bd723bd445cc8c2681d25",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C0_20260930/states.pt": "6d530924a8b6edbe0ac0cb74952408fba07b20ef3a91d83346d4595e28ad0bc0",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C1_20260928/states.pt": "acd8d99132cf8c351a2f8e2011aa0d0f7591d5739740e456516cab2e6b34a7fd",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C1_20260929/states.pt": "e542663c136e106797ee343112a051836270eacd4a0f78b81bd8a3c612665ecf",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C1_20260930/states.pt": "35a392023f4f2435acc51fd80d6af90952b9a1a4f53d5a92852d1b7f1152eec8",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C2_20260928/states.pt": "e6f37dd4d9b241f82e61f876c5e6a0c87d958841f0e28ff72f3fc619f3f1b09b",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C2_20260929/states.pt": "181d21c7336dc84e78abe7a3168c82ee0c60fa93c293f337563ee90423ad4385",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/selected_dev/C2_20260930/states.pt": "de2e223659e1d6e913303df67a49b82a10f38befedd408398668c7bcfb230e63"
+  },
+  "per_run": {
+    "C0_20260928": {
+      "across_scene_A": 0.3982986020482953,
+      "direct_A_vs_anchor_A": 0.6551987093238645,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6672899937525305
+    },
+    "C0_20260929": {
+      "across_scene_A": 0.4224868824372522,
+      "direct_A_vs_anchor_A": 0.620758598937172,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6625921582784505
+    },
+    "C0_20260930": {
+      "across_scene_A": 0.4420619171968588,
+      "direct_A_vs_anchor_A": 0.6216299996084376,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6829768977033042
+    },
+    "C1_20260928": {
+      "across_scene_A": 0.29871478812889884,
+      "direct_A_vs_anchor_A": 0.7363354863796713,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6851428951757457
+    },
+    "C1_20260929": {
+      "across_scene_A": 0.3504335653363256,
+      "direct_A_vs_anchor_A": 0.6994706729677145,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7310499334002442
+    },
+    "C1_20260930": {
+      "across_scene_A": 0.34050502866106497,
+      "direct_A_vs_anchor_A": 0.6910966292901805,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7144375721711189
+    },
+    "C2_20260928": {
+      "across_scene_A": 0.34189935236468,
+      "direct_A_vs_anchor_A": 0.7300884306084281,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7796296368101956
+    },
+    "C2_20260929": {
+      "across_scene_A": 0.4087384643021301,
+      "direct_A_vs_anchor_A": 0.7439308757144818,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.8219520484909939
+    },
+    "C2_20260930": {
+      "across_scene_A": 0.41741062058503114,
+      "direct_A_vs_anchor_A": 0.7522977515215693,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.8412377192385607
+    }
+  },
+  "per_variant_mean_over_seeds": {
+    "C0": {
+      "across_scene_A": 0.4209491338941354,
+      "direct_A_vs_anchor_A": 0.632529102623158,
+      "within_scene_A_B": 0.6709530165780951
+    },
+    "C1": {
+      "across_scene_A": 0.32988446070876315,
+      "direct_A_vs_anchor_A": 0.708967596212522,
+      "within_scene_A_B": 0.7102101335823695
+    },
+    "C2": {
+      "across_scene_A": 0.3893494790839471,
+      "direct_A_vs_anchor_A": 0.7421056859481597,
+      "within_scene_A_B": 0.8142731348465834
+    }
+  }
+}

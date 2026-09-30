@@ -1,0 +1,88 @@
+{
+  "definition": "Pearson correlation of flattened density logits; no gate uses it",
+  "descriptive_only": true,
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C0_20260928/states.pt": "ac3e069964c469cc675fc3509f6a4ef23d9584b2a6b8df2163b240365e3c896b",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C0_20260929/states.pt": "951a58be29c8f96ca0df14cfb8938f863f07d6a6117ecf2a4b1e2f004916b522",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C0_20260930/states.pt": "1d8c47f35842be515bf7daefc3a5dfbe8459a8e6cfc3128cf2cca115e770f701",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C1_20260928/states.pt": "db2d52c2dafeadb3403c569b2837b1d6a463f6db5dafadb6b5b885c7a8662ae7",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C1_20260929/states.pt": "b18dbf67e2be8bb1b64ea615aefa2685aab22aab39038bb0bf5600a624485f85",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C1_20260930/states.pt": "d0b3b0ef5c5e3f6ebba249dfd35693dfdb8e74da469c6c90172ad8c58cbf2b08",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C2_20260928/states.pt": "a56665da5db606e45faa7563018e9903001443b5ea7e0fd25f58e2b626dca6c3",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C2_20260929/states.pt": "e00f4001f8e5e185f1ae82329194e7dba63afd3ea83b30189606a734d686be2d",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-VIEWCOUNT-V9/raw/selected_dev/C2_20260930/states.pt": "3a0fdf8690414c77830c2aa748f4b4e7438d7b905407f6391b7401264fbfe024"
+  },
+  "per_run": {
+    "C0_20260928": {
+      "across_scene_A": 0.2957693715853055,
+      "direct_A_vs_anchor_A": 0.6272637796634892,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6500625433498575
+    },
+    "C0_20260929": {
+      "across_scene_A": 0.30267641718962773,
+      "direct_A_vs_anchor_A": 0.6187995932333281,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6741693855372801
+    },
+    "C0_20260930": {
+      "across_scene_A": 0.27019478490506926,
+      "direct_A_vs_anchor_A": 0.5882458215744975,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.59413157957879
+    },
+    "C1_20260928": {
+      "across_scene_A": 0.2330691509751567,
+      "direct_A_vs_anchor_A": 0.6864028020470592,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6062823458669259
+    },
+    "C1_20260929": {
+      "across_scene_A": 0.26383058707918045,
+      "direct_A_vs_anchor_A": 0.6698039244378244,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6073772109151228
+    },
+    "C1_20260930": {
+      "across_scene_A": 0.3036368927206062,
+      "direct_A_vs_anchor_A": 0.6388475105851092,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6599657287514513
+    },
+    "C2_20260928": {
+      "across_scene_A": 0.28694644998593466,
+      "direct_A_vs_anchor_A": 0.6178722646180579,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6069064020056087
+    },
+    "C2_20260929": {
+      "across_scene_A": 0.26150455548402085,
+      "direct_A_vs_anchor_A": 0.6678778060210719,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6313014276335318
+    },
+    "C2_20260930": {
+      "across_scene_A": 0.3346243961781627,
+      "direct_A_vs_anchor_A": 0.6458015976445238,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6547065188568691
+    }
+  },
+  "per_variant_mean_over_seeds": {
+    "C0": {
+      "across_scene_A": 0.2895468578933342,
+      "direct_A_vs_anchor_A": 0.6114363981571049,
+      "within_scene_A_B": 0.6394545028219759
+    },
+    "C1": {
+      "across_scene_A": 0.26684554359164775,
+      "direct_A_vs_anchor_A": 0.665018079023331,
+      "within_scene_A_B": 0.6245417618445
+    },
+    "C2": {
+      "across_scene_A": 0.29435846721603937,
+      "direct_A_vs_anchor_A": 0.6438505560945512,
+      "within_scene_A_B": 0.6309714494986699
+    }
+  }
+}

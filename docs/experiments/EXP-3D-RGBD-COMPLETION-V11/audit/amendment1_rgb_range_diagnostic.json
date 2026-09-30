@@ -1,0 +1,60 @@
+{
+ "diagnostic": "rendered DEV context RGB range only; no metric, no query frame, no GT read",
+ "script": "/tmp/claude_rgb_range_diag.py (copied into this audit folder)",
+ "runs": [
+  {
+   "checkpoint": "outputs/EXP-3D-RGBD-COMPLETION-V11/checkpoints/C1_20260928/step_005000.pt",
+   "views": 48,
+   "views_out_of_range": 1,
+   "worst": {
+    "scene": "ai_032_001",
+    "role": "B",
+    "frame": 5,
+    "min": 0.09753561019897461,
+    "max": 1.0000001192092896,
+    "above_1": 7,
+    "below_0": 0,
+    "max_overshoot": 1.1920928955078125e-07
+   },
+   "out_of_range": [
+    {
+     "scene": "ai_032_001",
+     "role": "B",
+     "frame": 5,
+     "min": 0.09753561019897461,
+     "max": 1.0000001192092896,
+     "above_1": 7,
+     "below_0": 0,
+     "max_overshoot": 1.1920928955078125e-07
+    }
+   ]
+  },
+  {
+   "checkpoint": "outputs/EXP-3D-RGBD-COMPLETION-V11/checkpoints/C1_20260930/step_006000.pt",
+   "views": 48,
+   "views_out_of_range": 1,
+   "worst": {
+    "scene": "ai_032_001",
+    "role": "B",
+    "frame": 5,
+    "min": 0.039801403880119324,
+    "max": 1.0000001192092896,
+    "above_1": 2,
+    "below_0": 0,
+    "max_overshoot": 1.1920928955078125e-07
+   },
+   "out_of_range": [
+    {
+     "scene": "ai_032_001",
+     "role": "B",
+     "frame": 5,
+     "min": 0.039801403880119324,
+     "max": 1.0000001192092896,
+     "above_1": 2,
+     "below_0": 0,
+     "max_overshoot": 1.1920928955078125e-07
+    }
+   ]
+  }
+ ]
+}

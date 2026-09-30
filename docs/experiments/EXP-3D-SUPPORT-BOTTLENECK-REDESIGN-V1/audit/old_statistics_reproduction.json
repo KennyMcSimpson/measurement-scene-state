@@ -1,0 +1,80 @@
+{
+  "DynamicTTT": false,
+  "carrier_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+  "checks": {
+    "all_original_hashes_unchanged_after_recompute": true,
+    "old_static_all_statistics_exact": true,
+    "old_static_support_counts_recomputed_from_cameras_exact": true,
+    "old_static_volume_from_geometry_raw_exact": true,
+    "unseen_static_all_statistics_exact": true,
+    "unseen_static_support_counts_recomputed_from_cameras_exact": true,
+    "unseen_static_volume_from_geometry_raw_exact": true
+  },
+  "details": {
+    "old_static": {
+      "Residual_A_and_B_included": true,
+      "methods": [
+        "A",
+        "B",
+        "Residual_A",
+        "Residual_B",
+        "Residual_channel_permutation",
+        "Residual_shuffled",
+        "Residual_zero",
+        "anchor",
+        "channel_permutation",
+        "feature_shuffle",
+        "prior",
+        "state_mask",
+        "wrong_scene"
+      ],
+      "raw_rows": 234,
+      "scenes": [
+        "ai_001_001",
+        "ai_002_001",
+        "ai_003_001"
+      ],
+      "volume_frames": 48,
+      "volume_mismatches": []
+    },
+    "unseen_static": {
+      "Residual_A_and_B_included": true,
+      "methods": [
+        "A",
+        "B",
+        "Residual_A",
+        "Residual_B",
+        "Residual_channel_permutation",
+        "Residual_shuffled",
+        "Residual_zero",
+        "anchor",
+        "channel_permutation",
+        "feature_shuffle",
+        "prior",
+        "state_mask",
+        "wrong_scene"
+      ],
+      "raw_rows": 182,
+      "scenes": [
+        "ai_004_001",
+        "ai_006_001",
+        "ai_007_002",
+        "ai_008_001",
+        "ai_009_001",
+        "ai_010_001",
+        "ai_011_001"
+      ],
+      "volume_frames": 112,
+      "volume_mismatches": []
+    }
+  },
+  "model_inference_calls": 0,
+  "notes": [
+    "All static methods including Residual A/B retained; no new predictions.",
+    "Support freshly reprojected from dataset cameras and checkpoint geometry.",
+    "Volume metrics recomputed from saved GT geometry arrays; outside distances independently recalculated from saved GT surface coordinates.",
+    "Nearest-candidate distances reused from archived raw arrays; no new model or neighbor allocation."
+  ],
+  "statistics_unit": "scene",
+  "status": "PASS"
+}

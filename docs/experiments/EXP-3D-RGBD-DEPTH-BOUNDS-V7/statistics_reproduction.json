@@ -1,0 +1,23 @@
+{
+  "amendment": "V7 Amendment 1 (AMENDMENTS.md): the frozen V2 estimator without its inapplicable C0/C1 ray-hit-fraction equality assertion; everything else unchanged",
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/audit/dev_state_use.json": "77ca1582dc7c6d60044139f4ecb23853321dfb081a4992a573763d5d989f0412",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/cost_analysis.json": "764e52c71620ef670da608ba930383b887ece12488e735da28ef7e1b4bcb03e7",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/dev_context_results.json": "0a27d57ccb67ba97ecf59fac8a5397beb51ce8ab3ab261b55aef9026ebb63354",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/dev_matched_results.json": "09b55489a88ed92cb3ea4265ddf95bbb69b6465f1dc94e5697038b20fdba9b4e",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/dev_query_results.json": "fc85756d5645aa90565ea40cae1a9188ff00979df2af5021f6e9c0eba5c78dcd",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/dev_region_results.json": "005284dd68543076f015e9573b3edee0cff2c66e5e78dff249b70d10131f298e",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/raw/dev_static_matched_results.json": "d75ec2eba8474d65d22a798b9aa178e8202baf6b930664af950fe68caa301cf0",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/scene_split.json": "4a111c072f2178740a709e5257e065d4fcbc5564d624a97f12b8b795731e1afc",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/training_contract.json": "3319114fe08555fef2e1e4beeec3945403138728523ed0de7097e2c303179c9a",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/training_curves.json": "a42f2480b7e1b65405b90764f38bdd19f0cb5b0259ab41b28428c5fd5ceb96da"
+  },
+  "media_or_checkpoint_loaded": false,
+  "raw_only": true,
+  "source_sha256": {
+    "/home/zonghan/measurement-scene-state/scripts/analyze_rgbd_bounds_carrier.py": "d10b0a3e13d54acef05501d03754c427d2b4b01e943a6fb2eb39162deccf23dd",
+    "/home/zonghan/measurement-scene-state/scripts/analyze_rgbd_bounds_carrier_amend1.py": "682393a6b6980c8a22a0fe489041d45249ca8340ff8b2c1e47085b238d6034da",
+    "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/geometry_carrier_statistics.py": "a4605d75d58ef9787f92b7ac17c23ff1d0f4e41ca01c9178ba059d1c4c62c1b1"
+  },
+  "status": "PASS"
+}

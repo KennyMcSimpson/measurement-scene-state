@@ -1,0 +1,38 @@
+{
+  "no_query_choice_of_budget_or_state": true,
+  "optimization": {
+    "batch_rays": 1024,
+    "checkpoint_interval": 100,
+    "density_l2_weight": 1e-05,
+    "depth_weight": 1.0,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.03,
+    "rgb_weight": 1.0,
+    "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE",
+    "steps": 10000,
+    "tv_weight": 0.0001
+  },
+  "parallel_workers": 4,
+  "primary": {
+    "bounds_mode": "FROZEN_GT_FREE_BOUNDS",
+    "budget": 10000,
+    "selection": "FIXED_BUDGET",
+    "track": "RGBD"
+  },
+  "scene_manifest_sha256": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+  "seed_rule": "20260927 + first8hex sha256(scene|role|track); same as prior experiment",
+  "source_sha256": {
+    "scripts/run_optimization_bounds.py": "6d7e7afd22effe15217797cb7a528c9a96638e60177298b3da0305f09406ae18",
+    "src/mcss/dynamic/types.py": "9b741b2228620014ee3249ba9d2fc865b96c8feb4a87e66fc66104ff89d22b52",
+    "src/mcss/geometry.py": "7649de5bbc34f91945f2891849cd19c731a861b422e89a3c08fc932ab24c5155",
+    "src/mcss/measurements.py": "2d4f4bec2b1fb52aa0faf12dea44e04db1d56bfabbc73ea3460d90b21e518783",
+    "src/mcss/mechanism_pilot/budget_state_optimization.py": "33bfba615b1fe5789f266e7627dee92e1468a29eb4c90f27a5916d3c5fd4d10f",
+    "src/mcss/mechanism_pilot/direct_capacity_contracts.py": "7c89250db5ea1b7a341a71455240d72705bab5259e972cb5dc42ad13a0b5948f",
+    "src/mcss/mechanism_pilot/direct_capacity_evaluation.py": "65022b00b85c5bbcd2e18584d363b00817e03482a820fa6d30ba54147c3d2706",
+    "src/mcss/mechanism_pilot/direct_capacity_optimization.py": "0a8a1dcff441c0552a780072deaf7e83360051603b35b2791ce948da4d4d84d2",
+    "src/mcss/mechanism_pilot/optimization_bounds_contracts.py": "b4b2e428ce58a225b01035bb6e353b72ad354dd9866d8cc1c35d82d883e03d7b",
+    "src/mcss/mechanism_pilot/optimization_bounds_evaluation.py": "a77efb28217564b0aff1e546517d8aa51c2095903077fd16d36d83589dec5fdb",
+    "src/mcss/types.py": "8d92ed4241eaac40f3c128b6dddc3c991f0f9d03c6616aafcf81c8f51cca1dc1"
+  },
+  "state_plan_sha256": "3d91c428556afdda26cc2428e7936af19017e3d2090ddec7db94e485dae1f567"
+}

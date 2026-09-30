@@ -1,0 +1,72 @@
+{
+  "matched_variants": [
+    "C0",
+    "C1"
+  ],
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 6,
+    "old_files_unchanged": 0,
+    "query_rows": 960,
+    "static_rows_recomputed": 192,
+    "status": "PASS"
+  },
+  "query_rows": 960,
+  "real_DEV_read": false,
+  "region_variants": [
+    "C0",
+    "C1"
+  ],
+  "seconds": 36.066483222006354,
+  "seeds": 2,
+  "static_rows": 192,
+  "static_variants": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "status": "PASS",
+  "steps_per_run": 2,
+  "summary_free_fields": [
+    "PLANE SWEEP CARRIER V4 FINAL",
+    "DENSE_SURFACE_CHECKPOINT={'20260928': {'path': '/tmp/claude-plane-synthetic-v4/EXP-3D-PLANE-SWEEP-CARRIER-V4/checkpoints/C0_20260928/step_000002.pt', 'sha256': 'f04b72013b94caae5862e04ecd3569c4f4b539f38e7addd8c6cd5daa44b20ce8', 'step': 2}, '20260929': {'path': '/tmp/claude-plane-synthetic-v4/EXP-3D-PLANE-SWEEP-CARRIER-V4/checkpoints/C0_20260929/step_000002.pt', 'sha256': '24a6eb4ad0e3bbf7a49297fd1fcd32ef418b96bf5f10a14167244780ae11bd24', 'step': 2}}",
+    "SWEEP_SURFACE_CHECKPOINT={'20260928': {'path': '/tmp/claude-plane-synthetic-v4/EXP-3D-PLANE-SWEEP-CARRIER-V4/checkpoints/C1_20260928/step_000002.pt', 'sha256': '0bd98d5ee35f751ff005a6f349ab4c31f7b44346cf3139812a2a3dc97ceb6608', 'step': 2}, '20260929': {'path': '/tmp/claude-plane-synthetic-v4/EXP-3D-PLANE-SWEEP-CARRIER-V4/checkpoints/C1_20260929/step_000002.pt', 'sha256': 'd19395ca889d33cd57fee43250dfbf0975cccf76e77c97c7fb0f5f24bfbb5296', 'step': 2}}",
+    "SWEEP_NO_SURFACE_CHECKPOINT={'20260928': {'path': '/tmp/claude-plane-synthetic-v4/EXP-3D-PLANE-SWEEP-CARRIER-V4/checkpoints/C2_20260928/step_000002.pt', 'sha256': '40cb12dd84a3623a1883895d149f219d87c5fd149452302b4c8e5aaf2c9339c1', 'step': 2}, '20260929': {'path': '/tmp/claude-plane-synthetic-v4/EXP-3D-PLANE-SWEEP-CARRIER-V4/checkpoints/C2_20260929/step_000002.pt', 'sha256': 'aa763a1d43b16da1d90af5463357e4126a79494337629513e8a15ac575d4d534', 'step': 2}}",
+    "SWEEP_QUERY_ABSREL=0.431287",
+    "SWEEP_NO_SURFACE_QUERY_ABSREL=0.432257",
+    "SWEEP_GAIN=0.000040",
+    "SWEEP_GAIN_CI=[4.015733914763259e-05, 4.0161704722159464e-05]",
+    "SURFACE_WITH_SWEEP_GAIN=0.000970",
+    "SURFACE_WITH_SWEEP_GAIN_CI=[0.0009697366719289904, 0.0009697384763664649]",
+    "SWEEP_FULL_CONTEXT_GAIN=-0.006033",
+    "SWEEP_FULL_CONTEXT_GAIN_CI=[-0.006033216603100272, -0.006033212877810029]",
+    "SWEEP_WRONG_SCENE_DAMAGE=0.000000",
+    "SWEEP_WRONG_SCENE_DAMAGE_CI=[-1.649217026833405e-09, 1.9596579220459986e-09]",
+    "SWEEP_SHUFFLE_DAMAGE=-0.003632",
+    "SWEEP_SHUFFLE_DAMAGE_CI=[-0.0036316990347889586, -0.0036316956587446395]",
+    "OBS2PLUS_SWEEP=0.432732",
+    "OBS2PLUS_SWEEP_GAIN=0.000042",
+    "SWEEP_STATUS=PARTIAL",
+    "SCENE_SPECIFICITY_STATUS=NOT_ESTABLISHED",
+    "INTERPRETATION_BRANCH=B",
+    "REPORT_DIR=/tmp/claude-plane-synthetic-v4-docs/EXP-3D-PLANE-SWEEP-CARRIER-V4"
+  ],
+  "synthetic_only": true,
+  "variants": [
+    "C0",
+    "C1",
+    "C2"
+  ]
+}

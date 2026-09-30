@@ -1,0 +1,78 @@
+{
+  "augmentation": "none",
+  "batch_rays": 1024,
+  "batch_scenes": 1,
+  "budget_rationale": "3 independent seeds, 125 visits/train-scene, 3000 fixed steps; synthetic shared-GPU timing approx .6s/step; no DEV tuning of budget",
+  "checkpoint_selection": "independent per variant/seed using same DEV rule; never best seed",
+  "checkpoint_steps": [
+    500,
+    1000,
+    1500,
+    2000,
+    2500,
+    3000
+  ],
+  "context_roles": "independent A/B states, equal loss weights",
+  "cpu_affinity": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "cpu_affinity_rationale": "user-restricted to cores 8-23; before freezing, the statistics tests crashed natively in numpy 3/12 times unpinned and 0/12 times pinned to cores 8-23",
+  "dynamic_ttt_run": false,
+  "execution": "all 9 variant x seed runs trained concurrently on the shared GPU (user-approved parallel GPU use); identical contention for C0/C1/C2",
+  "gradient_clip": 1.0,
+  "image_size": [
+    128,
+    160
+  ],
+  "initialize": "from scratch with same per-seed Torch RNG; no B-final warm start",
+  "learning_rate": 0.001,
+  "lr_schedule": "constant",
+  "native_crash_policy": "a signal-terminated run (negative return code) is moved to audit/failed_attempts with an incident record and rerun once from scratch with identical variant/seed/config; archived checkpoints and DEV curves are never used; a second native crash or any Python error stops the experiment",
+  "num_threads": 1,
+  "optimizer": "Adam",
+  "parallel_workers": 9,
+  "precision": "FP32",
+  "primary_method": "C1",
+  "primary_pair": [
+    "C0",
+    "C1"
+  ],
+  "sampling": "seeded scene permutation cycled; primary query slot cycles per scene visit; uniform with-replacement rays, identical indices for A/B and all variants",
+  "secondary_C2": "RUN_SECONDARY_ABLATION_ONLY: FREE_SURFACE16 = C1 + .1 free-space; reported only as C1-C2; never primary, never in C0/C1 common masks, OBS regions or qualification gates",
+  "seed_handling": "all3 equally weighted within scene; report each seed; no cherry-picking",
+  "seeds": [
+    20260928,
+    20260929,
+    20260930
+  ],
+  "steps": 3000,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "thread_rationale": "only environment with a passing full suite; a native numpy/torch segfault occurred with multithreaded numeric libraries",
+  "train_targets": "TRAIN primary_query2 RGB+ray-distance depth; never carrier input",
+  "variants": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "weight_decay": 0,
+  "writer_updates": false
+}

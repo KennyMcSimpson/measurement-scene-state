@@ -1,0 +1,35 @@
+{
+  "FINAL_HOLDOUT_OPENED": false,
+  "FINAL_HOLDOUT_STATUS": "NOT_OPENED_NO_METHOD_QUALIFIED",
+  "candidate_scenes": [
+    "ai_013_001",
+    "ai_015_003",
+    "ai_017_001",
+    "ai_019_001",
+    "ai_022_002",
+    "ai_024_001",
+    "ai_027_001",
+    "ai_029_001",
+    "ai_031_001",
+    "ai_033_001",
+    "ai_035_002",
+    "ai_037_001"
+  ],
+  "final_holdout_ci": null,
+  "final_holdout_gain": null,
+  "geometry_eligible_scenes": [
+    "ai_017_001",
+    "ai_019_001",
+    "ai_022_002",
+    "ai_027_001",
+    "ai_031_001",
+    "ai_033_001",
+    "ai_035_002",
+    "ai_037_001"
+  ],
+  "independence_status": "INDEPENDENCE_UNRESOLVED",
+  "method_lock": null,
+  "model_inference_calls": 0,
+  "second_independent_blocker": "Historical project training/exposure cannot be excluded. No future opening without resolving independence; current candidates were not replaced.",
+  "wrong_scene_damage": null
+}

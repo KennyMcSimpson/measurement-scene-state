@@ -1,0 +1,42 @@
+{
+ "rule": "CONTEXT_DEPTH",
+ "grid": 32,
+ "best_params": {
+  "k": 1.0,
+  "a": 16.0,
+  "b": 4.0,
+  "c": -2.0
+ },
+ "train24_fit_absrel": 0.3119379557123329,
+ "train24_constant_absrel": 0.5919369452943405,
+ "trainx_absrel": 0.3665901056103262,
+ "trainx_constant_absrel": 0.5282772701078405,
+ "trainx_opacity": 0.7906916337355541,
+ "trainx_views": 192,
+ "trainx_views_beating_constant": 0.765625,
+ "top3_fit": [
+  {
+   "k": 1.0,
+   "a": 16.0,
+   "b": 4.0,
+   "c": -2.0,
+   "absrel": 0.3119379557123329
+  },
+  {
+   "k": 0.5,
+   "a": 32.0,
+   "b": 4.0,
+   "c": -2.0,
+   "absrel": 0.3120488459569392
+  },
+  {
+   "k": 0.5,
+   "a": 64.0,
+   "b": 4.0,
+   "c": -2.0,
+   "absrel": 0.3131568234395904
+  }
+ ],
+ "seconds": 725.2005484470283,
+ "exploratory_train_only": true
+}

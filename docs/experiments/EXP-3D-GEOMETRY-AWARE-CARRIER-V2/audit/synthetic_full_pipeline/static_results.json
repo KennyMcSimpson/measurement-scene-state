@@ -1,0 +1,4710 @@
+{
+  "aggregation": "equal seeds per query, then queries per role, roles per scene; scene bootstrap",
+  "free_space_extra_gain": null,
+  "full_context_gain": {
+    "C0": {
+      "absolute_top1_contribution": 0.12500046214378505,
+      "absolute_top3_contribution": 0.3750013864313551,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        -0.00025190350910026665,
+        -0.00025190211211644636
+      ],
+      "improved_tied_worse": [
+        0,
+        0,
+        8
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": -0.0002519026775622784,
+        "ENGINEERING_ONLY_DEV_01": -0.0002519029436544346,
+        "ENGINEERING_ONLY_DEV_02": -0.0002519026775622784,
+        "ENGINEERING_ONLY_DEV_03": -0.0002519029436544346,
+        "ENGINEERING_ONLY_DEV_04": -0.0002519026775622784,
+        "ENGINEERING_ONLY_DEV_05": -0.0002519029436544346,
+        "ENGINEERING_ONLY_DEV_06": -0.0002519026775622784,
+        "ENGINEERING_ONLY_DEV_07": -0.0002519029436544346
+      },
+      "loso_range": [
+        -0.0002519029436544346,
+        -0.0002519026775622784
+      ],
+      "mean": -0.0002519028106083565,
+      "median": -0.0002519028106083565,
+      "n_scenes": 8,
+      "negative": 8,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": -0.00025190374193090337,
+        "ENGINEERING_ONLY_DEV_01": -0.00025190187928580965,
+        "ENGINEERING_ONLY_DEV_02": -0.00025190374193090337,
+        "ENGINEERING_ONLY_DEV_03": -0.00025190187928580965,
+        "ENGINEERING_ONLY_DEV_04": -0.00025190374193090337,
+        "ENGINEERING_ONLY_DEV_05": -0.00025190187928580965,
+        "ENGINEERING_ONLY_DEV_06": -0.00025190374193090337,
+        "ENGINEERING_ONLY_DEV_07": -0.00025190187928580965
+      },
+      "positive": 0,
+      "positive_top1_contribution": null,
+      "positive_top3_contribution": null,
+      "tied": 0
+    },
+    "C1": {
+      "absolute_top1_contribution": 0.1250000653474405,
+      "absolute_top3_contribution": 0.37500019604232143,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        -0.00029691390227527814,
+        -0.00029691366944460673
+      ],
+      "improved_tied_worse": [
+        0,
+        0,
+        8
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": -0.0002969138080342921,
+        "ENGINEERING_ONLY_DEV_01": -0.0002969137636855928,
+        "ENGINEERING_ONLY_DEV_02": -0.0002969138080342921,
+        "ENGINEERING_ONLY_DEV_03": -0.0002969137636855928,
+        "ENGINEERING_ONLY_DEV_04": -0.0002969138080342921,
+        "ENGINEERING_ONLY_DEV_05": -0.0002969137636855928,
+        "ENGINEERING_ONLY_DEV_06": -0.0002969138080342921,
+        "ENGINEERING_ONLY_DEV_07": -0.0002969137636855928
+      },
+      "loso_range": [
+        -0.0002969138080342921,
+        -0.0002969137636855928
+      ],
+      "mean": -0.00029691378585994244,
+      "median": -0.00029691378585994244,
+      "n_scenes": 8,
+      "negative": 8,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": -0.00029691363063949483,
+        "ENGINEERING_ONLY_DEV_01": -0.00029691394108039004,
+        "ENGINEERING_ONLY_DEV_02": -0.00029691363063949483,
+        "ENGINEERING_ONLY_DEV_03": -0.00029691394108039004,
+        "ENGINEERING_ONLY_DEV_04": -0.00029691363063949483,
+        "ENGINEERING_ONLY_DEV_05": -0.00029691394108039004,
+        "ENGINEERING_ONLY_DEV_06": -0.00029691363063949483,
+        "ENGINEERING_ONLY_DEV_07": -0.00029691394108039004
+      },
+      "positive": 0,
+      "positive_top1_contribution": null,
+      "positive_top3_contribution": null,
+      "tied": 0
+    }
+  },
+  "groups": {
+    "C0|anchor": {
+      "method": "anchor",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.12500000025108426,
+          "absolute_top3_contribution": 0.3750000007532528,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42501284661314764,
+            0.4250128478937162
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4250128473753908,
+            "ENGINEERING_ONLY_DEV_01": 0.42501284713147297,
+            "ENGINEERING_ONLY_DEV_02": 0.4250128473753908,
+            "ENGINEERING_ONLY_DEV_03": 0.42501284713147297,
+            "ENGINEERING_ONLY_DEV_04": 0.4250128473753908,
+            "ENGINEERING_ONLY_DEV_05": 0.42501284713147297,
+            "ENGINEERING_ONLY_DEV_06": 0.4250128473753908,
+            "ENGINEERING_ONLY_DEV_07": 0.42501284713147297
+          },
+          "loso_range": [
+            0.42501284713147297,
+            0.4250128473753908
+          ],
+          "mean": 0.4250128472534319,
+          "median": 0.4250128472534319,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42501284639971953,
+            "ENGINEERING_ONLY_DEV_01": 0.42501284810714424,
+            "ENGINEERING_ONLY_DEV_02": 0.42501284639971953,
+            "ENGINEERING_ONLY_DEV_03": 0.42501284810714424,
+            "ENGINEERING_ONLY_DEV_04": 0.42501284639971953,
+            "ENGINEERING_ONLY_DEV_05": 0.42501284810714424,
+            "ENGINEERING_ONLY_DEV_06": 0.42501284639971953,
+            "ENGINEERING_ONLY_DEV_07": 0.42501284810714424
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000025108426,
+          "positive_top3_contribution": 0.3750000007532528,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000024420999,
+          "absolute_top3_contribution": 0.37500000073262996,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.2797818256851303,
+            1.279781829435556
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2797818279175266,
+            "ENGINEERING_ONLY_DEV_01": 1.2797818272031598,
+            "ENGINEERING_ONLY_DEV_02": 1.2797818279175266,
+            "ENGINEERING_ONLY_DEV_03": 1.2797818272031596,
+            "ENGINEERING_ONLY_DEV_04": 1.2797818279175266,
+            "ENGINEERING_ONLY_DEV_05": 1.2797818272031596,
+            "ENGINEERING_ONLY_DEV_06": 1.2797818279175266,
+            "ENGINEERING_ONLY_DEV_07": 1.2797818272031598
+          },
+          "loso_range": [
+            1.2797818272031596,
+            1.2797818279175266
+          ],
+          "mean": 1.2797818275603432,
+          "median": 1.2797818275603432,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2797818250600594,
+            "ENGINEERING_ONLY_DEV_01": 1.2797818300606272,
+            "ENGINEERING_ONLY_DEV_02": 1.2797818250600594,
+            "ENGINEERING_ONLY_DEV_03": 1.2797818300606272,
+            "ENGINEERING_ONLY_DEV_04": 1.2797818250600594,
+            "ENGINEERING_ONLY_DEV_05": 1.2797818300606272,
+            "ENGINEERING_ONLY_DEV_06": 1.2797818250600594,
+            "ENGINEERING_ONLY_DEV_07": 1.2797818300606272
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000024420999,
+          "positive_top3_contribution": 0.37500000073262996,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.1250000001366156,
+          "absolute_top3_contribution": 0.3750000004098468,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5858447545178933,
+            0.5858447554783197
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858447549066373,
+            "ENGINEERING_ONLY_DEV_01": 0.5858447550895757,
+            "ENGINEERING_ONLY_DEV_02": 0.5858447549066373,
+            "ENGINEERING_ONLY_DEV_03": 0.5858447550895757,
+            "ENGINEERING_ONLY_DEV_04": 0.5858447549066373,
+            "ENGINEERING_ONLY_DEV_05": 0.5858447550895757,
+            "ENGINEERING_ONLY_DEV_06": 0.5858447549066373,
+            "ENGINEERING_ONLY_DEV_07": 0.5858447550895757
+          },
+          "loso_range": [
+            0.5858447549066373,
+            0.5858447550895757
+          ],
+          "mean": 0.5858447549981065,
+          "median": 0.5858447549981065,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858447556383908,
+            "ENGINEERING_ONLY_DEV_01": 0.5858447543578222,
+            "ENGINEERING_ONLY_DEV_02": 0.5858447556383908,
+            "ENGINEERING_ONLY_DEV_03": 0.5858447543578222,
+            "ENGINEERING_ONLY_DEV_04": 0.5858447556383908,
+            "ENGINEERING_ONLY_DEV_05": 0.5858447543578222,
+            "ENGINEERING_ONLY_DEV_06": 0.5858447556383908,
+            "ENGINEERING_ONLY_DEV_07": 0.5858447543578222
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000001366156,
+          "positive_top3_contribution": 0.3750000004098468,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.1250000005682841,
+          "absolute_top3_contribution": 0.3750000017048522,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.03501412772723028,
+            0.03501412796600595
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.035014127823877576,
+            "ENGINEERING_ONLY_DEV_01": 0.035014127869358654,
+            "ENGINEERING_ONLY_DEV_02": 0.035014127823877576,
+            "ENGINEERING_ONLY_DEV_03": 0.035014127869358654,
+            "ENGINEERING_ONLY_DEV_04": 0.035014127823877576,
+            "ENGINEERING_ONLY_DEV_05": 0.035014127869358654,
+            "ENGINEERING_ONLY_DEV_06": 0.035014127823877576,
+            "ENGINEERING_ONLY_DEV_07": 0.035014127869358654
+          },
+          "loso_range": [
+            0.035014127823877576,
+            0.035014127869358654
+          ],
+          "mean": 0.035014127846618115,
+          "median": 0.035014127846618115,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.035014128005801885,
+            "ENGINEERING_ONLY_DEV_01": 0.035014127687434345,
+            "ENGINEERING_ONLY_DEV_02": 0.035014128005801885,
+            "ENGINEERING_ONLY_DEV_03": 0.035014127687434345,
+            "ENGINEERING_ONLY_DEV_04": 0.035014128005801885,
+            "ENGINEERING_ONLY_DEV_05": 0.035014127687434345,
+            "ENGINEERING_ONLY_DEV_06": 0.035014128005801885,
+            "ENGINEERING_ONLY_DEV_07": 0.035014127687434345
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000005682841,
+          "positive_top3_contribution": 0.3750000017048522,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000001385041,
+          "absolute_top3_contribution": 0.3750000004155123,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6125703122814707,
+            0.6125703132995928
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6125703128874959,
+            "ENGINEERING_ONLY_DEV_01": 0.6125703126935678,
+            "ENGINEERING_ONLY_DEV_02": 0.6125703128874959,
+            "ENGINEERING_ONLY_DEV_03": 0.6125703126935678,
+            "ENGINEERING_ONLY_DEV_04": 0.6125703128874959,
+            "ENGINEERING_ONLY_DEV_05": 0.6125703126935678,
+            "ENGINEERING_ONLY_DEV_06": 0.6125703128874959,
+            "ENGINEERING_ONLY_DEV_07": 0.6125703126935678
+          },
+          "loso_range": [
+            0.6125703126935678,
+            0.6125703128874959
+          ],
+          "mean": 0.6125703127905318,
+          "median": 0.6125703127905318,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6125703121117838,
+            "ENGINEERING_ONLY_DEV_01": 0.6125703134692797,
+            "ENGINEERING_ONLY_DEV_02": 0.6125703121117838,
+            "ENGINEERING_ONLY_DEV_03": 0.6125703134692797,
+            "ENGINEERING_ONLY_DEV_04": 0.6125703121117838,
+            "ENGINEERING_ONLY_DEV_05": 0.6125703134692797,
+            "ENGINEERING_ONLY_DEV_06": 0.6125703121117838,
+            "ENGINEERING_ONLY_DEV_07": 0.6125703134692797
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000001385041,
+          "positive_top3_contribution": 0.3750000004155123,
+          "tied": 0
+        }
+      },
+      "variant": "C0"
+    },
+    "C0|direct": {
+      "context_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.1250000001370818,
+          "absolute_top3_contribution": 0.37500000041124537,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.424619898523411,
+            0.4246198992219029
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42461989893918,
+            "ENGINEERING_ONLY_DEV_01": 0.42461989880613393,
+            "ENGINEERING_ONLY_DEV_02": 0.42461989893918,
+            "ENGINEERING_ONLY_DEV_03": 0.42461989880613393,
+            "ENGINEERING_ONLY_DEV_04": 0.42461989893918,
+            "ENGINEERING_ONLY_DEV_05": 0.42461989880613393,
+            "ENGINEERING_ONLY_DEV_06": 0.42461989893918,
+            "ENGINEERING_ONLY_DEV_07": 0.42461989880613393
+          },
+          "loso_range": [
+            0.42461989880613393,
+            0.42461989893918
+          ],
+          "mean": 0.42461989887265694,
+          "median": 0.42461989887265694,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42461989840699566,
+            "ENGINEERING_ONLY_DEV_01": 0.42461989933831823,
+            "ENGINEERING_ONLY_DEV_02": 0.42461989840699566,
+            "ENGINEERING_ONLY_DEV_03": 0.42461989933831823,
+            "ENGINEERING_ONLY_DEV_04": 0.42461989840699566,
+            "ENGINEERING_ONLY_DEV_05": 0.42461989933831823,
+            "ENGINEERING_ONLY_DEV_06": 0.42461989840699566,
+            "ENGINEERING_ONLY_DEV_07": 0.42461989933831823
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000001370818,
+          "positive_top3_contribution": 0.37500000041124537,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000014160867,
+          "absolute_top3_contribution": 0.375000000424826,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.2781428534114228,
+            1.278142855583376
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2781428547042524,
+            "ENGINEERING_ONLY_DEV_01": 1.2781428542905469,
+            "ENGINEERING_ONLY_DEV_02": 1.2781428547042524,
+            "ENGINEERING_ONLY_DEV_03": 1.2781428542905469,
+            "ENGINEERING_ONLY_DEV_04": 1.2781428547042524,
+            "ENGINEERING_ONLY_DEV_05": 1.2781428542905469,
+            "ENGINEERING_ONLY_DEV_06": 1.2781428547042524,
+            "ENGINEERING_ONLY_DEV_07": 1.2781428542905469
+          },
+          "loso_range": [
+            1.2781428542905469,
+            1.2781428547042524
+          ],
+          "mean": 1.2781428544973994,
+          "median": 1.2781428544973994,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2781428530494305,
+            "ENGINEERING_ONLY_DEV_01": 1.2781428559453683,
+            "ENGINEERING_ONLY_DEV_02": 1.2781428530494305,
+            "ENGINEERING_ONLY_DEV_03": 1.2781428559453683,
+            "ENGINEERING_ONLY_DEV_04": 1.2781428530494305,
+            "ENGINEERING_ONLY_DEV_05": 1.2781428559453683,
+            "ENGINEERING_ONLY_DEV_06": 1.2781428530494305,
+            "ENGINEERING_ONLY_DEV_07": 1.2781428559453683
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000014160867,
+          "positive_top3_contribution": 0.375000000424826,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.1250000000331213,
+          "absolute_top3_contribution": 0.3750000000993639,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5858027276505406,
+            0.5858027278833713
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858027277447816,
+            "ENGINEERING_ONLY_DEV_01": 0.5858027277891303,
+            "ENGINEERING_ONLY_DEV_02": 0.5858027277447816,
+            "ENGINEERING_ONLY_DEV_03": 0.5858027277891303,
+            "ENGINEERING_ONLY_DEV_04": 0.5858027277447816,
+            "ENGINEERING_ONLY_DEV_05": 0.5858027277891303,
+            "ENGINEERING_ONLY_DEV_06": 0.5858027277447816,
+            "ENGINEERING_ONLY_DEV_07": 0.5858027277891303
+          },
+          "loso_range": [
+            0.5858027277447816,
+            0.5858027277891303
+          ],
+          "mean": 0.585802727766956,
+          "median": 0.585802727766956,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858027279221764,
+            "ENGINEERING_ONLY_DEV_01": 0.5858027276117355,
+            "ENGINEERING_ONLY_DEV_02": 0.5858027279221764,
+            "ENGINEERING_ONLY_DEV_03": 0.5858027276117355,
+            "ENGINEERING_ONLY_DEV_04": 0.5858027279221764,
+            "ENGINEERING_ONLY_DEV_05": 0.5858027276117355,
+            "ENGINEERING_ONLY_DEV_06": 0.5858027279221764,
+            "ENGINEERING_ONLY_DEV_07": 0.5858027276117355
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000331213,
+          "positive_top3_contribution": 0.3750000000993639,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000008061607,
+          "absolute_top3_contribution": 0.3750000002418482,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.03499498528320168,
+            0.03499498531705557
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.034994985296904445,
+            "ENGINEERING_ONLY_DEV_01": 0.03499498530335281,
+            "ENGINEERING_ONLY_DEV_02": 0.034994985296904445,
+            "ENGINEERING_ONLY_DEV_03": 0.03499498530335281,
+            "ENGINEERING_ONLY_DEV_04": 0.034994985296904445,
+            "ENGINEERING_ONLY_DEV_05": 0.03499498530335281,
+            "ENGINEERING_ONLY_DEV_06": 0.034994985296904445,
+            "ENGINEERING_ONLY_DEV_07": 0.03499498530335281
+          },
+          "loso_range": [
+            0.034994985296904445,
+            0.03499498530335281
+          ],
+          "mean": 0.03499498530012862,
+          "median": 0.03499498530012862,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.03499498532269789,
+            "ENGINEERING_ONLY_DEV_01": 0.034994985277559364,
+            "ENGINEERING_ONLY_DEV_02": 0.03499498532269789,
+            "ENGINEERING_ONLY_DEV_03": 0.034994985277559364,
+            "ENGINEERING_ONLY_DEV_04": 0.03499498532269789,
+            "ENGINEERING_ONLY_DEV_05": 0.034994985277559364,
+            "ENGINEERING_ONLY_DEV_06": 0.03499498532269789,
+            "ENGINEERING_ONLY_DEV_07": 0.034994985277559364
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000008061607,
+          "positive_top3_contribution": 0.3750000002418482,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000000745016,
+          "absolute_top3_contribution": 0.37500000022350477,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6134515301689103,
+            0.6134515307173478
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.613451530390897,
+            "ENGINEERING_ONLY_DEV_01": 0.6134515304953612,
+            "ENGINEERING_ONLY_DEV_02": 0.613451530390897,
+            "ENGINEERING_ONLY_DEV_03": 0.6134515304953613,
+            "ENGINEERING_ONLY_DEV_04": 0.613451530390897,
+            "ENGINEERING_ONLY_DEV_05": 0.6134515304953613,
+            "ENGINEERING_ONLY_DEV_06": 0.613451530390897,
+            "ENGINEERING_ONLY_DEV_07": 0.6134515304953613
+          },
+          "loso_range": [
+            0.613451530390897,
+            0.6134515304953613
+          ],
+          "mean": 0.6134515304431292,
+          "median": 0.6134515304431292,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6134515308087541,
+            "ENGINEERING_ONLY_DEV_01": 0.6134515300775041,
+            "ENGINEERING_ONLY_DEV_02": 0.6134515308087541,
+            "ENGINEERING_ONLY_DEV_03": 0.6134515300775041,
+            "ENGINEERING_ONLY_DEV_04": 0.6134515308087541,
+            "ENGINEERING_ONLY_DEV_05": 0.6134515300775041,
+            "ENGINEERING_ONLY_DEV_06": 0.6134515308087541,
+            "ENGINEERING_ONLY_DEV_07": 0.6134515300775041
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000745016,
+          "positive_top3_contribution": 0.37500000022350477,
+          "tied": 0
+        }
+      },
+      "generalization_gap": {
+        "absolute_top1_contribution": 0.12500010530946726,
+        "absolute_top3_contribution": 0.3750003159284018,
+        "bootstrap": {
+          "CI": "percentile95",
+          "draws": 10000,
+          "seed": 20260928,
+          "unit": "scene"
+        },
+        "ci95": [
+          0.0006448507839296874,
+          0.0006448515988369125
+        ],
+        "improved_tied_worse": [
+          8,
+          0,
+          0
+        ],
+        "loso": {
+          "ENGINEERING_ONLY_DEV_00": 0.0006448511137730881,
+          "ENGINEERING_ONLY_DEV_01": 0.0006448512689935118,
+          "ENGINEERING_ONLY_DEV_02": 0.0006448511137730881,
+          "ENGINEERING_ONLY_DEV_03": 0.0006448512689935118,
+          "ENGINEERING_ONLY_DEV_04": 0.0006448511137730881,
+          "ENGINEERING_ONLY_DEV_05": 0.0006448512689935118,
+          "ENGINEERING_ONLY_DEV_06": 0.0006448511137730881,
+          "ENGINEERING_ONLY_DEV_07": 0.0006448512689935118
+        },
+        "loso_range": [
+          0.0006448511137730881,
+          0.0006448512689935118
+        ],
+        "mean": 0.0006448511913832999,
+        "median": 0.0006448511913832999,
+        "n_scenes": 8,
+        "negative": 0,
+        "per_scene": {
+          "ENGINEERING_ONLY_DEV_00": 0.0006448517346547833,
+          "ENGINEERING_ONLY_DEV_01": 0.0006448506481118166,
+          "ENGINEERING_ONLY_DEV_02": 0.0006448517346547833,
+          "ENGINEERING_ONLY_DEV_03": 0.0006448506481118166,
+          "ENGINEERING_ONLY_DEV_04": 0.0006448517346547833,
+          "ENGINEERING_ONLY_DEV_05": 0.0006448506481118166,
+          "ENGINEERING_ONLY_DEV_06": 0.0006448517346547833,
+          "ENGINEERING_ONLY_DEV_07": 0.0006448506481118166
+        },
+        "positive": 8,
+        "positive_top1_contribution": 0.12500010530946726,
+        "positive_top3_contribution": 0.3750003159284018,
+        "tied": 0
+      },
+      "method": "direct",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.1250000000228123,
+          "absolute_top3_contribution": 0.375000000068437,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.4252647500058326,
+            0.4252647501222479
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42526475005295306,
+            "ENGINEERING_ONLY_DEV_01": 0.4252647500751275,
+            "ENGINEERING_ONLY_DEV_02": 0.42526475005295306,
+            "ENGINEERING_ONLY_DEV_03": 0.4252647500751275,
+            "ENGINEERING_ONLY_DEV_04": 0.4252647500529531,
+            "ENGINEERING_ONLY_DEV_05": 0.4252647500751275,
+            "ENGINEERING_ONLY_DEV_06": 0.4252647500529531,
+            "ENGINEERING_ONLY_DEV_07": 0.4252647500751275
+          },
+          "loso_range": [
+            0.42526475005295306,
+            0.4252647500751275
+          ],
+          "mean": 0.42526475006404024,
+          "median": 0.42526475006404024,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_01": 0.42526474998643005,
+            "ENGINEERING_ONLY_DEV_02": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_03": 0.42526474998643005,
+            "ENGINEERING_ONLY_DEV_04": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_05": 0.42526474998643005,
+            "ENGINEERING_ONLY_DEV_06": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_07": 0.42526474998643005
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000228123,
+          "positive_top3_contribution": 0.375000000068437,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000003506714,
+          "absolute_top3_contribution": 0.37500000010520146,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.28054093905182,
+            1.2805409395906793
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_01": 1.2805409393725697,
+            "ENGINEERING_ONLY_DEV_02": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_03": 1.2805409393725697,
+            "ENGINEERING_ONLY_DEV_04": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_05": 1.2805409393725697,
+            "ENGINEERING_ONLY_DEV_06": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_07": 1.2805409393725697
+          },
+          "loso_range": [
+            1.2805409392699298,
+            1.2805409393725697
+          ],
+          "mean": 1.28054093932125,
+          "median": 1.28054093932125,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_01": 1.2805409389620104,
+            "ENGINEERING_ONLY_DEV_02": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_03": 1.2805409389620104,
+            "ENGINEERING_ONLY_DEV_04": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_05": 1.2805409389620104,
+            "ENGINEERING_ONLY_DEV_06": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_07": 1.2805409389620104
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000003506714,
+          "positive_top3_contribution": 0.37500000010520146,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.12500000001242698,
+          "absolute_top3_contribution": 0.3750000000372809,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5854971893277252,
+            0.5854971894150367
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5854971893796963,
+            "ENGINEERING_ONLY_DEV_01": 0.5854971893630656,
+            "ENGINEERING_ONLY_DEV_02": 0.5854971893796963,
+            "ENGINEERING_ONLY_DEV_03": 0.5854971893630656,
+            "ENGINEERING_ONLY_DEV_04": 0.5854971893796963,
+            "ENGINEERING_ONLY_DEV_05": 0.5854971893630656,
+            "ENGINEERING_ONLY_DEV_06": 0.5854971893796963,
+            "ENGINEERING_ONLY_DEV_07": 0.5854971893630656
+          },
+          "loso_range": [
+            0.5854971893630656,
+            0.5854971893796963
+          ],
+          "mean": 0.585497189371381,
+          "median": 0.585497189371381,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5854971893131733,
+            "ENGINEERING_ONLY_DEV_01": 0.5854971894295886,
+            "ENGINEERING_ONLY_DEV_02": 0.5854971893131733,
+            "ENGINEERING_ONLY_DEV_03": 0.5854971894295886,
+            "ENGINEERING_ONLY_DEV_04": 0.5854971893131733,
+            "ENGINEERING_ONLY_DEV_05": 0.5854971894295886,
+            "ENGINEERING_ONLY_DEV_06": 0.5854971893131733,
+            "ENGINEERING_ONLY_DEV_07": 0.5854971894295886
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000001242698,
+          "positive_top3_contribution": 0.3750000000372809,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000007282197,
+          "absolute_top3_contribution": 0.37500000021846586,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.034986373518340996,
+            0.03498637354891432
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0349863735365394,
+            "ENGINEERING_ONLY_DEV_01": 0.03498637353071591,
+            "ENGINEERING_ONLY_DEV_02": 0.0349863735365394,
+            "ENGINEERING_ONLY_DEV_03": 0.03498637353071591,
+            "ENGINEERING_ONLY_DEV_04": 0.0349863735365394,
+            "ENGINEERING_ONLY_DEV_05": 0.03498637353071591,
+            "ENGINEERING_ONLY_DEV_06": 0.0349863735365394,
+            "ENGINEERING_ONLY_DEV_07": 0.03498637353071591
+          },
+          "loso_range": [
+            0.03498637353071591,
+            0.0349863735365394
+          ],
+          "mean": 0.03498637353362766,
+          "median": 0.03498637353362766,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.03498637351324544,
+            "ENGINEERING_ONLY_DEV_01": 0.03498637355400987,
+            "ENGINEERING_ONLY_DEV_02": 0.03498637351324544,
+            "ENGINEERING_ONLY_DEV_03": 0.03498637355400987,
+            "ENGINEERING_ONLY_DEV_04": 0.03498637351324544,
+            "ENGINEERING_ONLY_DEV_05": 0.03498637355400987,
+            "ENGINEERING_ONLY_DEV_06": 0.03498637351324544,
+            "ENGINEERING_ONLY_DEV_07": 0.03498637355400987
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000007282197,
+          "positive_top3_contribution": 0.37500000021846586,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.12500000008687542,
+          "absolute_top3_contribution": 0.37500000026062624,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6124854184364358,
+            0.6124854190749548
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6124854188165066,
+            "ENGINEERING_ONLY_DEV_01": 0.6124854186948839,
+            "ENGINEERING_ONLY_DEV_02": 0.6124854188165066,
+            "ENGINEERING_ONLY_DEV_03": 0.6124854186948839,
+            "ENGINEERING_ONLY_DEV_04": 0.6124854188165066,
+            "ENGINEERING_ONLY_DEV_05": 0.6124854186948839,
+            "ENGINEERING_ONLY_DEV_06": 0.6124854188165065,
+            "ENGINEERING_ONLY_DEV_07": 0.6124854186948839
+          },
+          "loso_range": [
+            0.6124854186948839,
+            0.6124854188165066
+          ],
+          "mean": 0.6124854187556953,
+          "median": 0.6124854187556953,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6124854183300159,
+            "ENGINEERING_ONLY_DEV_01": 0.6124854191813747,
+            "ENGINEERING_ONLY_DEV_02": 0.6124854183300159,
+            "ENGINEERING_ONLY_DEV_03": 0.6124854191813747,
+            "ENGINEERING_ONLY_DEV_04": 0.6124854183300159,
+            "ENGINEERING_ONLY_DEV_05": 0.6124854191813747,
+            "ENGINEERING_ONLY_DEV_06": 0.6124854183300159,
+            "ENGINEERING_ONLY_DEV_07": 0.6124854191813747
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000008687542,
+          "positive_top3_contribution": 0.37500000026062624,
+          "tied": 0
+        }
+      },
+      "variant": "C0"
+    },
+    "C0|spatial_shuffle": {
+      "method": "spatial_shuffle",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.12500000001140893,
+          "absolute_top3_contribution": 0.37500000003422673,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42516210839191143,
+            0.4251621084501191
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4251621084154717,
+            "ENGINEERING_ONLY_DEV_01": 0.4251621084265588,
+            "ENGINEERING_ONLY_DEV_02": 0.4251621084154717,
+            "ENGINEERING_ONLY_DEV_03": 0.4251621084265588,
+            "ENGINEERING_ONLY_DEV_04": 0.4251621084154717,
+            "ENGINEERING_ONLY_DEV_05": 0.4251621084265588,
+            "ENGINEERING_ONLY_DEV_06": 0.42516210841547164,
+            "ENGINEERING_ONLY_DEV_07": 0.4251621084265588
+          },
+          "loso_range": [
+            0.42516210841547164,
+            0.4251621084265588
+          ],
+          "mean": 0.42516210842101526,
+          "median": 0.42516210842101526,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.4251621084598204,
+            "ENGINEERING_ONLY_DEV_01": 0.42516210838221014,
+            "ENGINEERING_ONLY_DEV_02": 0.4251621084598204,
+            "ENGINEERING_ONLY_DEV_03": 0.42516210838221014,
+            "ENGINEERING_ONLY_DEV_04": 0.4251621084598204,
+            "ENGINEERING_ONLY_DEV_05": 0.42516210838221014,
+            "ENGINEERING_ONLY_DEV_06": 0.4251621084598204,
+            "ENGINEERING_ONLY_DEV_07": 0.42516210838221014
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000001140893,
+          "positive_top3_contribution": 0.37500000003422673,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.1250000000066532,
+          "absolute_top3_contribution": 0.37500000001995965,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.2802239494573726,
+            1.2802239495595842
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.280223949498744,
+            "ENGINEERING_ONLY_DEV_01": 1.2802239495182128,
+            "ENGINEERING_ONLY_DEV_02": 1.280223949498744,
+            "ENGINEERING_ONLY_DEV_03": 1.2802239495182128,
+            "ENGINEERING_ONLY_DEV_04": 1.280223949498744,
+            "ENGINEERING_ONLY_DEV_05": 1.2802239495182128,
+            "ENGINEERING_ONLY_DEV_06": 1.280223949498744,
+            "ENGINEERING_ONLY_DEV_07": 1.2802239495182128
+          },
+          "loso_range": [
+            1.280223949498744,
+            1.2802239495182128
+          ],
+          "mean": 1.2802239495084784,
+          "median": 1.2802239495084784,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2802239495766192,
+            "ENGINEERING_ONLY_DEV_01": 1.2802239494403376,
+            "ENGINEERING_ONLY_DEV_02": 1.2802239495766192,
+            "ENGINEERING_ONLY_DEV_03": 1.2802239494403376,
+            "ENGINEERING_ONLY_DEV_04": 1.2802239495766192,
+            "ENGINEERING_ONLY_DEV_05": 1.2802239494403376,
+            "ENGINEERING_ONLY_DEV_06": 1.2802239495766192,
+            "ENGINEERING_ONLY_DEV_07": 1.2802239494403376
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000066532,
+          "positive_top3_contribution": 0.37500000001995965,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.1250000000994103,
+          "absolute_top3_contribution": 0.37500000029823094,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5855294116772711,
+            0.5855294123757631
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5855294120930401,
+            "ENGINEERING_ONLY_DEV_01": 0.5855294119599941,
+            "ENGINEERING_ONLY_DEV_02": 0.5855294120930401,
+            "ENGINEERING_ONLY_DEV_03": 0.5855294119599941,
+            "ENGINEERING_ONLY_DEV_04": 0.5855294120930401,
+            "ENGINEERING_ONLY_DEV_05": 0.5855294119599941,
+            "ENGINEERING_ONLY_DEV_06": 0.5855294120930401,
+            "ENGINEERING_ONLY_DEV_07": 0.5855294119599941
+          },
+          "loso_range": [
+            0.5855294119599941,
+            0.5855294120930401
+          ],
+          "mean": 0.5855294120265171,
+          "median": 0.5855294120265171,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5855294115608558,
+            "ENGINEERING_ONLY_DEV_01": 0.5855294124921784,
+            "ENGINEERING_ONLY_DEV_02": 0.5855294115608558,
+            "ENGINEERING_ONLY_DEV_03": 0.5855294124921784,
+            "ENGINEERING_ONLY_DEV_04": 0.5855294115608558,
+            "ENGINEERING_ONLY_DEV_05": 0.5855294124921784,
+            "ENGINEERING_ONLY_DEV_06": 0.5855294115608558,
+            "ENGINEERING_ONLY_DEV_07": 0.5855294124921784
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000994103,
+          "positive_top3_contribution": 0.37500000029823094,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000022015612,
+          "absolute_top3_contribution": 0.3750000006604683,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.034970121443183275,
+            0.0349701215355699
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.03497012148057786,
+            "ENGINEERING_ONLY_DEV_01": 0.03497012149817531,
+            "ENGINEERING_ONLY_DEV_02": 0.03497012148057786,
+            "ENGINEERING_ONLY_DEV_03": 0.03497012149817531,
+            "ENGINEERING_ONLY_DEV_04": 0.03497012148057786,
+            "ENGINEERING_ONLY_DEV_05": 0.03497012149817531,
+            "ENGINEERING_ONLY_DEV_06": 0.03497012148057786,
+            "ENGINEERING_ONLY_DEV_07": 0.03497012149817531
+          },
+          "loso_range": [
+            0.03497012148057786,
+            0.03497012149817531
+          ],
+          "mean": 0.03497012148937659,
+          "median": 0.03497012148937659,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.034970121550967674,
+            "ENGINEERING_ONLY_DEV_01": 0.03497012142778551,
+            "ENGINEERING_ONLY_DEV_02": 0.034970121550967674,
+            "ENGINEERING_ONLY_DEV_03": 0.03497012142778551,
+            "ENGINEERING_ONLY_DEV_04": 0.034970121550967674,
+            "ENGINEERING_ONLY_DEV_05": 0.03497012142778551,
+            "ENGINEERING_ONLY_DEV_06": 0.034970121550967674,
+            "ENGINEERING_ONLY_DEV_07": 0.03497012142778551
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000022015612,
+          "positive_top3_contribution": 0.3750000006604683,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000003341637,
+          "absolute_top3_contribution": 0.3750000010024911,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6127345460930853,
+            0.6127345485501292
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6127345475556114,
+            "ENGINEERING_ONLY_DEV_01": 0.6127345470876031,
+            "ENGINEERING_ONLY_DEV_02": 0.6127345475556114,
+            "ENGINEERING_ONLY_DEV_03": 0.6127345470876031,
+            "ENGINEERING_ONLY_DEV_04": 0.6127345475556114,
+            "ENGINEERING_ONLY_DEV_05": 0.6127345470876031,
+            "ENGINEERING_ONLY_DEV_06": 0.6127345475556114,
+            "ENGINEERING_ONLY_DEV_07": 0.6127345470876031
+          },
+          "loso_range": [
+            0.6127345470876031,
+            0.6127345475556114
+          ],
+          "mean": 0.6127345473216073,
+          "median": 0.6127345473216073,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.612734545683578,
+            "ENGINEERING_ONLY_DEV_01": 0.6127345489596364,
+            "ENGINEERING_ONLY_DEV_02": 0.612734545683578,
+            "ENGINEERING_ONLY_DEV_03": 0.6127345489596364,
+            "ENGINEERING_ONLY_DEV_04": 0.612734545683578,
+            "ENGINEERING_ONLY_DEV_05": 0.6127345489596364,
+            "ENGINEERING_ONLY_DEV_06": 0.612734545683578,
+            "ENGINEERING_ONLY_DEV_07": 0.6127345489596364
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000003341637,
+          "positive_top3_contribution": 0.3750000010024911,
+          "tied": 0
+        }
+      },
+      "variant": "C0"
+    },
+    "C0|wrong_scene": {
+      "method": "wrong_scene",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.1250000000228123,
+          "absolute_top3_contribution": 0.375000000068437,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.4252647500058326,
+            0.4252647501222479
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42526475005295306,
+            "ENGINEERING_ONLY_DEV_01": 0.4252647500751275,
+            "ENGINEERING_ONLY_DEV_02": 0.42526475005295306,
+            "ENGINEERING_ONLY_DEV_03": 0.4252647500751275,
+            "ENGINEERING_ONLY_DEV_04": 0.4252647500529531,
+            "ENGINEERING_ONLY_DEV_05": 0.4252647500751275,
+            "ENGINEERING_ONLY_DEV_06": 0.4252647500529531,
+            "ENGINEERING_ONLY_DEV_07": 0.4252647500751275
+          },
+          "loso_range": [
+            0.42526475005295306,
+            0.4252647500751275
+          ],
+          "mean": 0.42526475006404024,
+          "median": 0.42526475006404024,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_01": 0.42526474998643005,
+            "ENGINEERING_ONLY_DEV_02": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_03": 0.42526474998643005,
+            "ENGINEERING_ONLY_DEV_04": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_05": 0.42526474998643005,
+            "ENGINEERING_ONLY_DEV_06": 0.42526475014165044,
+            "ENGINEERING_ONLY_DEV_07": 0.42526474998643005
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000228123,
+          "positive_top3_contribution": 0.375000000068437,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000003506714,
+          "absolute_top3_contribution": 0.37500000010520146,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.28054093905182,
+            1.2805409395906793
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_01": 1.2805409393725697,
+            "ENGINEERING_ONLY_DEV_02": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_03": 1.2805409393725697,
+            "ENGINEERING_ONLY_DEV_04": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_05": 1.2805409393725697,
+            "ENGINEERING_ONLY_DEV_06": 1.2805409392699298,
+            "ENGINEERING_ONLY_DEV_07": 1.2805409393725697
+          },
+          "loso_range": [
+            1.2805409392699298,
+            1.2805409393725697
+          ],
+          "mean": 1.28054093932125,
+          "median": 1.28054093932125,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_01": 1.2805409389620104,
+            "ENGINEERING_ONLY_DEV_02": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_03": 1.2805409389620104,
+            "ENGINEERING_ONLY_DEV_04": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_05": 1.2805409389620104,
+            "ENGINEERING_ONLY_DEV_06": 1.2805409396804892,
+            "ENGINEERING_ONLY_DEV_07": 1.2805409389620104
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000003506714,
+          "positive_top3_contribution": 0.37500000010520146,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.12500000002485395,
+          "absolute_top3_contribution": 0.37500000007456186,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5854971893422771,
+            0.5854971895169001
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5854971894129578,
+            "ENGINEERING_ONLY_DEV_01": 0.5854971894462194,
+            "ENGINEERING_ONLY_DEV_02": 0.5854971894129578,
+            "ENGINEERING_ONLY_DEV_03": 0.5854971894462194,
+            "ENGINEERING_ONLY_DEV_04": 0.5854971894129578,
+            "ENGINEERING_ONLY_DEV_05": 0.5854971894462194,
+            "ENGINEERING_ONLY_DEV_06": 0.5854971894129578,
+            "ENGINEERING_ONLY_DEV_07": 0.5854971894462194
+          },
+          "loso_range": [
+            0.5854971894129578,
+            0.5854971894462194
+          ],
+          "mean": 0.5854971894295886,
+          "median": 0.5854971894295886,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5854971895460039,
+            "ENGINEERING_ONLY_DEV_01": 0.5854971893131733,
+            "ENGINEERING_ONLY_DEV_02": 0.5854971895460039,
+            "ENGINEERING_ONLY_DEV_03": 0.5854971893131733,
+            "ENGINEERING_ONLY_DEV_04": 0.5854971895460039,
+            "ENGINEERING_ONLY_DEV_05": 0.5854971893131733,
+            "ENGINEERING_ONLY_DEV_06": 0.5854971895460039,
+            "ENGINEERING_ONLY_DEV_07": 0.5854971893131733
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000002485395,
+          "positive_top3_contribution": 0.37500000007456186,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000003807832,
+          "absolute_top3_contribution": 0.37500000011423495,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.034986373529231916,
+            0.03498637354521859
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.03498637353570271,
+            "ENGINEERING_ONLY_DEV_01": 0.03498637353874779,
+            "ENGINEERING_ONLY_DEV_02": 0.03498637353570271,
+            "ENGINEERING_ONLY_DEV_03": 0.03498637353874779,
+            "ENGINEERING_ONLY_DEV_04": 0.03498637353570271,
+            "ENGINEERING_ONLY_DEV_05": 0.03498637353874779,
+            "ENGINEERING_ONLY_DEV_06": 0.03498637353570271,
+            "ENGINEERING_ONLY_DEV_07": 0.03498637353874779
+          },
+          "loso_range": [
+            0.03498637353570271,
+            0.03498637353874779
+          ],
+          "mean": 0.03498637353722525,
+          "median": 0.03498637353722525,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.03498637354788303,
+            "ENGINEERING_ONLY_DEV_01": 0.03498637352656747,
+            "ENGINEERING_ONLY_DEV_02": 0.03498637354788303,
+            "ENGINEERING_ONLY_DEV_03": 0.03498637352656747,
+            "ENGINEERING_ONLY_DEV_04": 0.03498637354788303,
+            "ENGINEERING_ONLY_DEV_05": 0.03498637352656747,
+            "ENGINEERING_ONLY_DEV_06": 0.03498637354788303,
+            "ENGINEERING_ONLY_DEV_07": 0.03498637352656747
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000003807832,
+          "positive_top3_contribution": 0.37500000011423495,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000001176614,
+          "absolute_top3_contribution": 0.3750000003529842,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6124854183312878,
+            0.6124854191960785
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6124854188460442,
+            "ENGINEERING_ONLY_DEV_01": 0.6124854186813221,
+            "ENGINEERING_ONLY_DEV_02": 0.6124854188460442,
+            "ENGINEERING_ONLY_DEV_03": 0.6124854186813221,
+            "ENGINEERING_ONLY_DEV_04": 0.6124854188460442,
+            "ENGINEERING_ONLY_DEV_05": 0.6124854186813221,
+            "ENGINEERING_ONLY_DEV_06": 0.6124854188460441,
+            "ENGINEERING_ONLY_DEV_07": 0.612485418681322
+          },
+          "loso_range": [
+            0.612485418681322,
+            0.6124854188460442
+          ],
+          "mean": 0.6124854187636831,
+          "median": 0.6124854187636831,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.612485418187156,
+            "ENGINEERING_ONLY_DEV_01": 0.6124854193402103,
+            "ENGINEERING_ONLY_DEV_02": 0.612485418187156,
+            "ENGINEERING_ONLY_DEV_03": 0.6124854193402103,
+            "ENGINEERING_ONLY_DEV_04": 0.612485418187156,
+            "ENGINEERING_ONLY_DEV_05": 0.6124854193402103,
+            "ENGINEERING_ONLY_DEV_06": 0.612485418187156,
+            "ENGINEERING_ONLY_DEV_07": 0.6124854193402103
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000001176614,
+          "positive_top3_contribution": 0.3750000003529842,
+          "tied": 0
+        }
+      },
+      "variant": "C0"
+    },
+    "C0|zero": {
+      "method": "zero",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 3.0,
+            "ENGINEERING_ONLY_DEV_01": 3.0,
+            "ENGINEERING_ONLY_DEV_02": 3.0,
+            "ENGINEERING_ONLY_DEV_03": 3.0,
+            "ENGINEERING_ONLY_DEV_04": 3.0,
+            "ENGINEERING_ONLY_DEV_05": 3.0,
+            "ENGINEERING_ONLY_DEV_06": 3.0,
+            "ENGINEERING_ONLY_DEV_07": 3.0
+          },
+          "loso_range": [
+            3.0,
+            3.0
+          ],
+          "mean": 3.0,
+          "median": 3.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 3.0,
+            "ENGINEERING_ONLY_DEV_01": 3.0,
+            "ENGINEERING_ONLY_DEV_02": 3.0,
+            "ENGINEERING_ONLY_DEV_03": 3.0,
+            "ENGINEERING_ONLY_DEV_04": 3.0,
+            "ENGINEERING_ONLY_DEV_05": 3.0,
+            "ENGINEERING_ONLY_DEV_06": 3.0,
+            "ENGINEERING_ONLY_DEV_07": 3.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.010396001817904177,
+            0.010396001817904177
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_01": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_02": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_03": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_04": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_05": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_06": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_07": 0.010396001817904177
+          },
+          "loso_range": [
+            0.010396001817904177,
+            0.010396001817904177
+          ],
+          "mean": 0.010396001817904177,
+          "median": 0.010396001817904177,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_01": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_02": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_03": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_04": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_05": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_06": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_07": 0.010396001817904177
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.009527437374240834,
+            0.009527437374240834
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_01": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_02": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_03": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_04": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_05": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_06": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_07": 0.009527437374240834
+          },
+          "loso_range": [
+            0.009527437374240834,
+            0.009527437374240834
+          ],
+          "mean": 0.009527437374240834,
+          "median": 0.009527437374240834,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_01": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_02": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_03": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_04": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_05": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_06": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_07": 0.009527437374240834
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        }
+      },
+      "variant": "C0"
+    },
+    "C1|anchor": {
+      "method": "anchor",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.12500000001142,
+          "absolute_top3_contribution": 0.37500000003426004,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42474949104750215,
+            0.4247494911057098
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4247494910710624,
+            "ENGINEERING_ONLY_DEV_01": 0.4247494910821496,
+            "ENGINEERING_ONLY_DEV_02": 0.4247494910710624,
+            "ENGINEERING_ONLY_DEV_03": 0.4247494910821496,
+            "ENGINEERING_ONLY_DEV_04": 0.4247494910710624,
+            "ENGINEERING_ONLY_DEV_05": 0.4247494910821496,
+            "ENGINEERING_ONLY_DEV_06": 0.4247494910710624,
+            "ENGINEERING_ONLY_DEV_07": 0.4247494910821496
+          },
+          "loso_range": [
+            0.4247494910710624,
+            0.4247494910821496
+          ],
+          "mean": 0.424749491076606,
+          "median": 0.424749491076606,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.4247494911154111,
+            "ENGINEERING_ONLY_DEV_01": 0.4247494910378009,
+            "ENGINEERING_ONLY_DEV_02": 0.4247494911154111,
+            "ENGINEERING_ONLY_DEV_03": 0.4247494910378009,
+            "ENGINEERING_ONLY_DEV_04": 0.4247494911154111,
+            "ENGINEERING_ONLY_DEV_05": 0.4247494910378009,
+            "ENGINEERING_ONLY_DEV_06": 0.4247494911154111,
+            "ENGINEERING_ONLY_DEV_07": 0.4247494910378009
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000001142,
+          "positive_top3_contribution": 0.37500000003426004,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000001937897,
+          "absolute_top3_contribution": 0.3750000000581369,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.2789912170073734,
+            1.2789912173048
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2789912171277606,
+            "ENGINEERING_ONLY_DEV_01": 1.2789912171844133,
+            "ENGINEERING_ONLY_DEV_02": 1.2789912171277606,
+            "ENGINEERING_ONLY_DEV_03": 1.2789912171844133,
+            "ENGINEERING_ONLY_DEV_04": 1.2789912171277606,
+            "ENGINEERING_ONLY_DEV_05": 1.2789912171844133,
+            "ENGINEERING_ONLY_DEV_06": 1.2789912171277606,
+            "ENGINEERING_ONLY_DEV_07": 1.2789912171844133
+          },
+          "loso_range": [
+            1.2789912171277606,
+            1.2789912171844133
+          ],
+          "mean": 1.2789912171560869,
+          "median": 1.2789912171560869,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2789912173543712,
+            "ENGINEERING_ONLY_DEV_01": 1.2789912169578024,
+            "ENGINEERING_ONLY_DEV_02": 1.2789912173543712,
+            "ENGINEERING_ONLY_DEV_03": 1.2789912169578024,
+            "ENGINEERING_ONLY_DEV_04": 1.2789912173543712,
+            "ENGINEERING_ONLY_DEV_05": 1.2789912169578024,
+            "ENGINEERING_ONLY_DEV_06": 1.2789912173543712,
+            "ENGINEERING_ONLY_DEV_07": 1.2789912169578024
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000001937897,
+          "positive_top3_contribution": 0.3750000000581369,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.1250000000124108,
+          "absolute_top3_contribution": 0.37500000003723233,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5862610318145016,
+            0.5862610319018131
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.586261031849842,
+            "ENGINEERING_ONLY_DEV_01": 0.5862610318664727,
+            "ENGINEERING_ONLY_DEV_02": 0.586261031849842,
+            "ENGINEERING_ONLY_DEV_03": 0.5862610318664727,
+            "ENGINEERING_ONLY_DEV_04": 0.586261031849842,
+            "ENGINEERING_ONLY_DEV_05": 0.5862610318664727,
+            "ENGINEERING_ONLY_DEV_06": 0.586261031849842,
+            "ENGINEERING_ONLY_DEV_07": 0.5862610318664727
+          },
+          "loso_range": [
+            0.586261031849842,
+            0.5862610318664727
+          ],
+          "mean": 0.5862610318581574,
+          "median": 0.5862610318581574,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.586261031916365,
+            "ENGINEERING_ONLY_DEV_01": 0.5862610317999497,
+            "ENGINEERING_ONLY_DEV_02": 0.586261031916365,
+            "ENGINEERING_ONLY_DEV_03": 0.5862610317999497,
+            "ENGINEERING_ONLY_DEV_04": 0.586261031916365,
+            "ENGINEERING_ONLY_DEV_05": 0.5862610317999497,
+            "ENGINEERING_ONLY_DEV_06": 0.586261031916365,
+            "ENGINEERING_ONLY_DEV_07": 0.5862610317999497
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000124108,
+          "positive_top3_contribution": 0.37500000003723233,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000029596964,
+          "absolute_top3_contribution": 0.37500000088790886,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.03512318294092402,
+            0.035123183065668764
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.03512318301517685,
+            "ENGINEERING_ONLY_DEV_01": 0.035123182991415945,
+            "ENGINEERING_ONLY_DEV_02": 0.03512318301517685,
+            "ENGINEERING_ONLY_DEV_03": 0.035123182991415945,
+            "ENGINEERING_ONLY_DEV_04": 0.03512318301517685,
+            "ENGINEERING_ONLY_DEV_05": 0.03512318299141594,
+            "ENGINEERING_ONLY_DEV_06": 0.03512318301517685,
+            "ENGINEERING_ONLY_DEV_07": 0.03512318299141594
+          },
+          "loso_range": [
+            0.03512318299141594,
+            0.03512318301517685
+          ],
+          "mean": 0.03512318300329639,
+          "median": 0.03512318300329639,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.035123182920133236,
+            "ENGINEERING_ONLY_DEV_01": 0.03512318308645956,
+            "ENGINEERING_ONLY_DEV_02": 0.035123182920133236,
+            "ENGINEERING_ONLY_DEV_03": 0.03512318308645956,
+            "ENGINEERING_ONLY_DEV_04": 0.035123182920133236,
+            "ENGINEERING_ONLY_DEV_05": 0.03512318308645956,
+            "ENGINEERING_ONLY_DEV_06": 0.035123182920133236,
+            "ENGINEERING_ONLY_DEV_07": 0.03512318308645956
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000029596964,
+          "positive_top3_contribution": 0.37500000088790886,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000001603468,
+          "absolute_top3_contribution": 0.37500000048104043,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6121194076551524,
+            0.6121194088329691
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6121194081318878,
+            "ENGINEERING_ONLY_DEV_01": 0.6121194083562338,
+            "ENGINEERING_ONLY_DEV_02": 0.6121194081318878,
+            "ENGINEERING_ONLY_DEV_03": 0.6121194083562338,
+            "ENGINEERING_ONLY_DEV_04": 0.6121194081318878,
+            "ENGINEERING_ONLY_DEV_05": 0.6121194083562338,
+            "ENGINEERING_ONLY_DEV_06": 0.6121194081318878,
+            "ENGINEERING_ONLY_DEV_07": 0.6121194083562338
+          },
+          "loso_range": [
+            0.6121194081318878,
+            0.6121194083562338
+          ],
+          "mean": 0.6121194082440607,
+          "median": 0.6121194082440607,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6121194090292719,
+            "ENGINEERING_ONLY_DEV_01": 0.6121194074588496,
+            "ENGINEERING_ONLY_DEV_02": 0.6121194090292719,
+            "ENGINEERING_ONLY_DEV_03": 0.6121194074588496,
+            "ENGINEERING_ONLY_DEV_04": 0.6121194090292719,
+            "ENGINEERING_ONLY_DEV_05": 0.6121194074588496,
+            "ENGINEERING_ONLY_DEV_06": 0.6121194090292719,
+            "ENGINEERING_ONLY_DEV_07": 0.6121194074588496
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000001603468,
+          "positive_top3_contribution": 0.37500000048104043,
+          "tied": 0
+        }
+      },
+      "variant": "C1"
+    },
+    "C1|direct": {
+      "context_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.12500000000761954,
+          "absolute_top3_contribution": 0.37500000002285866,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42440378211257557,
+            0.42440378215138075
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42440378213567387,
+            "ENGINEERING_ONLY_DEV_01": 0.42440378212828245,
+            "ENGINEERING_ONLY_DEV_02": 0.42440378213567387,
+            "ENGINEERING_ONLY_DEV_03": 0.42440378212828245,
+            "ENGINEERING_ONLY_DEV_04": 0.4244037821356739,
+            "ENGINEERING_ONLY_DEV_05": 0.42440378212828245,
+            "ENGINEERING_ONLY_DEV_06": 0.42440378213567387,
+            "ENGINEERING_ONLY_DEV_07": 0.42440378212828245
+          },
+          "loso_range": [
+            0.42440378212828245,
+            0.4244037821356739
+          ],
+          "mean": 0.42440378213197816,
+          "median": 0.42440378213197816,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.4244037821061081,
+            "ENGINEERING_ONLY_DEV_01": 0.4244037821578483,
+            "ENGINEERING_ONLY_DEV_02": 0.4244037821061081,
+            "ENGINEERING_ONLY_DEV_03": 0.4244037821578483,
+            "ENGINEERING_ONLY_DEV_04": 0.4244037821061081,
+            "ENGINEERING_ONLY_DEV_05": 0.4244037821578483,
+            "ENGINEERING_ONLY_DEV_06": 0.4244037821061081,
+            "ENGINEERING_ONLY_DEV_07": 0.4244037821578483
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000000761954,
+          "positive_top3_contribution": 0.37500000002285866,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.1250000000058303,
+          "absolute_top3_contribution": 0.3750000000174909,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.2774950644767709,
+            1.277495064566149
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.277495064529972,
+            "ENGINEERING_ONLY_DEV_01": 1.2774950645129477,
+            "ENGINEERING_ONLY_DEV_02": 1.277495064529972,
+            "ENGINEERING_ONLY_DEV_03": 1.2774950645129477,
+            "ENGINEERING_ONLY_DEV_04": 1.277495064529972,
+            "ENGINEERING_ONLY_DEV_05": 1.2774950645129475,
+            "ENGINEERING_ONLY_DEV_06": 1.277495064529972,
+            "ENGINEERING_ONLY_DEV_07": 1.2774950645129477
+          },
+          "loso_range": [
+            1.2774950645129475,
+            1.277495064529972
+          ],
+          "mean": 1.2774950645214598,
+          "median": 1.2774950645214598,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2774950644618746,
+            "ENGINEERING_ONLY_DEV_01": 1.2774950645810452,
+            "ENGINEERING_ONLY_DEV_02": 1.2774950644618746,
+            "ENGINEERING_ONLY_DEV_03": 1.2774950645810452,
+            "ENGINEERING_ONLY_DEV_04": 1.2774950644618746,
+            "ENGINEERING_ONLY_DEV_05": 1.2774950645810452,
+            "ENGINEERING_ONLY_DEV_06": 1.2774950644618746,
+            "ENGINEERING_ONLY_DEV_07": 1.2774950645810452
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000058303,
+          "positive_top3_contribution": 0.3750000000174909,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.12500000002482628,
+          "absolute_top3_contribution": 0.37500000007447887,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5861495827460506,
+            0.5861495829206735
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5861495828167314,
+            "ENGINEERING_ONLY_DEV_01": 0.5861495828499929,
+            "ENGINEERING_ONLY_DEV_02": 0.5861495828167314,
+            "ENGINEERING_ONLY_DEV_03": 0.5861495828499929,
+            "ENGINEERING_ONLY_DEV_04": 0.5861495828167314,
+            "ENGINEERING_ONLY_DEV_05": 0.5861495828499927,
+            "ENGINEERING_ONLY_DEV_06": 0.5861495828167314,
+            "ENGINEERING_ONLY_DEV_07": 0.5861495828499929
+          },
+          "loso_range": [
+            0.5861495828167314,
+            0.5861495828499929
+          ],
+          "mean": 0.586149582833362,
+          "median": 0.586149582833362,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5861495829497774,
+            "ENGINEERING_ONLY_DEV_01": 0.5861495827169468,
+            "ENGINEERING_ONLY_DEV_02": 0.5861495829497774,
+            "ENGINEERING_ONLY_DEV_03": 0.5861495827169468,
+            "ENGINEERING_ONLY_DEV_04": 0.5861495829497774,
+            "ENGINEERING_ONLY_DEV_05": 0.5861495827169468,
+            "ENGINEERING_ONLY_DEV_06": 0.5861495829497774,
+            "ENGINEERING_ONLY_DEV_07": 0.5861495827169468
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000002482628,
+          "positive_top3_contribution": 0.37500000007447887,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000026374003,
+          "absolute_top3_contribution": 0.3750000007912201,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.035089866396222316,
+            0.03508986650727755
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.03508986646232663,
+            "ENGINEERING_ONLY_DEV_01": 0.03508986644117325,
+            "ENGINEERING_ONLY_DEV_02": 0.03508986646232663,
+            "ENGINEERING_ONLY_DEV_03": 0.03508986644117325,
+            "ENGINEERING_ONLY_DEV_04": 0.03508986646232663,
+            "ENGINEERING_ONLY_DEV_05": 0.03508986644117325,
+            "ENGINEERING_ONLY_DEV_06": 0.03508986646232663,
+            "ENGINEERING_ONLY_DEV_07": 0.03508986644117325
+          },
+          "loso_range": [
+            0.03508986644117325,
+            0.03508986646232663
+          ],
+          "mean": 0.03508986645174994,
+          "median": 0.03508986645174994,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.035089866377713115,
+            "ENGINEERING_ONLY_DEV_01": 0.03508986652578676,
+            "ENGINEERING_ONLY_DEV_02": 0.035089866377713115,
+            "ENGINEERING_ONLY_DEV_03": 0.03508986652578676,
+            "ENGINEERING_ONLY_DEV_04": 0.035089866377713115,
+            "ENGINEERING_ONLY_DEV_05": 0.03508986652578676,
+            "ENGINEERING_ONLY_DEV_06": 0.035089866377713115,
+            "ENGINEERING_ONLY_DEV_07": 0.03508986652578676
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000026374003,
+          "positive_top3_contribution": 0.3750000007912201,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.12500000006248485,
+          "absolute_top3_contribution": 0.37500000018745455,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6130148770511057,
+            0.6130148775107553
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6130148773247066,
+            "ENGINEERING_ONLY_DEV_01": 0.6130148772371543,
+            "ENGINEERING_ONLY_DEV_02": 0.6130148773247066,
+            "ENGINEERING_ONLY_DEV_03": 0.6130148772371543,
+            "ENGINEERING_ONLY_DEV_04": 0.6130148773247066,
+            "ENGINEERING_ONLY_DEV_05": 0.6130148772371543,
+            "ENGINEERING_ONLY_DEV_06": 0.6130148773247066,
+            "ENGINEERING_ONLY_DEV_07": 0.6130148772371543
+          },
+          "loso_range": [
+            0.6130148772371543,
+            0.6130148773247066
+          ],
+          "mean": 0.6130148772809305,
+          "median": 0.6130148772809305,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6130148769744974,
+            "ENGINEERING_ONLY_DEV_01": 0.6130148775873636,
+            "ENGINEERING_ONLY_DEV_02": 0.6130148769744974,
+            "ENGINEERING_ONLY_DEV_03": 0.6130148775873636,
+            "ENGINEERING_ONLY_DEV_04": 0.6130148769744974,
+            "ENGINEERING_ONLY_DEV_05": 0.6130148775873636,
+            "ENGINEERING_ONLY_DEV_06": 0.6130148769744974,
+            "ENGINEERING_ONLY_DEV_07": 0.6130148775873636
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000006248485,
+          "positive_top3_contribution": 0.37500000018745455,
+          "tied": 0
+        }
+      },
+      "generalization_gap": {
+        "absolute_top1_contribution": 0.12500001761244073,
+        "absolute_top3_contribution": 0.3750000528373222,
+        "bootstrap": {
+          "CI": "percentile95",
+          "draws": 10000,
+          "seed": 20260928,
+          "unit": "scene"
+        },
+        "ci95": [
+          0.0006426226625788345,
+          0.0006426227983966915
+        ],
+        "improved_tied_worse": [
+          8,
+          0,
+          0
+        ],
+        "loso": {
+          "ENGINEERING_ONLY_DEV_00": 0.000642622743422797,
+          "ENGINEERING_ONLY_DEV_01": 0.000642622717552729,
+          "ENGINEERING_ONLY_DEV_02": 0.000642622743422797,
+          "ENGINEERING_ONLY_DEV_03": 0.000642622717552729,
+          "ENGINEERING_ONLY_DEV_04": 0.000642622743422797,
+          "ENGINEERING_ONLY_DEV_05": 0.000642622717552729,
+          "ENGINEERING_ONLY_DEV_06": 0.000642622743422797,
+          "ENGINEERING_ONLY_DEV_07": 0.000642622717552729
+        },
+        "loso_range": [
+          0.000642622717552729,
+          0.000642622743422797
+        ],
+        "mean": 0.000642622730487763,
+        "median": 0.000642622730487763,
+        "n_scenes": 8,
+        "negative": 0,
+        "per_scene": {
+          "ENGINEERING_ONLY_DEV_00": 0.000642622639942525,
+          "ENGINEERING_ONLY_DEV_01": 0.000642622821033001,
+          "ENGINEERING_ONLY_DEV_02": 0.000642622639942525,
+          "ENGINEERING_ONLY_DEV_03": 0.000642622821033001,
+          "ENGINEERING_ONLY_DEV_04": 0.000642622639942525,
+          "ENGINEERING_ONLY_DEV_05": 0.000642622821033001,
+          "ENGINEERING_ONLY_DEV_06": 0.000642622639942525,
+          "ENGINEERING_ONLY_DEV_07": 0.000642622821033001
+        },
+        "positive": 8,
+        "positive_top1_contribution": 0.12500001761244073,
+        "positive_top3_contribution": 0.3750000528373222,
+        "tied": 0
+      },
+      "method": "direct",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.1250000000342361,
+          "absolute_top3_contribution": 0.37500000010270823,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42504640477515443,
+            0.4250464049497774
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4250464048790966,
+            "ENGINEERING_ONLY_DEV_01": 0.4250464048458351,
+            "ENGINEERING_ONLY_DEV_02": 0.4250464048790966,
+            "ENGINEERING_ONLY_DEV_03": 0.4250464048458351,
+            "ENGINEERING_ONLY_DEV_04": 0.4250464048790967,
+            "ENGINEERING_ONLY_DEV_05": 0.42504640484583517,
+            "ENGINEERING_ONLY_DEV_06": 0.4250464048790967,
+            "ENGINEERING_ONLY_DEV_07": 0.42504640484583517
+          },
+          "loso_range": [
+            0.4250464048458351,
+            0.4250464048790967
+          ],
+          "mean": 0.4250464048624659,
+          "median": 0.4250464048624659,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_01": 0.4250464049788813,
+            "ENGINEERING_ONLY_DEV_02": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_03": 0.4250464049788813,
+            "ENGINEERING_ONLY_DEV_04": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_05": 0.4250464049788813,
+            "ENGINEERING_ONLY_DEV_06": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_07": 0.4250464049788813
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000342361,
+          "positive_top3_contribution": 0.37500000010270823,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000002785588,
+          "absolute_top3_contribution": 0.3750000000835676,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.2798879645997117,
+            1.2798879650275405
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2798879648543715,
+            "ENGINEERING_ONLY_DEV_01": 1.2798879647728805,
+            "ENGINEERING_ONLY_DEV_02": 1.2798879648543715,
+            "ENGINEERING_ONLY_DEV_03": 1.2798879647728805,
+            "ENGINEERING_ONLY_DEV_04": 1.2798879648543715,
+            "ENGINEERING_ONLY_DEV_05": 1.2798879647728805,
+            "ENGINEERING_ONLY_DEV_06": 1.2798879648543717,
+            "ENGINEERING_ONLY_DEV_07": 1.2798879647728805
+          },
+          "loso_range": [
+            1.2798879647728805,
+            1.2798879648543717
+          ],
+          "mean": 1.279887964813626,
+          "median": 1.279887964813626,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_01": 1.2798879650988453,
+            "ENGINEERING_ONLY_DEV_02": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_03": 1.2798879650988453,
+            "ENGINEERING_ONLY_DEV_04": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_05": 1.2798879650988453,
+            "ENGINEERING_ONLY_DEV_06": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_07": 1.2798879650988453
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000002785588,
+          "positive_top3_contribution": 0.3750000000835676,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.125000000062098,
+          "absolute_top3_contribution": 0.375000000186294,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5858447510545375,
+            0.5858447514910949
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_01": 0.5858447512312394,
+            "ENGINEERING_ONLY_DEV_02": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_03": 0.5858447512312394,
+            "ENGINEERING_ONLY_DEV_04": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_05": 0.5858447512312394,
+            "ENGINEERING_ONLY_DEV_06": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_07": 0.5858447512312394
+          },
+          "loso_range": [
+            0.5858447512312394,
+            0.5858447513143931
+          ],
+          "mean": 0.5858447512728162,
+          "median": 0.5858447512728162,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_01": 0.5858447515638545,
+            "ENGINEERING_ONLY_DEV_02": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_03": 0.5858447515638545,
+            "ENGINEERING_ONLY_DEV_04": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_05": 0.5858447515638545,
+            "ENGINEERING_ONLY_DEV_06": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_07": 0.5858447515638545
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125000000062098,
+          "positive_top3_contribution": 0.375000000186294,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000043078066,
+          "absolute_top3_contribution": 0.37500000129234196,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.03508128418069658,
+            0.03508128436204464
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_01": 0.035081284254099364,
+            "ENGINEERING_ONLY_DEV_02": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_03": 0.035081284254099364,
+            "ENGINEERING_ONLY_DEV_04": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_05": 0.035081284254099364,
+            "ENGINEERING_ONLY_DEV_06": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_07": 0.035081284254099364
+          },
+          "loso_range": [
+            0.035081284254099364,
+            0.03508128428864186
+          ],
+          "mean": 0.03508128427137061,
+          "median": 0.03508128427137061,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_01": 0.03508128439226932,
+            "ENGINEERING_ONLY_DEV_02": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_03": 0.03508128439226932,
+            "ENGINEERING_ONLY_DEV_04": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_05": 0.03508128439226932,
+            "ENGINEERING_ONLY_DEV_06": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_07": 0.03508128439226932
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000043078066,
+          "positive_top3_contribution": 0.37500000129234196,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000003912657,
+          "absolute_top3_contribution": 0.375000001173797,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6120449742821281,
+            0.6120449771557945
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_01": 0.6120449754452789,
+            "ENGINEERING_ONLY_DEV_02": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_03": 0.6120449754452789,
+            "ENGINEERING_ONLY_DEV_04": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_05": 0.6120449754452789,
+            "ENGINEERING_ONLY_DEV_06": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_07": 0.6120449754452789
+          },
+          "loso_range": [
+            0.6120449754452789,
+            0.6120449759926438
+          ],
+          "mean": 0.6120449757189613,
+          "median": 0.6120449757189613,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_01": 0.6120449776347389,
+            "ENGINEERING_ONLY_DEV_02": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_03": 0.6120449776347389,
+            "ENGINEERING_ONLY_DEV_04": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_05": 0.6120449776347389,
+            "ENGINEERING_ONLY_DEV_06": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_07": 0.6120449776347389
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000003912657,
+          "positive_top3_contribution": 0.375000001173797,
+          "tied": 0
+        }
+      },
+      "variant": "C1"
+    },
+    "C1|spatial_shuffle": {
+      "method": "spatial_shuffle",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.12500000029680447,
+          "absolute_top3_contribution": 0.3750000008904134,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.4249147300336821,
+            0.42491473154708126
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4249147309345149,
+            "ENGINEERING_ONLY_DEV_01": 0.42491473064624835,
+            "ENGINEERING_ONLY_DEV_02": 0.4249147309345149,
+            "ENGINEERING_ONLY_DEV_03": 0.42491473064624835,
+            "ENGINEERING_ONLY_DEV_04": 0.4249147309345149,
+            "ENGINEERING_ONLY_DEV_05": 0.42491473064624835,
+            "ENGINEERING_ONLY_DEV_06": 0.4249147309345149,
+            "ENGINEERING_ONLY_DEV_07": 0.42491473064624835
+          },
+          "loso_range": [
+            0.42491473064624835,
+            0.4249147309345149
+          ],
+          "mean": 0.42491473079038167,
+          "median": 0.42491473079038167,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42491472978144884,
+            "ENGINEERING_ONLY_DEV_01": 0.42491473179931444,
+            "ENGINEERING_ONLY_DEV_02": 0.42491472978144884,
+            "ENGINEERING_ONLY_DEV_03": 0.42491473179931444,
+            "ENGINEERING_ONLY_DEV_04": 0.42491472978144884,
+            "ENGINEERING_ONLY_DEV_05": 0.42491473179931444,
+            "ENGINEERING_ONLY_DEV_06": 0.42491472978144884,
+            "ENGINEERING_ONLY_DEV_07": 0.42491473179931444
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000029680447,
+          "positive_top3_contribution": 0.3750000008904134,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000029767822,
+          "absolute_top3_contribution": 0.37500000089303465,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.279482877137602,
+            1.2794828817080925
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2794828798581321,
+            "ENGINEERING_ONLY_DEV_01": 1.2794828789875623,
+            "ENGINEERING_ONLY_DEV_02": 1.2794828798581321,
+            "ENGINEERING_ONLY_DEV_03": 1.2794828789875623,
+            "ENGINEERING_ONLY_DEV_04": 1.2794828798581321,
+            "ENGINEERING_ONLY_DEV_05": 1.2794828789875623,
+            "ENGINEERING_ONLY_DEV_06": 1.2794828798581321,
+            "ENGINEERING_ONLY_DEV_07": 1.2794828789875623
+          },
+          "loso_range": [
+            1.2794828789875623,
+            1.2794828798581321
+          ],
+          "mean": 1.2794828794228472,
+          "median": 1.2794828794228472,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.2794828763758537,
+            "ENGINEERING_ONLY_DEV_01": 1.2794828824698408,
+            "ENGINEERING_ONLY_DEV_02": 1.2794828763758537,
+            "ENGINEERING_ONLY_DEV_03": 1.2794828824698408,
+            "ENGINEERING_ONLY_DEV_04": 1.2794828763758537,
+            "ENGINEERING_ONLY_DEV_05": 1.2794828824698408,
+            "ENGINEERING_ONLY_DEV_06": 1.2794828763758537,
+            "ENGINEERING_ONLY_DEV_07": 1.2794828824698408
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000029767822,
+          "positive_top3_contribution": 0.37500000089303465,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.12500000017386115,
+          "absolute_top3_contribution": 0.37500000052158344,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5858894242846873,
+            0.5858894255070481
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858894247794524,
+            "ENGINEERING_ONLY_DEV_01": 0.585889425012283,
+            "ENGINEERING_ONLY_DEV_02": 0.5858894247794524,
+            "ENGINEERING_ONLY_DEV_03": 0.585889425012283,
+            "ENGINEERING_ONLY_DEV_04": 0.5858894247794524,
+            "ENGINEERING_ONLY_DEV_05": 0.585889425012283,
+            "ENGINEERING_ONLY_DEV_06": 0.5858894247794524,
+            "ENGINEERING_ONLY_DEV_07": 0.585889425012283
+          },
+          "loso_range": [
+            0.5858894247794524,
+            0.585889425012283
+          ],
+          "mean": 0.5858894248958677,
+          "median": 0.5858894248958677,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.585889425710775,
+            "ENGINEERING_ONLY_DEV_01": 0.5858894240809605,
+            "ENGINEERING_ONLY_DEV_02": 0.585889425710775,
+            "ENGINEERING_ONLY_DEV_03": 0.5858894240809605,
+            "ENGINEERING_ONLY_DEV_04": 0.585889425710775,
+            "ENGINEERING_ONLY_DEV_05": 0.5858894240809605,
+            "ENGINEERING_ONLY_DEV_06": 0.585889425710775,
+            "ENGINEERING_ONLY_DEV_07": 0.5858894240809605
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000017386115,
+          "positive_top3_contribution": 0.37500000052158344,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000035209183,
+          "absolute_top3_contribution": 0.3750000010562755,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.03506506979539763,
+            0.03506506994355113
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.03506506985536452,
+            "ENGINEERING_ONLY_DEV_01": 0.035065069883584245,
+            "ENGINEERING_ONLY_DEV_02": 0.03506506985536452,
+            "ENGINEERING_ONLY_DEV_03": 0.035065069883584245,
+            "ENGINEERING_ONLY_DEV_04": 0.03506506985536452,
+            "ENGINEERING_ONLY_DEV_05": 0.03506506988358423,
+            "ENGINEERING_ONLY_DEV_06": 0.03506506985536452,
+            "ENGINEERING_ONLY_DEV_07": 0.03506506988358423
+          },
+          "loso_range": [
+            0.03506506985536452,
+            0.035065069883584245
+          ],
+          "mean": 0.03506506986947438,
+          "median": 0.03506506986947438,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.03506506996824338,
+            "ENGINEERING_ONLY_DEV_01": 0.03506506977070538,
+            "ENGINEERING_ONLY_DEV_02": 0.03506506996824338,
+            "ENGINEERING_ONLY_DEV_03": 0.03506506977070538,
+            "ENGINEERING_ONLY_DEV_04": 0.03506506996824338,
+            "ENGINEERING_ONLY_DEV_05": 0.03506506977070538,
+            "ENGINEERING_ONLY_DEV_06": 0.03506506996824338,
+            "ENGINEERING_ONLY_DEV_07": 0.03506506977070538
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000035209183,
+          "positive_top3_contribution": 0.3750000010562755,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000002813215,
+          "absolute_top3_contribution": 0.37500000084396445,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6123439523423204,
+            0.6123439544095064
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6123439535727883,
+            "ENGINEERING_ONLY_DEV_01": 0.6123439531790387,
+            "ENGINEERING_ONLY_DEV_02": 0.6123439535727883,
+            "ENGINEERING_ONLY_DEV_03": 0.6123439531790387,
+            "ENGINEERING_ONLY_DEV_04": 0.6123439535727883,
+            "ENGINEERING_ONLY_DEV_05": 0.6123439531790387,
+            "ENGINEERING_ONLY_DEV_06": 0.6123439535727883,
+            "ENGINEERING_ONLY_DEV_07": 0.6123439531790386
+          },
+          "loso_range": [
+            0.6123439531790386,
+            0.6123439535727883
+          ],
+          "mean": 0.6123439533759134,
+          "median": 0.6123439533759134,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6123439519977895,
+            "ENGINEERING_ONLY_DEV_01": 0.6123439547540375,
+            "ENGINEERING_ONLY_DEV_02": 0.6123439519977895,
+            "ENGINEERING_ONLY_DEV_03": 0.6123439547540375,
+            "ENGINEERING_ONLY_DEV_04": 0.6123439519977895,
+            "ENGINEERING_ONLY_DEV_05": 0.6123439547540375,
+            "ENGINEERING_ONLY_DEV_06": 0.6123439519977895,
+            "ENGINEERING_ONLY_DEV_07": 0.6123439547540375
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000002813215,
+          "positive_top3_contribution": 0.37500000084396445,
+          "tied": 0
+        }
+      },
+      "variant": "C1"
+    },
+    "C1|wrong_scene": {
+      "method": "wrong_scene",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.1250000000342361,
+          "absolute_top3_contribution": 0.37500000010270823,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42504640477515443,
+            0.4250464049497774
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4250464048790966,
+            "ENGINEERING_ONLY_DEV_01": 0.4250464048458351,
+            "ENGINEERING_ONLY_DEV_02": 0.4250464048790966,
+            "ENGINEERING_ONLY_DEV_03": 0.4250464048458351,
+            "ENGINEERING_ONLY_DEV_04": 0.4250464048790967,
+            "ENGINEERING_ONLY_DEV_05": 0.42504640484583517,
+            "ENGINEERING_ONLY_DEV_06": 0.4250464048790967,
+            "ENGINEERING_ONLY_DEV_07": 0.42504640484583517
+          },
+          "loso_range": [
+            0.4250464048458351,
+            0.4250464048790967
+          ],
+          "mean": 0.4250464048624659,
+          "median": 0.4250464048624659,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_01": 0.4250464049788813,
+            "ENGINEERING_ONLY_DEV_02": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_03": 0.4250464049788813,
+            "ENGINEERING_ONLY_DEV_04": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_05": 0.4250464049788813,
+            "ENGINEERING_ONLY_DEV_06": 0.4250464047460506,
+            "ENGINEERING_ONLY_DEV_07": 0.4250464049788813
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000342361,
+          "positive_top3_contribution": 0.37500000010270823,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.12500000002785588,
+          "absolute_top3_contribution": 0.3750000000835676,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.2798879645997117,
+            1.2798879650275405
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.2798879648543715,
+            "ENGINEERING_ONLY_DEV_01": 1.2798879647728805,
+            "ENGINEERING_ONLY_DEV_02": 1.2798879648543715,
+            "ENGINEERING_ONLY_DEV_03": 1.2798879647728805,
+            "ENGINEERING_ONLY_DEV_04": 1.2798879648543715,
+            "ENGINEERING_ONLY_DEV_05": 1.2798879647728805,
+            "ENGINEERING_ONLY_DEV_06": 1.2798879648543717,
+            "ENGINEERING_ONLY_DEV_07": 1.2798879647728805
+          },
+          "loso_range": [
+            1.2798879647728805,
+            1.2798879648543717
+          ],
+          "mean": 1.279887964813626,
+          "median": 1.279887964813626,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_01": 1.2798879650988453,
+            "ENGINEERING_ONLY_DEV_02": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_03": 1.2798879650988453,
+            "ENGINEERING_ONLY_DEV_04": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_05": 1.2798879650988453,
+            "ENGINEERING_ONLY_DEV_06": 1.279887964528407,
+            "ENGINEERING_ONLY_DEV_07": 1.2798879650988453
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000002785588,
+          "positive_top3_contribution": 0.3750000000835676,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": 0.125000000062098,
+          "absolute_top3_contribution": 0.375000000186294,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.5858447510545375,
+            0.5858447514910949
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_01": 0.5858447512312394,
+            "ENGINEERING_ONLY_DEV_02": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_03": 0.5858447512312394,
+            "ENGINEERING_ONLY_DEV_04": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_05": 0.5858447512312394,
+            "ENGINEERING_ONLY_DEV_06": 0.5858447513143931,
+            "ENGINEERING_ONLY_DEV_07": 0.5858447512312394
+          },
+          "loso_range": [
+            0.5858447512312394,
+            0.5858447513143931
+          ],
+          "mean": 0.5858447512728162,
+          "median": 0.5858447512728162,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_01": 0.5858447515638545,
+            "ENGINEERING_ONLY_DEV_02": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_03": 0.5858447515638545,
+            "ENGINEERING_ONLY_DEV_04": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_05": 0.5858447515638545,
+            "ENGINEERING_ONLY_DEV_06": 0.5858447509817779,
+            "ENGINEERING_ONLY_DEV_07": 0.5858447515638545
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125000000062098,
+          "positive_top3_contribution": 0.375000000186294,
+          "tied": 0
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.12500000043078066,
+          "absolute_top3_contribution": 0.37500000129234196,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.03508128418069658,
+            0.03508128436204464
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_01": 0.035081284254099364,
+            "ENGINEERING_ONLY_DEV_02": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_03": 0.035081284254099364,
+            "ENGINEERING_ONLY_DEV_04": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_05": 0.035081284254099364,
+            "ENGINEERING_ONLY_DEV_06": 0.03508128428864186,
+            "ENGINEERING_ONLY_DEV_07": 0.035081284254099364
+          },
+          "loso_range": [
+            0.035081284254099364,
+            0.03508128428864186
+          ],
+          "mean": 0.03508128427137061,
+          "median": 0.03508128427137061,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_01": 0.03508128439226932,
+            "ENGINEERING_ONLY_DEV_02": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_03": 0.03508128439226932,
+            "ENGINEERING_ONLY_DEV_04": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_05": 0.03508128439226932,
+            "ENGINEERING_ONLY_DEV_06": 0.0350812841504719,
+            "ENGINEERING_ONLY_DEV_07": 0.03508128439226932
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000043078066,
+          "positive_top3_contribution": 0.37500000129234196,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.1250000003912657,
+          "absolute_top3_contribution": 0.375000001173797,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.6120449742821281,
+            0.6120449771557945
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_01": 0.6120449754452789,
+            "ENGINEERING_ONLY_DEV_02": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_03": 0.6120449754452789,
+            "ENGINEERING_ONLY_DEV_04": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_05": 0.6120449754452789,
+            "ENGINEERING_ONLY_DEV_06": 0.6120449759926438,
+            "ENGINEERING_ONLY_DEV_07": 0.6120449754452789
+          },
+          "loso_range": [
+            0.6120449754452789,
+            0.6120449759926438
+          ],
+          "mean": 0.6120449757189613,
+          "median": 0.6120449757189613,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_01": 0.6120449776347389,
+            "ENGINEERING_ONLY_DEV_02": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_03": 0.6120449776347389,
+            "ENGINEERING_ONLY_DEV_04": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_05": 0.6120449776347389,
+            "ENGINEERING_ONLY_DEV_06": 0.6120449738031838,
+            "ENGINEERING_ONLY_DEV_07": 0.6120449776347389
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000003912657,
+          "positive_top3_contribution": 0.375000001173797,
+          "tied": 0
+        }
+      },
+      "variant": "C1"
+    },
+    "C1|zero": {
+      "method": "zero",
+      "query_metrics": {
+        "coverage": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_absrel": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            1.0,
+            1.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "loso_range": [
+            1.0,
+            1.0
+          ],
+          "mean": 1.0,
+          "median": 1.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 1.0,
+            "ENGINEERING_ONLY_DEV_01": 1.0,
+            "ENGINEERING_ONLY_DEV_02": 1.0,
+            "ENGINEERING_ONLY_DEV_03": 1.0,
+            "ENGINEERING_ONLY_DEV_04": 1.0,
+            "ENGINEERING_ONLY_DEV_05": 1.0,
+            "ENGINEERING_ONLY_DEV_06": 1.0,
+            "ENGINEERING_ONLY_DEV_07": 1.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "depth_delta1": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "depth_rmse": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            3.0,
+            3.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 3.0,
+            "ENGINEERING_ONLY_DEV_01": 3.0,
+            "ENGINEERING_ONLY_DEV_02": 3.0,
+            "ENGINEERING_ONLY_DEV_03": 3.0,
+            "ENGINEERING_ONLY_DEV_04": 3.0,
+            "ENGINEERING_ONLY_DEV_05": 3.0,
+            "ENGINEERING_ONLY_DEV_06": 3.0,
+            "ENGINEERING_ONLY_DEV_07": 3.0
+          },
+          "loso_range": [
+            3.0,
+            3.0
+          ],
+          "mean": 3.0,
+          "median": 3.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 3.0,
+            "ENGINEERING_ONLY_DEV_01": 3.0,
+            "ENGINEERING_ONLY_DEV_02": 3.0,
+            "ENGINEERING_ONLY_DEV_03": 3.0,
+            "ENGINEERING_ONLY_DEV_04": 3.0,
+            "ENGINEERING_ONLY_DEV_05": 3.0,
+            "ENGINEERING_ONLY_DEV_06": 3.0,
+            "ENGINEERING_ONLY_DEV_07": 3.0
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "opacity": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "rgb_mse": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.010396001817904177,
+            0.010396001817904177
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_01": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_02": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_03": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_04": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_05": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_06": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_07": 0.010396001817904177
+          },
+          "loso_range": [
+            0.010396001817904177,
+            0.010396001817904177
+          ],
+          "mean": 0.010396001817904177,
+          "median": 0.010396001817904177,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_01": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_02": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_03": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_04": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_05": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_06": 0.010396001817904177,
+            "ENGINEERING_ONLY_DEV_07": 0.010396001817904177
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "rgb_ssim": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.009527437374240834,
+            0.009527437374240834
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_01": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_02": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_03": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_04": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_05": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_06": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_07": 0.009527437374240834
+          },
+          "loso_range": [
+            0.009527437374240834,
+            0.009527437374240834
+          ],
+          "mean": 0.009527437374240834,
+          "median": 0.009527437374240834,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_01": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_02": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_03": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_04": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_05": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_06": 0.009527437374240834,
+            "ENGINEERING_ONLY_DEV_07": 0.009527437374240834
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        }
+      },
+      "variant": "C1"
+    }
+  },
+  "per_seed": {
+    "20260928": {
+      "full_context_gain": {
+        "C0": {
+          "absolute_top1_contribution": 0.12500023291817092,
+          "absolute_top3_contribution": 0.3750006987545128,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            -0.000541463862949329,
+            -0.000541462349550173
+          ],
+          "improved_tied_worse": [
+            0,
+            0,
+            8
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": -0.0005414629621164981,
+            "ENGINEERING_ONLY_DEV_01": -0.000541463250383004,
+            "ENGINEERING_ONLY_DEV_02": -0.0005414629621164981,
+            "ENGINEERING_ONLY_DEV_03": -0.000541463250383004,
+            "ENGINEERING_ONLY_DEV_04": -0.0005414629621164981,
+            "ENGINEERING_ONLY_DEV_05": -0.000541463250383004,
+            "ENGINEERING_ONLY_DEV_06": -0.0005414629621164981,
+            "ENGINEERING_ONLY_DEV_07": -0.000541463250383004
+          },
+          "loso_range": [
+            -0.000541463250383004,
+            -0.0005414629621164981
+          ],
+          "mean": -0.000541463106249751,
+          "median": -0.000541463106249751,
+          "n_scenes": 8,
+          "negative": 8,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": -0.0005414641151825217,
+            "ENGINEERING_ONLY_DEV_01": -0.0005414620973169804,
+            "ENGINEERING_ONLY_DEV_02": -0.0005414641151825217,
+            "ENGINEERING_ONLY_DEV_03": -0.0005414620973169804,
+            "ENGINEERING_ONLY_DEV_04": -0.0005414641151825217,
+            "ENGINEERING_ONLY_DEV_05": -0.0005414620973169804,
+            "ENGINEERING_ONLY_DEV_06": -0.0005414641151825217,
+            "ENGINEERING_ONLY_DEV_07": -0.0005414620973169804
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 0
+        },
+        "C1": {
+          "absolute_top1_contribution": 0.12500004715243343,
+          "absolute_top3_contribution": 0.3750001414573003,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            -0.0006172287006241464,
+            -0.0006172283513782226
+          ],
+          "improved_tied_worse": [
+            0,
+            0,
+            8
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": -0.0006172284927396679,
+            "ENGINEERING_ONLY_DEV_01": -0.0006172285592627011,
+            "ENGINEERING_ONLY_DEV_02": -0.0006172284927396679,
+            "ENGINEERING_ONLY_DEV_03": -0.0006172285592627011,
+            "ENGINEERING_ONLY_DEV_04": -0.0006172284927396679,
+            "ENGINEERING_ONLY_DEV_05": -0.0006172285592627011,
+            "ENGINEERING_ONLY_DEV_06": -0.0006172284927396679,
+            "ENGINEERING_ONLY_DEV_07": -0.0006172285592627011
+          },
+          "loso_range": [
+            -0.0006172285592627011,
+            -0.0006172284927396679
+          ],
+          "mean": -0.0006172285260011845,
+          "median": -0.0006172285260011845,
+          "n_scenes": 8,
+          "negative": 8,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": -0.0006172287588318004,
+            "ENGINEERING_ONLY_DEV_01": -0.0006172282931705686,
+            "ENGINEERING_ONLY_DEV_02": -0.0006172287588318004,
+            "ENGINEERING_ONLY_DEV_03": -0.0006172282931705686,
+            "ENGINEERING_ONLY_DEV_04": -0.0006172287588318004,
+            "ENGINEERING_ONLY_DEV_05": -0.0006172282931705686,
+            "ENGINEERING_ONLY_DEV_06": -0.0006172287588318004,
+            "ENGINEERING_ONLY_DEV_07": -0.0006172282931705686
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 0
+        }
+      },
+      "query_absrel": {
+        "C0": {
+          "absolute_top1_contribution": 0.1250000000452166,
+          "absolute_top3_contribution": 0.3750000001356499,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42910218599718064,
+            0.4291021862300113
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42910218609142164,
+            "ENGINEERING_ONLY_DEV_01": 0.4291021861357703,
+            "ENGINEERING_ONLY_DEV_02": 0.42910218609142164,
+            "ENGINEERING_ONLY_DEV_03": 0.4291021861357703,
+            "ENGINEERING_ONLY_DEV_04": 0.42910218609142164,
+            "ENGINEERING_ONLY_DEV_05": 0.4291021861357703,
+            "ENGINEERING_ONLY_DEV_06": 0.42910218609142164,
+            "ENGINEERING_ONLY_DEV_07": 0.4291021861357703
+          },
+          "loso_range": [
+            0.42910218609142164,
+            0.4291021861357703
+          ],
+          "mean": 0.42910218611359596,
+          "median": 0.42910218611359596,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42910218626881635,
+            "ENGINEERING_ONLY_DEV_01": 0.42910218595837557,
+            "ENGINEERING_ONLY_DEV_02": 0.42910218626881635,
+            "ENGINEERING_ONLY_DEV_03": 0.42910218595837557,
+            "ENGINEERING_ONLY_DEV_04": 0.42910218626881635,
+            "ENGINEERING_ONLY_DEV_05": 0.42910218595837557,
+            "ENGINEERING_ONLY_DEV_06": 0.42910218626881635,
+            "ENGINEERING_ONLY_DEV_07": 0.42910218595837557
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.1250000000452166,
+          "positive_top3_contribution": 0.3750000001356499,
+          "tied": 0
+        },
+        "C1": {
+          "absolute_top1_contribution": 0.12500000011315515,
+          "absolute_top3_contribution": 0.37500000033946546,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42867146674931667,
+            0.4286714673313933
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42867146698491915,
+            "ENGINEERING_ONLY_DEV_01": 0.4286714670957909,
+            "ENGINEERING_ONLY_DEV_02": 0.42867146698491915,
+            "ENGINEERING_ONLY_DEV_03": 0.4286714670957909,
+            "ENGINEERING_ONLY_DEV_04": 0.42867146698491915,
+            "ENGINEERING_ONLY_DEV_05": 0.4286714670957909,
+            "ENGINEERING_ONLY_DEV_06": 0.42867146698491915,
+            "ENGINEERING_ONLY_DEV_07": 0.4286714670957909
+          },
+          "loso_range": [
+            0.42867146698491915,
+            0.4286714670957909
+          ],
+          "mean": 0.42867146704035497,
+          "median": 0.42867146704035497,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42867146742840606,
+            "ENGINEERING_ONLY_DEV_01": 0.42867146665230393,
+            "ENGINEERING_ONLY_DEV_02": 0.42867146742840606,
+            "ENGINEERING_ONLY_DEV_03": 0.42867146665230393,
+            "ENGINEERING_ONLY_DEV_04": 0.42867146742840606,
+            "ENGINEERING_ONLY_DEV_05": 0.42867146665230393,
+            "ENGINEERING_ONLY_DEV_06": 0.42867146742840606,
+            "ENGINEERING_ONLY_DEV_07": 0.42867146665230393
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000011315515,
+          "positive_top3_contribution": 0.37500000033946546,
+          "tied": 0
+        }
+      },
+      "surface_gain": {
+        "absolute_top1_contribution": 0.12500006757033932,
+        "absolute_top3_contribution": 0.3750002027110179,
+        "bootstrap": {
+          "CI": "percentile95",
+          "draws": 10000,
+          "seed": 20260928,
+          "unit": "scene"
+        },
+        "ci95": [
+          0.00043071889861796137,
+          0.0004307192478639685
+        ],
+        "improved_tied_worse": [
+          8,
+          0,
+          0
+        ],
+        "loso": {
+          "ENGINEERING_ONLY_DEV_00": 0.0004307191065024894,
+          "ENGINEERING_ONLY_DEV_01": 0.0004307190399794404,
+          "ENGINEERING_ONLY_DEV_02": 0.0004307191065024894,
+          "ENGINEERING_ONLY_DEV_03": 0.0004307190399794404,
+          "ENGINEERING_ONLY_DEV_04": 0.0004307191065024894,
+          "ENGINEERING_ONLY_DEV_05": 0.0004307190399794404,
+          "ENGINEERING_ONLY_DEV_06": 0.0004307191065024894,
+          "ENGINEERING_ONLY_DEV_07": 0.0004307190399794404
+        },
+        "loso_range": [
+          0.0004307190399794404,
+          0.0004307191065024894
+        ],
+        "mean": 0.0004307190732409649,
+        "median": 0.0004307190732409649,
+        "n_scenes": 8,
+        "negative": 0,
+        "per_scene": {
+          "ENGINEERING_ONLY_DEV_00": 0.0004307188404102935,
+          "ENGINEERING_ONLY_DEV_01": 0.00043071930607163633,
+          "ENGINEERING_ONLY_DEV_02": 0.0004307188404102935,
+          "ENGINEERING_ONLY_DEV_03": 0.00043071930607163633,
+          "ENGINEERING_ONLY_DEV_04": 0.0004307188404102935,
+          "ENGINEERING_ONLY_DEV_05": 0.00043071930607163633,
+          "ENGINEERING_ONLY_DEV_06": 0.0004307188404102935,
+          "ENGINEERING_ONLY_DEV_07": 0.00043071930607163633
+        },
+        "positive": 8,
+        "positive_top1_contribution": 0.12500006757033932,
+        "positive_top3_contribution": 0.3750002027110179,
+        "tied": 0
+      }
+    },
+    "20260929": {
+      "full_context_gain": {
+        "C0": {
+          "absolute_top1_contribution": 0.12500283380688562,
+          "absolute_top3_contribution": 0.3750085014206569,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            3.7656844748851226e-05,
+            3.765812531733581e-05
+          ],
+          "improved_tied_worse": [
+            8,
+            0,
+            0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 3.7657606991996815e-05,
+            "ENGINEERING_ONLY_DEV_01": 3.765736307419022e-05,
+            "ENGINEERING_ONLY_DEV_02": 3.7657606991996815e-05,
+            "ENGINEERING_ONLY_DEV_03": 3.765736307419022e-05,
+            "ENGINEERING_ONLY_DEV_04": 3.7657606991996815e-05,
+            "ENGINEERING_ONLY_DEV_05": 3.765736307419022e-05,
+            "ENGINEERING_ONLY_DEV_06": 3.7657606991996815e-05,
+            "ENGINEERING_ONLY_DEV_07": 3.765736307419022e-05
+          },
+          "loso_range": [
+            3.765736307419022e-05,
+            3.7657606991996815e-05
+          ],
+          "mean": 3.765748503309352e-05,
+          "median": 3.765748503309352e-05,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 3.765663132077046e-05,
+            "ENGINEERING_ONLY_DEV_01": 3.7658338745416575e-05,
+            "ENGINEERING_ONLY_DEV_02": 3.765663132077046e-05,
+            "ENGINEERING_ONLY_DEV_03": 3.7658338745416575e-05,
+            "ENGINEERING_ONLY_DEV_04": 3.765663132077046e-05,
+            "ENGINEERING_ONLY_DEV_05": 3.7658338745416575e-05,
+            "ENGINEERING_ONLY_DEV_06": 3.765663132077046e-05,
+            "ENGINEERING_ONLY_DEV_07": 3.7658338745416575e-05
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500283380688562,
+          "positive_top3_contribution": 0.3750085014206569,
+          "tied": 0
+        },
+        "C1": {
+          "absolute_top1_contribution": 0.12500290197320768,
+          "absolute_top3_contribution": 0.37500870591962304,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            2.340054682761772e-05,
+            2.340136173492602e-05
+          ],
+          "improved_tied_worse": [
+            8,
+            0,
+            0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 2.340087667105203e-05,
+            "ENGINEERING_ONLY_DEV_01": 2.3401031891491708e-05,
+            "ENGINEERING_ONLY_DEV_02": 2.340087667105203e-05,
+            "ENGINEERING_ONLY_DEV_03": 2.3401031891491708e-05,
+            "ENGINEERING_ONLY_DEV_04": 2.340087667105203e-05,
+            "ENGINEERING_ONLY_DEV_05": 2.3401031891491708e-05,
+            "ENGINEERING_ONLY_DEV_06": 2.340087667105203e-05,
+            "ENGINEERING_ONLY_DEV_07": 2.3401031891491708e-05
+          },
+          "loso_range": [
+            2.340087667105203e-05,
+            2.3401031891491708e-05
+          ],
+          "mean": 2.340095428127187e-05,
+          "median": 2.340095428127187e-05,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 2.3401497552810735e-05,
+            "ENGINEERING_ONLY_DEV_01": 2.3400411009733002e-05,
+            "ENGINEERING_ONLY_DEV_02": 2.3401497552810735e-05,
+            "ENGINEERING_ONLY_DEV_03": 2.3400411009733002e-05,
+            "ENGINEERING_ONLY_DEV_04": 2.3401497552810735e-05,
+            "ENGINEERING_ONLY_DEV_05": 2.3400411009733002e-05,
+            "ENGINEERING_ONLY_DEV_06": 2.3401497552810735e-05,
+            "ENGINEERING_ONLY_DEV_07": 2.3400411009733002e-05
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500290197320768,
+          "positive_top3_contribution": 0.37500870591962304,
+          "tied": 0
+        }
+      },
+      "query_absrel": {
+        "C0": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42142731401448447,
+            0.42142731401448447
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4214273140144845,
+            "ENGINEERING_ONLY_DEV_01": 0.4214273140144845,
+            "ENGINEERING_ONLY_DEV_02": 0.4214273140144845,
+            "ENGINEERING_ONLY_DEV_03": 0.4214273140144845,
+            "ENGINEERING_ONLY_DEV_04": 0.4214273140144845,
+            "ENGINEERING_ONLY_DEV_05": 0.4214273140144845,
+            "ENGINEERING_ONLY_DEV_06": 0.4214273140144845,
+            "ENGINEERING_ONLY_DEV_07": 0.4214273140144845
+          },
+          "loso_range": [
+            0.4214273140144845,
+            0.4214273140144845
+          ],
+          "mean": 0.42142731401448447,
+          "median": 0.42142731401448447,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42142731401448447,
+            "ENGINEERING_ONLY_DEV_01": 0.42142731401448447,
+            "ENGINEERING_ONLY_DEV_02": 0.42142731401448447,
+            "ENGINEERING_ONLY_DEV_03": 0.42142731401448447,
+            "ENGINEERING_ONLY_DEV_04": 0.42142731401448447,
+            "ENGINEERING_ONLY_DEV_05": 0.42142731401448447,
+            "ENGINEERING_ONLY_DEV_06": 0.42142731401448447,
+            "ENGINEERING_ONLY_DEV_07": 0.42142731401448447
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        },
+        "C1": {
+          "absolute_top1_contribution": 0.125000000184163,
+          "absolute_top3_contribution": 0.37500000055248894,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.42142134221891564,
+            0.4214213431502382
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.4214213427732743,
+            "ENGINEERING_ONLY_DEV_01": 0.4214213425958796,
+            "ENGINEERING_ONLY_DEV_02": 0.4214213427732743,
+            "ENGINEERING_ONLY_DEV_03": 0.4214213425958796,
+            "ENGINEERING_ONLY_DEV_04": 0.42142134277327437,
+            "ENGINEERING_ONLY_DEV_05": 0.4214213425958796,
+            "ENGINEERING_ONLY_DEV_06": 0.42142134277327437,
+            "ENGINEERING_ONLY_DEV_07": 0.4214213425958796
+          },
+          "loso_range": [
+            0.4214213425958796,
+            0.42142134277327437
+          ],
+          "mean": 0.4214213426845769,
+          "median": 0.4214213426845769,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.4214213420636952,
+            "ENGINEERING_ONLY_DEV_01": 0.42142134330545866,
+            "ENGINEERING_ONLY_DEV_02": 0.4214213420636952,
+            "ENGINEERING_ONLY_DEV_03": 0.42142134330545866,
+            "ENGINEERING_ONLY_DEV_04": 0.4214213420636952,
+            "ENGINEERING_ONLY_DEV_05": 0.42142134330545866,
+            "ENGINEERING_ONLY_DEV_06": 0.4214213420636952,
+            "ENGINEERING_ONLY_DEV_07": 0.42142134330545866
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125000000184163,
+          "positive_top3_contribution": 0.37500000055248894,
+          "tied": 0
+        }
+      },
+      "surface_gain": {
+        "absolute_top1_contribution": 0.1250129971410165,
+        "absolute_top3_contribution": 0.3750389914230495,
+        "bootstrap": {
+          "CI": "percentile95",
+          "draws": 10000,
+          "seed": 20260928,
+          "unit": "scene"
+        },
+        "ci95": [
+          5.97086424623805e-06,
+          5.971795568840421e-06
+        ],
+        "improved_tied_worse": [
+          8,
+          0,
+          0
+        ],
+        "loso": {
+          "ENGINEERING_ONLY_DEV_00": 5.971241210148534e-06,
+          "ENGINEERING_ONLY_DEV_01": 5.971418604929937e-06,
+          "ENGINEERING_ONLY_DEV_02": 5.971241210148534e-06,
+          "ENGINEERING_ONLY_DEV_03": 5.971418604929937e-06,
+          "ENGINEERING_ONLY_DEV_04": 5.971241210148534e-06,
+          "ENGINEERING_ONLY_DEV_05": 5.971418604929937e-06,
+          "ENGINEERING_ONLY_DEV_06": 5.971241210148534e-06,
+          "ENGINEERING_ONLY_DEV_07": 5.971418604929937e-06
+        },
+        "loso_range": [
+          5.971241210148534e-06,
+          5.971418604929937e-06
+        ],
+        "mean": 5.971329907539236e-06,
+        "median": 5.971329907539236e-06,
+        "n_scenes": 8,
+        "negative": 0,
+        "per_scene": {
+          "ENGINEERING_ONLY_DEV_00": 5.97195078927415e-06,
+          "ENGINEERING_ONLY_DEV_01": 5.970709025804322e-06,
+          "ENGINEERING_ONLY_DEV_02": 5.97195078927415e-06,
+          "ENGINEERING_ONLY_DEV_03": 5.970709025804322e-06,
+          "ENGINEERING_ONLY_DEV_04": 5.97195078927415e-06,
+          "ENGINEERING_ONLY_DEV_05": 5.970709025804322e-06,
+          "ENGINEERING_ONLY_DEV_06": 5.97195078927415e-06,
+          "ENGINEERING_ONLY_DEV_07": 5.970709025804322e-06
+        },
+        "positive": 8,
+        "positive_top1_contribution": 0.1250129971410165,
+        "positive_top3_contribution": 0.3750389914230495,
+        "tied": 0
+      }
+    }
+  },
+  "primary": "C1_SURFACE16",
+  "scene_ids": [
+    "ENGINEERING_ONLY_DEV_00",
+    "ENGINEERING_ONLY_DEV_01",
+    "ENGINEERING_ONLY_DEV_02",
+    "ENGINEERING_ONLY_DEV_03",
+    "ENGINEERING_ONLY_DEV_04",
+    "ENGINEERING_ONLY_DEV_05",
+    "ENGINEERING_ONLY_DEV_06",
+    "ENGINEERING_ONLY_DEV_07"
+  ],
+  "seeds": [
+    20260928,
+    20260929
+  ],
+  "surface_gain": {
+    "absolute_top1_contribution": 0.12500011107728967,
+    "absolute_top3_contribution": 0.37500033323186904,
+    "bootstrap": {
+      "CI": "percentile95",
+      "draws": 10000,
+      "seed": 20260928,
+      "unit": "scene"
+    },
+    "ci95": [
+      0.0002183450560551345,
+      0.00021834534709345294
+    ],
+    "improved_tied_worse": [
+      8,
+      0,
+      0
+    ],
+    "loso": {
+      "ENGINEERING_ONLY_DEV_00": 0.00021834517385635861,
+      "ENGINEERING_ONLY_DEV_01": 0.0002183452292922288,
+      "ENGINEERING_ONLY_DEV_02": 0.00021834517385635861,
+      "ENGINEERING_ONLY_DEV_03": 0.0002183452292922288,
+      "ENGINEERING_ONLY_DEV_04": 0.00021834517385635861,
+      "ENGINEERING_ONLY_DEV_05": 0.0002183452292922288,
+      "ENGINEERING_ONLY_DEV_06": 0.00021834517385635861,
+      "ENGINEERING_ONLY_DEV_07": 0.0002183452292922288
+    },
+    "loso_range": [
+      0.00021834517385635861,
+      0.0002183452292922288
+    ],
+    "mean": 0.0002183452015742937,
+    "median": 0.0002183452015742937,
+    "n_scenes": 8,
+    "negative": 0,
+    "per_scene": {
+      "ENGINEERING_ONLY_DEV_00": 0.00021834539559983934,
+      "ENGINEERING_ONLY_DEV_01": 0.00021834500754874808,
+      "ENGINEERING_ONLY_DEV_02": 0.00021834539559983934,
+      "ENGINEERING_ONLY_DEV_03": 0.00021834500754874808,
+      "ENGINEERING_ONLY_DEV_04": 0.00021834539559983934,
+      "ENGINEERING_ONLY_DEV_05": 0.00021834500754874808,
+      "ENGINEERING_ONLY_DEV_06": 0.00021834539559983934,
+      "ENGINEERING_ONLY_DEV_07": 0.00021834500754874808
+    },
+    "positive": 8,
+    "positive_top1_contribution": 0.12500011107728967,
+    "positive_top3_contribution": 0.37500033323186904,
+    "tied": 0
+  }
+}

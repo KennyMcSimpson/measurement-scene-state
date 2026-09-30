@@ -1,0 +1,56 @@
+{
+  "bounds": "each V7 variant keeps its own rule; context-depth bounds from FRESH context depth only, before any state is sealed",
+  "checkpoints": "the sealed V7 per-seed DEV selections, unchanged",
+  "device": "cpu",
+  "estimator": "V7 Amendment 1: the frozen V2 estimator without its inapplicable C0/C1 ray-hit equality assertion",
+  "experiment": "EXP-3D-RGBD-FRESH-QUALIFICATION-V2",
+  "fresh_scene_count": 17,
+  "fresh_scene_ids": [
+    "ai_052_006",
+    "ai_015_006",
+    "ai_026_012",
+    "ai_022_007",
+    "ai_022_009",
+    "ai_044_010",
+    "ai_052_010",
+    "ai_031_007",
+    "ai_051_002",
+    "ai_044_005",
+    "ai_041_001",
+    "ai_041_009",
+    "ai_038_002",
+    "ai_019_003",
+    "ai_019_007",
+    "ai_051_003",
+    "ai_015_005"
+  ],
+  "fresh_volumes": {
+    "015": 2,
+    "019": 2,
+    "022": 2,
+    "026": 1,
+    "031": 1,
+    "038": 1,
+    "041": 2,
+    "044": 2,
+    "051": 2,
+    "052": 2
+  },
+  "num_threads": 1,
+  "primary_pair": [
+    "C0",
+    "C1"
+  ],
+  "seeds": [
+    20260928,
+    20260929,
+    20260930
+  ],
+  "training_run": false,
+  "v7_root": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7",
+  "variants": [
+    "C0",
+    "C1",
+    "C2"
+  ]
+}

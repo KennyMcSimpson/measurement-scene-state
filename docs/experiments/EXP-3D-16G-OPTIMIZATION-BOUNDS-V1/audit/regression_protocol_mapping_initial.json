@@ -1,0 +1,376 @@
+{
+  "coverage_summary": {
+    "API_boundary_not_full_adversarial_training_rerun": [
+      1
+    ],
+    "entire_requirements_without_any_test_evidence": [],
+    "explicit_partial_cross_bounds_regression": [
+      8
+    ],
+    "full_stateplan_identity_requires_postrun_integrity": [
+      9
+    ],
+    "temporal_freeze_requires_archive_evidence": [
+      6
+    ]
+  },
+  "created_utc": "2026-09-27T17:46:24.767195+00:00",
+  "mapped_test_file_sha256": {
+    "tests/test_budget_state_optimization.py": "2bfa70296334d2f611448ee9b2bfcc193b1429fa37c490a4735382bdfbe88b09",
+    "tests/test_direct_capacity_contracts.py": "fb869be2f41d81e133e16e04ebd1eb7fe33513fa938838298c5e4c8725677d49",
+    "tests/test_direct_capacity_optimization.py": "890a22577d9b70d3c088f3999c401e42dc2cb8f90fc0f6654f214dd5b6adfb53",
+    "tests/test_direct_capacity_statistics.py": "7d7790173a8b5e95271b5255e3847a6a6d4f5f0e7ce41ff1eabb5a9d9557de6c",
+    "tests/test_optimization_bounds_contracts.py": "f6ddc6bd905d1bbdb4a721339341dbeb94f97da6d6ba4305f348c000c17534f9",
+    "tests/test_optimization_bounds_evaluation.py": "ed487a8dd389852612a8e7a403d3d6a4de87d91eeac6a06b4542f2f7a073f6fc",
+    "tests/test_optimization_bounds_statistics.py": "ce2bf844bd1e817e20193dc68d2f63ff7ac10d425ca640bf02e4f8516d4b5502"
+  },
+  "metadata_only_no_source_changes": true,
+  "requirements": [
+    {
+      "coverage": "COVERED_API_ISOLATION",
+      "number": 1,
+      "requirement": "query GT cannot affect context-only optimization",
+      "scope_and_limits": "Context-only loaders deny query media and optimizer signature has no query inputs. No separate end-to-end rerun with adversarially changed query GT was added.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 85,
+          "node": "tests/test_direct_capacity_contracts.py::test_rgbd_reads_context_not_queries"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 59,
+          "node": "tests/test_direct_capacity_contracts.py::test_rgbonly_cannot_access_depth_and_has_no_query_metadata"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 171,
+          "node": "tests/test_direct_capacity_optimization.py::test_optimizer_has_no_query_or_checkpoint_api_and_no_carrier_import"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 2,
+      "requirement": "query camera unavailable before state seal",
+      "scope_and_limits": "Shared seal barrier and new all-budget evaluation enforce pre-query phase completion; tests verify no media access before all states are sealed.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 95,
+          "node": "tests/test_direct_capacity_contracts.py::test_all_planned_states_before_evaluator_and_immutable_multiquery_state"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 142,
+          "node": "tests/test_optimization_bounds_evaluation.py::test_phase_complete_required_before_media"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 164,
+          "node": "tests/test_optimization_bounds_evaluation.py::test_all_budget_states_sealed_and_wrong_donor_matched"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 3,
+      "requirement": "current-scene depth cannot enter GT-free bounds",
+      "scope_and_limits": "Poisoning current-scene depth/RGB metadata leaves bounds exactly unchanged; passing a depth keyword fails.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 30,
+          "node": "tests/test_optimization_bounds_contracts.py::test_bounds_ignore_current_scene_depth_and_query_camera"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 54,
+          "node": "tests/test_optimization_bounds_contracts.py::test_bounds_deterministic_and_camera_only_signature"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 4,
+      "requirement": "query camera cannot enter GT-free bounds",
+      "scope_and_limits": "Poisoned query poses/intrinsics are unused; query roles and query-camera keyword injection fail.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 30,
+          "node": "tests/test_optimization_bounds_contracts.py::test_bounds_ignore_current_scene_depth_and_query_camera"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 45,
+          "node": "tests/test_optimization_bounds_contracts.py::test_query_role_or_query_in_context_rejected"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 54,
+          "node": "tests/test_optimization_bounds_contracts.py::test_bounds_deterministic_and_camera_only_signature"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 5,
+      "requirement": "bounds deterministic from same context cameras/prior",
+      "scope_and_limits": "Repeated identical camera/prior input yields exactly equal bounds.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 54,
+          "node": "tests/test_optimization_bounds_contracts.py::test_bounds_deterministic_and_camera_only_signature"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED_RUNTIME_WITH_TEMPORAL_AUDIT",
+      "number": 6,
+      "requirement": "budget list frozen before formal run",
+      "scope_and_limits": "Tests reject changed or mutable budgets and unregistered raw budgets. Actual before-formal chronology is archival evidence from preregistration/config/budget lock, not established by a unit test alone.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 106,
+          "node": "tests/test_budget_state_optimization.py::test_formal_optimizer_and_budget_changes_are_forbidden"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 215,
+          "node": "tests/test_optimization_bounds_statistics.py::test_incomplete_or_unregistered_raw_fails_closed"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 7,
+      "requirement": "query metric cannot select optimization checkpoint",
+      "scope_and_limits": "Selection is independently recomputed from eligible context-objective checkpoints; query_score argument is rejected; fixed budget state equals stored snapshot.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 36,
+          "node": "tests/test_budget_state_optimization.py::test_single_trajectory_prefix_and_context_only_selection"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 148,
+          "node": "tests/test_direct_capacity_contracts.py::test_context_checkpoint_selection_fixed_intervals_full_context_no_query_score"
+        }
+      ]
+    },
+    {
+      "coverage": "PARTIAL_EXPLICIT_REGRESSION_COMMON_IMPLEMENTATION",
+      "number": 8,
+      "requirement": "optimizer/loss identical across bounds",
+      "scope_and_limits": "Frozen optimizer changes are rejected and the common 1000-step kernel matches prior implementation exactly; physical TV is independently tested. No dedicated two-bounds run test compares every optimizer/loss configuration field across the two bounds. Common immutable config, source hashes and plan/summary audit provide the complementary evidence.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 106,
+          "node": "tests/test_budget_state_optimization.py::test_formal_optimizer_and_budget_changes_are_forbidden"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 79,
+          "node": "tests/test_budget_state_optimization.py::test_1000_step_cpu_prefix_matches_previous_kernel_exactly"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 151,
+          "node": "tests/test_direct_capacity_optimization.py::test_regularization_uses_physical_derivative_and_mean_density"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED_LOGICAL_IDS_WITH_IDENTITY_AUDIT_LIMIT",
+      "number": 9,
+      "requirement": "state/query IDs identical across budgets",
+      "scope_and_limits": "Every synthetic budget state renders the same locked query IDs and matched donor role; statistics reject missing/changed query frames. Full raw state-key/hash equality against state_plan is outside current statistics validator and must be checked by postrun integrity audit.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 164,
+          "node": "tests/test_optimization_bounds_evaluation.py::test_all_budget_states_sealed_and_wrong_donor_matched"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 215,
+          "node": "tests/test_optimization_bounds_statistics.py::test_incomplete_or_unregistered_raw_fails_closed"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 10,
+      "requirement": "query oracle marked privileged diagnostic",
+      "scope_and_limits": "Explicit oracle scope is required, both scored queries share a single state and oracle results use a separate diagnostic block.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 121,
+          "node": "tests/test_direct_capacity_contracts.py::test_query_oracle_requires_explicit_privileged_interface"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 213,
+          "node": "tests/test_optimization_bounds_evaluation.py::test_oracle_shares_both_queries_and_has_no_wrong_scene"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 192,
+          "node": "tests/test_optimization_bounds_statistics.py::test_raw_reproduction_scene_unit_primary_and_readiness"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 11,
+      "requirement": "final holdout loader disabled",
+      "scope_and_limits": "All context/evaluator/oracle loaders reject protected scene identities before access, and raw analysis rejects protected scenes.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 134,
+          "node": "tests/test_direct_capacity_contracts.py::test_holdout_denied_before_any_media_or_optimization"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 223,
+          "node": "tests/test_optimization_bounds_evaluation.py::test_holdout_guard_rejects_before_source_or_media_access"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 215,
+          "node": "tests/test_optimization_bounds_statistics.py::test_incomplete_or_unregistered_raw_fails_closed"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED_REUSED_STATISTICAL_KERNEL",
+      "number": 12,
+      "requirement": "scene bootstrap resamples scenes only",
+      "scope_and_limits": "Unequal role observation counts remain role-equal; independent bootstrap construction matches and paired offsets have zero-width expected CI. New analysis reports four scene units in a multi-query synthetic fixture.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 86,
+          "node": "tests/test_direct_capacity_statistics.py::test_scene_unit_not_query_or_role_count"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 98,
+          "node": "tests/test_direct_capacity_statistics.py::test_paired_scene_resampling_preserves_covariance"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 192,
+          "node": "tests/test_optimization_bounds_statistics.py::test_raw_reproduction_scene_unit_primary_and_readiness"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 13,
+      "requirement": "raw to statistics deterministic",
+      "scope_and_limits": "JSON round-trip and plain versus gzip archive CLI reproduction yield exactly equal full analysis artifacts.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 192,
+          "node": "tests/test_optimization_bounds_statistics.py::test_raw_reproduction_scene_unit_primary_and_readiness"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 284,
+          "node": "tests/test_optimization_bounds_statistics.py::test_cli_plain_and_compressed_archive_exact_reproduction"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED",
+      "number": 14,
+      "requirement": "16-cubed state semantics identical to previous experiment",
+      "scope_and_limits": "At grid 16 the optimized state hash and checkpoint objective components exactly match the prior 1000-step kernel; state has only density/color learned fields and fixed auxiliary fields.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 79,
+          "node": "tests/test_budget_state_optimization.py::test_1000_step_cpu_prefix_matches_previous_kernel_exactly"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 135,
+          "node": "tests/test_direct_capacity_optimization.py::test_state_parameters_are_only_density_and_color"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 151,
+          "node": "tests/test_direct_capacity_optimization.py::test_regularization_uses_physical_derivative_and_mean_density"
+        }
+      ]
+    },
+    {
+      "coverage": "COVERED_KERNEL_AND_EVALUATOR",
+      "number": 15,
+      "requirement": "renderer remains 64 samples",
+      "scope_and_limits": "New trajectory matches prior explicitly 64-sample renderer; reused tests independently verify cached rays against full forward at 64 samples. Frozen renderer source/config and evaluator guards complement tests; no new sample-count sweep is run.",
+      "tests": [
+        {
+          "included_in_complete_suite": true,
+          "line": 79,
+          "node": "tests/test_budget_state_optimization.py::test_1000_step_cpu_prefix_matches_previous_kernel_exactly"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 46,
+          "node": "tests/test_direct_capacity_optimization.py::test_cached_selected_rays_match_full_predictions_and_parameter_gradients"
+        },
+        {
+          "included_in_complete_suite": true,
+          "line": 164,
+          "node": "tests/test_optimization_bounds_evaluation.py::test_all_budget_states_sealed_and_wrong_donor_matched"
+        }
+      ]
+    }
+  ],
+  "schema": "regression_protocol_mapping.v1",
+  "statistics_state_plan_validation": {
+    "complete_stateplan_validation": false,
+    "consequence": "Statistical computation validates the scientific comparison matrix, not complete artifact identity. A self-consistent metadata rewrite or corrupted identity/hash field can escape statistics checks. Immutable raw hashes and independent postrun state/plan/seal audit are required. This limitation does not itself establish that any produced raw was corrupted.",
+    "frozen_implementation_modified": false,
+    "not_validated": [
+      "raw key/chain_key/state_path against every corresponding planned state",
+      "raw used_state_hash/query_camera_hash against sealed evaluator records",
+      "bounds tensor contents or prediction hashes against planned state artifacts",
+      "aggregate inner spec equality against the corresponding planned chain record"
+    ],
+    "validated": [
+      "scene allowlist and protected exclusion",
+      "registered bounds/budget/selection/track matrix",
+      "grid16 and samples64",
+      "per-role query and context frame sets against manifest",
+      "scene-equal method coverage and A/B or joint-query roles",
+      "trajectory spec tuple set equals direct-result spec tuple set",
+      "archive top-level chain key set against planned chains"
+    ]
+  },
+  "suite_evidence": {
+    "all_mapped_tests_passed": "All were collected by the unfiltered full suite; the sole skipped test is the unrelated optional historical V5 checkpoint test.",
+    "command": ".venv/bin/pytest -q",
+    "failed": 0,
+    "full_log": "outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/full_pytest.log",
+    "full_log_sha256": "9e328d8a5c48ea03618f79776e5c11daf46e7c61fec3f272b52f48107249191b",
+    "passed": 752,
+    "seconds": 40.28,
+    "skip_reasons": [
+      "SKIPPED [1] tests/test_v5_checkpoint_compatibility.py:15: Optional historical V5 step-4500 checkpoint is not distributed in the public repository; restore the original checkpoint to run strict compatibility checks"
+    ],
+    "skipped": 1,
+    "tests_json_sha256": "7832be7cf5ebb5890558f1f00b047629563810e1277fb322082a6bdeb07380b1"
+  },
+  "user_requirements_count": 15
+}

@@ -1,0 +1,26 @@
+{
+  "old": {
+    "DYNAMIC_TTT_RUN": false,
+    "PREVIOUS_DEPTH_METRIC_INVALID": false,
+    "checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+    "depth_roundtrip_max": 3.552713678800501e-15,
+    "geometry_frame": "anchor camera coordinates for volume; explicit world coordinates retained for candidate audit",
+    "manifest_sha256": "50a51f0ac7a327481586769f47f0afa3a61db9727716cda701a47a2d4233c38a",
+    "model_predictions_read": false,
+    "projection_roundtrip_max": 1.1655265477752753e-11,
+    "seed": 20260927,
+    "semantics": "GT and renderer use metric normalized-ray parameter. Renderer depth is UNCONDITIONAL sum(weights*t), not opacity-normalized; low opacity is a measurement bottleneck, not ray/z conversion bug."
+  },
+  "unseen": {
+    "DYNAMIC_TTT_RUN": false,
+    "PREVIOUS_DEPTH_METRIC_INVALID": false,
+    "checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+    "depth_roundtrip_max": 1.4210854715202004e-14,
+    "geometry_frame": "anchor camera coordinates for volume; explicit world coordinates retained for candidate audit",
+    "manifest_sha256": "91e4200e42425538b7dd46c091be800290fd148d1426dde7246768bc0347a7c8",
+    "model_predictions_read": false,
+    "projection_roundtrip_max": 1.193902104853957e-12,
+    "seed": 20260927,
+    "semantics": "GT and renderer use metric normalized-ray parameter. Renderer depth is UNCONDITIONAL sum(weights*t), not opacity-normalized; low opacity is a measurement bottleneck, not ray/z conversion bug."
+  }
+}

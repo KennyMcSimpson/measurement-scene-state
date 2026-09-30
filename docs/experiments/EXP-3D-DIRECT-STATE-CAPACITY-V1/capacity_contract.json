@@ -1,0 +1,26 @@
+{
+  "CURRENT_BOUNDS": [
+    [
+      -6,
+      -4,
+      -6
+    ],
+    [
+      6,
+      4,
+      6
+    ]
+  ],
+  "alternative_bounds_file": "predeclared_geometry_bounds.json",
+  "direct_fields": [
+    "density logits",
+    "RGB color logits"
+  ],
+  "draft": false,
+  "final_holdout_access": false,
+  "n_scenes": 17,
+  "no_carrier_training": true,
+  "no_support_redesign": true,
+  "role": "CAPACITY_DEV_EXPOSED attribution only",
+  "freeze_basis": "preregistration.json"
+}

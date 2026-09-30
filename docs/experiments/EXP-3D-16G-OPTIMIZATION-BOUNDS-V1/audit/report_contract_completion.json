@@ -1,0 +1,21 @@
+{
+  "CONTEXT_INFERENCE_BOTTLENECK": true,
+  "REPRESENTATION_OR_BOUNDS_BOTTLENECK": false,
+  "context_engineering_good": false,
+  "cost_scope": "Primary119 cumulative worker seconds separate from secondary34 and combined153; wall times reported separately; no prefix double counting",
+  "decision_rules_sha256": "3966e4c262dc0c538253eea3c79120689248adcac872fa9b6024029f35669e8b",
+  "diagnostic_scope": "Report-only derived flags; not exclusive causal attribution; no frozen statistics, thresholds or primary decision changed",
+  "engineering_thresholds": {
+    "mean_absrel_max": 0.25,
+    "scene_absrel_max": 0.35,
+    "scene_fraction_min": 0.75
+  },
+  "oracle_engineering_good": true,
+  "oracle_scene_count": 17,
+  "oracle_scene_good_count": 15,
+  "primary_key": "RGBD|FROZEN_GT_FREE_BOUNDS|b10000|FIXED_BUDGET|direct",
+  "report_source_sha256": "a027474c4fc1f37dfdbd9a865095711b0b3204840ab8bea0acdfba038cbde1e3",
+  "request_source": "User protocol section 24: poor context-direct with good query oracle => context inference diagnostic; both poor => representation/bounds candidate diagnostic",
+  "secondary_cost_included": true,
+  "status": "PASS"
+}

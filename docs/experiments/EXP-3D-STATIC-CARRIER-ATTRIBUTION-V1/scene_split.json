@@ -1,0 +1,316 @@
+{
+  "TRAIN_SCENE_SET": [
+    "ai_001_001",
+    "ai_002_001",
+    "ai_003_001"
+  ],
+  "UNSEEN_DEV_SCENE_SET": [
+    "ai_004_001",
+    "ai_006_001",
+    "ai_007_002",
+    "ai_008_001",
+    "ai_009_001",
+    "ai_010_001",
+    "ai_011_001"
+  ],
+  "candidate_lock": {
+    "assets": {
+      "ai_001_001": {
+        "archive_file": "AI1_001.rar",
+        "asset_file": "01",
+        "name": "ai_001_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_002_001": {
+        "archive_file": "AI2_001.rar",
+        "asset_file": "001",
+        "name": "ai_002_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_003_001": {
+        "archive_file": "AI3_01.rar",
+        "asset_file": "01",
+        "name": "ai_003_001",
+        "normalization_policy": "v1",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_004_001": {
+        "archive_file": "AI4_001.rar",
+        "asset_file": "001",
+        "name": "ai_004_001",
+        "normalization_policy": "v1",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_005_003": {
+        "archive_file": "AI5_003.rar",
+        "asset_file": "SCENE 03",
+        "name": "ai_005_003",
+        "normalization_policy": "v2",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_006_001": {
+        "archive_file": "AI6_001.rar",
+        "asset_file": "001",
+        "name": "ai_006_001",
+        "normalization_policy": "v1",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_007_002": {
+        "archive_file": "AI7_02.RAR",
+        "asset_file": "02",
+        "name": "ai_007_002",
+        "normalization_policy": "v2",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_008_001": {
+        "archive_file": "AI8_01.rar",
+        "asset_file": "01",
+        "name": "ai_008_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_009_001": {
+        "archive_file": "AI9_SCENE 01.rar",
+        "asset_file": "SCENE 01",
+        "name": "ai_009_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_010_001": {
+        "archive_file": "AI10_001.RAR",
+        "asset_file": "001",
+        "name": "ai_010_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_011_001": {
+        "archive_file": "AI11_01.rar",
+        "asset_file": "01",
+        "name": "ai_011_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      }
+    },
+    "candidate_scene_ids": [
+      "ai_004_001",
+      "ai_005_003",
+      "ai_006_001",
+      "ai_007_002",
+      "ai_008_001",
+      "ai_009_001",
+      "ai_010_001",
+      "ai_011_001"
+    ],
+    "checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+    "created_unix": 1790490512.497612,
+    "data_budget_bytes": 2147483648,
+    "model_predictions_read": false,
+    "physical_identity_limit": "Distinct official volume/archive/asset identities; vendor cross-asset content reuse cannot be independently ruled out.",
+    "previously_observed": {
+      "ai_004_001": "False",
+      "ai_005_003": "False",
+      "ai_006_001": "False",
+      "ai_007_002": "True",
+      "ai_008_001": "False",
+      "ai_009_001": "False",
+      "ai_010_001": "False",
+      "ai_011_001": "False"
+    },
+    "quality_rule": "finite RGB, >99.9 percent pixels all channels <=2/255 rejected; finite positive native depth fraction >=0.95; no scores",
+    "role_rule": "first quality frame anchor, last two quality frames queries; enumerate disjoint pairs from remaining frames. Maximize min(A_support,B_support), minimize support gap, then mean baseline gap, then lex frame IDs. At least 7 quality frames; each context >=2 supported candidates. This minimum is not a quality proof.",
+    "schema": "mcss.unseen_static.candidates.v1",
+    "selection": "lexicographic first eligible protocol-train cam00 non-BAD scene from each distinct untrained asset volume; 8 fixed candidates, no replacement",
+    "source_sha256": {
+      "configs/hypersim_er_partitions.csv": "9e3ad012f92e8eeb981c95b071041becfb033a23c7c2d31c532564f635c0d0b1",
+      "outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/summary.json": "72d852c47eea2dfdbf2c68740f55c44bd880ccc16eb1694063c7ecd440b6448b",
+      "outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/training.jsonl": "4de2c411fe832b1555b5e313ea235bd6db85b468c5297132a909b3d83a77c1d5",
+      "outputs/EXP-3D-20260927-small-training-v1/data/manifest.json": "50a51f0ac7a327481586769f47f0afa3a61db9727716cda701a47a2d4233c38a",
+      "outputs/EXP-3D-20260927-training-preparation-v1/metadata/metadata_camera_parameters.csv": "0b40e0884ba2458e7bdcdbb27de46a4ec6eacbfbbb4ef0d70188d78098cebdc9",
+      "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/metadata/upstream_dataset_config.py": "b51c437a420ce566c0b3be18de3c3e61754ad33d677556a45b2095c36fb5845b",
+      "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/rgb_audit/official_metadata/metadata_camera_trajectories.csv": "cba47312efd3d63e9f8f8164fb634cf57faa5fa7a905368174d1e6c7bc625e4f",
+      "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/rgb_audit/official_metadata/metadata_images_split_scene_v1.csv": "47b7cce12f4659ffa31cf05e8fbf2aee3d69e1929d07b5ea25506603b69d5ce6"
+    },
+    "train_scene_ids": [
+      "ai_001_001",
+      "ai_002_001",
+      "ai_003_001"
+    ],
+    "upstream_url": "https://github.com/apple/ml-hypersim/blob/main/code/python/_system_config.py"
+  },
+  "qualification_split": "Research dev drawn only from official and repository train; never checkpoint training. Existing protected/test/official validation not opened.",
+  "roles": {
+    "N_UNSEEN_DEV_SCENES": 7,
+    "UNSEEN_DEV_STATUS": "READY",
+    "created_unix": 1790490593.6677082,
+    "manifest_sha256": "91e4200e42425538b7dd46c091be800290fd148d1426dde7246768bc0347a7c8",
+    "roles": {
+      "ai_004_001": {
+        "context_a": [
+          0,
+          1,
+          2
+        ],
+        "context_b": [
+          0,
+          3,
+          10
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_006_001": {
+        "context_a": [
+          0,
+          4,
+          12
+        ],
+        "context_b": [
+          0,
+          8,
+          11
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_007_002": {
+        "context_a": [
+          0,
+          6,
+          9
+        ],
+        "context_b": [
+          0,
+          8,
+          11
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_008_001": {
+        "context_a": [
+          0,
+          4,
+          5
+        ],
+        "context_b": [
+          0,
+          6,
+          8
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_009_001": {
+        "context_a": [
+          0,
+          1,
+          2
+        ],
+        "context_b": [
+          0,
+          3,
+          5
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_010_001": {
+        "context_a": [
+          0,
+          7,
+          10
+        ],
+        "context_b": [
+          0,
+          8,
+          11
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_011_001": {
+        "context_a": [
+          0,
+          2,
+          3
+        ],
+        "context_b": [
+          0,
+          8,
+          10
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      }
+    }
+  }
+}

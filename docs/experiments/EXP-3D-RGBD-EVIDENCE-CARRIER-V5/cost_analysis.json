@@ -1,0 +1,31 @@
+{
+  "cost_interpretation": "training wall includes DEV selection and checkpoint IO; step seconds separate; surface/free-space losses are training-only",
+  "gpu_shared": true,
+  "inference_architecture_identical": true,
+  "variants": {
+    "C0": {
+      "checkpoint_bytes": 480639,
+      "inference_seconds_per_state": 0.010713430874602636,
+      "peak_cuda_allocated_bytes": 121444352,
+      "renderer_seconds_per_query": 0.006141797750387923,
+      "seconds_per_training_step": 0.7765199512169638,
+      "training_seconds": 5280.8763884180225
+    },
+    "C1": {
+      "checkpoint_bytes": 482373,
+      "inference_seconds_per_state": 0.008017989101062994,
+      "peak_cuda_allocated_bytes": 122172416,
+      "renderer_seconds_per_query": 0.006154143006521433,
+      "seconds_per_training_step": 0.8907976310135564,
+      "training_seconds": 5989.4787718961015
+    },
+    "C2": {
+      "checkpoint_bytes": 482373,
+      "inference_seconds_per_state": 0.008074507627801117,
+      "peak_cuda_allocated_bytes": 118854656,
+      "renderer_seconds_per_query": 0.006199263717765764,
+      "seconds_per_training_step": 0.8873192318055177,
+      "training_seconds": 5968.799152742955
+    }
+  }
+}

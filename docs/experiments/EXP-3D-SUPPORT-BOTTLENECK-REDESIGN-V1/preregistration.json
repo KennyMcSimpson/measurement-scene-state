@@ -1,0 +1,111 @@
+{
+  "experiment": "EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1",
+  "created_utc": "2026-09-27T15:47:13.611230+00:00",
+  "checkpoint": "outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/phase_b_final.pt",
+  "checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+  "dynamic_ttt_run": false,
+  "training_carrier_during_oracle": false,
+  "old_exposed_scenes": [
+    "ai_004_001",
+    "ai_006_001",
+    "ai_007_002",
+    "ai_008_001",
+    "ai_009_001",
+    "ai_010_001",
+    "ai_011_001"
+  ],
+  "new_cohort_plan": {
+    "target_each": 12,
+    "minimum_each": 8,
+    "pool": "official-train AND research-train, included cam00 nonBAD; exclude all previous001..011source volumes",
+    "selection": "lexicographic first eligible scene per distinct official source volume, first24 then alternate DEV/HOLDOUT; fixed candidates no replacement",
+    "data_only_access": [
+      "metadata",
+      "RGB validity",
+      "depth validity",
+      "camera validity",
+      "asset identity",
+      "geometry feasibility"
+    ],
+    "quality": "inherit previous predeclared finite RGB/depth>=.95, nearblack pixels(allchannels<=2/255)<=.999, nativeposition p95<=.01m",
+    "roles": "same camera-only max min A/B two-view count, support balance then baseline balance then lex IDs; firstvalid anchor,last2valid query; disjoint3frame contexts; at least2 supportedcandidates each; no model scores",
+    "holdout": "NO baseline/oracle/carrier before method-lock and devgate; no replacement; new labels onlydata-prep admissibility until qualified"
+  },
+  "architecture": {
+    "grid_size": [
+      8,
+      8,
+      8
+    ],
+    "candidate_count": 128,
+    "renderer_samples": 64,
+    "weights": "frozen current B-final",
+    "changed_factors": "bounds and/or candidate IDs only in oracle; no network/renderer/loss/steps changes"
+  },
+  "oracle": {
+    "methods": [
+      "R0",
+      "ORACLE_VOLUME",
+      "ORACLE_SUPPORT",
+      "ORACLE_VOLUME_SUPPORT"
+    ],
+    "volume": "enclose union of all primary-query valid GT surface points in anchor frame, per-axis min extent1m and 5% padding; same query-derived bounds for A/B/anchor; all128cell fractions retained for volume-only",
+    "allocation": "select128 unique voxel centers from512grid, percontext prioritize>=2camera frustum support, then proximity to observed GT surfaces, then view count, then voxel ID; no duplicate scatter IDs; same128 budget and allgeometrybuffers synchronized",
+    "surface_distance": "nearest valid contextGT surface point; deterministic full prepared128x160 valid surfaces, no scoring",
+    "oracle_labels": "GT geometry read PRESEAL in explicit DIAGNOSTIC_ORACLE channel; this intentionally query-conditioned bound is prohibited from any deployable/holdout path. EVALUATION queryRGB/depth only after ALL states sealed. Never claim oracle query-independent.",
+    "limitation": "This is a best-support diagnostic within the frozen512voxel lattice, NOT a mathematical upper bound or perfect arbitrary surface representation. Insufficient lattice coverage reported as limitation."
+  },
+  "statistics": {
+    "unit": "query mean then equal scene mean",
+    "draws": 10000,
+    "seed": 20260927,
+    "CI": "95% percentile paired",
+    "primary_gain": "anchor AbsRel - mean(A,B)AbsRel",
+    "wrongscene_damage": "cyclic donor A error - correct A error at unchanged target querycamera, within each exposed/newdev cohort",
+    "strata": [
+      "exposed",
+      "new_dev",
+      "pooled_development"
+    ],
+    "concentration": "positive contribution top1/top3 shares plus absolute shares; counts tolerance1e-8; LOSO; descriptive support-task Pearson correlation"
+  },
+  "oracle_stop": {
+    "criterion": "combined ORACLE_VOLUME_SUPPORT must have pooled gain CI lower>0 AND new_dev mean gain>0 to continue; otherwise supportalone fails stable-recovery criterion, stop GT-free executions and matched retraining, holdout stays closed",
+    "outputs_on_stop": {
+      "SUPPORT_BOTTLENECK_SUFFICIENT_EXPLANATION": false,
+      "CARRIER_REPRESENTATION_OR_TRAINING_BOTTLENECK": true
+    },
+    "limits": "These booleans are scoped to frozen architecture/lattice and registered diagnostic; cannot establish impossibility of every oracle/support mechanism."
+  },
+  "deployable_preplan": {
+    "R0": "unchanged",
+    "R1": "context-frustum union AABB with train-only global .01/.99 raydepth quantiles,5%padding,min1m, candidate fractions unchanged",
+    "R2": "fixed oldbounds512centers sorted >=2frusta count descending then ID;128unique;noGTdepth",
+    "R3": "camera-only selection from already-arrived prequery frames; sharedanchor and3frames each; maximize minimum two-view fraction then meanbaseline thenlex; noGT/model inputs",
+    "R12": "R1+R2 only afterindividual",
+    "R123": "R1+R2+R3 only afterindividual",
+    "runtime_only_claim": false,
+    "all_support_changes": "training-distribution-coupled; frozen results diagnostics only; matchedretraining necessary forfairmethod qualification"
+  },
+  "dev_gate": {
+    "full_gain_mean_gt": 0,
+    "bootstrap_lower_gt": 0,
+    "nonworse_scene_fraction_atleast": 0.75,
+    "wrongscene_mean_gt": 0,
+    "support_volume_failures": "atleast25% relative reduction in deficientqueryfraction(insideGT<.5 orsupportneighborhood<.1)",
+    "concentration": "top1 positive contribution<=.5 and everyLOSO gain>0",
+    "finalselection": "eligible matched model with highest newdev mean fullgain; tie fewerchangedfactors then methodname; freezeallbeforeholdout"
+  },
+  "matched_training_if_eligible": {
+    "same_three_original_train_scenes": true,
+    "ai003_retained": true,
+    "seed_list": [
+      20260927
+    ],
+    "total_steps": 1600,
+    "stages": "same1000A+600B supervisedtraining pipeline; no onlineDynamicTTT evaluation ornewwritetuning",
+    "optimizer_loss_selection": "exact original training settings and fixed finalstep forbothcurrent/redesigned; onlysupportmethod differs",
+    "scale_up": "not pre-authorized withinmaincomparison; optionalseparatefactor onlyifnecessary andseparateversion"
+  },
+  "holdout_lock": "only afterdevgate; one atomicclaim; anypostholdoutchanges forbidden"
+}

@@ -1,0 +1,30 @@
+{
+  "bounds_rule": "CONTEXT_DEPTH (the V7 C1 rule, from the warmup context only)",
+  "carriers": {
+    "20260928": {
+      "carrier_trainable_parameters": 0,
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/checkpoints/C1_20260928/step_002000.pt",
+      "sha256": "98b614b7bb11a444c87724a43d83c9f270f889bc985cf689b6726230bab0eb70",
+      "step": 2000,
+      "write_rule_parameters": 528
+    },
+    "20260929": {
+      "carrier_trainable_parameters": 0,
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/checkpoints/C1_20260929/step_002000.pt",
+      "sha256": "ee04457f32209147a119293fbcbbf8ac6040f54ccecbd54536253bf7f28f5662",
+      "step": 2000,
+      "write_rule_parameters": 528
+    },
+    "20260930": {
+      "carrier_trainable_parameters": 0,
+      "path": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/checkpoints/C1_20260930/step_002000.pt",
+      "sha256": "60b6b5b177af1738febca000cef6c02d3ea76b8999816e2daeb268ae82ca76b8",
+      "step": 2000,
+      "write_rule_parameters": 528
+    }
+  },
+  "qualification_results_sha256": "1a366785e3cd3d8f2fde4bd68d18d10d6df87d2faf80cd7cabd0b0aefab3e9d3",
+  "slow_carrier_updated": false,
+  "source": "sealed V7 C1 per-seed DEV selections (Core A, QUALIFIED on FRESH-V2)",
+  "v7_preregistration_sha256": "c1299faaa49a88f0a4597b9d3e68f0d8fdc567c28ef6397af708ad7c95b669a2"
+}

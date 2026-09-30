@@ -1,0 +1,16 @@
+{
+  "background_rgb": 0,
+  "coordinate": "anchor OpenCV xyz",
+  "depth": "unconditional sum(weights*metric_normalized_ray_t), no opacity normalization",
+  "draft": false,
+  "image_size": [
+    128,
+    160
+  ],
+  "primary_samples": 64,
+  "ray_chunk_size": 2048,
+  "renderer": "FixedMeasurementRenderer unchanged",
+  "secondary_samples": 128,
+  "source_sha256": "2d4f4bec2b1fb52aa0faf12dea44e04db1d56bfabbc73ea3460d90b21e518783",
+  "freeze_basis": "preregistration.json"
+}

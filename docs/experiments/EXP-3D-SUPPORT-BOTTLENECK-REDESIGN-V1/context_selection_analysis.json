@@ -1,0 +1,758 @@
+{
+  "R3_available_as_geometry_prototype": true,
+  "R3_execution_on_real_scenes": false,
+  "frozen_current_roles": {
+    "DATA_COHORT_STATUS": "READY",
+    "FINAL_HOLDOUT_PROTECTED": true,
+    "FINAL_HOLDOUT_SCENES": [
+      "ai_013_001",
+      "ai_015_003",
+      "ai_017_001",
+      "ai_019_001",
+      "ai_022_002",
+      "ai_024_001",
+      "ai_027_001",
+      "ai_029_001",
+      "ai_031_001",
+      "ai_033_001",
+      "ai_035_002",
+      "ai_037_001"
+    ],
+    "REDESIGN_DEV_EXPOSED": [
+      "ai_004_001",
+      "ai_006_001",
+      "ai_007_002",
+      "ai_008_001",
+      "ai_009_001",
+      "ai_010_001",
+      "ai_011_001"
+    ],
+    "REDESIGN_DEV_SCENES": [
+      "ai_012_001",
+      "ai_014_003",
+      "ai_016_002",
+      "ai_018_002",
+      "ai_021_002",
+      "ai_023_001",
+      "ai_026_001",
+      "ai_028_001",
+      "ai_030_002",
+      "ai_032_001",
+      "ai_034_001",
+      "ai_036_001"
+    ],
+    "TRAIN_SCENES": [
+      "ai_001_001",
+      "ai_002_001",
+      "ai_003_001"
+    ],
+    "candidate_lock_sha256": "eb9f5aa9ecdaf22f8866ba8f2efd5c6f48c6a2f86ca3ad5bf8962484753d80ee",
+    "created_unix": 1790524264.9418395,
+    "dataset_hashes_sha256": "c8841461c4360e2ac1818c6fc38633cdf604ded651170fcbc00303fd2cabbc59",
+    "eligible_final_holdout": [
+      "ai_017_001",
+      "ai_019_001",
+      "ai_022_002",
+      "ai_027_001",
+      "ai_031_001",
+      "ai_033_001",
+      "ai_035_002",
+      "ai_037_001"
+    ],
+    "eligible_redesign_dev": [
+      "ai_012_001",
+      "ai_014_003",
+      "ai_016_002",
+      "ai_018_002",
+      "ai_021_002",
+      "ai_028_001",
+      "ai_030_002",
+      "ai_032_001",
+      "ai_034_001",
+      "ai_036_001"
+    ],
+    "holdout_inference_requires": "qualified dev gate AND frozen method lock",
+    "initial_scene_role_lock_sha256": "07eaeac318ef61da03a1157e69c2dd63e3845f084b98e6447cf3d80a0926f758",
+    "manifest_hashes": {
+      "dev_manifest.json": "4b58378b12724ad0e631dc3d8251293be0eb1ff9fa767a3ce95a1194a7b03f92",
+      "holdout_manifest.json": "47ccc50bb369451583ba0e388f33d83359dba2c5fbd614bdce5a99b8ec26b10b"
+    },
+    "manifest_sha256": "095406a608e35ff651c9530ac501d80153992c2975dc4ad71403623613e544a4",
+    "model_predictions_read": false,
+    "roles": {
+      "ai_012_001": {
+        "context_a": [
+          0,
+          1,
+          9
+        ],
+        "context_b": [
+          0,
+          3,
+          4
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_014_003": {
+        "context_a": [
+          0,
+          3,
+          7
+        ],
+        "context_b": [
+          0,
+          4,
+          5
+        ],
+        "primary_query": [
+          12,
+          13
+        ],
+        "query": [
+          12,
+          13
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_016_002": {
+        "context_a": [
+          0,
+          3,
+          10
+        ],
+        "context_b": [
+          0,
+          4,
+          9
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_017_001": {
+        "context_a": [
+          0,
+          8,
+          10
+        ],
+        "context_b": [
+          0,
+          11,
+          12
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_018_002": {
+        "context_a": [
+          0,
+          1,
+          7
+        ],
+        "context_b": [
+          0,
+          6,
+          8
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_019_001": {
+        "context_a": [
+          0,
+          2,
+          8
+        ],
+        "context_b": [
+          0,
+          3,
+          6
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_021_002": {
+        "context_a": [
+          0,
+          6,
+          7
+        ],
+        "context_b": [
+          0,
+          12,
+          13
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_022_002": {
+        "context_a": [
+          0,
+          8,
+          12
+        ],
+        "context_b": [
+          0,
+          9,
+          13
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_027_001": {
+        "context_a": [
+          0,
+          5,
+          6
+        ],
+        "context_b": [
+          0,
+          8,
+          12
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_028_001": {
+        "context_a": [
+          0,
+          4,
+          5
+        ],
+        "context_b": [
+          0,
+          8,
+          13
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_030_002": {
+        "context_a": [
+          0,
+          1,
+          5
+        ],
+        "context_b": [
+          0,
+          2,
+          3
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_031_001": {
+        "context_a": [
+          0,
+          4,
+          5
+        ],
+        "context_b": [
+          0,
+          6,
+          7
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_032_001": {
+        "context_a": [
+          0,
+          3,
+          9
+        ],
+        "context_b": [
+          0,
+          4,
+          5
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_033_001": {
+        "context_a": [
+          0,
+          1,
+          6
+        ],
+        "context_b": [
+          0,
+          5,
+          7
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_034_001": {
+        "context_a": [
+          0,
+          5,
+          6
+        ],
+        "context_b": [
+          0,
+          9,
+          12
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_035_002": {
+        "context_a": [
+          0,
+          4,
+          5
+        ],
+        "context_b": [
+          0,
+          7,
+          8
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_036_001": {
+        "context_a": [
+          0,
+          2,
+          3
+        ],
+        "context_b": [
+          0,
+          4,
+          5
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "ai_037_001": {
+        "context_a": [
+          0,
+          3,
+          7
+        ],
+        "context_b": [
+          0,
+          5,
+          12
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      }
+    },
+    "source_assets": {
+      "ai_001_001": {
+        "archive_file": "AI1_001.rar",
+        "asset_file": "01",
+        "name": "ai_001_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_002_001": {
+        "archive_file": "AI2_001.rar",
+        "asset_file": "001",
+        "name": "ai_002_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_003_001": {
+        "archive_file": "AI3_01.rar",
+        "asset_file": "01",
+        "name": "ai_003_001",
+        "normalization_policy": "v1",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_004_001": {
+        "archive_file": "AI4_001.rar",
+        "asset_file": "001",
+        "name": "ai_004_001",
+        "normalization_policy": "v1",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_006_001": {
+        "archive_file": "AI6_001.rar",
+        "asset_file": "001",
+        "name": "ai_006_001",
+        "normalization_policy": "v1",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_007_002": {
+        "archive_file": "AI7_02.RAR",
+        "asset_file": "02",
+        "name": "ai_007_002",
+        "normalization_policy": "v2",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_008_001": {
+        "archive_file": "AI8_01.rar",
+        "asset_file": "01",
+        "name": "ai_008_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_009_001": {
+        "archive_file": "AI9_SCENE 01.rar",
+        "asset_file": "SCENE 01",
+        "name": "ai_009_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_010_001": {
+        "archive_file": "AI10_001.RAR",
+        "asset_file": "001",
+        "name": "ai_010_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_011_001": {
+        "archive_file": "AI11_01.rar",
+        "asset_file": "01",
+        "name": "ai_011_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_012_001": {
+        "archive_file": "archinteriors_vol_012_scene_001.rar",
+        "asset_file": "ArchInteriors_12_01/ArchInteriors_12_01",
+        "name": "ai_012_001",
+        "normalization_policy": "v2",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_013_001": {
+        "archive_file": "archinteriors_vol13_01.rar",
+        "asset_file": "archinteriors_vol13_01/001",
+        "name": "ai_013_001",
+        "normalization_policy": "v2",
+        "scene_extent_meters": 500.0,
+        "voxel_extent_meters": 1.0
+      },
+      "ai_014_003": {
+        "archive_file": "archinteriors_vol_014_scene_003.rar",
+        "asset_file": "ArchInteriors_14_03/Archinteriors_14_03",
+        "name": "ai_014_003",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_015_003": {
+        "archive_file": "archinteriors_vol_015_scene_003.rar",
+        "asset_file": "003/archinteriors15_3",
+        "name": "ai_015_003",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_016_002": {
+        "archive_file": "archinteriors_vol_016_scene_002.rar",
+        "asset_file": "02/archinteriors16_2",
+        "name": "ai_016_002",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_017_001": {
+        "archive_file": "archinteriors_vol_017_scene_001.rar",
+        "asset_file": "archinteriors_vol_017_scene_001/Archinteriors_17_01",
+        "name": "ai_017_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_018_002": {
+        "archive_file": "Archinteriors_vol_18_002.rar",
+        "asset_file": "002/002",
+        "name": "ai_018_002",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_019_001": {
+        "archive_file": "Archinteriors_19_001.rar",
+        "asset_file": "001/AI19_001",
+        "name": "ai_019_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_021_002": {
+        "archive_file": "Archinteriors_21_02.rar",
+        "asset_file": "02/02",
+        "name": "ai_021_002",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_022_002": {
+        "archive_file": "Archinteriors_22_02.rar",
+        "asset_file": "02/02",
+        "name": "ai_022_002",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_023_001": {
+        "archive_file": "Archinteriors_23_01.part1.rar",
+        "asset_file": "01/01",
+        "name": "ai_023_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_024_001": {
+        "archive_file": "Archinteriors24_001.rar",
+        "asset_file": "001/Archinteriors_24_hall_001",
+        "name": "ai_024_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 50.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_026_001": {
+        "archive_file": "Archinteriors_26_1.rar",
+        "asset_file": "Archinteriors_26_1/Archinteriors_26_001",
+        "name": "ai_026_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_027_001": {
+        "archive_file": "Archinteriors_27_001.rar",
+        "asset_file": "Archinteriors_27_001/AI_27_001_cam001_cam002_cam003",
+        "name": "ai_027_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_028_001": {
+        "archive_file": "Archinteriors_28_001.rar",
+        "asset_file": "01/AI28_01",
+        "name": "ai_028_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_029_001": {
+        "archive_file": "AI29_Scene_01.rar",
+        "asset_file": "Scene_01/AI29_01_camera_1,2_ver2010",
+        "name": "ai_029_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_030_002": {
+        "archive_file": "AM30_Scene_002.rar",
+        "asset_file": "Scene_002/AI30_002_camera_1_2010",
+        "name": "ai_030_002",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_031_001": {
+        "archive_file": "Archinteriors_31_Scene_001.rar",
+        "asset_file": "Scene_001/AI31_001",
+        "name": "ai_031_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_032_001": {
+        "archive_file": "Archinteriors_32_Scene_001.rar",
+        "asset_file": "Scene_001/AI32_001",
+        "name": "ai_032_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_033_001": {
+        "archive_file": "AI33_Scene_001.rar",
+        "asset_file": "Scene_001/AI33_001",
+        "name": "ai_033_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_034_001": {
+        "archive_file": "AI34_Scene_001.rar",
+        "asset_file": "Scene_001/AI34_001",
+        "name": "ai_034_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_035_002": {
+        "archive_file": "AI35_Scene_002.rar",
+        "asset_file": "Scene_002/AI35_002",
+        "name": "ai_035_002",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_036_001": {
+        "archive_file": "AI36_Scene_001.rar",
+        "asset_file": "Scene_001/AI36_001",
+        "name": "ai_036_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      },
+      "ai_037_001": {
+        "archive_file": "AI37_Scene_001.rar",
+        "asset_file": "Scene_001/AI37_001",
+        "name": "ai_037_001",
+        "normalization_policy": "v0",
+        "scene_extent_meters": 30.0,
+        "voxel_extent_meters": 0.1
+      }
+    }
+  },
+  "reason": "Registered combined-oracle continuation gate failed. R1/R2/R3 geometry prototypes and guards have fixture tests, but no real-scene GT-free prediction, score selection or matched training was performed.",
+  "results": null,
+  "status": "NOT_RUN_ORACLE_STOP"
+}

@@ -1,0 +1,439 @@
+{
+  "old": {
+    "ai_001_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 12,
+        "at_least_two": 4,
+        "histogram": {
+          "0": 116,
+          "1": 8,
+          "2": 4,
+          "3": 0
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 14,
+        "at_least_two": 12,
+        "histogram": {
+          "0": 114,
+          "1": 2,
+          "2": 12,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "context_b": {
+        "at_least_one": 17,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 111,
+          "1": 9,
+          "2": 4,
+          "3": 4
+        }
+      },
+      "stream": {
+        "at_least_one": 10,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 118,
+          "1": 10,
+          "2": 0
+        }
+      }
+    },
+    "ai_002_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 12,
+        "at_least_two": 6,
+        "histogram": {
+          "0": 116,
+          "1": 6,
+          "2": 6,
+          "3": 0
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 19,
+        "at_least_two": 11,
+        "histogram": {
+          "0": 109,
+          "1": 8,
+          "2": 3,
+          "3": 4,
+          "4": 4,
+          "5": 0
+        }
+      },
+      "context_b": {
+        "at_least_one": 14,
+        "at_least_two": 7,
+        "histogram": {
+          "0": 114,
+          "1": 7,
+          "2": 7,
+          "3": 0
+        }
+      },
+      "stream": {
+        "at_least_one": 15,
+        "at_least_two": 9,
+        "histogram": {
+          "0": 113,
+          "1": 6,
+          "2": 9
+        }
+      }
+    },
+    "ai_003_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 13,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 115,
+          "1": 13,
+          "2": 0,
+          "3": 0
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 20,
+        "at_least_two": 4,
+        "histogram": {
+          "0": 108,
+          "1": 16,
+          "2": 4,
+          "3": 0,
+          "4": 0,
+          "5": 0
+        }
+      },
+      "context_b": {
+        "at_least_one": 10,
+        "at_least_two": 3,
+        "histogram": {
+          "0": 118,
+          "1": 7,
+          "2": 3,
+          "3": 0
+        }
+      },
+      "stream": {
+        "at_least_one": 11,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 117,
+          "1": 11,
+          "2": 0
+        }
+      }
+    }
+  },
+  "unseen": {
+    "ai_004_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 9,
+        "at_least_two": 6,
+        "histogram": {
+          "0": 119,
+          "1": 3,
+          "2": 2,
+          "3": 4
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 9,
+        "at_least_two": 6,
+        "histogram": {
+          "0": 119,
+          "1": 3,
+          "2": 2,
+          "3": 4
+        }
+      },
+      "context_b": {
+        "at_least_one": 9,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 119,
+          "1": 1,
+          "2": 4,
+          "3": 4
+        }
+      }
+    },
+    "ai_006_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 8,
+        "at_least_two": 7,
+        "histogram": {
+          "0": 120,
+          "1": 1,
+          "2": 3,
+          "3": 4
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 8,
+        "at_least_two": 7,
+        "histogram": {
+          "0": 120,
+          "1": 1,
+          "2": 3,
+          "3": 4
+        }
+      },
+      "context_b": {
+        "at_least_one": 7,
+        "at_least_two": 7,
+        "histogram": {
+          "0": 121,
+          "1": 0,
+          "2": 3,
+          "3": 4
+        }
+      }
+    },
+    "ai_007_002": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 38,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 90,
+          "1": 30,
+          "2": 8,
+          "3": 0
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 38,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 90,
+          "1": 30,
+          "2": 8,
+          "3": 0
+        }
+      },
+      "context_b": {
+        "at_least_one": 11,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 117,
+          "1": 3,
+          "2": 8,
+          "3": 0
+        }
+      }
+    },
+    "ai_008_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 13,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 115,
+          "1": 5,
+          "2": 4,
+          "3": 4
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 13,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 115,
+          "1": 5,
+          "2": 4,
+          "3": 4
+        }
+      },
+      "context_b": {
+        "at_least_one": 11,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 117,
+          "1": 3,
+          "2": 4,
+          "3": 4
+        }
+      }
+    },
+    "ai_009_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 21,
+        "at_least_two": 11,
+        "histogram": {
+          "0": 107,
+          "1": 10,
+          "2": 7,
+          "3": 4
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 21,
+        "at_least_two": 11,
+        "histogram": {
+          "0": 107,
+          "1": 10,
+          "2": 7,
+          "3": 4
+        }
+      },
+      "context_b": {
+        "at_least_one": 17,
+        "at_least_two": 13,
+        "histogram": {
+          "0": 111,
+          "1": 4,
+          "2": 13,
+          "3": 0
+        }
+      }
+    },
+    "ai_010_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 17,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 111,
+          "1": 9,
+          "2": 8,
+          "3": 0
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 17,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 111,
+          "1": 9,
+          "2": 8,
+          "3": 0
+        }
+      },
+      "context_b": {
+        "at_least_one": 16,
+        "at_least_two": 8,
+        "histogram": {
+          "0": 112,
+          "1": 8,
+          "2": 8,
+          "3": 0
+        }
+      }
+    },
+    "ai_011_001": {
+      "anchor": {
+        "at_least_one": 4,
+        "at_least_two": 0,
+        "histogram": {
+          "0": 124,
+          "1": 4
+        }
+      },
+      "context_a": {
+        "at_least_one": 10,
+        "at_least_two": 10,
+        "histogram": {
+          "0": 118,
+          "1": 0,
+          "2": 6,
+          "3": 4
+        }
+      },
+      "context_a_plus_stream": {
+        "at_least_one": 10,
+        "at_least_two": 10,
+        "histogram": {
+          "0": 118,
+          "1": 0,
+          "2": 6,
+          "3": 4
+        }
+      },
+      "context_b": {
+        "at_least_one": 9,
+        "at_least_two": 9,
+        "histogram": {
+          "0": 119,
+          "1": 0,
+          "2": 5,
+          "3": 4
+        }
+      }
+    }
+  }
+}

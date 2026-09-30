@@ -1,0 +1,49 @@
+{
+  "budgets": [
+    1000,
+    3000,
+    10000
+  ],
+  "checkpoint_selection": "earliest minimum full supervision objective among checkpoints <= budget",
+  "checkpoints_saved_fixed": [
+    0,
+    100,
+    300,
+    1000,
+    3000,
+    10000
+  ],
+  "cost_basis": "Previous RGBD16 approximately3.9 seconds/1000steps; 119 main+oracle trajectories x30 gives13923 seconds=3.87h serial, excluding I/O/evaluation/secondary",
+  "full_objective_every": 100,
+  "independent_states_per_bounds_scene_context": true,
+  "not_run": {
+    "30000": "PREDECLARED_COST_LIMIT"
+  },
+  "optimizer_loss_unchanged": {
+    "batch_rays": 1024,
+    "checkpoint_interval": 100,
+    "density_l2_weight": 1e-05,
+    "depth_weight": 1.0,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.03,
+    "rgb_weight": 1.0,
+    "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE",
+    "steps": 10000,
+    "tv_weight": 0.0001
+  },
+  "plateau": {
+    "aggregate_scene_fraction": 0.75,
+    "gradient_first_last_half_median_relative_abs_change_max": 0.1,
+    "minimum_gradient_trace_points": 4,
+    "never_early_stops": true,
+    "relative_objective_abs_change_max": 0.001,
+    "scene_requires_both_contexts": true,
+    "window_fraction": 0.1
+  },
+  "primary_selection": "FIXED_BUDGET",
+  "resource_execution": "Four independent subprocesses shareGPU; per-process time/memory and wholephase elapsed reported separately; not an exclusive-hardware benchmark",
+  "secondary_RGB_ONLY": "Only after main analysis, fixed GTfree10k config; single budget, cannot change maindecision",
+  "secondary_selection": "CONTEXT_SELECTED",
+  "shared_prefix_trajectory": true,
+  "trace_every": 10
+}

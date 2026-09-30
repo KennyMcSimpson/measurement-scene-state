@@ -1,0 +1,288 @@
+{
+  "actual_trajectory_optimization_seconds": 13002.326387748064,
+  "future_carrier_cost": "NOT_MEASURED",
+  "groups": {
+    "QUERY_ORACLE|CURRENT_BOUNDS|b10000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 17,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005095466096570496,
+      "render_seconds_total": 0.17324584728339687,
+      "seconds_per_state": 92.15470421848038,
+      "total_cumulative_seconds": 1566.6299717141665
+    },
+    "QUERY_ORACLE|CURRENT_BOUNDS|b10000|FIXED_BUDGET|direct": {
+      "n_trajectories": 17,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.006360361819936182,
+      "render_seconds_total": 0.21625230187783018,
+      "seconds_per_state": 92.15470421848038,
+      "total_cumulative_seconds": 1566.6299717141665
+    },
+    "QUERY_ORACLE|CURRENT_BOUNDS|b1000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 17,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.006423271317651276,
+      "render_seconds_total": 0.2183912248001434,
+      "seconds_per_state": 9.436700545350664,
+      "total_cumulative_seconds": 160.4239092709613
+    },
+    "QUERY_ORACLE|CURRENT_BOUNDS|b1000|FIXED_BUDGET|direct": {
+      "n_trajectories": 17,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.0088218376502696,
+      "render_seconds_total": 0.29994248010916635,
+      "seconds_per_state": 9.436700545350664,
+      "total_cumulative_seconds": 160.4239092709613
+    },
+    "QUERY_ORACLE|CURRENT_BOUNDS|b3000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 17,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.006377099265056827,
+      "render_seconds_total": 0.2168213750119321,
+      "seconds_per_state": 27.745174516821006,
+      "total_cumulative_seconds": 471.6679667859571
+    },
+    "QUERY_ORACLE|CURRENT_BOUNDS|b3000|FIXED_BUDGET|direct": {
+      "n_trajectories": 17,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005360091266030555,
+      "render_seconds_total": 0.18224310304503888,
+      "seconds_per_state": 27.745174516821006,
+      "total_cumulative_seconds": 471.6679667859571
+    },
+    "QUERY_ORACLE|FROZEN_GT_FREE_BOUNDS|b10000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005244716044056558,
+      "render_seconds_total": 0.35664069099584594,
+      "seconds_per_state": 88.19685728679178,
+      "total_cumulative_seconds": 2998.6931477509206
+    },
+    "QUERY_ORACLE|FROZEN_GT_FREE_BOUNDS|b10000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005591118957347456,
+      "render_seconds_total": 0.380196089099627,
+      "seconds_per_state": 88.19685728679178,
+      "total_cumulative_seconds": 2998.6931477509206
+    },
+    "QUERY_ORACLE|FROZEN_GT_FREE_BOUNDS|b1000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005827184891506263,
+      "render_seconds_total": 0.39624857262242585,
+      "seconds_per_state": 8.774818334408337,
+      "total_cumulative_seconds": 298.34382336988347
+    },
+    "QUERY_ORACLE|FROZEN_GT_FREE_BOUNDS|b1000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005794892978669582,
+      "render_seconds_total": 0.3940527225495316,
+      "seconds_per_state": 8.774818334408337,
+      "total_cumulative_seconds": 298.34382336988347
+    },
+    "QUERY_ORACLE|FROZEN_GT_FREE_BOUNDS|b3000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.0054272855015690714,
+      "render_seconds_total": 0.36905541410669684,
+      "seconds_per_state": 26.453474548588822,
+      "total_cumulative_seconds": 899.41813465202
+    },
+    "QUERY_ORACLE|FROZEN_GT_FREE_BOUNDS|b3000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 24199168,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.0058517350185224234,
+      "render_seconds_total": 0.3979179812595248,
+      "seconds_per_state": 26.453474548588822,
+      "total_cumulative_seconds": 899.41813465202
+    },
+    "RGBD|CURRENT_BOUNDS|b10000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005198764365666327,
+      "render_seconds_total": 0.3535159768653102,
+      "seconds_per_state": 94.55130594308481,
+      "total_cumulative_seconds": 3214.7444020648836
+    },
+    "RGBD|CURRENT_BOUNDS|b10000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005668844011619084,
+      "render_seconds_total": 0.38548139279009774,
+      "seconds_per_state": 94.55130594308481,
+      "total_cumulative_seconds": 3214.7444020648836
+    },
+    "RGBD|CURRENT_BOUNDS|b1000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005175730560200892,
+      "render_seconds_total": 0.3519496780936606,
+      "seconds_per_state": 9.36222003461615,
+      "total_cumulative_seconds": 318.3154811769491
+    },
+    "RGBD|CURRENT_BOUNDS|b1000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005339005500632886,
+      "render_seconds_total": 0.36305237404303625,
+      "seconds_per_state": 9.36222003461615,
+      "total_cumulative_seconds": 318.3154811769491
+    },
+    "RGBD|CURRENT_BOUNDS|b3000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005379389439065776,
+      "render_seconds_total": 0.3657984818564728,
+      "seconds_per_state": 28.326617059528978,
+      "total_cumulative_seconds": 963.1049800239853
+    },
+    "RGBD|CURRENT_BOUNDS|b3000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005110012828749057,
+      "render_seconds_total": 0.34748087235493585,
+      "seconds_per_state": 28.326617059528978,
+      "total_cumulative_seconds": 963.1049800239853
+    },
+    "RGBD|FROZEN_GT_FREE_BOUNDS|b10000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005457179454798975,
+      "render_seconds_total": 0.37108820292633027,
+      "seconds_per_state": 92.91090083632768,
+      "total_cumulative_seconds": 3158.9706284351414
+    },
+    "RGBD|FROZEN_GT_FREE_BOUNDS|b10000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.00563438081264715,
+      "render_seconds_total": 0.3831378952600062,
+      "seconds_per_state": 92.91090083632768,
+      "total_cumulative_seconds": 3158.9706284351414
+    },
+    "RGBD|FROZEN_GT_FREE_BOUNDS|b1000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005473099530825172,
+      "render_seconds_total": 0.3721707680961117,
+      "seconds_per_state": 9.649918596172938,
+      "total_cumulative_seconds": 328.0972322698799
+    },
+    "RGBD|FROZEN_GT_FREE_BOUNDS|b1000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005482561646631974,
+      "render_seconds_total": 0.3728141919709742,
+      "seconds_per_state": 9.649918596172938,
+      "total_cumulative_seconds": 328.0972322698799
+    },
+    "RGBD|FROZEN_GT_FREE_BOUNDS|b3000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.006041860676144578,
+      "render_seconds_total": 0.41084652597783133,
+      "seconds_per_state": 27.929978691762216,
+      "total_cumulative_seconds": 949.6192755199154
+    },
+    "RGBD|FROZEN_GT_FREE_BOUNDS|b3000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25202176,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005303223454735845,
+      "render_seconds_total": 0.3606191949220374,
+      "seconds_per_state": 27.929978691762216,
+      "total_cumulative_seconds": 949.6192755199154
+    },
+    "RGB_ONLY|FROZEN_GT_FREE_BOUNDS|b10000|CONTEXT_SELECTED|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25218560,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005768767706981367,
+      "render_seconds_total": 0.39227620407473296,
+      "seconds_per_state": 60.68494817008682,
+      "total_cumulative_seconds": 2063.288237782952
+    },
+    "RGB_ONLY|FROZEN_GT_FREE_BOUNDS|b10000|FIXED_BUDGET|direct": {
+      "n_trajectories": 34,
+      "note": "Shared trajectory cumulative cost; do not sum budgets or selection rules",
+      "peak_cuda_allocated_bytes": 25218560,
+      "peak_cuda_reserved_bytes": 37748736,
+      "render_seconds_per_query": 0.005195383954046787,
+      "render_seconds_total": 0.3532861088751815,
+      "seconds_per_state": 60.68494817008682,
+      "total_cumulative_seconds": 2063.288237782952
+    }
+  },
+  "phase_wall_times": {
+    "context_evaluation_seconds": 115.67976627498865,
+    "context_seconds": 1631.5848608016968,
+    "device": "cuda",
+    "oracle_evaluation_seconds": 39.160654762992635,
+    "oracle_seconds": 1189.9490562670399,
+    "shared_gpu": true,
+    "timing_basis": {
+      "context": "earliest trajectory lock mtime to context completion marker mtime; excludes initial launcher setup",
+      "oracle": "external perf_counter around optimization CLI; includes process setup"
+    },
+    "worker_count": 4
+  },
+  "secondary_phase_wall_times": {
+    "device": "cuda",
+    "secondary_evaluation_seconds": 11.858088374021463,
+    "secondary_seconds": 556.0444912919775,
+    "shared_gpu": true,
+    "timing_basis": "external perf_counter around CLI; includes process setup",
+    "worker_count": 4
+  },
+  "timing_limitations": "Sum of cumulative worker seconds is not phase wall time. Shared-GPU concurrent per-state latency is not directly comparable to previous single-process timing."
+}

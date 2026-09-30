@@ -1,0 +1,51 @@
+{
+  "constraints": [
+    "S3 always predeclared primary",
+    "overall all-GT-valid metrics retained",
+    "conditional regions disclose coverage and undefined bootstrap draws",
+    "additive contributions include every scene",
+    "references and privileged oracle are separate from four-variant main groups",
+    "no weights or media loaded by analysis"
+  ],
+  "created_utc": "2026-09-28T08:27:18.419671+00:00",
+  "decision_rules_sha256": "4e0a3f0797cfeb21302ce002b397d4f638194a08683cf6b56fa4d5abecc6d64a",
+  "independent_review": {
+    "reviewer": "static_geometry",
+    "reviewer_reported_joint_synthetic_tests_passed": 39,
+    "scope": [
+      "observer/statistics row schemas align",
+      "all registered variants and 11regions present",
+      "overall raw AbsRel agrees with float64 region error sum/totalvalid",
+      "OBS0/1/2 and angular partitions valid",
+      "occlusion/conflict overlaps are not treated as a partition",
+      "empty counts/sums/null kept",
+      "strict per-scene Spearman null propagation"
+    ],
+    "status": "PASS"
+  },
+  "outputs": [
+    "observability_analysis.json",
+    "supervision_analysis.json",
+    "gap_closure_analysis.json",
+    "wrong_scene_analysis.json",
+    "bootstrap_results.json",
+    "cost_analysis.json",
+    "decision_summary.json",
+    "7 PNG + 7 SVG figures"
+  ],
+  "real_query_or_region_raw_read": false,
+  "ruff": "PASS",
+  "source_sha256": {
+    "scripts/analyze_observability_supervision.py": "b974c2cba6112ccd6c654047c8124f92b020232f816799f9ec67a01760a6c39a",
+    "src/mcss/mechanism_pilot/direct_capacity_statistics.py": "adb8b2b41915b6733054119e50c8043b485ba773dfc2581ecc17a121d5a1ddc1",
+    "src/mcss/mechanism_pilot/observability_supervision_statistics.py": "5e41b741a3709ac561755167481caff8def8918d02a6a963ffb9f440955f2742",
+    "tests/test_observability_supervision_statistics.py": "ffc5173ff08987cc4ef3964dc9089c369770dee81c7cde318f21e7c6c7a40ec0"
+  },
+  "statistics_tests": {
+    "command": ".venv/bin/pytest -q tests/test_observability_supervision_statistics.py",
+    "failed": 0,
+    "passed": 22,
+    "seconds": 2.42
+  },
+  "status": "PASS_READY_FOR_FORMAL_FREEZE"
+}

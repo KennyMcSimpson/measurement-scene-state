@@ -1,0 +1,41 @@
+{
+  "decision_rules_sha256": "3966e4c262dc0c538253eea3c79120689248adcac872fa9b6024029f35669e8b",
+  "independent_review": {
+    "checks": [
+      "gain signs",
+      "query then role then scene averaging",
+      "paired scene bootstrap",
+      "fixed GT-free max-budget primary",
+      "bounds interaction DID",
+      "status/readiness precedence",
+      "shared-prefix cost counted once"
+    ],
+    "reviewer": "static_geometry",
+    "scope_limit": "Archive provenance and immutable aggregate specs are additionally checked by experiment integrity audit.",
+    "status": "PASS"
+  },
+  "lint": "RUFF_PASS",
+  "locked_utc": "2026-09-27T17:42:38.568629+00:00",
+  "primary_configuration": {
+    "bounds_mode": "FROZEN_GT_FREE_BOUNDS",
+    "budget": 10000,
+    "grid": 16,
+    "samples": 64,
+    "selection": "FIXED_BUDGET",
+    "track": "RGBD"
+  },
+  "real_query_raw_read": false,
+  "source_sha256": {
+    "scripts/analyze_optimization_bounds.py": "1d5c5bd4b0cdc84edf6c957a1f2f02afc7e2040d9188e65ee44a95f9feb1a287",
+    "src/mcss/mechanism_pilot/direct_capacity_statistics.py": "adb8b2b41915b6733054119e50c8043b485ba773dfc2581ecc17a121d5a1ddc1",
+    "src/mcss/mechanism_pilot/optimization_bounds_statistics.py": "c52c3659ec3e92e4923bd1a35d5f4a3be0d09b1b9915c7ac532a7e26f39f36ee",
+    "tests/test_optimization_bounds_statistics.py": "ce2bf844bd1e817e20193dc68d2f63ff7ac10d425ca640bf02e4f8516d4b5502"
+  },
+  "stage": "BEFORE_FORMAL_QUERY_EVALUATION",
+  "status": "PASS",
+  "synthetic_tests": {
+    "command": ".venv/bin/pytest -q tests/test_optimization_bounds_statistics.py",
+    "failed": 0,
+    "passed": 20
+  }
+}

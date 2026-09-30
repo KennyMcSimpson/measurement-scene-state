@@ -1,0 +1,35 @@
+{
+  "status": "CPU_EXACT_PREFIX_GPU_NONDETERMINISTIC_DIAGNOSTIC",
+  "cpu_regression": {
+    "test": "tests/test_budget_state_optimization.py::test_1000_step_cpu_prefix_matches_previous_kernel_exactly",
+    "steps": 1000,
+    "grid": 16,
+    "renderer_samples": 64,
+    "batch_rays": 8,
+    "engineering_fixture": true,
+    "same_seed": 20260927,
+    "state_hash_exact": true,
+    "all_full_objective_checkpoint_components_exact": true,
+    "test_result": "5 passed in3.99s (budget module suite)"
+  },
+  "cuda_diagnostics": {
+    "steps": 1000,
+    "grid": 16,
+    "renderer_samples": 64,
+    "batch_rays": 1024,
+    "same_seed": 20260927,
+    "old_vs_old_state_hash_identical": false,
+    "old_vs_old_observed_max_full_objective_difference": 1.043194899352784e-07,
+    "new_vs_old_first_observed_max_full_objective_difference": 1.4910247614352556e-07,
+    "new_vs_old_second_observed_max_full_objective_difference": 0.000158834285464593,
+    "diagnostic_fixture": "one2x2 synthetic RGBD camera; late nonsmooth AbsRel nearzero; not formal scenes",
+    "interpretation": "CUDA grid_sample backward is nondeterministic; original implementation also fails bitwise self-reproduction. These observations do not prove exact recovery of prior GPU states.",
+    "raw_retention": "Temporary pytest-83/84 diagnostic artifacts no longer present; reported numbers are execution observations only, not independently re-auditable raw thresholds or formal quantitative evidence",
+    "formal_tolerance_basis": false
+  },
+  "limitations": [
+    "CPU test uses small ray minibatch; it establishes algorithmic prefix equivalence on that fixture only",
+    "GPU diagnostics are not a predeclared numeric acceptance threshold and do not authorize changing formal optimizer or budgets"
+  ],
+  "core_unchanged": true
+}

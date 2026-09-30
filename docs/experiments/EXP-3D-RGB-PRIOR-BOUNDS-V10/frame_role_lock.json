@@ -1,0 +1,1883 @@
+{
+  "dev_reused_from_v2": true,
+  "manifest_sha256": "4a111c072f2178740a709e5257e065d4fcbc5564d624a97f12b8b795731e1afc",
+  "no_frame_or_bounds_search_after_training": true,
+  "roles": {
+    "ai_001_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "ignored": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "primary_query": [
+        12,
+        13
+      ],
+      "query": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "stream": [
+        5,
+        6
+      ]
+    },
+    "ai_001_004": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_001_009": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_002_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "ignored": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "primary_query": [
+        12,
+        13
+      ],
+      "query": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "stream": [
+        5,
+        6
+      ]
+    },
+    "ai_002_003": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_002_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_003_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "ignored": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "primary_query": [
+        12,
+        13
+      ],
+      "query": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "stream": [
+        5,
+        6
+      ]
+    },
+    "ai_003_004": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_003_008": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_004_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        10
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_004_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_004_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        6,
+        7
+      ],
+      "query": [
+        6,
+        7
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_005_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_005_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_005_008": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_006_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        4,
+        12
+      ],
+      "context_b": [
+        0,
+        8,
+        11
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_006_003": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_007_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        6,
+        9
+      ],
+      "context_b": [
+        0,
+        8,
+        11
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_007_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_007_010": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_008_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        4,
+        5
+      ],
+      "context_b": [
+        0,
+        6,
+        8
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_009_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        5
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_010_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        7,
+        10
+      ],
+      "context_b": [
+        0,
+        8,
+        11
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_011_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        2,
+        3
+      ],
+      "context_b": [
+        0,
+        8,
+        10
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_012_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        9
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_013_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_014_003": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        3,
+        7
+      ],
+      "context_b": [
+        0,
+        4,
+        5
+      ],
+      "primary_query": [
+        12,
+        13
+      ],
+      "query": [
+        12,
+        13
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_016_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        3,
+        10
+      ],
+      "context_b": [
+        0,
+        4,
+        9
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_017_005": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_017_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_017_010": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_018_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        7
+      ],
+      "context_b": [
+        0,
+        6,
+        8
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_018_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_018_009": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_021_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        6,
+        7
+      ],
+      "context_b": [
+        0,
+        12,
+        13
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_023_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_027_008": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_027_009": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_028_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        4,
+        5
+      ],
+      "context_b": [
+        0,
+        8,
+        13
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_028_009": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_029_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        15,
+        16
+      ],
+      "query": [
+        15,
+        16
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_030_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        5
+      ],
+      "context_b": [
+        0,
+        2,
+        3
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_030_003": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        5
+      ],
+      "primary_query": [
+        13,
+        14
+      ],
+      "query": [
+        13,
+        14
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_030_004": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        4,
+        5
+      ],
+      "primary_query": [
+        15,
+        16
+      ],
+      "query": [
+        15,
+        16
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_032_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        3,
+        9
+      ],
+      "context_b": [
+        0,
+        4,
+        5
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_033_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_034_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        5,
+        6
+      ],
+      "context_b": [
+        0,
+        9,
+        12
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_035_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_035_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_035_009": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        17,
+        18
+      ],
+      "query": [
+        17,
+        18
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_036_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        2,
+        3
+      ],
+      "context_b": [
+        0,
+        4,
+        5
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_036_010": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_037_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_037_008": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_039_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        6
+      ],
+      "primary_query": [
+        7,
+        8
+      ],
+      "query": [
+        7,
+        8
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_039_009": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_042_002": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_042_005": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_043_003": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_043_005": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_043_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        42,
+        43
+      ],
+      "query": [
+        42,
+        43
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_045_004": {
+      "anchor": 1,
+      "context_a": [
+        1,
+        2,
+        3
+      ],
+      "context_b": [
+        1,
+        4,
+        5
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_045_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_045_010": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_046_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_047_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_047_006": {
+      "anchor": 1,
+      "context_a": [
+        1,
+        2,
+        3
+      ],
+      "context_b": [
+        1,
+        4,
+        5
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_048_003": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_048_005": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_048_007": {
+      "anchor": 1,
+      "context_a": [
+        1,
+        2,
+        3
+      ],
+      "context_b": [
+        1,
+        4,
+        5
+      ],
+      "primary_query": [
+        15,
+        16
+      ],
+      "query": [
+        15,
+        16
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_050_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_050_003": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_050_004": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_053_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_053_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_053_018": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_054_001": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_054_006": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_055_004": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        10,
+        12
+      ],
+      "query": [
+        10,
+        12
+      ],
+      "secondary_query": [],
+      "stream": []
+    },
+    "ai_055_007": {
+      "anchor": 0,
+      "context_a": [
+        0,
+        1,
+        2
+      ],
+      "context_b": [
+        0,
+        3,
+        4
+      ],
+      "primary_query": [
+        14,
+        15
+      ],
+      "query": [
+        14,
+        15
+      ],
+      "secondary_query": [],
+      "stream": []
+    }
+  },
+  "selection_uses_model_outputs": false,
+  "source": "V2 locked cohort and frame roles reused unchanged; the frozen GT-free bounds rule is reused with the variant's TRAIN depth prior",
+  "v2_scene_split_sha256": "1970a41d3d2f739cabfa97f9844dbfc77df2b6895735725d3239605c039fdd3b"
+}

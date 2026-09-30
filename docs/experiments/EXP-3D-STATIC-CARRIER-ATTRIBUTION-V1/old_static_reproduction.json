@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "rows_compared": 90,
+  "metrics": [
+    "rgb_mse",
+    "rgb_ssim",
+    "depth_absrel",
+    "depth_rmse",
+    "depth_delta1",
+    "opacity",
+    "coverage"
+  ],
+  "exact_numeric_equality": true,
+  "query_camera_hashes_match": true,
+  "differences": [],
+  "old_result_path": "outputs/EXP-3D-20260927-trained-state-history-v1/run/static_state_results.json"
+}

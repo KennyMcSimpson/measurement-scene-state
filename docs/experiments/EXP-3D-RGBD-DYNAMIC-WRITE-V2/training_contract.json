@@ -1,0 +1,70 @@
+{
+  "baseline_policy": "OFF",
+  "baseline_rule": "PLAN_BEFORE_V9_RESULTS.md: OFF for the V9 C1 carrier (seven views are inside its training range), OFF_CLAMP3 for the V9 C0 carrier; fixed before any V9 result",
+  "batch_rays": 1024,
+  "carrier_variant": "C1",
+  "checkpoint_selection": "none: the final step is evaluated; no DEV forward during training",
+  "controls": [
+    "ALL_WRONG_SCENE"
+  ],
+  "cpu_affinity": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "dev_reuse": "the 8 DEV scenes were evaluated in V2-V10; Core B V2 is a DEV mechanism round, not a qualification; FRESH-V1/V2 are not used",
+  "device": "cpu",
+  "experiment": "EXP-3D-RGBD-DYNAMIC-WRITE-V2",
+  "fresh_qualification_included": false,
+  "gradient_clip": 1.0,
+  "learning_rate": 0.001,
+  "num_threads": 1,
+  "optimizer": "Adam",
+  "parallel_workers": 3,
+  "policies": [
+    "NO_STREAM",
+    "OFF",
+    "OFF_CLAMP3",
+    "FUSE",
+    "COMPLETE",
+    "ALL",
+    "ALL_UNTRAINED"
+  ],
+  "primary_contrast": "BEYOND_BASELINE = AbsRel(OFF) - AbsRel(ALL)",
+  "seeds": [
+    20260928,
+    20260929,
+    20260930
+  ],
+  "slow_carrier": "frozen (requires_grad False); only the write rule is optimized",
+  "steps": 3000,
+  "stream_length": 4,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "trained_view_count": 3,
+  "training_action": "ALL at every stream arrival",
+  "training_episodes": "seeded permutation of the eligible TRAIN72 episodes (scene, role), cycled; the primary-query slot cycles per visit",
+  "training_loss": "frozen V2 C1 loss (RGB Charbonnier + masked depth AbsRel + .1 surface) through the V8 32^3 generalization, on 1024 uniform rays of one TRAIN primary query, rendered after the stream",
+  "write_config": {
+    "learning_rate": 0.01,
+    "max_update_norm": 0.05
+  },
+  "write_rule": "mcss.dynamic.write_rule.DirectWriteRule (frozen project design)",
+  "write_rule_initialization": "torch.manual_seed(seed) then DirectWriteRule(); the initial rule is saved and evaluated as ALL_UNTRAINED"
+}

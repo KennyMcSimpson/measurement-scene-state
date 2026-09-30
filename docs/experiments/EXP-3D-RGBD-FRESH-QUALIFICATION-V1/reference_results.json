@@ -1,0 +1,3307 @@
+{
+  "carriers": {
+    "V5_C0": {
+      "MEDIAN_SCALED": {
+        "depth_absrel": {
+          "absolute_mean": 0.455064097606826,
+          "reference_label": "ABOVE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.3854118604590601,
+            "absolute_top3_contribution": 0.8999784866589866,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.012482620224515784,
+              0.05678167755154132
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.02728137013018518,
+              "ai_022_010": 0.0338528672077322,
+              "ai_041_003": 0.04062617676238041,
+              "ai_051_004": 0.03237750510915917,
+              "ai_052_003": 0.04518025249122108
+            },
+            "loso_range": [
+              0.02728137013018518,
+              0.04518025249122108
+            ],
+            "mean": 0.035863634340135606,
+            "median": 0.04390670286974924,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.07019269117993732,
+              "ai_022_010": 0.04390670286974924,
+              "ai_041_003": 0.016813464651156407,
+              "ai_051_004": 0.04980815126404137,
+              "ai_052_003": -0.0014028382642062853
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.3884036017371548,
+            "positive_top3_contribution": 0.9069645269555354,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "ABOVE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.38541186045905945,
+            "absolute_top3_contribution": 0.8999784866589854,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.012482620224515828,
+              0.0567816775515413
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.027281370130185237,
+              "ai_022_010": 0.03385286720773224,
+              "ai_041_003": 0.040626176762380395,
+              "ai_051_004": 0.03237750510915921,
+              "ai_052_003": 0.04518025249122112
+            },
+            "loso_range": [
+              0.027281370130185237,
+              0.04518025249122112
+            ],
+            "mean": 0.03586363434013564,
+            "median": 0.04390670286974924,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.07019269117993726,
+              "ai_022_010": 0.04390670286974924,
+              "ai_041_003": 0.01681346465115663,
+              "ai_051_004": 0.04980815126404137,
+              "ai_052_003": -0.0014028382642062853
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.38840360173715416,
+            "positive_top3_contribution": 0.9069645269555343,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "ABOVE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.4170206705729166,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.36395352700771944,
+            "absolute_top3_contribution": 0.9198573469636391,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.06338053385416667,
+              0.08957763671874992
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": -0.005354817708333362,
+              "ai_022_010": -0.01914672851562499,
+              "ai_041_003": 0.045703124999999956,
+              "ai_051_004": 0.017046101888020776,
+              "ai_052_003": 0.01887715657552079
+            },
+            "loso_range": [
+              -0.01914672851562499,
+              0.045703124999999956
+            ],
+            "mean": 0.011424967447916634,
+            "median": -0.011059570312499933,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": 0.07854410807291662,
+              "ai_022_010": 0.13371175130208313,
+              "ai_041_003": -0.12568766276041665,
+              "ai_051_004": -0.011059570312499933,
+              "ai_052_003": -0.01838378906249999
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.629955524883061,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.36395352700771944,
+            "absolute_top3_contribution": 0.9198573469636391,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.06338053385416667,
+              0.08957763671874992
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": -0.005354817708333362,
+              "ai_022_010": -0.01914672851562499,
+              "ai_041_003": 0.045703124999999956,
+              "ai_051_004": 0.017046101888020776,
+              "ai_052_003": 0.01887715657552079
+            },
+            "loso_range": [
+              -0.01914672851562499,
+              0.045703124999999956
+            ],
+            "mean": 0.011424967447916634,
+            "median": -0.011059570312499933,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": 0.07854410807291662,
+              "ai_022_010": 0.13371175130208313,
+              "ai_041_003": -0.12568766276041665,
+              "ai_051_004": -0.011059570312499933,
+              "ai_052_003": -0.01838378906249999
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.629955524883061,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      },
+      "OPACITY_NORMALIZED": {
+        "depth_absrel": {
+          "absolute_mean": 0.4461970367213938,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.36576923521497323,
+            "absolute_top3_contribution": 0.7598158230456266,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.1426731698914241,
+              0.1624792514260937
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.020313129648916496,
+              "ai_022_010": 0.03065574951321566,
+              "ai_041_003": 0.13961727308713023,
+              "ai_051_004": 0.01113918143425674,
+              "ai_052_003": 0.03466727776651278
+            },
+            "loso_range": [
+              0.01113918143425674,
+              0.13961727308713023
+            ],
+            "mean": 0.04727852229000638,
+            "median": 0.11376961339716926,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.15514009285436592,
+              "ai_022_010": 0.11376961339716926,
+              "ai_041_003": -0.32207648089848906,
+              "ai_051_004": 0.19183588571300497,
+              "ai_052_003": 0.09772350038398081
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.34350313802735377,
+            "positive_top3_contribution": 0.8250153827259702,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.45135724360894314,
+            "absolute_top3_contribution": 0.9614343432917838,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.12247288307792403,
+              0.5670716130053999
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": 0.11151094691355513,
+              "ai_022_010": 0.07416970797225865,
+              "ai_041_003": 0.32594797938997183,
+              "ai_051_004": 0.26731011120371345,
+              "ai_052_003": 0.2767446209508291
+            },
+            "loso_range": [
+              0.07416970797225865,
+              0.32594797938997183
+            ],
+            "mean": 0.21113667328606564,
+            "median": -0.013557078384525634,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": 0.6096395787761075,
+              "ai_022_010": 0.7590045345412935,
+              "ai_041_003": -0.2481085511295592,
+              "ai_051_004": -0.013557078384525634,
+              "ai_052_003": -0.051295117372988086
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.5545667622107935,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.30969482421875,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.34435749286915834,
+            "absolute_top3_contribution": 0.8810551207976792,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.0005924479166666552,
+              0.2564803059895834
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.09918823242187504,
+              "ai_022_010": 0.0922821044921875,
+              "ai_041_003": 0.18638000488281253,
+              "ai_051_004": 0.11709187825520835,
+              "ai_052_003": 0.1615641276041667
+            },
+            "loso_range": [
+              0.0922821044921875,
+              0.18638000488281253
+            ],
+            "mean": 0.13130126953125001,
+            "median": 0.1881388346354167,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.25975341796874996,
+              "ai_022_010": 0.28737792968750014,
+              "ai_041_003": -0.089013671875,
+              "ai_051_004": 0.1881388346354167,
+              "ai_052_003": 0.010249837239583337
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.3854731223290162,
+            "positive_top3_contribution": 0.9862514258892363,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "ABOVE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.5479005196545753,
+            "absolute_top3_contribution": 0.8030117206761832,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.11587320963541665,
+              0.3091772460937501
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": 0.04877929687500005,
+              "ai_022_010": -0.05780944824218751,
+              "ai_041_003": 0.11035461425781254,
+              "ai_051_004": 0.09989217122395835,
+              "ai_052_003": 0.09652506510416668
+            },
+            "loso_range": [
+              -0.05780944824218751,
+              0.11035461425781254
+            ],
+            "mean": 0.059548339843750006,
+            "median": -0.08835856119791666,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": 0.10262451171874992,
+              "ai_022_010": 0.5289794921875002,
+              "ai_041_003": -0.1436767578125,
+              "ai_051_004": -0.10182698567708331,
+              "ai_052_003": -0.08835856119791666
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.8375176359173578,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      },
+      "RAW": {
+        "depth_absrel": {
+          "absolute_mean": 0.478771697751805,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.44941199773814977,
+            "absolute_top3_contribution": 0.8608121740492426,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.1609431871949972,
+              0.1332855969604954
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": -0.020761387366693487,
+              "ai_022_010": 0.010230209563111492,
+              "ai_041_003": 0.10002086999985631,
+              "ai_051_004": -0.017214702696463982,
+              "ai_052_003": 0.0012443167981655984
+            },
+            "loso_range": [
+              -0.020761387366693487,
+              0.10002086999985631
+            ],
+            "mean": 0.014703861259595186,
+            "median": 0.06854203910531353,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.15656485576474988,
+              "ai_022_010": 0.03259846804552996,
+              "ai_041_003": -0.3265641737014493,
+              "ai_051_004": 0.14237811708383186,
+              "ai_052_003": 0.06854203910531353
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.3913304687436102,
+            "positive_top3_contribution": 0.9185208345878795,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.4022784939258028,
+            "absolute_top3_contribution": 0.9148411460271482,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.14583209843640968,
+              0.5128175861207597
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": 0.07043642989794516,
+              "ai_022_010": 0.05374416802215448,
+              "ai_041_003": 0.2863515763026979,
+              "ai_051_004": 0.23895622707299272,
+              "ai_052_003": 0.24332165998248187
+            },
+            "loso_range": [
+              0.05374416802215448,
+              0.2863515763026979
+            ],
+            "mean": 0.17856201225565443,
+            "median": -0.06301484701369875,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": 0.6110643416864915,
+              "ai_022_010": 0.6778333891896542,
+              "ai_041_003": -0.25259624393251945,
+              "ai_051_004": -0.06301484701369875,
+              "ai_052_003": -0.08047657865165536
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.5259016079800899,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.20522786458333336,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.30656574373135437,
+            "absolute_top3_contribution": 0.8419216450109717,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.03765706380208333,
+              0.08420003255208335
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.008245849609375012,
+              "ai_022_010": 0.022732543945312513,
+              "ai_041_003": 0.055796305338541685,
+              "ai_051_004": 0.01162007649739585,
+              "ai_052_003": 0.035776774088541685
+            },
+            "loso_range": [
+              0.008245849609375012,
+              0.055796305338541685
+            ],
+            "mean": 0.026834309895833353,
+            "median": 0.043241373697916696,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.1011881510416667,
+              "ai_022_010": 0.043241373697916696,
+              "ai_041_003": -0.089013671875,
+              "ai_051_004": 0.08769124348958335,
+              "ai_052_003": -0.008935546874999992
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.43592889948462643,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.35861825186217355,
+            "absolute_top3_contribution": 0.7941721908587003,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.16128824869791666,
+              0.12066162109375
+            ],
+            "improved_tied_worse": [
+              1,
+              0,
+              4
+            ],
+            "loso": {
+              "ai_015_004": -0.0421630859375,
+              "ai_022_010": -0.12735900878906248,
+              "ai_041_003": -0.02022908528645832,
+              "ai_051_004": -0.005579630533854154,
+              "ai_052_003": -0.029262288411458323
+            },
+            "loso_range": [
+              -0.12735900878906248,
+              -0.005579630533854154
+            ],
+            "mean": -0.044918619791666656,
+            "median": -0.10754394531249999,
+            "n_scenes": 5,
+            "negative": 4,
+            "per_scene": {
+              "ai_015_004": -0.055940755208333304,
+              "ai_022_010": 0.2848429361979167,
+              "ai_041_003": -0.1436767578125,
+              "ai_051_004": -0.20227457682291666,
+              "ai_052_003": -0.10754394531249999
+            },
+            "positive": 1,
+            "positive_top1_contribution": 1.0,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      }
+    },
+    "V5_C1": {
+      "MEDIAN_SCALED": {
+        "depth_absrel": {
+          "absolute_mean": 0.43527560000342885,
+          "reference_label": "ABOVE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.633638133288477,
+            "absolute_top3_contribution": 0.9328476064170058,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.012417532237767976,
+              0.11839336102514897
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.06844646311075175,
+              "ai_022_010": 0.06338618430221796,
+              "ai_041_003": 0.06601239941307394,
+              "ai_051_004": 0.025486023681635765,
+              "ai_052_003": 0.054929589209984024
+            },
+            "loso_range": [
+              0.025486023681635765,
+              0.06844646311075175
+            ],
+            "mean": 0.05565213194353269,
+            "median": 0.024715922508791593,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.004474807274656434,
+              "ai_022_010": 0.024715922508791593,
+              "ai_041_003": 0.014211062065367708,
+              "ai_051_004": 0.17631656499112036,
+              "ai_052_003": 0.058542302877727326
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.633638133288477,
+            "positive_top3_contribution": 0.9328476064170058,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "ABOVE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.6336381332884767,
+            "absolute_top3_contribution": 0.9328476064170055,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.012417532237768042,
+              0.11839336102514894
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.06844646311075181,
+              "ai_022_010": 0.063386184302218,
+              "ai_041_003": 0.06601239941307391,
+              "ai_051_004": 0.025486023681635807,
+              "ai_052_003": 0.054929589209984066
+            },
+            "loso_range": [
+              0.025486023681635807,
+              0.06844646311075181
+            ],
+            "mean": 0.05565213194353271,
+            "median": 0.024715922508791593,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.004474807274656378,
+              "ai_022_010": 0.024715922508791593,
+              "ai_041_003": 0.01421106206536793,
+              "ai_051_004": 0.17631656499112036,
+              "ai_052_003": 0.058542302877727326
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.6336381332884767,
+            "positive_top3_contribution": 0.9328476064170055,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "ABOVE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.45768880208333335,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.49022499764646826,
+            "absolute_top3_contribution": 0.8441177393541908,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.05727376302083335,
+              0.170322265625
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.053495279947916655,
+              "ai_022_010": 0.051503499348958356,
+              "ai_041_003": 0.09739176432291666,
+              "ai_051_004": 0.0015502929687499917,
+              "ai_052_003": 0.05652465820312498
+            },
+            "loso_range": [
+              0.0015502929687499917,
+              0.09739176432291666
+            ],
+            "mean": 0.05209309895833333,
+            "median": 0.04648437500000002,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.04648437500000002,
+              "ai_022_010": 0.054451497395833215,
+              "ai_041_003": -0.1291015625,
+              "ai_051_004": 0.2542643229166667,
+              "ai_052_003": 0.03436686197916672
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.6526843534572803,
+            "positive_top3_contribution": 0.9117819093377897,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.49022499764646826,
+            "absolute_top3_contribution": 0.8441177393541908,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.05727376302083335,
+              0.170322265625
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.053495279947916655,
+              "ai_022_010": 0.051503499348958356,
+              "ai_041_003": 0.09739176432291666,
+              "ai_051_004": 0.0015502929687499917,
+              "ai_052_003": 0.05652465820312498
+            },
+            "loso_range": [
+              0.0015502929687499917,
+              0.09739176432291666
+            ],
+            "mean": 0.05209309895833333,
+            "median": 0.04648437500000002,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.04648437500000002,
+              "ai_022_010": 0.054451497395833215,
+              "ai_041_003": -0.1291015625,
+              "ai_051_004": 0.2542643229166667,
+              "ai_052_003": 0.03436686197916672
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.6526843534572803,
+            "positive_top3_contribution": 0.9117819093377897,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      },
+      "OPACITY_NORMALIZED": {
+        "depth_absrel": {
+          "absolute_mean": 0.4576831827938218,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.32094767727061546,
+            "absolute_top3_contribution": 0.7365676489127062,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.15445184043359989,
+              0.22603659286875682
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.020225306548302055,
+              "ai_022_010": 0.0893289953567942,
+              "ai_041_003": 0.10894192731998746,
+              "ai_051_004": -0.03945066389350227,
+              "ai_052_003": -8.36842436890417e-05
+            },
+            "loso_range": [
+              -0.03945066389350227,
+              0.10894192731998746
+            ],
+            "mean": 0.035792376217578484,
+            "median": 0.09806065489468418,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.09806065489468418,
+              "ai_022_010": -0.1783541003392844,
+              "ai_041_003": -0.25680582819205744,
+              "ai_051_004": 0.3367645366619015,
+              "ai_052_003": 0.17929661806264857
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.5483676550596714,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.4051239987978802,
+            "absolute_top3_contribution": 0.8814823644928073,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.03474964473410499,
+              0.4340506991613804
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.1114231238129407,
+              "ai_022_010": 0.13284295381583722,
+              "ai_041_003": 0.2952726336228291,
+              "ai_051_004": 0.21672026587595444,
+              "ai_052_003": 0.24199365894062724
+            },
+            "loso_range": [
+              0.1114231238129407,
+              0.2952726336228291
+            ],
+            "mean": 0.19965052721363774,
+            "median": 0.13137157256437088,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.5525601408164258,
+              "ai_022_010": 0.46688082080483984,
+              "ai_041_003": -0.1828378984231276,
+              "ai_051_004": 0.13137157256437088,
+              "ai_052_003": 0.030278000305679675
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.4678389375581677,
+            "positive_top3_contribution": 0.9743643696893057,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.22782633463541666,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.46624926628839763,
+            "absolute_top3_contribution": 0.9194087339494594,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.17689371744791665,
+              0.28540690104166666
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.05817159016927085,
+              "ai_022_010": 0.1457244873046875,
+              "ai_041_003": 0.07954101562500002,
+              "ai_051_004": -0.06183878580729164,
+              "ai_052_003": 0.025565592447916688
+            },
+            "loso_range": [
+              -0.06183878580729164,
+              0.1457244873046875
+            ],
+            "mean": 0.049432779947916686,
+            "median": 0.014477539062500017,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.014477539062500017,
+              "ai_022_010": -0.33573404947916663,
+              "ai_041_003": -0.07100016276041668,
+              "ai_051_004": 0.49451904296875,
+              "ai_052_003": 0.1449015299479167
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.7562631454493409,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.33353237395752466,
+            "absolute_top3_contribution": 0.7710303006176893,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.12615234375,
+              0.10346028645833334
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": 0.00776265462239583,
+              "ai_022_010": -0.004367065429687497,
+              "ai_041_003": 0.0035156250000000014,
+              "ai_051_004": -0.07903849283854167,
+              "ai_052_003": -0.03947347005208335
+            },
+            "loso_range": [
+              -0.07903849283854167,
+              0.00776265462239583
+            ],
+            "mean": -0.02232014973958334,
+            "median": -0.09413248697916668,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": -0.1426513671875,
+              "ai_022_010": -0.09413248697916668,
+              "ai_041_003": -0.12566324869791667,
+              "ai_051_004": 0.20455322265624998,
+              "ai_052_003": 0.046293131510416696
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.8154522450038929,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      },
+      "RAW": {
+        "depth_absrel": {
+          "absolute_mean": 0.4724243643257576,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.31508352985398325,
+            "absolute_top3_contribution": 0.7628377498736139,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.16490989400648282,
+              0.20484129141321272
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.0042227262018686845,
+              "ai_022_010": 0.0735649613411705,
+              "ai_041_003": 0.09182047272673308,
+              "ai_051_004": -0.05303314161355936,
+              "ai_052_003": -0.01131904522799966
+            },
+            "loso_range": [
+              -0.05303314161355936,
+              0.09182047272673308
+            ],
+            "mean": 0.02105119468564265,
+            "median": 0.08836506862073851,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.08836506862073851,
+              "ai_022_010": -0.18900387193646878,
+              "ai_041_003": -0.26202591747871906,
+              "ai_051_004": 0.3173885398824507,
+              "ai_052_003": 0.1505321543402119
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.570549456919677,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.4173753525373877,
+            "absolute_top3_contribution": 0.9127297861051255,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.05221866529363447,
+              0.4220373566570383
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.09542054346650733,
+              "ai_022_010": 0.11707891980021351,
+              "ai_041_003": 0.2781511790295747,
+              "ai_051_004": 0.20313778815589734,
+              "ai_052_003": 0.23075829795631664
+            },
+            "loso_range": [
+              0.09542054346650733,
+              0.2781511790295747
+            ],
+            "mean": 0.18490934568170192,
+            "median": 0.11199557578492009,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.5428645545424802,
+              "ai_022_010": 0.45623104920765545,
+              "ai_041_003": -0.1880579877097892,
+              "ai_051_004": 0.11199557578492009,
+              "ai_052_003": 0.0015135365832429915
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.48792221233471705,
+            "positive_top3_contribution": 0.9986396457238438,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.20623209635416667,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.46017056502690795,
+            "absolute_top3_contribution": 0.9247787253612607,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.1942513020833333,
+              0.2633121744791667
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": 0.035894775390625015,
+              "ai_022_010": 0.12451070149739585,
+              "ai_041_003": 0.052669270833333344,
+              "ai_051_004": -0.08123779296875,
+              "ai_052_003": 0.00735575358072918
+            },
+            "loso_range": [
+              -0.08123779296875,
+              0.12451070149739585
+            ],
+            "mean": 0.027838541666666678,
+            "median": -0.004386393229166646,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": -0.004386393229166646,
+              "ai_022_010": -0.35885009765625,
+              "ai_041_003": -0.071484375,
+              "ai_051_004": 0.46414388020833336,
+              "ai_052_003": 0.10976969401041667
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.8087348009500515,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.2950916861988143,
+            "absolute_top3_contribution": 0.7824486419412657,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.13851481119791667,
+              0.07443603515625001
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": -0.014514160156249997,
+              "ai_022_010": -0.02558085123697916,
+              "ai_041_003": -0.023356119791666657,
+              "ai_051_004": -0.0984375,
+              "ai_052_003": -0.05768330891927083
+            },
+            "loso_range": [
+              -0.0984375,
+              -0.014514160156249997
+            ],
+            "mean": -0.04391438802083333,
+            "median": -0.11724853515625001,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": -0.16151529947916665,
+              "ai_022_010": -0.11724853515625001,
+              "ai_041_003": -0.1261474609375,
+              "ai_051_004": 0.17417805989583335,
+              "ai_052_003": 0.011161295572916674
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.9397791389492633,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      }
+    },
+    "V5_C2": {
+      "MEDIAN_SCALED": {
+        "depth_absrel": {
+          "absolute_mean": 0.4614177564349184,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.5430277289567192,
+            "absolute_top3_contribution": 0.8941672346831372,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.03398219714344865,
+              0.10287241726947724
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.055503317156282914,
+              "ai_022_010": 0.029477150220537235,
+              "ai_041_003": 0.03500271090318734,
+              "ai_051_004": -0.0033612924099862412,
+              "ai_052_003": 0.03092799169019446
+            },
+            "loso_range": [
+              -0.0033612924099862412,
+              0.055503317156282914
+            ],
+            "mean": 0.02950997551204314,
+            "median": 0.023837910799437867,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": -0.07446339106491595,
+              "ai_022_010": 0.029641276678066764,
+              "ai_041_003": 0.007539033947466356,
+              "ai_051_004": 0.16099504720016067,
+              "ai_052_003": 0.023837910799437867
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.7251595735568401,
+            "positive_top3_contribution": 0.9660424172205853,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.5430277289567188,
+            "absolute_top3_contribution": 0.8941672346831365,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.033982197143448675,
+              0.1028724172694773
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.05550331715628297,
+              "ai_022_010": 0.029477150220537277,
+              "ai_041_003": 0.03500271090318732,
+              "ai_051_004": -0.0033612924099861996,
+              "ai_052_003": 0.0309279916901945
+            },
+            "loso_range": [
+              -0.0033612924099861996,
+              0.05550331715628297
+            ],
+            "mean": 0.029509975512043173,
+            "median": 0.023837910799437867,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": -0.074463391064916,
+              "ai_022_010": 0.029641276678066764,
+              "ai_041_003": 0.007539033947466578,
+              "ai_051_004": 0.16099504720016067,
+              "ai_052_003": 0.023837910799437867
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.7251595735568395,
+            "positive_top3_contribution": 0.9660424172205843,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.4359993489583333,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.47857894310916893,
+            "absolute_top3_contribution": 0.8304442825928622,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.06232014973958329,
+              0.14468505859374997
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.04935506184895832,
+              "ai_022_010": 0.026272583007812524,
+              "ai_041_003": 0.07050272623697916,
+              "ai_051_004": -0.02215372721354166,
+              "ai_052_003": 0.028041585286458316
+            },
+            "loso_range": [
+              -0.02215372721354166,
+              0.07050272623697916
+            ],
+            "mean": 0.030403645833333333,
+            "median": 0.03985188802083339,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": -0.04540201822916662,
+              "ai_022_010": 0.04692789713541656,
+              "ai_041_003": -0.12999267578124998,
+              "ai_051_004": 0.2406331380208333,
+              "ai_052_003": 0.03985188802083339
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.7349530851923197,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.47857894310916893,
+            "absolute_top3_contribution": 0.8304442825928622,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.06232014973958329,
+              0.14468505859374997
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.04935506184895832,
+              "ai_022_010": 0.026272583007812524,
+              "ai_041_003": 0.07050272623697916,
+              "ai_051_004": -0.02215372721354166,
+              "ai_052_003": 0.028041585286458316
+            },
+            "loso_range": [
+              -0.02215372721354166,
+              0.07050272623697916
+            ],
+            "mean": 0.030403645833333333,
+            "median": 0.03985188802083339,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": -0.04540201822916662,
+              "ai_022_010": 0.04692789713541656,
+              "ai_041_003": -0.12999267578124998,
+              "ai_051_004": 0.2406331380208333,
+              "ai_052_003": 0.03985188802083339
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.7349530851923197,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      },
+      "OPACITY_NORMALIZED": {
+        "depth_absrel": {
+          "absolute_mean": 0.4785841933645668,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.34266734272052596,
+            "absolute_top3_contribution": 0.8493776276061622,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.16744013614116052,
+              0.1972228674348273
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.018012212393971827,
+              "ai_022_010": 0.052431890460316447,
+              "ai_041_003": 0.08974760607727733,
+              "ai_051_004": -0.05969089086841674,
+              "ai_052_003": -0.026043989828981873
+            },
+            "loso_range": [
+              -0.05969089086841674,
+              0.08974760607727733
+            ],
+            "mean": 0.0148913656468334,
+            "median": 0.002407978658279686,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.002407978658279686,
+              "ai_022_010": -0.1352707336070988,
+              "ai_041_003": -0.28453359607494233,
+              "ai_051_004": 0.31322039170783395,
+              "ai_052_003": 0.17863278755009449
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.6337143566538038,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.38784117792053824,
+            "absolute_top3_contribution": 0.8954720501263512,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.05081511308309409,
+              0.40831414636887936
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.10921002965861047,
+              "ai_022_010": 0.09594584891935944,
+              "ai_041_003": 0.27607831238011893,
+              "ai_051_004": 0.19648003890103996,
+              "ai_052_003": 0.2160333533553344
+            },
+            "loso_range": [
+              0.09594584891935944,
+              0.27607831238011893
+            ],
+            "mean": 0.17874951664289265,
+            "median": 0.10782742761030334,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.4569074645800213,
+              "ai_022_010": 0.5099641875370254,
+              "ai_041_003": -0.21056566630601248,
+              "ai_051_004": 0.10782742761030334,
+              "ai_052_003": 0.02961416979312559
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.4617930535185251,
+            "positive_top3_contribution": 0.9731831798577214,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.20681640625000003,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.4599808946839867,
+            "absolute_top3_contribution": 0.861168036969603,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.16324137369791666,
+              0.24995930989583334
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": 0.05026143391927084,
+              "ai_022_010": 0.10776163736979169,
+              "ai_041_003": 0.05539042154947919,
+              "ai_051_004": -0.07909138997395834,
+              "ai_052_003": 0.007792154947916685
+            },
+            "loso_range": [
+              -0.07909138997395834,
+              0.10776163736979169
+            ],
+            "mean": 0.02842285156250001,
+            "median": -0.05893147786458333,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": -0.05893147786458333,
+              "ai_022_010": -0.2889322916666667,
+              "ai_041_003": -0.07944742838541667,
+              "ai_051_004": 0.4584798177083334,
+              "ai_052_003": 0.11094563802083332
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.8051621386002773,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.3735788259132098,
+            "absolute_top3_contribution": 0.8968312039173749,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.15050048828125,
+              0.07480794270833335
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": -0.00014750162760415741,
+              "ai_022_010": -0.04232991536458332,
+              "ai_041_003": -0.02063496907552083,
+              "ai_051_004": -0.09629109700520834,
+              "ai_052_003": -0.05724690755208332
+            },
+            "loso_range": [
+              -0.09629109700520834,
+              -0.00014750162760415741
+            ],
+            "mean": -0.04333007812499999,
+            "median": -0.04733072916666668,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": -0.21606038411458334,
+              "ai_022_010": -0.04733072916666668,
+              "ai_041_003": -0.13411051432291665,
+              "ai_051_004": 0.1685139973958334,
+              "ai_052_003": 0.012337239583333326
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.9317823876164335,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      },
+      "RAW": {
+        "depth_absrel": {
+          "absolute_mean": 0.4942758871919408,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.3293108041585353,
+            "absolute_top3_contribution": 0.8272781645849435,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.17886024306389253,
+              0.17725958670281133
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": -4.585029972915822e-05,
+              "ai_022_010": 0.03749240249429006,
+              "ai_041_003": 0.07181714900631798,
+              "ai_051_004": -0.07461107432080295,
+              "ai_052_003": -0.03865426778277893
+            },
+            "loso_range": [
+              -0.07461107432080295,
+              0.07181714900631798
+            ],
+            "mean": -0.0008003281805405993,
+            "median": -0.0038182397037863636,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": -0.0038182397037863636,
+              "ai_022_010": -0.15397125087986324,
+              "ai_041_003": -0.29127023692797493,
+              "ai_051_004": 0.2944426563805088,
+              "ai_052_003": 0.15061543022841273
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.6615825332463614,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.39304435177447333,
+            "absolute_top3_contribution": 0.9274766304565969,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.06847225941844486,
+              0.39458790504948216
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.09115196696490949,
+              "ai_022_010": 0.08100636095333305,
+              "ai_041_003": 0.25814785530915957,
+              "ai_051_004": 0.18155985544865375,
+              "ai_052_003": 0.20342307540153734
+            },
+            "loso_range": [
+              0.08100636095333305,
+              0.25814785530915957
+            ],
+            "mean": 0.16305782281551864,
+            "median": 0.08904969228297821,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.45068124621795524,
+              "ai_022_010": 0.491263670264261,
+              "ai_041_003": -0.21730230715904508,
+              "ai_051_004": 0.08904969228297821,
+              "ai_052_003": 0.0015968124714438314
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.47575803958928925,
+            "positive_top3_contribution": 0.9984535873157541,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        },
+        "depth_delta1": {
+          "absolute_mean": 0.18399251302083336,
+          "reference_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_ABSREL_OPTIMAL": {
+            "absolute_top1_contribution": 0.4288269973571865,
+            "absolute_top3_contribution": 0.8544053669445011,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.20043050130208334,
+              0.22835367838541662
+            ],
+            "improved_tied_worse": [
+              2,
+              0,
+              3
+            ],
+            "loso": {
+              "ai_015_004": 0.02333170572916666,
+              "ai_022_010": 0.092169189453125,
+              "ai_041_003": 0.027092488606770833,
+              "ai_051_004": -0.10029093424479166,
+              "ai_052_003": -0.014307657877604171
+            },
+            "loso_range": [
+              -0.10029093424479166,
+              0.092169189453125
+            ],
+            "mean": 0.005598958333333332,
+            "median": -0.06533203125,
+            "n_scenes": 5,
+            "negative": 3,
+            "per_scene": {
+              "ai_015_004": -0.06533203125,
+              "ai_022_010": -0.34068196614583335,
+              "ai_041_003": -0.08037516276041667,
+              "ai_051_004": 0.4291585286458333,
+              "ai_052_003": 0.08522542317708334
+            },
+            "positive": 2,
+            "positive_top1_contribution": 0.8343155479966776,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_ABSREL_OPTIMAL_label": "NOT_DISTINGUISHABLE",
+          "vs_REF_TRAIN_MEDIAN": {
+            "absolute_top1_contribution": 0.3651957837361228,
+            "absolute_top3_contribution": 0.8153781411566671,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.16316080729166665,
+              0.04388346354166665
+            ],
+            "improved_tied_worse": [
+              1,
+              0,
+              4
+            ],
+            "loso": {
+              "ai_015_004": -0.02707722981770834,
+              "ai_022_010": -0.05792236328125,
+              "ai_041_003": -0.04893290201822917,
+              "ai_051_004": -0.11749064127604167,
+              "ai_052_003": -0.07934672037760418
+            },
+            "loso_range": [
+              -0.11749064127604167,
+              -0.02707722981770834
+            ],
+            "mean": -0.06615397135416667,
+            "median": -0.09908040364583334,
+            "n_scenes": 5,
+            "negative": 4,
+            "per_scene": {
+              "ai_015_004": -0.2224609375,
+              "ai_022_010": -0.09908040364583334,
+              "ai_041_003": -0.13503824869791667,
+              "ai_051_004": 0.1391927083333333,
+              "ai_052_003": -0.013382975260416652
+            },
+            "positive": 1,
+            "positive_top1_contribution": 1.0,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          },
+          "vs_REF_TRAIN_MEDIAN_label": "NOT_DISTINGUISHABLE"
+        }
+      }
+    }
+  },
+  "integrity": {
+    "max_raw_absrel_deviation": 0.0,
+    "max_raw_delta1_pixel_deviation": 0.0,
+    "median_scale_undefined_views": 36,
+    "prediction_rows": 1080,
+    "reference_rows": 120,
+    "variants": [
+      "C0",
+      "C1",
+      "C2"
+    ]
+  },
+  "primary_contrasts": {
+    "V5": {
+      "by_readout": {
+        "MEDIAN_SCALED": {
+          "depth_absrel": {
+            "label": "NOT_ESTABLISHED",
+            "stats": {
+              "absolute_top1_contribution": 0.46176916177116545,
+              "absolute_top3_contribution": 0.920452564970462,
+              "bootstrap": {
+                "CI": "percentile95",
+                "draws": 10000,
+                "seed": 20260928,
+                "unit": "scene"
+              },
+              "ci95": [
+                -0.03448394622365315,
+                0.07486408720193191
+              ],
+              "improved_tied_worse": [
+                2,
+                0,
+                3
+              ],
+              "loso": {
+                "ai_015_004": 0.041165092980566566,
+                "ai_022_010": 0.029533317094485756,
+                "ai_041_003": 0.02538622265069352,
+                "ai_051_004": -0.0068914814275234035,
+                "ai_052_003": 0.009749336718762942
+              },
+              "loso_range": [
+                -0.0068914814275234035,
+                0.041165092980566566
+              ],
+              "mean": 0.019788497603397077,
+              "median": -0.002602402585788699,
+              "n_scenes": 5,
+              "negative": 3,
+              "per_scene": {
+                "ai_015_004": -0.06571788390528088,
+                "ai_022_010": -0.019190780360957643,
+                "ai_041_003": -0.002602402585788699,
+                "ai_051_004": 0.126508413727079,
+                "ai_052_003": 0.05994514114193361
+              },
+              "positive": 2,
+              "positive_top1_contribution": 0.6784982663159933,
+              "positive_top3_contribution": 1.0,
+              "tied": 0
+            }
+          },
+          "depth_delta1": {
+            "label": "NOT_ESTABLISHED",
+            "stats": {
+              "absolute_top1_contribution": 0.6130284768772271,
+              "absolute_top3_contribution": 0.9180384893811052,
+              "bootstrap": {
+                "CI": "percentile95",
+                "draws": 10000,
+                "seed": 20260928,
+                "unit": "scene"
+              },
+              "ci95": [
+                -0.04521077473958327,
+                0.1538924153645833
+              ],
+              "improved_tied_worse": [
+                2,
+                0,
+                3
+              ],
+              "loso": {
+                "ai_015_004": 0.05885009765625002,
+                "ai_022_010": 0.07065022786458335,
+                "ai_041_003": 0.0516886393229167,
+                "ai_051_004": -0.015495808919270788,
+                "ai_052_003": 0.03764750162760419
+              },
+              "loso_range": [
+                -0.015495808919270788,
+                0.07065022786458335
+              ],
+              "mean": 0.04066813151041669,
+              "median": -0.003413899739583351,
+              "n_scenes": 5,
+              "negative": 3,
+              "per_scene": {
+                "ai_015_004": -0.032059733072916596,
+                "ai_022_010": -0.07926025390624991,
+                "ai_041_003": -0.003413899739583351,
+                "ai_051_004": 0.2653238932291666,
+                "ai_052_003": 0.05275065104166671
+              },
+              "positive": 2,
+              "positive_top1_contribution": 0.8341563259562491,
+              "positive_top3_contribution": 1.0,
+              "tied": 0
+            }
+          }
+        },
+        "OPACITY_NORMALIZED": {
+          "depth_absrel": {
+            "label": "NOT_ESTABLISHED",
+            "stats": {
+              "absolute_top1_contribution": 0.4557485901615183,
+              "absolute_top3_contribution": 0.8091189495916067,
+              "bootstrap": {
+                "CI": "percentile95",
+                "draws": 10000,
+                "seed": 20260928,
+                "unit": "scene"
+              },
+              "ci95": [
+                -0.15770438564402922,
+                0.10365483799231204
+              ],
+              "improved_tied_worse": [
+                3,
+                0,
+                2
+              ],
+              "loso": {
+                "ai_015_004": -8.782310061443421e-05,
+                "ai_022_010": 0.05867324584357854,
+                "ai_041_003": -0.030675345767142773,
+                "ai_051_004": -0.050589845327758995,
+                "ai_052_003": -0.03475096201020181
+              },
+              "loso_range": [
+                -0.050589845327758995,
+                0.05867324584357854
+              ],
+              "mean": -0.011486146072427894,
+              "median": 0.06527065270643162,
+              "n_scenes": 5,
+              "negative": 2,
+              "per_scene": {
+                "ai_015_004": -0.057079437959681734,
+                "ai_022_010": -0.2921237137364536,
+                "ai_041_003": 0.06527065270643162,
+                "ai_051_004": 0.1449286509488965,
+                "ai_052_003": 0.08157311767866776
+              },
+              "positive": 3,
+              "positive_top1_contribution": 0.4967181280748762,
+              "positive_top3_contribution": 1.0,
+              "tied": 0
+            }
+          },
+          "depth_delta1": {
+            "label": "NOT_ESTABLISHED",
+            "stats": {
+              "absolute_top1_contribution": 0.46941115164148,
+              "absolute_top3_contribution": 0.8849921834288692,
+              "bootstrap": {
+                "CI": "percentile95",
+                "draws": 10000,
+                "seed": 20260928,
+                "unit": "scene"
+              },
+              "ci95": [
+                -0.3673950398763015,
+                0.1800154622395833
+              ],
+              "improved_tied_worse": [
+                3,
+                0,
+                2
+              ],
+              "loso": {
+                "ai_015_004": -0.041016642252604214,
+                "ai_022_010": 0.053442382812500015,
+                "ai_041_003": -0.10683898925781252,
+                "ai_051_004": -0.17893066406250002,
+                "ai_052_003": -0.13599853515625004
+              },
+              "loso_range": [
+                -0.17893066406250002,
+                0.053442382812500015
+              ],
+              "mean": -0.08186848958333337,
+              "median": 0.018013509114583333,
+              "n_scenes": 5,
+              "negative": 2,
+              "per_scene": {
+                "ai_015_004": -0.2452758789062499,
+                "ai_022_010": -0.6231119791666668,
+                "ai_041_003": 0.018013509114583333,
+                "ai_051_004": 0.3063802083333333,
+                "ai_052_003": 0.13465169270833335
+              },
+              "positive": 3,
+              "positive_top1_contribution": 0.6674289766431768,
+              "positive_top3_contribution": 1.0,
+              "tied": 0
+            }
+          }
+        },
+        "RAW": {
+          "depth_absrel": {
+            "label": "NOT_ESTABLISHED",
+            "stats": {
+              "absolute_top1_contribution": 0.36248569698385336,
+              "absolute_top3_contribution": 0.7828739436146078,
+              "bootstrap": {
+                "CI": "percentile95",
+                "draws": 10000,
+                "seed": 20260928,
+                "unit": "scene"
+              },
+              "ci95": [
+                -0.11204831514380058,
+                0.11570786645795292
+              ],
+              "improved_tied_worse": [
+                3,
+                0,
+                2
+              ],
+              "loso": {
+                "ai_015_004": 0.024984113568562172,
+                "ai_022_010": 0.06333475177805901,
+                "ai_041_003": -0.00820039727312323,
+                "ai_051_004": -0.03581843891709538,
+                "ai_052_003": -0.012563362026165259
+              },
+              "loso_range": [
+                -0.03581843891709538,
+                0.06333475177805901
+              ],
+              "mean": 0.006347333426047463,
+              "median": 0.06453825622273024,
+              "n_scenes": 5,
+              "negative": 2,
+              "per_scene": {
+                "ai_015_004": -0.06819978714401137,
+                "ai_022_010": -0.22160233998199874,
+                "ai_041_003": 0.06453825622273024,
+                "ai_051_004": 0.17501042279861884,
+                "ai_052_003": 0.08199011523489835
+              },
+              "positive": 3,
+              "positive_top1_contribution": 0.5442902253939096,
+              "positive_top3_contribution": 1.0,
+              "tied": 0
+            }
+          },
+          "depth_delta1": {
+            "label": "NOT_ESTABLISHED",
+            "stats": {
+              "absolute_top1_contribution": 0.39407087198219826,
+              "absolute_top3_contribution": 0.8793517359089494,
+              "bootstrap": {
+                "CI": "percentile95",
+                "draws": 10000,
+                "seed": 20260928,
+                "unit": "scene"
+              },
+              "ci95": [
+                -0.23424316406249995,
+                0.22074381510416669
+              ],
+              "improved_tied_worse": [
+                3,
+                0,
+                2
+              ],
+              "loso": {
+                "ai_015_004": 0.027648925781249997,
+                "ai_022_010": 0.10177815755208333,
+                "ai_041_003": -0.0031270345052083377,
+                "ai_051_004": -0.09285786946614584,
+                "ai_052_003": -0.028421020507812506
+              },
+              "loso_range": [
+                -0.09285786946614584,
+                0.10177815755208333
+              ],
+              "mean": 0.0010042317708333277,
+              "median": 0.017529296875,
+              "n_scenes": 5,
+              "negative": 2,
+              "per_scene": {
+                "ai_015_004": -0.10557454427083335,
+                "ai_022_010": -0.4020914713541667,
+                "ai_041_003": 0.017529296875,
+                "ai_051_004": 0.37645263671875,
+                "ai_052_003": 0.11870524088541666
+              },
+              "positive": 3,
+              "positive_top1_contribution": 0.7342735598977762,
+              "positive_top3_contribution": 1.0,
+              "tied": 0
+            }
+          }
+        }
+      },
+      "definition": "C0 minus C1 (AbsRel) / C1 minus C0 (delta1); positive favors C1",
+      "name": "DEPTH_GAIN",
+      "note": "secondary description; the frozen V2-V4 statuses are unchanged"
+    }
+  },
+  "primary_reference": {
+    "depth_absrel": "REF_TRAIN_ABSREL_OPTIMAL",
+    "depth_delta1": "REF_TRAIN_MEDIAN"
+  },
+  "readout_effect": {
+    "V5_C0": {
+      "depth_absrel": {
+        "label": "ABOVE",
+        "stats": {
+          "absolute_top1_contribution": 0.48980061995773033,
+          "absolute_top3_contribution": 0.9643232276528407,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.007061464212763968,
+            0.059491779497410247
+          ],
+          "improved_tied_worse": [
+            4,
+            0,
+            1
+          ],
+          "loso": {
+            "ai_015_004": 0.04107451701560998,
+            "ai_022_010": 0.02042553995010417,
+            "ai_041_003": 0.03959640308727393,
+            "ai_051_004": 0.028353884130720715,
+            "ai_052_003": 0.033422960968347175
+          },
+          "loso_range": [
+            0.02042553995010417,
+            0.04107451701560998
+          ],
+          "mean": 0.03257466103041119,
+          "median": 0.029181461278667276,
+          "n_scenes": 5,
+          "negative": 1,
+          "per_scene": {
+            "ai_015_004": -0.0014247629103839587,
+            "ai_022_010": 0.0811711453516393,
+            "ai_041_003": 0.004487692802960241,
+            "ai_051_004": 0.049457768629173116,
+            "ai_052_003": 0.029181461278667276
+          },
+          "positive": 4,
+          "positive_top1_contribution": 0.49404808169010833,
+          "positive_top3_contribution": 0.9726856629789783,
+          "tied": 0
+        }
+      },
+      "depth_delta1": {
+        "label": "ABOVE",
+        "stats": {
+          "absolute_top1_contribution": 0.4673947759973204,
+          "absolute_top3_contribution": 0.9632699483520164,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.027763671875,
+            0.18203206380208337
+          ],
+          "improved_tied_worse": [
+            4,
+            1,
+            0
+          ],
+          "loso": {
+            "ai_015_004": 0.09094238281250003,
+            "ai_022_010": 0.06954956054687497,
+            "ai_041_003": 0.13058369954427085,
+            "ai_051_004": 0.1054718017578125,
+            "ai_052_003": 0.125787353515625
+          },
+          "loso_range": [
+            0.06954956054687497,
+            0.13058369954427085
+          ],
+          "mean": 0.10446695963541668,
+          "median": 0.10044759114583335,
+          "n_scenes": 5,
+          "negative": 0,
+          "per_scene": {
+            "ai_015_004": 0.15856526692708323,
+            "ai_022_010": 0.24413655598958345,
+            "ai_041_003": 0.0,
+            "ai_051_004": 0.10044759114583335,
+            "ai_052_003": 0.01918538411458333
+          },
+          "positive": 4,
+          "positive_top1_contribution": 0.4673947759973204,
+          "positive_top3_contribution": 0.9632699483520164,
+          "tied": 1
+        }
+      }
+    },
+    "V5_C1": {
+      "depth_absrel": {
+        "label": "ABOVE",
+        "stats": {
+          "absolute_top1_contribution": 0.3902599484324958,
+          "absolute_top3_contribution": 0.7976325638715807,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.008096224543679798,
+            0.023072994844141305
+          ],
+          "improved_tied_worse": [
+            5,
+            0,
+            0
+          ],
+          "loso": {
+            "ai_015_004": 0.01600258034643337,
+            "ai_022_010": 0.015764034015623693,
+            "ai_041_003": 0.017121454593254384,
+            "ai_051_004": 0.013582477720057093,
+            "ai_052_003": 0.011235360984310619
+          },
+          "loso_range": [
+            0.011235360984310619,
+            0.017121454593254384
+          ],
+          "mean": 0.014741181531935831,
+          "median": 0.010649771597184388,
+          "n_scenes": 5,
+          "negative": 0,
+          "per_scene": {
+            "ai_015_004": 0.009695586273945678,
+            "ai_022_010": 0.010649771597184388,
+            "ai_041_003": 0.005220089286661622,
+            "ai_051_004": 0.019375996779450788,
+            "ai_052_003": 0.028764463722436684
+          },
+          "positive": 5,
+          "positive_top1_contribution": 0.3902599484324958,
+          "positive_top3_contribution": 0.7976325638715807,
+          "tied": 0
+        }
+      },
+      "depth_delta1": {
+        "label": "ABOVE",
+        "stats": {
+          "absolute_top1_contribution": 0.32538157150932756,
+          "absolute_top3_contribution": 0.8208027133973996,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.010138346354166657,
+            0.03082600911458333
+          ],
+          "improved_tied_worse": [
+            5,
+            0,
+            0
+          ],
+          "loso": {
+            "ai_015_004": 0.02227681477864583,
+            "ai_022_010": 0.021213785807291663,
+            "ai_041_003": 0.026871744791666662,
+            "ai_051_004": 0.01939900716145834,
+            "ai_052_003": 0.01820983886718749
+          },
+          "loso_range": [
+            0.01820983886718749,
+            0.026871744791666662
+          ],
+          "mean": 0.021594238281249997,
+          "median": 0.023116048177083334,
+          "n_scenes": 5,
+          "negative": 0,
+          "per_scene": {
+            "ai_015_004": 0.018863932291666663,
+            "ai_022_010": 0.023116048177083334,
+            "ai_041_003": 0.00048421223958333356,
+            "ai_051_004": 0.03037516276041663,
+            "ai_052_003": 0.03513183593750002
+          },
+          "positive": 5,
+          "positive_top1_contribution": 0.32538157150932756,
+          "positive_top3_contribution": 0.8208027133973996,
+          "tied": 0
+        }
+      }
+    },
+    "V5_C2": {
+      "depth_absrel": {
+        "label": "ABOVE",
+        "stats": {
+          "absolute_top1_contribution": 0.35709793512292176,
+          "absolute_top3_contribution": 0.834780625244101,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.008838606253311176,
+            0.022458140514155643
+          ],
+          "improved_tied_worse": [
+            5,
+            0,
+            0
+          ],
+          "loso": {
+            "ai_015_004": 0.018058062693700985,
+            "ai_022_010": 0.014939487966026385,
+            "ai_041_003": 0.017930457070959346,
+            "ai_051_004": 0.014920183452386215,
+            "ai_052_003": 0.012610277953797058
+          },
+          "loso_range": [
+            0.012610277953797058,
+            0.018058062693700985
+          ],
+          "mean": 0.015691693827374,
+          "median": 0.01870051727276445,
+          "n_scenes": 5,
+          "negative": 0,
+          "per_scene": {
+            "ai_015_004": 0.006226218362066049,
+            "ai_022_010": 0.01870051727276445,
+            "ai_041_003": 0.006736640853032605,
+            "ai_051_004": 0.01877773532732513,
+            "ai_052_003": 0.028017357321681757
+          },
+          "positive": 5,
+          "positive_top1_contribution": 0.35709793512292176,
+          "positive_top3_contribution": 0.834780625244101,
+          "tied": 0
+        }
+      },
+      "depth_delta1": {
+        "label": "ABOVE",
+        "stats": {
+          "absolute_top1_contribution": 0.45346930043499933,
+          "absolute_top3_contribution": 0.9357840690294515,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.007701009114583354,
+            0.038194173177083346
+          ],
+          "improved_tied_worse": [
+            5,
+            0,
+            0
+          ],
+          "loso": {
+            "ai_015_004": 0.026929728190104182,
+            "ai_022_010": 0.015592447916666686,
+            "ai_041_003": 0.02829793294270835,
+            "ai_051_004": 0.02119954427083333,
+            "ai_052_003": 0.022099812825520856
+          },
+          "loso_range": [
+            0.015592447916666686,
+            0.02829793294270835
+          ],
+          "mean": 0.02282389322916668,
+          "median": 0.025720214843749978,
+          "n_scenes": 5,
+          "negative": 0,
+          "per_scene": {
+            "ai_015_004": 0.006400553385416674,
+            "ai_022_010": 0.05174967447916666,
+            "ai_041_003": 0.000927734375000001,
+            "ai_051_004": 0.02932128906250009,
+            "ai_052_003": 0.025720214843749978
+          },
+          "positive": 5,
+          "positive_top1_contribution": 0.45346930043499933,
+          "positive_top3_contribution": 0.9357840690294515,
+          "tied": 0
+        }
+      }
+    }
+  },
+  "reference_values": {
+    "REF_TRAIN_ABSREL_OPTIMAL": 2.3736329078674316,
+    "REF_TRAIN_MEDIAN": 4.19921875,
+    "train_pixel_count": 981547
+  },
+  "sensitivity_excluding_no_hit_scenes": {
+    "excluded_no_hit_scenes": []
+  },
+  "static": {
+    "V5_C0": {
+      "MEDIAN_SCALED": {
+        "depth_absrel": {
+          "label": "NOT_DISTINGUISHABLE",
+          "stats": {
+            "absolute_top1_contribution": 0.39194225804512917,
+            "absolute_top3_contribution": 0.8758261263691469,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.0026195378962047488,
+              0.04339709501868971
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.012196543350576128,
+              "ai_022_010": 0.025821497570812313,
+              "ai_041_003": 0.02033976753760869,
+              "ai_051_004": 0.014225321497821214,
+              "ai_052_003": 0.029360762849394068
+            },
+            "loso_range": [
+              0.012196543350576128,
+              0.029360762849394068
+            ],
+            "mean": 0.020388778561242483,
+            "median": 0.020584822655777657,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.0531577194039079,
+              "ai_022_010": -0.001342097477036841,
+              "ai_041_003": 0.020584822655777657,
+              "ai_051_004": 0.045042606814927555,
+              "ai_052_003": -0.01549915859136386
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.44751149371391513,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "NOT_DISTINGUISHABLE",
+          "stats": {
+            "absolute_top1_contribution": 0.776972055182172,
+            "absolute_top3_contribution": 0.9597250998029208,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.004152018229166688,
+              0.07760009765624995
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.002639770507812479,
+              "ai_022_010": 0.029689534505208316,
+              "ai_041_003": 0.03234354654947913,
+              "ai_051_004": 0.0370473225911458,
+              "ai_052_003": 0.0339650472005208
+            },
+            "loso_range": [
+              0.002639770507812479,
+              0.0370473225911458
+            ],
+            "mean": 0.027137044270833306,
+            "median": 0.0063110351562500056,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.1251261393229166,
+              "ai_022_010": 0.01692708333333326,
+              "ai_041_003": 0.0063110351562500056,
+              "ai_051_004": -0.012504069010416674,
+              "ai_052_003": -0.00017496744791667407
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.8433711809555157,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          }
+        }
+      },
+      "OPACITY_NORMALIZED": {
+        "depth_absrel": {
+          "label": "NOT_DISTINGUISHABLE",
+          "stats": {
+            "absolute_top1_contribution": 0.5900257509995842,
+            "absolute_top3_contribution": 0.9621046469484706,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.005267072522729843,
+              0.14605159128833084
+            ],
+            "improved_tied_worse": [
+              3,
+              0,
+              2
+            ],
+            "loso": {
+              "ai_015_004": 0.06508733351001077,
+              "ai_022_010": 0.0862642044051868,
+              "ai_041_003": 0.08948391657940195,
+              "ai_051_004": 0.03113592518001565,
+              "ai_052_003": 0.07246343211728339
+            },
+            "loso_range": [
+              0.03113592518001565,
+              0.08948391657940195
+            ],
+            "mean": 0.06888696235837971,
+            "median": 0.05458108332276501,
+            "n_scenes": 5,
+            "negative": 2,
+            "per_scene": {
+              "ai_015_004": 0.08408547775185549,
+              "ai_022_010": -0.0006220058288486374,
+              "ai_041_003": -0.01350085452570926,
+              "ai_051_004": 0.21989111107183595,
+              "ai_052_003": 0.05458108332276501
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.6132656700817135,
+            "positive_top3_contribution": 1.0,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "NOT_DISTINGUISHABLE",
+          "stats": {
+            "absolute_top1_contribution": 0.49305170013409727,
+            "absolute_top3_contribution": 0.9801416137821471,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.0008740234374999822,
+              0.1844319661458333
+            ],
+            "improved_tied_worse": [
+              3,
+              1,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.055646769205729196,
+              "ai_022_010": 0.11073099772135415,
+              "ai_041_003": 0.11436869303385418,
+              "ai_051_004": 0.0599945068359375,
+              "ai_052_003": 0.11673380533854168
+            },
+            "loso_range": [
+              0.055646769205729196,
+              0.11673380533854168
+            ],
+            "mean": 0.09149495442708334,
+            "median": 0.014550781250000089,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.23488769531249992,
+              "ai_022_010": 0.014550781250000089,
+              "ai_041_003": 0.0,
+              "ai_051_004": 0.2174967447916667,
+              "ai_052_003": -0.00946044921875
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.5030412883211041,
+            "positive_top3_contribution": 1.0,
+            "tied": 1
+          }
+        }
+      },
+      "RAW": {
+        "depth_absrel": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.5365008297485756,
+            "absolute_top3_contribution": 0.8848189067262078,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.02931994400726996,
+              0.14858750494357467
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.07880640072316883,
+              "ai_022_010": 0.09661933666541042,
+              "ai_041_003": 0.09197214425493783,
+              "ai_051_004": 0.046376866557910845,
+              "ai_052_003": 0.08645782639199617
+            },
+            "loso_range": [
+              0.046376866557910845,
+              0.09661933666541042
+            ],
+            "mean": 0.08004651491868482,
+            "median": 0.0544012690254394,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.08500697170074878,
+              "ai_022_010": 0.01375522793178241,
+              "ai_041_003": 0.03234399757367279,
+              "ai_051_004": 0.21472510836178071,
+              "ai_052_003": 0.0544012690254394
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.5365008297485756,
+            "positive_top3_contribution": 0.8848189067262078,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.44650555058283686,
+            "absolute_top3_contribution": 0.955585048921263,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.005527343750000008,
+              0.13861816406250002
+            ],
+            "improved_tied_worse": [
+              3,
+              1,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.04594319661458335,
+              "ai_022_010": 0.0743988037109375,
+              "ai_041_003": 0.09009094238281252,
+              "ai_051_004": 0.05544840494791668,
+              "ai_052_003": 0.09448242187500003
+            },
+            "loso_range": [
+              0.04594319661458335,
+              0.09448242187500003
+            ],
+            "mean": 0.07207275390625002,
+            "median": 0.06276855468750003,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.1765909830729167,
+              "ai_022_010": 0.06276855468750003,
+              "ai_041_003": 0.0,
+              "ai_051_004": 0.13857014973958334,
+              "ai_052_003": -0.017565917968749997
+            },
+            "positive": 3,
+            "positive_top1_contribution": 0.46725882859603785,
+            "positive_top3_contribution": 1.0,
+            "tied": 1
+          }
+        }
+      }
+    },
+    "V5_C1": {
+      "MEDIAN_SCALED": {
+        "depth_absrel": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.3967321652800733,
+            "absolute_top3_contribution": 0.907534750868185,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.05223120765514896,
+              0.21159363943779425
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.1527625564868968,
+              "ai_022_010": 0.16177185849577472,
+              "ai_041_003": 0.09947315265692225,
+              "ai_051_004": 0.11545974246159599,
+              "ai_052_003": 0.1300948076311683
+            },
+            "loso_range": [
+              0.09947315265692225,
+              0.16177185849577472
+            ],
+            "mean": 0.13191242354647162,
+            "median": 0.1391828872076849,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.04851189178477083,
+              "ai_022_010": 0.012474683749259113,
+              "ai_041_003": 0.2616695071046691,
+              "ai_051_004": 0.19772314788597412,
+              "ai_052_003": 0.1391828872076849
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.3967321652800733,
+            "positive_top3_contribution": 0.907534750868185,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.6200326166544632,
+            "absolute_top3_contribution": 0.9135159422219263,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.026683756510416646,
+              0.20435546874999994
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.11004943847656248,
+              "ai_022_010": 0.1160451253255208,
+              "ai_041_003": 0.11789652506510413,
+              "ai_051_004": 0.046453857421874974,
+              "ai_052_003": 0.09858500162760414
+            },
+            "loso_range": [
+              0.046453857421874974,
+              0.11789652506510413
+            ],
+            "mean": 0.09780598958333331,
+            "median": 0.04883219401041661,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.04883219401041661,
+              "ai_022_010": 0.024849446614583326,
+              "ai_041_003": 0.017443847656249983,
+              "ai_051_004": 0.3032145182291666,
+              "ai_052_003": 0.09468994140624998
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.6200326166544632,
+            "positive_top3_contribution": 0.9135159422219263,
+            "tied": 0
+          }
+        }
+      },
+      "OPACITY_NORMALIZED": {
+        "depth_absrel": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.4736528031858649,
+            "absolute_top3_contribution": 0.9467827169228548,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.05919698356334737,
+              0.3513444727271207
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.20560323415342702,
+              "ai_022_010": 0.24506466638677465,
+              "ai_041_003": 0.24689339427299495,
+              "ai_051_004": 0.13300957725147555,
+              "ai_052_003": 0.18024159587704813
+            },
+            "loso_range": [
+              0.13300957725147555,
+              0.24689339427299495
+            ],
+            "mean": 0.20216249358834407,
+            "median": 0.18839953132801224,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.18839953132801224,
+              "ai_022_010": 0.030553802394621687,
+              "ai_041_003": 0.023238890849740623,
+              "ai_051_004": 0.47877415893581804,
+              "ai_052_003": 0.2898460844335277
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.4736528031858649,
+            "positive_top3_contribution": 0.9467827169228548,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.6164232713194967,
+            "absolute_top3_contribution": 0.987056672760512,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.03365315755208334,
+              0.39232828776041667
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.20054117838541669,
+              "ai_022_010": 0.23480428059895836,
+              "ai_041_003": 0.23510640462239585,
+              "ai_051_004": 0.09071044921875002,
+              "ai_052_003": 0.1847808837890625
+            },
+            "loso_range": [
+              0.09071044921875002,
+              0.23510640462239585
+            ],
+            "mean": 0.18918863932291666,
+            "median": 0.14377848307291669,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.14377848307291669,
+              "ai_022_010": 0.006726074218750003,
+              "ai_041_003": 0.005517578124999999,
+              "ai_051_004": 0.5831013997395833,
+              "ai_052_003": 0.20681966145833336
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.6164232713194967,
+            "positive_top3_contribution": 0.987056672760512,
+            "tied": 0
+          }
+        }
+      },
+      "RAW": {
+        "depth_absrel": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.4649788552077237,
+            "absolute_top3_contribution": 0.9120882863794322,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.07115071249484271,
+              0.344077945775484
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.20504006977944983,
+              "ai_022_010": 0.24256928130269811,
+              "ai_041_003": 0.23548954755886087,
+              "ai_051_004": 0.13376557124350857,
+              "ai_052_003": 0.18321242461237955
+            },
+            "loso_range": [
+              0.13376557124350857,
+              0.24256928130269811
+            ],
+            "mean": 0.2000153788993794,
+            "median": 0.1799166153790976,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.1799166153790976,
+              "ai_022_010": 0.029799769286104505,
+              "ai_041_003": 0.05811870426145349,
+              "ai_051_004": 0.4650146095228626,
+              "ai_052_003": 0.2672271960473787
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.4649788552077237,
+            "positive_top3_contribution": 0.9120882863794322,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.6341195856654047,
+            "absolute_top3_contribution": 0.9803102374628307,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.03278401692708334,
+              0.3672900390625001
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.1855204264322917,
+              "ai_022_010": 0.2164093017578125,
+              "ai_041_003": 0.2151377360026042,
+              "ai_051_004": 0.07973225911458334,
+              "ai_052_003": 0.17487589518229169
+            },
+            "loso_range": [
+              0.07973225911458334,
+              0.2164093017578125
+            ],
+            "mean": 0.17433512369791668,
+            "median": 0.12959391276041668,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.12959391276041668,
+              "ai_022_010": 0.006038411458333337,
+              "ai_041_003": 0.011124674479166666,
+              "ai_051_004": 0.55274658203125,
+              "ai_052_003": 0.17217203776041667
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.6341195856654047,
+            "positive_top3_contribution": 0.9803102374628307,
+            "tied": 0
+          }
+        }
+      }
+    },
+    "V5_C2": {
+      "MEDIAN_SCALED": {
+        "depth_absrel": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.7234453968220544,
+            "absolute_top3_contribution": 0.9931061609245635,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.046073879498310134,
+              0.8295598690473567
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.4461122112473599,
+              "ai_022_010": 0.44302810740573284,
+              "ai_041_003": 0.12120489172089112,
+              "ai_051_004": 0.3883940093065029,
+              "ai_052_003": 0.380674377107974
+            },
+            "loso_range": [
+              0.12120489172089112,
+              0.4461122112473599
+            ],
+            "mean": 0.35588271935769217,
+            "median": 0.22583755956244916,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": -0.00503524820097867,
+              "ai_022_010": 0.007301167165529421,
+              "ai_041_003": 1.2945940299048964,
+              "ai_051_004": 0.22583755956244916,
+              "ai_052_003": 0.25671608835656456
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.7254867706294813,
+            "positive_top3_contribution": 0.9959084469212831,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.5179260817224535,
+            "absolute_top3_contribution": 0.9625634781164812,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.006893717447916702,
+              0.22651285807291668
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.1433146158854167,
+              "ai_022_010": 0.13781026204427083,
+              "ai_041_003": 0.1271209716796875,
+              "ai_051_004": 0.06344604492187503,
+              "ai_052_003": 0.08669840494791668
+            },
+            "loso_range": [
+              0.06344604492187503,
+              0.1433146158854167
+            ],
+            "mean": 0.11167805989583335,
+            "median": 0.04990641276041668,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": -0.014868164062500022,
+              "ai_022_010": 0.007149251302083437,
+              "ai_041_003": 0.04990641276041668,
+              "ai_051_004": 0.30460611979166663,
+              "ai_052_003": 0.2115966796875
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.5313591323358222,
+            "positive_top3_contribution": 0.987528747054314,
+            "tied": 0
+          }
+        }
+      },
+      "OPACITY_NORMALIZED": {
+        "depth_absrel": {
+          "label": "NOT_DISTINGUISHABLE",
+          "stats": {
+            "absolute_top1_contribution": 0.5430324855614036,
+            "absolute_top3_contribution": 0.9338985879902704,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              -0.000992536524869214,
+              0.25621563055955854
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.14283868805681993,
+              "ai_022_010": 0.1475444227156758,
+              "ai_041_003": 0.15853871135370878,
+              "ai_051_004": 0.06043321484047404,
+              "ai_052_003": 0.09365639146492354
+            },
+            "loso_range": [
+              0.06043321484047404,
+              0.15853871135370878
+            ],
+            "mean": 0.12060228568632043,
+            "median": 0.03165667620432244,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.03165667620432244,
+              "ai_022_010": 0.012833737568898829,
+              "ai_041_003": -0.031143416983233085,
+              "ai_051_004": 0.36127856906970596,
+              "ai_052_003": 0.22838586257190796
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.569700873031056,
+            "positive_top3_contribution": 0.9797624544514779,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.7376237623762376,
+            "absolute_top3_contribution": 0.9676912135658011,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.0014306640625000061,
+              0.35006266276041664
+            ],
+            "improved_tied_worse": [
+              4,
+              0,
+              1
+            ],
+            "loso": {
+              "ai_015_004": 0.16944783528645835,
+              "ai_022_010": 0.17322489420572917,
+              "ai_041_003": 0.17914021809895836,
+              "ai_051_004": 0.040143839518229175,
+              "ai_052_003": 0.13881632486979167
+            },
+            "loso_range": [
+              0.040143839518229175,
+              0.17914021809895836
+            ],
+            "mean": 0.14015462239583334,
+            "median": 0.02298177083333336,
+            "n_scenes": 5,
+            "negative": 1,
+            "per_scene": {
+              "ai_015_004": 0.02298177083333336,
+              "ai_022_010": 0.00787353515625,
+              "ai_041_003": -0.015787760416666664,
+              "ai_051_004": 0.54019775390625,
+              "ai_052_003": 0.1455078125
+            },
+            "positive": 4,
+            "positive_top1_contribution": 0.753875594825726,
+            "positive_top3_contribution": 0.9890120498347549,
+            "tied": 0
+          }
+        }
+      },
+      "RAW": {
+        "depth_absrel": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.5247500357742919,
+            "absolute_top3_contribution": 0.937341029607793,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.030237951633054937,
+              0.2605697390421855
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.163058268597844,
+              "ai_022_010": 0.16749728174283976,
+              "ai_041_003": 0.1542080388640723,
+              "ai_051_004": 0.0810887247382681,
+              "ai_052_003": 0.11664094932638262
+            },
+            "loso_range": [
+              0.0810887247382681,
+              0.16749728174283976
+            ],
+            "mean": 0.13649865265388134,
+            "median": 0.06566110781311751,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.030260188878030836,
+              "ai_022_010": 0.012504136298047752,
+              "ai_041_003": 0.06566110781311751,
+              "ai_051_004": 0.3581383643163344,
+              "ai_052_003": 0.2159294659638763
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.5247500357742919,
+            "positive_top3_contribution": 0.937341029607793,
+            "tied": 0
+          }
+        },
+        "depth_delta1": {
+          "label": "ABOVE",
+          "stats": {
+            "absolute_top1_contribution": 0.763597681488779,
+            "absolute_top3_contribution": 0.9860744268695867,
+            "bootstrap": {
+              "CI": "percentile95",
+              "draws": 10000,
+              "seed": 20260928,
+              "unit": "scene"
+            },
+            "ci95": [
+              0.009105631510416668,
+              0.33374755859375
+            ],
+            "improved_tied_worse": [
+              5,
+              0,
+              0
+            ],
+            "loso": {
+              "ai_015_004": 0.16161092122395834,
+              "ai_022_010": 0.16684366861979166,
+              "ai_041_003": 0.16742350260416666,
+              "ai_051_004": 0.03978780110677084,
+              "ai_052_003": 0.13755594889322917
+            },
+            "loso_range": [
+              0.03978780110677084,
+              0.16742350260416666
+            ],
+            "mean": 0.13464436848958333,
+            "median": 0.026778157552083348,
+            "n_scenes": 5,
+            "negative": 0,
+            "per_scene": {
+              "ai_015_004": 0.026778157552083348,
+              "ai_022_010": 0.005847167968749997,
+              "ai_041_003": 0.00352783203125,
+              "ai_051_004": 0.5140706380208333,
+              "ai_052_003": 0.12299804687500002
+            },
+            "positive": 5,
+            "positive_top1_contribution": 0.763597681488779,
+            "positive_top3_contribution": 0.9860744268695867,
+            "tied": 0
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "CARRIER_REFERENCE_STATUS": "NO_CARRIER_ABOVE_GEOMETRY_FREE_REFERENCE",
+    "carrier_count": 3,
+    "carriers_above_reference": {
+      "MEDIAN_SCALED:depth_absrel": 2,
+      "MEDIAN_SCALED:depth_delta1": 0,
+      "OPACITY_NORMALIZED:depth_absrel": 0,
+      "OPACITY_NORMALIZED:depth_delta1": 0,
+      "RAW:depth_absrel": 0,
+      "RAW:depth_delta1": 0
+    },
+    "labels": {
+      "V5_C0": {
+        "MEDIAN_SCALED:depth_absrel": "ABOVE",
+        "MEDIAN_SCALED:depth_delta1": "NOT_DISTINGUISHABLE",
+        "OPACITY_NORMALIZED:depth_absrel": "NOT_DISTINGUISHABLE",
+        "OPACITY_NORMALIZED:depth_delta1": "NOT_DISTINGUISHABLE",
+        "RAW:depth_absrel": "NOT_DISTINGUISHABLE",
+        "RAW:depth_delta1": "NOT_DISTINGUISHABLE"
+      },
+      "V5_C1": {
+        "MEDIAN_SCALED:depth_absrel": "ABOVE",
+        "MEDIAN_SCALED:depth_delta1": "NOT_DISTINGUISHABLE",
+        "OPACITY_NORMALIZED:depth_absrel": "NOT_DISTINGUISHABLE",
+        "OPACITY_NORMALIZED:depth_delta1": "NOT_DISTINGUISHABLE",
+        "RAW:depth_absrel": "NOT_DISTINGUISHABLE",
+        "RAW:depth_delta1": "NOT_DISTINGUISHABLE"
+      },
+      "V5_C2": {
+        "MEDIAN_SCALED:depth_absrel": "NOT_DISTINGUISHABLE",
+        "MEDIAN_SCALED:depth_delta1": "NOT_DISTINGUISHABLE",
+        "OPACITY_NORMALIZED:depth_absrel": "NOT_DISTINGUISHABLE",
+        "OPACITY_NORMALIZED:depth_delta1": "NOT_DISTINGUISHABLE",
+        "RAW:depth_absrel": "NOT_DISTINGUISHABLE",
+        "RAW:depth_delta1": "NOT_DISTINGUISHABLE"
+      }
+    }
+  }
+}

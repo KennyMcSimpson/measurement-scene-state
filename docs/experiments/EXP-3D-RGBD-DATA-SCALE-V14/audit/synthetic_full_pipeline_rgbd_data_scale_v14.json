@@ -1,0 +1,87 @@
+{
+  "c1_used_beyond_train72": {
+    "C0_20260928": 0,
+    "C0_20260929": 0,
+    "C1_20260928": 1,
+    "C1_20260929": 5
+  },
+  "curve_state_files": 0,
+  "eval_branch": "C",
+  "eval_cohorts": {
+    "EVAL_FAR": 4,
+    "EVAL_V3": 4,
+    "EVAL_V4": 4
+  },
+  "eval_consistency": {
+    "c0_minus_v11_c1_max_abs": 0.0,
+    "queries_compared": 48
+  },
+  "eval_primary_scenes": 8,
+  "eval_statuses": {
+    "DATA_STATUS": "UNDEFINED",
+    "HARMONIC_HYBRID_LABEL": "NOT_DISTINGUISHABLE",
+    "HFILL8_DATA_STATUS": "NOT_ESTABLISHED"
+  },
+  "evaluated_variants": [
+    "C0",
+    "C1"
+  ],
+  "finalized": true,
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 4,
+    "old_files_unchanged": 0,
+    "query_rows": 640,
+    "static_rows_recomputed": 128,
+    "status": "PASS"
+  },
+  "preseal_depth_reads": 56,
+  "query_rows": 640,
+  "real_DEV_read": false,
+  "reference_status": "NO_CARRIER_ABOVE_GEOMETRY_FREE_REFERENCE",
+  "report_branch": null,
+  "scenes_used_per_run": {
+    "C0_20260928": 12,
+    "C0_20260929": 12,
+    "C1_20260928": 12,
+    "C1_20260929": 12
+  },
+  "seconds": 277.52804142900277,
+  "selected_state_files": 4,
+  "status": "PASS",
+  "summary_fields": [
+    "EVAL_C0_ALL=0.471577",
+    "EVAL_C0_NEAR=0.471577",
+    "EVAL_HFILL8_C0_ALL=0.298212",
+    "EVAL_HFILL8_C0_NEAR=0.298212",
+    "EVAL_AHFILL8_C0_ALL=0.298212",
+    "EVAL_AHFILL8_C0_NEAR=0.298212",
+    "DATA_GAIN=UNDEFINED",
+    "DATA_GAIN_CI=UNDEFINED",
+    "HFILL8_DATA_GAIN=0.0",
+    "HFILL8_DATA_GAIN_CI=[0.0, 0.0]",
+    "EVAL_FAR_DATA_GAIN=UNDEFINED",
+    "EVAL_V3_DATA_GAIN=UNDEFINED",
+    "EVAL_V4_DATA_GAIN=UNDEFINED",
+    "C0_MINUS_V11_C1_EVAL_MAX_ABS=0.0",
+    "C0_V11_QUERIES_COMPARED=48",
+    "DEV_C0_QUERY_ABSREL=0.471577",
+    "DATA_GAIN_DEV=0.004115",
+    "DATA_GAIN_DEV_CI=[0.0038960848221492803, 0.004333010390523008]",
+    "C0_REPRODUCES_V11_C1_MAX_DEV_DIFF=None",
+    "INTERPRETATION_BRANCH=C"
+  ],
+  "synthetic_only": true
+}

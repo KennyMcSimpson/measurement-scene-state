@@ -1,0 +1,57 @@
+{
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20260929,
+    "unit": "scene"
+  },
+  "comparisons": {
+    "LEARNED_MINUS_NLF": "AbsRel(NLF) - AbsRel(V5 C1, seed-mean); positive = learned better",
+    "NLF_MINUS_CONSTANT": "AbsRel(REF_TRAIN_ABSREL_OPTIMAL) - AbsRel(NLF); positive = NLF better",
+    "RGB_ONLY_MINUS_NLF": "AbsRel(NLF) - AbsRel(V5 C0); positive = RGB-only carrier better"
+  },
+  "created_utc": "2026-09-29T02:22:41.206295+00:00",
+  "device": "cpu",
+  "evaluation": "DEV (8) and FRESH-V1 (5): every state sealed before any query GT; same renderer, bounds, anchoring and metric code as V5",
+  "experiment": "EXP-3D-RGBD-NONLEARNED-FUSION-V1",
+  "grid_search": {
+    "a": [
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "b": [
+      0.0,
+      4.0
+    ],
+    "c": [
+      -4.0,
+      -2.0
+    ],
+    "k": [
+      0.5,
+      1.0
+    ]
+  },
+  "input_sha256": {
+    "outputs/EXP-3D-RGBD-EVIDENCE-CARRIER-V5/raw/dev_query_results.json": "008420805b8f9888dcd67e8efe55694a8d641d40c67858cd4faa0ce3c76b4a97",
+    "outputs/EXP-3D-RGBD-EVIDENCE-CARRIER-V5/raw/dev_reference_rows.json": "3330edc0947845a488c73ed4ca1c127694565aa94b7971e0c7cf1e09669256d3",
+    "outputs/EXP-3D-RGBD-EVIDENCE-CARRIER-V5/scene_split.json": "1970a41d3d2f739cabfa97f9844dbfc77df2b6895735725d3239605c039fdd3b",
+    "outputs/EXP-3D-RGBD-EVIDENCE-CARRIER-V5/train_depth_prior.json": "5f1595be923f92c10b835204dfc9e96e851c1b312c05852eec41f6c270ec1003",
+    "outputs/EXP-3D-RGBD-FRESH-QUALIFICATION-V1/raw/fresh_query_results.json": "e300099cd187c63236275a95b323ba43d345bd137c57d44fb89215ec10c29201",
+    "outputs/EXP-3D-RGBD-FRESH-QUALIFICATION-V1/raw/fresh_reference_rows.json": "160573fb7f9e6b5c83b0cab53f50af7e9a59d45de2bb6daac6c64fdc49ded184",
+    "outputs/EXP-3D-RGBD-FRESH-QUALIFICATION-V1/scene_split.json": "a665c3a5134a18588b372f92c72a527e5447a308cedc9bf8a1b9a59bc56d88b2",
+    "outputs/EXP-3D-RGBD-FRESH-QUALIFICATION-V1/train_depth_prior.json": "5f1595be923f92c10b835204dfc9e96e851c1b312c05852eec41f6c270ec1003"
+  },
+  "labels": "ABOVE (frozen V2 evidence rule) / BELOW (mirror) / NOT_DISTINGUISHABLE; all scenes and NO_HIT-excluded scenes",
+  "objective": "mean GT-valid query AbsRel (RAW) over TRAIN24 primary queries, roles A/B; ties -> first combination in itertools.product order of k, a, b, c",
+  "role": "descriptive control; changes no frozen status",
+  "source_sha256": {
+    "/home/zonghan/measurement-scene-state/scripts/run_rgbd_nonlearned_fusion.py": "4c030791fb48b281e27fcf4fbcf079f6e064cf9ba2ba157340ebe90ab89087e3",
+    "src/mcss/measurements.py": "2d4f4bec2b1fb52aa0faf12dea44e04db1d56bfabbc73ea3460d90b21e518783",
+    "src/mcss/mechanism_pilot/rgbd_evidence_carrier.py": "9f5055b76c2f139c0e5dd3769381280ac6ead1bd570d82794a25ed2d3ef2d4ae",
+    "src/mcss/mechanism_pilot/rgbd_fresh_evaluation.py": "427e5f8830b5b11bcc0cb69f4da4ff6778e794e0218a6a3244643c4fa70aeb7e",
+    "src/mcss/mechanism_pilot/rgbd_nonlearned_fusion.py": "63e15e4781a2a002071e5fcaa15ec8e9f1b674c0733f9b5b06c8fcbc0bacdff2"
+  },
+  "status": "FROZEN_BEFORE_FIT_AND_EVALUATION"
+}

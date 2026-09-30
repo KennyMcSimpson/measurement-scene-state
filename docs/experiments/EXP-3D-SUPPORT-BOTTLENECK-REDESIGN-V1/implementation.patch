@@ -1,0 +1,3709 @@
+diff --git a/EXPERIMENTS.md b/EXPERIMENTS.md
+index 44e6321..6984844 100644
+--- a/EXPERIMENTS.md
++++ b/EXPERIMENTS.md
+@@ -1,5 +1,25 @@
+ # 实验注册表
+ 
++## EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1（2026-09-28）
++
++- [完整报告](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/README.md)、[终端摘要](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/STATUS.md)、[复现命令](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/commands.sh)。
++- 旧987文件封存且统计精确复算；旧7场景标为REDESIGN_DEV_EXPOSED。新锁12DEV＋12HOLDOUT，几何合格分别10/8，不替换；holdout历史曝光无法排除，独立性未解决。
++- 固定8³/128/旧B-final完成R0、oracle-volume、oracle-support、联合四组，17个开发场景、680行。
++- Volume-only full-context gain +0.115349 [0.014210,0.217646]；绝对full-context改善仅0.034169且CI跨零，83.8%相对增幅是anchor变差的代数贡献。
++- 联合gain +0.089622 [−0.026782,0.216702]；query surface support66.22%未达75%充分性门槛。SUPPORT_BOTTLENECK_STATUS=INCONCLUSIVE，不能声称理想支持都无效或network是唯一原因。
++- 按冻结规则停止：GT-free实景实验、matched retraining、final holdout均未运行；STATIC_STATE_STATUS=NOT_ESTABLISHED；DYNAMIC_TTT_RUN=false。
++- 669测试通过，1可选历史checkpoint测试跳过；680预测文件重算全部主指标完全一致；报告、raw、锁、图、命令及完整性证据齐全。
++
++## EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1（2026-09-27）
++
++- [完整报告](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/README.md)、[状态](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/STATUS.md)、[复现命令](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/commands.sh)。
++- 固定1000A+600B B-final；仅static，旧90条精确复现，ai003保留。
++- 锁定8个独立源资产候选，7个满足先验质量/几何规则，全部未参与此checkpoint训练；未打开保护集。供应商跨资产复用无法完全排除。
++- 未见场景full-context相对anchor的AbsRel收益−0.189671，scene-bootstrap 95% CI [−0.291047, −0.091291]；wrong-scene damage CI跨0。
++- Residual 308参数，30,000步训练，训练侧验证选择7,500步；平均A/B未见AbsRel由0.797229变为0.852789，无通用改善证据。
++- 已发现source-black、观察支持与查询体积覆盖限制，不能直接归因为过拟合或固定decoder。`STATIC_STATE_STATUS=NOT_ESTABLISHED`；`DYNAMIC_TTT_RUN=false`。
++- 610测试通过，1历史可选checkpoint测试跳过。原始记录、锁定记录、GT日志、审计、曲线和artifact hashes保留；报告raw可离线精确重算统计。
++
+ ## EXP-2D-followup-20260927
+ 
+ - **状态**：POST_HOC_DISCOVERY_ONLY；保留V2全部冻结产物。
+diff --git a/README.md b/README.md
+index ee30547..f66cd4a 100644
+--- a/README.md
++++ b/README.md
+@@ -1,5 +1,9 @@
+ # Measurement Scene State / Inverse-JEPA + Dynamic-TTT research archive
+ 
++
++2026-09-28 [Support bottleneck归因与redesign gate](docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/README.md)：7个旧曝光＋10个新开发场景完成oracle诊断。Volume-only相对gain为正，但完整context绝对改善CI跨零，约83.8%的gain增幅来自anchor变差；联合oracle未过门槛且支持不充分，结论`INCONCLUSIVE`。按协议未继续实景GT-free／matched retraining，最终holdout未开启，历史独立性另有阻塞。
++
++2026-09-27 [静态 carrier 归因与未见场景资格](docs/experiments/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/README.md)：旧90条记录精确复现；7个未见场景 full-context AbsRel 0.7972，差于 anchor 0.6076，收益95% CI为[-0.2910, -0.0913]。ai003原始JPEG已全黑且A双视图支持为零；Residual完成训练但未建立通用改善。`STATIC_STATE_STATUS=NOT_ESTABLISHED`，未运行新Dynamic TTT。
+ 协作入口：先看 [当前结果与复现说明](docs/handoff/SHARED_WORKSPACE.md)。[三维从零复现](docs/handoff/3D_REPRODUCTION.md) 提供便携脚本；大报告先运行 `python scripts/restore_report_artifacts.py` 恢复，权重与数据不随 Git 分发。
+ 
+ 2026-09-27 [已训练权重机制补测](docs/experiments/EXP-3D-20260927-trained-state-history-v1/README.md)：同训练场景留出帧上，写入oracle AbsRel收益约0.000756，但有益历史动作翻转0/3、history额外空间0；静态context A AbsRel2.214，资格仍未建立。原训练query的1次翻转单列，不当独立证据。
+diff --git a/scripts/audit_support_redesign.py b/scripts/audit_support_redesign.py
+new file mode 100644
+index 0000000..e938601
+--- /dev/null
++++ b/scripts/audit_support_redesign.py
+@@ -0,0 +1,234 @@
++"""Independent raw-only audit of support attribution; never loads a carrier for inference."""
++
++import argparse
++import json
++from pathlib import Path
++
++import numpy as np
++import torch
++from PIL import Image
++
++from mcss.dynamic.feedback import batched_camera
++from mcss.dynamic.types import hash_scene_state, hash_value
++from mcss.geometry import transform_cameras
++from mcss.mechanism_pilot.small_training import TrainScene, sha, write_json
++from mcss.mechanism_pilot.statistics import measurement_metrics
++from mcss.mechanism_pilot.support_redesign_contracts import validate_dev_scene_ids
++from mcss.mechanism_pilot.support_redesign_statistics import analyze
++
++METRICS = (
++    "rgb_mse",
++    "rgb_ssim",
++    "depth_absrel",
++    "depth_rmse",
++    "depth_delta1",
++    "opacity",
++    "coverage",
++)
++
++
++def run(root):
++    root = Path(root)
++    output = root / "audit/final_independent_audit.json"
++    if output.exists():
++        raise FileExistsError(output)
++    run_dir = root / "raw/oracle_run"
++    rows = json.loads((run_dir / "results.json").read_text())
++    lock = json.loads((run_dir / "lock.json").read_text())
++    roles = json.loads((root / "scene_role_lock.json").read_text())
++    validate_dev_scene_ids(roles, sorted({r["scene_id"] for r in rows}))
++    holdout = set(roles["FINAL_HOLDOUT_SCENES"])
++    assert not set(lock["scene_ids"]) & holdout
++    assert not lock["final_holdout_access"] and not lock["dynamic_ttt_run"]
++    assert analyze(rows) == json.loads((root / "bootstrap_results.json").read_text())
++    for group in ["input_sha256", "source_sha256"]:
++        assert all(sha(Path(path)) == value for path, value in lock[group].items())
++    previous = json.loads((root / "audit/previous_artifact_hashes.json").read_text())
++    for path, info in previous["files"].items():
++        assert Path(path).stat().st_size == info["bytes"] and sha(Path(path)) == info["sha256"]
++    assert sha(Path(previous["old_carrier"])) == previous["old_carrier_sha256"]
++    assert sha(Path(previous["old_residual"])) == previous["old_residual_sha256"]
++    access = json.loads((run_dir / "access_log.json").read_text())
++    assert all(r.get("scene_id") not in holdout for r in access)
++    states = torch.load(run_dir / "sealed_states.pt", map_location="cpu", weights_only=False)
++    plans = torch.load(run_dir / "geometry_plans.pt", map_location="cpu", weights_only=False)
++    assert set(states) == set(plans)
++    assert all(s.scene_id not in holdout for s in states.values())
++    expected_states = len(lock["scene_ids"]) * len(lock["designs"]) * 3
++    assert len(states) == expected_states
++    first_oracle = next(
++        i for i, r in enumerate(access) if r["kind"] == "ORACLE_GEOMETRY_GT_DEPTH_CAMERA"
++    )
++    r0 = [r for r in access[:first_oracle] if r["kind"] == "SEALED_STATE"]
++    assert len(r0) == len(lock["scene_ids"]) * 3
++    assert all(r["state_key"].startswith("R0/") and not r["oracle_geometry_used"] for r in r0)
++    first_eval = next(i for i, r in enumerate(access) if r["kind"] == "QUERY_RGB_DEPTH_GT")
++    assert sum(r["kind"] == "SEALED_STATE" for r in access[:first_eval]) == expected_states
++    assert all(
++        r["stage"] == "PRESEAL_DIAGNOSTIC_EXCEPTION" and r["deployable"] is False
++        for r in access
++        if r["kind"] == "ORACLE_GEOMETRY_GT_DEPTH_CAMERA"
++    )
++    events = json.loads((run_dir / "sealed_query_log.json").read_text())
++    assert all(e["event"] == "seal" for e in events[:expected_states])
++    assert all(e["event"] != "seal" for e in events[expected_states:])
++    for key, state in states.items():
++        assert hash_scene_state(state.scene_state) == state.state_hash
++        plan = plans[key]
++        assert plan.points.shape == (128, 3) and plan.candidate_ids.shape == (128,)
++        assert len(torch.unique(plan.candidate_ids)) == 128
++        assert len(torch.unique(plan.points, dim=0)) == 128
++        assert torch.equal(state.scene_state.bounds[0], plan.bounds)
++        ids = plan.candidate_ids
++        voxel_fraction = torch.stack(
++            ((ids % 8 + 0.5) / 8, ((ids // 8) % 8 + 0.5) / 8, (ids // 64 + 0.5) / 8), dim=-1
++        )
++        expected_points = plan.bounds[0] + voxel_fraction * (plan.bounds[1] - plan.bounds[0])
++        assert torch.allclose(plan.points, expected_points, atol=1e-6, rtol=1e-6)
++        expected_normalized = (plan.points - plan.bounds[0]) / (
++            plan.bounds[1] - plan.bounds[0]
++        ) * 2 - 1
++        assert torch.allclose(plan.normalized_xyz, expected_normalized, atol=1e-6, rtol=1e-6)
++    scenes = {}
++    for filename in lock["input_sha256"]:
++        if filename.endswith("/manifest.json") or filename.endswith("/dev_manifest.json"):
++            manifest_path = Path(filename)
++            manifest = json.loads(manifest_path.read_text())
++            validate_dev_scene_ids(roles, [r["scene_id"] for r in manifest["scenes"]])
++            for record in manifest["scenes"]:
++                scenes[record["scene_id"]] = TrainScene(
++                    record, manifest["image_size"], manifest_path.parent, "cpu", []
++                )
++    truth_cache, audit_access, max_errors, predictions = {}, [], dict.fromkeys(METRICS, 0.0), {}
++    exact_counts = dict.fromkeys(METRICS, 0)
++    for row in rows:
++        sid, fid, design, method = (row[k] for k in ("scene_id", "query_id", "design", "method"))
++        assert sid not in holdout
++        scene = scenes[sid]
++        if (sid, fid) not in truth_cache:
++            frame = scene.frames[fid]
++            rgb_path, depth_path = scene.path(frame, "rgb"), scene.path(frame, "depth")
++            with Image.open(rgb_path) as im:
++                rgb = np.asarray(im.convert("RGB"), dtype=np.float32) / 255
++            depth = np.load(depth_path).squeeze()
++            truth_cache[sid, fid] = (rgb, depth)
++            audit_access.append(
++                {
++                    "scene_id": sid,
++                    "query_id": fid,
++                    "cohort": row["cohort"],
++                    "kind": "POSTHOC_RAW_RECOMPUTATION_GT",
++                    "rgb_path": str(rgb_path),
++                    "rgb_sha256": sha(rgb_path),
++                    "depth_path": str(depth_path),
++                    "depth_sha256": sha(depth_path),
++                    "final_holdout": False,
++                }
++            )
++        truth_rgb, truth_depth = truth_cache[sid, fid]
++        pred_path = run_dir / "predictions" / f"{sid}_{fid}_{design}_{method}.npz"
++        with np.load(pred_path) as pred:
++            metrics = measurement_metrics(
++                pred["rgb"], truth_rgb, pred["depth"], truth_depth, pred["opacity"]
++            )
++        for metric in METRICS:
++            error = abs(metrics[metric] - row[metric])
++            max_errors[metric] = max(max_errors[metric], error)
++            exact_counts[metric] += metrics[metric] == row[metric]
++            assert np.isclose(metrics[metric], row[metric], rtol=1e-12, atol=1e-12)
++        predictions[str(pred_path)] = sha(pred_path)
++        camera = batched_camera(
++            transform_cameras(
++                scene.camera(scene.frames[fid]).to("cuda"),
++                torch.linalg.inv(states[f"R0/{sid}/A"].anchor_c2w.to("cuda")),
++            )
++        )
++        assert hash_value(camera) == row["query_camera_hash"]
++    for sid, fid in truth_cache:
++        assert (
++            len(
++                {
++                    r["query_camera_hash"]
++                    for r in rows
++                    if r["scene_id"] == sid and r["query_id"] == fid
++                }
++            )
++            == 1
++        )
++    old_path = Path(
++        "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_static/static_results.json"
++    )
++    old = json.loads(old_path.read_text())
++    old_index = {(r["scene_id"], r["query_id"], r["method"]): r for r in old}
++    reproduced = [r for r in rows if r["cohort"] == "exposed" and r["design"] == "R0"]
++    assert len(reproduced) == 70
++    for row in reproduced:
++        prior = old_index[row["scene_id"], row["query_id"], row["method"]]
++        assert all(row[k] == prior[k] for k in METRICS + ("query_camera_hash",))
++    integrity = json.loads((run_dir / "integrity.json").read_text())
++    assert integrity["writes"] == 0 and integrity["parameters_unchanged"]
++    assert integrity["checkpoint_unchanged"] and not integrity["dynamic_ttt_run"]
++    for group in ["input_sha256", "source_sha256"]:
++        assert all(sha(Path(path)) == value for path, value in lock[group].items())
++    summary = analyze(rows)
++    findings = {}
++    for cohort, group in list(summary["cohorts"].items()) + [("pooled", summary["pooled"])]:
++        findings[cohort] = {
++            design: {
++                "full_gain": data["full_context_gain"]["mean"],
++                "ci95": data["full_context_gain"]["ci95"],
++                "adequate": data["oracle_adequacy"]["adequate"],
++            }
++            for design, data in group["designs"].items()
++        }
++    write_json(root / "audit/raw_recomputation_GT_access.json", audit_access)
++    write_json(
++        output,
++        {
++            "status": "PASS",
++            "n_rows": len(rows),
++            "n_scenes": len(scenes),
++            "n_states": len(states),
++            "prediction_npz_count": len(predictions),
++            "raw_metrics_recomputed": True,
++            "metric_max_absolute_error": max_errors,
++            "metric_exact_row_counts": exact_counts,
++            "metric_tolerance": {"atol": 1e-12, "rtol": 1e-12},
++            "bootstrap_summary_exact": True,
++            "all_frozen_inputs_sources_unchanged": True,
++            "all_old_artifacts_unchanged": True,
++            "old_artifact_count": len(previous["files"]),
++            "checkpoint_and_residual_unchanged": True,
++            "old_exposed_R0_exact_rows": len(reproduced),
++            "holdout_model_or_score_access_count": 0,
++            "n_protected_holdout_scenes": len(holdout),
++            "r0_sealed_before_oracle_exception": True,
++            "oracle_preseal_exception_explicit": True,
++            "all_eval_GT_after_all_states_sealed": True,
++            "unique128_voxel_centers_and_bounds_validated": True,
++            "query_cameras_recomputed": True,
++            "states_immutable": True,
++            "dynamic_ttt_run": False,
++            "diagnostic_findings": findings,
++            "interpretation_limit": (
++                "Volume-only can improve while combined oracle CI crosses zero; "
++                "neither proves support sufficiency or representation impossibility. "
++                "Geometry adequacy thresholds limit attribution."
++            ),
++            "audit_script_sha256": sha(Path(__file__)),
++            "prediction_hashes": predictions,
++        },
++    )
++    return {
++        "status": "PASS",
++        "rows": len(rows),
++        "old_artifact_count": len(previous["files"]),
++        "metric_max_absolute_error": max_errors,
++    }
++
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--root", required=True)
++    args = parser.parse_args()
++    print(json.dumps(run(args.root), indent=2))
+diff --git a/scripts/plot_support_redesign.py b/scripts/plot_support_redesign.py
+new file mode 100644
+index 0000000..f707c95
+--- /dev/null
++++ b/scripts/plot_support_redesign.py
+@@ -0,0 +1,409 @@
++"""Raw-only scientific plots and interpretation of privileged support diagnostics."""
++
++import argparse
++import hashlib
++import json
++from pathlib import Path
++
++import matplotlib
++import numpy as np
++
++matplotlib.use("Agg")
++import matplotlib.pyplot as plt
++
++from mcss.mechanism_pilot.statistics import paired_scene_bootstrap
++from mcss.mechanism_pilot.support_redesign_statistics import analyze
++
++DESIGNS = ["R0", "ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT"]
++LABELS = [
++    "R0: GT-free baseline",
++    "Oracle volume",
++    "Oracle allocation",
++    "Oracle volume + allocation",
++]
++COLORS = ["#565b66", "#3274a1", "#cc7a2f", "#8865aa"]
++
++
++def write(path, data):
++    path.write_text(json.dumps(data, indent=2, allow_nan=False) + "\n")
++
++
++def run(root):
++    root = Path(root)
++    raw_path = root / "raw/oracle_run/results.json"
++    raw = json.loads(raw_path.read_text())
++    stats = analyze(raw)
++    assert stats == json.loads((root / "bootstrap_results.json").read_text())
++    figures, audit = root / "figures", root / "audit"
++    figures.mkdir(exist_ok=True)
++    audit.mkdir(exist_ok=True)
++    plt.rcParams.update(
++        {
++            "font.size": 10,
++            "svg.fonttype": "none",
++            "axes.spines.top": False,
++            "axes.spines.right": False,
++            "figure.dpi": 130,
++        }
++    )
++    strata = [
++        ("exposed", stats["cohorts"]["exposed"]),
++        ("new_dev", stats["cohorts"]["new_dev"]),
++        ("pooled", stats["pooled"]),
++    ]
++
++    def save(fig, name):
++        fig.savefig(figures / f"{name}.png", bbox_inches="tight", dpi=180)
++        fig.savefig(figures / f"{name}.svg", bbox_inches="tight")
++        plt.close(fig)
++
++    fig, axes = plt.subplots(1, 3, figsize=(14, 4.5), sharey=True)
++    for ax, (name, group) in zip(axes, strata, strict=True):
++        for i, design in enumerate(DESIGNS):
++            value = group["designs"][design]["full_context_gain"]
++            mean = value["mean"]
++            low, high = value["ci95"]
++            ax.errorbar(
++                mean,
++                i,
++                xerr=[[mean - low], [high - mean]],
++                fmt="s" if i == 0 else "o",
++                color=COLORS[i],
++                capsize=4,
++                markersize=7,
++                markerfacecolor="white" if i else COLORS[i],
++            )
++        ax.axvline(0, color="#333333", linewidth=0.8)
++        ax.axhline(0.5, color="#999999", linewidth=0.7, linestyle="--")
++        ax.set_title(f"{name.replace('_', ' ')} (n={group['n_scenes']})")
++        ax.set_xlabel("Anchor - mean(A,B) depth AbsRel\nPositive favors full context")
++        ax.grid(axis="x", alpha=0.18)
++    axes[0].set_yticks(range(4), LABELS)
++    axes[0].invert_yaxis()
++    fig.suptitle("Scene bootstrap 95% intervals: baseline separated from GT-privileged diagnostics")
++    fig.tight_layout()
++    save(fig, "full_context_gain_intervals")
++
++    pooled = stats["pooled"]["designs"]
++    scene_ids = stats["pooled"]["scene_ids"]
++    matrix = np.array(
++        [[pooled[d]["full_context_gain"]["per_scene"][s] for d in DESIGNS] for s in scene_ids]
++    )
++    fig, ax = plt.subplots(figsize=(9, 9))
++    limit = np.abs(matrix).max()
++    im = ax.imshow(matrix, cmap="RdBu", vmin=-limit, vmax=limit, aspect="auto")
++    ax.set_xticks(
++        range(4), ["R0 baseline", "Oracle volume", "Oracle allocation", "Oracle combined"]
++    )
++    ax.set_yticks(range(len(scene_ids)), scene_ids)
++    ax.axvline(0.5, color="black", linewidth=2)
++    ax.axhline(6.5, color="black", linewidth=1)
++    for i in range(len(scene_ids)):
++        for j in range(4):
++            ax.text(
++                j,
++                i,
++                f"{matrix[i, j]:+.3f}",
++                ha="center",
++                va="center",
++                fontsize=9,
++                color="white" if abs(matrix[i, j]) > 0.65 * limit else "black",
++            )
++    fig.colorbar(im, ax=ax, label="Anchor - mean(A,B) AbsRel")
++    ax.set_title(
++        "Per-scene full-context gain\nRight three columns require privileged "
++        "GT; not deployment results"
++    )
++    fig.tight_layout()
++    save(fig, "per_scene_full_context_gain")
++
++    exposed = set(stats["cohorts"]["exposed"]["scene_ids"])
++    fig, axes = plt.subplots(1, 3, figsize=(14, 4.5), sharey=True)
++    for ax, design, color in zip(axes, DESIGNS[1:], COLORS[1:], strict=True):
++        d = pooled[design]
++        corr = d["support_gain_correlation"]["by_support_metric"]["supported_surface_fraction"]
++        x = corr["support_change_per_scene"]
++        y = d["change_full_context_gain_vs_R0"]["per_scene"]
++        for label, ids, marker in [
++            ("Previously exposed", exposed, "o"),
++            ("New redesign dev", set(scene_ids) - exposed, "^"),
++        ]:
++            ordered = sorted(ids)
++            ax.scatter(
++                [x[s] for s in ordered],
++                [y[s] for s in ordered],
++                marker=marker,
++                color=color,
++                s=45,
++                alpha=0.8,
++                label=label,
++            )
++        ax.axhline(0, color="#555555", linewidth=0.7)
++        ax.axvline(0, color="#555555", linewidth=0.7)
++        rho = corr["pearson"]
++        ax.set_title(
++            f"{LABELS[DESIGNS.index(design)]}\nPearson r={rho:.3f}"
++            if rho is not None
++            else LABELS[DESIGNS.index(design)]
++        )
++        ax.set_xlabel("Change in supported GT-surface fraction vs R0")
++        ax.grid(alpha=0.15)
++    axes[0].set_ylabel("Change in full-context gain vs R0")
++    axes[-1].legend(fontsize=8)
++    fig.suptitle("Descriptive association only; no causal or deployable-support inference")
++    fig.tight_layout()
++    save(fig, "support_vs_task_scatter")
++
++    baseline = pooled["R0"]["methods"]
++    detail = {}
++    for design in DESIGNS:
++        d = pooled[design]
++        methods = d["methods"]
++
++        def scene_metric(method, sid, source=methods):
++            return source[method]["depth_absrel"]["per_scene"][sid]
++
++        full_improvement = {
++            s: (scene_metric("A", s, baseline) + scene_metric("B", s, baseline)) / 2
++            - (scene_metric("A", s) + scene_metric("B", s)) / 2
++            for s in scene_ids
++        }
++        anchor_worsening = {
++            s: scene_metric("anchor", s) - scene_metric("anchor", s, baseline) for s in scene_ids
++        }
++        full_ci = paired_scene_bootstrap(full_improvement)
++        anchor_ci = paired_scene_bootstrap(anchor_worsening)
++        gain_change = d["change_full_context_gain_vs_R0"]["mean"]
++        detail[design] = {
++            "full_context_gain": d["full_context_gain"],
++            "change_full_context_gain_vs_R0": d["change_full_context_gain_vs_R0"],
++            "wrong_scene_damage": d["wrong_scene_damage"],
++            "absolute_full_context_AbsRel": (
++                methods["A"]["depth_absrel"]["mean"] + methods["B"]["depth_absrel"]["mean"]
++            )
++            / 2,
++            "absolute_anchor_AbsRel": methods["anchor"]["depth_absrel"]["mean"],
++            "absolute_full_context_improvement_vs_R0": full_ci,
++            "anchor_worsening_vs_R0": anchor_ci,
++            "anchor_worsening_share_of_gain_change": anchor_ci["mean"] / gain_change
++            if gain_change
++            else None,
++            "AB_geometry": d["AB_geometry"],
++            "oracle_adequacy": d["oracle_adequacy"],
++            "support_gain_correlation": d["support_gain_correlation"],
++            "loso_gain_mean_range": [
++                min(d["full_context_gain"]["loso"].values()),
++                max(d["full_context_gain"]["loso"].values()),
++            ],
++        }
++    fig, axes = plt.subplots(1, 2, figsize=(12, 4.5))
++    x = np.arange(4)
++    full = [detail[d]["absolute_full_context_AbsRel"] for d in DESIGNS]
++    anchors = [detail[d]["absolute_anchor_AbsRel"] for d in DESIGNS]
++    axes[0].plot(x, full, "o-", label="mean(A,B)", color="#3274a1")
++    axes[0].plot(x, anchors, "s--", label="Anchor", color="#b27233")
++    axes[0].set_ylabel("Absolute depth AbsRel (lower is better)")
++    axes[0].set_xticks(x, ["R0", "Oracle\nvolume", "Oracle\nallocation", "Oracle\ncombined"])
++    axes[0].axvline(0.5, color="#777777", linestyle=":")
++    axes[0].legend()
++    for i, d in enumerate(DESIGNS):
++        q = detail[d]["absolute_full_context_improvement_vs_R0"]
++        lo, hi = q["ci95"]
++        mean = q["mean"]
++        axes[1].errorbar(
++            mean,
++            i,
++            xerr=[[mean - lo], [hi - mean]],
++            fmt="s" if i == 0 else "o",
++            color=COLORS[i],
++            capsize=4,
++        )
++    axes[1].set_yticks(x, LABELS)
++    axes[1].invert_yaxis()
++    axes[1].axvline(0, color="#555555", linewidth=0.8)
++    axes[1].axhline(0.5, color="#777777", linestyle=":")
++    axes[1].set_xlabel("Absolute full-context improvement vs R0\nPositive = lower mean(A,B) AbsRel")
++    fig.suptitle("Absolute task performance: positive context gain can include anchor worsening")
++    fig.tight_layout()
++    save(fig, "absolute_task_and_anchor_comparison")
++
++    report = {
++        "status": "PASS_RAW_RECOMPUTATION",
++        "SUPPORT_BOTTLENECK_STATUS": "INCONCLUSIVE",
++        "raw_sha256": hashlib.sha256(raw_path.read_bytes()).hexdigest(),
++        "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
++        "strata": {
++            name: {
++                "n_scenes": group["n_scenes"],
++                "designs": {
++                    d: {
++                        "full_context_gain": group["designs"][d]["full_context_gain"],
++                        "wrong_scene_damage": group["designs"][d]["wrong_scene_damage"],
++                    }
++                    for d in DESIGNS
++                },
++            }
++            for name, group in strata
++        },
++        "pooled_diagnostics": detail,
++        "positive_evidence": (
++            "Oracle volume alone restores positive full-context gain with pooled "
++            "CI above zero; new-dev stratum also has positive CI. This supports a "
++            "volume contribution and must not be hidden by the combined stop."
++        ),
++        "stopping_reason": (
++            "Predeclared combined intervention has CI crossing zero and "
++            "supported-surface coverage below adequacy. Do not switch to the "
++            "better volume-only gate after seeing scores. GT-free real-scene runs "
++            "and matched retraining remain NOT_RUN_ORACLE_STOP."
++        ),
++        "not_an_ideal_support_failure": (
++            "Combined mean two-view support is high but actual GT-surface "
++            "neighborhood coverage remains below the frozen minimum; no "
++            "perfect-support or universal representation impossibility conclusion."
++        ),
++        "single_factor_causal_attribution": (
++            "NOT_IDENTIFIED: bounds also change voxel resolution, normalized "
++            "feature/spatial distributions, opacity/path lengths, and anchor prior "
++            "rendering. Allocation changes learned spatial distribution and varies "
++            "by context. Frozen weights cannot separate these from learned "
++            "capacity."
++        ),
++        "holdout_interpretation": (
++            "Previously exposed and new redesign-dev strata are development "
++            "diagnostics. No final-holdout inference or claim is supported by "
++            "these plots."
++        ),
++        "DYNAMIC_TTT_RUN": False,
++    }
++    write(audit / "scientific_interpretation.json", report)
++    lines = [
++        "# Scientific interpretation: support redesign diagnostics",
++        "",
++        (
++            "**Volume-only supplies positive evidence; the combined predeclared "
++            "experiment remains inconclusive.**"
++        ),
++        (
++            "These are GT-privileged frozen-carrier interventions, not deployable "
++            "methods or mathematical upper bounds."
++        ),
++        "",
++        "| Intervention | Full-context gain | 95% scene CI | Positive / tie / negative scenes |",
++        "|---|---:|---|---|",
++    ]
++    for d in DESIGNS:
++        g = detail[d]["full_context_gain"]
++        c = g["improved_tied_worse"]
++        lines.append(
++            f"| {d} | {g['mean']:+.6f} | [{g['ci95'][0]:+.6f}, {g['ci95'][1]:+.6f}] "
++            f"| {c['improved']}/{c['tied']}/{c['worse']} |"
++        )
++    lines += [
++        "",
++        "## Positive volume evidence and its limits",
++        "",
++        report["positive_evidence"],
++        "",
++        (
++            "The previously exposed stratum is less stable than new redesign dev; "
++            "both remain development evidence."
++        ),
++        "",
++        (
++            "| Intervention | Absolute full-context AbsRel | Absolute improvement "
++            "vs R0 [CI] | Anchor worsening vs R0 [CI] |"
++        ),
++        "|---|---:|---|---:|",
++    ]
++    for d in DESIGNS:
++        value = detail[d]
++        q = value["absolute_full_context_improvement_vs_R0"]
++        lines.append(
++            f"| {d} | {value['absolute_full_context_AbsRel']:.6f} | "
++            f"{q['mean']:+.6f} [{q['ci95'][0]:+.6f}, {q['ci95'][1]:+.6f}] | "
++            f"{value['anchor_worsening_vs_R0']['mean']:+.6f} "
++            f"[{value['anchor_worsening_vs_R0']['ci95'][0]:+.6f}, "
++            f"{value['anchor_worsening_vs_R0']['ci95'][1]:+.6f}] |"
++        )
++    volume = detail["ORACLE_VOLUME"]
++    combined = detail["ORACLE_VOLUME_SUPPORT"]
++    lines += [
++        "",
++        (
++            f"For volume-only, "
++            f"{volume['anchor_worsening_share_of_gain_change']:.1%} of the change "
++            f"in full-context gain comes from a worse anchor after changing bounds. "
++            f"The remainder is an absolute full-context improvement. Therefore "
++            f"positive context gain is not the same as equally large absolute task "
++            f"recovery."
++        ),
++        "",
++        "## Concentration, sensitivity and association",
++        "",
++    ]
++    for d in DESIGNS:
++        value = detail[d]
++        c = value["full_context_gain"]["concentration"]["positive"]
++        top = (
++            "no positive contribution"
++            if c["top1_fraction"] is None
++            else (
++                "top-1/top-3 shares of positive gains "
++                f"{c['top1_fraction']:.1%}/{c['top3_fraction']:.1%}"
++            )
++        )
++        lines.append(
++            f"- {d}: {top}; leave-one-scene-out mean range {value['loso_gain_mean_range']}."
++        )
++    lines += [
++        "",
++        (
++            "Positive-share concentration uses the sum of positive scene gains, "
++            "not the signed net denominator. Full per-scene and stratum "
++            "statistics, both concentration definitions, and LOSO values are "
++            "retained in JSON. Scatter correlations are descriptive and do not "
++            "identify causality."
++        ),
++        "",
++        "## Why the stop is inconclusive",
++        "",
++        (
++            f"Combined two-view candidate fraction is "
++            f"{combined['AB_geometry']['two_view_candidate_fraction']['mean']:.2%}, "
++            f"but supported GT-surface fraction is "
++            f"{combined['AB_geometry']['supported_surface_fraction']['mean']:.2%}, "
++            f"below 75%. Frustum support is not occlusion visibility. Finite 8^3 "
++            f"geometry and 128 candidates do not guarantee ideal surface support."
++        ),
++        "",
++        report["stopping_reason"],
++        "",
++        report["single_factor_causal_attribution"],
++        "",
++        (
++            "It is unsupported to conclude either “support is useless” or “the "
++            "network is the sole cause.” Volume contributes, allocation alone "
++            "worsens the frozen model, and "
++            "coverage/training-distribution/representation remain coupled. Final "
++            "holdout stays closed; no Dynamic TTT is run."
++        ),
++    ]
++    (audit / "scientific_interpretation.md").write_text("\n".join(lines) + "\n")
++    print(
++        json.dumps(
++            {
++                "status": report["status"],
++                "pooled_full_context_absolute_improvement": {
++                    d: detail[d]["absolute_full_context_improvement_vs_R0"] for d in DESIGNS
++                },
++            },
++            indent=2,
++        )
++    )
++
++
++if __name__ == "__main__":
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--root", required=True)
++    run(parser.parse_args().root)
+diff --git a/scripts/prepare_support_redesign_data.py b/scripts/prepare_support_redesign_data.py
+new file mode 100644
+index 0000000..6136200
+--- /dev/null
++++ b/scripts/prepare_support_redesign_data.py
+@@ -0,0 +1,30 @@
++#!/usr/bin/env python3
++"""Prepare sealed development/final holdout cohorts without running model outputs."""
++
++import argparse
++
++from mcss.mechanism_pilot.support_redesign_data import prepare_support_redesign
++
++if __name__ == "__main__":
++    p = argparse.ArgumentParser()
++    for name in (
++        "output",
++        "experiment",
++        "checkpoint",
++        "training-dir",
++        "training-manifest",
++        "partitions",
++        "calibration",
++    ):
++        p.add_argument("--" + name, required=True)
++    a = p.parse_args()
++    result = prepare_support_redesign(
++        a.output,
++        a.experiment,
++        a.checkpoint,
++        a.training_dir,
++        a.training_manifest,
++        a.partitions,
++        a.calibration,
++    )
++    print(result["DATA_COHORT_STATUS"], len(result["scenes"]))
+diff --git a/scripts/report_support_redesign.py b/scripts/report_support_redesign.py
+new file mode 100644
+index 0000000..96cb487
+--- /dev/null
++++ b/scripts/report_support_redesign.py
+@@ -0,0 +1,536 @@
++"""Regenerate the registered support-attribution report from saved raw, never inference."""
++
++from __future__ import annotations
++
++import argparse
++import csv
++import gzip
++import json
++import shutil
++from pathlib import Path
++
++import numpy as np
++
++from mcss.mechanism_pilot.small_training import sha, write_json
++from mcss.mechanism_pilot.support_redesign_statistics import analyze
++
++
++def main(root, docs, *, raw_only=False):
++    root, docs = Path(root), Path(docs)
++    raw_path = root / "raw/oracle_run/results.json"
++    if raw_path.exists():
++        rows = json.loads(raw_path.read_text())
++    else:
++        rows = json.loads(gzip.decompress((root / "raw/oracle_results.json.gz").read_bytes()))
++    statistics = analyze(rows)
++    docs.mkdir(parents=True, exist_ok=True)
++    if raw_only:
++        write_json(docs / "bootstrap_results.json", statistics)
++        print(
++            "Regenerated statistics from680 saved development rows; no media/model/holdout access"
++        )
++        return
++
++    def load(path):
++        return json.loads((root / path).read_text())
++
++    pooled = statistics["pooled"]["designs"]
++    combined = pooled["ORACLE_VOLUME_SUPPORT"]
++    new_combined = statistics["cohorts"]["new_dev"]["designs"]["ORACLE_VOLUME_SUPPORT"]
++    stop = (
++        combined["full_context_gain"]["ci95"][0] <= 0
++        or new_combined["full_context_gain"]["mean"] <= 0
++    )
++    if not stop:
++        raise RuntimeError(
++            "Oracle passes registered continuation gate; complete downstream work first"
++        )
++    write_json(root / "bootstrap_results.json", statistics)
++    write_json(
++        root / "oracle_support_analysis.json",
++        {
++            "scope": "FROZEN_CARRIER_PRIVILEGED_DIAGNOSTIC_NOT_MATHEMATICAL_UPPER_BOUND",
++            "cohorts": statistics["cohorts"],
++            "pooled": statistics["pooled"],
++            "registered_continuation_gate_pass": False,
++            "stop_reason": "Combined oracle pooled full-context gain CI lower <=0",
++            "adequacy": combined["oracle_adequacy"],
++            "SUPPORT_BOTTLENECK_SUFFICIENT_EXPLANATION": False,
++            "sufficiency_interpretation": (
++                "Not established by tested interventions, not universally disproved"
++            ),
++            "CARRIER_REPRESENTATION_OR_TRAINING_BOTTLENECK": None,
++            "causal_interpretation": (
++                "NOT_ISOLATED: oracle did not achieve predefined geometric adequacy. "
++                "Cannot assert that ideal support was supplied or uniquely blame "
++                "representation/training."
++            ),
++        },
++    )
++    skipped = {
++        "status": "NOT_RUN_ORACLE_STOP",
++        "results": None,
++        "reason": "Registered combined-oracle continuation gate failed. "
++        "R1/R2/R3 geometry prototypes and guards have fixture tests, but no real-scene "
++        "GT-free prediction, score selection or matched training was performed.",
++    }
++    write_json(
++        root / "deployable_support_analysis.json",
++        {
++            "baseline_R0": {k: v["designs"]["R0"] for k, v in statistics["cohorts"].items()},
++            "pooled_R0": pooled["R0"],
++            "methods": {k: skipped for k in ("R1", "R2", "R3", "R12", "R123")},
++            "all_primary_oracles_excluded_from_method_ranking": True,
++        },
++    )
++    write_json(
++        root / "matched_training_analysis.json",
++        {
++            "MATCHED_RETRAIN_DONE": False,
++            "status": "NOT_RUN_ORACLE_STOP",
++            "current_gain": None,
++            "redesigned_gain": None,
++            "matched_config_guard_tested": True,
++            "train_scale_up_done": False,
++            "training_scenes_if_eligible": ["ai_001_001", "ai_002_001", "ai_003_001"],
++            "reason": (
++                "No deployable redesign qualified for matched training; "
++                "no checkpoint family created"
++            ),
++        },
++    )
++    for filename, metric in [
++        ("volume_analysis.json", "inside_fraction"),
++        ("candidate_support_analysis.json", "two_view_candidate_fraction"),
++    ]:
++        write_json(
++            root / filename,
++            {
++                "scope": "diagnostic_oracles_and_R0_only",
++                "metric": metric,
++                "per_design": {k: v["AB_geometry"] for k, v in pooled.items()},
++                "candidate_budget": 128,
++                "grid_size": [8, 8, 8],
++                "fixed_neighborhood_radius_m": (1.5**2 + 1 + 1.5**2) ** 0.5 / 2,
++                "geometry_plan_raw": "raw/oracle_run/geometry_plans.json",
++                "per_query_all_metrics": "raw/oracle_run/results.json",
++                "candidate_view_count_is": (
++                    "frustum membership, not GT occlusion-correct visibility"
++                ),
++            },
++        )
++    write_json(
++        root / "context_selection_analysis.json",
++        {
++            **skipped,
++            "frozen_current_roles": load("qualified_frame_role_lock.json"),
++            "R3_available_as_geometry_prototype": True,
++            "R3_execution_on_real_scenes": False,
++        },
++    )
++    holdout = {
++        "FINAL_HOLDOUT_OPENED": False,
++        "FINAL_HOLDOUT_STATUS": "NOT_OPENED_NO_METHOD_QUALIFIED",
++        "independence_status": "INDEPENDENCE_UNRESOLVED",
++        "second_independent_blocker": "Historical project training/exposure cannot be excluded. "
++        "No future opening without resolving independence; current candidates were not replaced.",
++        "candidate_scenes": load("scene_role_lock.json")["FINAL_HOLDOUT_SCENES"],
++        "geometry_eligible_scenes": load("qualified_frame_role_lock.json")[
++            "eligible_final_holdout"
++        ],
++        "method_lock": None,
++        "model_inference_calls": 0,
++        "final_holdout_gain": None,
++        "final_holdout_ci": None,
++        "wrong_scene_damage": None,
++    }
++    write_json(root / "holdout_lock.json", holdout)
++    write_json(root / "holdout_results.json", {**holdout, "results": None, "not_zero_scores": True})
++    costs = {}
++    for design in pooled:
++        rr = [r for r in rows if r["design"] == design and r["method"] in ("A", "B")]
++        costs[design] = {
++            "mean_renderer_and_state_hash_seconds": float(np.mean([r["seconds"] for r in rr])),
++            "mean_AB_volume_m3": float(np.mean([np.prod(r["volume_extent"]) for r in rr])),
++            "candidate_budget": 128,
++            "oracle_lattice_search_size": 512,
++            "density_voxels": 512,
++        }
++    write_json(
++        root / "cost_analysis.json",
++        {
++            "data_download": load("data/download_cost.json"),
++            "formal_run": load("raw/oracle_run/integrity.json"),
++            "designs": costs,
++            "GT_oracle_search_cost_included_in_total_run_time": True,
++            "formal_run_peak_GPU_memory": None,
++            "peak_memory_status": "NOT_MEASURED; do not infer peak memory from tensor budget",
++            "prediction_files_bytes": sum(
++                p.stat().st_size for p in (root / "raw/oracle_run/predictions").glob("*.npz")
++            ),
++            "GT_free_runtime_cost": None,
++            "retraining_cost": None,
++        },
++    )
++    checkpoint = load("preregistration.json")["checkpoint"]
++    write_json(
++        root / "checkpoints/manifest.json",
++        {
++            "old_checkpoint": checkpoint,
++            "sha256": sha(Path(checkpoint)),
++            "new_checkpoints": [],
++            "training_run": False,
++            "geometry_intervention_states_are_not_mcss_dynamic_v1_checkpoints": True,
++        },
++    )
++    (root / "checkpoints/README.md").write_text(
++        "No new training or checkpoint selection was performed. The frozen carrier is referenced "
++        "by path/hash in manifest.json. Runtime oracle geometry must not be saved as old B-final.\n"
++    )
++    tests = load("tests.json")
++    status = {
++        "OLD_CHECKPOINT": checkpoint,
++        "OLD_STATIC_STATUS": "NOT_ESTABLISHED",
++        "N_EXPOSED_DEV_SCENES": statistics["cohorts"]["exposed"]["n_scenes"],
++        "N_REDESIGN_DEV_SCENES": statistics["cohorts"]["new_dev"]["n_scenes"],
++        "N_FINAL_HOLDOUT_SCENES": len(holdout["geometry_eligible_scenes"]),
++        "FINAL_HOLDOUT_COUNT_NOTE": (
++            "8 geometry-eligible; historical independence unresolved;12 candidates retained"
++        ),
++        "OLD_FULL_CONTEXT_GAIN": statistics["cohorts"]["exposed"]["designs"]["R0"][
++            "full_context_gain"
++        ]["mean"],
++        "POOLED_CURRENT_FULL_CONTEXT_GAIN": pooled["R0"]["full_context_gain"]["mean"],
++        "ORACLE_VOLUME_GAIN": pooled["ORACLE_VOLUME"]["full_context_gain"]["mean"],
++        "ORACLE_SUPPORT_GAIN": pooled["ORACLE_SUPPORT"]["full_context_gain"]["mean"],
++        "ORACLE_VOLUME_SUPPORT_GAIN": combined["full_context_gain"]["mean"],
++        "ORACLE_GAIN_COHORT": "7 exposed +10 new development, scene equal",
++        "GT_FREE_VOLUME_GAIN": None,
++        "GT_FREE_ALLOCATION_GAIN": None,
++        "GT_FREE_CONTEXT_GAIN": None,
++        "BEST_DEV_REDESIGN": None,
++        "BEST_DEV_GAIN": None,
++        "BEST_DEV_CI": None,
++        "SUPPORT_BOTTLENECK_STATUS": "INCONCLUSIVE",
++        "SUPPORT_BOTTLENECK_SUFFICIENT_EXPLANATION": False,
++        "CARRIER_REPRESENTATION_OR_TRAINING_BOTTLENECK": "NOT_ISOLATED",
++        "MATCHED_RETRAIN_DONE": False,
++        "MATCHED_CURRENT_GAIN": None,
++        "MATCHED_REDESIGN_GAIN": None,
++        "FINAL_HOLDOUT_OPENED": False,
++        "FINAL_HOLDOUT_GAIN": None,
++        "FINAL_HOLDOUT_CI": None,
++        "FINAL_HOLDOUT_WRONG_SCENE_DAMAGE": None,
++        "FINAL_HOLDOUT_STATUS": holdout["FINAL_HOLDOUT_STATUS"],
++        "FINAL_HOLDOUT_INDEPENDENCE_STATUS": holdout["independence_status"],
++        "STATIC_STATE_STATUS": "NOT_ESTABLISHED",
++        "CARRIER_REDESIGN_STATUS": "STOPPED_AT_REGISTERED_ORACLE_GATE",
++        "DYNAMIC_TTT_RUN": False,
++        "TESTS": tests["summary"],
++        "FINAL_INTEGRITY": "PASS",
++        "REPORT_DIR": str(docs.resolve()),
++    }
++    write_json(root / "status.json", status)
++    terminal = "=" * 60 + "\n3D SUPPORT BOTTLENECK + CARRIER REDESIGN FINAL\n" + "=" * 60 + "\n"
++    terminal += (
++        "\n".join(f"{k}={v if isinstance(v, str) else json.dumps(v)}" for k, v in status.items())
++        + "\n"
++    )
++    (root / "STATUS.md").write_text("```text\n" + terminal + "```\n")
++    (root / "terminal_summary.txt").write_text(terminal)
++
++    def error(design, method):
++        return pooled[design]["methods"][method]["depth_absrel"]["mean"]
++
++    def full(design):
++        return (error(design, "A") + error(design, "B")) / 2
++
++    def line(design):
++        d = pooled[design]
++        g, w = d["full_context_gain"], d["wrong_scene_damage"]
++        return (
++            f"| {design} | {full(design):.6f} | {error(design, 'anchor'):.6f} | "
++            f"{g['mean']:+.6f} [{g['ci95'][0]:+.6f}, {g['ci95'][1]:+.6f}] | "
++            f"{w['mean']:+.6f} [{w['ci95'][0]:+.6f}, {w['ci95'][1]:+.6f}] |\n"
++        )
++
++    header = (
++        "| 设置 | 完整context AbsRel↓ | Anchor AbsRel↓ | Full-context gain及95%CI | "
++        "Wrong-scene damage及95%CI |\n|---|---:|---:|---:|---:|\n"
++    )
++    oracle_table = header + "".join(
++        line(d) for d in ("ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT")
++    )
++    baseline_table = header + line("R0")
++    geometry_table = (
++        "| 设置 | GT surface inside | ≥2-view candidates | GT surface支持邻域 | 正/平/负场景数 |\n"
++        "|---|---:|---:|---:|---|\n"
++    )
++    for name in ("R0", "ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT"):
++        d = pooled[name]
++        geo = d["AB_geometry"]
++        n = d["full_context_gain"]["improved_tied_worse"]
++        geometry_table += (
++            f"| {name} | "
++            + " | ".join(
++                f"{geo[m]['mean']:.4%}"
++                for m in (
++                    "inside_fraction",
++                    "two_view_candidate_fraction",
++                    "supported_surface_fraction",
++                )
++            )
++            + f" | {n['improved']}/{n['tied']}/{n['worse']} |\n"
++        )
++    metrics_table = (
++        "| 设置/读取 | RGB MSE↓ | SSIM↑ | RMSE↓ | δ1↑ | Opacity | Coverage |\n"
++        "|---|---:|---:|---:|---:|---:|---:|\n"
++    )
++    for name in ("R0", "ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT"):
++        for role in ("A", "B", "anchor", "prior", "wrong_scene"):
++            m = pooled[name]["methods"][role]
++            metrics_table += (
++                f"| {name}/{role} | "
++                + " | ".join(
++                    f"{m[k]['mean']:.6f}"
++                    for k in (
++                        "rgb_mse",
++                        "rgb_ssim",
++                        "depth_rmse",
++                        "depth_delta1",
++                        "opacity",
++                        "coverage",
++                    )
++                )
++                + " |\n"
++            )
++    direct_gain = full("R0") - full("ORACLE_VOLUME")
++    anchor_worse = error("ORACLE_VOLUME", "anchor") - error("R0", "anchor")
++    gain_change = pooled["ORACLE_VOLUME"]["change_full_context_gain_vs_R0"]["mean"]
++    share = anchor_worse / gain_change
++    interpretation = load("audit/scientific_interpretation.json")
++    readme = f"""# EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1
++
++本轮已完成封存、重新生成旧统计、新数据锁定/下载、四组静态oracle归因、回归测试和独立审计。
++**SUPPORT_BOTTLENECK_STATUS=INCONCLUSIVE；STATIC_STATE_STATUS=NOT_ESTABLISHED。**
++按预先冻结的联合oracle停止规则，没有执行实景GT-free redesign、matched retraining或final holdout。
++没有训练controller，没有新Dynamic TTT、FC/CF、history或写入调参。
++
++## 先读结论与限制
++
++Volume确实影响结果：oracle volume单独使同设置下的full-context gain为+0.115349，
++scene-bootstrap CI [0.014210,0.217646]。但这不等于完整预测变好了0.115349或0.210574。
++R0完整context AbsRel={full("R0"):.6f}，oracle volume={full("ORACLE_VOLUME"):.6f}，绝对改善仅
++**{direct_gain:.6f}**（CI [−0.070911,+0.135352]）；anchor则从
++{error("R0", "anchor"):.6f}变差到{error("ORACLE_VOLUME", "anchor"):.6f}。
++相对gain增加{gain_change:.6f}的代数分解中，约**{share:.1%}来自anchor变差**，不是支持机制的因果贡献率。
++完整context的绝对任务收益及其CI另见 `audit/scientific_interpretation.json`。
++
++联合oracle pooled gain={combined["full_context_gain"]["mean"]:+.6f}，
++CI [{combined["full_context_gain"]["ci95"][0]:+.6f},
++{combined["full_context_gain"]["ci95"][1]:+.6f}]，
++不满足在看结果前锁定的继续门槛。其表面邻域支持仅66.22%，未达75%充分性标准，
++因此不能声称“理想支持已经提供，仍然失败，所以一定是网络/训练问题”。
++当前8³离散表达、支持定义及训练分布耦合仍未分离。
++
++## 身份、冻结和数据
++
++旧1000A+600B B-final SHA256：`{load("preregistration.json")["checkpoint_sha256"]}`。
++旧实验987个文件完整封存；旧3场景234行、旧7场景182行（含Residual A/B）统计精确复算，
++160帧volume/support核对通过。新runner中的旧7场景R0五个方法70行与上一轮逐项精确一致。
++旧7场景从本轮起统一为 **REDESIGN_DEV_EXPOSED**，不再作为独立泛化证据。
++
++新锁定24个不同官方source volume/archive/asset候选，按合法scene名顺序交替12 DEV、12 HOLDOUT。
++只使用Hypersim official-train与research-train；不打开官方validation/protected/test。
++下载220,495,946字节，全部bounded HTTP range。10个DEV、8个HOLDOUT通过预先固定的质量和native
++geometry阈值；失败候选保留、不替换、不跨角色移动。初始身份锁 `scene_role_lock.json` 未覆盖，
++具体合格帧角色另锁在 `qualified_frame_role_lock.json`。本轮实际归因共7 exposed+10 new DEV场景。
++
++**Holdout独立性尚未成立。** ai027001/ai033001有项目旧100scene池曝光标记，其他候选也无法仅凭
++不在旧100池就排除后续365scene扩展的使用；缺少逐场景历史执行日志。它们未参加当前B-final训练、
++不在旧7场景内，但不能据此声称项目历史“从未见过/未调过”。全部holdout在本轮没有模型前向或query
++score，保持保护，`FINAL_HOLDOUT_INDEPENDENCE_STATUS=INDEPENDENCE_UNRESOLVED`。
++即便未来某方法过开发gate，也必须先解决此独立性阻塞。这里的8仅指几何合格数。
++
++## 方法合同与oracle例外
++
++固定网络权重、8³状态、128唯一candidate IDs、固定renderer64samples及原context/query列表。
++ORACLE_VOLUME用全部primary query GT surface在anchor坐标中的包围盒，最小轴长1m并加5%边距；
++同场景A/B/anchor共享该bounds。ORACLE_SUPPORT在当前bounds的512合法voxel centers中选128个，
++优先≥2 context frusta，然后到context GT表面的距离，再view count与ID稳定排序；联合设置只组合
++这两个因素。points、normalized_xyz、scatter IDs和bounds同步；没有偷偷增加候选或网络。
++
++这是**固定网格内的有GT诊断，不是数学upper bound，也不保证物理上完美表面支持**。
++候选的≥2计数仅是camera frustum membership，不等于遮挡正确的表面可见性。
++R0先封存；oracle为构造bounds必须在自身封存前读取query GT geometry，日志明确标记
++`PRESEAL_DIAGNOSTIC_EXCEPTION`。所有评分RGB/depth在全部204 states封存后读取。
++Oracle状态对锁定query集合有条件，绝不称部署时query-independent；query cameras在wrong-scene
++替换时数值不变。参数合同指出这些同shape运行时干预仍改变训练分布，不能当作公平训练后的新方法。
++
++主表采用query均值→scene等权，10,000 paired scene bootstrap、seed20260927、95%percentile CI。
++Full-context gain=anchor−mean(A,B)，wrong-scene damage=cyclic donor A−correct A；
++donor在各cohort内轮换。
++17场景pooled和7/10分层统计同时保留，不把旧7重新包装成独立确认。
++
++## DIAGNOSTIC UPPER BOUNDS（名义诊断，非保证的上界）
++
++{oracle_table}
++
++## DEPLOYABLE METHODS
++
++{baseline_table}
++
++R1 adaptive-volume、R2 camera-overlap allocation、R3 camera-only context selection、R12/R123：
++**NOT_RUN_ORACLE_STOP，结果为null。** 三类几何原型及隔离测试已实现；没有实景运行、近远深度
++先验调优或按分数选方法。Matched current/redesigned两条训练和train-scale-up均未启动，
++不存在“最佳新carrier”。这些空项不是0分或失败训练的伪造结果。
++
++## 支持、集中度与完整任务指标
++
++{geometry_table}
++
++主要表面支持距离固定为1.172604m（旧voxel半对角线），避免扩大volume后自动扩大容差。
++同时保存各新voxel尺度下的描述性邻域数，不能替代固定半径主诊断。
++联合oracle inside=100%、two-view=93.18%，但surface-neighborhood=66.22%＜75%，充分性失败。
++Volume-only和联合各11/17场景gain为正；联合gain的正贡献top1≈25.7%、top3≈64.8%。
++所有LOSO、集中度、每场景完整结果和描述性support/gain相关都在 `bootstrap_results.json`。
++相关不建立因果。相同候选数并不意味着相同物理voxel分辨率，所有bounds/extent保存在raw计划中。
++
++{metrics_table}
++
++Coverage仍为opacity>1e-6，不是真实可见性；所有GT-valid像素均参与depth指标，未按预测opacity筛掉
++坏像素。Oracle volume也改变ray integration范围与anchor prior；没有证据证明正relative gain完全
++独立于opacity/coverage。由于没有方法达到最终gate，不做静态资格成功宣称。
++
++## 停止规则与12个归因问题
++
++1. **主要来自volume、candidate还是representation？** Volume有直接干预证据，但不是充分解释；
++   candidate-only恶化相对gain，联合不稳定。representation/训练/分辨率尚未被独立隔离。
++2. **Oracle volume alone恢复多少？** pooled gain +0.115349；相对R0 gain提升+0.210574，但完整context
++   绝对AbsRel只改善0.034169，83.8%的相对提升来自anchor变差。
++3. **Oracle support alone恢复多少？** gain −0.245025，较R0更差0.149800；
++   frustum支持提升不等于任务收益。
++4. **Volume+support恢复多少？** gain +0.089622，较R0增加0.184847，但CI跨零；完整context绝对改善仅
++   0.008442，不能称静态carrier获救。
++5. **GT-free volume恢复多少？** 未运行，遵守联合oracle停止条件，不能填oracle成绩。
++6. **Camera-overlap allocation恢复多少？** 未运行；候选几何原型/预算测试可用。
++7. **Context geometry selection恢复多少？** 未运行；camera-only确定性和输入隔离测试可用。
++8. **哪个因素贡献最大？** 这些冻结权重诊断中volume对relative gain的改变最大；这是干预分解，不是
++   对全部失败的因果占比，也不是部署收益。
++9. **支持修复后full context终于优于anchor？** Volume-only在17场景pooled有显著正gain；联合设置未过
++   预定稳定性门槛，且没有充分修复query surface support。不能挑volume-only替换联合停止检验。
++10. **Wrong-scene终于稳定变差？** 没有；所有pooled oracle的wrong-scene damage CI均跨零。
++11. **若oracle能救而GT-free不能救，可观察性瓶颈是什么？** 本轮未测试GT-free，不能作这个归因；
++    使用query GT包围盒天然不可部署，不说明camera-only能够恢复相同信息。
++12. **为什么转向architecture/training而不继续堆volume？** 联合oracle未获稳定增益，且固定网格下
++    query表面支持仍有限。下一步应先分离离散表达、训练分布与prior/renderer效应；不能把本轮解释为
++    已证明“完美support也无效”，或直接归咎所有scene representations。
++
++注册条件要求联合oracle pooled CI lower>0且new DEV mean>0才能继续。Pooled下界−0.026782未通过；
++new DEV联合gain虽为+0.156328，其单独CI下界也略低于0（约−0.000015）。不改阈值或gate。
++因此 `SUPPORT_BOTTLENECK_SUFFICIENT_EXPLANATION=false` 表示“尚未建立充分解释”；由于干预充分性
++未达标，`CARRIER_REPRESENTATION_OR_TRAINING_BOTTLENECK=NOT_ISOLATED`，不虚构因果证明。
++`FINAL_HOLDOUT_STATUS=NOT_OPENED_NO_METHOD_QUALIFIED`，并有历史独立性未解决的第二阻塞。
++
++## 复现与交付
++
++完整测试：**{tests["summary"]}**；跳过项是缺少可选历史V5 step4500权重。新增59项包括holdout门禁、
++oracle部署拒绝、GT-free参数隔离、唯一候选预算、context确定性、matched配置、scenebootstrap和真实
++small end-to-end封存/GT/相机/零写入测试。工程测试通过不等于科学资格通过。
++
++`commands.sh summary`不加载媒体或模型即可重算所有统计；`commands.sh reproduce`在新目录使用已冻结
++数据重做同一DEV干预（拒绝覆盖原目录），从不读取holdout模型输入。数据下载命令也在文件中。
++可直接从仓库保存的raw重算：
++
++```bash
++.venv/bin/python scripts/report_support_redesign.py --raw-only \\
++  --output docs/experiments/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1 \\
++  --docs /tmp/support-redesign-recomputed
++```
++
++`raw/oracle_run/`保留680个预测NPZ、完整metrics、204sealed states、geometry plans、GT访问日志和源文件
++hashes；docs中的压缩raw可重算正式统计。`figures/`保存PNG/SVG科学图；`audit/`保存旧结果复算、独立
++审计、解释和环境；`checkpoints/`只索引原B-final，没有新训练checkpoint。大型媒体、tensor/prediction
++文件留在outputs并有hash清单，压缩文本证据在docs/artifacts下。全部旧实验保持不变。
++
++![Full-context gain by stratum](figures/full_context_gain_intervals.png)
++"""
++    # Keep interpretation as structured evidence; full report refers to its exact CI values.
++    assert interpretation
++    (root / "README.md").write_text(readme)
++    fields = [
++        "cohort",
++        "scene_id",
++        "query_id",
++        "design",
++        "method",
++        "depth_absrel",
++        "rgb_mse",
++        "rgb_ssim",
++        "depth_rmse",
++        "depth_delta1",
++        "opacity",
++        "coverage",
++        "inside_fraction",
++        "two_view_candidate_fraction",
++        "supported_surface_fraction",
++        "seconds",
++    ]
++    with (root / "raw/results.csv").open("w") as f:
++        writer = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
++        writer.writeheader()
++        writer.writerows(rows)
++    (docs / "raw").mkdir(exist_ok=True)
++    (docs / "raw/oracle_results.json.gz").write_bytes(
++        gzip.compress(json.dumps(rows, sort_keys=True).encode(), mtime=0)
++    )
++    artifact_records = []
++    for directory in ("raw/oracle_run", "audit", "data", "checkpoints"):
++        for path in sorted((root / directory).rglob("*")):
++            rel = path.relative_to(root)
++            if (
++                not path.is_file()
++                or path.suffix
++                not in {".json", ".jsonl", ".md", ".txt", ".csv", ".py", ".patch", ".log"}
++                or "prepared" in rel.parts
++                or "raw" in path.relative_to(root / directory).parts
++            ):
++                continue
++            target = docs / "artifacts" / (str(rel) + ".gz")
++            target.parent.mkdir(parents=True, exist_ok=True)
++            target.write_bytes(gzip.compress(path.read_bytes(), mtime=0))
++            artifact_records.append(
++                {
++                    "output_path": str(rel),
++                    "artifact": str(target.relative_to(docs)),
++                    "sha256": sha(path),
++                    "compressed_sha256": sha(target),
++                }
++            )
++    write_json(root / "artifact_manifest.json", artifact_records)
++    for path in root.iterdir():
++        if path.is_file():
++            shutil.copy2(path, docs / path.name)
++    for directory in ("figures", "checkpoints"):
++        shutil.copytree(root / directory, docs / directory, dirs_exist_ok=True)
++    # Important readable audits, with bulk locks/logs in the compressed archive.
++    (docs / "audit").mkdir(exist_ok=True)
++    for name in (
++        "scientific_interpretation.json",
++        "scientific_interpretation.md",
++        "final_independent_audit.json",
++        "old_statistics_reproduction.json",
++        "environment.json",
++    ):
++        if (root / "audit" / name).exists():
++            shutil.copy2(root / "audit" / name, docs / "audit" / name)
++    print(terminal)
++
++
++if __name__ == "__main__":
++    p = argparse.ArgumentParser(description=__doc__)
++    p.add_argument("--output", required=True)
++    p.add_argument("--docs", required=True)
++    p.add_argument("--raw-only", action="store_true")
++    a = p.parse_args()
++    main(a.output, a.docs, raw_only=a.raw_only)
+diff --git a/scripts/run_support_redesign_oracles.py b/scripts/run_support_redesign_oracles.py
+new file mode 100644
+index 0000000..a8b7ca3
+--- /dev/null
++++ b/scripts/run_support_redesign_oracles.py
+@@ -0,0 +1,16 @@
++"""Run the preregistered four frozen static development diagnostics; never holdout."""
++
++import argparse
++
++from mcss.mechanism_pilot.support_redesign_runner import run_development
++
++if __name__ == "__main__":
++    p = argparse.ArgumentParser(description=__doc__)
++    for key in ("experiment", "dev-manifest", "exposed-manifest", "checkpoint", "output"):
++        p.add_argument("--" + key, required=True)
++    p.add_argument("--device", default="cuda", choices=["cpu", "cuda"])
++    a = p.parse_args()
++    rows = run_development(
++        a.experiment, a.dev_manifest, a.exposed_manifest, a.checkpoint, a.output, device=a.device
++    )
++    print(f"Completed {len(rows)} static rows; final holdout not accessed")
+diff --git a/src/mcss/mechanism_pilot/support_redesign_contracts.py b/src/mcss/mechanism_pilot/support_redesign_contracts.py
+new file mode 100644
+index 0000000..584a3ae
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/support_redesign_contracts.py
+@@ -0,0 +1,359 @@
++"""Fail-closed support-redesign roles, immutable methods and one-shot holdout access.
++
++These guards enforce their loader APIs, not arbitrary filesystem reads. Oracle geometry
++must remain a diagnostic and can never obtain a final-holdout session.
++"""
++
++from __future__ import annotations
++
++import hashlib
++import json
++import os
++from collections.abc import Callable
++from dataclasses import asdict, dataclass
++from pathlib import Path
++
++from mcss.dynamic.types import SealedScene, hash_scene_state, hash_value
++from mcss.evaluation.sealed_queries import _validate_sealed
++
++DEPLOYABLE_METHODS = ("R0", "R1", "R2", "R3", "R12", "R123")
++ORACLE_METHODS = ("ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT")
++EXPOSED_SCENES = (
++    "ai_004_001",
++    "ai_006_001",
++    "ai_007_002",
++    "ai_008_001",
++    "ai_009_001",
++    "ai_010_001",
++    "ai_011_001",
++)
++DEPLOYMENT_CHANNELS = (
++    "arrived_rgb",
++    "context_intrinsics",
++    "context_poses",
++    "frozen_image_features",
++    "train_global_constants",
++)
++ORACLE_CHANNELS = DEPLOYMENT_CHANNELS + ("context_gt_depth", "query_gt_geometry")
++
++
++def _sha(path):
++    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
++
++
++def _digest(value):
++    return hashlib.sha256(
++        json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
++    ).hexdigest()
++
++
++@dataclass(frozen=True)
++class SupportProtocolConfig:
++    method: str
++    scope: str = "DEPLOYABLE"
++    input_channels: tuple[str, ...] = DEPLOYMENT_CHANNELS
++    candidate_count: int = 128
++    grid_size: tuple[int, int, int] = (8, 8, 8)
++    renderer_samples: int = 64
++    metric: str = "scene_macro_depth_absrel"
++    hyperparameters: tuple[tuple[str, str | int | float | bool], ...] = ()
++
++    def __post_init__(self):
++        if self.method not in DEPLOYABLE_METHODS + ORACLE_METHODS:
++            raise ValueError("Unknown support method")
++        if self.scope not in ("DEPLOYABLE", "DIAGNOSTIC_ORACLE"):
++            raise ValueError("Unknown method scope")
++        if self.method in ORACLE_METHODS and self.scope != "DIAGNOSTIC_ORACLE":
++            raise PermissionError("Oracle support cannot enter deployable configuration")
++        if self.method in DEPLOYABLE_METHODS and self.scope != "DEPLOYABLE":
++            raise ValueError("GT-free method must remain explicitly deployable")
++        for name in ("input_channels", "grid_size", "hyperparameters"):
++            if not isinstance(getattr(self, name), tuple):
++                raise TypeError("Immutable tuple configuration required")
++        allowed = ORACLE_CHANNELS if self.scope == "DIAGNOSTIC_ORACLE" else DEPLOYMENT_CHANNELS
++        if set(self.input_channels) - set(allowed):
++            raise PermissionError("Forbidden input channel for support method")
++        if self.candidate_count != 128 or self.grid_size != (8, 8, 8):
++            raise ValueError("Locked state and candidate budgets required")
++        if self.renderer_samples != 64 or self.metric != "scene_macro_depth_absrel":
++            raise ValueError("Locked renderer and primary metric required")
++        for pair in self.hyperparameters:
++            if not isinstance(pair, tuple) or len(pair) != 2 or not isinstance(pair[0], str):
++                raise TypeError("Immutable named hyperparameter pairs required")
++            if type(pair[1]) not in (str, int, float, bool):
++                raise TypeError("Nested mutable hyperparameters prohibited")
++        if len(dict(self.hyperparameters)) != len(self.hyperparameters):
++            raise ValueError("Duplicate hyperparameter names")
++        _digest(asdict(self))
++
++    def assert_allowed_scene_role(self, role):
++        if role == "FINAL_QUALIFICATION_HOLDOUT" and self.scope != "DEPLOYABLE":
++            raise PermissionError("Oracle inference forbidden on final holdout")
++        if role not in (
++            "TRAIN",
++            "REDESIGN_DEV",
++            "REDESIGN_DEV_EXPOSED",
++            "FINAL_QUALIFICATION_HOLDOUT",
++        ):
++            raise ValueError("Unknown scene role")
++
++
++@dataclass(frozen=True)
++class SceneRoleLock:
++    train_scenes: tuple[str, ...]
++    redesign_dev_scenes: tuple[str, ...]
++    final_holdout_scenes: tuple[str, ...]
++    exposed_scenes: tuple[str, ...] = EXPOSED_SCENES
++    physical_identities: tuple[tuple[str, str], ...] = ()
++
++    def __post_init__(self):
++        groups = (
++            self.train_scenes,
++            self.redesign_dev_scenes,
++            self.final_holdout_scenes,
++            self.exposed_scenes,
++        )
++        if any(not isinstance(group, tuple) or not group for group in groups):
++            raise TypeError("Nonempty immutable scene tuples required")
++        if self.exposed_scenes != EXPOSED_SCENES:
++            raise PermissionError("Old seven scenes must stay REDESIGN_DEV_EXPOSED")
++        flat = tuple(s for group in groups for s in group)
++        if len(set(flat)) != len(flat) or any(not isinstance(s, str) or not s for s in flat):
++            raise PermissionError("Scene identity overlap or duplicate across locked roles")
++        if not isinstance(self.physical_identities, tuple) or any(
++            not isinstance(p, tuple) or len(p) != 2 for p in self.physical_identities
++        ):
++            raise TypeError("Immutable physical identity pairs required")
++        ids = dict(self.physical_identities)
++        if self.physical_identities:
++            if set(ids) != set(flat) or len(ids) != len(self.physical_identities):
++                raise PermissionError("Physical identity audit must cover each scene exactly once")
++            if any(not isinstance(p, str) or not p for p in ids.values()):
++                raise PermissionError("Unverified physical identity")
++            other = {
++                ids[s] for s in self.train_scenes + self.redesign_dev_scenes + self.exposed_scenes
++            }
++            held = [ids[s] for s in self.final_holdout_scenes]
++            if set(held) & other or len(set(held)) != len(held):
++                raise PermissionError("Physical environment leaks into final holdout")
++
++    def assert_final_ready(self):
++        if len(self.redesign_dev_scenes) < 8 or len(self.final_holdout_scenes) < 8:
++            raise PermissionError("Final qualification requires >=8 dev and >=8 holdout scenes")
++        if not self.physical_identities:
++            raise PermissionError("Final qualification requires verified physical identity mapping")
++
++
++@dataclass(frozen=True)
++class MatchedTrainingConfig:
++    support_method: str
++    scene_ids: tuple[str, ...]
++    seeds: tuple[int, ...]
++    optimizer: str
++    total_steps: int
++    loss: str
++    supervision: str
++    parameter_count: int
++    checkpoint_selection: str
++    data_sha256: str
++    optimizer_hyperparameters: tuple[tuple[str, float], ...] = ()
++
++    def __post_init__(self):
++        if self.support_method not in DEPLOYABLE_METHODS:
++            raise PermissionError("Matched retraining requires deployable methods")
++        if not isinstance(self.scene_ids, tuple) or not isinstance(self.seeds, tuple):
++            raise TypeError("Immutable training scenes and seeds required")
++        if not isinstance(self.optimizer_hyperparameters, tuple) or any(
++            not isinstance(p, tuple) or len(p) != 2 or type(p[1]) not in (float, int)
++            for p in self.optimizer_hyperparameters
++        ):
++            raise TypeError("Immutable optimizer hyperparameters required")
++        if (
++            not self.scene_ids
++            or not self.seeds
++            or self.total_steps <= 0
++            or self.parameter_count <= 0
++        ):
++            raise ValueError("Nonempty matched training configuration required")
++
++
++def assert_matched_training(current, redesigned):
++    if not isinstance(current, MatchedTrainingConfig) or not isinstance(
++        redesigned, MatchedTrainingConfig
++    ):
++        raise TypeError("MatchedTrainingConfig required")
++    a, b = asdict(current), asdict(redesigned)
++    a.pop("support_method")
++    b.pop("support_method")
++    differences = sorted(k for k in a if a[k] != b[k])
++    if differences:
++        raise PermissionError(f"Matched training differs beyond support_method: {differences}")
++    return True
++
++
++@dataclass(frozen=True)
++class MethodLock:
++    config: SupportProtocolConfig
++    scene_roles: SceneRoleLock
++    artifact_hashes: tuple[tuple[str, str, str], ...]
++    dev_gate_path: str
++    dev_gate_sha256: str
++    digest: str
++
++
++def seal_method_lock(config, scene_roles, artifact_paths, dev_gate_path):
++    config.assert_allowed_scene_role("FINAL_QUALIFICATION_HOLDOUT")
++    scene_roles.assert_final_ready()
++    required = {"carrier_checkpoint", "support_config", "scene_role_lock", "inference_code"}
++    if not required.issubset(artifact_paths):
++        raise PermissionError("Incomplete method freeze artifacts")
++    gate_path = str(Path(dev_gate_path).resolve())
++    gate = json.loads(Path(gate_path).read_text())
++    if gate.get("status") != "PASS":
++        raise PermissionError("Development gate has not passed")
++    artifacts = tuple(
++        (k, str(Path(p).resolve()), _sha(p)) for k, p in sorted(artifact_paths.items())
++    )
++    if gate.get("method") != config.method or gate.get("config_digest") != _digest(asdict(config)):
++        raise PermissionError("Development gate does not certify this frozen method configuration")
++    if gate.get("artifact_hashes") != {name: digest for name, _, digest in artifacts}:
++        raise PermissionError("Development gate artifacts differ from frozen method artifacts")
++    if tuple(gate.get("dev_scene_ids", ())) != scene_roles.redesign_dev_scenes:
++        raise PermissionError("Development gate scene identities differ from locked development")
++    gate_hash = _sha(gate_path)
++    digest = _digest(
++        {
++            "config": asdict(config),
++            "roles": asdict(scene_roles),
++            "artifacts": artifacts,
++            "dev_gate": (gate_path, gate_hash),
++        }
++    )
++    return MethodLock(config, scene_roles, artifacts, gate_path, gate_hash, digest)
++
++
++class FinalHoldoutGate:
++    """One atomic claim per experiment; interruptions do not silently reopen holdout."""
++
++    def __init__(self, claim_path, method_lock=None):
++        self.claim_path = Path(claim_path)
++        self.method_lock = method_lock
++
++    def _verify(self, config):
++        lock = self.method_lock
++        if not isinstance(lock, MethodLock):
++            raise PermissionError("Final holdout cannot load before sealed method lock")
++        if config != lock.config:
++            raise PermissionError("Holdout inference cannot modify frozen configuration")
++        config.assert_allowed_scene_role("FINAL_QUALIFICATION_HOLDOUT")
++        rebuilt = seal_method_lock(
++            config,
++            lock.scene_roles,
++            {name: path for name, path, _ in lock.artifact_hashes},
++            lock.dev_gate_path,
++        )
++        if rebuilt != lock:
++            raise PermissionError("Locked method artifact or development gate mutated")
++
++    def claim(self, config, scene_ids):
++        self._verify(config)
++        lock = self.method_lock
++        if tuple(scene_ids) != lock.scene_roles.final_holdout_scenes:
++            raise PermissionError("Holdout scene identity allowlist changed")
++        self.claim_path.parent.mkdir(parents=True, exist_ok=True)
++        flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
++        try:
++            descriptor = os.open(self.claim_path, flags, 0o600)
++        except FileExistsError as error:
++            raise PermissionError("Final holdout has already been claimed; no reopening") from error
++        with os.fdopen(descriptor, "w") as handle:
++            json.dump(
++                {
++                    "method_lock_digest": lock.digest,
++                    "scene_ids": list(scene_ids),
++                    "status": "CLAIMED_ONCE",
++                },
++                handle,
++                sort_keys=True,
++            )
++            handle.flush()
++            os.fsync(handle.fileno())
++        return _HoldoutSession(self, config, _sha(self.claim_path))
++
++
++class _HoldoutSession:
++    def __init__(self, gate, config, claim_hash):
++        self.gate, self.config, self.claim_hash = gate, config, claim_hash
++        self.events = []
++        self._model_scenes = set()
++        self._queries = set()
++
++    def _check(self, scene_id):
++        self.gate._verify(self.config)
++        if _sha(self.gate.claim_path) != self.claim_hash:
++            raise PermissionError("Atomic holdout claim mutated")
++        if scene_id not in self.gate.method_lock.scene_roles.final_holdout_scenes:
++            raise PermissionError("Scene not in final holdout allowlist")
++
++    def load_model_scene(self, scene_id, loader: Callable):
++        self._check(scene_id)
++        if scene_id in self._model_scenes:
++            raise PermissionError("Holdout model scene cannot be opened twice")
++        self._model_scenes.add(scene_id)
++        self.events.append({"kind": "model_scene", "scene_id": scene_id})
++        value = loader()
++        self._check(scene_id)
++        return value
++
++    def read_query_ground_truth(self, scene_id, query_id, sealed_states, loader: Callable):
++        self._check(scene_id)
++        if scene_id not in self._model_scenes or not sealed_states:
++            raise PermissionError("Query GT requires constructed and sealed states")
++        fingerprints = []
++        for state in sealed_states:
++            if not isinstance(state, SealedScene) or state.scene_id != scene_id:
++                raise PermissionError("Expected sealed states for target holdout scene")
++            _validate_sealed(state)
++            if hash_scene_state(state.scene_state) != state.state_hash:
++                raise PermissionError("Sealed holdout state hash mismatch")
++            fingerprints.append(hash_value(state))
++        key = (scene_id, query_id)
++        if key in self._queries:
++            raise PermissionError("Holdout query GT cannot be reopened")
++        self._queries.add(key)
++        self.events.append({"kind": "query_GT", "scene_id": scene_id, "query_id": query_id})
++        value = loader()
++        self._check(scene_id)
++        if fingerprints != [hash_value(s) for s in sealed_states]:
++            raise PermissionError("Evaluator mutated sealed holdout states")
++        return value
++
++
++def old_exposed_manifest():
++    return {
++        "scene_ids": list(EXPOSED_SCENES),
++        "role": "REDESIGN_DEV_EXPOSED",
++        "final_qualification_allowed": False,
++        "independent_confirmation_allowed": False,
++    }
++
++
++def validate_dev_scene_ids(roles, scene_ids):
++    """Run before media loading; diagnostic query geometry exception never includes holdout."""
++    if isinstance(roles, SceneRoleLock):
++        train = set(roles.train_scenes)
++        dev = set(roles.redesign_dev_scenes)
++        holdout = set(roles.final_holdout_scenes)
++    else:
++        train = set(roles["TRAIN_SCENES"])
++        dev = set(roles["REDESIGN_DEV_SCENES"])
++        holdout = set(roles["FINAL_HOLDOUT_SCENES"])
++    exposed = set(EXPOSED_SCENES)
++    if holdout & (train | dev | exposed) or train & (dev | exposed) or dev & exposed:
++        raise PermissionError("Scene roles overlap")
++    ids = tuple(scene_ids)
++    if not ids or len(ids) != len(set(ids)) or set(ids) - (dev | exposed):
++        raise PermissionError(
++            "Diagnostic/dev inference rejects holdout, training and unknown identities"
++        )
++    return True
+diff --git a/src/mcss/mechanism_pilot/support_redesign_data.py b/src/mcss/mechanism_pilot/support_redesign_data.py
+new file mode 100644
+index 0000000..73eeb53
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/support_redesign_data.py
+@@ -0,0 +1,430 @@
++"""New support-redesign data cohorts, with sealed final holdout metadata.
++
++Only source metadata, camera geometry, RGB/depth validity are read. No model output.
++Old preparation modules and old experiment hashes are never modified.
++"""
++
++from __future__ import annotations
++
++import ast
++import json
++import time
++import zipfile
++from pathlib import Path
++
++import h5py
++import numpy as np
++import requests
++from PIL import Image
++
++from mcss.data.hypersim import convert_hypersim_pose
++from mcss.dynamic.checkpoint import load_dynamic_checkpoint
++from mcss.mechanism_pilot.calibration import calibrated_intrinsics, published_scene_metadata
++from mcss.mechanism_pilot.data_prep import BoundedRangeReader, check_geometry, resize_rgb_depth
++from mcss.mechanism_pilot.small_training import sha, write_json
++from mcss.mechanism_pilot.unseen_data import (
++    asset_identity,
++    csv_rows,
++    frame_quality,
++    select_members,
++    select_roles,
++    validate_unseen,
++)
++
++
++def safe_source_assets(path):
++    """Parse literal dictionaries and os.path.join of literal strings, never execute."""
++    rows = {}
++    for node in ast.walk(ast.parse(Path(path).read_text())):
++        if not (
++            isinstance(node, ast.Call)
++            and isinstance(node.func, ast.Attribute)
++            and isinstance(node.func.value, ast.Name)
++            and node.func.value.id == "scenes"
++            and node.func.attr == "append"
++            and len(node.args) == 1
++            and isinstance(node.args[0], ast.Dict)
++        ):
++            continue
++        row = {}
++        for key, value in zip(node.args[0].keys, node.args[0].values, strict=True):
++            key = ast.literal_eval(key)
++            if isinstance(value, ast.Call):
++                if ast.unparse(value.func) != "os.path.join" or value.keywords:
++                    raise ValueError("Unsupported source metadata expression")
++                parts = [ast.literal_eval(a) for a in value.args]
++                if not all(isinstance(a, str) and not a.startswith(("/", "\\")) for a in parts):
++                    raise ValueError("Invalid literal source asset path")
++                row[key] = "/".join(parts)
++            else:
++                row[key] = ast.literal_eval(value)
++        rows[row["name"]] = row
++    return rows
++
++
++def validate_roles_disjoint(train, exposed, dev, holdout, assets):
++    groups = [set(x) for x in (train, exposed, dev, holdout)]
++    if any(groups[i] & groups[j] for i in range(4) for j in range(i + 1, 4)):
++        raise ValueError("Train/exposed/dev/final holdout overlap")
++    all_ids = train + exposed + dev + holdout
++    identities = [asset_identity(assets[s]) for s in all_ids]
++    if len(identities) != len(set(identities)):
++        raise ValueError("Source asset overlap across cohorts")
++    volumes = [s.split("_")[1] for s in all_ids]
++    if len(volumes) != len(set(volumes)):
++        raise ValueError("Source volume overlap across cohorts")
++
++
++def prepare_support_redesign(
++    output, experiment, checkpoint_path, training_dir, training_manifest, partitions, calibration
++):
++    output, experiment, training_dir = Path(output), Path(experiment), Path(training_dir)
++    if output.exists():
++        raise FileExistsError("Refusing overwrite of locked unseen cohort")
++    metadata = experiment / "rgb_audit/official_metadata"
++    upstream = experiment / "metadata/upstream_dataset_config.py"
++    assets = safe_source_assets(upstream)
++    train_manifest = json.loads(Path(training_manifest).read_text())
++    train_ids = sorted(s["scene_id"] for s in train_manifest["scenes"])
++    log_ids = sorted(
++        {
++            json.loads(s)["scene_id"]
++            for s in (training_dir / "training.jsonl").read_text().splitlines()
++        }
++    )
++    training_summary = json.loads((training_dir / "summary.json").read_text())
++    if (
++        train_ids != ["ai_001_001", "ai_002_001", "ai_003_001"]
++        or train_ids != log_ids
++        or training_summary["n_train_scenes"] != 3
++    ):
++        raise ValueError("Training identities not consistent")
++    carrier, _, checkpoint = load_dynamic_checkpoint(checkpoint_path)
++    if checkpoint["sha256"] != training_summary["checkpoint_sha256"]["phase_b_final"]:
++        raise ValueError("Checkpoint hash mismatch")
++    partition_rows = csv_rows(partitions)
++    trajectories = {
++        r["Animation"]: r for r in csv_rows(metadata / "metadata_camera_trajectories.csv")
++    }
++    split_rows = csv_rows(metadata / "metadata_images_split_scene_v1.csv")
++    allowed = {}
++    for row in split_rows:
++        if (
++            row["camera_name"] == "cam_00"
++            and row["included_in_public_release"] == "True"
++            and row["split_partition_name"] == "train"
++        ):
++            allowed.setdefault(row["scene_name"], []).append(int(row["frame_id"]))
++    old_manifest = json.loads((experiment / "unseen_data/manifest.json").read_text())
++    exposed_ids = sorted(s["scene_id"] for s in old_manifest["scenes"])
++    # Entire old candidate cohort, including geometry-ineligible ai005003, is excluded.
++    old_candidates = json.loads((experiment / "unseen_data/candidate_lock.json").read_text())[
++        "candidate_scene_ids"
++    ]
++    selected, volumes = [], {s.split("_")[1] for s in train_ids + old_candidates}
++    for row in sorted(partition_rows, key=lambda r: r["scene_name"]):
++        scene = row["scene_name"]
++        volume = scene.split("_")[1]
++        if (
++            volume in volumes
++            or row["protocol_partition"] != "train"
++            or scene not in assets
++            or len(allowed.get(scene, [])) < 16
++        ):
++            continue
++        trajectory = trajectories.get(scene + "_cam_00")
++        if trajectory is None or "BAD" in trajectory["Scene type"].upper():
++            continue
++        selected.append(scene)
++        volumes.add(volume)
++        if len(selected) == 24:
++            break
++    dev_ids, holdout_ids = selected[::2], selected[1::2]
++    validate_roles_disjoint(train_ids, exposed_ids, dev_ids, holdout_ids, assets)
++    prereg = output.parent / "preregistration.json"
++    if not prereg.exists():
++        raise ValueError("Unified preregistration must exist before any cohort lock/download")
++    validate_unseen(train_ids, selected, assets)
++    output.mkdir(parents=True)
++    source_paths = [
++        upstream,
++        Path(partitions),
++        metadata / "metadata_camera_trajectories.csv",
++        metadata / "metadata_images_split_scene_v1.csv",
++        Path(training_manifest),
++        training_dir / "summary.json",
++        training_dir / "training.jsonl",
++        Path(calibration),
++    ]
++    lock = {
++        "schema": "mcss.support_redesign.candidates.v1",
++        "preregistration_sha256": sha(prereg),
++        "REDESIGN_DEV_SCENES": dev_ids,
++        "FINAL_HOLDOUT_SCENES": holdout_ids,
++        "REDESIGN_DEV_EXPOSED": exposed_ids,
++        "native_geometry_p95_limit_m": 0.01,
++        "holdout_model_access": "PROHIBITED_UNTIL_METHOD_LOCK_AND_DEV_GATE",
++        "created_unix": time.time(),
++        "checkpoint_sha256": checkpoint["sha256"],
++        "train_scene_ids": train_ids,
++        "candidate_scene_ids": selected,
++        "assets": {s: assets[s] for s in train_ids + selected},
++        "selection": (
++            "lexicographic first eligible protocol-train cam00 non-BAD scene "
++            "from each distinct untrained asset volume; 8 fixed candidates, no "
++            "replacement"
++        ),
++        "physical_identity_limit": (
++            "Distinct official volume/archive/asset identities; vendor cross-"
++            "asset content reuse cannot be independently ruled out."
++        ),
++        "previously_observed": {
++            r["scene_name"]: r["previously_observed"]
++            for r in partition_rows
++            if r["scene_name"] in selected
++        },
++        "source_sha256": {str(p): sha(p) for p in source_paths},
++        "upstream_url": "https://github.com/apple/ml-hypersim/blob/main/evermotion_dataset/_dataset_config.py",
++        "data_budget_bytes": 2 * 1024**3,
++        "quality_rule": (
++            "finite RGB, >99.9 percent pixels all channels <=2/255 rejected; "
++            "finite positive native depth fraction >=0.95; no scores"
++        ),
++        "role_rule": (
++            "first quality frame anchor, last two quality frames queries; "
++            "enumerate disjoint pairs from remaining frames. Maximize "
++            "min(A_support,B_support), minimize support gap, then mean baseline "
++            "gap, then lex frame IDs. At least 7 quality frames; each context "
++            ">=2 supported candidates. This minimum is not a quality proof."
++        ),
++        "model_predictions_read": False,
++    }
++    write_json(output / "candidate_lock.json", lock)
++    write_json(
++        output.parent / "scene_role_lock.json",
++        {
++            "created_unix": time.time(),
++            "stage": "INITIAL_IMMUTABLE_COHORT_SELECTION",
++            "candidate_lock_sha256": sha(output / "candidate_lock.json"),
++            "TRAIN_SCENES": train_ids,
++            "REDESIGN_DEV_EXPOSED": exposed_ids,
++            "REDESIGN_DEV_SCENES": dev_ids,
++            "FINAL_HOLDOUT_SCENES": holdout_ids,
++            "FINAL_HOLDOUT_PROTECTED": True,
++            "ineligible_holdout_transfer_to_dev": "PROHIBITED",
++            "qualified_frame_roles_will_be_separate": "qualified_frame_role_lock.json",
++            "source_assets": {s: assets[s] for s in train_ids + exposed_ids + selected},
++            "model_predictions_read": False,
++        },
++    )
++    print("CANDIDATE_LOCKED " + json.dumps(selected), flush=True)
++    sessions, readers, archives, plans = [], [], [], []
++    shared_budget = [0]
++    calibration_rows = published_scene_metadata(calibration)
++    try:
++        for scene in selected:
++            session = requests.Session()
++            url = f"https://docs-assets.developer.apple.com/ml-research/datasets/hypersim/v1/scenes/{scene}.zip"
++            reader = BoundedRangeReader(url, session)
++            reader.shared_budget = shared_budget
++            archive = zipfile.ZipFile(reader)
++            plan = select_members(scene, archive.infolist(), allowed[scene])
++            plan.update(url=url, etag=reader.etag, archive_bytes=reader.size)
++            sessions.append(session)
++            readers.append(reader)
++            archives.append(archive)
++            plans.append(plan)
++            print("MEMBER_PLAN " + scene, flush=True)
++        if sum(p["compressed_bytes"] + p["uncompressed_bytes"] for p in plans) > 2 * 1024**3:
++            raise ValueError("Selected data exceeds 2GiB bound")
++        write_json(
++            output / "data_lock.json",
++            {
++                "created_unix": time.time(),
++                "candidate_lock_sha256": sha(output / "candidate_lock.json"),
++                "scenes": plans,
++            },
++        )
++        print("ALL_MEMBERS_LOCKED", flush=True)
++        hashes, quality_rows, feasibility, scenes, geometry = {}, {}, {}, [], []
++        with (output / "access.jsonl").open("x") as log:
++
++            def access(sid, path, operation):
++                log.write(
++                    json.dumps(
++                        {
++                            "time": time.time(),
++                            "scene_id": sid,
++                            "path": str(path),
++                            "operation": operation,
++                            "purpose": "unseen_data_geometry_only",
++                            "official_split": "train",
++                        }
++                    )
++                    + "\n"
++                )
++                log.flush()
++
++            for plan, archive, _reader in zip(plans, archives, readers, strict=True):
++                sid = plan["scene_id"]
++                for member in plan["members"]:
++                    dest = output / "raw" / member
++                    dest.parent.mkdir(parents=True, exist_ok=True)
++                    access(sid, member, "download")
++                    dest.write_bytes(archive.read(member))
++                    hashes[str(dest.relative_to(output))] = sha(dest)
++                raw = output / "raw" / sid
++                units = {
++                    r["parameter_name"]: r["parameter_value"]
++                    for r in csv_rows(raw / "_detail/metadata_scene.csv")
++                }
++                scale = float(units["meters_per_asset_unit"])
++                if not np.isclose(
++                    scale,
++                    float(calibration_rows[sid]["settings_units_info_meters_scale"]),
++                    rtol=1e-6,
++                ):
++                    raise ValueError("Native calibration scale mismatch")
++
++                def hdf(path, sid=sid):
++                    access(sid, path, "decode_hdf5")
++                    with h5py.File(path) as f:
++                        return np.array(f["dataset"])
++
++                ids = hdf(raw / "_detail/cam_00/camera_keyframe_frame_indices.hdf5").reshape(-1)
++                poses = hdf(raw / "_detail/cam_00/camera_keyframe_positions.hdf5")
++                rotations = hdf(raw / "_detail/cam_00/camera_keyframe_orientations.hdf5")
++                mapping = {int(i): j for j, i in enumerate(ids)}
++                frames, quality = [], {}
++                prepared = output / "prepared" / sid
++                prepared.mkdir(parents=True)
++                for fid in plan["frame_ids"]:
++                    rgbpath = raw / f"images/scene_cam_00_final_preview/frame.{fid:04d}.color.jpg"
++                    access(sid, rgbpath, "decode_RGB")
++                    with Image.open(rgbpath) as im:
++                        rgb = np.asarray(im.convert("RGB"))
++                    depth = hdf(
++                        raw / f"images/scene_cam_00_geometry_hdf5/frame.{fid:04d}.depth_meters.hdf5"
++                    )
++                    quality[fid] = frame_quality(rgb, depth)
++                    if rgb.shape[:2] != depth.shape:
++                        raise ValueError("Native RGB/depth dimensions disagree")
++                    pose = convert_hypersim_pose(
++                        rotations[mapping[fid]], poses[mapping[fid]], meters_per_asset_unit=scale
++                    )
++                    if fid == plan["frame_ids"][0]:
++                        position = hdf(
++                            raw / f"images/scene_cam_00_geometry_hdf5/frame.{fid:04d}.position.hdf5"
++                        )
++                        try:
++                            geometry.append(
++                                check_geometry(
++                                    sid,
++                                    depth,
++                                    position,
++                                    pose,
++                                    calibrated_intrinsics(calibration_rows[sid], depth.shape),
++                                    scale,
++                                )
++                            )
++                        except ValueError as exc:
++                            geometry.append({"scene_id": sid, "status": "FAIL", "error": str(exc)})
++                    rgb_small, depth_small = resize_rgb_depth(rgb, depth)
++                    rgb_out, depth_out = prepared / f"{fid:04d}.png", prepared / f"{fid:04d}.npy"
++                    Image.fromarray(rgb_small).save(rgb_out)
++                    np.save(depth_out, depth_small)
++                    for path in (rgb_out, depth_out):
++                        hashes[str(path.relative_to(output))] = sha(path)
++                    frames.append(
++                        {
++                            "frame_id": fid,
++                            "rgb": str(rgb_out.resolve()),
++                            "depth": str(depth_out.resolve()),
++                            "intrinsics": calibrated_intrinsics(
++                                calibration_rows[sid], (128, 160)
++                            ).tolist(),
++                            "c2w": pose.tolist(),
++                        }
++                    )
++                roles, diagnostic = select_roles(
++                    frames, quality, carrier._candidate_points.detach()
++                )
++                if any(r.get("status") == "FAIL" and r["scene_id"] == sid for r in geometry):
++                    diagnostic.update(status="INELIGIBLE", reason="native_geometry_check_failed")
++                quality_rows[sid], feasibility[sid] = quality, diagnostic
++                if diagnostic["status"] == "ELIGIBLE":
++                    scenes.append(
++                        {
++                            "scene_id": sid,
++                            "split": "dev" if sid in dev_ids else "final_holdout",
++                            "cohort_role": "REDESIGN_DEVELOPMENT"
++                            if sid in dev_ids
++                            else "FINAL_QUALIFICATION_HOLDOUT",
++                            "physical_scene_id": "|".join(asset_identity(assets[sid])),
++                            "frames": frames,
++                            "roles": roles,
++                        }
++                    )
++                write_json(output / "progress_quality.json", quality_rows)
++                write_json(output / "progress_feasibility.json", feasibility)
++                print("PREPARED " + sid + " " + json.dumps(diagnostic), flush=True)
++        dev = [s for s in scenes if s["scene_id"] in dev_ids]
++        holdout = [s for s in scenes if s["scene_id"] in holdout_ids]
++        status = "READY" if len(dev) >= 8 and len(holdout) >= 8 else "BLOCKED_INSUFFICIENT_DATA"
++        common = {
++            "schema": "mcss.support_redesign.data.v1",
++            "image_size": [128, 160],
++            "depth_semantics": "ray_distance_meters",
++            "DATA_COHORT_STATUS": status,
++            "candidate_lock_sha256": sha(output / "candidate_lock.json"),
++            "data_lock_sha256": sha(output / "data_lock.json"),
++            "model_predictions_read": False,
++        }
++        manifest = dict(common, scenes=scenes)
++        write_json(output / "manifest.json", manifest)
++        write_json(output / "dev_manifest.json", dict(common, scenes=dev))
++        write_json(
++            output / "holdout_manifest.json",
++            dict(
++                common, scenes=holdout, inference_access="PROHIBITED_UNTIL_METHOD_LOCK_AND_DEV_GATE"
++            ),
++        )
++        write_json(output / "frame_quality.json", quality_rows)
++        write_json(output / "support_feasibility.json", feasibility)
++        write_json(output / "geometry_checks.json", geometry)
++        write_json(output / "hashes.json", hashes)
++        role_lock = {
++            "created_unix": time.time(),
++            "manifest_sha256": sha(output / "manifest.json"),
++            "candidate_lock_sha256": sha(output / "candidate_lock.json"),
++            "TRAIN_SCENES": train_ids,
++            "REDESIGN_DEV_EXPOSED": exposed_ids,
++            "REDESIGN_DEV_SCENES": dev_ids,
++            "FINAL_HOLDOUT_SCENES": holdout_ids,
++            "eligible_redesign_dev": [s["scene_id"] for s in dev],
++            "eligible_final_holdout": [s["scene_id"] for s in holdout],
++            "roles": {s["scene_id"]: s["roles"] for s in scenes},
++            "DATA_COHORT_STATUS": status,
++            "model_predictions_read": False,
++            "FINAL_HOLDOUT_PROTECTED": True,
++            "holdout_inference_requires": "qualified dev gate AND frozen method lock",
++            "source_assets": {s: assets[s] for s in train_ids + exposed_ids + selected},
++            "dataset_hashes_sha256": sha(output / "hashes.json"),
++            "initial_scene_role_lock_sha256": sha(output.parent / "scene_role_lock.json"),
++            "manifest_hashes": {
++                n: sha(output / n) for n in ["dev_manifest.json", "holdout_manifest.json"]
++            },
++        }
++        write_json(output.parent / "qualified_frame_role_lock.json", role_lock)
++        write_json(
++            output / "download_cost.json",
++            {
++                "network_bytes": sum(r.transferred for r in readers),
++                "budget_accounted_bytes": shared_budget[0],
++                "full_archives_downloaded": False,
++            },
++        )
++        return manifest
++    finally:
++        for obj in archives + readers + sessions:
++            obj.close()
+diff --git a/src/mcss/mechanism_pilot/support_redesign_geometry.py b/src/mcss/mechanism_pilot/support_redesign_geometry.py
+new file mode 100644
+index 0000000..36cb9f2
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/support_redesign_geometry.py
+@@ -0,0 +1,194 @@
++"""Explicit support interventions, preserving voxel/candidate scatter consistency.
++
++Runtime camera-only entry points cannot accept labels. Oracle geometry is a separate
++API and is never a deployable scene representation or mathematical upper bound.
++"""
++
++from __future__ import annotations
++
++from dataclasses import dataclass
++from itertools import combinations
++
++import numpy as np
++import torch
++
++from mcss.geometry import generate_rays, project_world, transform_cameras, transform_points
++
++
++@dataclass(frozen=True)
++class GeometryPlan:
++    method: str
++    bounds: torch.Tensor
++    candidate_ids: torch.Tensor
++    points: torch.Tensor
++    normalized_xyz: torch.Tensor
++    oracle: bool = False
++
++
++def lattice(bounds, grid=(8, 8, 8)):
++    depth, height, width = grid
++    ids = torch.arange(depth * height * width, device=bounds.device)
++    fractions = torch.stack(
++        (
++            (ids.remainder(width) + 0.5) / width,
++            (torch.div(ids, width, rounding_mode="floor").remainder(height) + 0.5) / height,
++            (torch.div(ids, height * width, rounding_mode="floor") + 0.5) / depth,
++        ),
++        -1,
++    ).to(bounds)
++    return bounds[0] + fractions * (bounds[1] - bounds[0]), fractions * 2 - 1
++
++
++def view_counts(points, cameras):
++    return torch.stack([project_world(points, c)[2] for c in cameras]).sum(0)
++
++
++def nearest_distance(points, surfaces):
++    if not len(surfaces):
++        return torch.full((len(points),), float("inf"), device=points.device)
++    minimum = torch.full((len(points),), float("inf"), device=points.device)
++    for chunk in surfaces.split(4096):
++        minimum = torch.minimum(minimum, torch.cdist(points, chunk.to(points)).amin(1))
++    return minimum
++
++
++def enclose(points, *, padding=0.05, minimum_extent=1.0):
++    if points.ndim != 2 or points.shape[1] != 3 or not len(points):
++        raise ValueError("Finite nonempty 3D points required")
++    if not torch.isfinite(points).all():
++        raise ValueError("Bounds cannot contain nonfinite geometry")
++    low, high = points.amin(0), points.amax(0)
++    center = (low + high) / 2
++    extent = (high - low).clamp_min(minimum_extent) * (1 + 2 * padding)
++    return torch.stack((center - extent / 2, center + extent / 2))
++
++
++def adaptive_bounds(cameras, *, near: float, far: float):
++    """Only arrived cameras and frozen TRAIN global ray-depth constants admitted."""
++    if not 0 < near < far or not cameras:
++        raise ValueError("Positive ordered train near/far and arrived cameras required")
++    points = []
++    for camera in cameras:
++        origins, directions = generate_rays(camera)
++        # Camera corners alone need not bound normalized-ray interior directions.
++        # All image rays (same fixed resolution) avoid that geometric shortcut.
++        for distance in (near, far):
++            points.append((origins + directions * distance).reshape(-1, 3))
++    return enclose(torch.cat(points))
++
++
++def allocate_candidates(bounds, cameras, *, count=128):
++    """Camera-frustum allocation only; no scene depth or feature/model score argument."""
++    points, _ = lattice(bounds)
++    if not 0 < count <= len(points) or not cameras:
++        raise ValueError("Invalid candidate budget or missing context cameras")
++    counts = view_counts(points, cameras).cpu().numpy()
++    # Deterministic stable tie: voxel ID. No candidate budget increase.
++    order = np.lexsort((np.arange(len(points)), -counts))[:count].copy()
++    return torch.tensor(order, device=bounds.device, dtype=torch.long)
++
++
++def oracle_candidates(bounds, cameras, context_surfaces, *, count=128):
++    """Offline GT-near support selection from the legal frozen-resolution lattice."""
++    points, _ = lattice(bounds)
++    if count > len(points) or count < 1:
++        raise ValueError("Invalid budget")
++    counts = view_counts(points, cameras).cpu().numpy()
++    distances = nearest_distance(points, context_surfaces).cpu().numpy()
++    order = np.lexsort((np.arange(len(points)), -counts, distances, -(counts >= 2).astype(int)))
++    return torch.tensor(order[:count].copy(), dtype=torch.long, device=bounds.device)
++
++
++def make_plan(method, bounds, ids, *, oracle=False):
++    points, normalized = lattice(bounds)
++    if len(ids) != 128 or len(ids.unique()) != 128 or (ids < 0).any() or (ids >= 512).any():
++        raise ValueError("Exactly128 unique scatter IDs in the8^3 lattice required")
++    return GeometryPlan(method, bounds.clone(), ids.clone(), points[ids], normalized[ids], oracle)
++
++
++def deployable_plan(method, original_bounds, original_ids, cameras, *, depth_prior=None):
++    """Strict GT-free runtime entry. Oracle payload/unknown kwargs are rejected."""
++    if method not in {"R0", "R1", "R2", "R3", "R12", "R123"}:
++        raise PermissionError("Oracle/unknown method cannot enter deployable geometry")
++    bounds = original_bounds
++    if method in {"R1", "R12", "R123"}:
++        if depth_prior is None or set(depth_prior) != {"near", "far"}:
++            raise ValueError("Frozen TRAIN-only near/far constants required")
++        bounds = adaptive_bounds(cameras, **depth_prior)
++    ids = allocate_candidates(bounds, cameras) if method in {"R2", "R12", "R123"} else original_ids
++    return make_plan(method, bounds, ids)
++
++
++def oracle_plan(method, original_bounds, original_ids, cameras, *, query_bounds, context_surfaces):
++    if method not in {"ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT"}:
++        raise PermissionError("Diagnostic-only oracle method required")
++    bounds = query_bounds if method != "ORACLE_SUPPORT" else original_bounds
++    ids = (
++        oracle_candidates(bounds, cameras, context_surfaces)
++        if method != "ORACLE_VOLUME"
++        else original_ids
++    )
++    return make_plan(method, bounds, ids, oracle=True)
++
++
++def apply_plan(carrier, plan):
++    """Change only explicit geometry buffers; never save this as the original checkpoint."""
++    if tuple(carrier.config.grid_size) != (8, 8, 8) or carrier.config.token_count != 128:
++        raise ValueError("Locked8^3/128 schema required")
++    ids, bounds = plan.candidate_ids, plan.bounds
++    if (
++        ids.shape != (128,)
++        or ids.dtype != torch.long
++        or len(ids.unique()) != 128
++        or (ids < 0).any()
++        or (ids >= 512).any()
++    ):
++        raise ValueError("Exactly128 unique valid scatter IDs required")
++    if (
++        bounds.shape != (2, 3)
++        or not torch.isfinite(bounds).all()
++        or not (bounds[1] > bounds[0]).all()
++    ):
++        raise ValueError("Finite ordered2x3 bounds required")
++    expected, normal = lattice(plan.bounds)
++    if not torch.equal(plan.points, expected[plan.candidate_ids]):
++        raise ValueError("Candidate points no longer match scatter voxel centers")
++    if not torch.equal(plan.normalized_xyz, normal[plan.candidate_ids]):
++        raise ValueError("Normalized candidate coordinates disagree")
++    carrier._bounds.copy_(plan.bounds[None])
++    carrier._candidate_ids.copy_(plan.candidate_ids)
++    carrier._candidate_points.copy_(plan.points)
++    carrier._candidate_normalized_xyz.copy_(plan.normalized_xyz)
++
++
++def surface_points(camera, depth, anchor):
++    origins, rays = generate_rays(camera)
++    valid = torch.isfinite(depth) & (depth > 0)
++    return transform_points(
++        origins[valid] + rays[valid] * depth[valid, None], torch.linalg.inv(anchor)
++    )
++
++
++def context_selection(cameras_by_id, original_bounds, original_ids):
++    """Only already-arrived cameras; caller must exclude every query/future frame."""
++    ids = sorted(cameras_by_id)
++    if len(ids) < 5:
++        raise ValueError("Need five arrived frames")
++    anchor = ids[0]
++    inverse = torch.linalg.inv(cameras_by_id[anchor].c2w)
++    cameras = {i: transform_cameras(c, inverse) for i, c in cameras_by_id.items()}
++    points, _ = lattice(original_bounds)
++    points = points[original_ids]
++    options = []
++    for pair in combinations(ids[1:], 2):
++        counts = view_counts(points, [cameras[i] for i in (anchor, *pair)])
++        baseline = sum(float(cameras[i].c2w[:3, 3].norm()) for i in pair) / 2
++        options.append((pair, int((counts >= 2).sum()), baseline))
++    best = None
++    for a, b in combinations(options, 2):
++        if set(a[0]) & set(b[0]):
++            continue
++        key = (-min(a[1], b[1]), -(a[2] + b[2]) / 2, a[0], b[0])
++        if best is None or key < best[0]:
++            best = (key, a[0], b[0])
++    return {"context_a": [anchor, *best[1]], "context_b": [anchor, *best[2]]}
+diff --git a/src/mcss/mechanism_pilot/support_redesign_runner.py b/src/mcss/mechanism_pilot/support_redesign_runner.py
+new file mode 100644
+index 0000000..542c1fd
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/support_redesign_runner.py
+@@ -0,0 +1,383 @@
++"""Frozen-carrier, static-only development interventions; final holdout is forbidden.
++
++Oracle query geometry is an explicit preseal diagnostic exception. Evaluation labels
++are read only after every state is sealed; GT-free states never consume that exception.
++"""
++
++from __future__ import annotations
++
++import json
++import time
++from dataclasses import asdict
++from pathlib import Path
++
++import numpy as np
++import torch
++
++from mcss.dynamic.cache import ObservationCache
++from mcss.dynamic.checkpoint import load_dynamic_checkpoint
++from mcss.dynamic.feedback import anchored_observation, batched_camera
++from mcss.dynamic.types import (
++    OnlineObservation,
++    SealedScene,
++    hash_fast_content,
++    hash_scene_state,
++    hash_value,
++)
++from mcss.geometry import transform_cameras
++from mcss.measurements import FixedMeasurementRenderer
++from mcss.mechanism_pilot.contracts import EvaluationLedger
++from mcss.mechanism_pilot.small_training import TrainScene, sha, write_json
++from mcss.mechanism_pilot.statistics import measurement_metrics
++from mcss.mechanism_pilot.support_redesign_contracts import validate_dev_scene_ids
++from mcss.mechanism_pilot.support_redesign_geometry import (
++    apply_plan,
++    deployable_plan,
++    enclose,
++    nearest_distance,
++    oracle_plan,
++    surface_points,
++    view_counts,
++)
++
++ORACLE_DESIGNS = ("R0", "ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT")
++RADIUS = (1.5**2 + 1**2 + 1.5**2) ** 0.5 / 2
++
++
++@torch.no_grad()
++def run_development(root, dev_manifest, exposed_manifest, checkpoint, output, *, device="cuda"):
++    root, output = Path(root), Path(output)
++    if output.exists():
++        raise FileExistsError("Refusing to overwrite locked development intervention")
++    roles = json.loads((root / "scene_role_lock.json").read_text())
++    manifests = {
++        "exposed": Path(exposed_manifest),
++        "new_dev": Path(dev_manifest),
++    }
++    parsed = {k: json.loads(v.read_text()) for k, v in manifests.items()}
++    ids = [s["scene_id"] for m in parsed.values() for s in m["scenes"]]
++    # No media, model loading or GT decode precedes this identity firewall.
++    validate_dev_scene_ids(roles, ids)
++    if len(parsed["new_dev"]["scenes"]) < 8:
++        raise PermissionError("At least8 qualified new development scenes required")
++    if set(s["scene_id"] for s in parsed["exposed"]["scenes"]) != set(
++        roles["REDESIGN_DEV_EXPOSED"]
++    ):
++        raise ValueError("All seven exposed scenes must be retained")
++    qualification = json.loads((root / "qualified_frame_role_lock.json").read_text())
++    if qualification["initial_scene_role_lock_sha256"] != sha(
++        root / "scene_role_lock.json"
++    ) or qualification["manifest_hashes"]["dev_manifest.json"] != sha(Path(dev_manifest)):
++        raise PermissionError("Manifest/scene roles differ from the pre-evaluation lock")
++    output.mkdir(parents=True)
++    scenes, cohorts, queries = {}, {}, {}
++    input_hashes = {str(Path(checkpoint).resolve()): sha(Path(checkpoint))}
++    for cohort, manifest in parsed.items():
++        source = manifests[cohort]
++        input_hashes[str(source.resolve())] = sha(source)
++        for record in manifest["scenes"]:
++            sid = record["scene_id"]
++            scenes[sid] = TrainScene(record, manifest["image_size"], source.parent, device, [])
++            cohorts[sid] = cohort
++            q = record["roles"]["primary_query"]
++            if len(q) < 2 or len(set(q)) != len(q):
++                raise ValueError("At least two unique primary queries required")
++            a, b = record["roles"]["context_a"], record["roles"]["context_b"]
++            if len(a) != 3 or len(b) != 3 or a[0] != b[0] or set(a) & set(b) != {a[0]}:
++                raise ValueError("Locked matched three-frame contexts required")
++            if set(q) & (set(a) | set(b)):
++                raise PermissionError("Query cannot enter arrived observations")
++            queries[sid] = q
++            for frame in record["frames"]:
++                for field in ("rgb", "depth"):
++                    path = scenes[sid].path(frame, field)
++                    input_hashes[str(path.resolve())] = sha(path)
++    for filename in (
++        "scene_role_lock.json",
++        "qualified_frame_role_lock.json",
++        "preregistration.json",
++        "oracle_adequacy_clarification.json",
++    ):
++        path = root / filename
++        input_hashes[str(path.resolve())] = sha(path)
++    source_files = [
++        Path(__file__),
++        Path(__file__).with_name("support_redesign_geometry.py"),
++        Path(__file__).with_name("support_redesign_contracts.py"),
++    ]
++    source_files += list(Path(__file__).resolve().parents[1].joinpath("dynamic").glob("*.py"))
++    source_hashes = {str(p.resolve()): sha(p) for p in source_files}
++    carrier, _, meta = load_dynamic_checkpoint(checkpoint, device=device)
++    carrier.eval().requires_grad_(False)
++    expected = json.loads((root / "preregistration.json").read_text())["checkpoint_sha256"]
++    assert meta["sha256"] == expected
++    parameters_before = hash_value(dict(carrier.named_parameters()))
++    renderer = FixedMeasurementRenderer(n_samples=64, ray_chunk_size=2048).to(device)
++    original_bounds, original_ids = carrier._bounds[0].clone(), carrier._candidate_ids.clone()
++    write_json(
++        output / "lock.json",
++        {
++            "checkpoint": meta,
++            "designs": ORACLE_DESIGNS,
++            "scene_ids": ids,
++            "cohorts": cohorts,
++            "queries": queries,
++            "input_sha256": input_hashes,
++            "source_sha256": source_hashes,
++            "candidate_budget": 128,
++            "grid": [8, 8, 8],
++            "renderer_samples": 64,
++            "config": asdict(carrier.config),
++            "oracle_is_deployable": False,
++            "final_holdout_access": False,
++            "dynamic_ttt_run": False,
++            "created_unix": time.time(),
++        },
++    )
++    access, states, plans, anchors, obs = [], {}, {}, {}, {}
++    tick = time.perf_counter()
++    for sid, scene in scenes.items():
++        rr = scene.record["roles"]
++        obs[sid] = {}
++        for fid in sorted(set(rr["context_a"] + rr["context_b"])):
++            access.append(
++                {
++                    "scene_id": sid,
++                    "frame_id": fid,
++                    "kind": "ARRIVED_RGB_CAMERA",
++                    "stage": "construction",
++                }
++            )
++            frame = scene.frames[fid]
++            obs[sid][fid] = OnlineObservation(sid, fid, scene.rgb(frame), scene.camera(frame))
++        anchors[sid] = obs[sid][rr["context_a"][0]].camera.c2w
++    ledger = EvaluationLedger(
++        f"{d}/{sid}/{role}" for d in ORACLE_DESIGNS for sid in ids for role in ("A", "B", "anchor")
++    )
++    # First seal all R0 states. Oracle label access never enters baseline construction.
++    oracle_surfaces, query_bounds = {}, {}
++    for design in ORACLE_DESIGNS:
++        for sid, scene in scenes.items():
++            rr, anchor = scene.record["roles"], anchors[sid]
++            if design != "R0" and sid not in oracle_surfaces:
++                surfaces = {}
++                for fid in sorted(set(rr["context_a"] + rr["context_b"] + queries[sid])):
++                    frame = scene.frames[fid]
++                    access.append(
++                        {
++                            "scene_id": sid,
++                            "frame_id": fid,
++                            "kind": "ORACLE_GEOMETRY_GT_DEPTH_CAMERA",
++                            "stage": "PRESEAL_DIAGNOSTIC_EXCEPTION",
++                            "query_geometry": fid in queries[sid],
++                            "deployable": False,
++                        }
++                    )
++                    depth = (
++                        torch.from_numpy(np.load(scene.path(frame, "depth")))
++                        .float()
++                        .to(device)
++                        .squeeze()
++                    )
++                    surfaces[fid] = surface_points(scene.camera(frame), depth, anchor)
++                oracle_surfaces[sid] = surfaces
++                query_bounds[sid] = enclose(torch.cat([surfaces[i] for i in queries[sid]]))
++            for role, frame_ids in [
++                ("A", rr["context_a"]),
++                ("B", rr["context_b"]),
++                ("anchor", rr["context_a"][:1]),
++            ]:
++                cameras = [anchored_observation(obs[sid][i], anchor).camera for i in frame_ids]
++                key = f"{design}/{sid}/{role}"
++                if design == "R0":
++                    plan = deployable_plan(design, original_bounds, original_ids, cameras)
++                else:
++                    plan = oracle_plan(
++                        design,
++                        original_bounds,
++                        original_ids,
++                        cameras,
++                        query_bounds=query_bounds[sid],
++                        context_surfaces=torch.cat([oracle_surfaces[sid][i] for i in frame_ids]),
++                    )
++                apply_plan(carrier, plan)
++                episode = key.replace("/", "-")
++                cache = ObservationCache(episode, sid)
++                fast = carrier.initial_fast(episode)
++                for fid in frame_ids:
++                    arrived = anchored_observation(obs[sid][fid], anchor)
++                    cache = cache.append(arrived, carrier.encode(arrived))
++                state = carrier.materialize(cache, fast)
++                sealed = SealedScene(
++                    episode,
++                    sid,
++                    "dev",
++                    "static-support-diagnostic",
++                    state,
++                    hash_scene_state(state),
++                    tuple(frame_ids),
++                    meta["sha256"],
++                    hash_value({"design": design, "plan": plan}),
++                    hash_fast_content(fast),
++                    anchor.clone(),
++                )
++                states[key], plans[key] = sealed, plan
++                ledger.seal(key, sealed)
++                access.append(
++                    {
++                        "kind": "SEALED_STATE",
++                        "state_key": key,
++                        "oracle_geometry_used": design != "R0",
++                    }
++                )
++                assert not fast.delta_fuse.any() and not fast.delta_complete.any()
++    ledger.assert_ready()
++    assert hash_value(dict(carrier.named_parameters())) == parameters_before
++    torch.save(states, output / "sealed_states.pt")
++    torch.save(plans, output / "geometry_plans.pt")
++    write_json(
++        output / "geometry_plans.json",
++        {
++            k: {
++                "bounds": p.bounds.tolist(),
++                "candidate_ids": p.candidate_ids.tolist(),
++                "points": p.points.tolist(),
++                "normalized_xyz": p.normalized_xyz.tolist(),
++                "oracle": p.oracle,
++            }
++            for k, p in plans.items()
++        },
++    )
++    rows, predictions = [], output / "predictions"
++    predictions.mkdir()
++    for sid, scene in scenes.items():
++        cohort_ids = sorted(s for s in ids if cohorts[s] == cohorts[sid])
++        donor = cohort_ids[(cohort_ids.index(sid) + 1) % len(cohort_ids)]
++        for fid in queries[sid]:
++            frame = scene.frames[fid]
++            world_camera = ledger.read_query_camera(
++                f"{sid}-{fid}", lambda frame=frame, scene=scene: scene.camera(frame)
++            )
++            camera = batched_camera(transform_cameras(world_camera, torch.linalg.inv(anchors[sid])))
++            camera_hash = hash_value(camera)
++
++            def truth_loader(sid=sid, scene=scene, frame=frame, fid=fid):
++                access.append(
++                    {
++                        "scene_id": sid,
++                        "frame_id": fid,
++                        "kind": "QUERY_RGB_DEPTH_GT",
++                        "stage": "POST_ALL_STATES_SEALED_EVALUATION",
++                    }
++                )
++                return scene.rgb(frame), torch.from_numpy(
++                    np.load(scene.path(frame, "depth"))
++                ).float().to(device).squeeze()
++
++            truth, depth = ledger.read_query_ground_truth(f"{sid}-{fid}", truth_loader)
++            surfaces = surface_points(world_camera, depth, anchors[sid])
++            for design in ORACLE_DESIGNS:
++                for role in ("A", "B", "anchor", "prior", "wrong_scene"):
++                    source_id = donor if role == "wrong_scene" else sid
++                    source_role = "A" if role == "wrong_scene" else role
++                    key = f"{design}/{source_id}/{source_role}"
++                    t0 = time.perf_counter()
++                    if role == "prior":
++                        pred = {
++                            "rgb": torch.full_like(truth[None, None], 0.5),
++                            "depth": torch.full_like(depth[None, None, None], 5.0),
++                            "visibility": torch.ones_like(depth[None, None, None]),
++                        }
++                        plan = plans[f"{design}/{sid}/A"]
++                        counts = view_counts(
++                            plan.points,
++                            [
++                                anchored_observation(o, anchors[sid]).camera
++                                for o in obs[sid].values()
++                            ],
++                        )
++                    else:
++                        sealed, plan = states[key], plans[key]
++                        pred = renderer(sealed.scene_state, camera, ("rgb", "depth", "visibility"))
++                        assert hash_scene_state(sealed.scene_state) == sealed.state_hash
++                        source_sid = donor if role == "wrong_scene" else sid
++                        counts = view_counts(
++                            plan.points,
++                            [
++                                anchored_observation(obs[source_sid][i], anchors[source_sid]).camera
++                                for i in sealed.observed_ids
++                            ],
++                        )
++                    if device == "cuda":
++                        torch.cuda.synchronize()
++                    seconds = time.perf_counter() - t0
++                    assert camera_hash == hash_value(camera)
++                    inside = ((surfaces >= plan.bounds[0]) & (surfaces <= plan.bounds[1])).all(-1)
++                    supported = counts >= 2
++                    dist = nearest_distance(surfaces, plan.points[supported])
++                    scaled_radius = float(((plan.bounds[1] - plan.bounds[0]) / 8).norm() / 2)
++                    row = {
++                        "scene_id": sid,
++                        "cohort": cohorts[sid],
++                        "query_id": fid,
++                        "design": design,
++                        "method": role,
++                        "query_camera_hash": camera_hash,
++                        "donor_scene_id": donor if role == "wrong_scene" else None,
++                        "seconds": seconds,
++                        "candidate_count": 128,
++                        "candidate_one_view": int((counts >= 1).sum()),
++                        "candidate_two_view": int(supported.sum()),
++                        "candidate_three_view": int((counts >= 3).sum()),
++                        "two_view_candidate_fraction": float(supported.float().mean()),
++                        "inside_fraction": float(inside.float().mean()),
++                        "supported_surface_fraction": float((dist <= RADIUS).float().mean()),
++                        "supported_surface_fraction_voxel_scaled": float(
++                            (dist <= scaled_radius).float().mean()
++                        ),
++                        "fixed_surface_radius_m": RADIUS,
++                        "voxel_scaled_radius_m": scaled_radius,
++                        "volume_extent": (plan.bounds[1] - plan.bounds[0]).tolist(),
++                        "bounds": plan.bounds.tolist(),
++                        "prediction_hash": hash_value(pred),
++                        **measurement_metrics(
++                            pred["rgb"][0, 0],
++                            truth,
++                            pred["depth"][0, 0, 0],
++                            depth,
++                            pred["visibility"][0, 0, 0],
++                        ),
++                    }
++                    rows.append(row)
++                    path = predictions / f"{sid}_{fid}_{design}_{role}.npz"
++                    np.savez_compressed(
++                        path,
++                        rgb=pred["rgb"][0, 0].cpu().numpy(),
++                        depth=pred["depth"][0, 0, 0].cpu().numpy(),
++                        opacity=pred["visibility"][0, 0, 0].cpu().numpy(),
++                    )
++    ledger.assert_ready()
++    assert all(sha(Path(p)) == h for p, h in input_hashes.items())
++    assert all(sha(Path(p)) == h for p, h in source_hashes.items())
++    assert hash_value(dict(carrier.named_parameters())) == parameters_before
++    write_json(output / "results.json", rows)
++    write_json(output / "access_log.json", access)
++    write_json(output / "sealed_query_log.json", ledger.events)
++    write_json(
++        output / "integrity.json",
++        {
++            "status": "PASS",
++            "checkpoint_unchanged": True,
++            "parameters_unchanged": True,
++            "source_input_hashes_unchanged": True,
++            "final_holdout_access": False,
++            "writes": 0,
++            "dynamic_ttt_run": False,
++            "rows": len(rows),
++            "n_scenes": len(ids),
++            "seconds": time.perf_counter() - tick,
++            "oracle_preseal_exception_explicit": True,
++            "all_evaluation_labels_after_complete_seal": True,
++        },
++    )
++    return rows
+diff --git a/src/mcss/mechanism_pilot/support_redesign_statistics.py b/src/mcss/mechanism_pilot/support_redesign_statistics.py
+new file mode 100644
+index 0000000..9ddb3d0
+--- /dev/null
++++ b/src/mcss/mechanism_pilot/support_redesign_statistics.py
+@@ -0,0 +1,260 @@
++"""Scene-equal support attribution from raw rows only; no model or geometry search.
++
++Oracle rows are privileged diagnostics, not mathematical upper bounds. Correlations
++are descriptive and do not identify a causal mechanism.
++"""
++
++from __future__ import annotations
++
++from collections import defaultdict
++
++import numpy as np
++
++from mcss.mechanism_pilot.statistics import paired_scene_bootstrap
++
++METRICS = (
++    "rgb_mse",
++    "rgb_ssim",
++    "depth_absrel",
++    "depth_rmse",
++    "depth_delta1",
++    "opacity",
++    "coverage",
++    "inside_fraction",
++    "two_view_candidate_fraction",
++    "supported_surface_fraction",
++)
++METHODS = ("A", "B", "anchor", "prior", "wrong_scene")
++ORACLES = ("ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT")
++
++
++def _diagnose(values):
++    result = paired_scene_bootstrap(values, draws=10000, seed=20260927)
++    a = np.array(list(values.values()), dtype=float)
++    tolerance = 1e-8
++    result["improved_tied_worse"] = {
++        "improved": int((a > tolerance).sum()),
++        "tied": int((np.abs(a) <= tolerance).sum()),
++        "worse": int((a < -tolerance).sum()),
++        "tie_absolute_tolerance": tolerance,
++    }
++    positive = np.maximum(a, 0)
++    absolute = np.abs(a)
++    result["concentration"] = {}
++    for name, masses in [("positive", positive), ("absolute", absolute)]:
++        ordered = np.sort(masses)[::-1]
++        total = float(ordered.sum())
++        result["concentration"][name] = {
++            "total": total,
++            "top1_fraction": float(ordered[:1].sum() / total) if total else None,
++            "top3_fraction": float(ordered[:3].sum() / total) if total else None,
++        }
++    result["direction"] = (
++        "positive favors the left-defined gain; not necessarily better for every statistic"
++    )
++    return result
++
++
++def _pearson(x, y):
++    x, y = np.asarray(x, dtype=float), np.asarray(y, dtype=float)
++    if len(x) < 2 or np.ptp(x) == 0 or np.ptp(y) == 0:
++        return None
++    return float(np.corrcoef(x, y)[0, 1])
++
++
++def _validate(rows):
++    if not rows:
++        raise ValueError("No support attribution rows")
++    seen, identities = set(), {}
++    for row in rows:
++        key = tuple(row[k] for k in ("cohort", "scene_id", "design", "method", "query_id"))
++        if key in seen:
++            raise ValueError("Duplicate raw scene/design/method/query row")
++        seen.add(key)
++        if row["method"] not in METHODS:
++            raise ValueError("Unknown static method")
++        if row["cohort"] not in ("exposed", "new_dev"):
++            raise PermissionError("Attribution statistics reject holdout/unknown cohorts")
++        previous = identities.setdefault(row["scene_id"], row["cohort"])
++        if previous != row["cohort"]:
++            raise PermissionError("Same scene repeated under multiple cohorts")
++        for metric in METRICS:
++            value = row[metric]
++            if value is None or not np.isfinite(value):
++                raise ValueError(f"Nonfinite or missing required metric {metric}")
++        if row.get("candidate_count") != 128:
++            raise ValueError("Candidate count differs from fixed budget")
++        extent = np.asarray(row["volume_extent"], dtype=float)
++        if extent.shape != (3,) or not np.isfinite(extent).all() or np.any(extent <= 0):
++            raise ValueError("Invalid volume extent")
++    queries = defaultdict(dict)
++    for row in rows:
++        key = row["cohort"], row["scene_id"], row["design"]
++        queries[key].setdefault(row["method"], set()).add(row["query_id"])
++    reference = {}
++    for (cohort, sid, _design), by_method in queries.items():
++        if (
++            set(by_method) != set(METHODS)
++            or len({tuple(sorted(v)) for v in by_method.values()}) != 1
++        ):
++            raise ValueError("Incomplete or unpaired methods/queries")
++        ids = tuple(sorted(by_method["A"]))
++        ref = reference.setdefault((cohort, sid), ids)
++        if ids != ref:
++            raise ValueError("Designs evaluated on different queries")
++    designs = {r["design"] for r in rows}
++    if "R0" not in designs:
++        raise ValueError("R0 reference required")
++    scenes = {r["scene_id"] for r in rows}
++    if any({r["scene_id"] for r in rows if r["design"] == d} != scenes for d in designs):
++        raise ValueError("Designs evaluated on different scenes")
++
++
++def _analyze_group(rows):
++    scenes = sorted({r["scene_id"] for r in rows})
++    designs = {}
++    for design in sorted({r["design"] for r in rows}):
++        by_method = {}
++        for method in METHODS:
++            selected = [r for r in rows if r["design"] == design and r["method"] == method]
++            metrics = {}
++            for metric in METRICS:
++                values = {
++                    sid: float(np.mean([r[metric] for r in selected if r["scene_id"] == sid]))
++                    for sid in scenes
++                }
++                metrics[metric] = {
++                    "mean": float(np.mean(list(values.values()))),
++                    "per_scene": values,
++                }
++            metrics["volume_extent"] = {
++                "per_scene": {
++                    sid: np.mean(
++                        [r["volume_extent"] for r in selected if r["scene_id"] == sid], axis=0
++                    ).tolist()
++                    for sid in scenes
++                },
++                "note": "axis extents in meters; no candidate budget increase",
++            }
++            metrics["candidate_count"] = 128
++            by_method[method] = metrics
++
++        def metric_values(method, metric="depth_absrel", by_method=by_method):
++            return by_method[method][metric]["per_scene"]
++
++        a, b, anchor = (metric_values(method) for method in ("A", "B", "anchor"))
++        gain = {sid: anchor[sid] - (a[sid] + b[sid]) / 2 for sid in scenes}
++        wrong = {sid: metric_values("wrong_scene")[sid] - a[sid] for sid in scenes}
++        ab_geometry = {}
++        for metric in (
++            "inside_fraction",
++            "two_view_candidate_fraction",
++            "supported_surface_fraction",
++        ):
++            values = {
++                sid: (metric_values("A", metric)[sid] + metric_values("B", metric)[sid]) / 2
++                for sid in scenes
++            }
++            ab_geometry[metric] = {
++                "mean": float(np.mean(list(values.values()))),
++                "per_scene": values,
++            }
++        adequacy = {
++            "every_scene_AB_inside_at_least_0999": all(
++                v >= 0.999 for v in ab_geometry["inside_fraction"]["per_scene"].values()
++            ),
++            "pooled_scene_equal_AB_two_view_at_least_09": ab_geometry[
++                "two_view_candidate_fraction"
++            ]["mean"]
++            >= 0.9,
++            "pooled_scene_equal_AB_surface_support_at_least_075": ab_geometry[
++                "supported_surface_fraction"
++            ]["mean"]
++            >= 0.75,
++        }
++        adequate = all(adequacy.values())
++        designs[design] = {
++            "kind": "PRIVILEGED_DIAGNOSTIC_NOT_MATHEMATICAL_UPPER_BOUND"
++            if design in ORACLES
++            else "DEPLOYABLE_SUPPORT_DEFINITION",
++            "methods": by_method,
++            "full_context_gain": _diagnose(gain),
++            "wrong_scene_damage": _diagnose(wrong),
++            "AB_geometry": ab_geometry,
++            "oracle_adequacy": {
++                "applicable": design in ORACLES,
++                "adequate": adequate,
++                "checks": adequacy,
++                "radius_m": 1.1726,
++            },
++        }
++    reference = designs["R0"]
++    for result in designs.values():
++        gain = result["full_context_gain"]["per_scene"]
++        baseline = reference["full_context_gain"]["per_scene"]
++        differences = {sid: gain[sid] - baseline[sid] for sid in scenes}
++        result["change_full_context_gain_vs_R0"] = _diagnose(differences)
++        correlation = {}
++        for metric in (
++            "inside_fraction",
++            "two_view_candidate_fraction",
++            "supported_surface_fraction",
++        ):
++            improved_support = {
++                sid: result["AB_geometry"][metric]["per_scene"][sid]
++                - reference["AB_geometry"][metric]["per_scene"][sid]
++                for sid in scenes
++            }
++            correlation[metric] = {
++                "pearson": _pearson(list(improved_support.values()), list(differences.values())),
++                "support_change_per_scene": improved_support,
++            }
++        result["support_gain_correlation"] = {
++            "interpretation": "DESCRIPTIVE_ONLY_NOT_CAUSAL",
++            "by_support_metric": correlation,
++        }
++    combined = designs.get("ORACLE_VOLUME_SUPPORT")
++    if combined is None:
++        status = "INCONCLUSIVE"
++        reason = "Combined oracle diagnostic absent"
++    elif not combined["oracle_adequacy"]["adequate"]:
++        status = "INCONCLUSIVE"
++        reason = "Combined oracle did not meet predefined support/coverage adequacy"
++    elif combined["full_context_gain"]["ci95"][0] <= 0:
++        status = "NOT_SUFFICIENT"
++        reason = "Adequate combined oracle did not establish stable full-context gain"
++    else:
++        status = "ORACLE_RECOVERY_GT_FREE_UNTESTED"
++        reason = (
++            "Adequate combined oracle restores stable gain; deployment attribution still required"
++        )
++    return {
++        "n_scenes": len(scenes),
++        "scene_ids": scenes,
++        "designs": designs,
++        "oracle_attribution_status": status,
++        "oracle_attribution_reason": reason,
++        "adequacy_rule": (
++            "every scene mean AB inside>=.999; scene-equal AB two-view>=.9; supported surface>=.75"
++        ),
++        "aggregation": (
++            "query mean, A/B mean when specified, scene equal; pooled never weights cohorts equally"
++        ),
++    }
++
++
++def analyze(rows):
++    """Validate complete paired raw table and regenerate cohort/pooled attribution."""
++    rows = list(rows)
++    _validate(rows)
++    cohorts = {
++        cohort: _analyze_group([r for r in rows if r["cohort"] == cohort])
++        for cohort in sorted({r["cohort"] for r in rows})
++    }
++    return {
++        "schema": "mcss.support_redesign.statistics.v1",
++        "cohorts": cohorts,
++        "pooled": _analyze_group(rows),
++        "dynamic_ttt_run": False,
++        "oracle_note": "GT-privileged diagnostics are not guaranteed mathematical upper bounds",
++    }
+diff --git a/tests/test_support_redesign_contracts.py b/tests/test_support_redesign_contracts.py
+new file mode 100644
+index 0000000..d31a854
+--- /dev/null
++++ b/tests/test_support_redesign_contracts.py
+@@ -0,0 +1,196 @@
++"""Support redesign boundaries without any real holdout loading."""
++
++import hashlib
++import json
++from dataclasses import FrozenInstanceError, asdict, replace
++
++import pytest
++
++from mcss.mechanism_pilot.support_redesign_contracts import (
++    EXPOSED_SCENES,
++    FinalHoldoutGate,
++    MatchedTrainingConfig,
++    SceneRoleLock,
++    SupportProtocolConfig,
++    assert_matched_training,
++    old_exposed_manifest,
++    seal_method_lock,
++    validate_dev_scene_ids,
++)
++
++
++def roles():
++    train = ("train0", "train1", "train2")
++    dev = tuple(f"dev{i}" for i in range(8))
++    held = tuple(f"held{i}" for i in range(8))
++    identities = tuple((sid, f"physical_{sid}") for sid in train + dev + held + EXPOSED_SCENES)
++    return SceneRoleLock(train, dev, held, physical_identities=identities)
++
++
++def fixture_lock(tmp_path):
++    config, scene_roles = SupportProtocolConfig("R0"), roles()
++    paths = {}
++    for name in ["carrier_checkpoint", "support_config", "scene_role_lock", "inference_code"]:
++        path = tmp_path / name
++        path.write_text(name)
++        paths[name] = path
++    gate = tmp_path / "gate.json"
++    config_digest = hashlib.sha256(
++        json.dumps(asdict(config), sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
++    ).hexdigest()
++    gate.write_text(
++        json.dumps(
++            {
++                "status": "PASS",
++                "method": config.method,
++                "config_digest": config_digest,
++                "dev_scene_ids": list(scene_roles.redesign_dev_scenes),
++                "artifact_hashes": {
++                    name: hashlib.sha256(path.read_bytes()).hexdigest()
++                    for name, path in paths.items()
++                },
++            }
++        )
++    )
++    return config, scene_roles, paths, gate, seal_method_lock(config, scene_roles, paths, gate)
++
++
++@pytest.mark.parametrize("name", ["ORACLE_VOLUME", "ORACLE_SUPPORT", "ORACLE_VOLUME_SUPPORT"])
++def test_oracle_cannot_enter_deployment_or_holdout(name):
++    with pytest.raises(PermissionError):
++        SupportProtocolConfig(name)
++    config = SupportProtocolConfig(
++        name, scope="DIAGNOSTIC_ORACLE", input_channels=("context_gt_depth", "query_gt_geometry")
++    )
++    config.assert_allowed_scene_role("REDESIGN_DEV")
++    with pytest.raises(PermissionError):
++        config.assert_allowed_scene_role("FINAL_QUALIFICATION_HOLDOUT")
++
++
++@pytest.mark.parametrize("channel", ["context_gt_depth", "query_gt", "future_rgb", "model_score"])
++def test_gt_free_config_rejects_forbidden_input(channel):
++    with pytest.raises(PermissionError):
++        SupportProtocolConfig("R1", input_channels=(channel,))
++
++
++def test_configuration_is_deeply_immutable():
++    config = SupportProtocolConfig("R2", hyperparameters=(("threshold", 0.5),))
++    with pytest.raises(FrozenInstanceError):
++        config.method = "R1"
++    with pytest.raises(TypeError):
++        SupportProtocolConfig("R1", input_channels=["arrived_rgb"])
++    with pytest.raises(TypeError):
++        SupportProtocolConfig("R1", hyperparameters=(("nested", []),))
++
++
++def test_holdout_denied_before_method_lock(tmp_path):
++    gate = FinalHoldoutGate(tmp_path / "claim.json")
++    with pytest.raises(PermissionError, match="before sealed"):
++        gate.claim(SupportProtocolConfig("R0"), roles().final_holdout_scenes)
++    assert not gate.claim_path.exists()
++
++
++def test_failed_dev_gate_denied(tmp_path):
++    config, scene_roles, paths, gate, _ = fixture_lock(tmp_path)
++    gate.write_text(json.dumps({"status": "FAIL"}))
++    with pytest.raises(PermissionError):
++        seal_method_lock(config, scene_roles, paths, gate)
++
++
++def test_atomic_once_claim_and_model_scene_allowlist(tmp_path):
++    config, scene_roles, _, _, lock = fixture_lock(tmp_path)
++    gate = FinalHoldoutGate(tmp_path / "claim.json", lock)
++    session = gate.claim(config, scene_roles.final_holdout_scenes)
++    with pytest.raises(PermissionError, match="already been claimed"):
++        FinalHoldoutGate(gate.claim_path, lock).claim(config, scene_roles.final_holdout_scenes)
++    calls = []
++    assert session.load_model_scene("held0", lambda: calls.append("loaded")) is None
++    with pytest.raises(PermissionError):
++        session.load_model_scene("held0", lambda: calls.append("bad"))
++    with pytest.raises(PermissionError):
++        session.load_model_scene("train0", lambda: calls.append("bad"))
++    with pytest.raises(PermissionError, match="sealed states"):
++        session.read_query_ground_truth("held0", "q", [], lambda: calls.append("bad"))
++    assert calls == ["loaded"]
++
++
++def test_locked_config_and_artifacts_cannot_mutate(tmp_path):
++    config, scene_roles, paths, _, lock = fixture_lock(tmp_path)
++    gate = FinalHoldoutGate(tmp_path / "claim.json", lock)
++    with pytest.raises(PermissionError, match="configuration"):
++        gate.claim(replace(config, method="R1"), scene_roles.final_holdout_scenes)
++    paths["carrier_checkpoint"].write_text("mutated")
++    with pytest.raises(PermissionError, match="mutated|artifacts differ"):
++        gate.claim(config, scene_roles.final_holdout_scenes)
++    assert not gate.claim_path.exists()
++
++
++def test_mid_inference_artifact_mutation_is_detected(tmp_path):
++    config, scene_roles, paths, _, lock = fixture_lock(tmp_path)
++    session = FinalHoldoutGate(tmp_path / "claim", lock).claim(
++        config, scene_roles.final_holdout_scenes
++    )
++    with pytest.raises(PermissionError, match="mutated|artifacts differ"):
++        session.load_model_scene("held0", lambda: paths["support_config"].write_text("mutated"))
++
++
++def test_roles_disallow_identity_and_physical_environment_overlap():
++    r = roles()
++    with pytest.raises(PermissionError):
++        replace(r, final_holdout_scenes=("train0",) + r.final_holdout_scenes[1:])
++    pairs = tuple(
++        (sid, "physical_train0" if sid == "held0" else physical)
++        for sid, physical in r.physical_identities
++    )
++    with pytest.raises(PermissionError):
++        replace(r, physical_identities=pairs)
++    with pytest.raises(PermissionError):
++        replace(r, exposed_scenes=EXPOSED_SCENES[:-1])
++    assert old_exposed_manifest()["role"] == "REDESIGN_DEV_EXPOSED"
++    assert old_exposed_manifest()["scene_ids"] == list(EXPOSED_SCENES)
++
++
++def test_dev_guard_runs_before_loader_and_rejects_holdout():
++    r = roles()
++    d = {
++        "TRAIN_SCENES": r.train_scenes,
++        "REDESIGN_DEV_SCENES": r.redesign_dev_scenes,
++        "FINAL_HOLDOUT_SCENES": r.final_holdout_scenes,
++    }
++    assert validate_dev_scene_ids(d, ("dev0", EXPOSED_SCENES[0]))
++    for ids in [("held0",), ("train0",), ("unknown",), ("dev0", "dev0")]:
++        with pytest.raises(PermissionError):
++            validate_dev_scene_ids(d, ids)
++
++
++@pytest.mark.parametrize(
++    "field,value",
++    [
++        ("seeds", (2,)),
++        ("total_steps", 200),
++        ("loss", "different"),
++        ("parameter_count", 900),
++        ("scene_ids", ("other",)),
++        ("data_sha256", "other"),
++        ("optimizer_hyperparameters", (("lr", 0.02),)),
++    ],
++)
++def test_matched_training_rejects_every_nonsupport_difference(field, value):
++    config = MatchedTrainingConfig(
++        "R0",
++        ("train0",),
++        (1,),
++        "Adam",
++        100,
++        "RGB+AbsRel",
++        "RGB+depth",
++        308,
++        "minval",
++        "hash",
++        (("lr", 0.001),),
++    )
++    redesigned = replace(config, support_method="R12")
++    assert assert_matched_training(config, redesigned)
++    with pytest.raises(PermissionError):
++        assert_matched_training(config, replace(redesigned, **{field: value}))
++    assert asdict(config)["support_method"] == "R0"
+diff --git a/tests/test_support_redesign_data.py b/tests/test_support_redesign_data.py
+new file mode 100644
+index 0000000..2769fd5
+--- /dev/null
++++ b/tests/test_support_redesign_data.py
+@@ -0,0 +1,34 @@
++import pytest
++
++from mcss.mechanism_pilot.support_redesign_data import safe_source_assets, validate_roles_disjoint
++
++
++def test_safe_asset_join_never_executes_external_code(tmp_path):
++    f = tmp_path / "source.py"
++    f.write_text(
++        "raise Exception('do not execute')\n"
++        "scenes.append({'name':'a','archive_file':'a.rar',"
++        "'asset_file':os.path.join('folder','asset')})\n"
++    )
++    assert safe_source_assets(f)["a"]["asset_file"] == "folder/asset"
++    f.write_text("scenes.append({'name':'a','asset_file':__import__('os').system('false')})")
++    with pytest.raises(ValueError, match="Unsupported"):
++        safe_source_assets(f)
++
++
++def test_holdout_cannot_overlap_train_dev_exposed_asset():
++    names = ["ai_001_001", "ai_004_001", "ai_012_001", "ai_013_001"]
++    assets = {s: {"archive_file": s + ".rar", "asset_file": "asset"} for s in names}
++    validate_roles_disjoint([names[0]], [names[1]], [names[2]], [names[3]], assets)
++    with pytest.raises(ValueError, match="overlap"):
++        validate_roles_disjoint([names[0]], [names[1]], [names[2]], [names[1]], assets)
++    assets[names[3]] = assets[names[0]].copy()
++    with pytest.raises(ValueError, match="asset overlap"):
++        validate_roles_disjoint([names[0]], [names[1]], [names[2]], [names[3]], assets)
++
++
++def test_distinct_scene_same_volume_is_rejected():
++    names = ["ai_001_001", "ai_004_001", "ai_012_001", "ai_012_002"]
++    assets = {s: {"archive_file": s + ".rar", "asset_file": "asset"} for s in names}
++    with pytest.raises(ValueError, match="volume overlap"):
++        validate_roles_disjoint([names[0]], [names[1]], [names[2]], [names[3]], assets)
+diff --git a/tests/test_support_redesign_geometry.py b/tests/test_support_redesign_geometry.py
+new file mode 100644
+index 0000000..2cea70b
+--- /dev/null
++++ b/tests/test_support_redesign_geometry.py
+@@ -0,0 +1,200 @@
++"""Independent geometry contracts; no oracle score or deployed GT access."""
++
++import inspect
++from dataclasses import replace
++
++import numpy as np
++import pytest
++import torch
++
++from mcss.dynamic.carrier import DynamicSceneCarrier
++from mcss.dynamic.config import CarrierConfig
++from mcss.geometry import generate_rays
++from mcss.mechanism_pilot import support_redesign_geometry as geometry
++from mcss.types import Cameras
++
++
++def camera(x=0.0):
++    pose = torch.eye(4)
++    pose[0, 3] = x
++    return Cameras(torch.tensor([[2.0, 0.0, 2.0], [0.0, 2.0, 2.0], [0.0, 0.0, 1.0]]), pose, (5, 5))
++
++
++def original():
++    model = DynamicSceneCarrier(CarrierConfig())
++    return model, model._bounds[0].clone(), model._candidate_ids.clone()
++
++
++@pytest.mark.parametrize(
++    "fn",
++    [
++        geometry.adaptive_bounds,
++        geometry.allocate_candidates,
++        geometry.deployable_plan,
++        geometry.context_selection,
++    ],
++)
++def test_runtime_api_has_no_labels_or_catchall_keyword_arguments(fn):
++    parameters = inspect.signature(fn).parameters
++    forbidden = {"depth", "gt_depth", "query_gt", "context_surfaces", "model_score", "loss"}
++    assert not forbidden.intersection(parameters)
++    assert all(p.kind != inspect.Parameter.VAR_KEYWORD for p in parameters.values())
++
++
++def test_runtime_gt_injection_is_rejected():
++    _, bounds, ids = original()
++    cameras = [camera(), camera(0.1)]
++    with pytest.raises(TypeError):
++        geometry.adaptive_bounds(cameras, near=0.1, far=4.0, gt_depth=torch.ones(5, 5))
++    with pytest.raises(TypeError):
++        geometry.allocate_candidates(bounds, cameras, depth=torch.ones(5, 5))
++    with pytest.raises(TypeError):
++        geometry.context_selection(
++            {i: camera(i / 10) for i in range(5)}, bounds, ids, model_score={"best": 1}
++        )
++    with pytest.raises(PermissionError):
++        geometry.deployable_plan("ORACLE_SUPPORT", bounds, ids, cameras)
++    with pytest.raises(ValueError):
++        geometry.deployable_plan(
++            "R1", bounds, ids, cameras, depth_prior={"near": 0.1, "far": 4.0, "gt_depth": 1}
++        )
++
++
++@pytest.mark.parametrize("method", ["R0", "R1", "R2", "R3", "R12", "R123"])
++def test_runtime_plans_preserve_unique_budget_and_scatter_geometry(method):
++    _, bounds, ids = original()
++    plan = geometry.deployable_plan(
++        method, bounds, ids, [camera(), camera(0.2)], depth_prior={"near": 0.1, "far": 4.0}
++    )
++    assert plan.candidate_ids.shape == (128,)
++    assert plan.candidate_ids.dtype == torch.long
++    assert plan.candidate_ids.unique().numel() == 128
++    assert int(plan.candidate_ids.min()) >= 0 and int(plan.candidate_ids.max()) < 512
++    assert not plan.oracle
++    i = plan.candidate_ids
++    xyz = torch.stack((i % 8, (i // 8) % 8, i // 64), -1).float()
++    fractions = (xyz + 0.5) / 8
++    assert torch.equal(plan.points, plan.bounds[0] + fractions * (plan.bounds[1] - plan.bounds[0]))
++    assert torch.equal(plan.normalized_xyz, 2 * fractions - 1)
++
++
++def test_adaptive_bounds_enclose_interior_rays_not_only_frustum_corners():
++    cameras = [camera(), camera(0.2)]
++    bounds = geometry.adaptive_bounds(cameras, near=0.1, far=4.0)
++    for c in cameras:
++        origin, rays = generate_rays(c)
++        for depth in [0.1, 2.0, 4.0]:
++            points = origin + depth * rays
++            assert ((points >= bounds[0]) & (points <= bounds[1])).all()
++    assert bounds[1, 2] >= 4  # central normalized ray extends beyond z of corner rays
++
++
++def test_oracle_bounds_enclose_gt_and_are_marked_diagnostic_only():
++    _, bounds, ids = original()
++    surfaces = torch.tensor([[-10.0, -3.0, 0.1], [20.0, 2.0, 6.0]])
++    query_bounds = geometry.enclose(surfaces)
++    assert ((surfaces >= query_bounds[0]) & (surfaces <= query_bounds[1])).all()
++    plan = geometry.oracle_plan(
++        "ORACLE_VOLUME",
++        bounds,
++        ids,
++        [camera()],
++        query_bounds=query_bounds,
++        context_surfaces=surfaces,
++    )
++    assert plan.oracle and torch.equal(plan.bounds, query_bounds)
++    assert torch.equal(plan.candidate_ids, ids)
++    with pytest.raises(ValueError):
++        geometry.enclose(torch.tensor([[float("nan"), 0.0, 1.0]]))
++
++
++def test_oracle_allocation_prefers_two_frusta_then_nearest_gt_and_stable_ids():
++    bounds = torch.tensor([[-2.0, -2.0, 0.2], [2.0, 2.0, 4.2]])
++    points, _ = geometry.lattice(bounds)
++    cameras = [camera(), camera(0.2)]
++    counts = geometry.view_counts(points, cameras)
++    # Put surfaces at widely separated cells; derive ranking independently with tuples.
++    surfaces = points[torch.tensor([0, 180, 511])].clone()
++    distances = torch.linalg.vector_norm(points[:, None] - surfaces[None], dim=-1).amin(1)
++    expected = sorted(
++        range(512), key=lambda i: (-int(counts[i] >= 2), float(distances[i]), -int(counts[i]), i)
++    )[:128]
++    # Exact cell-center contacts and the broad ranking survive cdist rounding.
++    actual = geometry.oracle_candidates(bounds, cameras, surfaces)
++    assert actual.unique().numel() == 128
++    assert np.array_equal(
++        (counts[actual] >= 2).numpy(), (counts[torch.tensor(expected)] >= 2).numpy()
++    )
++    two_view = counts >= 2
++    assert int(two_view[actual].sum()) == min(int(two_view.sum()), 128)
++    actual_distances = geometry.nearest_distance(points, surfaces)
++    independent = sorted(
++        range(512),
++        key=lambda i: (-int(counts[i] >= 2), float(actual_distances[i]), -int(counts[i]), i),
++    )[:128]
++    assert actual.tolist() == independent
++    assert torch.equal(actual, geometry.oracle_candidates(bounds, cameras, surfaces))
++
++
++def test_camera_context_selection_is_deterministic_disjoint_and_order_independent():
++    _, bounds, ids = original()
++    cameras = {i: camera(i / 10) for i in range(7)}
++    first = geometry.context_selection(cameras, bounds, ids)
++    second = geometry.context_selection(dict(reversed(list(cameras.items()))), bounds, ids)
++    assert first == second
++    assert len(first["context_a"]) == len(first["context_b"]) == 3
++    assert set(first["context_a"]) & set(first["context_b"]) == {0}
++    assert set(first["context_a"] + first["context_b"]) <= set(cameras)
++
++
++def test_apply_plan_changes_only_buffers_not_learned_parameters_or_architecture():
++    model, bounds, ids = original()
++    parameters = {k: v.detach().clone() for k, v in model.named_parameters()}
++    config = model.config
++    plan = geometry.deployable_plan(
++        "R12", bounds, ids, [camera(), camera(0.2)], depth_prior={"near": 0.1, "far": 4.0}
++    )
++    geometry.apply_plan(model, plan)
++    assert model.config == config  # runtime diagnostic; not a rewritten old checkpoint
++    assert all(torch.equal(parameters[k], v) for k, v in model.named_parameters())
++    assert torch.equal(model._bounds[0], plan.bounds)
++    assert torch.equal(model._candidate_ids, plan.candidate_ids)
++    assert torch.equal(model._candidate_points, plan.points)
++    assert torch.equal(model._candidate_normalized_xyz, plan.normalized_xyz)
++    with pytest.raises(ValueError, match="scatter voxel centers"):
++        geometry.apply_plan(model, replace(plan, points=plan.points + 0.01))
++    with pytest.raises(ValueError, match="Normalized"):
++        geometry.apply_plan(model, replace(plan, normalized_xyz=plan.normalized_xyz + 0.01))
++
++
++def test_apply_plan_rejects_forged_duplicate_scatter_ids():
++    model, bounds, _ = original()
++    points, normalized = geometry.lattice(bounds)
++    ids = torch.zeros(128, dtype=torch.long)
++    forged = geometry.GeometryPlan("R2", bounds, ids, points[ids], normalized[ids])
++    with pytest.raises(ValueError):
++        geometry.apply_plan(model, forged)
++
++
++def test_oracle_scarcity_keeps_budget_without_faking_supported_candidates():
++    bounds = torch.tensor([[-2.0, -2.0, 0.2], [2.0, 2.0, 4.2]])
++    points, _ = geometry.lattice(bounds)
++    # One context can never supply >=2-view support, regardless of proximity to GT.
++    ids = geometry.oracle_candidates(bounds, [camera()], points[:3])
++    assert ids.numel() == ids.unique().numel() == 128
++    assert (geometry.view_counts(points[ids], [camera()]) >= 2).sum() == 0
++
++
++@pytest.mark.parametrize("invalid", ["reversed", "nonfinite", "shape"])
++def test_apply_plan_rejects_invalid_metric_bounds(invalid):
++    model, bounds, ids = original()
++    plan = geometry.make_plan("R0", bounds, ids)
++    bad = bounds.clone()
++    if invalid == "reversed":
++        bad = bad.flip(0)
++    elif invalid == "nonfinite":
++        bad[0, 0] = float("nan")
++    else:
++        bad = bad[None]
++    with pytest.raises(ValueError):
++        geometry.apply_plan(model, replace(plan, bounds=bad))
+diff --git a/tests/test_support_redesign_runner.py b/tests/test_support_redesign_runner.py
+new file mode 100644
+index 0000000..15f8851
+--- /dev/null
++++ b/tests/test_support_redesign_runner.py
+@@ -0,0 +1,162 @@
++"""Tiny actual-renderer oracle run and pre-model holdout firewall checks."""
++
++import json
++
++import numpy as np
++import pytest
++import torch
++from PIL import Image
++
++from mcss.dynamic.carrier import DynamicSceneCarrier
++from mcss.dynamic.checkpoint import save_dynamic_checkpoint
++from mcss.dynamic.config import WriteConfig
++from mcss.dynamic.types import hash_scene_state
++from mcss.dynamic.write_rule import DirectWriteRule
++from mcss.mechanism_pilot.small_training import sha
++from mcss.mechanism_pilot.spatial import carrier_config_for_spatial_mode
++from mcss.mechanism_pilot.support_redesign_contracts import EXPOSED_SCENES
++from mcss.mechanism_pilot.support_redesign_runner import run_development
++
++
++def setup_manifests(tmp_path, *, media):
++    dev_ids = [f"dev{i}" for i in range(8)]
++    roles = {
++        "TRAIN_SCENES": ["fixture_train"],
++        "REDESIGN_DEV_SCENES": dev_ids,
++        "REDESIGN_DEV_EXPOSED": list(EXPOSED_SCENES),
++        "FINAL_HOLDOUT_SCENES": [f"holdout{i}" for i in range(8)],
++    }
++    (tmp_path / "scene_role_lock.json").write_text(json.dumps(roles))
++    paths = []
++    for cohort, ids in [("exposed", EXPOSED_SCENES), ("dev", dev_ids)]:
++        scenes = []
++        for index, sid in enumerate(ids):
++            scene = {
++                "scene_id": sid,
++                "split": "dev",
++                "roles": {"context_a": [0, 1, 2], "context_b": [0, 3, 4], "primary_query": [8, 9]},
++                "frames": [],
++            }
++            if media:
++                for fid in [0, 1, 2, 3, 4, 8, 9]:
++                    rgb, depth = tmp_path / f"{sid}_{fid}.png", tmp_path / f"{sid}_{fid}.npy"
++                    Image.fromarray(np.full((8, 8, 3), 70 + index * 10, np.uint8)).save(rgb)
++                    np.save(depth, np.full((8, 8), 3.0, np.float32))
++                    pose = np.eye(4)
++                    angle = index * 0.13
++                    pose[:3, :3] = [
++                        [np.cos(angle), 0.0, np.sin(angle)],
++                        [0.0, 1.0, 0.0],
++                        [-np.sin(angle), 0.0, np.cos(angle)],
++                    ]
++                    pose[:3, 3] = [index * 4 + fid * 0.025, index * 2.0, 0.1]
++                    scene["frames"].append(
++                        {
++                            "frame_id": fid,
++                            "rgb": str(rgb),
++                            "depth": str(depth),
++                            "intrinsics": [[8.0, 0.0, 4.0], [0.0, 8.0, 4.0], [0.0, 0.0, 1.0]],
++                            "c2w": pose.tolist(),
++                        }
++                    )
++            scenes.append(scene)
++        path = tmp_path / f"{cohort}.json"
++        path.write_text(json.dumps({"image_size": [8, 8], "scenes": scenes}))
++        paths.append(path)
++    return paths[1], paths[0]
++
++
++def test_holdout_manifest_refused_before_model_or_media(tmp_path, monkeypatch):
++    dev, exposed = setup_manifests(tmp_path, media=False)
++    payload = json.loads(dev.read_text())
++    payload["scenes"][0]["scene_id"] = "holdout0"
++    dev.write_text(json.dumps(payload))
++    calls = []
++
++    def forbidden(*args, **kwargs):
++        calls.append("called")
++        raise AssertionError("Model was reached before identity firewall")
++
++    monkeypatch.setattr(
++        "mcss.mechanism_pilot.support_redesign_runner.load_dynamic_checkpoint", forbidden
++    )
++    with pytest.raises(PermissionError):
++        run_development(
++            tmp_path, dev, exposed, tmp_path / "missing.pt", tmp_path / "run", device="cpu"
++        )
++    assert calls == []
++    assert not (tmp_path / "run").exists()
++
++
++def test_tiny_full_oracle_run_seals_audits_geometry_and_never_writes(tmp_path, monkeypatch):
++    torch.set_num_threads(1)
++    dev, exposed = setup_manifests(tmp_path, media=True)
++    config = carrier_config_for_spatial_mode("anchor-centered")
++    checkpoint = tmp_path / "checkpoint.pt"
++    save_dynamic_checkpoint(
++        checkpoint,
++        DynamicSceneCarrier(config),
++        DirectWriteRule(config, WriteConfig()),
++        phase="B",
++        provenance={"training_scenes": ["fixture_train"]},
++    )
++    checkpoint_hash = sha(checkpoint)
++    (tmp_path / "preregistration.json").write_text(
++        json.dumps({"checkpoint_sha256": checkpoint_hash})
++    )
++    (tmp_path / "qualified_frame_role_lock.json").write_text(
++        json.dumps(
++            {
++                "initial_scene_role_lock_sha256": sha(tmp_path / "scene_role_lock.json"),
++                "manifest_hashes": {"dev_manifest.json": sha(dev)},
++            }
++        )
++    )
++    (tmp_path / "oracle_adequacy_clarification.json").write_text("{}")
++
++    def no_writes(*args, **kwargs):
++        raise AssertionError("Dynamic write in support-only protocol")
++
++    monkeypatch.setattr(DirectWriteRule, "propose", no_writes)
++    output = tmp_path / "run"
++    rows = run_development(tmp_path, dev, exposed, checkpoint, output, device="cpu")
++    assert len(rows) == 600
++    states = torch.load(output / "sealed_states.pt", weights_only=False)
++    assert len(states) == 180
++    assert all(hash_scene_state(s.scene_state) == s.state_hash for s in states.values())
++    access = json.loads((output / "access_log.json").read_text())
++    first_oracle = next(
++        i for i, r in enumerate(access) if r["kind"] == "ORACLE_GEOMETRY_GT_DEPTH_CAMERA"
++    )
++    assert len([r for r in access[:first_oracle] if r["kind"] == "SEALED_STATE"]) == 45
++    assert all(
++        r["state_key"].startswith("R0/")
++        for r in access[:first_oracle]
++        if r["kind"] == "SEALED_STATE"
++    )
++    first_eval = next(i for i, r in enumerate(access) if r["kind"] == "QUERY_RGB_DEPTH_GT")
++    assert sum(r["kind"] == "SEALED_STATE" for r in access[:first_eval]) == 180
++    assert all(
++        r["stage"] == "PRESEAL_DIAGNOSTIC_EXCEPTION" and not r["deployable"]
++        for r in access
++        if r["kind"] == "ORACLE_GEOMETRY_GT_DEPTH_CAMERA"
++    )
++    plans = torch.load(output / "geometry_plans.pt", weights_only=False)
++    for key, plan in plans.items():
++        assert plan.points.shape == (128, 3) and plan.candidate_ids.shape == (128,)
++        assert torch.all(plan.points >= plan.bounds[0]) and torch.all(plan.points <= plan.bounds[1])
++        expected = (plan.points - plan.bounds[0]) / (plan.bounds[1] - plan.bounds[0]) * 2 - 1
++        assert torch.allclose(plan.normalized_xyz, expected, atol=1e-6)
++        assert torch.equal(states[key].scene_state.bounds[0], plan.bounds)
++    for sid in sorted({r["scene_id"] for r in rows}):
++        for query in [8, 9]:
++            subset = [r for r in rows if r["scene_id"] == sid and r["query_id"] == query]
++            assert len({r["query_camera_hash"] for r in subset}) == 1
++            assert all(r["candidate_count"] == 128 for r in subset)
++            assert all(r["donor_scene_id"] != sid for r in subset if r["method"] == "wrong_scene")
++    assert len(list((output / "predictions").glob("*.npz"))) == 600
++    integrity = json.loads((output / "integrity.json").read_text())
++    assert integrity["parameters_unchanged"] and integrity["checkpoint_unchanged"]
++    assert integrity["source_input_hashes_unchanged"] and integrity["writes"] == 0
++    assert not integrity["final_holdout_access"] and not integrity["dynamic_ttt_run"]
++    assert sha(checkpoint) == checkpoint_hash
+diff --git a/tests/test_support_redesign_statistics.py b/tests/test_support_redesign_statistics.py
+new file mode 100644
+index 0000000..214c4db
+--- /dev/null
++++ b/tests/test_support_redesign_statistics.py
+@@ -0,0 +1,132 @@
++"""Paired scene-level attribution from tiny synthetic raw rows, never model output."""
++
++from copy import deepcopy
++
++import pytest
++
++from mcss.mechanism_pilot.support_redesign_statistics import analyze
++
++
++def rows_fixture():
++    rows = []
++    for sid, cohort, nqueries, base in [
++        ("s0", "exposed", 4, 1.0),
++        ("s1", "new_dev", 1, 2.0),
++        ("s2", "new_dev", 2, 3.0),
++    ]:
++        for design in ["R0", "ORACLE_VOLUME_SUPPORT"]:
++            for query in range(nqueries):
++                for method in ["A", "B", "anchor", "prior", "wrong_scene"]:
++                    error = (
++                        base
++                        + {"A": 0.0, "B": 0.0, "anchor": 0.5, "prior": 1.0, "wrong_scene": 1.0}[
++                            method
++                        ]
++                    )
++                    if design != "R0" and method in ("A", "B"):
++                        error -= 0.25
++                    rows.append(
++                        {
++                            "scene_id": sid,
++                            "cohort": cohort,
++                            "query_id": query,
++                            "design": design,
++                            "method": method,
++                            "depth_absrel": error,
++                            "rgb_mse": 0.1,
++                            "rgb_ssim": 0.5,
++                            "depth_rmse": 1.0,
++                            "depth_delta1": 0.5,
++                            "opacity": 0.8,
++                            "coverage": 0.9,
++                            "inside_fraction": 1.0,
++                            "two_view_candidate_fraction": 1.0,
++                            "supported_surface_fraction": 0.8,
++                            "candidate_count": 128,
++                            "volume_extent": [12.0, 8.0, 12.0],
++                        }
++                    )
++    return rows
++
++
++def test_queries_then_scenes_not_cohort_equal_or_query_equal():
++    result = analyze(rows_fixture())
++    pooled = result["pooled"]
++    assert pooled["n_scenes"] == 3
++    assert pooled["designs"]["R0"]["methods"]["A"]["depth_absrel"]["mean"] == 2.0
++    assert (
++        result["cohorts"]["new_dev"]["designs"]["R0"]["methods"]["A"]["depth_absrel"]["mean"] == 2.5
++    )
++    gain = pooled["designs"]["ORACLE_VOLUME_SUPPORT"]["full_context_gain"]
++    assert gain["mean"] == 0.75 and gain["ci95"] == [0.75, 0.75]
++    assert gain["draws"] == 10000 and gain["seed"] == 20260927 and gain["unit"] == "scene"
++    assert set(gain["loso"].values()) == {0.75}
++    assert (
++        pooled["designs"]["ORACLE_VOLUME_SUPPORT"]["change_full_context_gain_vs_R0"]["mean"] == 0.25
++    )
++    assert pooled["oracle_attribution_status"] == "ORACLE_RECOVERY_GT_FREE_UNTESTED"
++
++
++def test_concentration_and_constant_correlation():
++    result = analyze(rows_fixture())["pooled"]["designs"]["R0"]
++    gain = result["full_context_gain"]
++    assert gain["improved_tied_worse"]["improved"] == 3
++    assert gain["concentration"]["positive"]["top1_fraction"] == pytest.approx(1 / 3)
++    assert gain["concentration"]["absolute"]["top3_fraction"] == 1.0
++    corr = result["support_gain_correlation"]
++    assert corr["interpretation"] == "DESCRIPTIVE_ONLY_NOT_CAUSAL"
++    assert all(r["pearson"] is None for r in corr["by_support_metric"].values())
++
++
++def test_adequacy_blocks_claim_that_insufficient_oracle_disproves_support():
++    rows = rows_fixture()
++    for row in rows:
++        if row["design"] == "ORACLE_VOLUME_SUPPORT":
++            row["inside_fraction"] = 0.8
++    result = analyze(rows)["pooled"]
++    assert result["oracle_attribution_status"] == "INCONCLUSIVE"
++    assert not result["designs"]["ORACLE_VOLUME_SUPPORT"]["oracle_adequacy"]["adequate"]
++
++
++def test_adequate_oracle_negative_gain_is_not_sufficient():
++    rows = rows_fixture()
++    for row in rows:
++        if row["design"] == "ORACLE_VOLUME_SUPPORT" and row["method"] in ("A", "B"):
++            row["depth_absrel"] += 2.0
++    result = analyze(rows)["pooled"]
++    assert result["oracle_attribution_status"] == "NOT_SUFFICIENT"
++    gain = result["designs"]["ORACLE_VOLUME_SUPPORT"]["full_context_gain"]
++    assert gain["improved_tied_worse"]["worse"] == 3
++    assert gain["concentration"]["positive"]["top1_fraction"] is None
++
++
++@pytest.mark.parametrize(
++    "bad",
++    ["duplicate", "missingmethod", "differentqueries", "holdout", "candidatebudget", "nonfinite"],
++)
++def test_invalid_or_unpaired_raw_fails_closed(bad):
++    rows = rows_fixture()
++    if bad == "duplicate":
++        rows.append(deepcopy(rows[0]))
++    elif bad == "missingmethod":
++        rows.pop()
++    elif bad == "differentqueries":
++        rows[-1]["query_id"] = 100
++    elif bad == "holdout":
++        rows[0]["cohort"] = "holdout"
++    elif bad == "candidatebudget":
++        rows[0]["candidate_count"] = 129
++    else:
++        rows[0]["depth_absrel"] = float("nan")
++    with pytest.raises((ValueError, PermissionError)):
++        analyze(rows)
++
++
++def test_preregistered_tie_tolerance_is_one_e_minus_eight():
++    rows = rows_fixture()
++    for row in rows:
++        if row["method"] == "anchor":
++            row["depth_absrel"] -= 0.5 - 5e-9
++    counts = analyze(rows)["pooled"]["designs"]["R0"]["full_context_gain"]["improved_tied_worse"]
++    assert counts["tie_absolute_tolerance"] == 1e-8
++    assert counts["tied"] == 3 and counts["improved"] == 0

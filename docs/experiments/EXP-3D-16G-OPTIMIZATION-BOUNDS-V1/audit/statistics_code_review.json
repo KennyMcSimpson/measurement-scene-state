@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "all_roster_roles_frames_required": true,
+    "bounds_gain_current_minus_gtfree": true,
+    "carrier_gap_carrier_minus_direct": true,
+    "classification_matches_frozen_rules": true,
+    "generalization_query_minus_context": true,
+    "interaction_max_gain_minus_first": true,
+    "paired_scene_resampling": true,
+    "primary_gtfree_10000_fixed_not_hindsight": true,
+    "query_gain_old_minus_new": true,
+    "scene_query_then_role_equal_weight": true,
+    "secondary_primary_decision_unchanged_guard": true,
+    "trajectory_cost_max_budget_single_selection_only": true,
+    "wrong_scene_damage_wrong_minus_direct": true
+  },
+  "formal_media_or_query_read": false,
+  "limitations": [
+    "Oracle bounds and track contrasts have unmatched random ray seeds; diagnostic only, no pure bounds causal attribution.",
+    "CLI trusts sealed aggregate trajectory spec contents; global provenance integrity remains necessary.",
+    "Classification thresholds in imported stable_gain/engineering_good match current preregistration; they are fixed engineering thresholds, not benchmark guarantees."
+  ],
+  "report_generator_lint": "PASS",
+  "report_generator_synthetic_smoke": "PASS using four synthetic scenes and 100 bootstrap draws; no real query data",
+  "scope": "Independent read-only mathematical review before new query access",
+  "source_sha256": {
+    "scripts/analyze_optimization_bounds.py": "1d5c5bd4b0cdc84edf6c957a1f2f02afc7e2040d9188e65ee44a95f9feb1a287",
+    "src/mcss/mechanism_pilot/direct_capacity_statistics.py": "adb8b2b41915b6733054119e50c8043b485ba773dfc2581ecc17a121d5a1ddc1",
+    "src/mcss/mechanism_pilot/optimization_bounds_statistics.py": "c52c3659ec3e92e4923bd1a35d5f4a3be0d09b1b9915c7ac532a7e26f39f36ee"
+  },
+  "status": "PASS"
+}

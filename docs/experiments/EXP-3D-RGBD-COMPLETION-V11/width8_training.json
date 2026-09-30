@@ -1,0 +1,80 @@
+[
+  {
+    "data_ray_stream_sha256": "88cbc6020c2471de11ce91b2c0079ae085a1771883860516ab14cebe3b624437",
+    "depth_log_sigma": 0.026778124272823334,
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_parameter_hash": "d1ab5f7b4e4687ff2bf79733a0310c07c87ac504ac438df5d7beac72c68640a4",
+    "initial_state_dict_hash": "c1d08aa1f71efa3f5f1e5476a2228824114a1dad991dc0263e0fbf5573759346",
+    "parameter_count": 5150,
+    "peak_cuda_allocated_bytes": null,
+    "peak_cuda_reserved_bytes": null,
+    "preregistration_sha256": "5840ac0dfaf826bf443c004002a5423600a3500ef0f4883772333aae3585a055",
+    "seed": 20260928,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/checkpoints/C0_20260928/step_004000.pt",
+      "checkpoint_sha256": "d682a2336f091a36fb1cae8be34e4d87bda0fdbb9fb3e7457357dbad64646bda",
+      "dev_query_absrel": 0.27056897251187007,
+      "selected_step": 4000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 6000,
+    "token_count": 32768,
+    "variant": "C0",
+    "wall_seconds": 2636.8869782199617,
+    "writer_updates": false
+  },
+  {
+    "data_ray_stream_sha256": "6d02ace3dec4fc339c5cf3f78b7335a9675e76742586495c5ccb7798a0ff020b",
+    "depth_log_sigma": -0.029699193313717842,
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_parameter_hash": "87b9eb714ca84fb63a452f12618af519d3697cf4f7c2178f78dff45e0c042b48",
+    "initial_state_dict_hash": "d63f48c4b2506aec483a6f4df2e2bc54ed50d53e6bbb350d451c1856a6214bda",
+    "parameter_count": 5150,
+    "peak_cuda_allocated_bytes": null,
+    "peak_cuda_reserved_bytes": null,
+    "preregistration_sha256": "5840ac0dfaf826bf443c004002a5423600a3500ef0f4883772333aae3585a055",
+    "seed": 20260929,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/checkpoints/C0_20260929/step_005000.pt",
+      "checkpoint_sha256": "462091d1ac369349ec8cd483d62d50dcdfb3e84de7fa761383001a15aace81b3",
+      "dev_query_absrel": 0.25379346769016686,
+      "selected_step": 5000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 6000,
+    "token_count": 32768,
+    "variant": "C0",
+    "wall_seconds": 2643.9896319420077,
+    "writer_updates": false
+  },
+  {
+    "data_ray_stream_sha256": "8cc5f8b6a0358d9143fef5a0a7bfcd3850f023098740f21bad49b079397dc10c",
+    "depth_log_sigma": -0.05272139981389046,
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_parameter_hash": "9f32f06813f4492a283dfe6adf53594bc048326ef8dbecae513e977bcd56ee0a",
+    "initial_state_dict_hash": "a03af61f7f31eb0812d6844df4455a78fbce1951be5869e3ca90d7399892c1d7",
+    "parameter_count": 5150,
+    "peak_cuda_allocated_bytes": null,
+    "peak_cuda_reserved_bytes": null,
+    "preregistration_sha256": "5840ac0dfaf826bf443c004002a5423600a3500ef0f4883772333aae3585a055",
+    "seed": 20260930,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-V11/checkpoints/C0_20260930/step_004000.pt",
+      "checkpoint_sha256": "f8f4af17a0c18c1f9ec5640ee29d9a56f5321473eccda49af66050e547942e67",
+      "dev_query_absrel": 0.24810897367084006,
+      "selected_step": 4000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 6000,
+    "token_count": 32768,
+    "variant": "C0",
+    "wall_seconds": 2606.4895271440037,
+    "writer_updates": false
+  }
+]

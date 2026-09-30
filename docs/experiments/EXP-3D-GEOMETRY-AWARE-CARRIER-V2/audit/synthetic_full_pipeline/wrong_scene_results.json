@@ -1,0 +1,311 @@
+{
+  "bounds_caveat": "wrong-scene donor includes bounds; spatial shuffle preserves recipient bounds",
+  "contrasts": {
+    "C0|spatial_shuffle": {
+      "absolute_top1_contribution": 0.12500004725795147,
+      "absolute_top3_contribution": 0.3750001417738544,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        -0.00010264167212878372,
+        -0.00010264161392117832
+      ],
+      "improved_tied_worse": [
+        0,
+        0,
+        8
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": -0.00010264163748139956,
+        "ENGINEERING_ONLY_DEV_01": -0.00010264164856856248,
+        "ENGINEERING_ONLY_DEV_02": -0.00010264163748139956,
+        "ENGINEERING_ONLY_DEV_03": -0.00010264164856856248,
+        "ENGINEERING_ONLY_DEV_04": -0.00010264163748139956,
+        "ENGINEERING_ONLY_DEV_05": -0.00010264164856856248,
+        "ENGINEERING_ONLY_DEV_06": -0.00010264163748139956,
+        "ENGINEERING_ONLY_DEV_07": -0.00010264164856856248
+      },
+      "loso_range": [
+        -0.00010264164856856248,
+        -0.00010264163748139956
+      ],
+      "mean": -0.00010264164302498102,
+      "median": -0.00010264164302498102,
+      "n_scenes": 8,
+      "negative": 8,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": -0.00010264168183005129,
+        "ENGINEERING_ONLY_DEV_01": -0.00010264160421991075,
+        "ENGINEERING_ONLY_DEV_02": -0.00010264168183005129,
+        "ENGINEERING_ONLY_DEV_03": -0.00010264160421991075,
+        "ENGINEERING_ONLY_DEV_04": -0.00010264168183005129,
+        "ENGINEERING_ONLY_DEV_05": -0.00010264160421991075,
+        "ENGINEERING_ONLY_DEV_06": -0.00010264168183005129,
+        "ENGINEERING_ONLY_DEV_07": -0.00010264160421991075
+      },
+      "positive": 0,
+      "positive_top1_contribution": null,
+      "positive_top3_contribution": null,
+      "tied": 0
+    },
+    "C0|wrong_scene": {
+      "absolute_top1_contribution": null,
+      "absolute_top3_contribution": null,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "improved_tied_worse": [
+        0,
+        8,
+        0
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": 0.0,
+        "ENGINEERING_ONLY_DEV_01": 0.0,
+        "ENGINEERING_ONLY_DEV_02": 0.0,
+        "ENGINEERING_ONLY_DEV_03": 0.0,
+        "ENGINEERING_ONLY_DEV_04": 0.0,
+        "ENGINEERING_ONLY_DEV_05": 0.0,
+        "ENGINEERING_ONLY_DEV_06": 0.0,
+        "ENGINEERING_ONLY_DEV_07": 0.0
+      },
+      "loso_range": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "median": 0.0,
+      "n_scenes": 8,
+      "negative": 0,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": 0.0,
+        "ENGINEERING_ONLY_DEV_01": 0.0,
+        "ENGINEERING_ONLY_DEV_02": 0.0,
+        "ENGINEERING_ONLY_DEV_03": 0.0,
+        "ENGINEERING_ONLY_DEV_04": 0.0,
+        "ENGINEERING_ONLY_DEV_05": 0.0,
+        "ENGINEERING_ONLY_DEV_06": 0.0,
+        "ENGINEERING_ONLY_DEV_07": 0.0
+      },
+      "positive": 0,
+      "positive_top1_contribution": null,
+      "positive_top3_contribution": null,
+      "tied": 8
+    },
+    "C0|zero": {
+      "absolute_top1_contribution": 0.12500000001687955,
+      "absolute_top3_contribution": 0.3750000000506387,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        0.574735249877752,
+        0.5747352499941674
+      ],
+      "improved_tied_worse": [
+        8,
+        0,
+        0
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": 0.5747352499470468,
+        "ENGINEERING_ONLY_DEV_01": 0.5747352499248726,
+        "ENGINEERING_ONLY_DEV_02": 0.5747352499470468,
+        "ENGINEERING_ONLY_DEV_03": 0.5747352499248726,
+        "ENGINEERING_ONLY_DEV_04": 0.5747352499470468,
+        "ENGINEERING_ONLY_DEV_05": 0.5747352499248726,
+        "ENGINEERING_ONLY_DEV_06": 0.5747352499470468,
+        "ENGINEERING_ONLY_DEV_07": 0.5747352499248726
+      },
+      "loso_range": [
+        0.5747352499248726,
+        0.5747352499470468
+      ],
+      "mean": 0.5747352499359597,
+      "median": 0.5747352499359597,
+      "n_scenes": 8,
+      "negative": 0,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": 0.5747352498583496,
+        "ENGINEERING_ONLY_DEV_01": 0.57473525001357,
+        "ENGINEERING_ONLY_DEV_02": 0.5747352498583496,
+        "ENGINEERING_ONLY_DEV_03": 0.57473525001357,
+        "ENGINEERING_ONLY_DEV_04": 0.5747352498583496,
+        "ENGINEERING_ONLY_DEV_05": 0.57473525001357,
+        "ENGINEERING_ONLY_DEV_06": 0.5747352498583496,
+        "ENGINEERING_ONLY_DEV_07": 0.57473525001357
+      },
+      "positive": 8,
+      "positive_top1_contribution": 0.12500000001687955,
+      "positive_top3_contribution": 0.3750000000506387,
+      "tied": 0
+    },
+    "C1|spatial_shuffle": {
+      "absolute_top1_contribution": 0.12500084727903785,
+      "absolute_top3_contribution": 0.3750025418371135,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        -0.00013167474147239566,
+        -0.0001316734026962224
+      ],
+      "improved_tied_worse": [
+        0,
+        0,
+        8
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": -0.00013167394458181634,
+        "ENGINEERING_ONLY_DEV_01": -0.00013167419958680173,
+        "ENGINEERING_ONLY_DEV_02": -0.00013167394458181634,
+        "ENGINEERING_ONLY_DEV_03": -0.00013167419958680173,
+        "ENGINEERING_ONLY_DEV_04": -0.00013167394458181634,
+        "ENGINEERING_ONLY_DEV_05": -0.00013167419958680173,
+        "ENGINEERING_ONLY_DEV_06": -0.00013167394458181634,
+        "ENGINEERING_ONLY_DEV_07": -0.00013167419958680173
+      },
+      "loso_range": [
+        -0.00013167419958680173,
+        -0.00013167394458181634
+      ],
+      "mean": -0.00013167407208430904,
+      "median": -0.00013167407208430904,
+      "n_scenes": 8,
+      "negative": 8,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": -0.00013167496460175787,
+        "ENGINEERING_ONLY_DEV_01": -0.0001316731795668602,
+        "ENGINEERING_ONLY_DEV_02": -0.00013167496460175787,
+        "ENGINEERING_ONLY_DEV_03": -0.0001316731795668602,
+        "ENGINEERING_ONLY_DEV_04": -0.00013167496460175787,
+        "ENGINEERING_ONLY_DEV_05": -0.0001316731795668602,
+        "ENGINEERING_ONLY_DEV_06": -0.00013167496460175787,
+        "ENGINEERING_ONLY_DEV_07": -0.0001316731795668602
+      },
+      "positive": 0,
+      "positive_top1_contribution": null,
+      "positive_top3_contribution": null,
+      "tied": 0
+    },
+    "C1|wrong_scene": {
+      "absolute_top1_contribution": null,
+      "absolute_top3_contribution": null,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        0.0,
+        0.0
+      ],
+      "improved_tied_worse": [
+        0,
+        8,
+        0
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": 0.0,
+        "ENGINEERING_ONLY_DEV_01": 0.0,
+        "ENGINEERING_ONLY_DEV_02": 0.0,
+        "ENGINEERING_ONLY_DEV_03": 0.0,
+        "ENGINEERING_ONLY_DEV_04": 0.0,
+        "ENGINEERING_ONLY_DEV_05": 0.0,
+        "ENGINEERING_ONLY_DEV_06": 0.0,
+        "ENGINEERING_ONLY_DEV_07": 0.0
+      },
+      "loso_range": [
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "median": 0.0,
+      "n_scenes": 8,
+      "negative": 0,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": 0.0,
+        "ENGINEERING_ONLY_DEV_01": 0.0,
+        "ENGINEERING_ONLY_DEV_02": 0.0,
+        "ENGINEERING_ONLY_DEV_03": 0.0,
+        "ENGINEERING_ONLY_DEV_04": 0.0,
+        "ENGINEERING_ONLY_DEV_05": 0.0,
+        "ENGINEERING_ONLY_DEV_06": 0.0,
+        "ENGINEERING_ONLY_DEV_07": 0.0
+      },
+      "positive": 0,
+      "positive_top1_contribution": null,
+      "positive_top3_contribution": null,
+      "tied": 8
+    },
+    "C1|zero": {
+      "absolute_top1_contribution": 0.12500000002530975,
+      "absolute_top3_contribution": 0.3750000000759292,
+      "bootstrap": {
+        "CI": "percentile95",
+        "draws": 10000,
+        "seed": 20260928,
+        "unit": "scene"
+      },
+      "ci95": [
+        0.5749535950502225,
+        0.5749535952248455
+      ],
+      "improved_tied_worse": [
+        8,
+        0,
+        0
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": 0.5749535951209033,
+        "ENGINEERING_ONLY_DEV_01": 0.5749535951541649,
+        "ENGINEERING_ONLY_DEV_02": 0.5749535951209033,
+        "ENGINEERING_ONLY_DEV_03": 0.5749535951541649,
+        "ENGINEERING_ONLY_DEV_04": 0.5749535951209033,
+        "ENGINEERING_ONLY_DEV_05": 0.5749535951541648,
+        "ENGINEERING_ONLY_DEV_06": 0.5749535951209033,
+        "ENGINEERING_ONLY_DEV_07": 0.5749535951541648
+      },
+      "loso_range": [
+        0.5749535951209033,
+        0.5749535951541649
+      ],
+      "mean": 0.574953595137534,
+      "median": 0.574953595137534,
+      "n_scenes": 8,
+      "negative": 0,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": 0.5749535952539494,
+        "ENGINEERING_ONLY_DEV_01": 0.5749535950211186,
+        "ENGINEERING_ONLY_DEV_02": 0.5749535952539494,
+        "ENGINEERING_ONLY_DEV_03": 0.5749535950211186,
+        "ENGINEERING_ONLY_DEV_04": 0.5749535952539494,
+        "ENGINEERING_ONLY_DEV_05": 0.5749535950211186,
+        "ENGINEERING_ONLY_DEV_06": 0.5749535952539494,
+        "ENGINEERING_ONLY_DEV_07": 0.5749535950211186
+      },
+      "positive": 8,
+      "positive_top1_contribution": 0.12500000002530975,
+      "positive_top3_contribution": 0.3750000000759292,
+      "tied": 0
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "access_scope": "JSON/CSV/gzip only; no media or state deserialization",
+  "analysis_input_root": "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1",
+  "audit_source_sha256": "cb81b585ec8b544ba36398d7471eff3d9add2626933821518a73d42d19721905",
+  "byte_mismatch_count": 0,
+  "compared_files": 13,
+  "comparison_original_root": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1",
+  "comparison_rule": "Every required scientific JSON must match byte-for-byte",
+  "files": {
+    "primary/bootstrap_results.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 3606,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/bootstrap_results.json",
+      "original_sha256": "9ab6c8b004b5dc07dd93051338d37e9818adac39db68264e31475480a2ce82a7",
+      "reproduced_filename": "bootstrap_results.json",
+      "reproduced_sha256": "9ab6c8b004b5dc07dd93051338d37e9818adac39db68264e31475480a2ce82a7",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "primary/bounds_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 848,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/bounds_analysis.json",
+      "original_sha256": "3483e209a50db8d0cce3247e838362e97ff3c6c868e1f7941c04cfcc3cfd9b89",
+      "reproduced_filename": "bounds_analysis.json",
+      "reproduced_sha256": "3483e209a50db8d0cce3247e838362e97ff3c6c868e1f7941c04cfcc3cfd9b89",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "primary/cost_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 174,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/cost_analysis.json",
+      "original_sha256": "f951c0aee9df123a3a46286a64456f5111955b38499ad90953257d14083d4047",
+      "reproduced_filename": "cost_analysis.json",
+      "reproduced_sha256": "f951c0aee9df123a3a46286a64456f5111955b38499ad90953257d14083d4047",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "primary/optimization_results.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 17909,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/optimization_results.json",
+      "original_sha256": "42636877889f7f30bf5e825b82cfaf2fb41c86f9e1925926aa4c7bd4ea7aa1f7",
+      "reproduced_filename": "optimization_results.json",
+      "reproduced_sha256": "42636877889f7f30bf5e825b82cfaf2fb41c86f9e1925926aa4c7bd4ea7aa1f7",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "primary/optimization_sufficiency.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 6731,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/optimization_sufficiency.json",
+      "original_sha256": "83d72fd1890cbb82e47aa0a265c524adaefd08cfdb535e5fad33f62c4ada1463",
+      "reproduced_filename": "optimization_sufficiency.json",
+      "reproduced_sha256": "83d72fd1890cbb82e47aa0a265c524adaefd08cfdb535e5fad33f62c4ada1463",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "primary/query_oracle_diagnostic.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 7132,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/query_oracle_diagnostic.json",
+      "original_sha256": "89c9637bb97c7879804f3d402df51247fa49d63940a7b8f98168e3b7229580bc",
+      "reproduced_filename": "query_oracle_diagnostic.json",
+      "reproduced_sha256": "89c9637bb97c7879804f3d402df51247fa49d63940a7b8f98168e3b7229580bc",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "secondary/bootstrap_results.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 3659,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/secondary_analysis/bootstrap_results.json",
+      "original_sha256": "2283cda50e76307312519b15ea2fd092c76e0d04d4fab73f8a4e88d6036c7426",
+      "reproduced_filename": "bootstrap_results.json",
+      "reproduced_sha256": "2283cda50e76307312519b15ea2fd092c76e0d04d4fab73f8a4e88d6036c7426",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "secondary/bounds_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 848,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/secondary_analysis/bounds_analysis.json",
+      "original_sha256": "3483e209a50db8d0cce3247e838362e97ff3c6c868e1f7941c04cfcc3cfd9b89",
+      "reproduced_filename": "bounds_analysis.json",
+      "reproduced_sha256": "3483e209a50db8d0cce3247e838362e97ff3c6c868e1f7941c04cfcc3cfd9b89",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "secondary/cost_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 191,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/secondary_analysis/cost_analysis.json",
+      "original_sha256": "cb5a39a65c6d7cff73ba3b3743a7ec44f6171bdac6ac2775c5fc49632422e3ab",
+      "reproduced_filename": "cost_analysis.json",
+      "reproduced_sha256": "cb5a39a65c6d7cff73ba3b3743a7ec44f6171bdac6ac2775c5fc49632422e3ab",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "secondary/optimization_results.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 20888,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/secondary_analysis/optimization_results.json",
+      "original_sha256": "1f0adb0763cb50098a6fe6d769be2a6e4e0d28baeb6415fb710225656d6fa9b0",
+      "reproduced_filename": "optimization_results.json",
+      "reproduced_sha256": "1f0adb0763cb50098a6fe6d769be2a6e4e0d28baeb6415fb710225656d6fa9b0",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "secondary/optimization_sufficiency.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 7275,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/secondary_analysis/optimization_sufficiency.json",
+      "original_sha256": "352e555793a8340788dc5684c3779347ba8a9ad196a66ab219ff60c94e005e87",
+      "reproduced_filename": "optimization_sufficiency.json",
+      "reproduced_sha256": "352e555793a8340788dc5684c3779347ba8a9ad196a66ab219ff60c94e005e87",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "secondary/query_oracle_diagnostic.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 7132,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/secondary_analysis/query_oracle_diagnostic.json",
+      "original_sha256": "89c9637bb97c7879804f3d402df51247fa49d63940a7b8f98168e3b7229580bc",
+      "reproduced_filename": "query_oracle_diagnostic.json",
+      "reproduced_sha256": "89c9637bb97c7879804f3d402df51247fa49d63940a7b8f98168e3b7229580bc",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "secondary/secondary_decision_audit.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 0,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/secondary_analysis/secondary_decision_audit.json",
+      "original_sha256": "e9c1ac950e65d57b8af3a2a2eb311a7a9f118eb6cc348f831eecc2611657b553",
+      "reproduced_filename": "secondary_decision_audit.json",
+      "reproduced_sha256": "e9c1ac950e65d57b8af3a2a2eb311a7a9f118eb6cc348f831eecc2611657b553",
+      "structural_or_nonnumeric_mismatches": 0
+    }
+  },
+  "max_abs_numeric_error": 0.0,
+  "media_or_checkpoint_loaded": false,
+  "primary_input_provenance": {
+    "inputs_sha256": {
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/baseline_results.json": "9f53abaf73c6fed4b3226d98e9e555a6bc9de3e9b7a718e0c67287e5255bbd82",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/decision_rules.json": "3966e4c262dc0c538253eea3c79120689248adcac872fa9b6024029f35669e8b",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/context_context_results.json.gz": "d9ec77e95dbe093d9e4469900b0068e92215685fa1acaaf0e6d13ec963f4637c",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/context_results.json.gz": "bd471fdf489c486ee1c18fb3e353ff422578e88e32825486e09be3eb69c4c620",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/oracle_results.json.gz": "2c0b78337707e1eb9f8477aef71a7fa18314c423c53803b700af4b9686f15d46",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/primary_phase_wall_times.json.gz": "78a4413c97b5d98ab01b447bc164373eaec3af0a9a4537044330e7c90990aaeb",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/trajectory_summaries.json.gz": "f560a2ce50d1bdd35c488403d9c779b5119c6e36f07b4e35a56d5488ed60a673",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/scene_manifest.json": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/state_plan.json": "3d91c428556afdda26cc2428e7936af19017e3d2090ddec7db94e485dae1f567"
+    },
+    "media_or_checkpoint_loaded": false,
+    "raw_only": true,
+    "secondary_included": false,
+    "source_sha256": {
+      "/home/zonghan/measurement-scene-state/scripts/analyze_optimization_bounds.py": "1d5c5bd4b0cdc84edf6c957a1f2f02afc7e2040d9188e65ee44a95f9feb1a287",
+      "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/optimization_bounds_statistics.py": "c52c3659ec3e92e4923bd1a35d5f4a3be0d09b1b9915c7ac532a7e26f39f36ee"
+    }
+  },
+  "published_reference": true,
+  "raw_only": true,
+  "secondary_input_provenance": {
+    "inputs_sha256": {
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/baseline_results.json": "9f53abaf73c6fed4b3226d98e9e555a6bc9de3e9b7a718e0c67287e5255bbd82",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/decision_rules.json": "3966e4c262dc0c538253eea3c79120689248adcac872fa9b6024029f35669e8b",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/primary_analysis_complete.json": "fb8eaeea4efc4d103f48b410780f09de1e83dbff537d69b57bdc1f129491da61",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/context_context_results.json.gz": "d9ec77e95dbe093d9e4469900b0068e92215685fa1acaaf0e6d13ec963f4637c",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/context_results.json.gz": "bd471fdf489c486ee1c18fb3e353ff422578e88e32825486e09be3eb69c4c620",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/oracle_results.json.gz": "2c0b78337707e1eb9f8477aef71a7fa18314c423c53803b700af4b9686f15d46",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/primary_phase_wall_times.json.gz": "78a4413c97b5d98ab01b447bc164373eaec3af0a9a4537044330e7c90990aaeb",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/secondary_context_results.json.gz": "a146ffb979d175ec94424a98b0715b999f82a7a2dfe71b15a6ce9e14876d4aac",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/secondary_phase_wall_times.json.gz": "a6cd77b94e192091fbbac588d7c9831e093085956868ab740954f4048714dde5",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/secondary_results.json.gz": "bb13471400f057c4e5b39a7c69239c5816a9a300550a919b5af676cb53beed45",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/raw/trajectory_summaries.json.gz": "f560a2ce50d1bdd35c488403d9c779b5119c6e36f07b4e35a56d5488ed60a673",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/scene_manifest.json": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/state_plan.json": "3d91c428556afdda26cc2428e7936af19017e3d2090ddec7db94e485dae1f567"
+    },
+    "media_or_checkpoint_loaded": false,
+    "raw_only": true,
+    "secondary_included": true,
+    "source_sha256": {
+      "/home/zonghan/measurement-scene-state/scripts/analyze_optimization_bounds.py": "1d5c5bd4b0cdc84edf6c957a1f2f02afc7e2040d9188e65ee44a95f9feb1a287",
+      "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/optimization_bounds_statistics.py": "c52c3659ec3e92e4923bd1a35d5f4a3be0d09b1b9915c7ac532a7e26f39f36ee"
+    }
+  },
+  "status": "PASS",
+  "structural_or_nonnumeric_mismatches": 0
+}

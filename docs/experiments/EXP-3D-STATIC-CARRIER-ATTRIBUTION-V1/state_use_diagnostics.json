@@ -1,0 +1,26 @@
+{
+  "diagnostic_only": true,
+  "mean_prediction_rms_difference_vs_fixed_A": {
+    "Residual_channel_permutation": {
+      "depth": 2.335513988509774,
+      "rgb": 0.283251947656806
+    },
+    "channel_permutation": {
+      "depth": 0.0,
+      "rgb": 0.0
+    },
+    "feature_shuffle": {
+      "depth": 1.0639130824378558,
+      "rgb": 0.24563457337873323
+    },
+    "state_mask": {
+      "depth": 1.021192831386413,
+      "rgb": 0.37138451592597577
+    },
+    "wrong_scene": {
+      "depth": 1.0443950039999825,
+      "rgb": 0.27106957297239986
+    }
+  },
+  "note": "Feature-channel permutation leaves fixed renderer unchanged by design: typed density/color fields are unchanged. Residual can read feature channels. Different output is sensitivity, not proof of useful scene understanding."
+}

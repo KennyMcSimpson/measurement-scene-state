@@ -1,0 +1,66 @@
+{
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "all_scientific_json_byte_exact": true,
+  "audit_script_sha256": "483c9e5ce13a511e9ce76e263bcf15b68d5c23eadee02bdc644bb149dc313cf2",
+  "comparisons": {
+    "bootstrap_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "493f665d5fc9bdbaacbccc41e355820e1ea8c9c82e532f9a518194752c67bb1d",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/bootstrap_results.json",
+      "reproduced_sha256": "493f665d5fc9bdbaacbccc41e355820e1ea8c9c82e532f9a518194752c67bb1d"
+    },
+    "observability_analysis.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "5ffad03aca00c59b6908e062a67cf2b2764802b554cfa2512cb5bd6872cd92c4",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/observability_analysis.json",
+      "reproduced_sha256": "5ffad03aca00c59b6908e062a67cf2b2764802b554cfa2512cb5bd6872cd92c4"
+    },
+    "qualification_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "ec9dde39b48e6a9bd200ccdf8026c87a6535e64deacb04af98e58c7f321546e7",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/qualification_results.json",
+      "reproduced_sha256": "ec9dde39b48e6a9bd200ccdf8026c87a6535e64deacb04af98e58c7f321546e7"
+    },
+    "state_use_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "4f470d9b71d23d99193b4fd8eda5f01c2394aeba89bb094945815b582a90c0e0",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/state_use_results.json",
+      "reproduced_sha256": "4f470d9b71d23d99193b4fd8eda5f01c2394aeba89bb094945815b582a90c0e0"
+    },
+    "static_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "30561aa12674f6da4ad24cab6f968dae67f62e592c88236f24ab791fe78ddb58",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/static_results.json",
+      "reproduced_sha256": "30561aa12674f6da4ad24cab6f968dae67f62e592c88236f24ab791fe78ddb58"
+    },
+    "wrong_scene_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "2348ab269ef363dc99794aedc011810dc0b30eaae512945c9381727a00573ba4",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/wrong_scene_results.json",
+      "reproduced_sha256": "2348ab269ef363dc99794aedc011810dc0b30eaae512945c9381727a00573ba4"
+    }
+  },
+  "meaning": "Independent raw replay of same estimator, not independent estimator implementation",
+  "media_or_checkpoint_loaded": false,
+  "new_model_forward": false,
+  "original_artifacts_modified": false,
+  "raw_only": true,
+  "reproduction_inputs_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/audit/dev_state_use.json": "77ca1582dc7c6d60044139f4ecb23853321dfb081a4992a573763d5d989f0412",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/cost_analysis.json": "0a708cf62839aa75b8033c601ac2089a2cc03264f8d4e059bd8f328c070f9a78",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/raw/dev_context_results.json": "fb5b812b15cb09b444c8646c002a95a72e05c00efef6f411cfc328b71919ce3c",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/raw/dev_matched_results.json": "5276f947e4e5242b49901fee400794663986ad841a37affc1d1253478f71fc19",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/raw/dev_query_results.json": "8415c190075d7321ecb06804fabb44a34b602091310cce9c93b01719c5f58211",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/raw/dev_region_results.json": "d01eef8ee41adfd5d523d18724c98e43bf211983d930ac146d01d23ecc6763c5",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/raw/dev_static_matched_results.json": "2d1cc306316c3f3dda84022fcde2214c6fdeeda8b877b38e1e4c3f95a1adbd6b",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/scene_split.json": "8fe408d142312b3217d0cfe4f248cddb941f697fb5523726520667f2d50ce23a",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/training_contract.json": "8d8902d92c934b02c37bb551fb21ee830ed57ecfc3134082df758c6e26dc2aba",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-WIDTH-DATA-V15/training_curves.json": "2aa4d4061e22a45494b275ebd6a12ef00415090f84019da2ca2ffa00db77109c"
+  },
+  "reproduction_source_sha256": {
+    "/home/zonghan/measurement-scene-state/scripts/analyze_rgbd_wide_scale_carrier.py": "0eb8dd7c7a05e4477eeaded1edc29af2d5bef0e1193950750cedc07617ca85ab",
+    "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/geometry_carrier_statistics.py": "a4605d75d58ef9787f92b7ac17c23ff1d0f4e41ca01c9178ba059d1c4c62c1b1"
+  },
+  "scientific_json_count": 6,
+  "status": "PASS"
+}

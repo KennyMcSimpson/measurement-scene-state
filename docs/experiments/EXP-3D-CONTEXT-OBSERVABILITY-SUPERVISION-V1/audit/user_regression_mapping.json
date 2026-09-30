@@ -1,0 +1,126 @@
+{
+  "full_suite_execution": "Recorded separately in tests.json; mapping is not an assertion every listed test was rerun by this reviewer",
+  "items": [
+    {
+      "protocol_item": 1,
+      "requirement": "observability labels only after state seal",
+      "tests": [
+        "tests/test_context_observability.py::test_seal_and_holdout_guards_precede_query_processing",
+        "tests/test_context_observability.py::test_formal_barrier_delegates_gate_before_any_checkpoint_load"
+      ]
+    },
+    {
+      "protocol_item": 2,
+      "requirement": "query GT never enters context optimizer",
+      "tests": [
+        "tests/test_direct_capacity_contracts.py::test_rgbd_reads_context_not_queries",
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 3,
+      "requirement": "query GT never enters supervision loss",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall",
+        "tests/test_direct_capacity_contracts.py::test_rgbd_reads_context_not_queries"
+      ]
+    },
+    {
+      "protocol_item": 4,
+      "requirement": "visibility diagnostic cannot alter model/state",
+      "tests": [
+        "tests/test_context_observability.py::test_all_views_visible_full_arrays_and_state_immutable"
+      ]
+    },
+    {
+      "protocol_item": 5,
+      "requirement": "free-space loss only before surface band",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_free_gradient_only_before_band_and_valid_ray_denominator"
+      ]
+    },
+    {
+      "protocol_item": 6,
+      "requirement": "post-surface samples no free-space label",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_free_gradient_only_before_band_and_valid_ray_denominator"
+      ]
+    },
+    {
+      "protocol_item": 7,
+      "requirement": "surface loss uses context GT depth only",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall",
+        "tests/test_geometric_supervision_optimization.py::test_surface_empty_band_and_miss_excluded_and_invalid_depth_safe"
+      ]
+    },
+    {
+      "protocol_item": 8,
+      "requirement": "surface band deterministic voxel spacing",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_exact_ray_geometry_and_spacing"
+      ]
+    },
+    {
+      "protocol_item": 9,
+      "requirement": "supervision weights frozen before formal query",
+      "static_and_runtime_evidence": "Weights .1/.1 and eps1e-8 are source constants in the frozen source manifest; freeze writes supervision_contract and prereg hash; CLI validate checks both before each run. Test additionally rejects lambda/query_score arguments. This is not a test claiming chronological execution happened.",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 10,
+      "requirement": "matched initialization S0-S3",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 11,
+      "requirement": "same ray minibatch stream all variants",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 12,
+      "requirement": "query metric cannot select lambda",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 13,
+      "requirement": "wrong-scene preserves recipient query camera",
+      "tests": [
+        "tests/test_observability_supervision_evaluation.py::test_full_phase_controls_seal_before_media_and_baseline_replay"
+      ]
+    },
+    {
+      "protocol_item": 14,
+      "requirement": "final holdout loader disabled",
+      "tests": [
+        "tests/test_context_observability.py::test_seal_and_holdout_guards_precede_query_processing",
+        "tests/test_observability_supervision_evaluation.py::test_incomplete_and_holdout_rejected_before_media"
+      ]
+    },
+    {
+      "protocol_item": 15,
+      "requirement": "scene bootstrap resamples scenes",
+      "tests": [
+        "tests/test_observability_supervision_statistics.py::test_empty_scenes_retained_and_bootstrap_recomputes_coverage_denominator",
+        "tests/test_direct_capacity_statistics.py::test_paired_scene_resampling_preserves_covariance"
+      ]
+    },
+    {
+      "protocol_item": 16,
+      "requirement": "raw to statistics deterministic",
+      "tests": [
+        "tests/test_observability_supervision_statistics.py::test_contribution_partition_all_scenes_and_raw_roundtrip",
+        "tests/test_observability_supervision_statistics.py::test_cli_references_marker_and_compressed_archives_exact"
+      ]
+    }
+  ],
+  "status": "MAPPED"
+}

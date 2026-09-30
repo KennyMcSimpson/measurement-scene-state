@@ -1,0 +1,96 @@
+{
+  "BOUNDS_STATUS_FRESH": "frozen V2 primary-contrast gate on C0-C1 over FRESH-V2 (the V7 BOUNDS_STATUS definition under V7 Amendment 1, unchanged)",
+  "FRESH_QUALIFICATION_STATUS": {
+    "NOT_QUALIFIED": "otherwise",
+    "QUALIFIED": "BOUNDS, SCENE_SPECIFICITY, STATIC and REFERENCE all SUPPORTED on FRESH-V2"
+  },
+  "GEOMETRY_FREE_REFERENCE": {
+    "bootstrap": {
+      "draws": 10000,
+      "seed": 20260928,
+      "unit": "scene"
+    },
+    "labels": "ABOVE (frozen V2 evidence rule) / BELOW (mirror) / NOT_DISTINGUISHABLE per carrier, readout and metric",
+    "primary_reference": {
+      "depth_absrel": "REF_TRAIN_ABSREL_OPTIMAL",
+      "depth_delta1": "REF_TRAIN_MEDIAN"
+    },
+    "readouts": [
+      "RAW",
+      "OPACITY_NORMALIZED",
+      "MEDIAN_SCALED"
+    ],
+    "references": [
+      "REF_TRAIN_ABSREL_OPTIMAL",
+      "REF_TRAIN_MEDIAN"
+    ],
+    "role": "descriptive; never a gate; computed after all states are sealed",
+    "train_files_sha256": {
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/data/prepared/ai_001_001/0012.npy": "252bda1280eac9133dc606ddcdca64b2ec1176f4dc25f8b59195469e30cea72a",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/data/prepared/ai_001_001/0013.npy": "2f53059973419b94dcb0e351a4852c3958d6f602e158fb6fcebcb803a231ffab",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/data/prepared/ai_002_001/0012.npy": "90ba2d9afa5b09922b5696f6842ca74bb3891eb93092c40d5780ef9e8d6e75ba",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/data/prepared/ai_002_001/0013.npy": "23f5eedbb0d7f4d73616bb03fbfece6217a076f93a8c123fcf5b7bf53a297304",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/data/prepared/ai_003_001/0012.npy": "e037e2cef1c0d38b70932fcbedae9dd729f38a031fc6d2005949c31b5e843f50",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-small-training-v1/data/prepared/ai_003_001/0013.npy": "776202ba5210d7e69c725cd5ac19eff915abdf1343a95966044cd58f1d518ff3",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_005_006/0014.npy": "35bbe9544b26dc266c077a50ce93ba0e8ccd64eeb4b1acda47c4a6bbdef60cf8",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_005_006/0015.npy": "9a5f1790de5a098bc10d5c3026742cf53645e92525a959d8989a3240af701236",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_017_005/0014.npy": "7540ecd0e248fb2eccf3e16b85a9ddc4272473c9686ed91573b0cfe8dac69da2",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_017_005/0015.npy": "bf1f4ba2f5baf75413cbe1c5f98501d246ae1416510f0846995229a6e796c7ba",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_027_008/0014.npy": "e9f9196725ba880014a85fc57dcde1a1fe6b1f868e98e2e0f741f5a5fc778574",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_027_008/0015.npy": "9486b67dcb1dc32edbf5e3ccfbcee79784b24611aa767caebab06acde8525406",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_035_007/0014.npy": "6169e2c7ca9db16e52f0d24476162071105fc4a718cb7cee29ed6fdf6a108b82",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_035_007/0015.npy": "0ac28be6e25cdd056d8b30ae0ad945d822d29412c9859b33683a252cc68b8bea",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_037_002/0014.npy": "ed86fa2d51c14f9db864a494632b3531547cdc0ef6f306f333de3baa12d462cb",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_037_002/0015.npy": "e9da2e51cce4a1abad55b15a2b4df1413af198d93a4318969c77f70e7f3fc78a",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_039_009/0014.npy": "6beaeb3505ae1c6e1d3be61c4129fd8c3e5ff55f53fa571b88e8be98936c2678",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_039_009/0015.npy": "7fe376460350877a45956ed7a2a1fececb97a5bf7ef2a04911aa76a270124084",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_043_003/0014.npy": "c72eb50bac45f3198d5a566af56c97e8ce9d0b99b5722a7d26d39b71ac51202e",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_043_003/0015.npy": "8dcce81ba99ebbf9b0d50142779587fe06611e2aa310fa94536a837a09d94fc9",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_045_010/0014.npy": "0e4d8b63d48fcdffb0a1d2a316d474f7bcf8e28f75ad0094eff6db990696acbe",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_045_010/0015.npy": "73f6b66e497eedc263fbd4262e46bbdf23cd0cbc1bf93bef2c0451ad0fe3dac1",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_046_007/0014.npy": "02ba68ecb870603d77bfdba0b8165b67f9dc8d59be7f37158a086dacceaf3155",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_046_007/0015.npy": "c89327f361cdce9518cac2f84cf6ab195893213f3befe889488e69fd8ef82c10",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_048_005/0014.npy": "ab9c744ccb46981cf5300be2cbab4695973ff8702bfdc08b35b1372eb9bd7f29",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_048_005/0015.npy": "794d2267727cdc41d5959d20879dcb60002af3202e4be73524e754559f12cecb",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_050_004/0014.npy": "7b9e71a74946ff87e725b99671898d952c0b46f65c87e76caac8dbb4a1edfbdb",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_050_004/0015.npy": "c5afa6677e42f95cdb9d3c359a3a472350d3288d75593eda68134ac68552c7b1",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_053_006/0014.npy": "225ae1a6f2ba2bb940676504737b061894984253c9d2dfdee9cc86c6010f7891",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-GEOMETRY-AWARE-CARRIER-V2/data/prepared/ai_053_006/0015.npy": "c7e2a5e2d7281cc81330e32e9f1592b7de3b452934a68940c488c45f2d20fd4a",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_004_001/0014.npy": "4ea46ab2a62fa2c570248a49f1a8e84c38d1655f93c5660237d6a1817db744af",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_004_001/0015.npy": "60707e1c167001ca616b2e935486d1c7f0f90a7bc5deceee2b15473dbe52d15b",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_006_001/0014.npy": "7c7deb6591b69faa899c7e0b542e13deafa24f93a98e2a3dccfc584f4239ea2b",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_006_001/0015.npy": "0a426dc598b792e083500ef7f00a434690417c6b611399b3a50d1b2440e0a1a5",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_007_002/0014.npy": "5a85394b0564b98889881661e2a94c4c8924c4d36649683463fe72f188db2a37",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_007_002/0015.npy": "64c6b037bb656da462f04c9f3c36184557275d8da49f4bc8ad0a64b46338e3bc",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_010_001/0014.npy": "4398f2a13b4759cb8456ca7ac74f27e4c8ffdb0ae8f778e6b735b38fa46c0854",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/prepared/ai_010_001/0015.npy": "95849479a519bc8d7295052a534cead579984210d9fc0a7aeb4a4991611b4d31",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_012_001/0014.npy": "0c3a13736b85bf6fc4bf12e73158a476552ce2a39a73a7f8cffdb6ca28d4a804",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_012_001/0015.npy": "31629b9349b810fb5daf26c2323a3f52c1f6a5591b6f642bcb4a5456af21a7dc",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_018_002/0014.npy": "3fb222636aed2fd724d965622bb068e7e3859221dcbbedb6e9467693cbdafa7c",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_018_002/0015.npy": "3cea11d90a6c83ffbfce7815b6470228b67245c1d5792f14e3c91ae8cd4de087",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_028_001/0014.npy": "2919c45dcb037036b10da90584c820ca28b06d93e65fc951f02bc72b51b9ea3c",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_028_001/0015.npy": "f670f6b997f4bc96f4ec282c447c304db9297639781691588f53ae5c7ed3c6b1",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_030_002/0014.npy": "38210fd47b5fd2ef573ad85d40df493ac3f5389b02feec2f404a4da334f8a59e",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_030_002/0015.npy": "058e4d6651cdffa2f1045c8699177095ebe169c9fd2fe0fb2d42cf4737220725",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_036_001/0014.npy": "a87a8e4757dd189b10742cbfdcc75aa19c713c1cf299ab13118a667a3f3e5fd8",
+      "/home/zonghan/measurement-scene-state/outputs/EXP-3D-SUPPORT-BOTTLENECK-REDESIGN-V1/data/prepared/ai_036_001/0015.npy": "828d1a6d15df37e8e69a92dece8909ee93de636b6239e43c46be938798daeef4"
+    },
+    "values": {
+      "REF_TRAIN_ABSREL_OPTIMAL": 2.3736329078674316,
+      "REF_TRAIN_MEDIAN": 4.19921875,
+      "train_pixel_count": 981547
+    }
+  },
+  "REFERENCE_STATUS_FRESH": "C1 RAW depth AbsRel ABOVE REF_TRAIN_ABSREL_OPTIMAL on ALL FRESH-V2 scenes (frozen V2 evidence rule: mean>0, CIlo>0, >=75% scenes non-worse) -> SUPPORTED, otherwise NOT_ESTABLISHED",
+  "SCENE_SPECIFICITY_STATUS_FRESH": "C1 wrong-scene damage CIlo>0 and C1 spatial-shuffle damage CIlo>0 over FRESH-V2",
+  "STATIC_STATUS_FRESH": "frozen V2 static gate for C1 over FRESH-V2",
+  "bootstrap": {
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "physical scene"
+  },
+  "consequence": "QUALIFIED -> Core A static carrier qualified on the RGB-D track; DYNAMIC_TTT_NEXT_STAGE_ALLOWED=true under the project rule; the protected official final holdout stays closed either way",
+  "descriptive_only": "volume-cluster bootstrap of BOUNDS_GAIN and of C1 versus the constant (10 volumes); per-scene table; OBS regions; C2; ray-hit fractions",
+  "one_look": "FRESH-V2 is evaluated once; no rule, scene, threshold or checkpoint changes after any FRESH-V2 forward",
+  "roster": "FRESH-V2: every audited scene (<=2 per volume); no model or design decision has used any of them"
+}

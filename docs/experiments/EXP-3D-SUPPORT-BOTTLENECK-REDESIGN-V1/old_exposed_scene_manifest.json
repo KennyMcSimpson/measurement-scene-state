@@ -1,0 +1,228 @@
+{
+  "schema": "mcss.support_redesign.exposed_scenes.v1",
+  "scene_ids": [
+    "ai_004_001",
+    "ai_006_001",
+    "ai_007_002",
+    "ai_008_001",
+    "ai_009_001",
+    "ai_010_001",
+    "ai_011_001"
+  ],
+  "role": "REDESIGN_DEV_EXPOSED",
+  "records": [
+    {
+      "scene_id": "ai_004_001",
+      "role": "REDESIGN_DEV_EXPOSED",
+      "physical_scene_id": "ai4_001.rar|001",
+      "old_roles": {
+        "context_a": [
+          0,
+          1,
+          2
+        ],
+        "context_b": [
+          0,
+          3,
+          10
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "old_scene_manifest_sha256": "b7d27352de74fa40be8fa127e93c4e81522c71ce8e6b9843fc77ec03e983d9da"
+    },
+    {
+      "scene_id": "ai_006_001",
+      "role": "REDESIGN_DEV_EXPOSED",
+      "physical_scene_id": "ai6_001.rar|001",
+      "old_roles": {
+        "context_a": [
+          0,
+          4,
+          12
+        ],
+        "context_b": [
+          0,
+          8,
+          11
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "old_scene_manifest_sha256": "261c305c5cef3ae46538f359a2b6b71a18bb13b359d12fbc207ad7442fb3ebc3"
+    },
+    {
+      "scene_id": "ai_007_002",
+      "role": "REDESIGN_DEV_EXPOSED",
+      "physical_scene_id": "ai7_02.rar|02",
+      "old_roles": {
+        "context_a": [
+          0,
+          6,
+          9
+        ],
+        "context_b": [
+          0,
+          8,
+          11
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "old_scene_manifest_sha256": "5d9627abf55c05abca07d5e21133759bc63f12c01aac3802ffca213405a40234"
+    },
+    {
+      "scene_id": "ai_008_001",
+      "role": "REDESIGN_DEV_EXPOSED",
+      "physical_scene_id": "ai8_01.rar|01",
+      "old_roles": {
+        "context_a": [
+          0,
+          4,
+          5
+        ],
+        "context_b": [
+          0,
+          6,
+          8
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "old_scene_manifest_sha256": "f19651faef82b14146de2c45fae08ca41c0f0a7481cad5337c5d8324e9d59ea4"
+    },
+    {
+      "scene_id": "ai_009_001",
+      "role": "REDESIGN_DEV_EXPOSED",
+      "physical_scene_id": "ai9_scene 01.rar|scene 01",
+      "old_roles": {
+        "context_a": [
+          0,
+          1,
+          2
+        ],
+        "context_b": [
+          0,
+          3,
+          5
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "old_scene_manifest_sha256": "a222b8dc50a339cf6d7e22e868031a9df0a91bd57b20a75472979a0c806f5e93"
+    },
+    {
+      "scene_id": "ai_010_001",
+      "role": "REDESIGN_DEV_EXPOSED",
+      "physical_scene_id": "ai10_001.rar|001",
+      "old_roles": {
+        "context_a": [
+          0,
+          7,
+          10
+        ],
+        "context_b": [
+          0,
+          8,
+          11
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "old_scene_manifest_sha256": "7d6ec3559e29ac473f709d7ef0f4ad7f28b2bc9deb6d2c8452771594eb007c49"
+    },
+    {
+      "scene_id": "ai_011_001",
+      "role": "REDESIGN_DEV_EXPOSED",
+      "physical_scene_id": "ai11_01.rar|01",
+      "old_roles": {
+        "context_a": [
+          0,
+          2,
+          3
+        ],
+        "context_b": [
+          0,
+          8,
+          10
+        ],
+        "primary_query": [
+          14,
+          15
+        ],
+        "query": [
+          14,
+          15
+        ],
+        "secondary_query": [],
+        "stream": []
+      },
+      "old_scene_manifest_sha256": "7626615d5a4df974afdc337257a5f11f36146fd9db2e6a0628d3247e7f20eca3"
+    }
+  ],
+  "allowed": [
+    "attribution",
+    "redesign_development",
+    "mechanism_diagnosis"
+  ],
+  "forbidden": [
+    "final_unseen_qualification",
+    "independent_confirmation",
+    "final_generalization_claim"
+  ],
+  "old_training_scenes": [
+    "ai_001_001",
+    "ai_002_001",
+    "ai_003_001"
+  ],
+  "source_manifest": "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/unseen_data/manifest.json",
+  "source_sha256": "91e4200e42425538b7dd46c091be800290fd148d1426dde7246768bc0347a7c8"
+}

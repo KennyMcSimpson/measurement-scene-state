@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-09-27T15:50:12.156761+00:00",
+  "before_any_new_model_scores": true,
+  "reason": "Fixed8^3 representation cannot promise physically ideal arbitrary-surface support; define adequacy before evaluation to avoid treating failed intervention as causal proof.",
+  "oracle_adequacy": {
+    "inside_GT_min_scene_mean": 0.999,
+    "pooled_AB_two_view_candidate_fraction_atleast": 0.9,
+    "pooled_AB_supported_query_surface_neighborhood_fraction_atleast": 0.75,
+    "support_neighborhood_radius_primary_m": 1.1726039399558574,
+    "voxel_scaled_radius": "additionaldescriptiveonly notprimary because changedvolumes inflate distance tolerance"
+  },
+  "if_combined_oracle_fails_gain_with_adequacy": "NOT_SUFFICIENT; supportalone notsufficient withinfrozenarchitecture",
+  "if_combined_oracle_fails_gain_without_adequacy": "INCONCLUSIVE_SUPPORT_NOT_FULLY_REPAIRED; no claim ideal support tested; stop complexGTfree/retraining andkeepfinalclosed",
+  "causal_scope": "No attribution to networkweights vs representationgranularity without new controlled evidence; representation-ortraining remainscandidate notproven unique cause"
+}

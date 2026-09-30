@@ -1,0 +1,77 @@
+[
+  {
+    "data_ray_stream_sha256": "7f30070d35bc030c5fe12e3f1ba136b438624f8ca5e552cb4b53d2d1c414f131",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_parameter_hash": "d1ab5f7b4e4687ff2bf79733a0310c07c87ac504ac438df5d7beac72c68640a4",
+    "initial_state_dict_hash": "ed7e2c2f995ffa3548718156b973e6e5c0a84ef2d041c97b5b127b85fc34546c",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": 104656384,
+    "peak_cuda_reserved_bytes": 136314880,
+    "preregistration_sha256": "931e6063897ed06eced69242755b1506c0e31be0d38c73c7450282a8d7922541",
+    "seed": 20260928,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-DENSE-EVIDENCE-CARRIER-V3/checkpoints/C0_20260928/step_003000.pt",
+      "checkpoint_sha256": "58647eb33cfc77ad00f59e74a8b65c6006ee69e93799e8d864623c7335009234",
+      "dev_query_absrel": 0.6232566468265561,
+      "selected_step": 3000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 3000,
+    "token_count": 128,
+    "variant": "C0",
+    "wall_seconds": 2250.58526469802,
+    "writer_updates": false
+  },
+  {
+    "data_ray_stream_sha256": "5750334579f2ff74d1c0425fd07a8d45606afcc520515371d8efaf34b95b9103",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_parameter_hash": "87b9eb714ca84fb63a452f12618af519d3697cf4f7c2178f78dff45e0c042b48",
+    "initial_state_dict_hash": "456d8400427301b9953751acb660c56c2c6728fedddddba97acdbf256766c7c8",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": 104656384,
+    "peak_cuda_reserved_bytes": 136314880,
+    "preregistration_sha256": "931e6063897ed06eced69242755b1506c0e31be0d38c73c7450282a8d7922541",
+    "seed": 20260929,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-DENSE-EVIDENCE-CARRIER-V3/checkpoints/C0_20260929/step_001000.pt",
+      "checkpoint_sha256": "693bcd55c8b76493a61aee9db5d1eb1dabf7ecbb866938ca7fc234b150021288",
+      "dev_query_absrel": 0.6421332258800427,
+      "selected_step": 1000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 3000,
+    "token_count": 128,
+    "variant": "C0",
+    "wall_seconds": 1818.2108895609854,
+    "writer_updates": false
+  },
+  {
+    "data_ray_stream_sha256": "1c99f2630aee9925f56239c91f38a592b3999daf7633755fda6b89f8568eee7d",
+    "dynamic_ttt_run": false,
+    "fresh_opened": false,
+    "initial_parameter_hash": "9f32f06813f4492a283dfe6adf53594bc048326ef8dbecae513e977bcd56ee0a",
+    "initial_state_dict_hash": "73c27c0b4dfa51cf539bf8bcdc3fd2fc87f543cf92842058ba0a7260379bf895",
+    "parameter_count": 5125,
+    "peak_cuda_allocated_bytes": 104656384,
+    "peak_cuda_reserved_bytes": 136314880,
+    "preregistration_sha256": "931e6063897ed06eced69242755b1506c0e31be0d38c73c7450282a8d7922541",
+    "seed": 20260930,
+    "selection": {
+      "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-DENSE-EVIDENCE-CARRIER-V3/checkpoints/C0_20260930/step_001000.pt",
+      "checkpoint_sha256": "f6aeff6fe55208bb66cefd6cb92144c09df5c56ec96a763c5a4fe9876b188b87",
+      "dev_query_absrel": 0.6249015848743846,
+      "selected_step": 1000,
+      "status": "SELECTED"
+    },
+    "status": "COMPLETE",
+    "steps": 3000,
+    "token_count": 128,
+    "variant": "C0",
+    "wall_seconds": 1798.969754906022,
+    "writer_updates": false
+  }
+]

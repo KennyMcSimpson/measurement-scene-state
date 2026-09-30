@@ -1,0 +1,45 @@
+{
+  "baseline_reproduction": {
+    "mean_atol": 0.001,
+    "metrics": "AbsRel context/query freshS0 vs savedoldGTfree10kFIXED; other metric deltas report only",
+    "on_failure": "STOP_NEW_SUPERVISION_NO_THRESHOLD_RELAXATION",
+    "per_row_atol": 0.01
+  },
+  "optimization": {
+    "batch_rays": 1024,
+    "checkpoint_interval": 100,
+    "density_l2_weight": 1e-05,
+    "depth_weight": 1.0,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.03,
+    "rgb_weight": 1.0,
+    "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE",
+    "steps": 10000,
+    "tv_weight": 0.0001
+  },
+  "parallel_workers": 4,
+  "primary_variant": "S3",
+  "scene_manifest_sha256": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+  "shuffle_seed": 20260927,
+  "source_sha256": {
+    "scripts/analyze_observability_supervision.py": "b974c2cba6112ccd6c654047c8124f92b020232f816799f9ec67a01760a6c39a",
+    "scripts/audit_context_observability.py": "66f83f02c45aa8b3eba187501f03d48a3e8480d7937f4c15b5a7d4de443a87e2",
+    "scripts/evaluate_observability_supervision.py": "9482e6d2a1596f229063ea83bbe28c5da029e8a8a5dbe4269e750ffe20743c5e",
+    "scripts/run_observability_supervision.py": "a4cefc7b69839b1f9ad95e8a7586a82662b65e511c4d62f04e1c82f390e169c6",
+    "src/mcss/dynamic/types.py": "9b741b2228620014ee3249ba9d2fc865b96c8feb4a87e66fc66104ff89d22b52",
+    "src/mcss/geometry.py": "7649de5bbc34f91945f2891849cd19c731a861b422e89a3c08fc932ab24c5155",
+    "src/mcss/measurements.py": "2d4f4bec2b1fb52aa0faf12dea44e04db1d56bfabbc73ea3460d90b21e518783",
+    "src/mcss/mechanism_pilot/context_observability.py": "56029761d8390aeb47a99a2fef6ec1cae41d2c1c5798327586b9df04a2e4a8fb",
+    "src/mcss/mechanism_pilot/direct_capacity_contracts.py": "7c89250db5ea1b7a341a71455240d72705bab5259e972cb5dc42ad13a0b5948f",
+    "src/mcss/mechanism_pilot/direct_capacity_evaluation.py": "65022b00b85c5bbcd2e18584d363b00817e03482a820fa6d30ba54147c3d2706",
+    "src/mcss/mechanism_pilot/direct_capacity_optimization.py": "0a8a1dcff441c0552a780072deaf7e83360051603b35b2791ce948da4d4d84d2",
+    "src/mcss/mechanism_pilot/direct_capacity_statistics.py": "adb8b2b41915b6733054119e50c8043b485ba773dfc2581ecc17a121d5a1ddc1",
+    "src/mcss/mechanism_pilot/geometric_supervision_optimization.py": "4bc711983ef8bc5e4887716cb4eb2aec8d1ce1a38650656fd7c678bbeb17abe1",
+    "src/mcss/mechanism_pilot/observability_supervision_evaluation.py": "c6d7cd993131ff8c6c8db4f676dc6316666ed64ae9e3ab8cf8c815c8fd1d50f1",
+    "src/mcss/mechanism_pilot/observability_supervision_statistics.py": "5e41b741a3709ac561755167481caff8def8918d02a6a963ffb9f440955f2742",
+    "src/mcss/mechanism_pilot/statistics.py": "23ace5175e09b6a5bc15a67744ec56f16419ffdd805daa78d1fd35dc00c0a2a2",
+    "src/mcss/mechanism_pilot/visibility.py": "84c97627bf30cb95ea22573d9139634441c7372c5179966a10e777910e761fbb",
+    "src/mcss/types.py": "8d92ed4241eaac40f3c128b6dddc3c991f0f9d03c6616aafcf81c8f51cca1dc1"
+  },
+  "state_plan_sha256": "04d551bc9b87f1ce1d05fbab3ae295e53da0df6266a886b7e3ee3f83e41f71b2"
+}

@@ -1,0 +1,69 @@
+{
+  "evaluated_variants": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "finalized": true,
+  "learned_sigma": -0.6924097537994385,
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 6,
+    "old_files_unchanged": 0,
+    "query_rows": 960,
+    "static_rows_recomputed": 192,
+    "status": "PASS"
+  },
+  "preseal_depth_purposes": [
+    "CONTEXT_ONLY_RGBD"
+  ],
+  "preseal_depth_reads": 56,
+  "query_rows": 960,
+  "real_DEV_read": false,
+  "reference_integrity": {
+    "max_raw_absrel_deviation": 0.0,
+    "max_raw_delta1_pixel_deviation": 0.0,
+    "median_scale_undefined_views": 0,
+    "prediction_rows": 1152,
+    "reference_rows": 192,
+    "variants": [
+      "C0",
+      "C1",
+      "C2"
+    ]
+  },
+  "reference_status": "ABOVE_REFERENCE_ONLY_AFTER_OPACITY_NORMALIZATION",
+  "report_fields": null,
+  "seconds": 35.657993882952724,
+  "status": "PASS",
+  "summary_free_fields": [
+    "RGBD DEPTH BOUNDS V7 FINAL",
+    "FROZEN_BOUNDS_QUERY_ABSREL=0.353060",
+    "DEPTH_BOUNDS_QUERY_ABSREL=0.675343",
+    "DEPTH_BOUNDS_TRIM1_QUERY_ABSREL=0.692238",
+    "BOUNDS_GAIN=-0.322283",
+    "BOUNDS_GAIN_CI=[-0.32657378559264266, -0.31799316802451066]",
+    "OBS2PLUS_BOUNDS_GAIN=-0.338003",
+    "CARRIER_REFERENCE_STATUS=ABOVE_REFERENCE_ONLY_AFTER_OPACITY_NORMALIZATION",
+    "REFERENCE_LABELS_ALL_SCENES={'C0': {'RAW:depth_absrel': 'BELOW', 'RAW:depth_delta1': 'BELOW', 'OPACITY_NORMALIZED:depth_absrel': 'BELOW', 'OPACITY_NORMALIZED:depth_delta1': 'ABOVE', 'MEDIAN_SCALED:depth_absrel': 'BELOW', 'MEDIAN_SCALED:depth_delta1': 'ABOVE'}, 'C1': {'RAW:depth_absrel': 'BELOW', 'RAW:depth_delta1': 'BELOW', 'OPACITY_NORMALIZED:depth_absrel': 'BELOW', 'OPACITY_NORMALIZED:depth_delta1': 'BELOW', 'MEDIAN_SCALED:depth_absrel': 'NOT_DISTINGUISHABLE', 'MEDIAN_SCALED:depth_delta1': 'BELOW'}, 'C2': {'RAW:depth_absrel': 'BELOW', 'RAW:depth_delta1': 'BELOW', 'OPACITY_NORMALIZED:depth_absrel': 'BELOW', 'OPACITY_NORMALIZED:depth_delta1': 'BELOW', 'MEDIAN_SCALED:depth_absrel': 'BELOW', 'MEDIAN_SCALED:depth_delta1': 'BELOW'}}",
+    "REFERENCE_LABELS_HIT_SCENES={'C0': {'RAW:depth_absrel': 'BELOW', 'RAW:depth_delta1': 'BELOW', 'OPACITY_NORMALIZED:depth_absrel': 'BELOW', 'OPACITY_NORMALIZED:depth_delta1': 'ABOVE', 'MEDIAN_SCALED:depth_absrel': 'BELOW', 'MEDIAN_SCALED:depth_delta1': 'ABOVE'}, 'C1': {'RAW:depth_absrel': 'BELOW', 'RAW:depth_delta1': 'BELOW', 'OPACITY_NORMALIZED:depth_absrel': 'BELOW', 'OPACITY_NORMALIZED:depth_delta1': 'BELOW', 'MEDIAN_SCALED:depth_absrel': 'NOT_DISTINGUISHABLE', 'MEDIAN_SCALED:depth_delta1': 'BELOW'}, 'C2': {'RAW:depth_absrel': 'BELOW', 'RAW:depth_delta1': 'BELOW', 'OPACITY_NORMALIZED:depth_absrel': 'BELOW', 'OPACITY_NORMALIZED:depth_delta1': 'BELOW', 'MEDIAN_SCALED:depth_absrel': 'BELOW', 'MEDIAN_SCALED:depth_delta1': 'BELOW'}}",
+    "C1_ABOVE_REFERENCE_HIT_SCENES=false",
+    "C1_ABOVE_REFERENCE_ALL_SCENES=false",
+    "BOUNDS_STATUS=HARMFUL",
+    "INTERPRETATION_BRANCH=C",
+    "REPORT_DIR=/tmp/claude-rgbd-synthetic-v7-docs/EXP-3D-RGBD-DEPTH-BOUNDS-V7"
+  ],
+  "synthetic_only": true
+}

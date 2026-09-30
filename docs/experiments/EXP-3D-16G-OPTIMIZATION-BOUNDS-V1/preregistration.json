@@ -1,0 +1,39 @@
+{
+  "DYNAMIC_TTT_RUN": false,
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "NEW_CARRIER_TRAINED": false,
+  "all_context_budgets_sealed_before_any_new_query_evaluation": true,
+  "bounds_two_only": true,
+  "counts": {
+    "context": {
+      "chains": 68,
+      "states": 408
+    },
+    "oracle": {
+      "chains": 51,
+      "states": 306
+    },
+    "secondary": {
+      "chains": 34,
+      "states": 68
+    }
+  },
+  "created_utc": "2026-09-27T17:33:15.735287+00:00",
+  "data_role": "CAPACITY_DEV_EXPOSED_ATTRIBUTION_ONLY",
+  "experiment": "EXP-3D-16G-OPTIMIZATION-BOUNDS-V1",
+  "geometry_vs_optimization_only": true,
+  "grid": 16,
+  "locked_file_sha256": {
+    "bounds_contract.json": "12afaace0108b337e2569c4f755535e1418c8d6fbe153c72ef5c10a038212f26",
+    "bounds_lock.json": "ff732a730cae5dab14f090bf55f903ad36d5f0a62bf69c23954526d43b204447",
+    "config.json": "52da8fbabcd4a96bb3f560e5f774dc6bb6efd3dbc5e8319d16c77f08c759000e",
+    "decision_rules.json": "3966e4c262dc0c538253eea3c79120689248adcac872fa9b6024029f35669e8b",
+    "optimization_budget_lock.json": "998624403ddd52c2bd01d12ecb81a1e1d79b8fefc45dd136d6bc2879fc0a3ae6",
+    "scene_manifest.json": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+    "state_plan.json": "3d91c428556afdda26cc2428e7936af19017e3d2090ddec7db94e485dae1f567"
+  },
+  "oracle_follows_complete_context_evaluation": true,
+  "primary_is_predeclared_not_hindsight_query_best": true,
+  "samples": 64,
+  "stage": "FROZEN_BEFORE_FORMAL_OPTIMIZATION_AND_NEW_QUERY_SCORES"
+}

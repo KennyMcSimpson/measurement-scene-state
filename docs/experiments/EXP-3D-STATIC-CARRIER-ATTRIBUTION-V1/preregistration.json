@@ -1,0 +1,105 @@
+{
+  "experiment": "EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1",
+  "created_utc": "2026-09-27T06:21:10.908311+00:00",
+  "status": "AUDIT_AND_METHOD_PLAN_FROZEN_BEFORE_NEW_EVALUATION",
+  "checkpoint": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-20260927-centered-training-1000a-600b-v1/training/phase_b_final.pt",
+  "checkpoint_sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42",
+  "carrier": "Frozen architecture,8^3,128 candidates,centered bounds and original RGB/metriccamera/raydistance semantics",
+  "fixed_renderer": {
+    "samples": 64,
+    "ray_chunk_size": 2048
+  },
+  "old_roles": {
+    "context_a": [
+      0,
+      1,
+      2
+    ],
+    "context_b": [
+      0,
+      3,
+      4
+    ],
+    "stream_audit": [
+      5,
+      6
+    ],
+    "continuation_audit": [
+      7
+    ],
+    "primary_query": [
+      8,
+      9
+    ],
+    "secondary_query": [
+      12,
+      13,
+      14,
+      15
+    ]
+  },
+  "old_data": "All3 scenes retained, no ai003 exclusion even if officially bad",
+  "order": [
+    "RGB/geometry/support/volume audits",
+    "reproduce old static",
+    "lock eligible unseen identity/data/roles",
+    "static qualification with frozen residual"
+  ],
+  "neighborhood_radius": "half voxel diagonal, 0.5*sqrt(1.5^2+1^2+1.5^2) meters",
+  "unseen_plan": {
+    "target_scenes": 8,
+    "minimum_scenes": 6,
+    "selection": "deterministic scene-name order, distinct source asset/volume from train and each other, existing protocol_partition=train only, never protected/test",
+    "identity": "must verify authoritative source-asset mapping; different IDs alone insufficient",
+    "frame_quality_rule": "require official included image and valid camera-trajectory classification; finite RGB/depth; reject frame if all RGB pixels exactly zero or >99.9% pixels have all channels<=2/255, or GT valid fraction<0.95",
+    "frame_pool": "first16 valid jointly present frames of cam00, bounded ranges only; no score search",
+    "roles": "select matching-support A/B of3 sharing anchor using camera/GT-only rule fixed before images/model; exact IDs locked only after quality/support audit",
+    "fallback": "if insufficient data/identity, UNSEEN_DEV_STATUS=BLOCKED_INSUFFICIENT_DATA; no training-scene substitute"
+  },
+  "residual": {
+    "class": "Existing ResidualReadoutControl; frozen carrier state, head only",
+    "seed": 20260927,
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "steps": 3000,
+    "gradient_clip": 1.0,
+    "training_queries": [
+      12,
+      13,
+      14
+    ],
+    "internal_validation_queries": [
+      15
+    ],
+    "validation_cadence": 250,
+    "selection": "lowest scene-equal internal validation RGB MSE+depth AbsRel, tie earliest; no unseen data",
+    "contexts": [
+      "A",
+      "B"
+    ],
+    "training_scenes": [
+      "ai_001_001",
+      "ai_002_001",
+      "ai_003_001"
+    ],
+    "primary_frames8_9_never_tuning": true,
+    "loss": "RGB MSE + GT-valid depth AbsRel",
+    "training_sufficiency": "report objective/validation curves and limitations, never assert convergence just from step count"
+  },
+  "statistic": {
+    "unit": "scene",
+    "draws": 10000,
+    "seed": 20260927,
+    "CI": "95% percentile paired",
+    "primary": "anchor depthAbsRel minus average(full context A,B) depthAbsRel; also both contexts separate",
+    "wrong_scene": "cyclic donor A state in scene-name order at unchanged target query camera"
+  },
+  "diagnostics_only": [
+    "context feature spatial shuffle fixedseed",
+    "state feature channel reverse",
+    "state masking all typedfields with deterministic zero-density/zero-color/features",
+    "residual wrong-scene and zero-state at unchangedquerycamera"
+  ],
+  "dynamic_ttt_run": false,
+  "no_carrier_training_or_write_parameter_tuning": true
+}

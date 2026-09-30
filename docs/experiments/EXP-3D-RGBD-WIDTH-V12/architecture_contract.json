@@ -1,0 +1,94 @@
+{
+  "anchor_control": "anchor RGB + anchor depth, the same full-role bounds as the variant's A/B state; a single view never reaches the >=2-view lifting support, so an anchor state carries the single-view depth bypass and learned priors only",
+  "depth_bypass": {
+    "inputs": "context RGB, measured context depth, context cameras; no query",
+    "log_sigma_init": -0.6931471805599453,
+    "placement": "after the >=2-view support gate: one measured view suffices",
+    "sampling": "nearest pixel of the full-resolution measured ray-distance map"
+  },
+  "new_backbone_or_learned_matching": false,
+  "only_difference_C0_C1": "C1 differs from C0 only by the carrier width: hidden_dim 64 and expansion_dim 128 instead of 32 and 64 (250542 instead of 64238 parameters). The recipe is the V11 C1 one, fixed before any V11 result: TRAIN72, the 32^3 grid, the bounds rule (CONTEXT_DEPTH: hull of the measured depth and cameras of the role's 3 context frames, anchor frame, frozen x1.1 padding, >=1 m), the frozen V2 C1 loss, 6000 steps and the extra-view rule 'uniform_0_4' drawn from its own generator (seed + 7919); scene order, query slots and ray indices are identical. C0 retrains V11 C1 and must reproduce it bit-for-bit. DEV evaluation and checkpoint selection use the standard 3-view contexts.",
+  "parameter_count": {
+    "C0": 64238,
+    "C1": 250542
+  },
+  "parameter_hash_by_seed": {
+    "20260928": {
+      "C0": "952e6fc39dd92b5e8e17a78037b0721540cb7584b8e1a49059a7754c402e8616",
+      "C1": "a560c661834530636407464484241a4c1aa5b4867866ca04be85a0d9cb825ae3"
+    },
+    "20260929": {
+      "C0": "fa874f83b36568dfbfc428c2b641fcd2c6ff71b5ef36e3651d04bd610b4be1cc",
+      "C1": "7e31b93dddcc1508501f63ab21eb23440902d8145357de7a6184efd0ae361fa4"
+    },
+    "20260930": {
+      "C0": "780ac1e1382a0c798625b432b6b3be8925f5d3c292fddc135d36e37f2e8dad65",
+      "C1": "58ca76e2ea47cca84acf97a661d175ab54471870ecd6d20ea307b3bf16f054e7"
+    }
+  },
+  "state": "query-independent; all DEV states sealed before query load; >=2 queries/state",
+  "test_time_depth_used": true,
+  "test_time_input": "RGB+DEPTH+CAMERA for every variant",
+  "variants": {
+    "C0": {
+      "config": {
+        "expansion_dim": 64,
+        "feature_dim": 8,
+        "grid_size": [
+          32,
+          32,
+          32
+        ],
+        "hidden_dim": 32,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 32768
+      },
+      "expansion": 64,
+      "hidden": 32,
+      "label": "WIDTH32",
+      "model": "C1",
+      "train": "TRAIN72"
+    },
+    "C1": {
+      "config": {
+        "expansion_dim": 128,
+        "feature_dim": 8,
+        "grid_size": [
+          32,
+          32,
+          32
+        ],
+        "hidden_dim": 64,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 32768
+      },
+      "expansion": 128,
+      "hidden": 64,
+      "label": "WIDTH64",
+      "model": "C1",
+      "train": "TRAIN72"
+    }
+  }
+}

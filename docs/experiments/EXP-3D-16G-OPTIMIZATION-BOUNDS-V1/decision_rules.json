@@ -1,0 +1,93 @@
+{
+  "bounds_status_rules": {
+    "gain": "CURRENT minus GTFREE paired scene AbsRel",
+    "interaction": "DID=boundsgain(max)-boundsgain(1k). If DID stable in either direction OR first/last bounds stable gain sign flips => INTERACTION_WITH_OPTIMIZATION. Otherwise max-budget stable gain => GT_FREE_BETTER, reverse=>CURRENT_BETTER, else NO_CLEAR_DIFFERENCE."
+  },
+  "budgets": [
+    1000,
+    3000,
+    10000
+  ],
+  "engineering_good": {
+    "mean_absrel_max": 0.25,
+    "scene_absrel_max": 0.35,
+    "scene_fraction_min": 0.75
+  },
+  "frozen_before_formal": true,
+  "grid": 16,
+  "hindsight_query_best": "Optional offline diagnostic only; never primary configuration or checkpoint selection",
+  "optimization_status_precedence": [
+    "QUERY_OVERFIT",
+    "UNDEROPTIMIZED",
+    "SATURATED",
+    "PARTIALLY_SATURATED",
+    "INCONCLUSIVE"
+  ],
+  "optimization_status_rules": {
+    "INCONCLUSIVE": "Otherwise; no global optimization or expressivity impossibility proof.",
+    "PARTIALLY_SATURATED": "At least one earlier adjacent query gain stable; last gain not stable and reverse last gain not stable.",
+    "QUERY_OVERFIT": "Last adjacent query harm is stable practical gain in reverse AND >=75% scenes context full objective improves.",
+    "SATURATED": "Max-budget plateau fraction >=.75 AND last query and context AbsRel gain CIs entirely within [-.02,.02].",
+    "UNDEROPTIMIZED": "Last adjacent query gain stable AND all prior adjacent mean query gains >=0 AND max-budget plateau fraction <.75."
+  },
+  "plateau": {
+    "gradient_definition": "abs((latehalf_median-earlyhalf_median)/max(abs(earlyhalf_median),1e-8)); preclip grad_norm",
+    "gradient_relative_tolerance": 0.1,
+    "minimum_gradient_points": 4,
+    "objective_definition": "abs((window_first-window_last)/max(abs(window_first),1e-8))",
+    "objective_relative_tolerance": 0.001,
+    "plateau_scene_fraction": 0.75,
+    "saturation_equivalence_margin": 0.02,
+    "scene_requires_all_AB_roles": true,
+    "window_fraction": 0.1
+  },
+  "primary": {
+    "bounds_mode": "FROZEN_GT_FREE_BOUNDS",
+    "budget": 10000,
+    "selection": "FIXED_BUDGET",
+    "track": "RGBD"
+  },
+  "primary_label": "PREDECLARED_PRIMARY_NOT_QUERY_MINIMUM",
+  "prohibited": [
+    "new carrier training",
+    "final holdout",
+    "query-selected optimizer step",
+    "query-adapted bounds",
+    "posthoc extra budget"
+  ],
+  "readiness": {
+    "all_capacity_gap_LOSO_means_positive": true,
+    "arbitrary_engineering_thresholds_not_benchmark": true,
+    "bounds_frozen_required": true,
+    "generalization_scene_fraction": 0.75,
+    "good_fail_all_other_checks_pass": "READY_WITH_LIMITATION",
+    "good_pass": "READY",
+    "incomplete_checks_but_stable_carrier_gap_or_good": "PROMISING_BUT_NOT_READY",
+    "maximum_generalization_mean": 0.2,
+    "maximum_generalization_scene": 0.35,
+    "maximum_top1_positive_share": 0.25,
+    "no_stable_late_query_harm": true,
+    "otherwise": "NOT_READY",
+    "requires_stable_carrier_gap": true,
+    "requires_status": [
+      "SATURATED",
+      "PARTIALLY_SATURATED"
+    ],
+    "wrong_scene_mean_and_ci_lower_strictly_positive": true
+  },
+  "samples": 64,
+  "schema": "optimization_bounds_decision_rules.v1",
+  "secondary": "RGB_ONLY only primary configuration after primary analysis, never changes primary decisions",
+  "stable_gain": {
+    "ci_lower_strictly_greater_than": 0,
+    "mean_min": 0.02,
+    "nonworse_fraction_min": 0.75,
+    "tie": 1e-08
+  },
+  "statistics": {
+    "CI": "95percentile",
+    "draws": 10000,
+    "seed": 20260927,
+    "unit": "scene; average query then A/B, scenes equal"
+  }
+}

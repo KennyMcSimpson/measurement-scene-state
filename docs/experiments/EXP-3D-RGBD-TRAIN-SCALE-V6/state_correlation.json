@@ -1,0 +1,88 @@
+{
+  "definition": "Pearson correlation of flattened density logits; no gate uses it",
+  "descriptive_only": true,
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C0_20260928/states.pt": "177687061b1e2e2417d05b8acdef165325cf0a8dd9c72959bb0ed8c4ce4727c7",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C0_20260929/states.pt": "e3bff9efb008624331c1d5dff045272f8c2ec7436eaef24b195e4de6d3919193",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C0_20260930/states.pt": "cb65d00b52d17a175902700706218f331822ee9f9a4047fb9d0618b4e4f7b9c9",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C1_20260928/states.pt": "d7c75596e4aa1453a1450f0621778b2450d02c254848a22cbd4bd1babdbdf620",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C1_20260929/states.pt": "bc1c2683f1ea4044c1cf08a75f07b06ad809bfa64c1bd723bd445cc8c2681d25",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C1_20260930/states.pt": "6d530924a8b6edbe0ac0cb74952408fba07b20ef3a91d83346d4595e28ad0bc0",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C2_20260928/states.pt": "5e7bea7277d18bc16f33807939f4e716d836aa020937dde3490e4edc854a388f",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C2_20260929/states.pt": "2c5f524b47ccfd4c1681b37b96e7170f91710beaa52d8f5d25217dc36b7937e5",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/selected_dev/C2_20260930/states.pt": "65596acd646efa080bd1093d13921b87ee3b2890b7690be7cedc4c71c6042bc6"
+  },
+  "per_run": {
+    "C0_20260928": {
+      "across_scene_A": 0.396088276122435,
+      "direct_A_vs_anchor_A": 0.4756620515762622,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6658430649730404
+    },
+    "C0_20260929": {
+      "across_scene_A": 0.42997200271446995,
+      "direct_A_vs_anchor_A": 0.4143930509790094,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6879043297749606
+    },
+    "C0_20260930": {
+      "across_scene_A": 0.4087259761431202,
+      "direct_A_vs_anchor_A": 0.5199076718775245,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6770794414593347
+    },
+    "C1_20260928": {
+      "across_scene_A": 0.3982986020482953,
+      "direct_A_vs_anchor_A": 0.6551987093238645,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6672899937525305
+    },
+    "C1_20260929": {
+      "across_scene_A": 0.4224868824372522,
+      "direct_A_vs_anchor_A": 0.620758598937172,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6625921582784505
+    },
+    "C1_20260930": {
+      "across_scene_A": 0.4420619171968588,
+      "direct_A_vs_anchor_A": 0.6216299996084376,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6829768977033042
+    },
+    "C2_20260928": {
+      "across_scene_A": 0.5080776801934286,
+      "direct_A_vs_anchor_A": -0.2139442687167754,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.653960932480564
+    },
+    "C2_20260929": {
+      "across_scene_A": 0.4734101402110091,
+      "direct_A_vs_anchor_A": -0.2929330543384529,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6341601178764342
+    },
+    "C2_20260930": {
+      "across_scene_A": 0.4757277122585867,
+      "direct_A_vs_anchor_A": -0.16129973907317635,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.6166426435484664
+    }
+  },
+  "per_variant_mean_over_seeds": {
+    "C0": {
+      "across_scene_A": 0.411595418326675,
+      "direct_A_vs_anchor_A": 0.4699875914775988,
+      "within_scene_A_B": 0.6769422787357785
+    },
+    "C1": {
+      "across_scene_A": 0.4209491338941354,
+      "direct_A_vs_anchor_A": 0.632529102623158,
+      "within_scene_A_B": 0.6709530165780951
+    },
+    "C2": {
+      "across_scene_A": 0.48573851088767483,
+      "direct_A_vs_anchor_A": -0.22272568737613488,
+      "within_scene_A_B": 0.6349212313018215
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "all_scientific_json_byte_exact": true,
+  "audit_script_sha256": "b6556962b1d11aaf0ab9a2325a09aa53e291d1e5ff75d815e0a47be0e5298727",
+  "comparisons": {
+    "bootstrap_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "b08d099bb6c7f1afb44e25bf3be1e9ef15ae84169991955b0c515461605379fa",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/bootstrap_results.json",
+      "reproduced_sha256": "b08d099bb6c7f1afb44e25bf3be1e9ef15ae84169991955b0c515461605379fa"
+    },
+    "observability_analysis.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "6e8c2b24e40936e19ab780f902b21ea82f93dacbd068ed073e02be3c38e068c5",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/observability_analysis.json",
+      "reproduced_sha256": "6e8c2b24e40936e19ab780f902b21ea82f93dacbd068ed073e02be3c38e068c5"
+    },
+    "qualification_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "c2daf582ab8b59b48740521c9e9d4f08ee855a4ea8802473a4583d96e395dd7a",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/qualification_results.json",
+      "reproduced_sha256": "c2daf582ab8b59b48740521c9e9d4f08ee855a4ea8802473a4583d96e395dd7a"
+    },
+    "ray_hit_fractions.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "ecc9a533b959d7dfb33be0068f939e23e5177fa69e976313da401bc6cb6a809a",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/ray_hit_fractions.json",
+      "reproduced_sha256": "ecc9a533b959d7dfb33be0068f939e23e5177fa69e976313da401bc6cb6a809a"
+    },
+    "state_use_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "e84448d6a90130d6d494ba7bd34824bc52e04791d77e6ac1125171da8edd5eab",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/state_use_results.json",
+      "reproduced_sha256": "e84448d6a90130d6d494ba7bd34824bc52e04791d77e6ac1125171da8edd5eab"
+    },
+    "static_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "40d3f6aad7e297b1b84d4d49182daeb6c681c2d089125e5b5c5f4630a43718c4",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/static_results.json",
+      "reproduced_sha256": "40d3f6aad7e297b1b84d4d49182daeb6c681c2d089125e5b5c5f4630a43718c4"
+    },
+    "wrong_scene_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "3fa9483bbc049a2bb4c455334e9c0ffc5e39e660d981b6bb1298ab73836b18c9",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/wrong_scene_results.json",
+      "reproduced_sha256": "3fa9483bbc049a2bb4c455334e9c0ffc5e39e660d981b6bb1298ab73836b18c9"
+    }
+  },
+  "meaning": "Independent raw replay of same estimator, not independent estimator implementation",
+  "media_or_checkpoint_loaded": false,
+  "new_model_forward": false,
+  "original_artifacts_modified": false,
+  "raw_only": true,
+  "reproduction_inputs_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/audit/dev_state_use.json": "eb2da3735f230a25ed6290cdeb64b8f408318901ec3f6d08a37dc1349ad27af5",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/cost_analysis.json": "f95c48c4cf11415786642e7f1c0e767d91f819570be9fa3eb1534d66bd6c0e63",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/dev_context_results.json": "669e2dc136196d9bbdfbe07ebe291da391596c186857cf979c993b3325426a6d",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/dev_matched_results.json": "26a7f4c1e0135b6372f61be5bce64b68697a439df6350999188072004e67cd67",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/dev_query_results.json": "96885d3b342b022e1005f0d8f84ad2a40efdc9858aa23d7682830e397f238eb3",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/dev_region_results.json": "e3981bff16a9f18d68bdbcf4dd111cb87d7f589e467f9eb27be8a89b77b6c890",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/raw/dev_static_matched_results.json": "e84142ddbda69e74728a81803fa661cedf6e9cb090bda28ec2d93cef305dc5bc",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/scene_split.json": "4a111c072f2178740a709e5257e065d4fcbc5564d624a97f12b8b795731e1afc",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/training_contract.json": "bd2f42a68e033b65803865e00492a4369b5695df7f5d167fd9e5cd27eb19ba03",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGB-PRIOR-BOUNDS-V10/training_curves.json": "bcefdffe143f815063545c7647eb32f74251c3b0046183cea23f17b8b075203e"
+  },
+  "reproduction_source_sha256": {
+    "/home/zonghan/measurement-scene-state/scripts/analyze_rgb_prior_bounds_carrier.py": "7364974174ae5a6ecf04f3ff3e0698df9d2ff17417a03d91c419be4d57a898a9",
+    "/home/zonghan/measurement-scene-state/scripts/analyze_rgbd_bounds_carrier_amend1.py": "682393a6b6980c8a22a0fe489041d45249ca8340ff8b2c1e47085b238d6034da",
+    "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/geometry_carrier_statistics.py": "a4605d75d58ef9787f92b7ac17c23ff1d0f4e41ca01c9178ba059d1c4c62c1b1"
+  },
+  "scientific_json_count": 7,
+  "status": "PASS"
+}

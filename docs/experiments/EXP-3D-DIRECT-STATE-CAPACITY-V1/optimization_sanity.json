@@ -1,0 +1,162 @@
+{
+  "RGBD": {
+    "selected_step": 150,
+    "selection_used_only_supervision_objective": true,
+    "initial": {
+      "loss_rgb": 0.06516973587373892,
+      "loss_depth": 0.6060632650915122,
+      "regularization": 1.6110720935103018e-07,
+      "opacity": 0.5932494342327118,
+      "alpha_zero_fraction": 0.0,
+      "alpha_one_fraction": 0.0,
+      "context_objective": 0.6712331620724605
+    },
+    "selected": {
+      "loss_rgb": 0.026110677510344734,
+      "loss_depth": 0.2556581970898187,
+      "regularization": 9.307443178840913e-06,
+      "opacity": 0.8454761028289794,
+      "alpha_zero_fraction": 0.0,
+      "alpha_one_fraction": 0.0,
+      "context_objective": 0.28177818204334226
+    },
+    "full_objective_checkpoints": [
+      {
+        "step": 0,
+        "loss_rgb": 0.06516973587373892,
+        "loss_depth": 0.6060632650915122,
+        "regularization": 1.6110720935103018e-07,
+        "opacity": 0.5932494342327118,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.6712331620724605
+      },
+      {
+        "step": 50,
+        "loss_rgb": 0.033177991133804124,
+        "loss_depth": 0.3587788342097021,
+        "regularization": 3.368394800418173e-06,
+        "opacity": 0.7599880655606588,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.3919601937383066
+      },
+      {
+        "step": 100,
+        "loss_rgb": 0.027778427807303767,
+        "loss_depth": 0.28304791787162487,
+        "regularization": 6.307805051619653e-06,
+        "opacity": 0.835936290025711,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.31083265348398026
+      },
+      {
+        "step": 150,
+        "loss_rgb": 0.026110677510344734,
+        "loss_depth": 0.2556581970898187,
+        "regularization": 9.307443178840913e-06,
+        "opacity": 0.8454761028289794,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.28177818204334226
+      }
+    ],
+    "state_hash": "86a442b65b052b99936ca7e8ffd8f8fb97fee103e75e543fe61e017f4134fba1",
+    "changed": true,
+    "seconds": 0.854258706967812,
+    "peak_cuda_allocated_bytes": 24764928,
+    "peak_cuda_reserved_bytes": 37748736,
+    "parameter_count": 2048,
+    "nonzero_gradient_observed": true,
+    "has_depth": true,
+    "final_selected_at_budget_boundary": true,
+    "all_steps_finite": true,
+    "shared_supervision_frame_ids": [
+      0,
+      1,
+      2
+    ],
+    "optimizer_limited_capacity_diagnostic": true
+  },
+  "RGB_ONLY": {
+    "selected_step": 150,
+    "selection_used_only_supervision_objective": true,
+    "initial": {
+      "loss_rgb": 0.06516973587373892,
+      "loss_depth": null,
+      "regularization": 1.6110720935103018e-07,
+      "opacity": 0.5932494342327118,
+      "alpha_zero_fraction": 0.0,
+      "alpha_one_fraction": 0.0,
+      "context_objective": 0.06516989698094827
+    },
+    "selected": {
+      "loss_rgb": 0.022977445949800314,
+      "loss_depth": null,
+      "regularization": 3.871560693369247e-06,
+      "opacity": 0.3431666965285937,
+      "alpha_zero_fraction": 0.0,
+      "alpha_one_fraction": 0.0,
+      "context_objective": 0.022981317510493683
+    },
+    "full_objective_checkpoints": [
+      {
+        "step": 0,
+        "loss_rgb": 0.06516973587373892,
+        "loss_depth": null,
+        "regularization": 1.6110720935103018e-07,
+        "opacity": 0.5932494342327118,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.06516989698094827
+      },
+      {
+        "step": 50,
+        "loss_rgb": 0.028316081788701316,
+        "loss_depth": null,
+        "regularization": 2.0154338926658966e-06,
+        "opacity": 0.38023395438989005,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.028318097222593982
+      },
+      {
+        "step": 100,
+        "loss_rgb": 0.024607340704339245,
+        "loss_depth": null,
+        "regularization": 3.084892341576051e-06,
+        "opacity": 0.3643270005782445,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.02461042559668082
+      },
+      {
+        "step": 150,
+        "loss_rgb": 0.022977445949800314,
+        "loss_depth": null,
+        "regularization": 3.871560693369247e-06,
+        "opacity": 0.3431666965285937,
+        "alpha_zero_fraction": 0.0,
+        "alpha_one_fraction": 0.0,
+        "context_objective": 0.022981317510493683
+      }
+    ],
+    "state_hash": "53ce963f0dda8721b3de331c5902d60774c64aab6ea2aabb936985265168102f",
+    "changed": true,
+    "seconds": 0.5592632530024275,
+    "peak_cuda_allocated_bytes": 24781312,
+    "peak_cuda_reserved_bytes": 37748736,
+    "parameter_count": 2048,
+    "nonzero_gradient_observed": true,
+    "has_depth": false,
+    "final_selected_at_budget_boundary": true,
+    "all_steps_finite": true,
+    "shared_supervision_frame_ids": [
+      0,
+      1,
+      2
+    ],
+    "optimizer_limited_capacity_diagnostic": true
+  }
+}

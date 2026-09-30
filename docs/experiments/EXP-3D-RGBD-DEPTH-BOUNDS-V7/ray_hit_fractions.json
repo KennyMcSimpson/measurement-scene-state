@@ -1,0 +1,37 @@
+{
+  "amendment": "V7 Amendment 1 (AMENDMENTS.md): the frozen V2 estimator without its inapplicable C0/C1 ray-hit-fraction equality assertion; everything else unchanged",
+  "definition": "per-scene equal mean (roles, then queries) of the fraction of query rays that intersect the state's bounds box, direct states",
+  "descriptive_only": true,
+  "per_variant_scene": {
+    "C0": {
+      "ai_008_001": 1.0,
+      "ai_009_001": 0.0,
+      "ai_011_001": 1.0,
+      "ai_014_003": 1.0,
+      "ai_016_002": 1.0,
+      "ai_021_002": 1.0,
+      "ai_032_001": 1.0,
+      "ai_034_001": 1.0
+    },
+    "C1": {
+      "ai_008_001": 1.0,
+      "ai_009_001": 1.0,
+      "ai_011_001": 1.0,
+      "ai_014_003": 1.0,
+      "ai_016_002": 1.0,
+      "ai_021_002": 1.0,
+      "ai_032_001": 1.0,
+      "ai_034_001": 1.0
+    },
+    "C2": {
+      "ai_008_001": 1.0,
+      "ai_009_001": 1.0,
+      "ai_011_001": 1.0,
+      "ai_014_003": 1.0,
+      "ai_016_002": 1.0,
+      "ai_021_002": 1.0,
+      "ai_032_001": 1.0,
+      "ai_034_001": 1.0
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+ "seed": 20260928,
+ "steps": 1000,
+ "trainx_scenes": 48,
+ "absrel": {
+  "NO_STREAM": 0.27768129405525194,
+  "OFF": 0.30604051711967545,
+  "ALL_UNTRAINED": 0.30444197932248473,
+  "ALL_TRAINED": 0.26697722928426665
+ },
+ "stream_gain_NO_STREAM_minus_OFF": {
+  "mean": -0.028359223064423556,
+  "ci95": [
+   -0.051814926998920804,
+   -0.004551680937227246
+  ],
+  "better": 18,
+  "n": 48
+ },
+ "write_gain_OFF_minus_ALL_TRAINED": {
+  "mean": 0.03906328783540881,
+  "ci95": [
+   0.020428877854590972,
+   0.05863341361175767
+  ],
+  "better": 38,
+  "n": 48
+ },
+ "untrained_write_OFF_minus_ALL_UNTRAINED": {
+  "mean": 0.0015985377971907246,
+  "ci95": [
+   -0.00015110218483467043,
+   0.003454113897737945
+  ],
+  "better": 33,
+  "n": 48
+ },
+ "trained_fast_norm_mean": 0.1657643533156564,
+ "train_depth_absrel_first100_last100": [
+  0.2725992167368531,
+  0.24642536789178848
+ ],
+ "seconds": 287.58007208799245,
+ "exploratory_train_only": true
+}

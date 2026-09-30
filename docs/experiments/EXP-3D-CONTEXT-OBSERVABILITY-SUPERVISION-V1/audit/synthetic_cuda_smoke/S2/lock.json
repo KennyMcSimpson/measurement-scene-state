@@ -1,0 +1,42 @@
+{
+  "bounds": [
+    [
+      -2.0,
+      -2.0,
+      0.10000000149011612
+    ],
+    [
+      2.0,
+      2.0,
+      4.0
+    ]
+  ],
+  "config": {
+    "batch_rays": 8,
+    "checkpoint_interval": 100,
+    "density_l2_weight": 1e-05,
+    "depth_weight": 1.0,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.03,
+    "rgb_weight": 1.0,
+    "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE",
+    "steps": 100,
+    "tv_weight": 0.0001
+  },
+  "engineering_fixture": true,
+  "epsilon": 1e-08,
+  "frame_ids": [
+    0
+  ],
+  "grid": 16,
+  "initial_state_hash": "8e8d0d44d9338f301fee6e59ac07abb9fcafc5c20927ffb8e1c4438727100b77",
+  "lambda_free": 0.1,
+  "lambda_surface": 0.1,
+  "query_access": false,
+  "samples": 64,
+  "seed": 20260927,
+  "selection": "FIXED_BUDGET",
+  "supervision": "CONTEXT_ONLY_RGBD",
+  "tau_surface": 0.21471728384494781,
+  "variant": "S2"
+}

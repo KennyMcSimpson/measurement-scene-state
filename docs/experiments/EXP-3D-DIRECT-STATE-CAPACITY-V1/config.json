@@ -1,0 +1,28 @@
+{
+  "optimization": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "batch_rays": 1024,
+    "checkpoint_interval": 100,
+    "rgb_weight": 1.0,
+    "depth_weight": 1.0,
+    "density_l2_weight": 1e-05,
+    "tv_weight": 0.0001,
+    "gradient_clip": 1.0,
+    "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE"
+  },
+  "source_sha256": {
+    "src/mcss/mechanism_pilot/direct_capacity_optimization.py": "0a8a1dcff441c0552a780072deaf7e83360051603b35b2791ce948da4d4d84d2",
+    "src/mcss/mechanism_pilot/direct_capacity_contracts.py": "7c89250db5ea1b7a341a71455240d72705bab5259e972cb5dc42ad13a0b5948f",
+    "scripts/run_direct_capacity_optimization.py": "f897332c2ce137aff122d2364d97a3b53b0e85b40b6b698432743748d49ca32b",
+    "src/mcss/measurements.py": "2d4f4bec2b1fb52aa0faf12dea44e04db1d56bfabbc73ea3460d90b21e518783",
+    "src/mcss/geometry.py": "7649de5bbc34f91945f2891849cd19c731a861b422e89a3c08fc932ab24c5155",
+    "src/mcss/types.py": "8d92ed4241eaac40f3c128b6dddc3c991f0f9d03c6616aafcf81c8f51cca1dc1"
+  },
+  "state_plan_sha256": "0a01142af24276c337e4d41a2c14516d3a66873dec43c352edc231bbaf8e7d40",
+  "scene_manifest_sha256": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+  "baseline_reproduction": "PASS_EXACT",
+  "pilot_sanity": "PASS",
+  "seed_rule": "20260927 + sha256(scene|role|track) first8hex; independent ofgrid,bounds,samples",
+  "no_carrier_or_support_training": true
+}

@@ -1,0 +1,114 @@
+{
+  "access_scope": "Frozen analyzer loads saved JSON/gzip only, never image/depth/state files",
+  "analysis_input_root": "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1",
+  "audit_source_sha256": "556ac2b585ee58dfd071c354927089fd1a36cb1773314b8492dcf734fc4b21c3",
+  "byte_mismatch_count": 0,
+  "compared_files": 7,
+  "comparison_original_root": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1",
+  "comparison_rule": "All seven scientific JSON artifacts must be byte-exact",
+  "files": {
+    "bootstrap_results.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 4811,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/bootstrap_results.json",
+      "original_sha256": "d5a5856f7465543142ac71ee8af4797d83f8b868115d7256078e927a61af262d",
+      "reproduced_filename": "bootstrap_results.json",
+      "reproduced_sha256": "d5a5856f7465543142ac71ee8af4797d83f8b868115d7256078e927a61af262d",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "cost_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 2615,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/cost_analysis.json",
+      "original_sha256": "ce4cd38a0567f98e15ccca126980f481e2e2869a0c7c189fc9456ea1ed9304f0",
+      "reproduced_filename": "cost_analysis.json",
+      "reproduced_sha256": "ce4cd38a0567f98e15ccca126980f481e2e2869a0c7c189fc9456ea1ed9304f0",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "decision_summary.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 0,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/decision_summary.json",
+      "original_sha256": "14f6260bac0fb8a5115cc87259672fee24143a06f027e62df9bf63b61a00aba0",
+      "reproduced_filename": "decision_summary.json",
+      "reproduced_sha256": "14f6260bac0fb8a5115cc87259672fee24143a06f027e62df9bf63b61a00aba0",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "gap_closure_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 389,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/gap_closure_analysis.json",
+      "original_sha256": "7997df15205d90e28e8a336d0554c9103b334fd62da9abb8b82091ef64b6ac10",
+      "reproduced_filename": "gap_closure_analysis.json",
+      "reproduced_sha256": "7997df15205d90e28e8a336d0554c9103b334fd62da9abb8b82091ef64b6ac10",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "observability_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 14251,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/observability_analysis.json",
+      "original_sha256": "d618738d520bcd8f951eb2dcd73e047dbed38179c333a55d1ea33db54e4fcc5c",
+      "reproduced_filename": "observability_analysis.json",
+      "reproduced_sha256": "d618738d520bcd8f951eb2dcd73e047dbed38179c333a55d1ea33db54e4fcc5c",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "supervision_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 10705,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/supervision_analysis.json",
+      "original_sha256": "4a4f62512990be96fcd2a34ca59bc1f279983668ec59421bcf85d8be0f20edaf",
+      "reproduced_filename": "supervision_analysis.json",
+      "reproduced_sha256": "4a4f62512990be96fcd2a34ca59bc1f279983668ec59421bcf85d8be0f20edaf",
+      "structural_or_nonnumeric_mismatches": 0
+    },
+    "wrong_scene_analysis.json": {
+      "byte_exact": true,
+      "max_abs_numeric_error": 0.0,
+      "mismatch_examples": [],
+      "numeric_values_compared": 318,
+      "original": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/wrong_scene_analysis.json",
+      "original_sha256": "5eddc12b01a4f47a16cbac22cc9cc39fc63b4fde8cc5864a591ab06d1248039b",
+      "reproduced_filename": "wrong_scene_analysis.json",
+      "reproduced_sha256": "5eddc12b01a4f47a16cbac22cc9cc39fc63b4fde8cc5864a591ab06d1248039b",
+      "structural_or_nonnumeric_mismatches": 0
+    }
+  },
+  "input_provenance": {
+    "input_sha256": {
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/audit/observability_integrity.json.gz": "d5b6d3e05306637c4305d2ad6476731cb2648c18674a6c2324cf5f809eeebc59",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/decision_rules.json": "4e0a3f0797cfeb21302ce002b397d4f638194a08683cf6b56fa4d5abecc6d64a",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/raw/context_results.json.gz": "e75a83faec364bb8211716dd84a52865344963e32cdef2241de1d546222e826a",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/raw/observability_summary.json.gz": "f425130d5708af91536b741d7140cefa95430e850633ba0493c0453c7b7a6904",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/raw/optimization_summaries.json.gz": "5cdb1d378782a4f1bc0a9c97f9f557f278f729503b5d461438c1105ea4f0caf6",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/raw/phase_wall_times.json.gz": "7e1e1e41d2be176489654cd37c3e38cad19c4ca8c182e6bb5c47d50eee6f9ec9",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/raw/query_results.json.gz": "000b8f9b56cd3f4c80fbe35802f29e64919b482bad17c3e01b28b74e19e6fd2c",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/raw/reference_results.json.gz": "29f7d4798542e1b26920948944733827d11f8b383f92b7e768535d15ab5efc8b",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/raw/region_results.json.gz": "b085ab0b6da02caebec6c8780cb25a3d2df22ee9aa56519532c759e6ea327335",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-CONTEXT-OBSERVABILITY-SUPERVISION-V1/scene_manifest.json": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf"
+    },
+    "media_or_state_checkpoint_loaded": false,
+    "raw_only": true,
+    "source_sha256": {
+      "/home/zonghan/measurement-scene-state/scripts/analyze_observability_supervision.py": "b974c2cba6112ccd6c654047c8124f92b020232f816799f9ec67a01760a6c39a",
+      "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/observability_supervision_statistics.py": "5e41b741a3709ac561755167481caff8def8918d02a6a963ffb9f440955f2742"
+    }
+  },
+  "max_abs_numeric_error": 0.0,
+  "media_or_state_checkpoint_loaded": false,
+  "published_reference": true,
+  "raw_only": true,
+  "status": "PASS",
+  "structural_or_nonnumeric_mismatches": 0
+}

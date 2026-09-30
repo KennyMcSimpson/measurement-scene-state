@@ -1,0 +1,30 @@
+{
+  "DYNAMIC_TTT_RUN": false,
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "NEW_CARRIER_TRAINED": false,
+  "artifact_count": 4741,
+  "baseline_metrics_exact": true,
+  "baseline_state_reconstruction_exact": true,
+  "checkpoint_states_indexed": 425,
+  "checkpoint_weights_copied_to_docs": false,
+  "evidence_sha256": {
+    "artifact_manifest.json": "438d2acf90ca444492e418a61f2d11220374b79e79e700fc90233325feb1ab88",
+    "audit/postrun_validation.json": "a46329f7fb637e466ae4297d80f62dc93d609bc256badd3032d13d5a389ab444",
+    "audit/preservation_recheck.json": "33293fbddc03c6fc886a82a950950615ea1180562311466790fac0a622b85279",
+    "baseline_carrier_reconstruction.json": "ba873703ed2639caf474d7a2eb9afb383f9efdd33085c8dd4032fc54128c7e7d",
+    "baseline_integrity.json": "3ad2e1bb0d5db85844ceedf6d019964499c8ab0a5848f0e7d7710c2e5a6c1577",
+    "checkpoints/index.json": "1573e75b7d8b59355addb3dab2f332b4557f990ff7ce42cc5a551f6638f274a2",
+    "source_manifest.json": "dd28ec884282e2f016febe31d6cb7c2893d9c0356526b865d6cd11903c52d6cc",
+    "source_snapshot.tar.gz": "29feff5072fea6f0b356e529e5daba6b22ee73ca0d11255eb0899578f040013a",
+    "statistics_reproduction.json": "0b35af49751fc8296b960e4d70b07d892b52924b556936db42ad5a533971b869",
+    "tests.json": "9ea66fd1f23c3a04961478e52c3808ee832511a0404dc1eba2c87c88bfc35df4"
+  },
+  "experiment": "EXP-3D-DIRECT-STATE-CAPACITY-V1",
+  "full_local_output": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-DIRECT-STATE-CAPACITY-V1",
+  "holdout_hash_assurance": "Inherited earlier verified digest plus unchanged file size/mtime; not claimed as a fresh byte-level rehash this round.",
+  "old_artifact_preservation_status": "PASS",
+  "protected_media_bytes_reopened": false,
+  "report_directory": "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1",
+  "source_files_archived": 131,
+  "status": "PASS"
+}

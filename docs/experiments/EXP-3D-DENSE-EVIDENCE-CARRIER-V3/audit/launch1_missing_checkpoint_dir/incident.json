@@ -1,0 +1,9 @@
+{
+  "event": "LAUNCH1_FAILED_BEFORE_ANY_TRAINING_STEP",
+  "unix_time": 1790616443.7530777,
+  "cause": "outputs/EXP-3D-DENSE-EVIDENCE-CARRIER-V3/checkpoints did not exist; train script mkdir(exist_ok=False) without parents failed before any data read or training step",
+  "training_steps": 0,
+  "data_read": false,
+  "locked_inputs_or_sources_changed": false,
+  "fix": "created empty checkpoints/, raw/, figures/ directories; relaunched the identical frozen runner"
+}

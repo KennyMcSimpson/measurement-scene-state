@@ -1,0 +1,1005 @@
+{
+  "diagnostic_only": true,
+  "does_not_change_qualification": true,
+  "gains": {
+    "OBS0": {
+      "absolute_top1_contribution": 0.12500183793797892,
+      "absolute_top3_contribution": 0.3750055138139367,
+      "bootstrap": {
+        "defined_draws": 10000,
+        "draws": 10000,
+        "seed": 20260928,
+        "undefined_empty_draws": 0,
+        "unit": "all scenes with coverage denominator recomputed each draw"
+      },
+      "ci95": [
+        0.0002252070440186757,
+        0.00022521201107240235
+      ],
+      "empty_mask_scene_count": 0,
+      "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+      "improved_tied_worse": [
+        8,
+        0,
+        0
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": 0.0002252100005982749,
+        "ENGINEERING_ONLY_DEV_01": 0.00022520905449280315,
+        "ENGINEERING_ONLY_DEV_02": 0.0002252100005982749,
+        "ENGINEERING_ONLY_DEV_03": 0.00022520905449280315,
+        "ENGINEERING_ONLY_DEV_04": 0.0002252100005982749,
+        "ENGINEERING_ONLY_DEV_05": 0.00022520905449280315,
+        "ENGINEERING_ONLY_DEV_06": 0.0002252100005982749,
+        "ENGINEERING_ONLY_DEV_07": 0.00022520905449280315
+      },
+      "mean": 0.00022520952754553902,
+      "median": 0.00022520952754553902,
+      "n_covered_scenes": 8,
+      "n_scenes": 8,
+      "negative": 0,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": 0.00022520621617638792,
+        "ENGINEERING_ONLY_DEV_01": 0.00022521283891469013,
+        "ENGINEERING_ONLY_DEV_02": 0.00022520621617638792,
+        "ENGINEERING_ONLY_DEV_03": 0.00022521283891469013,
+        "ENGINEERING_ONLY_DEV_04": 0.00022520621617638792,
+        "ENGINEERING_ONLY_DEV_05": 0.00022521283891469013,
+        "ENGINEERING_ONLY_DEV_06": 0.00022520621617638792,
+        "ENGINEERING_ONLY_DEV_07": 0.00022521283891469013
+      },
+      "positive": 8,
+      "positive_top1_contribution": 0.12500183793797892,
+      "positive_top3_contribution": 0.3750055138139367,
+      "scene_coverage": 1.0,
+      "tied": 0
+    },
+    "OBS1": {
+      "absolute_top1_contribution": null,
+      "absolute_top3_contribution": null,
+      "bootstrap": {
+        "defined_draws": 0,
+        "draws": 10000,
+        "seed": 20260928,
+        "undefined_empty_draws": 10000,
+        "unit": "all scenes with coverage denominator recomputed each draw"
+      },
+      "ci95": null,
+      "empty_mask_scene_count": 8,
+      "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+      "improved_tied_worse": [
+        0,
+        0,
+        0
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": null,
+        "ENGINEERING_ONLY_DEV_01": null,
+        "ENGINEERING_ONLY_DEV_02": null,
+        "ENGINEERING_ONLY_DEV_03": null,
+        "ENGINEERING_ONLY_DEV_04": null,
+        "ENGINEERING_ONLY_DEV_05": null,
+        "ENGINEERING_ONLY_DEV_06": null,
+        "ENGINEERING_ONLY_DEV_07": null
+      },
+      "mean": null,
+      "median": null,
+      "n_covered_scenes": 0,
+      "n_scenes": 8,
+      "negative": 0,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": null,
+        "ENGINEERING_ONLY_DEV_01": null,
+        "ENGINEERING_ONLY_DEV_02": null,
+        "ENGINEERING_ONLY_DEV_03": null,
+        "ENGINEERING_ONLY_DEV_04": null,
+        "ENGINEERING_ONLY_DEV_05": null,
+        "ENGINEERING_ONLY_DEV_06": null,
+        "ENGINEERING_ONLY_DEV_07": null
+      },
+      "positive": 0,
+      "positive_top1_contribution": null,
+      "positive_top3_contribution": null,
+      "scene_coverage": 0.0,
+      "tied": 0
+    },
+    "OBS2PLUS": {
+      "absolute_top1_contribution": 0.12500044173457867,
+      "absolute_top3_contribution": 0.37500132520373597,
+      "bootstrap": {
+        "defined_draws": 10000,
+        "draws": 10000,
+        "seed": 20260928,
+        "undefined_empty_draws": 0,
+        "unit": "all scenes with coverage denominator recomputed each draw"
+      },
+      "ci95": [
+        0.00021722137250686224,
+        0.00021722252396021158
+      ],
+      "empty_mask_scene_count": 0,
+      "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+      "improved_tied_worse": [
+        8,
+        0,
+        0
+      ],
+      "loso": {
+        "ENGINEERING_ONLY_DEV_00": 0.00021722183857131316,
+        "ENGINEERING_ONLY_DEV_01": 0.00021722205789576066,
+        "ENGINEERING_ONLY_DEV_02": 0.00021722183857131316,
+        "ENGINEERING_ONLY_DEV_03": 0.00021722205789576066,
+        "ENGINEERING_ONLY_DEV_04": 0.00021722183857131316,
+        "ENGINEERING_ONLY_DEV_05": 0.00021722205789576066,
+        "ENGINEERING_ONLY_DEV_06": 0.00021722183857131316,
+        "ENGINEERING_ONLY_DEV_07": 0.00021722205789576066
+      },
+      "mean": 0.0002172219482335369,
+      "median": 0.0002172219482335369,
+      "n_covered_scenes": 8,
+      "n_scenes": 8,
+      "negative": 0,
+      "per_scene": {
+        "ENGINEERING_ONLY_DEV_00": 0.00021722271586910313,
+        "ENGINEERING_ONLY_DEV_01": 0.0002172211805979707,
+        "ENGINEERING_ONLY_DEV_02": 0.00021722271586910313,
+        "ENGINEERING_ONLY_DEV_03": 0.0002172211805979707,
+        "ENGINEERING_ONLY_DEV_04": 0.00021722271586910313,
+        "ENGINEERING_ONLY_DEV_05": 0.0002172211805979707,
+        "ENGINEERING_ONLY_DEV_06": 0.00021722271586910313,
+        "ENGINEERING_ONLY_DEV_07": 0.0002172211805979707
+      },
+      "positive": 8,
+      "positive_top1_contribution": 0.12500044173457867,
+      "positive_top3_contribution": 0.37500132520373597,
+      "scene_coverage": 1.0,
+      "tied": 0
+    }
+  },
+  "groups": {
+    "C0": {
+      "OBS0": {
+        "additive_error_contribution": {
+          "absolute_top1_contribution": 0.12500000032693898,
+          "absolute_top3_contribution": 0.3750000009808169,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.05934610159602016,
+            0.059346101828850806
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.05934610173460984,
+            "ENGINEERING_ONLY_DEV_01": 0.05934610169026113,
+            "ENGINEERING_ONLY_DEV_02": 0.05934610173460984,
+            "ENGINEERING_ONLY_DEV_03": 0.05934610169026113,
+            "ENGINEERING_ONLY_DEV_04": 0.05934610173460984,
+            "ENGINEERING_ONLY_DEV_05": 0.05934610169026113,
+            "ENGINEERING_ONLY_DEV_06": 0.05934610173460984,
+            "ENGINEERING_ONLY_DEV_07": 0.05934610169026113
+          },
+          "loso_range": [
+            0.05934610169026113,
+            0.05934610173460984
+          ],
+          "mean": 0.059346101712435484,
+          "median": 0.059346101712435484,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.05934610155721505,
+            "ENGINEERING_ONLY_DEV_01": 0.05934610186765592,
+            "ENGINEERING_ONLY_DEV_02": 0.05934610155721505,
+            "ENGINEERING_ONLY_DEV_03": 0.05934610186765592,
+            "ENGINEERING_ONLY_DEV_04": 0.05934610155721505,
+            "ENGINEERING_ONLY_DEV_05": 0.05934610186765592,
+            "ENGINEERING_ONLY_DEV_06": 0.05934610155721505,
+            "ENGINEERING_ONLY_DEV_07": 0.05934610186765592
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000032693898,
+          "positive_top3_contribution": 0.3750000009808169,
+          "tied": 0
+        },
+        "conditional_absrel": {
+          "absolute_top1_contribution": 0.125000000326939,
+          "absolute_top3_contribution": 0.375000000980817,
+          "bootstrap": {
+            "defined_draws": 10000,
+            "draws": 10000,
+            "seed": 20260928,
+            "undefined_empty_draws": 0,
+            "unit": "all scenes with coverage denominator recomputed each draw"
+          },
+          "ci95": [
+            0.4220167224605878,
+            0.42201672411627245
+          ],
+          "empty_mask_scene_count": 0,
+          "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42201672344611435,
+            "ENGINEERING_ONLY_DEV_01": 0.42201672313074584,
+            "ENGINEERING_ONLY_DEV_02": 0.42201672344611435,
+            "ENGINEERING_ONLY_DEV_03": 0.42201672313074584,
+            "ENGINEERING_ONLY_DEV_04": 0.42201672344611435,
+            "ENGINEERING_ONLY_DEV_05": 0.42201672313074584,
+            "ENGINEERING_ONLY_DEV_06": 0.42201672344611435,
+            "ENGINEERING_ONLY_DEV_07": 0.42201672313074584
+          },
+          "mean": 0.4220167232884301,
+          "median": 0.4220167232884301,
+          "n_covered_scenes": 8,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42201672218464037,
+            "ENGINEERING_ONLY_DEV_01": 0.4220167243922199,
+            "ENGINEERING_ONLY_DEV_02": 0.42201672218464037,
+            "ENGINEERING_ONLY_DEV_03": 0.4220167243922199,
+            "ENGINEERING_ONLY_DEV_04": 0.42201672218464037,
+            "ENGINEERING_ONLY_DEV_05": 0.4220167243922199,
+            "ENGINEERING_ONLY_DEV_06": 0.42201672218464037,
+            "ENGINEERING_ONLY_DEV_07": 0.4220167243922199
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125000000326939,
+          "positive_top3_contribution": 0.375000000980817,
+          "scene_coverage": 1.0,
+          "tied": 0
+        },
+        "pixel_fraction": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.140625,
+            0.140625
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.140625,
+            "ENGINEERING_ONLY_DEV_01": 0.140625,
+            "ENGINEERING_ONLY_DEV_02": 0.140625,
+            "ENGINEERING_ONLY_DEV_03": 0.140625,
+            "ENGINEERING_ONLY_DEV_04": 0.140625,
+            "ENGINEERING_ONLY_DEV_05": 0.140625,
+            "ENGINEERING_ONLY_DEV_06": 0.140625,
+            "ENGINEERING_ONLY_DEV_07": 0.140625
+          },
+          "loso_range": [
+            0.140625,
+            0.140625
+          ],
+          "mean": 0.140625,
+          "median": 0.140625,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.140625,
+            "ENGINEERING_ONLY_DEV_01": 0.140625,
+            "ENGINEERING_ONLY_DEV_02": 0.140625,
+            "ENGINEERING_ONLY_DEV_03": 0.140625,
+            "ENGINEERING_ONLY_DEV_04": 0.140625,
+            "ENGINEERING_ONLY_DEV_05": 0.140625,
+            "ENGINEERING_ONLY_DEV_06": 0.140625,
+            "ENGINEERING_ONLY_DEV_07": 0.140625
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        }
+      },
+      "OBS1": {
+        "additive_error_contribution": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "conditional_absrel": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "defined_draws": 0,
+            "draws": 10000,
+            "seed": 20260928,
+            "undefined_empty_draws": 10000,
+            "unit": "all scenes with coverage denominator recomputed each draw"
+          },
+          "ci95": null,
+          "empty_mask_scene_count": 8,
+          "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": null,
+            "ENGINEERING_ONLY_DEV_01": null,
+            "ENGINEERING_ONLY_DEV_02": null,
+            "ENGINEERING_ONLY_DEV_03": null,
+            "ENGINEERING_ONLY_DEV_04": null,
+            "ENGINEERING_ONLY_DEV_05": null,
+            "ENGINEERING_ONLY_DEV_06": null,
+            "ENGINEERING_ONLY_DEV_07": null
+          },
+          "mean": null,
+          "median": null,
+          "n_covered_scenes": 0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": null,
+            "ENGINEERING_ONLY_DEV_01": null,
+            "ENGINEERING_ONLY_DEV_02": null,
+            "ENGINEERING_ONLY_DEV_03": null,
+            "ENGINEERING_ONLY_DEV_04": null,
+            "ENGINEERING_ONLY_DEV_05": null,
+            "ENGINEERING_ONLY_DEV_06": null,
+            "ENGINEERING_ONLY_DEV_07": null
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "scene_coverage": 0.0,
+          "tied": 0
+        },
+        "pixel_fraction": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        }
+      },
+      "OBS2PLUS": {
+        "additive_error_contribution": {
+          "absolute_top1_contribution": 0.12500000007953635,
+          "absolute_top3_contribution": 0.375000000238609,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.36591864817698183,
+            0.3659186485262278
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.36591864831834325,
+            "ENGINEERING_ONLY_DEV_01": 0.3659186483848663,
+            "ENGINEERING_ONLY_DEV_02": 0.36591864831834325,
+            "ENGINEERING_ONLY_DEV_03": 0.3659186483848663,
+            "ENGINEERING_ONLY_DEV_04": 0.36591864831834325,
+            "ENGINEERING_ONLY_DEV_05": 0.3659186483848663,
+            "ENGINEERING_ONLY_DEV_06": 0.36591864831834325,
+            "ENGINEERING_ONLY_DEV_07": 0.3659186483848663
+          },
+          "loso_range": [
+            0.36591864831834325,
+            0.3659186483848663
+          ],
+          "mean": 0.3659186483516048,
+          "median": 0.3659186483516048,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.36591864858443546,
+            "ENGINEERING_ONLY_DEV_01": 0.3659186481187741,
+            "ENGINEERING_ONLY_DEV_02": 0.36591864858443546,
+            "ENGINEERING_ONLY_DEV_03": 0.3659186481187741,
+            "ENGINEERING_ONLY_DEV_04": 0.36591864858443546,
+            "ENGINEERING_ONLY_DEV_05": 0.3659186481187741,
+            "ENGINEERING_ONLY_DEV_06": 0.36591864858443546,
+            "ENGINEERING_ONLY_DEV_07": 0.3659186481187741
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000007953635,
+          "positive_top3_contribution": 0.375000000238609,
+          "tied": 0
+        },
+        "conditional_absrel": {
+          "absolute_top1_contribution": 0.12500000007953635,
+          "absolute_top3_contribution": 0.375000000238609,
+          "bootstrap": {
+            "defined_draws": 10000,
+            "draws": 10000,
+            "seed": 20260928,
+            "undefined_empty_draws": 0,
+            "unit": "all scenes with coverage denominator recomputed each draw"
+          },
+          "ci95": [
+            0.42579624515139697,
+            0.42579624555779233
+          ],
+          "empty_mask_scene_count": 0,
+          "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42579624531589033,
+            "ENGINEERING_ONLY_DEV_01": 0.42579624539329897,
+            "ENGINEERING_ONLY_DEV_02": 0.42579624531589033,
+            "ENGINEERING_ONLY_DEV_03": 0.42579624539329897,
+            "ENGINEERING_ONLY_DEV_04": 0.42579624531589033,
+            "ENGINEERING_ONLY_DEV_05": 0.42579624539329897,
+            "ENGINEERING_ONLY_DEV_06": 0.42579624531589033,
+            "ENGINEERING_ONLY_DEV_07": 0.42579624539329897
+          },
+          "mean": 0.42579624535459465,
+          "median": 0.42579624535459465,
+          "n_covered_scenes": 8,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42579624562552487,
+            "ENGINEERING_ONLY_DEV_01": 0.4257962450836644,
+            "ENGINEERING_ONLY_DEV_02": 0.42579624562552487,
+            "ENGINEERING_ONLY_DEV_03": 0.4257962450836644,
+            "ENGINEERING_ONLY_DEV_04": 0.42579624562552487,
+            "ENGINEERING_ONLY_DEV_05": 0.4257962450836644,
+            "ENGINEERING_ONLY_DEV_06": 0.42579624562552487,
+            "ENGINEERING_ONLY_DEV_07": 0.4257962450836644
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000007953635,
+          "positive_top3_contribution": 0.375000000238609,
+          "scene_coverage": 1.0,
+          "tied": 0
+        },
+        "pixel_fraction": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.859375,
+            0.859375
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.859375,
+            "ENGINEERING_ONLY_DEV_01": 0.859375,
+            "ENGINEERING_ONLY_DEV_02": 0.859375,
+            "ENGINEERING_ONLY_DEV_03": 0.859375,
+            "ENGINEERING_ONLY_DEV_04": 0.859375,
+            "ENGINEERING_ONLY_DEV_05": 0.859375,
+            "ENGINEERING_ONLY_DEV_06": 0.859375,
+            "ENGINEERING_ONLY_DEV_07": 0.859375
+          },
+          "loso_range": [
+            0.859375,
+            0.859375
+          ],
+          "mean": 0.859375,
+          "median": 0.859375,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.859375,
+            "ENGINEERING_ONLY_DEV_01": 0.859375,
+            "ENGINEERING_ONLY_DEV_02": 0.859375,
+            "ENGINEERING_ONLY_DEV_03": 0.859375,
+            "ENGINEERING_ONLY_DEV_04": 0.859375,
+            "ENGINEERING_ONLY_DEV_05": 0.859375,
+            "ENGINEERING_ONLY_DEV_06": 0.859375,
+            "ENGINEERING_ONLY_DEV_07": 0.859375
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        }
+      }
+    },
+    "C1": {
+      "OBS0": {
+        "additive_error_contribution": {
+          "absolute_top1_contribution": 0.12500000065422706,
+          "absolute_top3_contribution": 0.37500000196268124,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.059314431389793754,
+            0.05931443185545504
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.059314431578275706,
+            "ENGINEERING_ONLY_DEV_01": 0.05931443166697309,
+            "ENGINEERING_ONLY_DEV_02": 0.059314431578275706,
+            "ENGINEERING_ONLY_DEV_03": 0.05931443166697309,
+            "ENGINEERING_ONLY_DEV_04": 0.059314431578275706,
+            "ENGINEERING_ONLY_DEV_05": 0.05931443166697309,
+            "ENGINEERING_ONLY_DEV_06": 0.059314431578275706,
+            "ENGINEERING_ONLY_DEV_07": 0.05931443166697309
+          },
+          "loso_range": [
+            0.059314431578275706,
+            0.05931443166697309
+          ],
+          "mean": 0.0593144316226244,
+          "median": 0.0593144316226244,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.05931443193306525,
+            "ENGINEERING_ONLY_DEV_01": 0.059314431312183544,
+            "ENGINEERING_ONLY_DEV_02": 0.05931443193306525,
+            "ENGINEERING_ONLY_DEV_03": 0.059314431312183544,
+            "ENGINEERING_ONLY_DEV_04": 0.05931443193306525,
+            "ENGINEERING_ONLY_DEV_05": 0.059314431312183544,
+            "ENGINEERING_ONLY_DEV_06": 0.05931443193306525,
+            "ENGINEERING_ONLY_DEV_07": 0.059314431312183544
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000065422706,
+          "positive_top3_contribution": 0.37500000196268124,
+          "tied": 0
+        },
+        "conditional_absrel": {
+          "absolute_top1_contribution": 0.12500000065422706,
+          "absolute_top3_contribution": 0.3750000019626812,
+          "bootstrap": {
+            "defined_draws": 10000,
+            "draws": 10000,
+            "seed": 20260928,
+            "undefined_empty_draws": 0,
+            "unit": "all scenes with coverage denominator recomputed each draw"
+          },
+          "ci95": [
+            0.42179151210520005,
+            0.4217915154165691
+          ],
+          "empty_mask_scene_count": 0,
+          "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.42179151344551613,
+            "ENGINEERING_ONLY_DEV_01": 0.42179151407625304,
+            "ENGINEERING_ONLY_DEV_02": 0.42179151344551613,
+            "ENGINEERING_ONLY_DEV_03": 0.42179151407625304,
+            "ENGINEERING_ONLY_DEV_04": 0.42179151344551613,
+            "ENGINEERING_ONLY_DEV_05": 0.42179151407625304,
+            "ENGINEERING_ONLY_DEV_06": 0.42179151344551613,
+            "ENGINEERING_ONLY_DEV_07": 0.42179151407625304
+          },
+          "mean": 0.4217915137608846,
+          "median": 0.4217915137608846,
+          "n_covered_scenes": 8,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.421791515968464,
+            "ENGINEERING_ONLY_DEV_01": 0.4217915115533052,
+            "ENGINEERING_ONLY_DEV_02": 0.421791515968464,
+            "ENGINEERING_ONLY_DEV_03": 0.4217915115533052,
+            "ENGINEERING_ONLY_DEV_04": 0.421791515968464,
+            "ENGINEERING_ONLY_DEV_05": 0.4217915115533052,
+            "ENGINEERING_ONLY_DEV_06": 0.421791515968464,
+            "ENGINEERING_ONLY_DEV_07": 0.4217915115533052
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000065422706,
+          "positive_top3_contribution": 0.3750000019626812,
+          "scene_coverage": 1.0,
+          "tied": 0
+        },
+        "pixel_fraction": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.140625,
+            0.140625
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.140625,
+            "ENGINEERING_ONLY_DEV_01": 0.140625,
+            "ENGINEERING_ONLY_DEV_02": 0.140625,
+            "ENGINEERING_ONLY_DEV_03": 0.140625,
+            "ENGINEERING_ONLY_DEV_04": 0.140625,
+            "ENGINEERING_ONLY_DEV_05": 0.140625,
+            "ENGINEERING_ONLY_DEV_06": 0.140625,
+            "ENGINEERING_ONLY_DEV_07": 0.140625
+          },
+          "loso_range": [
+            0.140625,
+            0.140625
+          ],
+          "mean": 0.140625,
+          "median": 0.140625,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.140625,
+            "ENGINEERING_ONLY_DEV_01": 0.140625,
+            "ENGINEERING_ONLY_DEV_02": 0.140625,
+            "ENGINEERING_ONLY_DEV_03": 0.140625,
+            "ENGINEERING_ONLY_DEV_04": 0.140625,
+            "ENGINEERING_ONLY_DEV_05": 0.140625,
+            "ENGINEERING_ONLY_DEV_06": 0.140625,
+            "ENGINEERING_ONLY_DEV_07": 0.140625
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        }
+      },
+      "OBS1": {
+        "additive_error_contribution": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        },
+        "conditional_absrel": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "defined_draws": 0,
+            "draws": 10000,
+            "seed": 20260928,
+            "undefined_empty_draws": 10000,
+            "unit": "all scenes with coverage denominator recomputed each draw"
+          },
+          "ci95": null,
+          "empty_mask_scene_count": 8,
+          "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": null,
+            "ENGINEERING_ONLY_DEV_01": null,
+            "ENGINEERING_ONLY_DEV_02": null,
+            "ENGINEERING_ONLY_DEV_03": null,
+            "ENGINEERING_ONLY_DEV_04": null,
+            "ENGINEERING_ONLY_DEV_05": null,
+            "ENGINEERING_ONLY_DEV_06": null,
+            "ENGINEERING_ONLY_DEV_07": null
+          },
+          "mean": null,
+          "median": null,
+          "n_covered_scenes": 0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": null,
+            "ENGINEERING_ONLY_DEV_01": null,
+            "ENGINEERING_ONLY_DEV_02": null,
+            "ENGINEERING_ONLY_DEV_03": null,
+            "ENGINEERING_ONLY_DEV_04": null,
+            "ENGINEERING_ONLY_DEV_05": null,
+            "ENGINEERING_ONLY_DEV_06": null,
+            "ENGINEERING_ONLY_DEV_07": null
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "scene_coverage": 0.0,
+          "tied": 0
+        },
+        "pixel_fraction": {
+          "absolute_top1_contribution": null,
+          "absolute_top3_contribution": null,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "loso_range": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "median": 0.0,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.0,
+            "ENGINEERING_ONLY_DEV_01": 0.0,
+            "ENGINEERING_ONLY_DEV_02": 0.0,
+            "ENGINEERING_ONLY_DEV_03": 0.0,
+            "ENGINEERING_ONLY_DEV_04": 0.0,
+            "ENGINEERING_ONLY_DEV_05": 0.0,
+            "ENGINEERING_ONLY_DEV_06": 0.0,
+            "ENGINEERING_ONLY_DEV_07": 0.0
+          },
+          "positive": 0,
+          "positive_top1_contribution": null,
+          "positive_top3_contribution": null,
+          "tied": 8
+        }
+      },
+      "OBS2PLUS": {
+        "additive_error_contribution": {
+          "absolute_top1_contribution": 0.12500000014589105,
+          "absolute_top3_contribution": 0.3750000004376731,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.36573197291969944,
+            0.3657319735599837
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.3657319733008211,
+            "ENGINEERING_ONLY_DEV_01": 0.36573197317886214,
+            "ENGINEERING_ONLY_DEV_02": 0.3657319733008211,
+            "ENGINEERING_ONLY_DEV_03": 0.36573197317886214,
+            "ENGINEERING_ONLY_DEV_04": 0.365731973300821,
+            "ENGINEERING_ONLY_DEV_05": 0.36573197317886214,
+            "ENGINEERING_ONLY_DEV_06": 0.365731973300821,
+            "ENGINEERING_ONLY_DEV_07": 0.36573197317886214
+          },
+          "loso_range": [
+            0.36573197317886214,
+            0.3657319733008211
+          ],
+          "mean": 0.3657319732398416,
+          "median": 0.3657319732398416,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.3657319728129854,
+            "ENGINEERING_ONLY_DEV_01": 0.36573197366669774,
+            "ENGINEERING_ONLY_DEV_02": 0.3657319728129854,
+            "ENGINEERING_ONLY_DEV_03": 0.36573197366669774,
+            "ENGINEERING_ONLY_DEV_04": 0.3657319728129854,
+            "ENGINEERING_ONLY_DEV_05": 0.36573197366669774,
+            "ENGINEERING_ONLY_DEV_06": 0.3657319728129854,
+            "ENGINEERING_ONLY_DEV_07": 0.36573197366669774
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000014589105,
+          "positive_top3_contribution": 0.3750000004376731,
+          "tied": 0
+        },
+        "conditional_absrel": {
+          "absolute_top1_contribution": 0.12500000014589105,
+          "absolute_top3_contribution": 0.3750000004376731,
+          "bootstrap": {
+            "defined_draws": 10000,
+            "draws": 10000,
+            "seed": 20260928,
+            "undefined_empty_draws": 0,
+            "unit": "all scenes with coverage denominator recomputed each draw"
+          },
+          "ci95": [
+            0.4255790230338321,
+            0.4255790237788901
+          ],
+          "empty_mask_scene_count": 0,
+          "estimand": "equal mean of defined scene-conditional values; all scene keys retained",
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.425579023477319,
+            "ENGINEERING_ONLY_DEV_01": 0.4255790233354032,
+            "ENGINEERING_ONLY_DEV_02": 0.425579023477319,
+            "ENGINEERING_ONLY_DEV_03": 0.4255790233354032,
+            "ENGINEERING_ONLY_DEV_04": 0.425579023477319,
+            "ENGINEERING_ONLY_DEV_05": 0.4255790233354032,
+            "ENGINEERING_ONLY_DEV_06": 0.425579023477319,
+            "ENGINEERING_ONLY_DEV_07": 0.4255790233354032
+          },
+          "mean": 0.4255790234063611,
+          "median": 0.4255790234063611,
+          "n_covered_scenes": 8,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.42557902290965577,
+            "ENGINEERING_ONLY_DEV_01": 0.42557902390306646,
+            "ENGINEERING_ONLY_DEV_02": 0.42557902290965577,
+            "ENGINEERING_ONLY_DEV_03": 0.42557902390306646,
+            "ENGINEERING_ONLY_DEV_04": 0.42557902290965577,
+            "ENGINEERING_ONLY_DEV_05": 0.42557902390306646,
+            "ENGINEERING_ONLY_DEV_06": 0.42557902290965577,
+            "ENGINEERING_ONLY_DEV_07": 0.42557902390306646
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.12500000014589105,
+          "positive_top3_contribution": 0.3750000004376731,
+          "scene_coverage": 1.0,
+          "tied": 0
+        },
+        "pixel_fraction": {
+          "absolute_top1_contribution": 0.125,
+          "absolute_top3_contribution": 0.375,
+          "bootstrap": {
+            "CI": "percentile95",
+            "draws": 10000,
+            "seed": 20260928,
+            "unit": "scene"
+          },
+          "ci95": [
+            0.859375,
+            0.859375
+          ],
+          "loso": {
+            "ENGINEERING_ONLY_DEV_00": 0.859375,
+            "ENGINEERING_ONLY_DEV_01": 0.859375,
+            "ENGINEERING_ONLY_DEV_02": 0.859375,
+            "ENGINEERING_ONLY_DEV_03": 0.859375,
+            "ENGINEERING_ONLY_DEV_04": 0.859375,
+            "ENGINEERING_ONLY_DEV_05": 0.859375,
+            "ENGINEERING_ONLY_DEV_06": 0.859375,
+            "ENGINEERING_ONLY_DEV_07": 0.859375
+          },
+          "loso_range": [
+            0.859375,
+            0.859375
+          ],
+          "mean": 0.859375,
+          "median": 0.859375,
+          "n_scenes": 8,
+          "negative": 0,
+          "per_scene": {
+            "ENGINEERING_ONLY_DEV_00": 0.859375,
+            "ENGINEERING_ONLY_DEV_01": 0.859375,
+            "ENGINEERING_ONLY_DEV_02": 0.859375,
+            "ENGINEERING_ONLY_DEV_03": 0.859375,
+            "ENGINEERING_ONLY_DEV_04": 0.859375,
+            "ENGINEERING_ONLY_DEV_05": 0.859375,
+            "ENGINEERING_ONLY_DEV_06": 0.859375,
+            "ENGINEERING_ONLY_DEV_07": 0.859375
+          },
+          "positive": 8,
+          "positive_top1_contribution": 0.125,
+          "positive_top3_contribution": 0.375,
+          "tied": 0
+        }
+      }
+    }
+  }
+}

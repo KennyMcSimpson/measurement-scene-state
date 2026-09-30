@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "figures_reviewed": [
+    "01_steps_vs_context_absrel.png",
+    "02_steps_vs_query_absrel.png",
+    "03_steps_vs_generalization_gap.png",
+    "04_bounds_gain_across_budgets.png",
+    "05_context_vs_privileged_oracle.png",
+    "06_per_scene_1k_to_max_gain.png",
+    "07_compute_vs_query_quality.png"
+  ],
+  "checks": [
+    "All seven scientific figures visually inspected",
+    "Axes, legends and labels readable",
+    "Full 17-scene plot includes positive and negative gains",
+    "Bootstrap uncertainty and privileged oracle labels visible",
+    "Compute plot uses cumulative prefix costs, not sum across checkpoints"
+  ],
+  "scientific_values_changed": false
+}

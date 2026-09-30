@@ -1,0 +1,161 @@
+{
+  "checks": {
+    "baseline": "S0 preserves old autograd graph; fresh S0 phase precedes PASS baseline reproduction gate for every S1/S2/S3 job. Frozen mean .001 and per-row .01 AbsRel reproduction tolerances, no automatic relaxation; expected CUDA finite tolerance versus exact synthetic CPU comparison.",
+    "free_loss": "Per-ray mean alpha for t<d-tau only, then all valid rays average; empty free sets and misses contribute zero. No behind-surface empty label.",
+    "holdout": "Both runner and evaluator require exposed allowlist disjoint from holdout; evaluator verifies all136 states and source/completion hashes before media reads.",
+    "matched_rng": "Deterministic old DirectState initial values. Seed excludes variant and matches old scene|role|RGBD. Per-run local Generator, same randint cardinality and one draw per step; geometry/full objective uses no generator. Full int64 sampled stream SHA and init state hash must match across four variants before formal completion.",
+    "query_isolation": "Runner supplies only ContextOnlyLoader RGBD batch; optimizer rejects non-context supervision and has no query/lambda API. No query access, score selection, model/writer imports in optimizer.",
+    "renderer_geometry": "Exact midpoint fractions(i+.5)/64, cached hit near/far, softplus density*hit, common delta=(far-near)/64 including last sample, alpha=1-exp(-density*delta), cumulative transmittance with 1e-10; no changed ray depth semantics.",
+    "spacing": "tau=.5*L2(extent/16); renderer normals and old TV regularizer both use extent/grid-size rather than extent/(grid-size-1).",
+    "state_selection": "Fixed final10000 state for all variants; full context checkpoints are diagnostic, no query/context-selected checkpoint adaptation.",
+    "surface_empty": "EPS finite, eligible multiplication and clamped denominator yield zero additional loss/gradient for all-empty surface supervision, no log(0).",
+    "surface_gradient": "Band labels are fixed context depth; gradients through alpha/transmittance permit both near-surface mass increase and reducing preceding occluders. No claim gradients only touch band density: mass depends on preceding transmittance.",
+    "surface_loss": "-log(sum band weights+1e-8), average over valid-depth hit rays with nonempty band. Empty/miss excluded only extra term and counted. Exact old RGB/rendered-depth losses retained."
+  },
+  "frozen_source_modified_by_review": false,
+  "interpretation_limits": [
+    "Surface supervision is restricted to representable hit rays with sampled band; coverage counts must accompany conclusions, no deletion from overall query metric.",
+    "Surface loss gradients also affect pre-band density through transmittance; only labels/mass target are band-local.",
+    "Weights .1/.1 are fixed arbitrary attribution settings, not an optimized hyperparameter claim.",
+    "A PASS code audit is not proof that real-data gains exist or that finite optimization is globally sufficient."
+  ],
+  "observability_statistics_interface_review": "PASS: complete8variant x11regions matched; OBS partitions and angle partition of OBS2PLUS; overlapping occluded/conflict masks not treated as partition; null empty masks and strict-null Spearman propagation; overall AbsRel preserved.",
+  "real_query_diagnostic_read": false,
+  "scope": "Independent read-only scientific implementation review, before formal observability analysis; no real query/media access",
+  "source_sha256": {
+    "scripts/freeze_observability_supervision.py": "d7c87032df7604c5f2a26fb48a9204db805552d4b3f039c81771436bf8af36e8",
+    "scripts/run_observability_supervision.py": "a4cefc7b69839b1f9ad95e8a7586a82662b65e511c4d62f04e1c82f390e169c6",
+    "src/mcss/measurements.py": "2d4f4bec2b1fb52aa0faf12dea44e04db1d56bfabbc73ea3460d90b21e518783",
+    "src/mcss/mechanism_pilot/direct_capacity_optimization.py": "0a8a1dcff441c0552a780072deaf7e83360051603b35b2791ce948da4d4d84d2",
+    "src/mcss/mechanism_pilot/geometric_supervision_optimization.py": "4bc711983ef8bc5e4887716cb4eb2aec8d1ce1a38650656fd7c678bbeb17abe1",
+    "src/mcss/mechanism_pilot/observability_supervision_evaluation.py": "c6d7cd993131ff8c6c8db4f676dc6316666ed64ae9e3ab8cf8c815c8fd1d50f1"
+  },
+  "status": "PASS",
+  "synthetic_test_evidence": {
+    "command": "PYTHONPATH=src .venv/bin/pytest tests/test_geometric_supervision_optimization.py tests/test_context_observability.py tests/test_observability_supervision_evaluation.py tests/test_observability_supervision_statistics.py -q",
+    "real_query_read": false,
+    "result": "39 passed in 7.34s"
+  },
+  "user_regression_mapping": [
+    {
+      "protocol_item": 1,
+      "requirement": "observability labels only after state seal",
+      "tests": [
+        "tests/test_context_observability.py::test_seal_and_holdout_guards_precede_query_processing",
+        "tests/test_context_observability.py::test_formal_barrier_delegates_gate_before_any_checkpoint_load"
+      ]
+    },
+    {
+      "protocol_item": 2,
+      "requirement": "query GT never enters context optimizer",
+      "tests": [
+        "tests/test_direct_capacity_contracts.py::test_rgbd_reads_context_not_queries",
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 3,
+      "requirement": "query GT never enters supervision loss",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall",
+        "tests/test_direct_capacity_contracts.py::test_rgbd_reads_context_not_queries"
+      ]
+    },
+    {
+      "protocol_item": 4,
+      "requirement": "visibility diagnostic cannot alter model/state",
+      "tests": [
+        "tests/test_context_observability.py::test_all_views_visible_full_arrays_and_state_immutable"
+      ]
+    },
+    {
+      "protocol_item": 5,
+      "requirement": "free-space loss only before surface band",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_free_gradient_only_before_band_and_valid_ray_denominator"
+      ]
+    },
+    {
+      "protocol_item": 6,
+      "requirement": "post-surface samples no free-space label",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_free_gradient_only_before_band_and_valid_ray_denominator"
+      ]
+    },
+    {
+      "protocol_item": 7,
+      "requirement": "surface loss uses context GT depth only",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall",
+        "tests/test_geometric_supervision_optimization.py::test_surface_empty_band_and_miss_excluded_and_invalid_depth_safe"
+      ]
+    },
+    {
+      "protocol_item": 8,
+      "requirement": "surface band deterministic voxel spacing",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_exact_ray_geometry_and_spacing"
+      ]
+    },
+    {
+      "protocol_item": 9,
+      "requirement": "supervision weights frozen before formal query",
+      "static_and_runtime_evidence": "Weights .1/.1 and eps1e-8 are source constants in the frozen source manifest; freeze writes supervision_contract and prereg hash; CLI validate checks both before each run. Test additionally rejects lambda/query_score arguments. This is not a test claiming chronological execution happened.",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 10,
+      "requirement": "matched initialization S0-S3",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 11,
+      "requirement": "same ray minibatch stream all variants",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 12,
+      "requirement": "query metric cannot select lambda",
+      "tests": [
+        "tests/test_geometric_supervision_optimization.py::test_matched_streams_initialization_and_context_firewall"
+      ]
+    },
+    {
+      "protocol_item": 13,
+      "requirement": "wrong-scene preserves recipient query camera",
+      "tests": [
+        "tests/test_observability_supervision_evaluation.py::test_full_phase_controls_seal_before_media_and_baseline_replay"
+      ]
+    },
+    {
+      "protocol_item": 14,
+      "requirement": "final holdout loader disabled",
+      "tests": [
+        "tests/test_context_observability.py::test_seal_and_holdout_guards_precede_query_processing",
+        "tests/test_observability_supervision_evaluation.py::test_incomplete_and_holdout_rejected_before_media"
+      ]
+    },
+    {
+      "protocol_item": 15,
+      "requirement": "scene bootstrap resamples scenes",
+      "tests": [
+        "tests/test_observability_supervision_statistics.py::test_empty_scenes_retained_and_bootstrap_recomputes_coverage_denominator",
+        "tests/test_direct_capacity_statistics.py::test_paired_scene_resampling_preserves_covariance"
+      ]
+    },
+    {
+      "protocol_item": 16,
+      "requirement": "raw to statistics deterministic",
+      "tests": [
+        "tests/test_observability_supervision_statistics.py::test_contribution_partition_all_scenes_and_raw_roundtrip",
+        "tests/test_observability_supervision_statistics.py::test_cli_references_marker_and_compressed_archives_exact"
+      ]
+    }
+  ]
+}

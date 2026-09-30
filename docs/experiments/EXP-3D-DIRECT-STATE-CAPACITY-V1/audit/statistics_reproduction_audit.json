@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "raw_only": true,
+  "recompute_output": "/tmp/direct-capacity-statistics-recompute",
+  "artifacts": {
+    "direct_state_results": {
+      "byte_exact": true,
+      "sha256": "856c81a1b5b8f26fc65dff4a5f3969eec8865b3ea5a932a37d0e5c1ed9c225d5"
+    },
+    "capacity_analysis": {
+      "byte_exact": true,
+      "sha256": "3918702b285d47f0d02f9ed23d4bde47fb8c649faee30a2cea1a1dfc24d5102d"
+    },
+    "resolution_analysis": {
+      "byte_exact": true,
+      "sha256": "9baf3193da7de7a991720e42b8652b3e1f2f037b33d8fe323cee962620cc3fc8"
+    },
+    "renderer_capacity_analysis": {
+      "byte_exact": true,
+      "sha256": "fc4e04e86e5f5838457fab9167e52d3b001e187c343a49b5f521fb66ec3f0022"
+    },
+    "bootstrap_results": {
+      "byte_exact": true,
+      "sha256": "6e1eda0578b0fa951278bfe113e844f2ae89463ca7cab64f5a8fabc5dbe01484"
+    },
+    "optimization_curves": {
+      "byte_exact": true,
+      "sha256": "98bdd0531a67656058043c8150885f078728105b677d1f6394083b7a7e06658b"
+    },
+    "bounds_analysis": {
+      "byte_exact": true,
+      "sha256": "d174d6b8544bca4c472ea5f9868d2bc0676538a7be369baaca3c5716fbe662fc"
+    }
+  },
+  "all7JSON_byte_exact": true,
+  "scene_bootstrap": {
+    "draws": 10000,
+    "seed": 20260927,
+    "unit": "scene"
+  },
+  "actual_published_docs_only_reproduction": {
+    "status": "PASS",
+    "output": "/tmp/direct-capacity-docs-only-analysis",
+    "raw_gzip_and_aggregate_summaries_used": true,
+    "checkpoint_or_media_loaded": false,
+    "artifacts": {
+      "direct_state_results": {
+        "byte_exact": true,
+        "sha256": "856c81a1b5b8f26fc65dff4a5f3969eec8865b3ea5a932a37d0e5c1ed9c225d5"
+      },
+      "capacity_analysis": {
+        "byte_exact": true,
+        "sha256": "3918702b285d47f0d02f9ed23d4bde47fb8c649faee30a2cea1a1dfc24d5102d"
+      },
+      "resolution_analysis": {
+        "byte_exact": true,
+        "sha256": "9baf3193da7de7a991720e42b8652b3e1f2f037b33d8fe323cee962620cc3fc8"
+      },
+      "renderer_capacity_analysis": {
+        "byte_exact": true,
+        "sha256": "fc4e04e86e5f5838457fab9167e52d3b001e187c343a49b5f521fb66ec3f0022"
+      },
+      "bootstrap_results": {
+        "byte_exact": true,
+        "sha256": "6e1eda0578b0fa951278bfe113e844f2ae89463ca7cab64f5a8fabc5dbe01484"
+      },
+      "optimization_curves": {
+        "byte_exact": true,
+        "sha256": "98bdd0531a67656058043c8150885f078728105b677d1f6394083b7a7e06658b"
+      },
+      "bounds_analysis": {
+        "byte_exact": true,
+        "sha256": "d174d6b8544bca4c472ea5f9868d2bc0676538a7be369baaca3c5716fbe662fc"
+      }
+    },
+    "inputs_sha256": {
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/baseline_results.json": "9f53abaf73c6fed4b3226d98e9e555a6bc9de3e9b7a718e0c67287e5255bbd82",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/preregistration.json": "7147e3cc8b1525528e63ab26702611c0292d3ba33a3e3deffd5bf200f6b3987d",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/raw/context_context_results.json.gz": "753114f2b095cfe11807924531cd46f7927a6546aa84e04d2e3fe6b9d0b829c9",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/raw/context_results.json.gz": "3115b6eb9d3d475bd36a548796e9e6f62cc191443a1d4379eeb12b510242d3a1",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/raw/optimization_summaries.json.gz": "681d2f911f0263be358fa2d3a2006ef87249b775b98b03de9e7a64325bfe10dd",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/raw/oracle_results.json.gz": "066fa3dae31a79c063c1462d5862ce4c20c77c3eef6ba89a06ef5f9ce91953df",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/scene_manifest.json": "c5a95556d21d55bada7fb4ba4dfea8a44d196d5fb98b4876e787a527e136f9cf",
+      "/home/zonghan/measurement-scene-state/docs/experiments/EXP-3D-DIRECT-STATE-CAPACITY-V1/state_plan.json": "0a01142af24276c337e4d41a2c14516d3a66873dec43c352edc231bbaf8e7d40"
+    }
+  }
+}

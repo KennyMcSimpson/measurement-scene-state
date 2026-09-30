@@ -1,0 +1,3814 @@
+{
+  "distribution": "Metadata only; GPU checkpoint weights remain in local outputs",
+  "n_states": 136,
+  "states": [
+    {
+      "bounds": [
+        [
+          -3.583887192173754,
+          -2.7233644198406255,
+          -1.0241189457348066
+        ],
+        [
+          3.2583548097512622,
+          2.7327350122455956,
+          6.602232345540922
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "8eb3484ce3d7c6c61b62a098f9b32b8b011d1e585f0c93184c5d6715a8c286bc",
+      "grid": 16,
+      "key": "ai_004_001__A__S0",
+      "optimization_path": "checkpoints/ai_004_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "447cbd6e48edeb4562ed620bdcdbed041aa30997684790b553b68b921c541b30",
+      "state_path": "checkpoints/ai_004_001__A__S0/state.pt",
+      "state_tensor_hash": "6c2efe963d2d38b89d5558d9bfb4dccae1b59d2d11d246c72b1f4ed55a26ca53",
+      "summary_sha256": "3d4bf3d05bb2f1700c7eff87e43a7b365dd1c0adaf19c57dd6630eb4d41b3acf",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.017292144357132,
+          -2.5524627599176672,
+          -0.43118687254436017
+        ],
+        [
+          3.1483985955384135,
+          2.486687495348901,
+          6.886207383722045
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "8e84853c14448db2bdb676bb90d18cdba101b32a41a7cc0fced8d61ba48e8b3c",
+      "grid": 16,
+      "key": "ai_004_001__B__S0",
+      "optimization_path": "checkpoints/ai_004_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "a5603c19bbf63aa0081e5ba1eb5628c3456aedbf90806030cc2f4d2ad06b7c21",
+      "state_path": "checkpoints/ai_004_001__B__S0/state.pt",
+      "state_tensor_hash": "e9351e20fab04861ffdbadda16c2f8644fc0cc6098df0530313754a1a75ac7e6",
+      "summary_sha256": "2070b9420e43b9a4a9b50002fd813e2a078cc8a1cfb4add91bee12de9f438545",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.692487613003694,
+          -2.6857167398976594,
+          -0.20093101973898486
+        ],
+        [
+          3.1805507621035374,
+          2.7970806028585247,
+          8.050605000799328
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "3726309b97326e47229d4e685b0592ecc837ffa5bb7312e8fc39ab0332e2b9f9",
+      "grid": 16,
+      "key": "ai_006_001__A__S0",
+      "optimization_path": "checkpoints/ai_006_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "9f34898b51e5ca17f7c54079dda563983b28b0b580a4a6f50c3bb01cca76d485",
+      "state_path": "checkpoints/ai_006_001__A__S0/state.pt",
+      "state_tensor_hash": "78bd02eb88be418b6a553078ecf580698f3c8fedf09908e5f7f902575c852f9d",
+      "summary_sha256": "c23f6cd17af9dd7aac9cd43333c5fdd579780df6ea69468094df234020938fd9",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.8925542180239106,
+          -2.617351533264496,
+          -0.22599956059464965
+        ],
+        [
+          3.190077743294976,
+          2.6574005557381835,
+          8.577044358768294
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "ce382e662835347a6f5751521ae3d9a7b57d5cc6e12d6c26a659eb12b880b197",
+      "grid": 16,
+      "key": "ai_006_001__B__S0",
+      "optimization_path": "checkpoints/ai_006_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "69acd3b0e0e45547c531c7ec9739db68c5e19a2db315697cd016c8966d9cb282",
+      "state_path": "checkpoints/ai_006_001__B__S0/state.pt",
+      "state_tensor_hash": "650e8d984df73cce6bd8ca1dbfd4f3ebe0167bdb69d7cbaf452e04f45a3f12ca",
+      "summary_sha256": "cbba420f2878e66eefc022eb00422ad9d452020a57fcc7c29d106fa7df835e7b",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.335878608475326,
+          -2.4952328037531872,
+          -0.8296814100244383
+        ],
+        [
+          3.163569377903638,
+          3.1424485987040116,
+          7.89886561586146
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "53d99374cecd4dfed1bec0bd382f6980c2dc3ebfbe9067b495a2cb5617a4dffb",
+      "grid": 16,
+      "key": "ai_007_002__A__S0",
+      "optimization_path": "checkpoints/ai_007_002__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "ef7d5a2c68e842b6f8b67a8d64d9325d7b10c0225523e6ee5ed2181093044658",
+      "state_path": "checkpoints/ai_007_002__A__S0/state.pt",
+      "state_tensor_hash": "1e58ee744ceaac7ce704dd75500b59f5e6056a4f0f09b8047eb0d1c32e82cb85",
+      "summary_sha256": "ba59f397ef2c29c80b70e19718ad04716ef0f4376df68cef8eab176635e287d9",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -5.945084665341135,
+          -2.8601628920717124,
+          -0.15607145329298655
+        ],
+        [
+          3.2401982377543903,
+          3.0127072261666603,
+          7.108554107205332
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "d5202f032374c3a9ef1f2fd07d64545f1989d1e78207bc3484d677ab6764f1ff",
+      "grid": 16,
+      "key": "ai_007_002__B__S0",
+      "optimization_path": "checkpoints/ai_007_002__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "7b3bfa90a0944dbf04d7b112bbe2ce7106158a904a947c2cee00ae7328d7e44e",
+      "state_path": "checkpoints/ai_007_002__B__S0/state.pt",
+      "state_tensor_hash": "140a7171ab622d9bfe619ddd62890b89ea53f964cd2d458652f65a046b0579f2",
+      "summary_sha256": "4e982ae61db9d1e272ab531b146318f468824cf938f1b863243d5d55f789ddba",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.692802405251614,
+          -2.5215761748204946,
+          -0.14586024048998514
+        ],
+        [
+          3.1805657508191034,
+          3.0854830994033824,
+          6.894118637383574
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "bc940f9f3f1c7e75ddaed3e9c79dac01cdfa1cece5f1610b4f47e03f174dcaa0",
+      "grid": 16,
+      "key": "ai_008_001__A__S0",
+      "optimization_path": "checkpoints/ai_008_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "afd2212c66b8887d2fd01a2066f336365b75b8ac336ab44ef5c4f37dc2945e2f",
+      "state_path": "checkpoints/ai_008_001__A__S0/state.pt",
+      "state_tensor_hash": "a1ac70ca756ecbb40d90e40051ebb9e416d327c3c705edcd11c3c4b78acccdec",
+      "summary_sha256": "3d7631438bda76dead7de9b7ca14a7235fab5fb4892a1ca8c9b5ae4305c24533",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.462958631739827,
+          -3.1638962936785484,
+          -0.2157790907253796
+        ],
+        [
+          3.1696208092233036,
+          3.1910132237754008,
+          6.120619282714384
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "7462ebc70b80290d015835617fc477d45c7c7e15c09357351a6691169b2cfef1",
+      "grid": 16,
+      "key": "ai_008_001__B__S0",
+      "optimization_path": "checkpoints/ai_008_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "07e711194c84e9c5eed133a0de391574847c0a927d1c64406b8c637c59ba3acf",
+      "state_path": "checkpoints/ai_008_001__B__S0/state.pt",
+      "state_tensor_hash": "a50ec58902cdeb8514a7cfe9a164b9a8546d9e2aad6fad39ef5addff94ee3768",
+      "summary_sha256": "29559ce1f64f2ec84e7f04ca1c18849790ba0d58438f072ca2736964f9d95e63",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.1487720723156416,
+          -2.473724488320217,
+          -2.03561043490462
+        ],
+        [
+          4.025135158226675,
+          2.6907739453290045,
+          6.039003502581704
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "d846e61fa0201c9b2645be15c7cb875e0563ff045b3517deea3d7434d72b1a55",
+      "grid": 16,
+      "key": "ai_009_001__A__S0",
+      "optimization_path": "checkpoints/ai_009_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "3144acb2319ca642ddd78e162190bd9636778291bc22450e41c6fafb97afa2a0",
+      "state_path": "checkpoints/ai_009_001__A__S0/state.pt",
+      "state_tensor_hash": "4bec2bf177baef8009a9803ea69781be9d15d748f3fb63d5d29b5a2092798a87",
+      "summary_sha256": "b6dbcc1a7b077f824364a77a99c1c6a1ce79e785034b84e6e5bb445267ff2489",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.1696814560851503,
+          -2.484211220417376,
+          -1.5576960975438934
+        ],
+        [
+          4.464232217386362,
+          2.65529063807769,
+          6.016245676993098
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "ea5c11742cf13c615d5f62ab3dd0432e5985543b12c97842f0df0cc3fbadab8f",
+      "grid": 16,
+      "key": "ai_009_001__B__S0",
+      "optimization_path": "checkpoints/ai_009_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "1bbb70c5b5669182c94842cf252257bb6f784d767435c5175b3ecd90eef70e79",
+      "state_path": "checkpoints/ai_009_001__B__S0/state.pt",
+      "state_tensor_hash": "7390e31051a816e437282bf9ecb22b50ccf0800e633b2dbf7f0b7e8f394c6748",
+      "summary_sha256": "ef1d4de3f902b8d6ee2c00c2dd6a6d9e621b9db56d7c41334dae932bd5039196",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -5.293837544103129,
+          -2.734771262331954,
+          -0.8178658216934069
+        ],
+        [
+          3.2091864717167944,
+          3.150355018918524,
+          6.645084427699417
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "5b55f8900996f377d61ff779b04cc9ade301529ec6b41d960f1a451e817692bf",
+      "grid": 16,
+      "key": "ai_010_001__A__S0",
+      "optimization_path": "checkpoints/ai_010_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "8e39589ec27bd2769b17e5257a74cc17291108eba97606c07f5f25bab86711f8",
+      "state_path": "checkpoints/ai_010_001__A__S0/state.pt",
+      "state_tensor_hash": "83830726790522695954ba7a080e323202fffab9858aaa369f67c6bf93acb9de",
+      "summary_sha256": "be5a44809b27bfb4a99f556142d991da2a124bd0411731bad9ed1b6c9a7b96f7",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -5.927164061586591,
+          -3.1050656192688724,
+          -0.14315598582362465
+        ],
+        [
+          3.2393448773112454,
+          3.1188088141306354,
+          6.726429527386677
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "64f6dde7c6acb35c605eabe3a08004dfa839905060f5c108487fe5ca1aeaac15",
+      "grid": 16,
+      "key": "ai_010_001__B__S0",
+      "optimization_path": "checkpoints/ai_010_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "b4fd0b831192203564ab04f61788d213499e3e6a7776e79ab23b22d453771a65",
+      "state_path": "checkpoints/ai_010_001__B__S0/state.pt",
+      "state_tensor_hash": "172b069453eef4a2dd910b26b09785d37b99c323ddaa9699f04bf92971e85ce7",
+      "summary_sha256": "15b46d73946b8332667a6dd4cf4b99a3d725e241657b2fb1824deae5b3a51cca",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.237664141923127,
+          -2.482980003613492,
+          -0.7312161383430271
+        ],
+        [
+          3.111273453956846,
+          2.885139739102626,
+          5.976889488459628
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "f348f188f282960fa68ce03b7375c5acc8d1d2e4d688e9c66de9bf3441fbc7cd",
+      "grid": 16,
+      "key": "ai_011_001__A__S0",
+      "optimization_path": "checkpoints/ai_011_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "dc4221be0bd3f3981e4015ea8589c82cf7269acaf85308a598fe3bf1500dacd9",
+      "state_path": "checkpoints/ai_011_001__A__S0/state.pt",
+      "state_tensor_hash": "df94740a06134be6be88454e051db10d1057d39c77a7861f8875c602ee9c8500",
+      "summary_sha256": "e7eefe03ff9b5bf44385fba5658b3ec72bd62e9a9b0d303815643566aa0ae803",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.7979755190696887,
+          -2.648388083143638,
+          -0.30728895769923703
+        ],
+        [
+          3.1379549481066826,
+          2.5683810095286144,
+          6.010519615819494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "2a17dadad0c76eaea8ece72b9cb5f2a00b1e8c06831d8c321eef567ac71bc497",
+      "grid": 16,
+      "key": "ai_011_001__B__S0",
+      "optimization_path": "checkpoints/ai_011_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "5f04f5cb40f9bdc5119fa94ac86afddececbac35cce22ab85c5794d325690e0d",
+      "state_path": "checkpoints/ai_011_001__B__S0/state.pt",
+      "state_tensor_hash": "ea55ecd0cbf5449ca8190dc1ded902d1f94ea88c3eb5ab1cc2464d76522344ef",
+      "summary_sha256": "6c30aa2ce6c8a242085afaa6fcc4b8bae86941e8c0454d8a649756a777c17829",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.087399439256905,
+          -2.7003424893246164,
+          -0.4340215474975073
+        ],
+        [
+          3.151737040447749,
+          2.6498444536256924,
+          7.449236537571494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "7db5f765957cd33d3ec62f894590f54c0ceb2cb2e02ece8a5d257c45f47dac4a",
+      "grid": 16,
+      "key": "ai_012_001__A__S0",
+      "optimization_path": "checkpoints/ai_012_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "f759550008f566474e06877d5bdb4c20b509812e6a47115895f557db79e2cea9",
+      "state_path": "checkpoints/ai_012_001__A__S0/state.pt",
+      "state_tensor_hash": "64113caba8b8492f4d10f7d4063e5319945af135e1f1ad7af42910dbb6206de3",
+      "summary_sha256": "eef16d58b4afd017e3276a52906710884b842faf7f991244ae6f6ea0b2bf90c8",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.21549952537398,
+          -2.904142301156142,
+          -0.21182906735391605
+        ],
+        [
+          5.42641162270775,
+          2.4859679331864086,
+          8.279464000184806
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "eaac8958559eee20a007ac5e599efb07be6557f5d448f5d75c84709310dabb88",
+      "grid": 16,
+      "key": "ai_012_001__B__S0",
+      "optimization_path": "checkpoints/ai_012_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "a7ec4ea917d5d043835a141121f884557bbdee088aa45af91741e5c9bd0a6d6c",
+      "state_path": "checkpoints/ai_012_001__B__S0/state.pt",
+      "state_tensor_hash": "cab302e04f93ef9c93607ba16314573a5825e1b8a57b16c61174bfcd2c6891e6",
+      "summary_sha256": "5e8e4e952923c3d4aee4df6f988a01782e21a1922000e58ce6d637469deb6104",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.222456974424359,
+          -2.8212360658608544,
+          -0.5190422774200005
+        ],
+        [
+          3.160891882628644,
+          2.436240207687611,
+          8.758172859647653
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "8f39ca5950eaf98545db12c2ee23649c853844d9d24fe5d2521b7ee33fef5f01",
+      "grid": 16,
+      "key": "ai_014_003__A__S0",
+      "optimization_path": "checkpoints/ai_014_003__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "a6e2c779e21fef119408c14c9a98f10a78a9d984258adeed8f1de46ef8255efe",
+      "state_path": "checkpoints/ai_014_003__A__S0/state.pt",
+      "state_tensor_hash": "16e76f5337c66ae0bbfd42d07565f157aedb12eb4ce840a67b7201e95720e9a4",
+      "summary_sha256": "7cb95066d9f7f0a08ba40da90f06ddac80d0996731004c700adc74db41c79ce1",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.71111850568281,
+          -2.7221599078859855,
+          -0.1540244948974121
+        ],
+        [
+          3.184161479355237,
+          2.4315222954030933,
+          7.037991631606602
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "eb5abd9629890c796673048a909d45d5b367556a8ad323def96b934b9dbd9060",
+      "grid": 16,
+      "key": "ai_014_003__B__S0",
+      "optimization_path": "checkpoints/ai_014_003__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "489aa2c8728e489fc5198981cdac8d6c78147a627fccfbfe149183da9ce3cc50",
+      "state_path": "checkpoints/ai_014_003__B__S0/state.pt",
+      "state_tensor_hash": "8e37fc1c9f32a478b0cd89191ce95295115d6271ab7e2e67f9123d4c3ae67c4f",
+      "summary_sha256": "3ded68fdaa41486a05c736ac96934f16e34baf5ff0ca2e56d466dd01c3ea4d35",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.1107105316901764,
+          -2.813219266414988,
+          -2.0983909038386717
+        ],
+        [
+          3.2258427553478706,
+          2.479555220004009,
+          6.041993048721267
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "1965e5c241c1acee933699126cd6c7c6029731715c9e1943ab0a69747ad4e82f",
+      "grid": 16,
+      "key": "ai_016_002__A__S0",
+      "optimization_path": "checkpoints/ai_016_002__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "b59da7d5d86a6008317b2634cb3912f28887ecbfd93eee98c1c3b54a58c859c9",
+      "state_path": "checkpoints/ai_016_002__A__S0/state.pt",
+      "state_tensor_hash": "e2e0ddd9b2b09d0e79dc2b8cef8468501413a3b613e2b46589f716193966409b",
+      "summary_sha256": "4309c2f033ebe2322ad5b98e5df62351f37ffbb9e4f4f902dcb3f5807ce2d6c8",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.357197309454805,
+          -2.5437195051822563,
+          -1.7837908320966527
+        ],
+        [
+          3.3578405570456242,
+          2.4857867381581435,
+          6.027012092924028
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "2cc4ea817b7d3907371bd3d567691f3be84499c125738a951b7745f3d678f5ec",
+      "grid": 16,
+      "key": "ai_016_002__B__S0",
+      "optimization_path": "checkpoints/ai_016_002__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "766265069183c88de01b9301b52d218d470cc7c60f59e4f8b1ddca8c0252f3f9",
+      "state_path": "checkpoints/ai_016_002__B__S0/state.pt",
+      "state_tensor_hash": "a3ce0b25028b274eca107fc2a7206bd6acd3762a550894c290f7202c16909f3b",
+      "summary_sha256": "9101aee43bcd8b12452e1ae49e657965dc979385b01f6eab6414e5d2a1c7e000",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.928332835642776,
+          -2.6201247333885442,
+          -0.21425830550158143
+        ],
+        [
+          3.144257633527022,
+          2.7677281625913768,
+          8.325602873445323
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "fc4b991f8872ea5f1717c7d79e168c8dc66f0f957985d0aeabb459debeb1ec1f",
+      "grid": 16,
+      "key": "ai_018_002__A__S0",
+      "optimization_path": "checkpoints/ai_018_002__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "7060e9dc28672fed8d48fbfdd43a962c1801bd9ddfdbd6d1882da0ff9a9e05c0",
+      "state_path": "checkpoints/ai_018_002__A__S0/state.pt",
+      "state_tensor_hash": "e287e78a5c3b5d324d4e19001a95104e977a33a7e5772447903d459c7bfc19d6",
+      "summary_sha256": "199513c1e7e589237b3a5ed43bb28397755495d1fcfb95cc35d00bc8061fecc0",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.9011001188874457,
+          -2.764075269601817,
+          -0.2552612508063321
+        ],
+        [
+          4.014315841790667,
+          2.764986959709186,
+          9.186664724845087
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "561228a848215a4103781097c8f8b32887c7785e21fd159dcd1f805e410b80e9",
+      "grid": 16,
+      "key": "ai_018_002__B__S0",
+      "optimization_path": "checkpoints/ai_018_002__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "b0c346c70bdbd6f7677acc30c541b98844dd47ba77a7b249527c68da8aef42be",
+      "state_path": "checkpoints/ai_018_002__B__S0/state.pt",
+      "state_tensor_hash": "a239affcab025d61b342e8c403bf8d29e9af8519c5acb8d6852c7568344d5d71",
+      "summary_sha256": "71f7fbd09d917d823e90a62c0ec48e9f844ebe39bd55554525d5d0defc4d1721",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.2382860879932283,
+          -3.7747106209631074,
+          -0.1685870344272944
+        ],
+        [
+          4.181574767150795,
+          1.4003624018635792,
+          6.84718804036312
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "97083fda09574b3a416857102865d763321c647292c28b1af65f3d5b9b3b0f9c",
+      "grid": 16,
+      "key": "ai_021_002__A__S0",
+      "optimization_path": "checkpoints/ai_021_002__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "29f156ec98fe539dbab01b27b84beb2c9d15d3698adc6942de2f30b962ec2a93",
+      "state_path": "checkpoints/ai_021_002__A__S0/state.pt",
+      "state_tensor_hash": "4bd7b07a06f2e18096d4f354973a2472d4f2591f500b68a5ebf7d558b1013c84",
+      "summary_sha256": "6914d0bbc947ffd4d5bbfa70430425c6596184dbedcd78cb71f609ffa87b9b94",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.576667924136903,
+          -3.7819057052395384,
+          -0.5181326736583873
+        ],
+        [
+          3.231116376472509,
+          1.5514591716686268,
+          6.286846249716253
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "779633aba00eb605d7f11a03ff7b78ca639904304de9f51e0471c50ecfaab456",
+      "grid": 16,
+      "key": "ai_021_002__B__S0",
+      "optimization_path": "checkpoints/ai_021_002__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "27761e5cfd3321d84a8c3e4ddda7444877a76285f87062d81e8f2aeb46502ce7",
+      "state_path": "checkpoints/ai_021_002__B__S0/state.pt",
+      "state_tensor_hash": "0dc2d44c3a48f473e596a9737020098689d71764e91dd3999831db7798f4adc5",
+      "summary_sha256": "2301cbe16bbc0aad524a32620a2a0fd13644aba67effa877e9332b4ff15b7cb7",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.0589039075498006,
+          -3.221639366732126,
+          -0.14906655439849636
+        ],
+        [
+          4.040118651756019,
+          2.505473379111237,
+          6.908193055813651
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "a49de7d9053f495e7f80fa5e6522f8621432a3fba2c6c0868adbae9774cf0a3c",
+      "grid": 16,
+      "key": "ai_028_001__A__S0",
+      "optimization_path": "checkpoints/ai_028_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "8da45f976227471e6692903afcb63bb2cffca696b58c6510087ccb4a968186de",
+      "state_path": "checkpoints/ai_028_001__A__S0/state.pt",
+      "state_tensor_hash": "f8c1441b0e681c12c105f85b640353a14952c3426c8dea9a86edbe3a3731f0b5",
+      "summary_sha256": "eb6c182bd262462bb4c295cd459c6c83adb75d82a275d375164f3bc3565b37ab",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -5.585199761528045,
+          -3.96512239592348,
+          -0.20994118057993427
+        ],
+        [
+          3.310895134349827,
+          2.5408773328822534,
+          8.186560205623849
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "576b52217605667275ea3431b7da4a50ab200de1898261558787633d1b0ea3ed",
+      "grid": 16,
+      "key": "ai_028_001__B__S0",
+      "optimization_path": "checkpoints/ai_028_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "2b545ab85a8e305e8cd2b25dcafa0ded9d1f6fc9163d94595cf83798cfdb0185",
+      "state_path": "checkpoints/ai_028_001__B__S0/state.pt",
+      "state_tensor_hash": "9cd703dab48d6befbb399df978965fa98daa54eae2aa9b31e201ea0b3a0864ed",
+      "summary_sha256": "05875a6687fd253ff05e727d68ae4f3d51abe6d2a8db34d96f326b96b1bd0d60",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.21015072535938,
+          -2.7158025511439883,
+          -0.254719112480295
+        ],
+        [
+          5.306160206021348,
+          2.5068688033431776,
+          6.710294793165229
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "38ef59b38d2017be53dfa13c27769b75b87e1922c6fb2829f1519605030d2c60",
+      "grid": 16,
+      "key": "ai_030_002__A__S0",
+      "optimization_path": "checkpoints/ai_030_002__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "c10ba12e4477e5fc203090aeaac3b62c584b70f9f5194f999ef6f22f90735d9c",
+      "state_path": "checkpoints/ai_030_002__A__S0/state.pt",
+      "state_tensor_hash": "10e0142f40874f6509f07b407aa3c82164623a0a59c7f990a48c771f4e7365e0",
+      "summary_sha256": "00eabf6d05a30e0e6e15c5bcbb4e80d44bb4751dd57d0948c0a1e482cb5a3067",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.124086529255008,
+          -2.706573132461183,
+          -0.3513300508776651
+        ],
+        [
+          3.4988120878295366,
+          2.489680457330886,
+          5.989601579305681
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "bf45794c09838ddcdc3c3b277590c1eeaee0bf12044b220566751fec359bf774",
+      "grid": 16,
+      "key": "ai_030_002__B__S0",
+      "optimization_path": "checkpoints/ai_030_002__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "73dabfdb2168365ec3f81e44e3ac754f9cc42d62b29efbe9fd48fae7248ff4cd",
+      "state_path": "checkpoints/ai_030_002__B__S0/state.pt",
+      "state_tensor_hash": "81adc8de5ccab702b0932d8436af05c9d8c3e28497836d0b37549425184d2c78",
+      "summary_sha256": "1c1ea46be6b39d4f31e30f8acf2aaca050a2df16b582179fd5ff88943a7bf3cf",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.1741023254775804,
+          -2.4771412850143175,
+          -1.84985145272252
+        ],
+        [
+          4.557070506209466,
+          2.762526704014113,
+          6.030157836763607
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "89555a96c0914abbd339f8f0fc5fd9363b4d5cc69c6845d0c692946b9bdc7714",
+      "grid": 16,
+      "key": "ai_032_001__A__S0",
+      "optimization_path": "checkpoints/ai_032_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "7a9fe2b3116bdc25d20ff3f693e0c236c55c78d96a976270f47a1a7ba1dce740",
+      "state_path": "checkpoints/ai_032_001__A__S0/state.pt",
+      "state_tensor_hash": "e1eb67a5271041ee5e92ee607c9ffae0df9f4b8da1c40172d2f705691037f819",
+      "summary_sha256": "4d7e3708642442dd8a98d160007fee427ebba6eb382c897db769a8a52b72b476",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -4.587153063960539,
+          -3.0229120083878,
+          -2.1198359698047105
+        ],
+        [
+          3.1755348282276317,
+          2.878369761554119,
+          6.043014242338949
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "196ec6f404e277f049038e3b8e88adce99eceea397c251d6e53d59851b9bec1f",
+      "grid": 16,
+      "key": "ai_032_001__B__S0",
+      "optimization_path": "checkpoints/ai_032_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "5c5a9299b7c6d5995d7472da67cc1941d623dcb9f47e3c126b787624c4969751",
+      "state_path": "checkpoints/ai_032_001__B__S0/state.pt",
+      "state_tensor_hash": "0fd8555f01a94822c440b18f9ebce9e049a6aeb462af47a470445ff3d1325d60",
+      "summary_sha256": "9dabe047a66701c6a2974f1f07ff7eea16d017ed459a28e641253e3a07f489bc",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.2093194451549447,
+          -2.6179556454024837,
+          -0.18700538126938238
+        ],
+        [
+          5.223514390948855,
+          2.428023931753728,
+          7.726974789798814
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "05a9f9a5c70c630055998b32d0358e07ea2525752b2ab901ad022ded95a2aa74",
+      "grid": 16,
+      "key": "ai_034_001__A__S0",
+      "optimization_path": "checkpoints/ai_034_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "b4c93ffa2cbff2d203d2561bbd748ecd000ddd00cf1e1316addaa42f3c66f8ce",
+      "state_path": "checkpoints/ai_034_001__A__S0/state.pt",
+      "state_tensor_hash": "6da694324de3ec9b8085ebc4f58543556b5a6454abf1bad8eb1d5ba8de26d6c9",
+      "summary_sha256": "f80b75cb03b194bf104f5c9b7121720f3b9092a94f60f5fdd22fc42399b1a8ac",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.1929619980894977,
+          -2.6670660550521967,
+          -0.1724266633675784
+        ],
+        [
+          4.880008002574476,
+          2.4229191018672136,
+          7.420821713860934
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "f9af4db4c7f52cc2254fb9b5f3571bd99631e30f74db68685729cef137d5ebf7",
+      "grid": 16,
+      "key": "ai_034_001__B__S0",
+      "optimization_path": "checkpoints/ai_034_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "19572e0529bd2f1d97ce553e84d054dfd0f22acc45cb9dd485853bae02a3cc4b",
+      "state_path": "checkpoints/ai_034_001__B__S0/state.pt",
+      "state_tensor_hash": "d85cfd083e7301caacad711ee3c752ea8f2d3de27a1e6a54d5ea89529fe77cd0",
+      "summary_sha256": "cecfbc76b0117372cc2134e8a14c80ad8ed68e7ff2a0f7cf3197ef2f887e2277",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.1653047032987534,
+          -2.633315581102768,
+          -1.9535747665026064
+        ],
+        [
+          4.360810699516343,
+          2.489357826412415,
+          6.035097069451181
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "0ed42044c169d24aeb401a23828395eea19d66b5430db86df25aa9af921b87dc",
+      "grid": 16,
+      "key": "ai_036_001__A__S0",
+      "optimization_path": "checkpoints/ai_036_001__A__S0",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "d0eecceb5bf8026ce71855b8241f092ee2bb5c51845fb27d394529d6c9e1a5f4",
+      "state_path": "checkpoints/ai_036_001__A__S0/state.pt",
+      "state_tensor_hash": "effe673278e058c1c145052bfbdfdaf211f7154ea474b8a3c7ddbce53d79f7fc",
+      "summary_sha256": "088370b1dbeadb11997461936ca8f939954308c6b3856da1bde5a745758db68c",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.1950269972335983,
+          -2.7829850523383715,
+          -1.4161139949134571
+        ],
+        [
+          4.984978872148102,
+          2.9243901981879143,
+          6.363407613649052
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "29fa799b587af86209122a4c3a4c5c704b8d80a532a432cdced4c7d4dcf9ad8f",
+      "grid": 16,
+      "key": "ai_036_001__B__S0",
+      "optimization_path": "checkpoints/ai_036_001__B__S0",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "3f161c31ba242b1eb1ea34884dcaf26ef7d7cd6c7ae96e74c8e737b7d871099e",
+      "state_path": "checkpoints/ai_036_001__B__S0/state.pt",
+      "state_tensor_hash": "da6533264d21f6c3a99068d3151f9387d5b82c593c2481a3bb57a405e35a6892",
+      "summary_sha256": "ab37ccde1d122f64f2743cfd3f168f9a4b02fc57823a81c1836c8bd9aca18e3a",
+      "variant": "S0"
+    },
+    {
+      "bounds": [
+        [
+          -3.583887192173754,
+          -2.7233644198406255,
+          -1.0241189457348066
+        ],
+        [
+          3.2583548097512622,
+          2.7327350122455956,
+          6.602232345540922
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "4aa4e7b9edcf5bea395021ba9fa92bf8e54adee907242463ad09de3ae003a001",
+      "grid": 16,
+      "key": "ai_004_001__A__S1",
+      "optimization_path": "checkpoints/ai_004_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "3800e2d14ef8e4264127b6653ace1adc7a7e728116cad9be742339654f1947fd",
+      "state_path": "checkpoints/ai_004_001__A__S1/state.pt",
+      "state_tensor_hash": "2366ea633f60ddc0fbd3c01132edbaa5a123c5dd98b3aeeecdf21e0513783695",
+      "summary_sha256": "024addc2a61d316805eef59827f0beb22da5d21ced8a5cca7ec3ecd118252100",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.017292144357132,
+          -2.5524627599176672,
+          -0.43118687254436017
+        ],
+        [
+          3.1483985955384135,
+          2.486687495348901,
+          6.886207383722045
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "23db3a9eb3ae74b22d79973b894dfdd534338ee90b74916f7540677980b3cff4",
+      "grid": 16,
+      "key": "ai_004_001__B__S1",
+      "optimization_path": "checkpoints/ai_004_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "e36964b626c8ffb576781ff43978ca95763e2339a57fdcdc8bbc3848236a596a",
+      "state_path": "checkpoints/ai_004_001__B__S1/state.pt",
+      "state_tensor_hash": "be9d735bbeff2d18f4b1c1d283a1e973e280dd55caff7fcef1bc8f8739227552",
+      "summary_sha256": "68d932ccfe6ce41d0c747ae50b58bdb8cb9c67f7d74884f6ba61c444a34c2ae0",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.692487613003694,
+          -2.6857167398976594,
+          -0.20093101973898486
+        ],
+        [
+          3.1805507621035374,
+          2.7970806028585247,
+          8.050605000799328
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "cae34db709c6b344eec02d812671695678df8de6b883fcb15f5aa3735746f1e4",
+      "grid": 16,
+      "key": "ai_006_001__A__S1",
+      "optimization_path": "checkpoints/ai_006_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "61c11fe7a338d74b6b5de1f6f0c818aad80493b36a155ba99942b9992f98d6dd",
+      "state_path": "checkpoints/ai_006_001__A__S1/state.pt",
+      "state_tensor_hash": "df39ec149407e814574f7a5a2cd7bbe89bbbf9d291d4ceec0d034343ede7dd10",
+      "summary_sha256": "1d0e8a8ebfbfc3c7c2dd8b745e5154b3c5ea687be4325c84c4026536ffd84bd9",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.8925542180239106,
+          -2.617351533264496,
+          -0.22599956059464965
+        ],
+        [
+          3.190077743294976,
+          2.6574005557381835,
+          8.577044358768294
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "73ea2403733534c17c84c5e90c9643fe54043c6c06447fde653db990dc4f2b67",
+      "grid": 16,
+      "key": "ai_006_001__B__S1",
+      "optimization_path": "checkpoints/ai_006_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "bd4661a37275223324d49561ba01a1d4cdb916c3e6791726a67130e58ede3f77",
+      "state_path": "checkpoints/ai_006_001__B__S1/state.pt",
+      "state_tensor_hash": "607096049eb85ebf4aff58c27941973384b0afe7f16bd3cfdf352f41e2dd5cc9",
+      "summary_sha256": "9b4bf507f2300d9fdfa7e56c8f82d6cb7888fba6cca6bee8ebc92177e09a186f",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.335878608475326,
+          -2.4952328037531872,
+          -0.8296814100244383
+        ],
+        [
+          3.163569377903638,
+          3.1424485987040116,
+          7.89886561586146
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "f622af9faec9061d6e700bdcbfb6e121d56ada06096421fb6bd8719a62369bea",
+      "grid": 16,
+      "key": "ai_007_002__A__S1",
+      "optimization_path": "checkpoints/ai_007_002__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "fff49b66e3e58e5deeaaea72183b86b3bb977fd7f8902f29c787cbb6d4a34692",
+      "state_path": "checkpoints/ai_007_002__A__S1/state.pt",
+      "state_tensor_hash": "10847128c5e4b9d67dc0e3af3a3aa325c38a1c7510e0817ad873dbd11b64ffc0",
+      "summary_sha256": "b7bce6c48e759514fc0150ef3c95a2871ea826e7475f61a4fdbd757ba0b38be6",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -5.945084665341135,
+          -2.8601628920717124,
+          -0.15607145329298655
+        ],
+        [
+          3.2401982377543903,
+          3.0127072261666603,
+          7.108554107205332
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "b2b74fd73d741174752bda681fa4e2eae73662a19bdd87ac551b4f663c04a802",
+      "grid": 16,
+      "key": "ai_007_002__B__S1",
+      "optimization_path": "checkpoints/ai_007_002__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "46419f3430a2fcdcaa3b532f6bc78c68201e22f11b8f8533b092ce27eac7c46a",
+      "state_path": "checkpoints/ai_007_002__B__S1/state.pt",
+      "state_tensor_hash": "076c9bdc5da101d7afef794c34f145daec470c0e6d54a9346b46cacb92786f83",
+      "summary_sha256": "783e0bc997d88a78b3d9df7cb93c7ae4b35d5ef964cfc30aeadf2fa8f9ae1975",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.692802405251614,
+          -2.5215761748204946,
+          -0.14586024048998514
+        ],
+        [
+          3.1805657508191034,
+          3.0854830994033824,
+          6.894118637383574
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "8fed5d916aa8b87fc840c2087c30dbc5606b1799e65e6d2517ec4d7098a29c5e",
+      "grid": 16,
+      "key": "ai_008_001__A__S1",
+      "optimization_path": "checkpoints/ai_008_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "8e65d604481469bcf93d3a172092f85dfcd8b33c7cccdc2e5452f3fedf92b364",
+      "state_path": "checkpoints/ai_008_001__A__S1/state.pt",
+      "state_tensor_hash": "681a8e66abb27485b83d2484b42a7072edd09848aa5683d360edf183e8a01c9a",
+      "summary_sha256": "d212160b1951a4798c616530a32597b950eab2ebddc192d28f6758043986ce36",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.462958631739827,
+          -3.1638962936785484,
+          -0.2157790907253796
+        ],
+        [
+          3.1696208092233036,
+          3.1910132237754008,
+          6.120619282714384
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "1b82f030eea95d5cbc1a73c20849ac901ada191e7aa46f6780d59b23e3911508",
+      "grid": 16,
+      "key": "ai_008_001__B__S1",
+      "optimization_path": "checkpoints/ai_008_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "406dddcfefdfa66462b940e5b6c645cfce14283ddcd068b1dab5b2b17de4897e",
+      "state_path": "checkpoints/ai_008_001__B__S1/state.pt",
+      "state_tensor_hash": "d9f708e62c02d56ca6dbb352926cf7d5e57a3e28cbddbf8039771bf73403eefe",
+      "summary_sha256": "0568eb9f00075d6749449ae7d98994f0159381e2559097ba25a15b63c0e74fe8",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.1487720723156416,
+          -2.473724488320217,
+          -2.03561043490462
+        ],
+        [
+          4.025135158226675,
+          2.6907739453290045,
+          6.039003502581704
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "f0eae17109e8377a5dfae3a604bc242200d5e33cb3e677039652b93f6d7afc3f",
+      "grid": 16,
+      "key": "ai_009_001__A__S1",
+      "optimization_path": "checkpoints/ai_009_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "85db1c81e2d1189de7deb46f02453e236d64fb541fbd45930233a70cef734298",
+      "state_path": "checkpoints/ai_009_001__A__S1/state.pt",
+      "state_tensor_hash": "a88cddb21f66feeb51f0a866dd42719c322276cd762f9cd83a06490a617eaa3d",
+      "summary_sha256": "6dbb6bb780dc1efacb04aa05aa6f41126869d723992f5e162241b1f94360d846",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.1696814560851503,
+          -2.484211220417376,
+          -1.5576960975438934
+        ],
+        [
+          4.464232217386362,
+          2.65529063807769,
+          6.016245676993098
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "1beeab0f9a33c23b27f9e4b3d924e8e351682ffba7b963fea04553f9da0ea6a6",
+      "grid": 16,
+      "key": "ai_009_001__B__S1",
+      "optimization_path": "checkpoints/ai_009_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "106d844078defc0918efb15b31665e035a63c7172e5bb8d912762a6e788c8c88",
+      "state_path": "checkpoints/ai_009_001__B__S1/state.pt",
+      "state_tensor_hash": "ef868d37fb040d3261e7f5d425cc1f8cb916a0c10a2cbb6fa9b9bff235b55f63",
+      "summary_sha256": "0421bbc5647be7706661b082e65e4ebc537bf10fe6e30dbf9fe4faa8b3e997a3",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -5.293837544103129,
+          -2.734771262331954,
+          -0.8178658216934069
+        ],
+        [
+          3.2091864717167944,
+          3.150355018918524,
+          6.645084427699417
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "ece0e92ad365108720ea7d3a7495361053c84aa2850b1e458473cadfe7523231",
+      "grid": 16,
+      "key": "ai_010_001__A__S1",
+      "optimization_path": "checkpoints/ai_010_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "6ca40ae18800a43a9c97f51f9db36ce3a4840d8ff243f6aafd69ace66b54d90c",
+      "state_path": "checkpoints/ai_010_001__A__S1/state.pt",
+      "state_tensor_hash": "ecc7d10c68334435f6c886219d3fb8f55b9cf583bc39db98bd397896882c942a",
+      "summary_sha256": "9d7e441fbabc24541f23ebfa13a7e00b069763d392d099a77378324115a96cdf",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -5.927164061586591,
+          -3.1050656192688724,
+          -0.14315598582362465
+        ],
+        [
+          3.2393448773112454,
+          3.1188088141306354,
+          6.726429527386677
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "ab9a61acfaf176edded0ec302d9a3f9358666c9239d1cdb3dfa755750bd05f7e",
+      "grid": 16,
+      "key": "ai_010_001__B__S1",
+      "optimization_path": "checkpoints/ai_010_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "9dd5fb3dad59ffeaa0c95de1a3024e74146b4349bd87e428e37ab30994f8cf3b",
+      "state_path": "checkpoints/ai_010_001__B__S1/state.pt",
+      "state_tensor_hash": "98163d3224e94ac4af2a2be17ddd604670e4bc7c4e2eaca3efd0efe9b44c961a",
+      "summary_sha256": "7fd1a9c76d07f41d6e0859a4b8ad0bffc08a1ba46e451802659642686f2c5be5",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.237664141923127,
+          -2.482980003613492,
+          -0.7312161383430271
+        ],
+        [
+          3.111273453956846,
+          2.885139739102626,
+          5.976889488459628
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "64db39e96dc0f20eb412f325bdcecbceebe6e00ca3b7683e2f484917f413b168",
+      "grid": 16,
+      "key": "ai_011_001__A__S1",
+      "optimization_path": "checkpoints/ai_011_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "b700179afdc69c62f57790377c2065c319dcde23c2ed97c0369bc2a0ce1d4d65",
+      "state_path": "checkpoints/ai_011_001__A__S1/state.pt",
+      "state_tensor_hash": "be5710b04ce040fce00e7e820d6550806f373535ae1156b4c41997d0aa44f8b1",
+      "summary_sha256": "e1a68605784573ccad917f18180f3d82a52cfd0b246faea216fb08e0b672bbdf",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.7979755190696887,
+          -2.648388083143638,
+          -0.30728895769923703
+        ],
+        [
+          3.1379549481066826,
+          2.5683810095286144,
+          6.010519615819494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "51319c0d856e411e0603da6c59e0ec1521a1c88675769988c58ee5bf7085bdd1",
+      "grid": 16,
+      "key": "ai_011_001__B__S1",
+      "optimization_path": "checkpoints/ai_011_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "4ad72a321c31842c0a156a204003052d23905f76590bc913bbd943de9f3487d6",
+      "state_path": "checkpoints/ai_011_001__B__S1/state.pt",
+      "state_tensor_hash": "6062ab796aae732e1909d75fa540a099f030be29119a326edc1f99dd2185e881",
+      "summary_sha256": "8473fb33b18510e19c2f4cafc10cb17c62ffe9d3da586995554a0e08b623b1ab",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.087399439256905,
+          -2.7003424893246164,
+          -0.4340215474975073
+        ],
+        [
+          3.151737040447749,
+          2.6498444536256924,
+          7.449236537571494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "398b4865f0ee61998ecf380c837803ff2c54b73f1f6c17c2ae5f5ed09f27f655",
+      "grid": 16,
+      "key": "ai_012_001__A__S1",
+      "optimization_path": "checkpoints/ai_012_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "d3e33a982ee657cd728fd535aacf28da3e1e10d8333b984355014cb116c88ede",
+      "state_path": "checkpoints/ai_012_001__A__S1/state.pt",
+      "state_tensor_hash": "f053a7eb155acd54912c0f58b39c2a3a9c4fdeaebe98a20f3dfef8c868691082",
+      "summary_sha256": "c552b72112007f3e12416bd3545d16c8ffed88ee5aefd24e4704c730baf43d50",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.21549952537398,
+          -2.904142301156142,
+          -0.21182906735391605
+        ],
+        [
+          5.42641162270775,
+          2.4859679331864086,
+          8.279464000184806
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "2a1cb5ac0633cd14a156fb4c4f3dede2b7dba7034fda65f443a9100f67d31bcd",
+      "grid": 16,
+      "key": "ai_012_001__B__S1",
+      "optimization_path": "checkpoints/ai_012_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "17da54778305a2425e47e0a598c78f8ee8e30a147803a175f10dc9cb44f114f6",
+      "state_path": "checkpoints/ai_012_001__B__S1/state.pt",
+      "state_tensor_hash": "5d8dd7ba1425214106274054a659d7a9ba116c3b6392f4e3f9e0411a04c748ca",
+      "summary_sha256": "ce14085f84695548cdafbb5a81ba4e88921434146a68259b00998cd3159498b0",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.222456974424359,
+          -2.8212360658608544,
+          -0.5190422774200005
+        ],
+        [
+          3.160891882628644,
+          2.436240207687611,
+          8.758172859647653
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "5aebc938c21175a980dd759a3392ec1b34534aa929984fa10ebc1a5cfcba5231",
+      "grid": 16,
+      "key": "ai_014_003__A__S1",
+      "optimization_path": "checkpoints/ai_014_003__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "68b968185284511569b9036a85c29a3a1ad7d29808c663469030c2221b78b840",
+      "state_path": "checkpoints/ai_014_003__A__S1/state.pt",
+      "state_tensor_hash": "16de00899d86fe7f4e6ae6b12d68aeb1a845a23c1fc1511283c51dca91f8a104",
+      "summary_sha256": "092d05a5a1c0f88c9bc735e1a6728922197b9aafc99f92d1586b88e3fc5169f9",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.71111850568281,
+          -2.7221599078859855,
+          -0.1540244948974121
+        ],
+        [
+          3.184161479355237,
+          2.4315222954030933,
+          7.037991631606602
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "b0584b4ee99aefaf60b4f193136292730dcd0df98e98dded9a03653b8da23595",
+      "grid": 16,
+      "key": "ai_014_003__B__S1",
+      "optimization_path": "checkpoints/ai_014_003__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "880f8e9323c9f9e594fc53aeda0c05dbded28cc80282077eab99b056f0fca29f",
+      "state_path": "checkpoints/ai_014_003__B__S1/state.pt",
+      "state_tensor_hash": "e857f001e69c1106a6c42b1af0d1657480d5d21db62a3c6976082ffacf4f3786",
+      "summary_sha256": "85420a54f99decdbde29b3819693ad3390c1b4582eb3cb60ee1107460e158a2f",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.1107105316901764,
+          -2.813219266414988,
+          -2.0983909038386717
+        ],
+        [
+          3.2258427553478706,
+          2.479555220004009,
+          6.041993048721267
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "c711d9e29cb15bfcc433b183669ffa8f5cea13595ed35af834369b4e4780a686",
+      "grid": 16,
+      "key": "ai_016_002__A__S1",
+      "optimization_path": "checkpoints/ai_016_002__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "e0391a660c0d0bb64c1021ea592bd2deae7b71e32afad17db329230245d7ac32",
+      "state_path": "checkpoints/ai_016_002__A__S1/state.pt",
+      "state_tensor_hash": "28f47aa1eebd1417d01644b6d615c934fe11237d7fceaa15acf2766bb0eacad2",
+      "summary_sha256": "c2fc40009816a1ee6b7a0b63203a8dbd39d8b85ce49d601b73ac34b38e7657a4",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.357197309454805,
+          -2.5437195051822563,
+          -1.7837908320966527
+        ],
+        [
+          3.3578405570456242,
+          2.4857867381581435,
+          6.027012092924028
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "7f65a6417ad5476d8d1492a737d5927f21f29f39c6e922af437b269873b26c4b",
+      "grid": 16,
+      "key": "ai_016_002__B__S1",
+      "optimization_path": "checkpoints/ai_016_002__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "2ac02501f963f4d3af041efb60f086d552f8bc417f3b53e8a22fd51e3510be13",
+      "state_path": "checkpoints/ai_016_002__B__S1/state.pt",
+      "state_tensor_hash": "238a44e9ef2879e8528426ef8080fb6a454435d88771ea543f5477578ef2e151",
+      "summary_sha256": "40ac6477b70485381588137234f08025ffb178af3fd80bb36f0dd091c05e0eab",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.928332835642776,
+          -2.6201247333885442,
+          -0.21425830550158143
+        ],
+        [
+          3.144257633527022,
+          2.7677281625913768,
+          8.325602873445323
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "f6dbf822048b5ef2ab856c59d6a8a90a4cc46bd083680bae7f427bccc9f2400b",
+      "grid": 16,
+      "key": "ai_018_002__A__S1",
+      "optimization_path": "checkpoints/ai_018_002__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "724257afafa788be0efcc3820259a480ebecb4a15d218705b4581ee7e55d58e8",
+      "state_path": "checkpoints/ai_018_002__A__S1/state.pt",
+      "state_tensor_hash": "24c81973b0ef39ad9a5f39c4b389113319bcc42a976bb0b99d317a9ce2f6ae00",
+      "summary_sha256": "e20069330a474872b469d57211adc152331369d64815d6e112406c0b7659f6bd",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.9011001188874457,
+          -2.764075269601817,
+          -0.2552612508063321
+        ],
+        [
+          4.014315841790667,
+          2.764986959709186,
+          9.186664724845087
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "5e008cd9119dc87e1b3bbb827c523b174c39c9cc0016d76874c0abfccf3ef807",
+      "grid": 16,
+      "key": "ai_018_002__B__S1",
+      "optimization_path": "checkpoints/ai_018_002__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "4a8303faa31d703c61d3ca5859c2cce07bc8cea207f31ee3defa326f927d81e9",
+      "state_path": "checkpoints/ai_018_002__B__S1/state.pt",
+      "state_tensor_hash": "146f33500da57fe40005401e6f72e1eaf056754922b054a4fa47b914d86fe746",
+      "summary_sha256": "91b9d4ed802958622d8d81a7317afec2ba5359d1c5be76f2db2d3bdc62c50268",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.2382860879932283,
+          -3.7747106209631074,
+          -0.1685870344272944
+        ],
+        [
+          4.181574767150795,
+          1.4003624018635792,
+          6.84718804036312
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "a54e0b8dde12dce5129a06ca627430dd546a7bccf2297504746c05bffb852ae1",
+      "grid": 16,
+      "key": "ai_021_002__A__S1",
+      "optimization_path": "checkpoints/ai_021_002__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "6b45b87efca169be99551d8b55145ba427d81d3d74d1e08698e16bc27cdb9702",
+      "state_path": "checkpoints/ai_021_002__A__S1/state.pt",
+      "state_tensor_hash": "6de76ee9106d0d50179b076cf66d4794e9ba0d3bc01e6f02c261909a1023c26b",
+      "summary_sha256": "f0369bae41d3a180a07204303b467be7ddc1184a013a162afbe1c8c612e88bcb",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.576667924136903,
+          -3.7819057052395384,
+          -0.5181326736583873
+        ],
+        [
+          3.231116376472509,
+          1.5514591716686268,
+          6.286846249716253
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "e800fb0b985c6cc110072d2656f2132ab57e9046aa4c09a3b800e96bf39aa2e8",
+      "grid": 16,
+      "key": "ai_021_002__B__S1",
+      "optimization_path": "checkpoints/ai_021_002__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "03e79567c992ec540a8358726cb9bf4dbc56d3de174b7d1f510dd9debececaad",
+      "state_path": "checkpoints/ai_021_002__B__S1/state.pt",
+      "state_tensor_hash": "c872c41adf6de2bce929731371eede2b8b9da832eb653f01e5ed512e6ed000e2",
+      "summary_sha256": "93b0995f77302810c20c0016ed875bbfcee1af09e71ef80a0e9c4d2d95639011",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.0589039075498006,
+          -3.221639366732126,
+          -0.14906655439849636
+        ],
+        [
+          4.040118651756019,
+          2.505473379111237,
+          6.908193055813651
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "3a5658915eb64ca7f3c378bc71280d4c7a938db1b3d2ec757720230adb9394d5",
+      "grid": 16,
+      "key": "ai_028_001__A__S1",
+      "optimization_path": "checkpoints/ai_028_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "39f10801810a14df014b977b69aca1db60edfef3a393df8240eb8bd029379290",
+      "state_path": "checkpoints/ai_028_001__A__S1/state.pt",
+      "state_tensor_hash": "fb13539eecd06ace9e27c473ae8daaebf3a99b67d3ffbb3f17bbcad650d2d02f",
+      "summary_sha256": "9015f2431fe0cd974ee01d9406e5f809db7f4f1397bc1a00ff2f176f01de3658",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -5.585199761528045,
+          -3.96512239592348,
+          -0.20994118057993427
+        ],
+        [
+          3.310895134349827,
+          2.5408773328822534,
+          8.186560205623849
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "ad8c6ca0ef21d0f3f7c1db4f9300b94c1837a7768c6d005bbb498f60d758bc2c",
+      "grid": 16,
+      "key": "ai_028_001__B__S1",
+      "optimization_path": "checkpoints/ai_028_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "86b1fc03811947ce6dbc59850d7b2e8dbf91fc1a57c7d0b2794c49cda5b82757",
+      "state_path": "checkpoints/ai_028_001__B__S1/state.pt",
+      "state_tensor_hash": "03f633fefe528cbc565365141a0046ee0ac614db09b4e73bbe536cee87196749",
+      "summary_sha256": "3c87b3193959585e6707e7437e1e53ad3b8349bb083949a85f382d6f4d7add5e",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.21015072535938,
+          -2.7158025511439883,
+          -0.254719112480295
+        ],
+        [
+          5.306160206021348,
+          2.5068688033431776,
+          6.710294793165229
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "66646b660c373dabf87b81fe042b78c76c43e47d9d58bdde64cb89b451a8c2e1",
+      "grid": 16,
+      "key": "ai_030_002__A__S1",
+      "optimization_path": "checkpoints/ai_030_002__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "36c1d8f0f2e7afc67b6caddf1513ea922f91553a0d7aaae373fb652f06d1b29b",
+      "state_path": "checkpoints/ai_030_002__A__S1/state.pt",
+      "state_tensor_hash": "c0b1cab1adc14f99a0cb5737e250acaab8db56fc724128582a4bc0a5c790be86",
+      "summary_sha256": "8ae4ddd53fc97839b378e26ede56411f22920fafd88a89e2b6208505782ce887",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.124086529255008,
+          -2.706573132461183,
+          -0.3513300508776651
+        ],
+        [
+          3.4988120878295366,
+          2.489680457330886,
+          5.989601579305681
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "35006c096c6185345577506ae5ae0abd3c3f237fbd4cd461b17f75870b0acec5",
+      "grid": 16,
+      "key": "ai_030_002__B__S1",
+      "optimization_path": "checkpoints/ai_030_002__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "8dc55ee5b610a43e4cf36fe564608be29221c34f12b7cec6754caaf06882b4e6",
+      "state_path": "checkpoints/ai_030_002__B__S1/state.pt",
+      "state_tensor_hash": "70f4b706cd3333ada8dd1c7596e5dab9af53bfb7879284d6484c259e2b101e42",
+      "summary_sha256": "018ecc705f3fa78e72a0fc83ee66bc5d2529b3b59f82c2c1139733654742192f",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.1741023254775804,
+          -2.4771412850143175,
+          -1.84985145272252
+        ],
+        [
+          4.557070506209466,
+          2.762526704014113,
+          6.030157836763607
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "d2d0380698cfcc1524ca86360397ae48e3c1f7ba17d59d36926d8e299aeccd8e",
+      "grid": 16,
+      "key": "ai_032_001__A__S1",
+      "optimization_path": "checkpoints/ai_032_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "150177b603fe2b9805386ef8131fce5834c166b1965784a553920718deba1cfc",
+      "state_path": "checkpoints/ai_032_001__A__S1/state.pt",
+      "state_tensor_hash": "21a06d6b32dbd8c4778f37d6fdd40d226fe3fcdd9188128e31f9a5a4bd1d7c61",
+      "summary_sha256": "ce6441ae97a581500de9e18cd50b4b03637fea6979d9b7cb96ad955cd121a256",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -4.587153063960539,
+          -3.0229120083878,
+          -2.1198359698047105
+        ],
+        [
+          3.1755348282276317,
+          2.878369761554119,
+          6.043014242338949
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "45b961f656293d0b912532fb9da290aa8f8daee7821bccb08d00d0a9ed7677af",
+      "grid": 16,
+      "key": "ai_032_001__B__S1",
+      "optimization_path": "checkpoints/ai_032_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "5f270e6e399ad27cd23e9269837a39d58726fa854f1c5c8f9245d44be2dc09f2",
+      "state_path": "checkpoints/ai_032_001__B__S1/state.pt",
+      "state_tensor_hash": "6b23d44c4067bc2bcff4c217ae00fbadfb053e42c01b3a70b2fe6ad239d2135b",
+      "summary_sha256": "226cb4f75051bcf61646e434499f3e2c9161e033644de405767ee0bd7754da0b",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.2093194451549447,
+          -2.6179556454024837,
+          -0.18700538126938238
+        ],
+        [
+          5.223514390948855,
+          2.428023931753728,
+          7.726974789798814
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "28d16a1447efbaf78a6dc8eb9ecbe408ad851248bb318131259bdc331e9b6c33",
+      "grid": 16,
+      "key": "ai_034_001__A__S1",
+      "optimization_path": "checkpoints/ai_034_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "f402d4b5a3de479ce8444fc4bcd6d1fdda616c7c60db833eda45a708f1250c9a",
+      "state_path": "checkpoints/ai_034_001__A__S1/state.pt",
+      "state_tensor_hash": "280e75443e2479f0b2e14a1667ae4c735bac2c4747f62642a030a7f507f78e3e",
+      "summary_sha256": "8e33474402c88201aac6ffe93d7966f2c75e9c694369239c36162993280aa494",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.1929619980894977,
+          -2.6670660550521967,
+          -0.1724266633675784
+        ],
+        [
+          4.880008002574476,
+          2.4229191018672136,
+          7.420821713860934
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "418d6cef89f89cc8bfda755c2bb0fefb9dc13556c1fda2c82960d3b03cb90cac",
+      "grid": 16,
+      "key": "ai_034_001__B__S1",
+      "optimization_path": "checkpoints/ai_034_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "630029605fd1c79281f0685b355ac14a7a9e7cf96f8da8715f14c19aff0b264b",
+      "state_path": "checkpoints/ai_034_001__B__S1/state.pt",
+      "state_tensor_hash": "350fbc2c5cb15874c91bd7bdf501e36fc4b8af494ac677f860fae48032938dd3",
+      "summary_sha256": "ff91945ca55f2b652c60044442d90200154f1647992d294ccd9241dd0dd359e1",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.1653047032987534,
+          -2.633315581102768,
+          -1.9535747665026064
+        ],
+        [
+          4.360810699516343,
+          2.489357826412415,
+          6.035097069451181
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "27dcbd3272a5407c828c7d7ec8d34a5685012d0a5cd5ae54983531ea18ef74e5",
+      "grid": 16,
+      "key": "ai_036_001__A__S1",
+      "optimization_path": "checkpoints/ai_036_001__A__S1",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "320e76698499639323e74a38501167f73ada1d7eb2d10793ae134fc3213d5fb3",
+      "state_path": "checkpoints/ai_036_001__A__S1/state.pt",
+      "state_tensor_hash": "d1d8f64b04d60e64e8142040141858f311a7cec0652663fca850555d8b0e5594",
+      "summary_sha256": "6e8a02e1aa52d7c6b566d0a7156bde4567574b29700e45ac58f6068e2f32b0e3",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.1950269972335983,
+          -2.7829850523383715,
+          -1.4161139949134571
+        ],
+        [
+          4.984978872148102,
+          2.9243901981879143,
+          6.363407613649052
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "5e429ae1870e7e53f26887baa17126e961f3689725085064271b62fc3b2cfcd5",
+      "grid": 16,
+      "key": "ai_036_001__B__S1",
+      "optimization_path": "checkpoints/ai_036_001__B__S1",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "71848a04a53321a552993132f7c9902a9697cc3138f97cc48f365176787cf412",
+      "state_path": "checkpoints/ai_036_001__B__S1/state.pt",
+      "state_tensor_hash": "e79dfae60370065831664417efc554b0f217cdd05e027b0e12bf215cddefe718",
+      "summary_sha256": "5de9cf96d756ab9f7adee60fa1f5edbeb75ad6c1a9d369a3ee0e0f525b26003e",
+      "variant": "S1"
+    },
+    {
+      "bounds": [
+        [
+          -3.583887192173754,
+          -2.7233644198406255,
+          -1.0241189457348066
+        ],
+        [
+          3.2583548097512622,
+          2.7327350122455956,
+          6.602232345540922
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "80a5928b9dd274f798e0745637807e0ebdfe9908c07b1bfa51d7106db1f1000d",
+      "grid": 16,
+      "key": "ai_004_001__A__S2",
+      "optimization_path": "checkpoints/ai_004_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "5dda2ebc95cbfa7e6574693c093dad005ed6d2f2061794b0d9beac3f96f260cd",
+      "state_path": "checkpoints/ai_004_001__A__S2/state.pt",
+      "state_tensor_hash": "20f9d51077023583bef694a166fa7f33aca11be4a6a7212502ab1605bf823012",
+      "summary_sha256": "e73076c1481ff21354c338084a5c7953393e16aacaf0e8f85fae1c420e441a70",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.017292144357132,
+          -2.5524627599176672,
+          -0.43118687254436017
+        ],
+        [
+          3.1483985955384135,
+          2.486687495348901,
+          6.886207383722045
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "9ea3b07c56c8767a41fbfc9e99ac55624a3d8f15125e2530dd5fa52cb5ffe36e",
+      "grid": 16,
+      "key": "ai_004_001__B__S2",
+      "optimization_path": "checkpoints/ai_004_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "938c668f39eaa0638506647021350c75bcd96c8693f4ff62038f9642aec4196c",
+      "state_path": "checkpoints/ai_004_001__B__S2/state.pt",
+      "state_tensor_hash": "48f19e056c8a3eb0313486507a84a9ec48f4cfc878aee6ce3ebb42b6a33cf9ce",
+      "summary_sha256": "c75924313009585e2f2fdbfe88e82d0de56e0002a7f18fea144c265ece820cf9",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.692487613003694,
+          -2.6857167398976594,
+          -0.20093101973898486
+        ],
+        [
+          3.1805507621035374,
+          2.7970806028585247,
+          8.050605000799328
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "1a86e7775a0648ea169cabc9c71f6f9a8cb1dee5d139cc4a947c14934d1b77f6",
+      "grid": 16,
+      "key": "ai_006_001__A__S2",
+      "optimization_path": "checkpoints/ai_006_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "118a6f5c60cc923a1e98578596b5fc0f9e4b7ba506088ae5f30422055b0d7d9d",
+      "state_path": "checkpoints/ai_006_001__A__S2/state.pt",
+      "state_tensor_hash": "7c1d490dfd5cda8caeaf60825ea440c0552ac1ba2fb274f1b29e54a8fce79eb4",
+      "summary_sha256": "6d9ee916f378dae5df2212f6a37847ff872b35b3b2de5a57e9a532508cc761b7",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.8925542180239106,
+          -2.617351533264496,
+          -0.22599956059464965
+        ],
+        [
+          3.190077743294976,
+          2.6574005557381835,
+          8.577044358768294
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "d59415147b88cee82f4078da4b8b32bd8eee445801302b30dbdd768780c5a457",
+      "grid": 16,
+      "key": "ai_006_001__B__S2",
+      "optimization_path": "checkpoints/ai_006_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "999b96049fe8159cba1316102c0d989e822051e2fb1474fd3c64f062d82e9cb4",
+      "state_path": "checkpoints/ai_006_001__B__S2/state.pt",
+      "state_tensor_hash": "d0b879aec787738a0e926e2188347702800cba541d74a6f12c345829f80042f7",
+      "summary_sha256": "e8179f6caa89942e82a3b5a0bbdbea58af8051af2012b8710aba80ee81be0b9b",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.335878608475326,
+          -2.4952328037531872,
+          -0.8296814100244383
+        ],
+        [
+          3.163569377903638,
+          3.1424485987040116,
+          7.89886561586146
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "4d059ce479e423bb99503601a41d4712e03e17088fa8abd8226a993464d4f650",
+      "grid": 16,
+      "key": "ai_007_002__A__S2",
+      "optimization_path": "checkpoints/ai_007_002__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "7c1e407e38ccb98464e9fffa0b57c02eee7da00b5672f95cb7c74dab0efb9f74",
+      "state_path": "checkpoints/ai_007_002__A__S2/state.pt",
+      "state_tensor_hash": "e484d279b622c86259f4a025b3012bb814779c44d69ebfaa1713d15af6e585b8",
+      "summary_sha256": "dc162a631ea1f5d8749a861fdbd8d372544e889443e4f038e8690c045e4c88fc",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -5.945084665341135,
+          -2.8601628920717124,
+          -0.15607145329298655
+        ],
+        [
+          3.2401982377543903,
+          3.0127072261666603,
+          7.108554107205332
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "5b120d341bb6472f7086db44dfd6cb1a15f5b60e41bee7d7b50b16fe7fac693f",
+      "grid": 16,
+      "key": "ai_007_002__B__S2",
+      "optimization_path": "checkpoints/ai_007_002__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "a721fb8fe6a92ef9e189a1432b17975cb6b4b557bdba90430c76fc0fea77d014",
+      "state_path": "checkpoints/ai_007_002__B__S2/state.pt",
+      "state_tensor_hash": "4a4da1f48cb4905dea04cab94dcd44631686105fa28e7da36da48cb101167941",
+      "summary_sha256": "f283f607ad32d216008f11cbc468c7078a99008ca9431c3524014a70ecbd343e",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.692802405251614,
+          -2.5215761748204946,
+          -0.14586024048998514
+        ],
+        [
+          3.1805657508191034,
+          3.0854830994033824,
+          6.894118637383574
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "0ccbcf1ed37e217e4628ffa6934425fbc8935d425219814a7fb2c1bc7e33ad02",
+      "grid": 16,
+      "key": "ai_008_001__A__S2",
+      "optimization_path": "checkpoints/ai_008_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "fefa1303299a356f698287dc95550cc12f82ad0048f5411ad0ed5b7bf778516c",
+      "state_path": "checkpoints/ai_008_001__A__S2/state.pt",
+      "state_tensor_hash": "090428de15a236c28a1d7dc4c4eb8ac5b9733ed2d73874215553fe072211fdf7",
+      "summary_sha256": "099f427b98799b7b26da7cd59de2cd08b301d86913887ec015a768fd46a19640",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.462958631739827,
+          -3.1638962936785484,
+          -0.2157790907253796
+        ],
+        [
+          3.1696208092233036,
+          3.1910132237754008,
+          6.120619282714384
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "5396ea41fc8276736395a70d20be19739cac086c6f21a60029866e1fac09b808",
+      "grid": 16,
+      "key": "ai_008_001__B__S2",
+      "optimization_path": "checkpoints/ai_008_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "0dbdd54490cd47f8d235b0d354a5d83e20e69e3d93f4771f085139e38a8d5d70",
+      "state_path": "checkpoints/ai_008_001__B__S2/state.pt",
+      "state_tensor_hash": "9b48cd189f36eaed88eb86d21753814dae7250a7c4ab08a95a4e2e6cb350daa8",
+      "summary_sha256": "62c6c61463c7c74bdfdb652a2c9295152e8ba80b3c7cc78412671ded76535d90",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.1487720723156416,
+          -2.473724488320217,
+          -2.03561043490462
+        ],
+        [
+          4.025135158226675,
+          2.6907739453290045,
+          6.039003502581704
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "39fea7b21fe640510f1f6b0e2bf017edd9dc3bdf6fc4338bfa460a163cbeb842",
+      "grid": 16,
+      "key": "ai_009_001__A__S2",
+      "optimization_path": "checkpoints/ai_009_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "ebd8b25687e96adaee6b03f9bc3ee9593c64cbc31bf330ccd8c12616dbb5731e",
+      "state_path": "checkpoints/ai_009_001__A__S2/state.pt",
+      "state_tensor_hash": "c39837e99595639431a66afaab652e33223144fe3431b691796c0b848b923f4a",
+      "summary_sha256": "dbbe2656aef439c5e36369a55327954b4b7f231c04d35cc0daccc30ba2ac72c8",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.1696814560851503,
+          -2.484211220417376,
+          -1.5576960975438934
+        ],
+        [
+          4.464232217386362,
+          2.65529063807769,
+          6.016245676993098
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "de3cc9d4041a772dfeff3df105fc5d2fdc8ac0ca1680420d33f8b61e4aad1c22",
+      "grid": 16,
+      "key": "ai_009_001__B__S2",
+      "optimization_path": "checkpoints/ai_009_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "c345f0b050e3f7ea31a5b20c51d2e70d0de3090b32f199bca76ef4ef19d7fbc1",
+      "state_path": "checkpoints/ai_009_001__B__S2/state.pt",
+      "state_tensor_hash": "bac3d310d3ef03cf89e48901d80e3be892764c6276fb69333c399093d7228442",
+      "summary_sha256": "037248e52a4e7433aa88d4102429afcb6ba9fee99a67b9f1bedceb97009e4f71",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -5.293837544103129,
+          -2.734771262331954,
+          -0.8178658216934069
+        ],
+        [
+          3.2091864717167944,
+          3.150355018918524,
+          6.645084427699417
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "026deaea530fdebaf52665be439604074d34ed18c9b0a58df5ba851fd8180709",
+      "grid": 16,
+      "key": "ai_010_001__A__S2",
+      "optimization_path": "checkpoints/ai_010_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "22dc4c16f46b84c38a2d4d69f73db5e27e42d07188625e03e0a550c4e633f846",
+      "state_path": "checkpoints/ai_010_001__A__S2/state.pt",
+      "state_tensor_hash": "3aa44fa1bdaf3ef777576a153d4086f29066ba79ceb4e4f7da42f0efa61070ef",
+      "summary_sha256": "545cf2a31e926fe8854681e9b90830d5f4041c90d29eafb638866d91c64e5562",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -5.927164061586591,
+          -3.1050656192688724,
+          -0.14315598582362465
+        ],
+        [
+          3.2393448773112454,
+          3.1188088141306354,
+          6.726429527386677
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "23a29a503031c63a225c8ef945649ce748754ab6dbaf66e34a3b5ee3706a135c",
+      "grid": 16,
+      "key": "ai_010_001__B__S2",
+      "optimization_path": "checkpoints/ai_010_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "9271a615cfdea4a5e0776f05d91f30e34f781b50561ef78eb6504ac1bc126ef0",
+      "state_path": "checkpoints/ai_010_001__B__S2/state.pt",
+      "state_tensor_hash": "1d8caff3ffb6488ff401899b49abfeb121792763d56ae19535ba96b4e7a1c453",
+      "summary_sha256": "7260e4c378beeae6b70420f6cb2a1a209dca8b49210240018d6ce4b878f5bf5c",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.237664141923127,
+          -2.482980003613492,
+          -0.7312161383430271
+        ],
+        [
+          3.111273453956846,
+          2.885139739102626,
+          5.976889488459628
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "bb74ab7400f2f2fa4729a12dcb5a4e4ea35647db21f44860214a27d58f04f70a",
+      "grid": 16,
+      "key": "ai_011_001__A__S2",
+      "optimization_path": "checkpoints/ai_011_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "a6266216a806d64f6dda5f55e48a0feec4cb0726398241e0514f63bc18efd5ce",
+      "state_path": "checkpoints/ai_011_001__A__S2/state.pt",
+      "state_tensor_hash": "32717c54655308e501aee8d5bae29d87222fd52fc68327cb3db5b87024282725",
+      "summary_sha256": "86af0ec6642c319fec3cc9929fbad29b450e944407db98f653cf8fe6f0742b48",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.7979755190696887,
+          -2.648388083143638,
+          -0.30728895769923703
+        ],
+        [
+          3.1379549481066826,
+          2.5683810095286144,
+          6.010519615819494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "56ecdb3ba17cf10299539a8861030a6dc8bada79ad3ba765bf40c943456dbac1",
+      "grid": 16,
+      "key": "ai_011_001__B__S2",
+      "optimization_path": "checkpoints/ai_011_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "8cfa29400244b68321709a6df7ee6f974e8b89c7d075d77a932748ed78a11b4f",
+      "state_path": "checkpoints/ai_011_001__B__S2/state.pt",
+      "state_tensor_hash": "03a41b7e4e7f80a364581b0fc423102771019b33437b651ddbd90724a527e707",
+      "summary_sha256": "a7b9817d5158c03750b04f99c75e9c4974008926c6b1365307049af1c976b8d2",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.087399439256905,
+          -2.7003424893246164,
+          -0.4340215474975073
+        ],
+        [
+          3.151737040447749,
+          2.6498444536256924,
+          7.449236537571494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "269fa12633b71d030af3818b30872b1058dac1f07958d9277544afc8c3e66477",
+      "grid": 16,
+      "key": "ai_012_001__A__S2",
+      "optimization_path": "checkpoints/ai_012_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "8d7f17798addad70a12f58077b45852f7eb345eb4155752247fbac1d56ce592a",
+      "state_path": "checkpoints/ai_012_001__A__S2/state.pt",
+      "state_tensor_hash": "df1cddd12e08f2c8c55f460b33980a97f2f479974242cc84378b10025a081dad",
+      "summary_sha256": "23cd363a46169b61728781885ade1ea1f17e45159841867397165df5d8347b30",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.21549952537398,
+          -2.904142301156142,
+          -0.21182906735391605
+        ],
+        [
+          5.42641162270775,
+          2.4859679331864086,
+          8.279464000184806
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "b1c9d653a87edbeea689bd2a00d47506ad5d5c55c95710c322c5042f84f29f6e",
+      "grid": 16,
+      "key": "ai_012_001__B__S2",
+      "optimization_path": "checkpoints/ai_012_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "1980156967843e92e59412ae4299e3b6f191f9bc2956ce8a1460b684b14867ba",
+      "state_path": "checkpoints/ai_012_001__B__S2/state.pt",
+      "state_tensor_hash": "8d5c18dd1b76038a26fa18945b35333e2fab88bd9e80899ecfd4e2ef6f0b9288",
+      "summary_sha256": "dfab97d2b450503d8392c1ad7f7845ab4d4154e1f8c078a21117c91a80198205",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.222456974424359,
+          -2.8212360658608544,
+          -0.5190422774200005
+        ],
+        [
+          3.160891882628644,
+          2.436240207687611,
+          8.758172859647653
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "ad35e4dc45edc33ce1f059c6d1e5b00df06b05a88194e849194e2ad880b16d1a",
+      "grid": 16,
+      "key": "ai_014_003__A__S2",
+      "optimization_path": "checkpoints/ai_014_003__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "cb174c4066a9601f874562d7e09220e473c0c03d597d2f097a4d139e2efda191",
+      "state_path": "checkpoints/ai_014_003__A__S2/state.pt",
+      "state_tensor_hash": "aa25fa6408da577b5cfbec7dc88b8a903769ac7f392c60eb4566de03473cca87",
+      "summary_sha256": "2cb0e29ca1508bf2ab731f2b1a254073a2349fbdb891137a42bc1077ea593487",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.71111850568281,
+          -2.7221599078859855,
+          -0.1540244948974121
+        ],
+        [
+          3.184161479355237,
+          2.4315222954030933,
+          7.037991631606602
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "13991beba9a00c07e3f21baafba4bbae631ed814d7ec17d700449301bb3766aa",
+      "grid": 16,
+      "key": "ai_014_003__B__S2",
+      "optimization_path": "checkpoints/ai_014_003__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "7d3d3c7682cb66d5c57083f976250dae96695d26ba711d17c85f083053e5bffc",
+      "state_path": "checkpoints/ai_014_003__B__S2/state.pt",
+      "state_tensor_hash": "1a48a5562cf33f919c85f6989011f30a9cddf40f3fd757b3aefcb54b59658007",
+      "summary_sha256": "d9815a0948ac4f31df29e1df465069d40c732d3eaa3848e5295635c6a6c75022",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.1107105316901764,
+          -2.813219266414988,
+          -2.0983909038386717
+        ],
+        [
+          3.2258427553478706,
+          2.479555220004009,
+          6.041993048721267
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "799a7a9659f965e597644260ce2031711c0f54d9c6fece59dc3fbee1d04f1503",
+      "grid": 16,
+      "key": "ai_016_002__A__S2",
+      "optimization_path": "checkpoints/ai_016_002__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "057a2a1f8d34bdb4b3a79b7bec8cbcc4e7f3ac9617da8dc91ced5bca39235748",
+      "state_path": "checkpoints/ai_016_002__A__S2/state.pt",
+      "state_tensor_hash": "6f91260595a29f214a6a51f3cadeb7719e60ea791d6ad66f266cdcf9b3b2d471",
+      "summary_sha256": "cb2fda55ab8c6295cb9718189bf920c984aa9fbe5de624c427b619b706525bcf",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.357197309454805,
+          -2.5437195051822563,
+          -1.7837908320966527
+        ],
+        [
+          3.3578405570456242,
+          2.4857867381581435,
+          6.027012092924028
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "510d8209a1f536fca007e0f7fa8f4600c02069af3a7107fbbd3f3a33cf10acfd",
+      "grid": 16,
+      "key": "ai_016_002__B__S2",
+      "optimization_path": "checkpoints/ai_016_002__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "0bfc926e5562c7799aec0637afd15c7bb95c1f23a9c80f5414846fb0af09eccc",
+      "state_path": "checkpoints/ai_016_002__B__S2/state.pt",
+      "state_tensor_hash": "15f99483ce2d5ada86f1cd168fe03346cb43aba72628cf3d869291535e10acd5",
+      "summary_sha256": "71b596b79e5f512d0e4340875d68bd2b0c4dba94aa27ee810f725f668fbd5ed9",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.928332835642776,
+          -2.6201247333885442,
+          -0.21425830550158143
+        ],
+        [
+          3.144257633527022,
+          2.7677281625913768,
+          8.325602873445323
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "f3b2b0c2e39e8dc3203d03f85b0a3abe82b6f7686f98938cecc9cfde13afcfe4",
+      "grid": 16,
+      "key": "ai_018_002__A__S2",
+      "optimization_path": "checkpoints/ai_018_002__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "32ee9579e6d3d406ecfe32b2231db2d0d58f75fe44867fc2e1ed5b73d9ad04f3",
+      "state_path": "checkpoints/ai_018_002__A__S2/state.pt",
+      "state_tensor_hash": "26a1065601222a944c5c5fba5a5530c912c0a2996857a935d16f4a377cc652b4",
+      "summary_sha256": "0c2435c2c36c208a88361a746f0d7593fda6ff4414adf7a6fa846ee6c8286d32",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.9011001188874457,
+          -2.764075269601817,
+          -0.2552612508063321
+        ],
+        [
+          4.014315841790667,
+          2.764986959709186,
+          9.186664724845087
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "1ef25c144fdc18c6832d12dbbbeb4af7098e1fed6c0305df8131095981735b49",
+      "grid": 16,
+      "key": "ai_018_002__B__S2",
+      "optimization_path": "checkpoints/ai_018_002__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "615ee48a242c1bb8c5b3d42414039de0d0c95a0d31630849862471747fe8d570",
+      "state_path": "checkpoints/ai_018_002__B__S2/state.pt",
+      "state_tensor_hash": "d9e7392916736934cc506ccd5af4c6fd5dcb72e9050b0bd238df751ea6dd208f",
+      "summary_sha256": "90624674d273e01eeaca95b9168c574ea2924ab247e9cfafdfea83bede24cb11",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.2382860879932283,
+          -3.7747106209631074,
+          -0.1685870344272944
+        ],
+        [
+          4.181574767150795,
+          1.4003624018635792,
+          6.84718804036312
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "a066d5bcb327a5d853568fc3de59c967319aa9b3ed08f77c6bbf445cbe08e8e7",
+      "grid": 16,
+      "key": "ai_021_002__A__S2",
+      "optimization_path": "checkpoints/ai_021_002__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "ce07227cf775b824c2f33caf7675c3f87f483270add0ea090b9e5a72283f75fe",
+      "state_path": "checkpoints/ai_021_002__A__S2/state.pt",
+      "state_tensor_hash": "a86fb2ee3b33db24591cc5db250caec225c524aaec32b4c54e4295e48d3c2f6a",
+      "summary_sha256": "5222bea1b784431f27677e7a0ae915d8836cd9c14eeb226f94003848fc9fd602",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.576667924136903,
+          -3.7819057052395384,
+          -0.5181326736583873
+        ],
+        [
+          3.231116376472509,
+          1.5514591716686268,
+          6.286846249716253
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "03120150e629064656d2d062aa614a3a6f6361f43a344873e7a9bf706ba3701f",
+      "grid": 16,
+      "key": "ai_021_002__B__S2",
+      "optimization_path": "checkpoints/ai_021_002__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "69a859f69cfec7382865cef26d7ae006c2aa09c3621ea724479775699f6de70f",
+      "state_path": "checkpoints/ai_021_002__B__S2/state.pt",
+      "state_tensor_hash": "c825c6edffb0ef0fc14800393b68ffd7015caa2fe9cabb4a52479bfb0cedacc6",
+      "summary_sha256": "8926bd17c9501439eb50ef0406b7c4b4122a584b0c6b411c4d496bbca2eb1817",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.0589039075498006,
+          -3.221639366732126,
+          -0.14906655439849636
+        ],
+        [
+          4.040118651756019,
+          2.505473379111237,
+          6.908193055813651
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "66cadea936264bb68d970125c3df817afc27b83a8f142ab96e27108a902006dc",
+      "grid": 16,
+      "key": "ai_028_001__A__S2",
+      "optimization_path": "checkpoints/ai_028_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "90c1329bcde313a7d8645d758b992731d22b69838eecd6f12cdb75404bef559e",
+      "state_path": "checkpoints/ai_028_001__A__S2/state.pt",
+      "state_tensor_hash": "e50e3a8357f99688426b1b9416e0ad968ce16b51cabfe61b11580d8fde6fc5f9",
+      "summary_sha256": "0851c705877768f98e49f3e8388b5dc10cea443ce3dd583bfb34bc7b9c54d6db",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -5.585199761528045,
+          -3.96512239592348,
+          -0.20994118057993427
+        ],
+        [
+          3.310895134349827,
+          2.5408773328822534,
+          8.186560205623849
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "4279c16ce37a516b74b5caf5c308dee61d6663b896910caed177d768adf6d792",
+      "grid": 16,
+      "key": "ai_028_001__B__S2",
+      "optimization_path": "checkpoints/ai_028_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "3b8febac766ac6b2490070980d1bc0bc4b5b7a2c819637e389b20cb3a7ba8559",
+      "state_path": "checkpoints/ai_028_001__B__S2/state.pt",
+      "state_tensor_hash": "772ceed457db298235fe330d985889d21d6cf4e670784b9a4b34e512625d180b",
+      "summary_sha256": "930e3407754c69385527ebf4f239d4a5268e843a287a4231713626300fb22208",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.21015072535938,
+          -2.7158025511439883,
+          -0.254719112480295
+        ],
+        [
+          5.306160206021348,
+          2.5068688033431776,
+          6.710294793165229
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "fde47c394a8b12f19db9255f252b63c39343436f7e4f5c31da8715d6eab4612b",
+      "grid": 16,
+      "key": "ai_030_002__A__S2",
+      "optimization_path": "checkpoints/ai_030_002__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "8857aff3e42b7b00c5c297d2a5aac5227bf8157361e37b69630b73871a3c4b0b",
+      "state_path": "checkpoints/ai_030_002__A__S2/state.pt",
+      "state_tensor_hash": "ff350cb7f4baf095369b3d9e22595ad99b147d90f2e4195e6c68df2b1b7c5f65",
+      "summary_sha256": "4113cc74e6504f8ed729b064c0b62ce50ce3b0514c6174d0ce44199c13cb79b4",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.124086529255008,
+          -2.706573132461183,
+          -0.3513300508776651
+        ],
+        [
+          3.4988120878295366,
+          2.489680457330886,
+          5.989601579305681
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "bab15899764cddbcc0f41b1a80dadf3d3c38446d6efde0882d564a62f7a21ef0",
+      "grid": 16,
+      "key": "ai_030_002__B__S2",
+      "optimization_path": "checkpoints/ai_030_002__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "442c0a9eaf6e00c6c5ae2be09d638ca8eb46d2f79c227edbf55e5bcc418a8a20",
+      "state_path": "checkpoints/ai_030_002__B__S2/state.pt",
+      "state_tensor_hash": "9b914a229bce5c13c72814243c4f94d6fe38cfbafd4640fafcc79e9fb3e44c22",
+      "summary_sha256": "fd7a41ce4db8952a780472dca77a18d8254b370532cabdb903584fa623b58007",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.1741023254775804,
+          -2.4771412850143175,
+          -1.84985145272252
+        ],
+        [
+          4.557070506209466,
+          2.762526704014113,
+          6.030157836763607
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "39b2d0e4ea9837d01913690293d7cb9207e0a8e41291335ea68024645eebaffb",
+      "grid": 16,
+      "key": "ai_032_001__A__S2",
+      "optimization_path": "checkpoints/ai_032_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "2a53bad231fb788e2351ffff1c185bc4d4216b36c40edc7fc4957ac2b744e51f",
+      "state_path": "checkpoints/ai_032_001__A__S2/state.pt",
+      "state_tensor_hash": "b8669c78d26b7dee8c649b365eac45ec71cf4766d1910ecf3545b505333e9896",
+      "summary_sha256": "fc3b06e1fd5e7f3156e063eee0dba4d544d2e9b735d8081fda67fb8e1e085d43",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -4.587153063960539,
+          -3.0229120083878,
+          -2.1198359698047105
+        ],
+        [
+          3.1755348282276317,
+          2.878369761554119,
+          6.043014242338949
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "e0c87274ff3a052b5b4b047e301d495e780b44128e21c1ece2b3dd8bf7380ee3",
+      "grid": 16,
+      "key": "ai_032_001__B__S2",
+      "optimization_path": "checkpoints/ai_032_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "79b0f3aea20b8e7c64a336f853e61139c2bbc1e05eecbe08d0e36076e1edf378",
+      "state_path": "checkpoints/ai_032_001__B__S2/state.pt",
+      "state_tensor_hash": "530eb117ba83045f4e91d5f29bc6d9940a7d41469021555d2e1a19c6e958b3ab",
+      "summary_sha256": "b62fa56c4af5a3dd37a0171a02f8c40e7d05e10a4fc7a83c83f6358576c5b531",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.2093194451549447,
+          -2.6179556454024837,
+          -0.18700538126938238
+        ],
+        [
+          5.223514390948855,
+          2.428023931753728,
+          7.726974789798814
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "6c0a4710cc1188b02efb4ef617c5a835806593bbff988614f563de5e7d5c07e1",
+      "grid": 16,
+      "key": "ai_034_001__A__S2",
+      "optimization_path": "checkpoints/ai_034_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "51dfea948832f85d60795479bd9a59d2a7214f87276fb29f1ee43ee427d2d34b",
+      "state_path": "checkpoints/ai_034_001__A__S2/state.pt",
+      "state_tensor_hash": "a6ab8903d1bc7e7e807b000133636e0c14170be8efeede625746b109e46f8dac",
+      "summary_sha256": "54de11056f13ff613210285956baafb1d83bfe052b2a0193cffeb95b0b130429",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.1929619980894977,
+          -2.6670660550521967,
+          -0.1724266633675784
+        ],
+        [
+          4.880008002574476,
+          2.4229191018672136,
+          7.420821713860934
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "6ebc885356c1a4597937f553da5a621e5ec76f56b514b2880d854e88a38532d9",
+      "grid": 16,
+      "key": "ai_034_001__B__S2",
+      "optimization_path": "checkpoints/ai_034_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "65db4248c41f97b9a624876e337ab723e1d0cc2c8a7e3dee77e8f2a2f3db8312",
+      "state_path": "checkpoints/ai_034_001__B__S2/state.pt",
+      "state_tensor_hash": "0a70925fc4bd19bd58a43ca4d185bcaafbd0e1e24d5eac62dc187128640c19ce",
+      "summary_sha256": "6a1b07fa2f74901caa69c79f6b0b76591da0ec82414f2f4157eed0e607918639",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.1653047032987534,
+          -2.633315581102768,
+          -1.9535747665026064
+        ],
+        [
+          4.360810699516343,
+          2.489357826412415,
+          6.035097069451181
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "f3111b7e6128ed3dae0281e6c7c063ac59d1976be9ccaeec073b643acb07631d",
+      "grid": 16,
+      "key": "ai_036_001__A__S2",
+      "optimization_path": "checkpoints/ai_036_001__A__S2",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "a98f288c9dc0c5ab60c0a63ba290851def56283f7a2514e75cb4dd0042dfcadd",
+      "state_path": "checkpoints/ai_036_001__A__S2/state.pt",
+      "state_tensor_hash": "23c1cf3e0f04c345b41a3f83453f8490d47896603bebcc500023752c5023ba76",
+      "summary_sha256": "806e8de74c5297e7482321c7bb32a0b6b9d32e85d287fbb2be8d3c9fa3b07146",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.1950269972335983,
+          -2.7829850523383715,
+          -1.4161139949134571
+        ],
+        [
+          4.984978872148102,
+          2.9243901981879143,
+          6.363407613649052
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "37fdcae5bced38263dada07b514949707cd11b1cd523e49d94cb2057e6b80dda",
+      "grid": 16,
+      "key": "ai_036_001__B__S2",
+      "optimization_path": "checkpoints/ai_036_001__B__S2",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "7d402b9685b9b25f940f8f620c0df067601fb19548f951382403df61ff54d770",
+      "state_path": "checkpoints/ai_036_001__B__S2/state.pt",
+      "state_tensor_hash": "c133ceb8e5c011716365b2bc842b0b6d384156900592ea004c631381fae5efe9",
+      "summary_sha256": "9ca2f93f973660bbb5e05578e89006e795db6bde261dc92bd762c2f3ff645b1a",
+      "variant": "S2"
+    },
+    {
+      "bounds": [
+        [
+          -3.583887192173754,
+          -2.7233644198406255,
+          -1.0241189457348066
+        ],
+        [
+          3.2583548097512622,
+          2.7327350122455956,
+          6.602232345540922
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "e494b149f748906688625d9f4573a90abebd160c7c8097c1ec193264eb3b28e6",
+      "grid": 16,
+      "key": "ai_004_001__A__S3",
+      "optimization_path": "checkpoints/ai_004_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "f9bdb70a6e2c44eea5fb062d11eca7ffbf4c61ce91709597bf3a5ac946f2da2a",
+      "state_path": "checkpoints/ai_004_001__A__S3/state.pt",
+      "state_tensor_hash": "4ba967d0cd65192aab0736b86f6c9ebfce45b0ee37eab380241fb1058ae6cebc",
+      "summary_sha256": "1ad4a8333a7081f5badf31ea86ec828dca8ce1d17ade78c165744528407619ac",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.017292144357132,
+          -2.5524627599176672,
+          -0.43118687254436017
+        ],
+        [
+          3.1483985955384135,
+          2.486687495348901,
+          6.886207383722045
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "7b9087b6678ccebc4f5248e728dc0aad67e86355ec1f0809adb868a53a27d564",
+      "grid": 16,
+      "key": "ai_004_001__B__S3",
+      "optimization_path": "checkpoints/ai_004_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_004_001",
+      "selected_step": 10000,
+      "state_file_sha256": "02db7e65065e23ce3dd3ca3b6c4b9d2b14015b8242092ccca96963b3c430c9b3",
+      "state_path": "checkpoints/ai_004_001__B__S3/state.pt",
+      "state_tensor_hash": "6705cc69a5c653083a7aaa2e63b365dfca33606a90636d16f7d9a645c96c4777",
+      "summary_sha256": "51149a079f8d8edb6d8c68dbbc4c1f21547d2226c0d300cdb23bb86ed0a1beca",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.692487613003694,
+          -2.6857167398976594,
+          -0.20093101973898486
+        ],
+        [
+          3.1805507621035374,
+          2.7970806028585247,
+          8.050605000799328
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "a40147f1e541a8aa12fb05ac7adca3ab3354ef72e9cc712c148f3260eaac70c0",
+      "grid": 16,
+      "key": "ai_006_001__A__S3",
+      "optimization_path": "checkpoints/ai_006_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "2dd748a91184a66076de40c334ec0c084a79c3a9cdb13b46e3e36e0361a50988",
+      "state_path": "checkpoints/ai_006_001__A__S3/state.pt",
+      "state_tensor_hash": "4581c18e8eada94b2963ef40c05f7bad8e248e142074e78c4baaf8c16c5ce477",
+      "summary_sha256": "e33c51e4702ee1bcfd69cdff4c0c65e7321d506d9e22db466f36c72f514bdf74",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.8925542180239106,
+          -2.617351533264496,
+          -0.22599956059464965
+        ],
+        [
+          3.190077743294976,
+          2.6574005557381835,
+          8.577044358768294
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "81e10365e7183211b60bf8f03c4170d33a385dc0cac09d432e350a9b3c099ffa",
+      "grid": 16,
+      "key": "ai_006_001__B__S3",
+      "optimization_path": "checkpoints/ai_006_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_006_001",
+      "selected_step": 10000,
+      "state_file_sha256": "2ed663e9196572edcba02c9ef490b5bd17702e33bdaaea706a0ab35e4161565d",
+      "state_path": "checkpoints/ai_006_001__B__S3/state.pt",
+      "state_tensor_hash": "13bf47f60914147eefc808319ba1e56e210a1f739423f55024a35dcca1592e25",
+      "summary_sha256": "b80a8ff842bc5c21498be65f0adb232a59771992af865bcab3ac0e6704265d09",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.335878608475326,
+          -2.4952328037531872,
+          -0.8296814100244383
+        ],
+        [
+          3.163569377903638,
+          3.1424485987040116,
+          7.89886561586146
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "6a0fa9cdf2155dcd6ba14be0f8966e8985234a76eb43a2e33bf518cfb4b960b9",
+      "grid": 16,
+      "key": "ai_007_002__A__S3",
+      "optimization_path": "checkpoints/ai_007_002__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "93986e4e0bf25a4bf5c3b9416d7e6e122d762a8a1525cb1c14a71968634f0e5b",
+      "state_path": "checkpoints/ai_007_002__A__S3/state.pt",
+      "state_tensor_hash": "3f62f04e854458b3f60e1c55a79f9a47109160a165b1e34764e2bf68f059058c",
+      "summary_sha256": "1a84821ff8780651654e922aa13fc234788b2df0d1f7d49e3d8b068bc54833c7",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -5.945084665341135,
+          -2.8601628920717124,
+          -0.15607145329298655
+        ],
+        [
+          3.2401982377543903,
+          3.0127072261666603,
+          7.108554107205332
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "03cc5329259e06d89b41b19a3809bf5a05a1aea27c7c17a92946f47df78d4414",
+      "grid": 16,
+      "key": "ai_007_002__B__S3",
+      "optimization_path": "checkpoints/ai_007_002__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_007_002",
+      "selected_step": 10000,
+      "state_file_sha256": "bbe94b6fbbcdd06b91f248b99a602a286355cd438a8220ba9d57a6d0ad658882",
+      "state_path": "checkpoints/ai_007_002__B__S3/state.pt",
+      "state_tensor_hash": "3f7e0053c12a3281cc0a22e22018bcb095c03301369b202333488a4fc55b6a97",
+      "summary_sha256": "96842760587f3bedd3515b6faf35c938e55f7d9557017f19b738423d4aa708fc",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.692802405251614,
+          -2.5215761748204946,
+          -0.14586024048998514
+        ],
+        [
+          3.1805657508191034,
+          3.0854830994033824,
+          6.894118637383574
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "3dda8fda6c5615986f05c43aa659c8bf94a2219aeb3b7905af2b9cf1aeabc44f",
+      "grid": 16,
+      "key": "ai_008_001__A__S3",
+      "optimization_path": "checkpoints/ai_008_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "9fcfb561ef1d20d10bd041274be6d3130fb4cc2fadeee26055742551b6d23748",
+      "state_path": "checkpoints/ai_008_001__A__S3/state.pt",
+      "state_tensor_hash": "9ee18ac9851f230038adf6c943a06fcbfc9817a3304fc010026b6055a58feb6d",
+      "summary_sha256": "2f469c81d42c7fe9a4c6711454488277b8c873a3aff284fb94fcf19847f740fb",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.462958631739827,
+          -3.1638962936785484,
+          -0.2157790907253796
+        ],
+        [
+          3.1696208092233036,
+          3.1910132237754008,
+          6.120619282714384
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "cbfe5930253820fb860e2b6983d8442020f1e05d43596dd671db4176fa4b7174",
+      "grid": 16,
+      "key": "ai_008_001__B__S3",
+      "optimization_path": "checkpoints/ai_008_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_008_001",
+      "selected_step": 10000,
+      "state_file_sha256": "cd3168a0e3762f423399b6eb02086e1a3a8718ce46694de6890f4ce49211eec7",
+      "state_path": "checkpoints/ai_008_001__B__S3/state.pt",
+      "state_tensor_hash": "137233e7265fece87cd08d362e1bdc82b81d3abd739b304ef7779421db2514a4",
+      "summary_sha256": "b5c149af8710a47039b31667cbb10e6fb37fd7634c835bb903766451f4319b87",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.1487720723156416,
+          -2.473724488320217,
+          -2.03561043490462
+        ],
+        [
+          4.025135158226675,
+          2.6907739453290045,
+          6.039003502581704
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "6db851a6c7db764a6ceace86609d2d1f16fae7e47a0d092a6d0cb9f0096cf8d2",
+      "grid": 16,
+      "key": "ai_009_001__A__S3",
+      "optimization_path": "checkpoints/ai_009_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "16a6e57e869e0a13d002c32bb828eb3c3f0e61614b9221e121670b06af271e1a",
+      "state_path": "checkpoints/ai_009_001__A__S3/state.pt",
+      "state_tensor_hash": "8514f2b527b9e31a1ef30bc7ef4d35a84f55b3fabee6f94b95ba7f81eb020512",
+      "summary_sha256": "68e2911fc5766d24a27db2c286a48789b3f2bb9bdbce49c077e3854cb6f2232b",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.1696814560851503,
+          -2.484211220417376,
+          -1.5576960975438934
+        ],
+        [
+          4.464232217386362,
+          2.65529063807769,
+          6.016245676993098
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "a1afa92e88d9cbfee8fb3ef70fd7bba17887c3eee6e97758c741e8e51680e4cb",
+      "grid": 16,
+      "key": "ai_009_001__B__S3",
+      "optimization_path": "checkpoints/ai_009_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_009_001",
+      "selected_step": 10000,
+      "state_file_sha256": "f87e3453a2a83c450a6f558ccd9457cfe05fe5fe390a35fd9d6a78bd50966eb0",
+      "state_path": "checkpoints/ai_009_001__B__S3/state.pt",
+      "state_tensor_hash": "51fc9f49d90e9a708202b21fe8e6af03ee3175bd3f0f231ceadaa26b54cf78c2",
+      "summary_sha256": "6e961835011dd50761f2d316525b0cb126bd20be004c11420d770e1a15d4f449",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -5.293837544103129,
+          -2.734771262331954,
+          -0.8178658216934069
+        ],
+        [
+          3.2091864717167944,
+          3.150355018918524,
+          6.645084427699417
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "b552ce971cd60144ebf4387caf2b1ce068693a7592017f234b726d5ed748ca2f",
+      "grid": 16,
+      "key": "ai_010_001__A__S3",
+      "optimization_path": "checkpoints/ai_010_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "8f63d2c375f7f7ac3a7a686b957a770fcf6ebda9ac54c7b4be91db408316bf26",
+      "state_path": "checkpoints/ai_010_001__A__S3/state.pt",
+      "state_tensor_hash": "086f19ecb76c266a4ea87f82e154f079c861f3f37d159613cd51028fc76fd716",
+      "summary_sha256": "666bb4d1e793f1337bdeb32c3e8de249c6b14ed9f5dfd44e6ec547a85355639f",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -5.927164061586591,
+          -3.1050656192688724,
+          -0.14315598582362465
+        ],
+        [
+          3.2393448773112454,
+          3.1188088141306354,
+          6.726429527386677
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "b22abdd30d0f48cf31458b6ef283f3c94c3af7d4ca649f01929b7da702b87336",
+      "grid": 16,
+      "key": "ai_010_001__B__S3",
+      "optimization_path": "checkpoints/ai_010_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_010_001",
+      "selected_step": 10000,
+      "state_file_sha256": "2aafbd2f19bf99650d65e8aa5353a76c6a3644edddd3f98902a9616bff37a57b",
+      "state_path": "checkpoints/ai_010_001__B__S3/state.pt",
+      "state_tensor_hash": "c52c8b7c46a0e4689050b309673a3160f1d6a6dfb86def1d2a4e64bd6a486a57",
+      "summary_sha256": "57c3d10a5bfa3fa37fd7fabeb2dcf6ee5c91fe71f2de9aa447c7fa7c47078c7a",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.237664141923127,
+          -2.482980003613492,
+          -0.7312161383430271
+        ],
+        [
+          3.111273453956846,
+          2.885139739102626,
+          5.976889488459628
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "4f21552e42ad2ddd9c9d1bea18fc623f6dee19940e748653e56e13e61090b9c7",
+      "grid": 16,
+      "key": "ai_011_001__A__S3",
+      "optimization_path": "checkpoints/ai_011_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "00618d9a613ec561306b2688fb6021dc24fbc94761f4a32ca951acf2018f9bb3",
+      "state_path": "checkpoints/ai_011_001__A__S3/state.pt",
+      "state_tensor_hash": "3e04350354b9a247c04467e0e1bb80b87e3b81f03cedeb582b943fe46ba0945a",
+      "summary_sha256": "9af7eee8324ec37661e8c1b0d332ead69c78b6a1809c75b2961a43d7b208bec2",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.7979755190696887,
+          -2.648388083143638,
+          -0.30728895769923703
+        ],
+        [
+          3.1379549481066826,
+          2.5683810095286144,
+          6.010519615819494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "743601356c2482cec4bdb1845786948de09647b17eef082f125db7f89eae7b05",
+      "grid": 16,
+      "key": "ai_011_001__B__S3",
+      "optimization_path": "checkpoints/ai_011_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_011_001",
+      "selected_step": 10000,
+      "state_file_sha256": "05e1f4a5bcd0eacb7f20fa5ca268adce0f2f28df227005a0f2a5ba2cccccc1e6",
+      "state_path": "checkpoints/ai_011_001__B__S3/state.pt",
+      "state_tensor_hash": "0bf1c1989b19273e986aae414e309414d0e598bdc18d551abd5cc7febf7a9d81",
+      "summary_sha256": "c7bb6dbad526012962122a6c2b97e21508c96c3c6c5dc29ac175ac5c2fcae803",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.087399439256905,
+          -2.7003424893246164,
+          -0.4340215474975073
+        ],
+        [
+          3.151737040447749,
+          2.6498444536256924,
+          7.449236537571494
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "7df69d51490e0ffed689fcac774da52906f335c784d0fc278e635c797b7cd91f",
+      "grid": 16,
+      "key": "ai_012_001__A__S3",
+      "optimization_path": "checkpoints/ai_012_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "dadd979bec94f0775346b64de7573bc894e6618cf72264d1d7ff9eb2302d93a5",
+      "state_path": "checkpoints/ai_012_001__A__S3/state.pt",
+      "state_tensor_hash": "a4ddaad5b935dcf8082224b662e8cffb431a04270cd743642cd1b9113ffb8179",
+      "summary_sha256": "f0fd36eb3503e192760e900dc4b2e12c0f0adf22ea7739410a9d1b87080174e8",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.21549952537398,
+          -2.904142301156142,
+          -0.21182906735391605
+        ],
+        [
+          5.42641162270775,
+          2.4859679331864086,
+          8.279464000184806
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "2651c5598eaf99d7c835907b77449fa0b29ff351dcb0a7284d3c291317eb7a83",
+      "grid": 16,
+      "key": "ai_012_001__B__S3",
+      "optimization_path": "checkpoints/ai_012_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_012_001",
+      "selected_step": 10000,
+      "state_file_sha256": "30e9b7461b8a96d6cb4b0c7d161907549b8dd13187db15daae472c795ab26860",
+      "state_path": "checkpoints/ai_012_001__B__S3/state.pt",
+      "state_tensor_hash": "3ed1b435225f50124c2f5fe7964b3cc11dfad7b79b0752fafa2f74e748f57638",
+      "summary_sha256": "f377c749f936d1085295bc65f7f963f032e2ee5a0f094e264a3d91109f164ac5",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.222456974424359,
+          -2.8212360658608544,
+          -0.5190422774200005
+        ],
+        [
+          3.160891882628644,
+          2.436240207687611,
+          8.758172859647653
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "fec731664ba32f76f57eccc44623fb2e096c5b6a0df4407190cf2f1d71a4c798",
+      "grid": 16,
+      "key": "ai_014_003__A__S3",
+      "optimization_path": "checkpoints/ai_014_003__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "a15ad2bc08e1cfeaa92daeb7bf91b39f9078b2e1ee141a74c9a992b2db5c09a1",
+      "state_path": "checkpoints/ai_014_003__A__S3/state.pt",
+      "state_tensor_hash": "6d16b4a55a4a43d559a2f3138fda95ea00c5e24a971729ab974a9da6f2fd788c",
+      "summary_sha256": "fe436bfc0dc801ae185f2597550d1b0207cd66e20903c0ec3ee377260a2904eb",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.71111850568281,
+          -2.7221599078859855,
+          -0.1540244948974121
+        ],
+        [
+          3.184161479355237,
+          2.4315222954030933,
+          7.037991631606602
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "0697e5b30f13974e76bcb0de0d6eac916234824f3fbfa085bfa4bf68f5e263bd",
+      "grid": 16,
+      "key": "ai_014_003__B__S3",
+      "optimization_path": "checkpoints/ai_014_003__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_014_003",
+      "selected_step": 10000,
+      "state_file_sha256": "3e5d76920eba35e940fe0f472873818d2ab9c16f23ab9e60ae1e61dccc9dd0ef",
+      "state_path": "checkpoints/ai_014_003__B__S3/state.pt",
+      "state_tensor_hash": "746393c57c1c2afee28a5a34255b254d7cce88183de999cd2d56080bf9f8fbdc",
+      "summary_sha256": "ee35ddf1f6f1c5af39b9c196f159254f6727496d5b5a20660b8261817753bc7d",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.1107105316901764,
+          -2.813219266414988,
+          -2.0983909038386717
+        ],
+        [
+          3.2258427553478706,
+          2.479555220004009,
+          6.041993048721267
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "74d8f4b46d665706d5a79e51f701124bc3bc6fe2df694603ecfe575b84317b11",
+      "grid": 16,
+      "key": "ai_016_002__A__S3",
+      "optimization_path": "checkpoints/ai_016_002__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "6c65a0feeb3149439d827b58bf0eecb3e0f1d1668b7811d0d4e06c4e1a19dc32",
+      "state_path": "checkpoints/ai_016_002__A__S3/state.pt",
+      "state_tensor_hash": "6fb7f8c871eecb8f02b0bfaeb9c8c1dad1598da999f4c296905b54afb949edf3",
+      "summary_sha256": "f3ad2d1e743d5b11aa98a9a4a795c0ca6ab0d505981e93f310b0320999ade162",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.357197309454805,
+          -2.5437195051822563,
+          -1.7837908320966527
+        ],
+        [
+          3.3578405570456242,
+          2.4857867381581435,
+          6.027012092924028
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "eb261ce71eeb7ee213734751ca990acab2f082ce582093ecde6f9dae8b4a9d1d",
+      "grid": 16,
+      "key": "ai_016_002__B__S3",
+      "optimization_path": "checkpoints/ai_016_002__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_016_002",
+      "selected_step": 10000,
+      "state_file_sha256": "2c7dbe01dd669a2a655fdb0cd8c18ec67599963be91f1ae9b791e88505d3ffa3",
+      "state_path": "checkpoints/ai_016_002__B__S3/state.pt",
+      "state_tensor_hash": "7f4c549960acd4e1568a9949de08c96c2d54c8aa88de9892c8e22bee3db496c7",
+      "summary_sha256": "eae802479d9393872079be56276554df141af9d7da0bb46d89874dda2229ec44",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.928332835642776,
+          -2.6201247333885442,
+          -0.21425830550158143
+        ],
+        [
+          3.144257633527022,
+          2.7677281625913768,
+          8.325602873445323
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "15de5d4cc3a9ea1c94fdc7e35709be319ac878a8c8947f9c35d29bfa21d2d6b0",
+      "grid": 16,
+      "key": "ai_018_002__A__S3",
+      "optimization_path": "checkpoints/ai_018_002__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "4dff6834da530a4c206677aa68d360588eeaa01c91e1738d9dc195141325f7ad",
+      "state_path": "checkpoints/ai_018_002__A__S3/state.pt",
+      "state_tensor_hash": "ddfb93a153967baf576310a26e45dc7bee575635f79c4e41f3aded5e59558d8e",
+      "summary_sha256": "12fdfed0e140f3744620f5579e1fb5672d1eeba3eeb0f25b7db85e072f8cb2b1",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.9011001188874457,
+          -2.764075269601817,
+          -0.2552612508063321
+        ],
+        [
+          4.014315841790667,
+          2.764986959709186,
+          9.186664724845087
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "593e369f22262199ed07217fc069d66a0e20bb1098736e1f7a645d31b2338fa5",
+      "grid": 16,
+      "key": "ai_018_002__B__S3",
+      "optimization_path": "checkpoints/ai_018_002__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_018_002",
+      "selected_step": 10000,
+      "state_file_sha256": "0c8ae953389cd9d5c7dc59eb16aa140d6782ab89c7a6a4e435555f8f1df01788",
+      "state_path": "checkpoints/ai_018_002__B__S3/state.pt",
+      "state_tensor_hash": "d69195ea1fe7c99db376e337611eeb2f2a842cdf0a36fc4e8cc8d8b08da01949",
+      "summary_sha256": "a07546b0fe24af7ad4a2d531757644bd2d03e7fb393461ad3b0b06397eb27683",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.2382860879932283,
+          -3.7747106209631074,
+          -0.1685870344272944
+        ],
+        [
+          4.181574767150795,
+          1.4003624018635792,
+          6.84718804036312
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "860fb0f98351802567689f872a50b69c25377cae2a7b7719943550162a7fd650",
+      "grid": 16,
+      "key": "ai_021_002__A__S3",
+      "optimization_path": "checkpoints/ai_021_002__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "e861d3ce6e02c87d001bdd31f8dc8a49144c00c441a69f63de992df0d3b50e56",
+      "state_path": "checkpoints/ai_021_002__A__S3/state.pt",
+      "state_tensor_hash": "80dc38f7bc8743e720aa35462b515f5a0d81e95b9d9962188869a0e8638206cf",
+      "summary_sha256": "a53a3f823cadb5618a4b95355a594e318b8fbcabe20a91d926aca4fcd4e7958c",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.576667924136903,
+          -3.7819057052395384,
+          -0.5181326736583873
+        ],
+        [
+          3.231116376472509,
+          1.5514591716686268,
+          6.286846249716253
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "1ed00a1818f82ef1070fcc976847933e54cb874b5082c49bbcb0855fe559f7b5",
+      "grid": 16,
+      "key": "ai_021_002__B__S3",
+      "optimization_path": "checkpoints/ai_021_002__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_021_002",
+      "selected_step": 10000,
+      "state_file_sha256": "02367e73056acb440494b6943c8b241d2e304a6940c6cd058e038d0818c60cc4",
+      "state_path": "checkpoints/ai_021_002__B__S3/state.pt",
+      "state_tensor_hash": "420c32bf59b5177464c4d0709fba3a0c0fecee3b469b71d01e8923e55d65548e",
+      "summary_sha256": "d571e589bab308a60b74fc717fa537ce0974fbf7cf19b7fd941a5d83f44bbea5",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.0589039075498006,
+          -3.221639366732126,
+          -0.14906655439849636
+        ],
+        [
+          4.040118651756019,
+          2.505473379111237,
+          6.908193055813651
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "eb8e3b035a4f81f89fcc08bcf2fb10b9aa008078dc5f5a083e12c9c577b2ee26",
+      "grid": 16,
+      "key": "ai_028_001__A__S3",
+      "optimization_path": "checkpoints/ai_028_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "1edc68cc8a6d4bed875b0a01b69c9bcf8d8f520ba3c2bead0dcd21fcf51ff2e2",
+      "state_path": "checkpoints/ai_028_001__A__S3/state.pt",
+      "state_tensor_hash": "cda085364bdc63f085783157a1bd8d81abf16d8fa38b6f8e343c3fc6e1f4769b",
+      "summary_sha256": "de51730b14399dfc2dbf15d036e9494cd706a9bc0c5b5d35a33c12b08e5940fe",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -5.585199761528045,
+          -3.96512239592348,
+          -0.20994118057993427
+        ],
+        [
+          3.310895134349827,
+          2.5408773328822534,
+          8.186560205623849
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "4133556db045ddf0be37bf01cee6603d2196654f85dfda9f3694f9dfcea9e552",
+      "grid": 16,
+      "key": "ai_028_001__B__S3",
+      "optimization_path": "checkpoints/ai_028_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_028_001",
+      "selected_step": 10000,
+      "state_file_sha256": "35626b1bdea7c44ee46de352ec169e92a52b82c8de0f72d83bd4672ee9dbf924",
+      "state_path": "checkpoints/ai_028_001__B__S3/state.pt",
+      "state_tensor_hash": "9ae8e2742858befb4d15a80ed817d01aa022d074990c89c3edbdd6842bd215a3",
+      "summary_sha256": "4de9635d97cb596c69e64fb7e905500a8ed8c531be36b82e527332aabf7c4019",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.21015072535938,
+          -2.7158025511439883,
+          -0.254719112480295
+        ],
+        [
+          5.306160206021348,
+          2.5068688033431776,
+          6.710294793165229
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "504ed190d83dc36570c6b4b2bbfdbfba1e1bcd8cd377e5610ce01b524a1d06eb",
+      "grid": 16,
+      "key": "ai_030_002__A__S3",
+      "optimization_path": "checkpoints/ai_030_002__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "9bfd28e0de64d44d9ca68076afdea798c9f20c31eb46830a80090c3947174d03",
+      "state_path": "checkpoints/ai_030_002__A__S3/state.pt",
+      "state_tensor_hash": "4a29e7d9bb6bc42b25d982fef4999a4ba95e633b238fe7004fe34af368a5b8c7",
+      "summary_sha256": "e5527ea1a571ad74f424dcc296cfe14d114b4e9eff48ed4ec926bfd631f7ad8c",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.124086529255008,
+          -2.706573132461183,
+          -0.3513300508776651
+        ],
+        [
+          3.4988120878295366,
+          2.489680457330886,
+          5.989601579305681
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "5f898a4a9d48ee1a28be39e5670f27270d8039258c9b9570bd8eeac478d1e959",
+      "grid": 16,
+      "key": "ai_030_002__B__S3",
+      "optimization_path": "checkpoints/ai_030_002__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_030_002",
+      "selected_step": 10000,
+      "state_file_sha256": "d02f9973f198b29a3a59fa121ddb50761dce2aa700866f4aa10d5704bb2f7d22",
+      "state_path": "checkpoints/ai_030_002__B__S3/state.pt",
+      "state_tensor_hash": "784bd76df96face28394c56a7aae4151b923985426dc5e7f27fb03b598d24aa1",
+      "summary_sha256": "ecb67820f3a90e9d677bb0609b9e022eb860262a453474414593dd428986f272",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.1741023254775804,
+          -2.4771412850143175,
+          -1.84985145272252
+        ],
+        [
+          4.557070506209466,
+          2.762526704014113,
+          6.030157836763607
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "187d978122e4fc1a2549adba29a770139c94eac20c9c08570f96920ed78fffd1",
+      "grid": 16,
+      "key": "ai_032_001__A__S3",
+      "optimization_path": "checkpoints/ai_032_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "e9ef123ba9d338d6d6ba04e6c8078b04450ab2af1a870c0c0e877c8a3842b794",
+      "state_path": "checkpoints/ai_032_001__A__S3/state.pt",
+      "state_tensor_hash": "9137579b5a0fce8eef656a1440283a60671e4ba6984ff2db15c716d253bc3a7c",
+      "summary_sha256": "e2fe56487f50599ff50cf5a7e068dfa181d180838a948e2d0ce933b1402c6254",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -4.587153063960539,
+          -3.0229120083878,
+          -2.1198359698047105
+        ],
+        [
+          3.1755348282276317,
+          2.878369761554119,
+          6.043014242338949
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "6506a5833464f60911cd01212e4b2c3c78e5dd8622dc1339c220311fb6b61284",
+      "grid": 16,
+      "key": "ai_032_001__B__S3",
+      "optimization_path": "checkpoints/ai_032_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_032_001",
+      "selected_step": 10000,
+      "state_file_sha256": "e561d30189adafda5bed9cf8c0ebdd9bfdfc2331a19f1d7b53995c98f54dd683",
+      "state_path": "checkpoints/ai_032_001__B__S3/state.pt",
+      "state_tensor_hash": "f20be93d839cbe78333970c5ce797a3db5c1355832aa02fd495c5a3e0056feef",
+      "summary_sha256": "86da230d008c71798314e6eb3e3c2e381b8c5f6a32676539d2622079fbee2575",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.2093194451549447,
+          -2.6179556454024837,
+          -0.18700538126938238
+        ],
+        [
+          5.223514390948855,
+          2.428023931753728,
+          7.726974789798814
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "44d94b0a994a2b78e5253e7c9b6f2515ab0e0c54d524aef4b28f7fb88863b434",
+      "grid": 16,
+      "key": "ai_034_001__A__S3",
+      "optimization_path": "checkpoints/ai_034_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "4076a056f0951b67954e6faa2ddb65264f5c7bced5720701b7d9308b3452d098",
+      "state_path": "checkpoints/ai_034_001__A__S3/state.pt",
+      "state_tensor_hash": "49e6fee51eeb9bce218a71bdbbf0b9cf49fad9c4775cbb70afabc3d9ddc21c4b",
+      "summary_sha256": "ddc5e020283ca9636483d558cea336420fc0f6a6612437fe57baaf9f800850ce",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.1929619980894977,
+          -2.6670660550521967,
+          -0.1724266633675784
+        ],
+        [
+          4.880008002574476,
+          2.4229191018672136,
+          7.420821713860934
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "46a459f80dd2686b41367305f9c2b76c8f4ed829541ef55046c4930845529127",
+      "grid": 16,
+      "key": "ai_034_001__B__S3",
+      "optimization_path": "checkpoints/ai_034_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_034_001",
+      "selected_step": 10000,
+      "state_file_sha256": "5ab25c4e6dde24a76232b2dbd5f246a3804d691a1cc5903499ad75a66209717f",
+      "state_path": "checkpoints/ai_034_001__B__S3/state.pt",
+      "state_tensor_hash": "a971d23c2302e63555d04eff043cbfc3bb64ceeae0ed28f1ae81b4b41cfa3b2a",
+      "summary_sha256": "1a3cf62e869f84ed8d0bb630c26e43b297a87691bb59bb44dee53d09b2dce1ae",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.1653047032987534,
+          -2.633315581102768,
+          -1.9535747665026064
+        ],
+        [
+          4.360810699516343,
+          2.489357826412415,
+          6.035097069451181
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "cf96e0f3d948065d962763791e61eca6e09c8f7d285e32bf2876f32d006f25bc",
+      "grid": 16,
+      "key": "ai_036_001__A__S3",
+      "optimization_path": "checkpoints/ai_036_001__A__S3",
+      "role": "A",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "98b5b7c510a001a6eaf10c0231051fec61c081495fb76f6dcbf17619d0afd30f",
+      "state_path": "checkpoints/ai_036_001__A__S3/state.pt",
+      "state_tensor_hash": "37d951d44e9894b69128fb760a7dc2a1d5402f89f0b972ace346c5232fbf4b4d",
+      "summary_sha256": "896a904d6bed023b94532e44c78b39120c2666be83464c4230bcea6d2b7cb362",
+      "variant": "S3"
+    },
+    {
+      "bounds": [
+        [
+          -3.1950269972335983,
+          -2.7829850523383715,
+          -1.4161139949134571
+        ],
+        [
+          4.984978872148102,
+          2.9243901981879143,
+          6.363407613649052
+        ]
+      ],
+      "bytes": 84233,
+      "completion_sha256": "2290b8841d63464c7211ae6b20febf374c79049ef6fb539ee7980e3624f5270e",
+      "grid": 16,
+      "key": "ai_036_001__B__S3",
+      "optimization_path": "checkpoints/ai_036_001__B__S3",
+      "role": "B",
+      "samples": 64,
+      "scene_id": "ai_036_001",
+      "selected_step": 10000,
+      "state_file_sha256": "a3f78764479dafa3cc4d578a36f97b2987d36811b83d944c37a6d4bc6d5f6da3",
+      "state_path": "checkpoints/ai_036_001__B__S3/state.pt",
+      "state_tensor_hash": "29bfd1e8d177f66b8d249cd173a228539c54f0d1c64c397b79157f620a796b0c",
+      "summary_sha256": "874cb2f1365d4d34175252f66ace3ca7e82d3bca1382e0874968599995b2834d",
+      "variant": "S3"
+    }
+  ]
+}

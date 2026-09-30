@@ -1,0 +1,29 @@
+{
+  "draft": false,
+  "geometry_bounds_sensitivity_grids": [
+    8
+  ],
+  "planned_grid_sweep": [
+    8,
+    16,
+    32
+  ],
+  "primary_grid": [
+    8,
+    8,
+    8
+  ],
+  "query_scene_ids_unchanged": true,
+  "renderer_samples_fixed_for_primary_sweep": 64,
+  "secondary_matrix": {
+    "grids": [
+      8,
+      16
+    ],
+    "samples": [
+      64,
+      128
+    ]
+  },
+  "freeze_basis": "preregistration.json"
+}

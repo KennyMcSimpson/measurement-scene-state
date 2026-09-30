@@ -1,0 +1,66 @@
+{
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "all_scientific_json_byte_exact": true,
+  "audit_script_sha256": "a49c8eb289fa9714ede1a2b9c55761d1066ab31e90ecd9a95fd5db0f92554a9b",
+  "comparisons": {
+    "bootstrap_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "46d84042c516140233dbfe9724dddbb3f190110734033f1f575af553c8c39514",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/bootstrap_results.json",
+      "reproduced_sha256": "46d84042c516140233dbfe9724dddbb3f190110734033f1f575af553c8c39514"
+    },
+    "observability_analysis.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "bdabaa73aaf71242887c6c70c8a5a83424619f228f07886d32fabe2d31112a74",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/observability_analysis.json",
+      "reproduced_sha256": "bdabaa73aaf71242887c6c70c8a5a83424619f228f07886d32fabe2d31112a74"
+    },
+    "qualification_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "6a00bfe1be32cc94bc558a552ebaa46bf18481b96247d2ddbdf06824e5bfe4fd",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/qualification_results.json",
+      "reproduced_sha256": "6a00bfe1be32cc94bc558a552ebaa46bf18481b96247d2ddbdf06824e5bfe4fd"
+    },
+    "state_use_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "ed9e2ce06fd07f61fe1e09a831f9a031ec8aac994ed824129b2f38fbc4f8478c",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/state_use_results.json",
+      "reproduced_sha256": "ed9e2ce06fd07f61fe1e09a831f9a031ec8aac994ed824129b2f38fbc4f8478c"
+    },
+    "static_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "ac4ba35b929d993d0da0268ed94b6b8dc3219eee3ebbc73b57567bd6f8b58567",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/static_results.json",
+      "reproduced_sha256": "ac4ba35b929d993d0da0268ed94b6b8dc3219eee3ebbc73b57567bd6f8b58567"
+    },
+    "wrong_scene_results.json": {
+      "byte_exact": true,
+      "original_decoded_sha256": "bd675b528090462e1992a89fc5dd405d6a0e5c34afbccdc365d02a83e2edf6e4",
+      "original_file": "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/wrong_scene_results.json",
+      "reproduced_sha256": "bd675b528090462e1992a89fc5dd405d6a0e5c34afbccdc365d02a83e2edf6e4"
+    }
+  },
+  "meaning": "Independent raw replay of same estimator, not independent estimator implementation",
+  "media_or_checkpoint_loaded": false,
+  "new_model_forward": false,
+  "original_artifacts_modified": false,
+  "raw_only": true,
+  "reproduction_inputs_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/audit/dev_state_use.json": "77ca1582dc7c6d60044139f4ecb23853321dfb081a4992a573763d5d989f0412",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/cost_analysis.json": "01d9ff28b01a63e6ace736d54e4f68555be6ec16dcd2ab4eeab62d06914974ac",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/dev_context_results.json": "f9edc013fa24791717186a78ee5257421509f94e8802aec82c3d7d99ced1f16d",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/dev_matched_results.json": "f9a6230ea11c3b3d9ffd74636c0d320d6bb09174f816b79f96721ea1ab011d1e",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/dev_query_results.json": "f50cdf64c52b878ea46033b41f2ad57bc2f906c69cc8538b2e43528d017de0da",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/dev_region_results.json": "2ba1dd38883d4447f5a1bbe299295982da0d76f5ca223397736c955016b995b0",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/raw/dev_static_matched_results.json": "874a271d6df0b6dd948140342f9bfe067296e85177f7594e463ff8089ccdb3bd",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/scene_split.json": "4a111c072f2178740a709e5257e065d4fcbc5564d624a97f12b8b795731e1afc",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/training_contract.json": "eb2bb52134fe600bb3f23ae09f54b2d121129cc3ed42a5976aa00d55970d2543",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-RGBD-TRAIN-SCALE-V6/training_curves.json": "9cb1523e62bdba2cda8da3ec5ac626ccc5e4e8f717f0d0207841b3a8e71e50f8"
+  },
+  "reproduction_source_sha256": {
+    "/home/zonghan/measurement-scene-state/scripts/analyze_rgbd_scale_carrier.py": "764dc6e666c55ae6d4a3cbaaeb52037447a195f64a4df8ff1abb1b5c61a50730",
+    "/home/zonghan/measurement-scene-state/src/mcss/mechanism_pilot/geometry_carrier_statistics.py": "a4605d75d58ef9787f92b7ac17c23ff1d0f4e41ca01c9178ba059d1c4c62c1b1"
+  },
+  "scientific_json_count": 6,
+  "status": "PASS"
+}

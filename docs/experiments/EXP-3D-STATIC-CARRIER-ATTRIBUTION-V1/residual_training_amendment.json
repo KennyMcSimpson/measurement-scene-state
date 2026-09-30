@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-09-27T06:25:59.690031+00:00",
+  "type": "TRAINING_ADEQUACY_AMENDMENT_BEFORE_ANY_RESIDUAL_QUALIFICATION_EVALUATION",
+  "reason": "3000-step preflight last500 train objective improves6.406%; user explicitly requires properly trained control; budget-only extension based solely on training-side curves",
+  "original_run_preserved": "residual/",
+  "replacement_final_run": "residual_30000/",
+  "steps": 30000,
+  "all_other_hyperparameters_unchanged": true,
+  "validation_queries": [
+    15
+  ],
+  "validation_interval": 250,
+  "training_queries": [
+    12,
+    13,
+    14
+  ],
+  "same_seed_fresh_initialization": true,
+  "checkpoint_selection": "minimum training-side validation loss, earliest tie, fixed full 30000 budget",
+  "no_primary_or_unseen_scores_accessed": true,
+  "no_further_budget_expansion_planned": true,
+  "if_not_converged": "report limitation, cannot infer representation failure from residual weakness"
+}

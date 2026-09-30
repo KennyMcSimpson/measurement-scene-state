@@ -1,0 +1,88 @@
+{
+  "definition": "Pearson correlation of flattened density logits; no gate uses it",
+  "descriptive_only": true,
+  "input_sha256": {
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C0_20260928/states.pt": "6f33ed2154c684fa49db9164f304255f322bfd883ed6c2d315f2af4636563d2a",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C0_20260929/states.pt": "1033c4dc97ee44641ac24e19eb8405baf74a1ce5d0bc037d2cfc1ed3f225e8f1",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C0_20260930/states.pt": "2e22722318d1729b665e0d009e9622443586f5e9bd4e8550892f4db5b53cc068",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C1_20260928/states.pt": "00fc9994d3f55de2f48249a510cdb82535f23f87506d39a43440b2582f72586c",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C1_20260929/states.pt": "55fd2f1d99b41b9e858a80537026d5faedb33a103c3f6fe92e0abf47777335f9",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C1_20260930/states.pt": "18a19003004c05d475c09a4932b6da0e4f4ee4e8b6507cd0e3b4f941bc6826c5",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C2_20260928/states.pt": "061edd12973ca763d83fbf17dcc3607f2cc34f08050f25a30d38874d7198e3c2",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C2_20260929/states.pt": "edbed0aa6de25557fd9ff3cbc02ca3aa6c9806fc63dc226922d592e7631b8fd4",
+    "/home/zonghan/measurement-scene-state/outputs/EXP-3D-PLANE-SWEEP-CARRIER-V4/raw/selected_dev/C2_20260930/states.pt": "4a702bd449bd8a1d5f4f909736713873d6e46b97c3ba5c4a7af850c8293b1328"
+  },
+  "per_run": {
+    "C0_20260928": {
+      "across_scene_A": 0.4978223539600527,
+      "direct_A_vs_anchor_A": -0.14688005277637445,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7122112975827048
+    },
+    "C0_20260929": {
+      "across_scene_A": 0.6164733319821896,
+      "direct_A_vs_anchor_A": -0.0786827034379411,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7584249298979993
+    },
+    "C0_20260930": {
+      "across_scene_A": 0.6063968649169816,
+      "direct_A_vs_anchor_A": -0.08767564971136799,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7581203627828245
+    },
+    "C1_20260928": {
+      "across_scene_A": 0.4905120953491656,
+      "direct_A_vs_anchor_A": -0.1898260377104949,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7141320722795758
+    },
+    "C1_20260929": {
+      "across_scene_A": 0.5794897297112502,
+      "direct_A_vs_anchor_A": -0.14510389285566255,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7107981326388537
+    },
+    "C1_20260930": {
+      "across_scene_A": 0.8414860603693416,
+      "direct_A_vs_anchor_A": 0.03217062016961919,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.8315630811725003
+    },
+    "C2_20260928": {
+      "across_scene_A": 0.4997022300055903,
+      "direct_A_vs_anchor_A": -0.11736427658281653,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7451911728931258
+    },
+    "C2_20260929": {
+      "across_scene_A": 0.5739038244768243,
+      "direct_A_vs_anchor_A": -0.03907523095639749,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.7411044645243314
+    },
+    "C2_20260930": {
+      "across_scene_A": 0.749198696797799,
+      "direct_A_vs_anchor_A": -0.06021450874177038,
+      "n_scenes": 8,
+      "within_scene_A_B": 0.8059166908900839
+    }
+  },
+  "per_variant_mean_over_seeds": {
+    "C0": {
+      "across_scene_A": 0.5735641836197414,
+      "direct_A_vs_anchor_A": -0.10441280197522784,
+      "within_scene_A_B": 0.7429188634211762
+    },
+    "C1": {
+      "across_scene_A": 0.6371626284765859,
+      "direct_A_vs_anchor_A": -0.10091977013217941,
+      "within_scene_A_B": 0.7521644286969766
+    },
+    "C2": {
+      "across_scene_A": 0.6076015837600712,
+      "direct_A_vs_anchor_A": -0.0722180054269948,
+      "within_scene_A_B": 0.7640707761025137
+    }
+  }
+}

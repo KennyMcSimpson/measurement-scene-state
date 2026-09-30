@@ -1,0 +1,31 @@
+{
+  "ROOT_CAUSE": "SOURCE_FRAME_IS_BLACK",
+  "black_frames": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "frames_audited": 16,
+  "render_failure_status": "UNKNOWN_NOT_INFERRED_FROM_BLACK_PIXELS",
+  "frame_exclusion_applied": false,
+  "RGB_PREPROCESSING_CHANGED": false,
+  "scope": "Existing TRAIN media only, all frames retained; no model outputs used",
+  "source_is": "Published final_preview JPEG; not the linear HDR color buffer",
+  "official_metadata_directory": "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/rgb_audit/official_metadata",
+  "near_black_rule": "descriptive only, all channels <= 1/255; not an exclusion rule",
+  "future_unseen_quality_rule": "official included; camera not BAD; finite positive depth >= .95; reject all-black or >99.9% pixels all RGB channels <=2/255; no model scores",
+  "future_rule_applied_to_existing_train": false
+}

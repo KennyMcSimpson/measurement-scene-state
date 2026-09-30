@@ -1,0 +1,19 @@
+{
+  "C0": "mean_A_B[RGB Charbonnier(eps=.001)+masked depth AbsRel(clamp=.001)]",
+  "C1": "C0 + .1 mean_A_B surface loss",
+  "C2": "C1 + .1 mean_A_B free-space loss; secondary ablation only",
+  "free_space": "direct-state S1/S3 geometry_losses definition: penalty only on samples with t < d*-tau; samples behind the surface are never labelled empty",
+  "free_space_in_primary": false,
+  "lambda_free": 0.1,
+  "lambda_surface": 0.1,
+  "post_surface_unknown_never_empty": true,
+  "ray_sampling": "matched Monte Carlo estimate of old full-image loss",
+  "regularization": 0,
+  "regularization_authority": "old small_training phase A/MeasurementLoss; do not substitute direct-state density L2/TV or RGB MSE",
+  "surface": "-log(sum rendering weights where abs(t-d)<=tau +1e-8)",
+  "surface_authority_sha256": "054370208fec1ed2621defef16d27193055bfc1afc46e55a1800f3699afb0866",
+  "surface_gradients": "includes upstream transmittance before surface band",
+  "surface_normalization": "valid depth, hit ray, nonempty band only; count excluded miss/empty-band rays, keep all in original losses/metrics",
+  "tau": ".5*norm((bounds_hi-bounds_lo)/16)",
+  "training_track": "RGB+D offline utility track; not RGB-only training"
+}

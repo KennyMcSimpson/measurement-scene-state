@@ -1,0 +1,38 @@
+{
+  "GT_used_in_optimizer": false,
+  "angle_bins_degrees": [
+    "[0,5]",
+    "(5,15]",
+    "(15,30]",
+    "(30,180]"
+  ],
+  "association": "Within each role/query Spearman(visible view count,S0 per-pixel AbsRel) on all GT-valid pixels; constant inputs undefined. Per scene query then role average only if ALL role/query coefficients defined, otherwise scene null; >=75% scene coverage required for correlation classification.",
+  "bounds_inside": "world query point transformed to frozen context-anchor coordinates",
+  "camera_baseline": "maximum pair distance among visible context cameras; null/NaN if fewer than2",
+  "classes": {
+    "OBS0": "0visible",
+    "OBS1": "1visible",
+    "OBS2PLUS": ">=2visible"
+  },
+  "conflict_front": "in_front & inside & valid depth & projected distance < context GT - tolerance",
+  "context_count": "exact locked three frames for each A/B role, no selection",
+  "depth": "metric normalized ray-distance",
+  "empty_regions": "all17 scenes retained; conditional metric null, coverage and empty count explicit; additive error contributions include zero empty-region contribution",
+  "final_holdout_forbidden": true,
+  "invalid_pixels": "arrays retained with validity mask; only GT-invalid pixels excluded from error per prior metric convention",
+  "nearest_context_angle": "minimum query-point versus context-point viewing angle over all context cameras",
+  "nearest_context_distance": "minimum query surface to context camera Euclidean distance",
+  "no_model_mutation": true,
+  "no_region_selection_for_overall": true,
+  "occluded": "in_front & inside & valid depth & projected distance > context GT + tolerance",
+  "primary_angle_binning": "maximum triangulation angle; median bins also saved",
+  "purpose": "POST_ALL_STATE_SEAL_DIAGNOSTIC_REGION_LABELING_ONLY",
+  "query_surface": "world camera ray origin+normalized direction*query GT depth",
+  "triangulation": "visible context-camera pairs subtended at true query point; only>=2visible",
+  "visibility": {
+    "abs_tol_m": 0.05,
+    "criterion": "in_front & inside_image & valid contextdepth & abs(projected Euclidean distance-context GT)<=.05+.01*context GT",
+    "relative_tol": 0.01,
+    "sampling": "nearest pixel floor(projected_uv+.5) after image/front checks; same as old visibility.py"
+  }
+}

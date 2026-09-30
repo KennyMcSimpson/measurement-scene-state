@@ -1,0 +1,76 @@
+{
+  "curve_state_files": 0,
+  "data_stream_shared_by_widths": {
+    "20260928": true,
+    "20260929": true
+  },
+  "eval_branch": "C",
+  "eval_cohorts": {
+    "EVAL_FAR": 4,
+    "EVAL_V3": 4,
+    "EVAL_V4": 4
+  },
+  "eval_consistency": {
+    "c0_minus_v14_c1_max_abs": 0.0,
+    "queries_compared": 48
+  },
+  "eval_methods": [
+    "AHFILL8_C0",
+    "AHFILL8_C1",
+    "C0",
+    "C0_LAST",
+    "C1",
+    "C1_LAST",
+    "CONSTANT",
+    "HFILL8_C0",
+    "HFILL8_C0_LAST",
+    "HFILL8_C1",
+    "HFILL8_C1_LAST",
+    "HFILL8_W32_T72",
+    "HFILL8_W64_T72",
+    "REPROJ_HARMONIC",
+    "REPROJ_NN",
+    "W32_T72",
+    "W64_T72"
+  ],
+  "eval_statuses": {
+    "HARMONIC_HYBRID_LABEL": "NOT_DISTINGUISHABLE",
+    "HFILL8_WIDTH_STATUS": "NOT_ESTABLISHED",
+    "WIDTH_AT_SCALE_STATUS": "UNDEFINED"
+  },
+  "evaluated_variants": [
+    "C0",
+    "C1"
+  ],
+  "finalized": true,
+  "interaction_defined": false,
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 4,
+    "old_files_unchanged": 0,
+    "query_rows": 640,
+    "static_rows_recomputed": 128,
+    "status": "PASS"
+  },
+  "preseal_depth_reads": 56,
+  "query_rows": 640,
+  "real_DEV_read": false,
+  "reference_status": "NO_CARRIER_ABOVE_GEOMETRY_FREE_REFERENCE",
+  "report_branch": null,
+  "seconds": 432.5876473750686,
+  "selected_state_files": 4,
+  "status": "PASS",
+  "synthetic_only": true
+}

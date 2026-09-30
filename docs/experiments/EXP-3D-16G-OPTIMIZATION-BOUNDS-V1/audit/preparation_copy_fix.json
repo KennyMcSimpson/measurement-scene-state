@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "file": "scripts/prepare_optimization_bounds.py",
+  "before_sha256": "ced62c6ce4c10286bc8b16492dd2e18648d823c01ba2d6c52da5ddab8d854a8c",
+  "after_sha256": "1ca5f44f055804d4e8aca1ced1e00d10b10023d5f1fb9c84bdac41dd07b8e226",
+  "change": "Copy already-verified historical baseline raw into a fresh prepared experiment root",
+  "scientific_frozen_source": false,
+  "budget_or_analysis_rule_changed": false,
+  "formal_raw_or_states_changed": false,
+  "current_run_recovery": "Existing sealed baseline copied byte-for-byte; original failed analysis log retained"
+}

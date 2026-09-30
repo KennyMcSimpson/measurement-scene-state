@@ -1,0 +1,54 @@
+{
+  "carrier": {
+    "phase": "phase_b_final",
+    "provenance": {
+      "config": {
+        "gradient_clip": 1.0,
+        "ray_chunk_size": 2048,
+        "renderer_samples": 64,
+        "seed": 20260927,
+        "stage_a_lr": 0.001,
+        "stage_a_steps": 1000,
+        "stage_b_lr": 0.0003,
+        "stage_b_steps": 600
+      },
+      "lock_sha256": "06098309887aacb764088c7e3d61d743e2d249ec7fb83d6af41ef5db23ae53d7",
+      "query_ids": {
+        "ai_001_001": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "ai_002_001": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "ai_003_001": [
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      "status": "SHORT_ENGINEERING_TRAINING_NO_SCIENTIFIC_QUALIFICATION",
+      "training_scene_count": 3,
+      "training_scenes": [
+        "ai_001_001",
+        "ai_002_001",
+        "ai_003_001"
+      ]
+    },
+    "schema_version": "mcss.dynamic.v1",
+    "sha256": "be7b8b6d2ef366cad245732b9ff227802db596da65082ac0e160f24541579e42"
+  },
+  "carrier_retrained": false,
+  "previous_checkpoint_hash_match": true,
+  "residual": {
+    "path": "outputs/EXP-3D-STATIC-CARRIER-ATTRIBUTION-V1/residual_30000/best.pt",
+    "selected_step": 7500,
+    "sha256": "6006cc8a003d29734bf5206d04fc2d7bbb4fe8551f0814bdd2a8d36281d3d31d"
+  }
+}

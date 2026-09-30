@@ -1,0 +1,126 @@
+{
+  "C2_difference_from_C1": "16^3 grid (4096 candidates); secondary, never a gate",
+  "anchor_control": "anchor RGB + camera, the same full-role GT-free bounds as the variant's A/B state; a single view never reaches the >=2-view lifting support, so an anchor state carries learned priors only",
+  "depth_bypass": null,
+  "new_backbone_or_learned_matching": false,
+  "only_difference_C0_C1": "C1 differs from C0 only by the depth prior that sets the GT-free camera-frustum bounds of every state (all context pixel rays cast to the prior's near and far distances, hull x1.1, >=1 m): the frozen V2 prior (q01/q99 of 12 frames of 3 TRAIN scenes) for C0, the TRAIN72 prior (q01/q99 of every prepared TRAIN72 frame) for C1, in training and in evaluation. The 5125 shared parameters and their per-seed draw (identical to V5-V9), the V5 C0 model without a depth bypass, the frozen V2 C1 surface loss, TRAIN72, 6000 steps and the 32^3 grid are identical. The surface-loss band follows each state's bounds with the frozen 16-grid spacing.",
+  "parameter_count": {
+    "C0": 5125,
+    "C1": 5125,
+    "C2": 5125
+  },
+  "priors": {
+    "FROZEN_V2_PRIOR": {
+      "far_m": 5.672044978141789,
+      "file": "train_depth_prior.json",
+      "near_m": 0.21425169706344604,
+      "sha256": "5f1595be923f92c10b835204dfc9e96e851c1b312c05852eec41f6c270ec1003"
+    },
+    "TRAIN72_PRIOR": {
+      "far_m": 15.85042251586917,
+      "file": "train72_depth_prior.json",
+      "near_m": 0.3958110380172729,
+      "sha256": "85721d578ed66e053fd297fe3d0e7e1d9af70ff1414c6e6a30a5102d52dc2005"
+    }
+  },
+  "shared_parameter_hash_by_seed": {
+    "20260928": "d1ab5f7b4e4687ff2bf79733a0310c07c87ac504ac438df5d7beac72c68640a4",
+    "20260929": "87b9eb714ca84fb63a452f12618af519d3697cf4f7c2178f78dff45e0c042b48",
+    "20260930": "9f32f06813f4492a283dfe6adf53594bc048326ef8dbecae513e977bcd56ee0a"
+  },
+  "state": "query-independent; all DEV states sealed before query load; >=2 queries/state",
+  "test_time_depth_used": false,
+  "test_time_input": "RGB+CAMERA for every variant",
+  "variants": {
+    "C0": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          32,
+          32,
+          32
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 32768
+      },
+      "grid": 32,
+      "label": "FROZEN_PRIOR_GRID32",
+      "model": "V5_C0_RGB",
+      "prior": "FROZEN_V2_PRIOR",
+      "train": "TRAIN72"
+    },
+    "C1": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          32,
+          32,
+          32
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 32768
+      },
+      "grid": 32,
+      "label": "TRAIN72_PRIOR_GRID32",
+      "model": "V5_C0_RGB",
+      "prior": "TRAIN72_PRIOR",
+      "train": "TRAIN72"
+    },
+    "C2": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          16,
+          16,
+          16
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 4096
+      },
+      "grid": 16,
+      "label": "TRAIN72_PRIOR_GRID16",
+      "model": "V5_C0_RGB",
+      "prior": "TRAIN72_PRIOR",
+      "train": "TRAIN72"
+    }
+  }
+}

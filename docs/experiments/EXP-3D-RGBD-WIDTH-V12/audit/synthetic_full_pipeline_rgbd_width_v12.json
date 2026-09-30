@@ -1,0 +1,65 @@
+{
+  "eval_v4": {
+    "INTERPRETATION_BRANCH": "C",
+    "far_pixel_fraction": 0.0,
+    "n_scenes": 4,
+    "statuses": {
+      "HARMONIC_HYBRID_LABEL": "NOT_DISTINGUISHABLE",
+      "HFILL8_WIDTH_STATUS": "NOT_ESTABLISHED",
+      "WIDTH64_COMPLETION_STATUS": "UNDEFINED"
+    }
+  },
+  "evaluated_variants": [
+    "C0",
+    "C1"
+  ],
+  "finalized": true,
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 4,
+    "old_files_unchanged": 0,
+    "query_rows": 640,
+    "static_rows_recomputed": 128,
+    "status": "PASS"
+  },
+  "preseal_depth_purposes": [
+    "CONTEXT_ONLY_RGBD"
+  ],
+  "preseal_depth_reads": 56,
+  "query_rows": 640,
+  "real_DEV_read": false,
+  "reference_integrity": {
+    "max_raw_absrel_deviation": 0.0,
+    "max_raw_delta1_pixel_deviation": 0.0,
+    "median_scale_undefined_views": 0,
+    "prediction_rows": 768,
+    "reference_rows": 192,
+    "variants": [
+      "C0",
+      "C1"
+    ]
+  },
+  "reference_status": "NO_CARRIER_ABOVE_GEOMETRY_FREE_REFERENCE",
+  "report_branch": null,
+  "seconds": 394.33895107510034,
+  "status": "PASS",
+  "summary_free_fields": [
+    "WIDTH64_COMPLETION_GAIN=UNDEFINED",
+    "WIDTH64_COMPLETION_GAIN_CI=UNDEFINED",
+    "WIDTH64_COMPLETION_STATUS=UNDEFINED",
+    "INTERPRETATION_BRANCH=C"
+  ],
+  "synthetic_only": true
+}

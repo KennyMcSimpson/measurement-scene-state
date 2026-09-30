@@ -1,0 +1,35 @@
+{
+  "checks": {
+    "RGB_ONLY_depth_isolation": "Depth paths removed from private RGB_ONLY records, read(depth_allowed=False),batch.depth=None; optimizer depth loss stayszero and no contextdepth bytes loaded by optimizer.",
+    "carrier_integrity": "Old3523 filemanifest unchanged;2695freshhash/828protectedstat-only;checkpointSHA exact.",
+    "checkpoint_selection": "Best full permitted supervision objective every100steps including0/final; strictlyless comparisons earliesttie. RGBD adds privileged contextdepth; RGBONLYnot.",
+    "context_query_isolation": "ContextOnlyLoader copies only A/B context frame records, strips query cameras/media records, denies query APIs; runner passes only resulting batch to optimizer.",
+    "controls": "Wrongscene changes state only with recipient query camera hash preserved. Shuffle clones jointlydensity/color; densityonlycolor=.5;coloronlydensity=-2;zerodensity=-100,color0. Originalstate hash checked.",
+    "coordinate_frame": "BothA/B firstframe commonanchor; optimizer converts supervision cameras by inversefirstcontextc2w; evaluator uses same contextA anchor. Noquerycamera influencesstate or bounds.",
+    "fixed_renderer": "Optimizer uses unchanged FixedMeasurementRenderer._render_chunk over exact normalized full-resolution rays; evaluation uses fixed publicforward. Main samples64;128onlydeclaredsecondary.",
+    "frozen_carrier_baseline": "136 replay rows 7 metrics exactly match;51 freshly constructed A/B/anchor states match old hashes; B-final SHA exact; analytic prior same .5/5/1. No writer instantiated.",
+    "holdout": "Allowlist17 and explicit12forbidden disjoint loader/evaluator guards; oldholdoutmedia only inheriteddigest+stat preservation, no byte reopening.",
+    "query_oracle": "ExplicitQueryOracleLoader requires privileged scope; runner requires completed context evaluation marker before85 separately optimized oracle states.",
+    "state_sealing": "All expected states complete, per-state completion/plan/source/file hashes verified, typed state hashes matched then seal barrier before query media hash/decode."
+  },
+  "finding_resolved_before_query_evaluation": {
+    "issue": "Evaluator originally hashed query media before StateSealBarrier.seal, althoughoptimizationoutputs already existed.",
+    "resolution": "Moved media SHA after barrier.assert_ready and log HASH_INPUT_AFTER_ALL_STATES_SEALED; addedphase/per-state completion provenance checks. Optimizer frozen code untouched."
+  },
+  "limitations": [
+    "API isolation is not OS-level information-flow enforcement; arbitrary malicious Python introspection/filesystem access is outside threatmodel.",
+    "1000-step best-context result is attained optimization performance, not an expression-capacity impossibility proof.",
+    "RGBD vsRGB-onlycarrier gain confounds privileged geometry with learnedconstruction; RGBONLYmatchedinput track must drivelearner-specificclaim.",
+    "Protectedmedia preservation confirms oldrecordeddigest andunchangedstat, not freshbytehash."
+  ],
+  "reviewed_source_sha256": {
+    "scripts/prepare_direct_capacity_baseline.py": "405fb2a4fac47fc0d33ead68a6a13f89568fa27a9b4f1fa2a0fd1784244562a0",
+    "scripts/reconstruct_direct_capacity_baseline.py": "4debba39209b23c3f3f6ef16e741379b79f6efbdff79218ce1b9a615aeedf8c6",
+    "scripts/run_direct_capacity_optimization.py": "f897332c2ce137aff122d2364d97a3b53b0e85b40b6b698432743748d49ca32b",
+    "src/mcss/mechanism_pilot/direct_capacity_contracts.py": "7c89250db5ea1b7a341a71455240d72705bab5259e972cb5dc42ad13a0b5948f",
+    "src/mcss/mechanism_pilot/direct_capacity_evaluation.py": "65022b00b85c5bbcd2e18584d363b00817e03482a820fa6d30ba54147c3d2706",
+    "src/mcss/mechanism_pilot/direct_capacity_optimization.py": "0a8a1dcff441c0552a780072deaf7e83360051603b35b2791ce948da4d4d84d2"
+  },
+  "scope": "Read-only independent review, no optimizer/query/holdout execution by reviewer. Runtime full-run integrity remains required.",
+  "status": "PASS_CODE_REVIEW_WITH_DISCLOSED_LIMITS"
+}

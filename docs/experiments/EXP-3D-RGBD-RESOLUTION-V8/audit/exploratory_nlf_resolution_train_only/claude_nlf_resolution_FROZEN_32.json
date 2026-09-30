@@ -1,0 +1,42 @@
+{
+ "rule": "FROZEN",
+ "grid": 32,
+ "best_params": {
+  "k": 1.0,
+  "a": 32.0,
+  "b": 4.0,
+  "c": -2.0
+ },
+ "train24_fit_absrel": 0.439599464761494,
+ "train24_constant_absrel": 0.5919369452943405,
+ "trainx_absrel": 0.5271150302000056,
+ "trainx_constant_absrel": 0.5282772701078405,
+ "trainx_opacity": 0.650858516685238,
+ "trainx_views": 192,
+ "trainx_views_beating_constant": 0.5520833333333334,
+ "top3_fit": [
+  {
+   "k": 1.0,
+   "a": 32.0,
+   "b": 4.0,
+   "c": -2.0,
+   "absrel": 0.439599464761494
+  },
+  {
+   "k": 1.0,
+   "a": 64.0,
+   "b": 4.0,
+   "c": -2.0,
+   "absrel": 0.45106031619491693
+  },
+  {
+   "k": 0.5,
+   "a": 64.0,
+   "b": 4.0,
+   "c": -2.0,
+   "absrel": 0.45466353587319475
+  }
+ ],
+ "seconds": 724.0864760859986,
+ "exploratory_train_only": true
+}

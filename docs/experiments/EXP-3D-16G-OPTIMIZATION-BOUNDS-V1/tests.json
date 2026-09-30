@@ -1,0 +1,115 @@
+{
+  "additional_protocol_tests": {
+    "command": ".venv/bin/pytest -q tests/test_optimization_bounds_protocol_regression.py",
+    "failed": 0,
+    "passed": 2,
+    "ruff": "PASS",
+    "seconds": 1.23,
+    "source_sha256": "846597ae627057d14fb9485c2dda23b8033c1a762cb97a51dec4b79f39e602d1"
+  },
+  "additional_statistics_audit_tests": {
+    "command": ".venv/bin/pytest -q tests/test_optimization_bounds_statistics_audit.py",
+    "failed": 0,
+    "passed": 5,
+    "seconds": 0.03,
+    "source_sha256": "e59bb24e070aec929ec39e7e5aac76618ab19095d3cdea9a2aee8f5075c53381"
+  },
+  "analysis_source_lock_unchanged": true,
+  "collected": 760,
+  "command": ".venv/bin/pytest -q",
+  "earlier_752_record": "outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/tests_before_protocol_regression.json",
+  "exit_code": 0,
+  "failed": 0,
+  "final_new_source_sha256": {
+    "scripts/analyze_optimization_bounds.py": "1d5c5bd4b0cdc84edf6c957a1f2f02afc7e2040d9188e65ee44a95f9feb1a287",
+    "scripts/audit_optimization_bounds.py": "55c43c44731f103cdfcd5bbd082779df9823e4d60f48d49b44fcf6044b5c2aa1",
+    "scripts/audit_optimization_bounds_statistics.py": "cb81b585ec8b544ba36398d7471eff3d9add2626933821518a73d42d19721905",
+    "scripts/evaluate_optimization_bounds.py": "e0e3e7ef75d74f4b915c27e56fa0a8996d7ebcb5d4fca9e80ddd7787ecfeec76",
+    "scripts/finalize_optimization_bounds.py": "101d754bd86b837feb8de78801e8ee91f8bb9bdc7e3b4a01cf4ec1d9882391dd",
+    "scripts/freeze_optimization_bounds.py": "2508a8f5da2efd1c0f5ab7ffcb7b9fd7b79560b8d72f689859cdfc01c75418cc",
+    "scripts/initialize_optimization_bounds_reproduction.py": "b63b2e8476b8a180dd36bdd4a8500b47834625a6985ba656ff06a285118f5ad6",
+    "scripts/prepare_optimization_bounds.py": "1ca5f44f055804d4e8aca1ced1e00d10b10023d5f1fb9c84bdac41dd07b8e226",
+    "scripts/report_optimization_bounds.py": "a027474c4fc1f37dfdbd9a865095711b0b3204840ab8bea0acdfba038cbde1e3",
+    "scripts/run_optimization_bounds.py": "6d7e7afd22effe15217797cb7a528c9a96638e60177298b3da0305f09406ae18",
+    "src/mcss/mechanism_pilot/budget_state_optimization.py": "33bfba615b1fe5789f266e7627dee92e1468a29eb4c90f27a5916d3c5fd4d10f",
+    "src/mcss/mechanism_pilot/optimization_bounds_contracts.py": "b4b2e428ce58a225b01035bb6e353b72ad354dd9866d8cc1c35d82d883e03d7b",
+    "src/mcss/mechanism_pilot/optimization_bounds_evaluation.py": "a77efb28217564b0aff1e546517d8aa51c2095903077fd16d36d83589dec5fdb",
+    "src/mcss/mechanism_pilot/optimization_bounds_statistics.py": "c52c3659ec3e92e4923bd1a35d5f4a3be0d09b1b9915c7ac532a7e26f39f36ee",
+    "tests/test_budget_state_optimization.py": "2bfa70296334d2f611448ee9b2bfcc193b1429fa37c490a4735382bdfbe88b09",
+    "tests/test_optimization_bounds_contracts.py": "f6ddc6bd905d1bbdb4a721339341dbeb94f97da6d6ba4305f348c000c17534f9",
+    "tests/test_optimization_bounds_evaluation.py": "ed487a8dd389852612a8e7a403d3d6a4de87d91eeac6a06b4542f2f7a073f6fc",
+    "tests/test_optimization_bounds_protocol_regression.py": "846597ae627057d14fb9485c2dda23b8033c1a762cb97a51dec4b79f39e602d1",
+    "tests/test_optimization_bounds_statistics.py": "ce2bf844bd1e817e20193dc68d2f63ff7ac10d425ca640bf02e4f8516d4b5502",
+    "tests/test_optimization_bounds_statistics_audit.py": "e59bb24e070aec929ec39e7e5aac76618ab19095d3cdea9a2aee8f5075c53381"
+  },
+  "frozen_formal_and_analysis_sources_unchanged": true,
+  "frozen_optimizer_modified_during_testing": false,
+  "log_path": "outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/full_pytest_report_preparation.log",
+  "log_sha256": "c2460d2bda5701a0320dd6ffbb3518b16c124cdd662bed351b1c7bfd75763f29",
+  "new_statistics_synthetic_tests": {
+    "command": ".venv/bin/pytest -q tests/test_optimization_bounds_statistics.py",
+    "failed": 0,
+    "passed": 20
+  },
+  "nonfrozen_changes_since_previous_suite": {
+    "files": {
+      "scripts/prepare_optimization_bounds.py": {
+        "current_sha256": "1ca5f44f055804d4e8aca1ced1e00d10b10023d5f1fb9c84bdac41dd07b8e226",
+        "previous_sha256": "ced62c6ce4c10286bc8b16492dd2e18648d823c01ba2d6c52da5ddab8d854a8c"
+      },
+      "scripts/report_optimization_bounds.py": {
+        "current_sha256": "a027474c4fc1f37dfdbd9a865095711b0b3204840ab8bea0acdfba038cbde1e3",
+        "previous_sha256": "3d0c6a0d3fcdc35f27df55184edb015f30450e926735ad40deb0968b8f13e50c"
+      }
+    },
+    "scope": "Only non-frozen preparation/reporting changes: preserve and copy the sealed carrier baseline for reproduction; report requested residual-bottleneck diagnostic flags and distinguish primary versus auxiliary cost. No frozen scientific optimizer, renderer, bounds rule, decision rule or statistical implementation changed."
+  },
+  "passed": 759,
+  "platform": "Linux-6.11.0-13-generic-x86_64-with-glibc2.40",
+  "previous_full_suite": {
+    "log_path": "outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/full_pytest_final.log",
+    "log_sha256": "a914273fca0b5150f380866193b1c63314ddf35be39cb49278020e62d1541564",
+    "passed": 759,
+    "record": "outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/tests_before_report_preparation.json",
+    "skipped": 1
+  },
+  "pytest_reported_seconds": 40.46,
+  "python": "3.12.7 (main, Nov  6 2024, 18:29:01) [GCC 14.2.0]",
+  "recorded_utc": "2026-09-27T18:32:47.907435+00:00",
+  "ruff": {
+    "command": ".venv/bin/ruff check src/mcss/mechanism_pilot/budget_state_optimization.py src/mcss/mechanism_pilot/optimization_bounds*.py scripts/*optimization_bounds*.py tests/test_budget_state_optimization.py tests/test_optimization_bounds*.py",
+    "files": [
+      "scripts/analyze_optimization_bounds.py",
+      "scripts/audit_optimization_bounds.py",
+      "scripts/audit_optimization_bounds_statistics.py",
+      "scripts/evaluate_optimization_bounds.py",
+      "scripts/finalize_optimization_bounds.py",
+      "scripts/freeze_optimization_bounds.py",
+      "scripts/initialize_optimization_bounds_reproduction.py",
+      "scripts/prepare_optimization_bounds.py",
+      "scripts/report_optimization_bounds.py",
+      "scripts/run_optimization_bounds.py",
+      "src/mcss/mechanism_pilot/budget_state_optimization.py",
+      "src/mcss/mechanism_pilot/optimization_bounds_contracts.py",
+      "src/mcss/mechanism_pilot/optimization_bounds_evaluation.py",
+      "src/mcss/mechanism_pilot/optimization_bounds_statistics.py",
+      "tests/test_budget_state_optimization.py",
+      "tests/test_optimization_bounds_contracts.py",
+      "tests/test_optimization_bounds_evaluation.py",
+      "tests/test_optimization_bounds_protocol_regression.py",
+      "tests/test_optimization_bounds_statistics.py",
+      "tests/test_optimization_bounds_statistics_audit.py"
+    ],
+    "log_path": "outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/final_report_ruff.log",
+    "log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+    "n_files": 20,
+    "status": "PASS"
+  },
+  "shell_command": ".venv/bin/pytest -q > outputs/EXP-3D-16G-OPTIMIZATION-BOUNDS-V1/audit/full_pytest_report_preparation.log 2>&1",
+  "skip_reasons": [
+    "SKIPPED [1] tests/test_v5_checkpoint_compatibility.py:15: Optional historical V5 step-4500 checkpoint is not distributed in the public repository; restore the original checkpoint to run strict compatibility checks"
+  ],
+  "skipped": 1,
+  "status": "PASS",
+  "working_directory": "/home/zonghan/measurement-scene-state"
+}

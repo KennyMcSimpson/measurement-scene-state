@@ -1,0 +1,21 @@
+{
+  "DENSITY_STATUS": "frozen V2 primary-contrast gate applied to C0-C1: gain>0; CIlo>0; >=.75 nonworse; all LOSO>0; positive top1 share<=.5; C1 wrong-scene and shuffle damage CIlo>0; C0/C1 common-mask opacity gate; state audits PASS",
+  "SCENE_SPECIFICITY_STATUS": "C1 wrong-scene damage CIlo>0 and C1 spatial-shuffle damage CIlo>0 -> SUPPORTED, otherwise NOT_ESTABLISHED",
+  "STATIC_DEV_STATUS": "frozen V2 static gate for C1",
+  "SURFACE_AT_DENSE_GAIN": "AbsRel(C2)-AbsRel(C1), descriptive with CI, never a gate",
+  "TRAIN_FIT": "last-100-step TRAIN depth AbsRel per variant, descriptive",
+  "bootstrap": {
+    "ci": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "physical scene"
+  },
+  "dynamic_ttt_next_stage_allowed": false,
+  "final_static_status": "NOT_ESTABLISHED",
+  "fresh_qualification_included": false,
+  "interpretation": {
+    "A": "DENSITY_STATUS=SUPPORTED and SCENE_SPECIFICITY_STATUS=SUPPORTED",
+    "B": "DENSITY_GAIN CIlo>0 or SCENE_SPECIFICITY_STATUS=SUPPORTED, not A",
+    "C": "otherwise"
+  }
+}

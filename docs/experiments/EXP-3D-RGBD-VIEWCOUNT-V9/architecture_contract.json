@@ -1,0 +1,114 @@
+{
+  "C2_difference_from_C1": "always 3 + 4 = 7 views (m = 4); secondary, never a gate",
+  "anchor_control": "anchor RGB + anchor depth, the same full-role bounds as the variant's A/B state; a single view never reaches the >=2-view lifting support, so an anchor state carries the single-view depth bypass and learned priors only",
+  "depth_bypass": {
+    "inputs": "context RGB, measured context depth, context cameras; no query",
+    "log_sigma_init": -0.6931471805599453,
+    "placement": "after the >=2-view support gate: one measured view suffices",
+    "sampling": "nearest pixel of the full-resolution measured ray-distance map"
+  },
+  "new_backbone_or_learned_matching": false,
+  "only_difference_C0_C1": "C1 differs from C0 only by the number of views in each training context: the role's 3 frozen context frames plus the first m of the scene's 4 evenly spaced free frames, m ~ U{0..4} drawn once per step from a separate generator (seed + 7919), in arrival order; the model, the 5150 shared parameters and their per-seed draw, the loss, TRAIN72, 6000 steps, the 32^3 grid and the bounds rule (CONTEXT_DEPTH: hull of the measured depth and cameras of the role's 3 context frames, anchor frame, frozen x1.1 padding, >=1 m) are identical. The scene order, query slots and ray indices are identical for every variant. DEV evaluation and checkpoint selection use the standard 3-view contexts.",
+  "parameter_count": {
+    "C0": 5150,
+    "C1": 5150,
+    "C2": 5150
+  },
+  "shared_parameter_hash_by_seed": {
+    "20260928": "d1ab5f7b4e4687ff2bf79733a0310c07c87ac504ac438df5d7beac72c68640a4",
+    "20260929": "87b9eb714ca84fb63a452f12618af519d3697cf4f7c2178f78dff45e0c042b48",
+    "20260930": "9f32f06813f4492a283dfe6adf53594bc048326ef8dbecae513e977bcd56ee0a"
+  },
+  "state": "query-independent; all DEV states sealed before query load; >=2 queries/state",
+  "test_time_depth_used": true,
+  "test_time_input": "RGB+DEPTH+CAMERA for every variant",
+  "variants": {
+    "C0": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          32,
+          32,
+          32
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 32768
+      },
+      "extra": "none",
+      "label": "FIXED3",
+      "model": "C1",
+      "train": "TRAIN72"
+    },
+    "C1": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          32,
+          32,
+          32
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 32768
+      },
+      "extra": "uniform_0_4",
+      "label": "VARIABLE3TO7",
+      "model": "C1",
+      "train": "TRAIN72"
+    },
+    "C2": {
+      "config": {
+        "expansion_dim": 16,
+        "feature_dim": 8,
+        "grid_size": [
+          32,
+          32,
+          32
+        ],
+        "hidden_dim": 8,
+        "local_bounds_m": [
+          [
+            -6.0,
+            -4.0,
+            0.05
+          ],
+          [
+            6.0,
+            4.0,
+            12.05
+          ]
+        ],
+        "token_count": 32768
+      },
+      "extra": "all_4",
+      "label": "FIXED7",
+      "model": "C1",
+      "train": "TRAIN72"
+    }
+  }
+}

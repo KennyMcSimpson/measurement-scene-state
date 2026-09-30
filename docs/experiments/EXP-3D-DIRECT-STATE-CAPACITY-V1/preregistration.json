@@ -1,0 +1,67 @@
+{
+  "experiment": "EXP-3D-DIRECT-STATE-CAPACITY-V1",
+  "created_utc": "2026-09-27T16:35:57.752844+00:00",
+  "stage": "FROZEN_AFTER_CONTEXT_ONLY_PILOT_BEFORE_ANY_DIRECT_QUERY_SCORE",
+  "context_states": 340,
+  "oracle_states": 85,
+  "grids": [
+    8,
+    16,
+    32
+  ],
+  "main_samples": 64,
+  "renderer_control": "RGBD8/16samples128 CURRENTonly,64cells sharedwithmain",
+  "bounds_sensitivity": "8grid two tracks plusoracle; fixed contextcamera/trainingprior bounds; neverquerybbox",
+  "primary": "RGBD8CURRENT64 vs CARRIER samecontext; RGBONLYsame matched visibleevidence companion. RGBD has privileged contextdepth: itsgap alone cannot uniquelyblameRGB-onlylearner.",
+  "oracle": "85separatequerysupervisedstates. CURRENToneperscene/grid optimized jointlybothqueries; alternative8onepercontext-derivedbounds optimizedjointlybothqueries. OpensonlyafterALLcontextstatessealedandevaluated. Notgeneralization/notmathematicalupperbound.",
+  "selection": "minfull permittedsupervisionobjective every100steps includingstep0+final; strictlyless updates=>earliestties. Queryscore neverusedforcontext-only. All1000steps noqueryearlystop.",
+  "optimizer": {
+    "steps": 1000,
+    "learning_rate": 0.03,
+    "batch_rays": 1024,
+    "checkpoint_interval": 100,
+    "rgb_weight": 1.0,
+    "depth_weight": 1.0,
+    "density_l2_weight": 1e-05,
+    "tv_weight": 0.0001,
+    "gradient_clip": 1.0,
+    "selection": "BEST_FULL_SUPERVISION_OBJECTIVE_EARLIEST_TIE"
+  },
+  "sampling": "1024uniformflattenedcontextpixelswithreplacement perstep; sameunmodifiedrendererchunkkernel, predictionsandgradientsverified vsfullrenderer; original128x160pixelrays noresize",
+  "regularization": "1e-5 mean(softplus(z)^2)+1e-4 meanphysicalspacingTV(density,color) acrosssixaxis/fieldterms; boundedcolor sigmoid; fixed logvariance=-3,features/evidence/appearanceNone",
+  "sanity_passed": true,
+  "optimization_limits": "1000steps fixedbudget not global convergence. Last3 checkpointobjective trend andboundaryselection reported; ifqueryoraclepoorwithremainingoptimization/geometrylimits noexpressivityimpossibility claim.",
+  "evaluation": "all340contextstatessealed beforeanydirectqueryeval; contextdepthforRGBONLYmetrics onlyafterseal independent evaluator; oraclequerysupervisionseparateprivilegedphase; neverfinalholdout. wrongdonor cyclicwithinall17 sortedsceneIDs atidenticalquerycamera,matchedtrack/grid/bounds/role",
+  "controls": "CURRENT8samples64 bothtracksA/B only: jointdensity/colorspatialshuffle fixedseed;densityonly(color=.5);coloronly(density=-2);zero(density=-100,color0);wrongscene. Actualpredictions scored.",
+  "statistics": {
+    "unit": "querythencontextA/Bthen equal17scenes",
+    "draws": 10000,
+    "seed": 20260927,
+    "CI": "95%percentilepaired",
+    "tie": 1e-08,
+    "reports": [
+      "mean",
+      "median",
+      "LOSO",
+      "improved_tied_worse",
+      "positive_and_absolute_top1_top3"
+    ]
+  },
+  "classification_rules": {
+    "engineering_good_depth": "meanAbsRel<=.25 AND >=75%scenes AbsRel<=.35; arbitrary predeclared diagnostic criterion not officialbenchmark",
+    "stable_practical_gain": "mean gain>=.02 AND CI lower>0 AND >=75%scenes nonworse",
+    "learner_evidence": "contextRGB_ONLY8 good and stablecapacitygap; RGBD-aloneflagprivilegeddepth mixed notsolelearner",
+    "context_inference_evidence": "oracle8 good and stablecontextRGBD8minusoracle8 errorgap",
+    "resolution_evidence": "stableRGBD8to16 or16to32 gain underCURRENT64; samebudget optimizationlimits retained",
+    "renderer_evidence": "stable64to128 gain at8or16 RGBD CURRENT andstategrid effects smaller, sameoptimfamily",
+    "sufficient": "RGBD8good+stablecapacitygap+stablecarrieranchor gap; depthprivilege noted",
+    "multiple_flags": "MIXED; evidence flags do not establishstrictcausaldecomposition",
+    "no_flags": "INCONCLUSIVE; queryoraclepoor not STOP representation unless sufficientoptimization+raygeometrycapacity established"
+  },
+  "future_gate": "Recommend only, nevertrainnewcarrierthisround; ifonlyoptimization-limited result, nextstep controlledoptimization/representationdiagnosis notautomaticretrain",
+  "FINAL_HOLDOUT_TOUCHED": false,
+  "DYNAMIC_TTT_RUN": false,
+  "NEW_CARRIER_TRAINED": false,
+  "state_plan_sha256": "0a01142af24276c337e4d41a2c14516d3a66873dec43c352edc231bbaf8e7d40",
+  "config_sha256": "792d76b998d7a0c4c3a55a3d0a54f1cdf40b15211476341ed48c0b1ef672b3d9"
+}

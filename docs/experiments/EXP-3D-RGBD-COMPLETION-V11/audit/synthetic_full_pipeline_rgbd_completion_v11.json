@@ -1,0 +1,66 @@
+{
+  "eval_v3": {
+    "INTERPRETATION_BRANCH": "B",
+    "far_pixel_fraction": 0.044921875,
+    "n_scenes": 4,
+    "statuses": {
+      "COMPLETION_STATUS": "SUPPORTED",
+      "HYBRID_STATUS": "HARMFUL"
+    }
+  },
+  "evaluated_variants": [
+    "C0",
+    "C1"
+  ],
+  "finalized": true,
+  "postrun_validation": {
+    "data_hashes_verified": true,
+    "final_holdout_touched": false,
+    "fresh_qualification_opened": false,
+    "matched_seeds": 2,
+    "max_metric_errors": {
+      "coverage": 0.0,
+      "depth_absrel": 0.0,
+      "depth_delta1": 0.0,
+      "depth_rmse": 0.0,
+      "opacity": 0.0,
+      "rgb_mse": 0.0,
+      "rgb_ssim": 0.0
+    },
+    "models": 4,
+    "old_files_unchanged": 0,
+    "query_rows": 640,
+    "static_rows_recomputed": 128,
+    "status": "PASS"
+  },
+  "preseal_depth_purposes": [
+    "CONTEXT_ONLY_RGBD"
+  ],
+  "preseal_depth_reads": 56,
+  "query_rows": 640,
+  "real_DEV_read": false,
+  "reference_integrity": {
+    "max_raw_absrel_deviation": 0.0,
+    "max_raw_delta1_pixel_deviation": 0.0,
+    "median_scale_undefined_views": 0,
+    "prediction_rows": 768,
+    "reference_rows": 192,
+    "variants": [
+      "C0",
+      "C1"
+    ]
+  },
+  "reference_status": "NO_CARRIER_ABOVE_GEOMETRY_FREE_REFERENCE",
+  "report_branch": null,
+  "seconds": 189.9514118070947,
+  "status": "PASS",
+  "summary_free_fields": [
+    "RGBD COMPLETION V11 FINAL",
+    "COMPLETION_GAIN=0.026649",
+    "COMPLETION_GAIN_CI=[0.025572546278189168, 0.027725754967101057]",
+    "COMPLETION_STATUS=SUPPORTED",
+    "INTERPRETATION_BRANCH=B",
+    "REPORT_DIR=/tmp/claude-rgbd-synthetic-v11-docs/EXP-3D-RGBD-COMPLETION-V11"
+  ],
+  "synthetic_only": true
+}

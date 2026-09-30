@@ -1,0 +1,31 @@
+{
+ "seed": 20260928,
+ "mode": "VARIABLE",
+ "steps": 6000,
+ "absrel": {
+  "NO_STREAM": 0.339033334003598,
+  "OFF": 0.26947966563882536,
+  "OFF_CLAMP3": 0.2727055108655428
+ },
+ "more_views_gain_NO_STREAM_minus_OFF": {
+  "mean": 0.06955366836477263,
+  "ci95": [
+   0.03430123118198454,
+   0.1084825628317087
+  ],
+  "better": 39,
+  "n": 48
+ },
+ "more_views_clamped_NO_STREAM_minus_OFF_CLAMP3": {
+  "mean": 0.06632782313805517,
+  "ci95": [
+   0.03235893907679583,
+   0.10469906364617425
+  ],
+  "better": 39,
+  "n": 48
+ },
+ "train_depth_last500": 0.13618961296230556,
+ "seconds": 532.2832353999838,
+ "exploratory_train_only": true
+}

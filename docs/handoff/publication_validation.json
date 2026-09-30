@@ -1,27 +1,26 @@
 {
+  "publication": "research/rgbd-experiments-20261001",
   "clean_checkout_tests": {
-    "passed": 582,
+    "passed": 1024,
     "skipped": 1,
-    "seconds": 18.71,
+    "seconds": 93.14,
     "skip_reason": "Historical V5 checkpoint not distributed",
-    "scope": "Fresh staged-file directory without dataset or weights, using installed Python dependencies"
+    "scope": "Fresh git worktree of the publication commit without data/ or outputs/, using the installed Python dependencies"
   },
-  "ruff": "PASS; third_party/backups/outputs excluded",
+  "ruff": "PASS; third_party/backups/outputs/docs/experiments excluded",
   "lock_check": "uv lock --check --offline PASS",
   "archives": {
-    "files": 7,
-    "original_bytes": 92364718,
-    "compressed_bytes": 9382086,
-    "roundtrip_sha256": "PASS"
+    "files": 31,
+    "original_bytes": 1088821784,
+    "compressed_bytes": 166160721,
+    "roundtrip_sha256": "PASS (restore_report_artifacts.py --check, all 38 archives)"
   },
   "fixes_for_collaborators": [
-    "Self-contained DINOv2 hash-test fixture",
-    "Pinned Long-LRM split descriptor plus Apache-2.0 license",
-    "Portable 3D reproduction entry point",
-    "Byte-preserved historical artifacts",
-    "CPU CI with no data/weight downloads"
+    "Text reports over 5 MB stored as deterministic .gz and registered for restore",
+    "Lint scope excludes byte-preserved experiment evidence under docs/experiments"
   ],
-  "test_failure_history": "Initial clean checkout exposed 4 local-file dependencies; fixed fixture paths without weakening assertions; final suite passes",
+  "test_failure_history": "First clean-worktree lint found 356 issues, all in byte-preserved docs/experiments scripts; excluded that directory from ruff instead of editing evidence; final lint and tests pass",
+  "not_published": "Local outputs/ trees, including the records of evaluation-only experiments (V13, V16, inpainting baselines, EVAL-V4 replication, Replica transfer, geometric baselines, data preparation); their results are summarized in EXPERIMENTS.md and STATUS.md",
   "training_and_data_download_rerun": false,
-  "workflow_remote_status": "Not yet run; local clean checkout verified"
+  "workflow_remote_status": "Not yet run; clean worktree verified"
 }

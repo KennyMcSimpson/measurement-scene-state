@@ -24,6 +24,7 @@ dependencies = [
 eval = ["lpips>=0.1.4", "matplotlib>=3.8"]
 mapanything = ["mapanything==1.1.4"]
 dev = [
+    "matplotlib>=3.8",
     "opencv-python-headless>=4.10",
     "scikit-image>=0.24",
     "pytest>=8.3",

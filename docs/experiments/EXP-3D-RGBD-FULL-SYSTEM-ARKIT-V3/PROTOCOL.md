@@ -1,0 +1,93 @@
+# EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3：Hypersim 小载体 G1 的选择性集成能否改进 Core B（独立检验）
+
+本文件即预注册。分两步锁定：
+
+1. 写定本文件后、下载任何新数据之前，把哈希记入 `audit/plan_locked_at.txt`。
+2. 新队列准备好、评估根目录建好之后正式锁定（`preregistration.json`），之后才运行模型、读取真值。
+
+## 1. 问题
+
+此前两次完整系统实验的结果：
+
+- **FULL-SYSTEM-V2 的次要分析 S5（成立）：**
+    - 接法：在被选中的 episode（S ≥ 1.2）中，把 Core B 在 FAR7 区域的基底由 R7 改为 sqrt(R7 × G17)。G17 指 Hypersim 训练的小载体 G1 用全部 7 帧建状态后的预测。
+    - 结果：ALL AbsRel 从 0.1551 降到 0.1509，+0.0042 [+0.0005, +0.0091]，好/平/差 21/43/16，SUPPORTED。
+- **同一接法在 FULL-SYSTEM-V1 的数据上（事后计算）：** +0.0002，17/49/14。
+- **V2 的主检验（换成 ARKit 训练的 GA）：** 没有复现。
+
+本实验把 G1 接法作为主检验，在全新扫描上独立检验，所有设置事先固定。为提高功效，扫描数从 80 增加到 160。
+
+## 2. 数据
+
+- **新队列 ARKIT_SYSTEM3：** EXP-3D-RGBD-ARKIT-SYSTEM3-DATA-V1，由 `scripts/prepare_rgbd_arkit_system3_cohort.py` 准备。
+    - 取 ARKitScenes 训练折、试点种子顺序第 1000–1359 位的场馆（360 个），每个场馆取 video id 最小的扫描。
+    - 规则与之前的确认队列相同，按顺序准备到 160 个合格扫描为止。
+    - 不足 160 个时停止，不做任何分析。按以往 52–61% 的合格率，360 个场馆预计有 187–220 个合格。
+- **与此前所有数据不相交：**
+    - 第 0–359 位（训练）、第 360–519 位（CONFIRM）、第 520–679 位（SELECT）、第 680–839 位（SYSTEM）、第 840–999 位（SYSTEM2）；
+    - Validation 折。
+- **episode：** 与 V2 相同，共 320 个 episode、640 个查询。
+    - 记录 × 角色（A、B）；
+    - 上下文 = 角色的 3 帧；
+    - 流式帧 = Core B 规则（`stream_frame_ids`，4 个平均分布的空闲帧，两个角色共用）；
+    - 查询 = primary_query（第 14、15 帧）。
+- **许可：** 只用于非商业研究，媒体在 git 之外。
+
+## 3. 组成部分
+
+全部冻结，本实验不训练任何模型。与 V2 完全相同。
+
+| 组成 | 来源 | 运行位置 |
+| --- | --- | --- |
+| R7、NEAR7、射线余弦 | V1 的 `geometry_seal.py`，对 arms 封存回放核对 | CPU |
+| ZS（发布权重，上限 0.1）：CACHE 与 TTT_m1（100 步） | V1 的 `ds_eval.py`，4 个分片 | GPU |
+| G1、GA 的 3 帧预测（用于几何回放） | arms 评估器，合约同 SELECTOR-V1 | CPU |
+| **G1、GA 的 7 帧预测** | `code/eval_carrier_7view.py`（与 V2 及 V1 事后探索的脚本逐字节相同） | CPU |
+| S（3 个上下文帧有效深度的 (p90 − p10) / 中位数） | 读真值之前封存 | CPU |
+
+## 4. 读出
+
+- **ZS_TTT_F7：** α ≥ 0.5 处取 TTT 射线深度，其余取 R7。
+- **CORE_B：** sqrt(R7 × ZS_TTT_F7)。
+- **G17：** 每个 G1 种子（7 帧状态）在不透明度 ≥ 0.5 处取 深度 / 不透明度，其余取 R7，再对种子平均。GA7 同理。
+- **SYS_G1：**
+    - 基底 B：在被选中的 episode（S ≥ 1.2）中，FAR7 像素取 sqrt(R7 × G17)，其余像素取 R7；
+    - SYS_G1 = sqrt(B × T)，其中 T 在 α ≥ 0.5 处取 TTT 射线深度，其余取 B。
+- **对照：**
+    - SYS_G1_ALL：所有 episode 都被选中；
+    - SYS_GA：用 GA7 代替 G17（即 V2 的 SYS）。
+- **区域：** ALL（全部有效像素）、FAR7（NEAR7 之外的有效像素）。
+- **指标：** AbsRel。场景值 = 各角色查询平均后再对角色平均。
+
+## 5. 主检验
+
+主检验用 V2 gate；统计用场景 bootstrap，10,000 次，种子 20260928。平局按 V2 gate 的规则计为不变差。
+
+| 编号 | 对比（> 0 表示右边更好） | 区域 | 分支 |
+| --- | --- | --- | --- |
+| P1 | CORE_B − SYS_G1 | ALL | G1_SYSTEM_IMPROVES（SUPPORTED）/ _PARTIAL / _NOT_ESTABLISHED / G1_SYSTEM_HARMFUL |
+| P2 | R7 − SYS_G1 | ALL | G1_SYSTEM_BEATS_MODEL_FREE（SUPPORTED）/ _PARTIAL / _NOT_ESTABLISHED / _WORSE_THAN_MODEL_FREE |
+
+## 6. 次要分析（只给标签）
+
+| 编号 | 对比 | 区域 | 含义 |
+| --- | --- | --- | --- |
+| S1 | CORE_B − SYS_G1 | FAR7 | |
+| S2 | R7 − CORE_B | ALL | 第五次复现 Core B |
+| S3 | ZS_CACHE_F7 − ZS_TTT_F7 | ALL | TTT 的增益 |
+| S4 | CORE_B − SYS_G1_ALL | ALL | 不做选择 |
+| S5 | CORE_B − SYS_GA | ALL | 改用 ARKit 训练的 GA（V2 的主检验） |
+| S6 | R7 − G17 | FAR7 | 7 帧 G1 单独对比 R7 |
+| S7 | R7 − GA7 | FAR7 | 7 帧 GA 单独对比 R7 |
+
+## 7. 完整性与局限
+
+- **完整性：**
+    - 读真值之前，所有封存都必须完整、哈希不变：arms、几何（回放通过）、7 帧、ZS 和 S。
+    - 分析跑两次，结果文件必须逐字节相同。
+- **局限：**
+    - 预期效应很小：V2 约 −2.7%（相对），V1 约为 0。
+    - 这条接法是 V2 六个次要分析之一，本实验是它的第一次预注册检验。
+    - 按 V2 的离散程度粗略估算：
+        - 若真实效应等于 V2 的 +0.0042，160 个扫描的功效约 0.75；
+        - 若只有 +0.002 左右，功效约 0.3。

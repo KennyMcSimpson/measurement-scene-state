@@ -1,0 +1,117 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1",
+ "locked_at": "2026-10-08 01:16:18 +0800",
+ "protocol_sha256": "178cd9105ae93e8b4eb91106e2a6a007acbfc948b1978b32f41ce49d8f3a5038",
+ "code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "formal_cpu_jobs.sh": "2d2060b9e7c07b7596d8901b9695b5ae6a6920d98471dcbfeabe8e61a673916f",
+  "formal_gpu_job.sh": "fc853e6ab26d24e5c4987f35e436e8b86ee16e4c8f1c974278963ba457dbb75a",
+  "geometry_seal.py": "30d770efa3f1567c5609c18faea6ddbb2f6dae25ecdf25191e518cffed91cc83",
+  "lock.py": "d6023d30380f9828bf02b197634b2fbf81708ae112c6870fb91c6c93f682845c",
+  "make_eval_root.py": "4d97359de516b09bcd779faf00265723b52ded17271b493cf3f5c4b24f180d2b",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+  "train_jepa.py": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f"
+ },
+ "root_files": {
+  "frame_role_lock.json": "f00e17bb099af4ad6ef0b99b269babb2db9b287bc0ea64fd21046d61c632b1eb",
+  "evaluation_contract.json": "99e1c7b2c79452d4539c7cf9a52f5de36e8656ae00c912174c3983396eed0f93",
+  "manifest_fresh78.json": "6c2c94a4450dd74e5a18cc574962408f3b13e32b90d533e3614d5c6c54dd788b",
+  "ttt_selection.json": "57dbb2b91bbcb5295188e757cb11859f96865c4868c0bb9e1b309f9a9e510dd3"
+ },
+ "repository_inputs": {
+  "scripts/evaluate_rgbd_carrier_arms.py": "ec6c410bcdff48f17ef0876522758f5c1fa98ddfb50313f10036759495fdb213",
+  "scripts/evaluate_rgbd_long_train_eval.py": "3c1d25084cc379abb88c9c54a1826f021e7a485b336b103044947c245f78768c",
+  "scripts/run_rgbd_geometric_baselines.py": "a2633974676a8c16760d826cb754dd90f28ea08b69fb6f81e26b9dae21790906",
+  "scripts/run_rgbd_inpaint_baselines.py": "01fc31c06df530d74017d28e76968207033852461d18e6abe2d6d1bab9f8232a",
+  "src/mcss/measurement_planning/geometry.py": "d315062eb8634a32baed58670f561e4803078f89f9c1cea7fd210b915a5505b5",
+  "src/mcss/measurement_planning/information.py": "9e0529ae2216ab1b37df02f54bb9c009b2cb1626b314dc8511dce94291fd113e",
+  "src/mcss/mechanism_pilot/rgbd_stream_write.py": "2d930fe98decd348e8765cbcdeab0148bd496bc048ed053df3836f425fe73493",
+  "src/mcss/mechanism_pilot/direct_capacity_statistics.py": "adb8b2b41915b6733054119e50c8043b485ba773dfc2581ecc17a121d5a1ddc1",
+  "src/mcss/mechanism_pilot/geometry_carrier_statistics.py": "a4605d75d58ef9787f92b7ac17c23ff1d0f4e41ca01c9178ba059d1c4c62c1b1",
+  "outputs/EXP-3D-RGBD-DEPTH-BOUNDS-V7/scene_split.json": "4a111c072f2178740a709e5257e065d4fcbc5564d624a97f12b8b795731e1afc",
+  "outputs/EXP-3D-RGBD-SEGMENT-DATA-V1/manifest_seg.json": "0810715e4c6e3f1edda9ad7b20da130fc773d8604ef5df498a845e00597a8485",
+  "outputs/EXP-3D-RGBD-EVAL-V5-DATA/manifest_eval_v5.json": "91c0d74a660383a94c867e6cd2d88bd586b85f24aee76f51fcea2865e7d83680",
+  "outputs/EXP-3D-RGBD-TRAIN-EXT-DATA/manifest_train_ext.json": "c02b6cba958fd26a17fa1e7343e002011b7819c01b97bb58edd7785c67113392",
+  "outputs/EXP-3D-RGBD-DYNAMIC-TTT-FRESH-V7/stream_roles.json": "d730adfbd54caaa4ee475b3f42e4fd1e0c407cede6b1954f200005f20112eca0",
+  "outputs/EXP-3D-RGBD-DYNAMIC-TTT-CONTEXT-V6/stream_roles.json": "7253a79eb8b19b5569dd70a88e62fbf75adb6e4f521c0877df87177fa4543860"
+ },
+ "dev_manifest": {
+  "path": "/home/xmum26_zonghan/cv_work/depthsplat/probe_dev/manifest_dev.json",
+  "sha256": "c4326e11d0840f6d7341f5833cc5398a07e8744b503e40203e62ed8bf1755aa7"
+ },
+ "dev_arms_seal": {
+  "path": "/home/xmum26_zonghan/cv_work/depthsplat/probe_dev/raw/eval/DEV/prediction_seal.json",
+  "sha256": "062d32f3f0158a03f97176fec8adc3a8626db24f7f25041b9167b5da97bd1030"
+ },
+ "depthsplat": {
+  "repository": "/home/xmum26_zonghan/cv_work/depthsplat/depthsplat",
+  "commit": "2dad25a7b9ba7c5537aba08463ef88d8511a06be",
+  "tracked_changes": "",
+  "released_weights": "/home/xmum26_zonghan/zonghan_o_mirror/_models/depthsplat/depthsplat-gs-base-re10kdl3dv-448x768-randview2-6-f8ddd845.pth",
+  "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+  "dinov2_code_tree_sha256": "7455ec621a29fb27637581ea4f20cc8ec42b95b410a5038ca2d16fbcec52d609"
+ },
+ "settings": {
+  "training": {
+   "seeds": [
+    20261008,
+    20261009,
+    20261010
+   ],
+   "steps": 4000,
+   "lr": 5e-06,
+   "vit_lr": 5e-07,
+   "warmup": 200,
+   "schedule": "cosine to 0",
+   "weight_decay": 0.0001,
+   "grad_clip": 1.0,
+   "targets_per_step": 2,
+   "rgb_weight": 0.5,
+   "scale_max": 3.0,
+   "input": [
+    256,
+    320
+   ],
+   "render": [
+    128,
+    160
+   ],
+   "data": "TRAIN72 + SEG-V1 (312 records)",
+   "final_step_used": true
+  },
+  "ttt": {
+   "steps": 100,
+   "builder": "ZS",
+   "multiplier_grid_dev": [
+    1,
+    3,
+    10
+   ],
+   "selected_multiplier": 1.0
+  },
+  "alpha_min": 0.5,
+  "near_px": 8,
+  "bootstrap": {
+   "draws": 10000,
+   "seed": 20260928,
+   "unit": "scene"
+  }
+ },
+ "primary": {
+  "A1_JEPA_VS_HARMONIC_FAR": "FAR AbsRel: REPROJ_HARMONIC - J_CTX_F (J = mean of J1..J3 per scene)",
+  "B1_TTT_BEYOND_CACHE_ALL": "ALL AbsRel: ZS_CACHE_F7 - ZS_TTT_F7",
+  "B2_TTT_VS_REPROJ7_ALL": "ALL AbsRel: REPROJ7_HARMONIC - ZS_TTT_F7 (the TTT state where alpha >= 0.5, REPROJ7_HARMONIC elsewhere)"
+ },
+ "branches": {
+  "core_a": "A_SUPPORTED if A1 passes the V2 gate; A_PARTIAL if mean > 0 and CI low > 0 only; A_HARMFUL if CI high < 0; else A_NOT_ESTABLISHED",
+  "core_b": "B_SUPPORTED_PRACTICAL if B1 and B2 pass; B_MECHANISM_ONLY if only B1 passes; B_PARTIAL / B_HARMFUL / B_NOT_ESTABLISHED by B1's status otherwise"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only as appended, dated records",
+  "query depth is read only by score_analyze.py score, after every seal is complete",
+  "a failed training seed is reported; the analysis then uses the completed seeds if at least two completed, without any setting change",
+  "protected holdout never opened; nothing pushed"
+ ]
+}

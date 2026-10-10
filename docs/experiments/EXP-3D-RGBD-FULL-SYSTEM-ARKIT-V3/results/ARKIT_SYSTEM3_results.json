@@ -1,0 +1,454 @@
+{
+ "branches": {
+  "P1": "G1_SYSTEM_IMPROVEMENT_NOT_ESTABLISHED",
+  "P2": "G1_SYSTEM_BEATS_MODEL_FREE"
+ },
+ "cohort": "ARKIT_SYSTEM3",
+ "descriptive": {
+  "episodes": 320,
+  "episodes_selected": 125,
+  "mean_far7_share": 0.2231434631347656
+ },
+ "means": {
+  "CORE_B|ALL": {
+   "mean": 0.15688559379590356,
+   "scenes": 160
+  },
+  "CORE_B|FAR7": {
+   "mean": 0.2983391072287765,
+   "scenes": 157
+  },
+  "G17|ALL": {
+   "mean": 0.16478571781777238,
+   "scenes": 160
+  },
+  "G17|FAR7": {
+   "mean": 0.31168667685924295,
+   "scenes": 157
+  },
+  "GA7|ALL": {
+   "mean": 0.1636156153975618,
+   "scenes": 160
+  },
+  "GA7|FAR7": {
+   "mean": 0.31344518798001597,
+   "scenes": 157
+  },
+  "R7|ALL": {
+   "mean": 0.16295738123606124,
+   "scenes": 160
+  },
+  "R7|FAR7": {
+   "mean": 0.3036761627597139,
+   "scenes": 157
+  },
+  "SYS_G1_ALL|ALL": {
+   "mean": 0.15575033953200873,
+   "scenes": 160
+  },
+  "SYS_G1_ALL|FAR7": {
+   "mean": 0.2902776109219584,
+   "scenes": 157
+  },
+  "SYS_G1|ALL": {
+   "mean": 0.155856535359248,
+   "scenes": 160
+  },
+  "SYS_G1|FAR7": {
+   "mean": 0.2921058195830343,
+   "scenes": 157
+  },
+  "SYS_GA|ALL": {
+   "mean": 0.15657302844450433,
+   "scenes": 160
+  },
+  "SYS_GA|FAR7": {
+   "mean": 0.29634203229741984,
+   "scenes": 157
+  },
+  "ZS_CACHE_F7|ALL": {
+   "mean": 0.16079469014437195,
+   "scenes": 160
+  },
+  "ZS_CACHE_F7|FAR7": {
+   "mean": 0.29732518032928906,
+   "scenes": 157
+  },
+  "ZS_TTT_F7|ALL": {
+   "mean": 0.1543765964116925,
+   "scenes": 160
+  },
+  "ZS_TTT_F7|FAR7": {
+   "mean": 0.2979875136774173,
+   "scenes": 157
+  },
+  "far7_share": {
+   "mean": 0.2231434631347656,
+   "scenes": 160
+  }
+ },
+ "primary": {
+  "P1_G1_SYSTEM_VS_CORE_B_ALL": {
+   "absolute_top1_contribution": 0.09675453042403805,
+   "absolute_top3_contribution": 0.2703683028918865,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.00032386373407858007,
+    0.002490098526123002
+   ],
+   "improved_tied_worse": [
+    38,
+    99,
+    23
+   ],
+   "left": "CORE_B|ALL",
+   "loso_range": [
+    0.000731720687438752,
+    0.0012564896892426675
+   ],
+   "mean": 0.0010290584366555386,
+   "median": 0.0,
+   "n_scenes": 160,
+   "negative": 23,
+   "positive": 38,
+   "positive_top1_contribution": 0.14551893299146312,
+   "positive_top3_contribution": 0.40663426073292525,
+   "right": "SYS_G1|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 99
+  },
+  "P2_G1_SYSTEM_VS_MODEL_FREE_ALL": {
+   "absolute_top1_contribution": 0.07285123331968223,
+   "absolute_top3_contribution": 0.14280878097525015,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0047414625092591,
+    0.009682553587624407
+   ],
+   "improved_tied_worse": [
+    139,
+    0,
+    21
+   ],
+   "left": "R7|ALL",
+   "loso_range": [
+    0.0064523930056297266,
+    0.007479412380834508
+   ],
+   "mean": 0.007100845876813209,
+   "median": 0.002823983357499636,
+   "n_scenes": 160,
+   "negative": 21,
+   "positive": 139,
+   "positive_top1_contribution": 0.08320884003941603,
+   "positive_top3_contribution": 0.1607134157317848,
+   "right": "SYS_G1|ALL",
+   "scenes": 160,
+   "status": "SUPPORTED",
+   "tied": 0
+  }
+ },
+ "secondary": {
+  "S1_G1_SYSTEM_VS_CORE_B_FAR7": {
+   "absolute_top1_contribution": 0.0753793486148507,
+   "absolute_top3_contribution": 0.1879023343252912,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0009671730766369967,
+    0.011771932703162125
+   ],
+   "improved_tied_worse": [
+    36,
+    96,
+    25
+   ],
+   "left": "CORE_B|FAR7",
+   "loso_range": [
+    0.00509192357715306,
+    0.007260253582235605
+   ],
+   "mean": 0.006233287645742148,
+   "median": 0.0,
+   "n_scenes": 157,
+   "negative": 25,
+   "positive": 36,
+   "positive_top1_contribution": 0.10766234595894456,
+   "positive_top3_contribution": 0.24745176029527272,
+   "right": "SYS_G1|FAR7",
+   "scenes": 157,
+   "status": "SUPPORTED",
+   "tied": 96
+  },
+  "S2_CORE_B_VS_MODEL_FREE_ALL": {
+   "absolute_top1_contribution": 0.0957907994238521,
+   "absolute_top3_contribution": 0.1919872499211405,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.004203583254967576,
+    0.008205923418217955
+   ],
+   "improved_tied_worse": [
+    149,
+    0,
+    11
+   ],
+   "left": "R7|ALL",
+   "loso_range": [
+    0.005447061336390519,
+    0.006444021074667447
+   ],
+   "mean": 0.0060717874401576685,
+   "median": 0.002823983357499636,
+   "n_scenes": 160,
+   "negative": 11,
+   "positive": 149,
+   "positive_top1_contribution": 0.10174871733157757,
+   "positive_top3_contribution": 0.19958394388459816,
+   "right": "CORE_B|ALL",
+   "scenes": 160,
+   "status": "SUPPORTED",
+   "tied": 0
+  },
+  "S3_TTT_GAIN_ALL": {
+   "absolute_top1_contribution": 0.0885225170363444,
+   "absolute_top3_contribution": 0.17322182233451253,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.004359151505314784,
+    0.008917252230908286
+   ],
+   "improved_tied_worse": [
+    130,
+    0,
+    30
+   ],
+   "left": "ZS_CACHE_F7|ALL",
+   "loso_range": [
+    0.005658131960452745,
+    0.006622418346031127
+   ],
+   "mean": 0.006418093732679493,
+   "median": 0.004016833015601982,
+   "n_scenes": 160,
+   "negative": 30,
+   "positive": 130,
+   "positive_top1_contribution": 0.10327199354805304,
+   "positive_top3_contribution": 0.2020837580924993,
+   "right": "ZS_TTT_F7|ALL",
+   "scenes": 160,
+   "status": "SUPPORTED",
+   "tied": 0
+  },
+  "S4_G1_SYSTEM_WITHOUT_SELECTION_ALL": {
+   "absolute_top1_contribution": 0.10944830500213897,
+   "absolute_top3_contribution": 0.2740117576361913,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.0024210747737066574,
+    0.005047804385023024
+   ],
+   "improved_tied_worse": [
+    59,
+    41,
+    60
+   ],
+   "left": "CORE_B|ALL",
+   "loso_range": [
+    0.00013594651732437742,
+    0.0017379683416494766
+   ],
+   "mean": 0.00113525426389482,
+   "median": 0.0,
+   "n_scenes": 160,
+   "negative": 60,
+   "positive": 59,
+   "positive_top1_contribution": 0.19470766770193515,
+   "positive_top3_contribution": 0.43258619468653164,
+   "right": "SYS_G1_ALL|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 41
+  },
+  "S5_GA_SYSTEM_VS_CORE_B_ALL": {
+   "absolute_top1_contribution": 0.18604860077907917,
+   "absolute_top3_contribution": 0.3319695490943393,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.0016811315693738929,
+    0.0020049698952437755
+   ],
+   "improved_tied_worse": [
+    37,
+    99,
+    24
+   ],
+   "left": "CORE_B|ALL",
+   "loso_range": [
+    5.76347525558595e-05,
+    0.0009767887452096819
+   ],
+   "mean": 0.0003125653513992441,
+   "median": 0.0,
+   "n_scenes": 160,
+   "negative": 24,
+   "positive": 37,
+   "positive_top1_contribution": 0.13262162418310147,
+   "positive_top3_contribution": 0.35462837986046614,
+   "right": "SYS_GA|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 99
+  },
+  "S6_SEVEN_VIEW_G1_VS_REPROJ7_FAR7": {
+   "absolute_top1_contribution": 0.06849345954562139,
+   "absolute_top3_contribution": 0.16436027162714742,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.028090629353176716,
+    0.012467995459573271
+   ],
+   "improved_tied_worse": [
+    42,
+    38,
+    77
+   ],
+   "left": "R7|FAR7",
+   "loso_range": [
+    -0.012965476458605397,
+    -0.004207172614189883
+   ],
+   "mean": -0.008010514099529046,
+   "median": -1.3877787807814457e-17,
+   "n_scenes": 157,
+   "negative": 77,
+   "positive": 42,
+   "positive_top1_contribution": 0.15437020381674096,
+   "positive_top3_contribution": 0.27879539342221915,
+   "right": "G17|FAR7",
+   "scenes": 157,
+   "status": "NOT_ESTABLISHED",
+   "tied": 38
+  },
+  "S7_SEVEN_VIEW_GA_VS_REPROJ7_FAR7": {
+   "absolute_top1_contribution": 0.06925107025486445,
+   "absolute_top3_contribution": 0.16159008783350134,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.029084017499581675,
+    0.009460772069846265
+   ],
+   "improved_tied_worse": [
+    46,
+    37,
+    74
+   ],
+   "left": "R7|FAR7",
+   "loso_range": [
+    -0.014520553292672399,
+    -0.006404306278540163
+   ],
+   "mean": -0.009769025220302086,
+   "median": 0.0,
+   "n_scenes": 157,
+   "negative": 74,
+   "positive": 46,
+   "positive_top1_contribution": 0.162029635679417,
+   "positive_top3_contribution": 0.2890566406447438,
+   "right": "GA7|FAR7",
+   "scenes": 157,
+   "status": "NOT_ESTABLISHED",
+   "tied": 37
+  }
+ }
+}

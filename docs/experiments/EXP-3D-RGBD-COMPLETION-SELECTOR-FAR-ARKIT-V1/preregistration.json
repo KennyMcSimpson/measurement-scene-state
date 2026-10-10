@@ -1,0 +1,56 @@
+{
+ "experiment": "EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1",
+ "locked_at": "2026-10-09 11:10:24 +0800",
+ "protocol_sha256": "823a5e8819293a1d76659eb2e6759d15d476e0b099ed304188ec50769e0b4d65",
+ "code": {
+  "far_jobs.sh": "0921bc2df58aa55c4a0621de19ff5ed896de51cad0f7fb1bda6933d80f0f49f0",
+  "far_lock.py": "220132c47d334d06ec374fbdf1366c683ceff916eca31d161688dd5374560145",
+  "far_make_root.py": "07ff6d05df53a83158ab26fa760ce4660952dc8d755813dd5b158a66a037fba3",
+  "far_score.py": "89a5b160937c773ca054b7f99929a348eb0bc36e2a31fd9c6168b252851c0795"
+ },
+ "root_files": {
+  "frame_role_lock.json": "4c4840bf2c2792073aa93d2fe019025d4a17a634167b1f8cd9b900edde734c26",
+  "evaluation_contract.json": "cef5f5763784f5b47475b9896ec50ccd037319f6be4d5972128e8f92b1e552ff",
+  "selector_seal.json": "18d6e42de764471062fd35c8bfead0bb206e5bba4bb1348497fb0f4e99749f84"
+ },
+ "selector_experiment_preregistration_sha256": "c6dc93e173044856f5a8ea97b27476a74610939e7b3bb9b0f64107b069405dda",
+ "models": {
+  "GA_contract_sha256": "14f030254dff78587b589192d1b82e096d39320be3b1d23af2849d36902580ba",
+  "JO_checkpoints": {
+   "JO1": "8bae91a6ee8e2b482914cd0e9417113f14450b953ec7e28e42a5b1757a803536",
+   "JO2": "95e78d005b733771cef41c47a33d2576dc0d0f39ea111630bfb90e0ec8809efa",
+   "JO3": "4ab0259fe0fd1e7c8d34a4ed221c7b87b4871378fa37c0df46e076a69c9f5849"
+  },
+  "JA_checkpoints": {
+   "JA1": "0659fb4ef7b79527faea1ca3f959133d8de81a7f24cb96cd4ce68880ae297389",
+   "JA2": "f5f8cf387b6adf062de012f4657fcc39f2cfd5894bbe5abb5c1e9c9f318445c8",
+   "JA3": "93cb636eef86330eab867a3fcf755d599782bc5142f24ccb4d5e3cd979568e01"
+  }
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "far_view_results_existed": false,
+ "settings": {
+  "selector": "the SELECTOR-V1 rule and seal: learned where S >= 1.2",
+  "queries": "primary_query (14, 15)",
+  "opacity_min": 0.5,
+  "alpha_min": 0.5,
+  "region": "FARH"
+ },
+ "primary": {
+  "P1_SELECTED_CARRIER_VS_HARMONIC_FAR_VIEWS": "FARH: H3 - SEL_GAN"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by far_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

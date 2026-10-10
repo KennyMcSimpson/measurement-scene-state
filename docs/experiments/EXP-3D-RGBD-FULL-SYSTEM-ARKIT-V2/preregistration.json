@@ -1,0 +1,60 @@
+{
+ "experiment": "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2",
+ "locked_at": "2026-10-09 13:16:03 +0800",
+ "plan_lock": "2026-10-09 13:08:03 +0800 sha256(PROTOCOL.md)=2dbfc8088a5cd8befd93cbfb65695c991cfb13b916021887ca68cb2068e50b9b sha256(scripts/prepare_rgbd_arkit_system2_cohort.py)=fe5451e01cdf7d13029eb55fbf318bc584b9fe189b9ce63d97f4e5cc3dbc096f; written before any ARKIT_SYSTEM2 download",
+ "protocol_sha256": "2dbfc8088a5cd8befd93cbfb65695c991cfb13b916021887ca68cb2068e50b9b",
+ "code": {
+  "eval_carrier_7view.py": "4c55af09c02ccd25fcde4c1cc4e5814e8a47422dcf7c2cda8911ff5826e7f12b",
+  "sys2_jobs.sh": "e6a7692aa27c07416209138200567196ef50b90108f595f599543f736e5a0776",
+  "sys2_lock.py": "616e4f82563f1d7b575c6360fb321488b1d6811e7cf4443752cf74b27b2b3831",
+  "sys2_make_root.py": "8928496dde2f875bbfed5ae5746c271d2e68b13658daa99a9d3631da2f0068b0",
+  "sys2_score.py": "dac8543db61b9187da67261c64465c98aa2efcba0dcb851026f9f3a464523f7a"
+ },
+ "root_files": {
+  "frame_role_lock.json": "2abd5108659decaf3ae176ce641f0732156d7baee14983ccabef24241d6277a7",
+  "evaluation_contract.json": "1b97cad69c3a28a677a593070bf80c206283df0eeb7e9a2be921c1bd82f9ad6b",
+  "selector_seal.json": "234facc49302df35e39cf82af26b39fa2397096baac6945e8ac9de4135f7b1fe"
+ },
+ "cohort_data": {
+  "selection.json": "24a1946b9db4b73bc15d45a326d76258b2c39061b6cf8051e89498c1b66f0b7a",
+  "downloads.json": "09aa3c69410f1f1081e3729b55dc3f8767d9794ff89c9a5e8567583224a3ae51",
+  "candidate_lock.json": "4a77cb3f5a048a6734f077fc7ef1d25a76a087a489e8c0c16e2203eadd8c40d5",
+  "manifest_arkit_system2.json": "91898371cd18984706becb68c30cc31eea6cc6da73fb20da6ab3d1d898cad67a",
+  "preparation_integrity.json": "1a6f80102bb64512f92dc463ee27f9ca0dd97860555a601aed152225aaf5c9ff"
+ },
+ "cohort_script_sha256": "fe5451e01cdf7d13029eb55fbf318bc584b9fe189b9ce63d97f4e5cc3dbc096f",
+ "source_exploration": {
+  "full7_explore_sha256": "75597d41a89847080764e4b7c13398aaec529f280dc0f6c76008274ccf2d4c45",
+  "v1_preregistration_sha256": "8bfe2c187c1d3532079b3debed8c2eedd7c390a0470cecdc7fd335dfc7cde299"
+ },
+ "models": {
+  "GA_contract_sha256": "14f030254dff78587b589192d1b82e096d39320be3b1d23af2849d36902580ba",
+  "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6"
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "geometry_seal.py": "30d770efa3f1567c5609c18faea6ddbb2f6dae25ecdf25191e518cffed91cc83",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "settings": {
+  "core_b": "sqrt(R7 x ZS_TTT_F7), ZS = released weights at cap 0.1, TTT m = 1, 100 steps",
+  "system": "base sqrt(R7 x GA7) on FAR7 of episodes with S >= 1.2 (GA7: 7-view GA, normalized, R7 fallback), else R7; SYS = sqrt(base x TTT_F7(base))",
+  "alpha_min": 0.5,
+  "opacity_min": 0.5
+ },
+ "primary": {
+  "P1_SYSTEM_VS_CORE_B_ALL": "ALL: CORE_B - SYS",
+  "P2_SYSTEM_VS_MODEL_FREE_ALL": "ALL: R7 - SYS"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by sys2_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

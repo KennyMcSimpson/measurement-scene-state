@@ -1,0 +1,567 @@
+{
+ "branches": {
+  "O1": "OVERLAP_JEPA_PARTIAL",
+  "O2": "OVERLAP_TRAINING_NOT_ESTABLISHED"
+ },
+ "by_cohort": {
+  "ARKIT_CONFIRM": {
+   "H3|FARH": 0.4311795662700476,
+   "HGN|FARH": 0.35915600609799636,
+   "HJO|FARH": 0.35742454543172325,
+   "JA|FARH": 0.340132725443367,
+   "JO|FARH": 0.32817750994383066,
+   "J|FARH": 0.3995002296906251
+  },
+  "ARKIT_VAL": {
+   "H3|FARH": 0.4709134039636336,
+   "HGN|FARH": 0.36011043097507567,
+   "HJO|FARH": 0.389749683567894,
+   "JA|FARH": 0.333404407021423,
+   "JO|FARH": 0.35407947332800527,
+   "J|FARH": 0.4147056278350455
+  }
+ },
+ "cohort": "ARKIT160_OVERLAP",
+ "means": {
+  "G1N|FAR": {
+   "mean": 0.4950253962018845,
+   "scenes": 155
+  },
+  "G1N|FARH": {
+   "mean": 0.3437415092991436,
+   "scenes": 147
+  },
+  "G1N|NEAR": {
+   "mean": 0.1826402554116267,
+   "scenes": 153
+  },
+  "H3CAL|FAR": {
+   "mean": 0.4302291125675288,
+   "scenes": 155
+  },
+  "H3CAL|FARH": {
+   "mean": 0.4514519324402445,
+   "scenes": 147
+  },
+  "H3CAL|NEAR": {
+   "mean": 0.14335202734984945,
+   "scenes": 153
+  },
+  "H3|FAR": {
+   "mean": 0.6134892209115961,
+   "scenes": 155
+  },
+  "H3|FARH": {
+   "mean": 0.4514519324402445,
+   "scenes": 147
+  },
+  "H3|NEAR": {
+   "mean": 0.14335202734984945,
+   "scenes": 153
+  },
+  "HGN|FAR": {
+   "mean": 0.5170580064655481,
+   "scenes": 155
+  },
+  "HGN|FARH": {
+   "mean": 0.35964295756589393,
+   "scenes": 147
+  },
+  "HGN|NEAR": {
+   "mean": 0.15049729275111487,
+   "scenes": 153
+  },
+  "HJO|FAR": {
+   "mean": 0.5038307386469031,
+   "scenes": 155
+  },
+  "HJO|FARH": {
+   "mean": 0.37391696284813697,
+   "scenes": 147
+  },
+  "HJO|NEAR": {
+   "mean": 0.11909372393674958,
+   "scenes": 153
+  },
+  "JA_farh_coverage": {
+   "mean": 0.7965090531193645,
+   "scenes": 147
+  },
+  "JA|FAR": {
+   "mean": 0.4374301398291801,
+   "scenes": 155
+  },
+  "JA|FARH": {
+   "mean": 0.33669990992196697,
+   "scenes": 147
+  },
+  "JA|NEAR": {
+   "mean": 0.13119956273602695,
+   "scenes": 153
+  },
+  "JO_CAL|FAR": {
+   "mean": 0.35098844148034536,
+   "scenes": 155
+  },
+  "JO_CAL|FARH": {
+   "mean": 0.34139279738473605,
+   "scenes": 147
+  },
+  "JO_CAL|NEAR": {
+   "mean": 0.11408683193564738,
+   "scenes": 153
+  },
+  "JO_farh_coverage": {
+   "mean": 0.7998757797983158,
+   "scenes": 147
+  },
+  "JO|FAR": {
+   "mean": 0.4539493324419845,
+   "scenes": 155
+  },
+  "JO|FARH": {
+   "mean": 0.34139279738473605,
+   "scenes": 147
+  },
+  "JO|NEAR": {
+   "mean": 0.11408683193564738,
+   "scenes": 153
+  },
+  "J_farh_coverage": {
+   "mean": 0.6133436182641648,
+   "scenes": 147
+  },
+  "J|FAR": {
+   "mean": 0.5462184705364886,
+   "scenes": 155
+  },
+  "J|FARH": {
+   "mean": 0.40725808588675794,
+   "scenes": 147
+  },
+  "J|NEAR": {
+   "mean": 0.18500659237202408,
+   "scenes": 153
+  },
+  "ZS3_farh_coverage": {
+   "mean": 0.17460828775011644,
+   "scenes": 147
+  },
+  "ZS3|FAR": {
+   "mean": 0.5931292762393019,
+   "scenes": 155
+  },
+  "ZS3|FARH": {
+   "mean": 0.4368945661956931,
+   "scenes": 147
+  },
+  "ZS3|NEAR": {
+   "mean": 0.1508375241320458,
+   "scenes": 153
+  }
+ },
+ "primary": {
+  "O1_OVERLAP_JEPA_VS_HARMONIC_FARH": {
+   "absolute_top1_contribution": 0.04565022181596794,
+   "absolute_top3_contribution": 0.12980763508355372,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.06129051097596599,
+    0.16231867849885756
+   ],
+   "improved_tied_worse": [
+    80,
+    0,
+    67
+   ],
+   "left": "H3|FARH",
+   "loso_range": [
+    0.10245156735262734,
+    0.11741059242656429
+   ],
+   "mean": 0.1100591350555085,
+   "median": 0.005028148683934419,
+   "n_scenes": 147,
+   "negative": 67,
+   "positive": 80,
+   "positive_top1_contribution": 0.05688504977149627,
+   "positive_top3_contribution": 0.1617541709264006,
+   "right": "JO|FARH",
+   "scenes": 147,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "O2_OVERLAP_TRAINING_VS_ORIGINAL_RECIPE_FARH": {
+   "absolute_top1_contribution": 0.10117395744851573,
+   "absolute_top3_contribution": 0.2276567953256362,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.0318819798459243,
+    0.019501487261746612
+   ],
+   "improved_tied_worse": [
+    79,
+    0,
+    68
+   ],
+   "left": "JA|FARH",
+   "loso_range": [
+    -0.008590994581862977,
+    0.0030232450995822955
+   ],
+   "mean": -0.004692887462769055,
+   "median": 0.002831622362994335,
+   "n_scenes": 147,
+   "negative": 68,
+   "positive": 79,
+   "positive_top1_contribution": 0.10759910484303825,
+   "positive_top3_contribution": 0.2299910514818192,
+   "right": "JO|FARH",
+   "scenes": 147,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  }
+ },
+ "secondary": {
+  "S1_ORIGINAL_RECIPE_VS_HARMONIC_FARH": {
+   "absolute_top1_contribution": 0.0519331084007145,
+   "absolute_top3_contribution": 0.14124659564746736,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.05953953988065237,
+    0.17287862191238498
+   ],
+   "improved_tied_worse": [
+    75,
+    0,
+    72
+   ],
+   "left": "H3|FARH",
+   "loso_range": [
+    0.10531240432122434,
+    0.12414875954108669
+   ],
+   "mean": 0.11475202251827754,
+   "median": 0.0021034742943227824,
+   "n_scenes": 147,
+   "negative": 72,
+   "positive": 75,
+   "positive_top1_contribution": 0.06545692337797855,
+   "positive_top3_contribution": 0.17185719532706412,
+   "right": "JA|FARH",
+   "scenes": 147,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S2_SYNTHETIC_JEPA_VS_HARMONIC_FARH": {
+   "absolute_top1_contribution": 0.08950057420872458,
+   "absolute_top3_contribution": 0.21616751291236433,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.0011426694411867122,
+    0.0956882127396494
+   ],
+   "improved_tied_worse": [
+    69,
+    0,
+    78
+   ],
+   "left": "H3|FARH",
+   "loso_range": [
+    0.03133167211390168,
+    0.05032550350148555
+   ],
+   "mean": 0.04419384655348664,
+   "median": -0.0008605438540199017,
+   "n_scenes": 147,
+   "negative": 78,
+   "positive": 69,
+   "positive_top1_contribution": 0.13742816366983826,
+   "positive_top3_contribution": 0.33192529329858056,
+   "right": "J|FARH",
+   "scenes": 147,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  },
+  "S3_OVERLAP_TRAINING_GAIN_SAME_CAP_FARH": {
+   "absolute_top1_contribution": 0.048149394612565434,
+   "absolute_top3_contribution": 0.13691410023282047,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.04762794560811475,
+    0.14565966076192577
+   ],
+   "improved_tied_worse": [
+    75,
+    0,
+    72
+   ],
+   "left": "ZS3|FARH",
+   "loso_range": [
+    0.08779449312009943,
+    0.10275696408883725
+   ],
+   "mean": 0.09550176881095697,
+   "median": 0.0022055528043425227,
+   "n_scenes": 147,
+   "negative": 72,
+   "positive": 75,
+   "positive_top1_contribution": 0.061979619816947516,
+   "positive_top3_contribution": 0.17624071804622685,
+   "right": "JO|FARH",
+   "scenes": 147,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S4_G1N_ENSEMBLE_VS_HARMONIC_FARH": {
+   "absolute_top1_contribution": 0.06990550148044636,
+   "absolute_top3_contribution": 0.14750959605346736,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.05957218458831448,
+    0.12631305087618136
+   ],
+   "improved_tied_worse": [
+    86,
+    0,
+    61
+   ],
+   "left": "H3|FARH",
+   "loso_range": [
+    0.08338064692677098,
+    0.0945643028369131
+   ],
+   "mean": 0.09180897487435061,
+   "median": 0.008706868332602397,
+   "n_scenes": 147,
+   "negative": 61,
+   "positive": 86,
+   "positive_top1_contribution": 0.08159576186684114,
+   "positive_top3_contribution": 0.17217754851553924,
+   "right": "HGN|FARH",
+   "scenes": 147,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S5_OVERLAP_JEPA_ENSEMBLE_VS_HARMONIC_FARH": {
+   "absolute_top1_contribution": 0.04126682130298121,
+   "absolute_top3_contribution": 0.11911149378891363,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.05060162323528233,
+    0.10611465624514622
+   ],
+   "improved_tied_worse": [
+    95,
+    0,
+    52
+   ],
+   "left": "H3|FARH",
+   "loso_range": [
+    0.07365980688468968,
+    0.08124059759290515
+   ],
+   "mean": 0.07753496959210761,
+   "median": 0.01554734790437054,
+   "n_scenes": 147,
+   "negative": 52,
+   "positive": 95,
+   "positive_top1_contribution": 0.04767607743847828,
+   "positive_top3_contribution": 0.1376110061882286,
+   "right": "HJO|FARH",
+   "scenes": 147,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S6_OVERLAP_JEPA_VS_HARMONIC_NEAR": {
+   "absolute_top1_contribution": 0.0679494496892022,
+   "absolute_top3_contribution": 0.16672343657140995,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0020233084826979278,
+    0.05898365250257381
+   ],
+   "improved_tied_worse": [
+    54,
+    0,
+    99
+   ],
+   "left": "H3|NEAR",
+   "loso_range": [
+    0.023197355360520915,
+    0.031081043828422684
+   ],
+   "mean": 0.02926519541420209,
+   "median": -0.004899838910720565,
+   "n_scenes": 153,
+   "negative": 99,
+   "positive": 54,
+   "positive_top1_contribution": 0.10297468666416963,
+   "positive_top3_contribution": 0.2526627326496612,
+   "right": "JO|NEAR",
+   "scenes": 153,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S7_OVERLAP_JEPA_VS_CALIBRATED_HARMONIC_FAR_ALL_QUERIES": {
+   "absolute_top1_contribution": 0.04904090939179167,
+   "absolute_top3_contribution": 0.13605331125035486,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.03736527852486395,
+    0.12417285566278242
+   ],
+   "improved_tied_worse": [
+    83,
+    0,
+    72
+   ],
+   "left": "H3CAL|FAR",
+   "loso_range": [
+    0.0718281818106316,
+    0.08601011467293547
+   ],
+   "mean": 0.07924067108718338,
+   "median": 0.003248152736605725,
+   "n_scenes": 155,
+   "negative": 72,
+   "positive": 83,
+   "positive_top1_contribution": 0.0656764830206623,
+   "positive_top3_contribution": 0.1822050834101052,
+   "right": "JO_CAL|FAR",
+   "scenes": 155,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S8_OVERLAP_JEPA_VS_G1N_FARH": {
+   "absolute_top1_contribution": 0.1018842822245506,
+   "absolute_top3_contribution": 0.18973013995584254,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.04258895514552972,
+    0.04166610615566339
+   ],
+   "improved_tied_worse": [
+    96,
+    0,
+    51
+   ],
+   "left": "G1N|FARH",
+   "loso_range": [
+    -0.0011480018322590141,
+    0.01707427011784639
+   ],
+   "mean": 0.002348711914407557,
+   "median": 0.02754564024182815,
+   "n_scenes": 147,
+   "negative": 51,
+   "positive": 96,
+   "positive_top1_contribution": 0.04787818686284007,
+   "positive_top3_contribution": 0.13253478224300366,
+   "right": "JO|FARH",
+   "scenes": 147,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  }
+ }
+}

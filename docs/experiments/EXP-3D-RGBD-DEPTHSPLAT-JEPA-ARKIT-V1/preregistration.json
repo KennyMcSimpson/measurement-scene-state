@@ -1,0 +1,62 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1",
+ "locked_at": "2026-10-08 23:42:00 +0800",
+ "protocol_sha256": "2dabd5018d2cbfe65bc0bef163f6b6c539b4554c04e7e5becb5984130125f682",
+ "code": {
+  "arkit_records.py": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "jepa_arkit_jobs.sh": "38b0a480148e9fb38217d6f269c20a11d507201bb27104dc98f86d64a44de0ba",
+  "jepa_arkit_lock.py": "933f8b1dbd5d34e58d3afcfffd3cbb54907902d30a2e372145f560213a9b6c97",
+  "jepa_arkit_make_root.py": "b28abae999690e8b7cc9dadb5625343cda07d72904d97ec4020b1a4e0b42bffb",
+  "jepa_arkit_score.py": "e14877c4fa8620e5266a461e1c7569661df04e9d9199c2447de42a14f6b88669",
+  "train_jepa_arkit.py": "6e206eee30560012ba97170fa04162884f8220dabb45ef85bfbb34f298c86326"
+ },
+ "root_files": {
+  "frame_role_lock.json": "7a6dc81e8725c1ff5e6224a5718882ee64abbdc148bdfd68493ec1510e81b5ee",
+  "evaluation_contract.json": "925904bea91a00022c914ab6eb212d78981048bce77df416884e2e2f1f7fa08d",
+  "manifest_arkit160.json": "b7e424fb93b77471571193351edab558e278436ad764e970e717a9c288aa647c"
+ },
+ "training_data": {
+  "selection.json": "7705104a198738ab09dce0bf87504c002be858cf8497ea47c25079640102b37b",
+  "downloads.json": "62c7cbdf02f963d1d0fcb2efcf68dd4c263856f0d7d19ccf49ddb9ea04a1507b",
+  "candidate_lock.json": "47e6ebe9b6caf97a90c1a6a5a8f5756f698651ddd58de6ed5058af78ffdc5e5e",
+  "manifest_arkit_trainval.json": "7203f486dd70f418313853ad842de48c84b1292c55ec40d3122da49d22ca4bb9",
+  "preparation_integrity.json": "7c141949c83b47589fdaf2531f0fbfbdba79a2326a063025de5902a741802170"
+ },
+ "training_counts": {
+  "DEV": 8,
+  "TRAIN": 182
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "train_jepa.py": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "v1_checkpoints": {
+  "J1": "cb31a0dc6d76ce2df97b5bb510972b278e1b08e85076456584c418a497a7b57d",
+  "J2": "dbe16fb39adcc554df24fe57669e4c7a61e9dc6c062780d3bdf0f6944c9b2560",
+  "J3": "bf4db693a9ac57afb2162a62fd605ce7cf3a633400f8bd3e317178894b079fbd"
+ },
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "settings": {
+  "training": "V1 recipe: seeds 20261008-10, 4000 steps, lr 5e-6 (ViT 5e-7), warmup 200, cosine, AdamW wd 1e-4, clip 1.0, 2 targets, relative L1 raw depth + 0.5 RGB L1, scale cap 3.0",
+  "alpha_min": 0.5,
+  "g1_opacity_min": 0.5
+ },
+ "primary": {
+  "R1_REAL_JEPA_VS_HARMONIC_FAR": "FAR: H3 - JA",
+  "R2_REAL_VS_SYNTHETIC_TRAINING_FAR": "FAR: J - JA"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by jepa_arkit_score.py score after every seal is complete",
+  "a failed training seed stops the run (reported); ARKitScenes media outside git; nothing pushed"
+ ]
+}

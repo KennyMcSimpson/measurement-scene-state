@@ -1,0 +1,57 @@
+{
+ "experiment": "EXP-3D-RGBD-TTT-ENSEMBLE-V1",
+ "locked_at": "2026-10-08 06:31:24 +0800",
+ "protocol_sha256": "e8f89c34c7cf80a01fd2afe5cd806e93e4b8e7f55b5ed829a0429ab448b2b7b5",
+ "code": {
+  "tttens_jobs.sh": "3b780625c3b0451bab3f63364a7dc83594350f45704b20a909e2d9716ea6e923",
+  "tttens_lock.py": "ad2f3fa6b6d203e14fb20bec2c3092ba59ec5c2a37253f36f7b96ff83a2ec91f",
+  "tttens_make_root.py": "baab9ebb0f70a37c90b3fe870f13e869c31202236407e57f563c7eb172817a83",
+  "tttens_score.py": "b3a30f584faf0160d5c0af965761c6ddede9ce8d9e3e378ffecd1adb89df3b7c"
+ },
+ "root_files": {
+  "frame_role_lock.json": "ff3a0fbfdc21f9f11d8c1c1c7b05384f667d56ef777c906205c8f6043f9df02f",
+  "manifest_eval34.json": "a5353590230f110749e61494b0964dd4773b37bae5bfca3f376af6cf79202ea0"
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "geometry_seal.py": "30d770efa3f1567c5609c18faea6ddbb2f6dae25ecdf25191e518cffed91cc83",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "train_jepa.py": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f"
+ },
+ "arms_seal": {
+  "path": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/raw/eval/EVAL34/prediction_seal.json",
+  "sha256": "c403cbafe44636b3d1a2c5f7b3ec15013b84e4b17cd79fb35eea4ec5e805574a"
+ },
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "settings": {
+  "builder": "ZS (released, scale cap 0.1)",
+  "arms": [
+   "CACHE",
+   "TTT"
+  ],
+  "ttt_mult": 1.0,
+  "ttt_steps": 100,
+  "alpha_min": 0.5
+ },
+ "primary": {
+  "T1_TTT_ENSEMBLE_VS_REPROJ7_ALL": "ALL: R7 - sqrt(R7 x TTT)",
+  "T2_TTT_NEEDED_IN_ENSEMBLE_ALL": "ALL: sqrt(R7 x CACHE) - sqrt(R7 x TTT)"
+ },
+ "branches": {
+  "T1": "TTT_ENSEMBLE_CONSISTENT if SUPPORTED; TTT_ENSEMBLE_PARTIAL / _NOT_ESTABLISHED / _HARMFUL",
+  "T2": "TTT_NEEDED if SUPPORTED; TTT_NEEDED_PARTIAL / TTT_NOT_NEEDED / TTT_HARMFUL"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by tttens_score.py score after both seals are complete",
+  "protected holdout never opened; nothing pushed"
+ ]
+}

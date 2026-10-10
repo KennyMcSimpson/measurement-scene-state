@@ -1,0 +1,1062 @@
+{
+ "features": {
+  "baseline": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.030233706833541953,
+      "negative": 18,
+      "positive": 19,
+      "threshold": 0.16552080050299095,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.04369547374200038,
+      "negative": 41,
+      "positive": 33,
+      "threshold": 0.3908610530174598,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.07876860394843684,
+      "negative": 56,
+      "positive": 54,
+      "threshold": 0.5504145913352964,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.09130771644584022,
+      "negative": 50,
+      "positive": 60,
+      "threshold": 0.16552080050299095,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.07733990885137705,
+      "negative": 28,
+      "positive": 46,
+      "threshold": 0.3908610530174598,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.04277281933094534,
+      "negative": 12,
+      "positive": 25,
+      "threshold": 0.5504145913352964,
+      "tied": 110
+     }
+    },
+    "spearman": 0.10485156669109703
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.020159139628563832,
+      "negative": 11,
+      "positive": 26,
+      "threshold": 0.16552080050299095,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.039085814116044594,
+      "negative": 28,
+      "positive": 46,
+      "threshold": 0.3908610530174598,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.06213474186168533,
+      "negative": 40,
+      "positive": 70,
+      "threshold": 0.5504145913352964,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.07210313067161345,
+      "negative": 36,
+      "positive": 74,
+      "threshold": 0.16552080050299095,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.052959300655688504,
+      "negative": 20,
+      "positive": 54,
+      "threshold": 0.3908610530174598,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.030127528438491955,
+      "negative": 7,
+      "positive": 30,
+      "threshold": 0.5504145913352964,
+      "tied": 110
+     }
+    },
+    "spearman": 0.12960430377260124
+   }
+  },
+  "ctx_depth_med": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.06128603246926383,
+      "negative": 18,
+      "positive": 19,
+      "threshold": 0.6416278034448624,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.06626568946234072,
+      "negative": 44,
+      "positive": 30,
+      "threshold": 1.1141877174377441,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.09358854120492639,
+      "negative": 58,
+      "positive": 52,
+      "threshold": 1.6265002712607384,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.06025539081011833,
+      "negative": 50,
+      "positive": 60,
+      "threshold": 0.6416278034448624,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.05518665752810552,
+      "negative": 25,
+      "positive": 49,
+      "threshold": 1.1141877174377441,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.02795288207445576,
+      "negative": 10,
+      "positive": 27,
+      "threshold": 1.6265002712607384,
+      "tied": 110
+     }
+    },
+    "spearman": 0.09100559883338749
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.03591209474636914,
+      "negative": 16,
+      "positive": 21,
+      "threshold": 0.6416278034448624,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.04916687286802017,
+      "negative": 32,
+      "positive": 42,
+      "threshold": 1.1141877174377441,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.0672052285552223,
+      "negative": 43,
+      "positive": 67,
+      "threshold": 1.6265002712607384,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.05635017555380814,
+      "negative": 31,
+      "positive": 79,
+      "threshold": 0.6416278034448624,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.04307043059745302,
+      "negative": 16,
+      "positive": 58,
+      "threshold": 1.1141877174377441,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.025057041744954996,
+      "negative": 4,
+      "positive": 33,
+      "threshold": 1.6265002712607384,
+      "tied": 110
+     }
+    },
+    "spearman": 0.18182985893357714
+   }
+  },
+  "ctx_depth_spread": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": -0.007870669725597907,
+      "negative": 32,
+      "positive": 5,
+      "threshold": 0.485429701862901,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": -0.01750625333284381,
+      "negative": 54,
+      "positive": 20,
+      "threshold": 1.1195604571205937,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.03315285751902421,
+      "negative": 64,
+      "positive": 46,
+      "threshold": 1.7645832772848615,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.12941209300498008,
+      "negative": 36,
+      "positive": 74,
+      "threshold": 0.485429701862901,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.1395278736445432,
+      "negative": 14,
+      "positive": 60,
+      "threshold": 1.1195604571205937,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.08838856576035795,
+      "negative": 4,
+      "positive": 33,
+      "threshold": 1.7645832772848615,
+      "tied": 110
+     }
+    },
+    "spearman": 0.5260561092263636
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": -0.0021149597265618745,
+      "negative": 26,
+      "positive": 11,
+      "threshold": 0.485429701862901,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.003023675809880051,
+      "negative": 40,
+      "positive": 34,
+      "threshold": 1.1195604571205937,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.037039240136273625,
+      "negative": 45,
+      "positive": 65,
+      "threshold": 1.7645832772848615,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.09437723002673916,
+      "negative": 21,
+      "positive": 89,
+      "threshold": 0.485429701862901,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.08977160886980776,
+      "negative": 7,
+      "positive": 67,
+      "threshold": 1.1195604571205937,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.05522303016390367,
+      "negative": 2,
+      "positive": 35,
+      "threshold": 1.7645832772848615,
+      "tied": 110
+     }
+    },
+    "spearman": 0.5445828831347422
+   }
+  },
+  "ctx_invalid": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     "<=p50": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     "<=p75": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p25": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p50": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p75": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     }
+    },
+    "spearman": -0.0654557269038678
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     "<=p50": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     "<=p75": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p25": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p50": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p75": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     }
+    },
+    "spearman": -0.09433392016562271
+   }
+  },
+  "disagree": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": -0.0036874542962363533,
+      "negative": 27,
+      "positive": 10,
+      "threshold": 0.06051457109233976,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": -0.008313029394044246,
+      "negative": 52,
+      "positive": 22,
+      "threshold": 0.1760131971476317,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.02000497504971341,
+      "negative": 60,
+      "positive": 50,
+      "threshold": 0.3990604254696766,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.1252288775756185,
+      "negative": 41,
+      "positive": 69,
+      "threshold": 0.06051457109233976,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.12996508487305677,
+      "negative": 16,
+      "positive": 58,
+      "threshold": 0.1760131971476317,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.10153644822966873,
+      "negative": 8,
+      "positive": 29,
+      "threshold": 0.3990604254696766,
+      "tied": 110
+     }
+    },
+    "spearman": 0.4492478220462565
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": -0.0003022279437458022,
+      "negative": 19,
+      "positive": 18,
+      "threshold": 0.06051457109233976,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.000348582333090365,
+      "negative": 37,
+      "positive": 37,
+      "threshold": 0.1760131971476317,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.02047224531599537,
+      "negative": 43,
+      "positive": 67,
+      "threshold": 0.3990604254696766,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.09256449824392309,
+      "negative": 28,
+      "positive": 82,
+      "threshold": 0.06051457109233976,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.09232179167196344,
+      "negative": 10,
+      "positive": 64,
+      "threshold": 0.1760131971476317,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.07179002498418191,
+      "negative": 4,
+      "positive": 33,
+      "threshold": 0.3990604254696766,
+      "tied": 110
+     }
+    },
+    "spearman": 0.6045266681274509
+   }
+  },
+  "farh_share": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.008167783986785573,
+      "negative": 16,
+      "positive": 21,
+      "threshold": 0.11763916015625,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.04781794113278693,
+      "negative": 29,
+      "positive": 45,
+      "threshold": 0.38031005859375,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.10152730558758785,
+      "negative": 47,
+      "positive": 63,
+      "threshold": 0.664300537109375,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.11337363929259658,
+      "negative": 52,
+      "positive": 58,
+      "threshold": 0.11763916015625,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.07297224662458743,
+      "negative": 40,
+      "positive": 34,
+      "threshold": 0.38031005859375,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.020014117691794318,
+      "negative": 21,
+      "positive": 16,
+      "threshold": 0.664300537109375,
+      "tied": 110
+     }
+    },
+    "spearman": -0.13147813734897884
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.00866055873233105,
+      "negative": 11,
+      "positive": 26,
+      "threshold": 0.11763916015625,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.03440337729694901,
+      "negative": 19,
+      "positive": 55,
+      "threshold": 0.38031005859375,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.06701430715235471,
+      "negative": 31,
+      "positive": 79,
+      "threshold": 0.664300537109375,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.08360171156784624,
+      "negative": 36,
+      "positive": 74,
+      "threshold": 0.11763916015625,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.05755227224937609,
+      "negative": 29,
+      "positive": 45,
+      "threshold": 0.38031005859375,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.025247963147822575,
+      "negative": 16,
+      "positive": 21,
+      "threshold": 0.664300537109375,
+      "tied": 110
+     }
+    },
+    "spearman": -0.06320410429999472
+   }
+  },
+  "ga_abstain": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.07377508074839799,
+      "negative": 35,
+      "positive": 57,
+      "threshold": 0.0,
+      "tied": 55
+     },
+     "<=p50": {
+      "mean": 0.07377508074839799,
+      "negative": 35,
+      "positive": 57,
+      "threshold": 0.0,
+      "tied": 55
+     },
+     "<=p75": {
+      "mean": 0.10591749317652671,
+      "negative": 46,
+      "positive": 64,
+      "threshold": 0.07539311666319895,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p50": {
+      "mean": 0.12154142327938218,
+      "negative": 68,
+      "positive": 79,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p75": {
+      "mean": 0.01562393010285545,
+      "negative": 22,
+      "positive": 15,
+      "threshold": 0.07539311666319895,
+      "tied": 110
+     }
+    },
+    "spearman": -0.19371510173858508
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.059479414072821736,
+      "negative": 23,
+      "positive": 69,
+      "threshold": 0.0,
+      "tied": 55
+     },
+     "<=p50": {
+      "mean": 0.059479414072821736,
+      "negative": 23,
+      "positive": 69,
+      "threshold": 0.0,
+      "tied": 55
+     },
+     "<=p75": {
+      "mean": 0.0784709282099488,
+      "negative": 31,
+      "positive": 79,
+      "threshold": 0.07539311666319895,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p50": {
+      "mean": 0.09226227030017728,
+      "negative": 47,
+      "positive": 100,
+      "threshold": 0.0,
+      "tied": 0
+     },
+     ">=p75": {
+      "mean": 0.013791342090228503,
+      "negative": 16,
+      "positive": 21,
+      "threshold": 0.07539311666319895,
+      "tied": 110
+     }
+    },
+    "spearman": -0.23852843618009958
+   }
+  },
+  "ga_spread": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.025921289907133067,
+      "negative": 23,
+      "positive": 14,
+      "threshold": 0.04947231273389051,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.05704338652712688,
+      "negative": 43,
+      "positive": 31,
+      "threshold": 0.07723911930646155,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.08000562676815803,
+      "negative": 60,
+      "positive": 50,
+      "threshold": 0.13703753493741844,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.09562013337224909,
+      "negative": 45,
+      "positive": 65,
+      "threshold": 0.04947231273389051,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.06452640831378087,
+      "negative": 25,
+      "positive": 49,
+      "threshold": 0.07723911930646155,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.04153579651122413,
+      "negative": 8,
+      "positive": 29,
+      "threshold": 0.13703753493741844,
+      "tied": 110
+     }
+    },
+    "spearman": 0.2006097514903777
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.022187303425147926,
+      "negative": 17,
+      "positive": 20,
+      "threshold": 0.04947231273389051,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.04160515285001809,
+      "negative": 32,
+      "positive": 42,
+      "threshold": 0.07723911930646155,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.05975670838494923,
+      "negative": 43,
+      "positive": 67,
+      "threshold": 0.13703753493741844,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.07007496687502937,
+      "negative": 30,
+      "positive": 80,
+      "threshold": 0.04947231273389051,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.050725973638714575,
+      "negative": 15,
+      "positive": 59,
+      "threshold": 0.07723911930646155,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.03250556191522806,
+      "negative": 4,
+      "positive": 33,
+      "threshold": 0.13703753493741844,
+      "tied": 110
+     }
+    },
+    "spearman": 0.20931023279359873
+   }
+  },
+  "h3_far_ratio": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.02709722842571176,
+      "negative": 8,
+      "positive": 29,
+      "threshold": 0.7756696649067149,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.06284053124902549,
+      "negative": 23,
+      "positive": 51,
+      "threshold": 0.97643284055685,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.06673780428313418,
+      "negative": 48,
+      "positive": 62,
+      "threshold": 1.1005106293236349,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.0944441948536704,
+      "negative": 60,
+      "positive": 50,
+      "threshold": 0.7756696649067149,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.05816461184271029,
+      "negative": 46,
+      "positive": 28,
+      "threshold": 0.97643284055685,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.05480361899624798,
+      "negative": 20,
+      "positive": 17,
+      "threshold": 1.1005106293236349,
+      "tied": 110
+     }
+    },
+    "spearman": -0.13334063725453157
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.019592822778707258,
+      "negative": 5,
+      "positive": 32,
+      "threshold": 0.7756696649067149,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.052593159266208694,
+      "negative": 14,
+      "positive": 60,
+      "threshold": 0.97643284055685,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.05850065778940864,
+      "negative": 33,
+      "positive": 77,
+      "threshold": 1.1005106293236349,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.07266944752147002,
+      "negative": 42,
+      "positive": 68,
+      "threshold": 0.7756696649067149,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.039553394684691344,
+      "negative": 34,
+      "positive": 40,
+      "threshold": 0.97643284055685,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.033761612510768646,
+      "negative": 14,
+      "positive": 23,
+      "threshold": 1.1005106293236349,
+      "tied": 110
+     }
+    },
+    "spearman": -0.1522905348737051
+   }
+  },
+  "hit_share": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.015885953424084144,
+      "negative": 21,
+      "positive": 16,
+      "threshold": 0.228973388671875,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.05276041048629864,
+      "negative": 35,
+      "positive": 39,
+      "threshold": 0.40849609375,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.09427386821303342,
+      "negative": 48,
+      "positive": 62,
+      "threshold": 0.5612854003906249,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.10565546985529803,
+      "negative": 47,
+      "positive": 63,
+      "threshold": 0.228973388671875,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.06987343763456183,
+      "negative": 33,
+      "positive": 41,
+      "threshold": 0.40849609375,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.02726755506634875,
+      "negative": 20,
+      "positive": 17,
+      "threshold": 0.5612854003906249,
+      "tied": 110
+     }
+    },
+    "spearman": 0.06589396217576257
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.022942145813376186,
+      "negative": 16,
+      "positive": 21,
+      "threshold": 0.228973388671875,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.04846884924918672,
+      "negative": 23,
+      "positive": 51,
+      "threshold": 0.40849609375,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.07408664822513765,
+      "negative": 34,
+      "positive": 76,
+      "threshold": 0.5612854003906249,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.06932012448680111,
+      "negative": 31,
+      "positive": 79,
+      "threshold": 0.228973388671875,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.04435733359566251,
+      "negative": 24,
+      "positive": 50,
+      "threshold": 0.40849609375,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.018175622075039647,
+      "negative": 13,
+      "positive": 24,
+      "threshold": 0.5612854003906249,
+      "tied": 110
+     }
+    },
+    "spearman": -0.01274660178769768
+   }
+  },
+  "rotation_deg": {
+   "gain_GAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.022271672714193873,
+      "negative": 23,
+      "positive": 14,
+      "threshold": 16.93622244375092,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.045765709796978665,
+      "negative": 39,
+      "positive": 35,
+      "threshold": 24.319516489721785,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.0857972280937864,
+      "negative": 52,
+      "positive": 58,
+      "threshold": 34.93901299386408,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.09926975056518828,
+      "negative": 45,
+      "positive": 65,
+      "threshold": 16.93622244375092,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.07537186275781942,
+      "negative": 30,
+      "positive": 44,
+      "threshold": 24.319516489721785,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.03574419518559578,
+      "negative": 16,
+      "positive": 21,
+      "threshold": 34.93901299386408,
+      "tied": 110
+     }
+    },
+    "spearman": 0.09096781993063793
+   },
+   "gain_HGAN": {
+    "rules": {
+     "<=p25": {
+      "mean": 0.014303473685767646,
+      "negative": 17,
+      "positive": 20,
+      "threshold": 16.93622244375092,
+      "tied": 110
+     },
+     "<=p50": {
+      "mean": 0.03295860502681324,
+      "negative": 28,
+      "positive": 46,
+      "threshold": 24.319516489721785,
+      "tied": 73
+     },
+     "<=p75": {
+      "mean": 0.061280959038889894,
+      "negative": 37,
+      "positive": 73,
+      "threshold": 34.93901299386408,
+      "tied": 37
+     },
+     ">=p25": {
+      "mean": 0.07795879661440965,
+      "negative": 30,
+      "positive": 80,
+      "threshold": 16.93622244375092,
+      "tied": 37
+     },
+     ">=p50": {
+      "mean": 0.05924979477335789,
+      "negative": 20,
+      "positive": 54,
+      "threshold": 24.319516489721785,
+      "tied": 73
+     },
+     ">=p75": {
+      "mean": 0.030981311261287395,
+      "negative": 10,
+      "positive": 27,
+      "threshold": 34.93901299386408,
+      "tied": 110
+     }
+    },
+    "spearman": 0.16650295808808527
+   }
+  }
+ },
+ "note": "exploratory, in-sample",
+ "scenes": 147
+}

@@ -1,0 +1,271 @@
+{
+ "EVAL34": {
+  "contrasts": {
+   "G1N": {
+    "absolute_top1_contribution": 0.12218314878406085,
+    "absolute_top3_contribution": 0.3044839509930433,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.0602405514397887,
+     0.26643770079413387
+    ],
+    "improved_tied_worse": [
+     56,
+     0,
+     24
+    ],
+    "left": "H3|FAR",
+    "loso_range": [
+     0.12497178163863466,
+     0.16459297693899155
+    ],
+    "mean": 0.15459553336214452,
+    "median": 0.07849115672056564,
+    "n_scenes": 80,
+    "negative": 24,
+    "positive": 56,
+    "positive_top1_contribution": 0.1521877734389732,
+    "positive_top3_contribution": 0.37925634599112334,
+    "right": "G1N|FAR",
+    "scenes": 80,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "SEL1.2": {
+    "absolute_top1_contribution": 0.21413521214616446,
+    "absolute_top3_contribution": 0.4139810758641828,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": true,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.014443584740927289,
+     0.08871392856428567
+    ],
+    "improved_tied_worse": [
+     19,
+     51,
+     10
+    ],
+    "left": "H3|FAR",
+    "loso_range": [
+     0.033544910677633856,
+     0.05038373928122651
+    ],
+    "mean": 0.04702472914879865,
+    "median": 0.0,
+    "n_scenes": 80,
+    "negative": 10,
+    "positive": 19,
+    "positive_top1_contribution": 0.24834748321456643,
+    "positive_top3_contribution": 0.48012261626150227,
+    "right": "SEL1.2|FAR",
+    "scenes": 80,
+    "status": "SUPPORTED",
+    "tied": 51
+   },
+   "SELmedian": {
+    "absolute_top1_contribution": 0.13089810845696212,
+    "absolute_top3_contribution": 0.2786358274556533,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": true,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.013265926896750654,
+     0.10276475824415607
+    ],
+    "improved_tied_worse": [
+     30,
+     34,
+     16
+    ],
+    "left": "H3|FAR",
+    "loso_range": [
+     0.04214607061434044,
+     0.06259664210077866
+    ],
+    "mean": 0.0555183745862964,
+    "median": 0.0,
+    "n_scenes": 80,
+    "negative": 16,
+    "positive": 30,
+    "positive_top1_contribution": 0.17191128581554543,
+    "positive_top3_contribution": 0.3659383923636225,
+    "right": "SELmedian|FAR",
+    "scenes": 80,
+    "status": "SUPPORTED",
+    "tied": 34
+   }
+  },
+  "queries": 283,
+  "share_selected_at_1.2": 0.2862190812720848,
+  "spearman_spread_vs_gain": -0.04142053445850915,
+  "spread_quantiles": {
+   "10": 0.682533576836441,
+   "25": 0.7869658360890237,
+   "50": 1.0043087931466375,
+   "75": 1.2497155254205417,
+   "90": 1.7253805496810573
+  }
+ },
+ "FRESH78": {
+  "contrasts": {
+   "G1N": {
+    "absolute_top1_contribution": 0.13703793762758804,
+    "absolute_top3_contribution": 0.25019407594551596,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.06438479187158953,
+     0.20229007389148115
+    ],
+    "improved_tied_worse": [
+     54,
+     0,
+     23
+    ],
+    "left": "H3|FAR",
+    "loso_range": [
+     0.10200236144470744,
+     0.13343736628275202
+    ],
+    "mean": 0.12655410320909327,
+    "median": 0.06196317912606991,
+    "n_scenes": 77,
+    "negative": 23,
+    "positive": 54,
+    "positive_top1_contribution": 0.1640964306969878,
+    "positive_top3_contribution": 0.29959553941743655,
+    "right": "G1N|FAR",
+    "scenes": 77,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "SEL1.2": {
+    "absolute_top1_contribution": 0.155063617062048,
+    "absolute_top3_contribution": 0.3724096823364024,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": true,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.030452791548821564,
+     0.10602489294974471
+    ],
+    "improved_tied_worse": [
+     31,
+     40,
+     6
+    ],
+    "left": "H3|FAR",
+    "loso_range": [
+     0.053478159151626146,
+     0.06954468996473553
+    ],
+    "mean": 0.0651587391928951,
+    "median": 0.0,
+    "n_scenes": 77,
+    "negative": 6,
+    "positive": 31,
+    "positive_top1_contribution": 0.17073185654994472,
+    "positive_top3_contribution": 0.410039425541241,
+    "right": "SEL1.2|FAR",
+    "scenes": 77,
+    "status": "SUPPORTED",
+    "tied": 40
+   },
+   "SELmedian": {
+    "absolute_top1_contribution": 0.1363834994573986,
+    "absolute_top3_contribution": 0.3275464397849892,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": true,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.03568537245446097,
+     0.1128997951878232
+    ],
+    "improved_tied_worse": [
+     35,
+     34,
+     8
+    ],
+    "left": "H3|FAR",
+    "loso_range": [
+     0.060070889199180764,
+     0.07613742001229015
+    ],
+    "mean": 0.07166584936970224,
+    "median": 0.0,
+    "n_scenes": 77,
+    "negative": 8,
+    "positive": 35,
+    "positive_top1_contribution": 0.15239955961334634,
+    "positive_top3_contribution": 0.36601152906876694,
+    "right": "SELmedian|FAR",
+    "scenes": 77,
+    "status": "SUPPORTED",
+    "tied": 34
+   }
+  },
+  "queries": 267,
+  "share_selected_at_1.2": 0.4044943820224719,
+  "spearman_spread_vs_gain": 0.20642515379357484,
+  "spread_quantiles": {
+   "10": 0.7347136269303749,
+   "25": 0.8715139647232385,
+   "50": 1.11272967025965,
+   "75": 1.410076418651909,
+   "90": 1.8254201262860699
+  }
+ },
+ "note": "exploratory; Hypersim cohorts used many times"
+}

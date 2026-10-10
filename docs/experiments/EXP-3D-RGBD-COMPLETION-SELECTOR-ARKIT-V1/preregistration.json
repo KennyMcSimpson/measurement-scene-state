@@ -1,0 +1,59 @@
+{
+ "experiment": "EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1",
+ "locked_at": "2026-10-09 10:51:00 +0800",
+ "plan_lock": "2026-10-09 10:42:42 +0800 sha256(PROTOCOL.md)=2285d6a0358499b71e627996181444895114829bc77739a3fce5a91ee4264a61 sha256(scripts/prepare_rgbd_arkit_select_cohort.py)=011c27de4c122ad29c41e7638725cdc3e89bc304282a8e4f4e482382235d40d7; written before any ARKIT_SELECT download",
+ "protocol_sha256": "2285d6a0358499b71e627996181444895114829bc77739a3fce5a91ee4264a61",
+ "code": {
+  "sel_jobs.sh": "32190367afa9ca458dd183b202ec2b46b0e177c2ae3f3e5a24be54aae4cd71f8",
+  "sel_lock.py": "48eb1720f62d3addc13c44bc0a21b97926e0e30135f5944869ea389e50185117",
+  "sel_make_root.py": "1186f0b99fd0172d953e77080bf82ecc41e0e787608a170ae788aafff5f2e5a8",
+  "sel_score.py": "4e9b2b8f3c59b2881fca413667da3d6ab10de490c4c00c8b33767a126ab1b3cb"
+ },
+ "root_files": {
+  "frame_role_lock.json": "14c71caf8b89235733b6c52eb705e20e5ca21ee96f730da734aa47bda4b3cbfe",
+  "evaluation_contract.json": "296422a76e27cf0244066721e2ffa3a5e67c8358aad1f4c7c2631708c22af9cd",
+  "manifest_arkit_select_overlap.json": "05f08acc5572ece82aff4515c5f2f0f1cf46dfad648e51cbc81c9881f10fb93b",
+  "selector_seal.json": "18d6e42de764471062fd35c8bfead0bb206e5bba4bb1348497fb0f4e99749f84"
+ },
+ "cohort_data": {
+  "selection.json": "71831d2601bf37dc8f5c8c901ae6f921c1b1fbf4b747a988cc4474ed2c94ffa3",
+  "downloads.json": "5041d4b5a8c1b348b4fb94636bfd05f70ec789eb5cf61d2bae471f41d955040f",
+  "candidate_lock.json": "a45ff81eddde74b020dc71e9a56c4facf21600b6f0e657416a97f46fed49f8ba",
+  "manifest_arkit_select.json": "777db151c17ef1eb46630e1a13112fdd8406d75b498c593a6fa1a92510ffbc3c",
+  "preparation_integrity.json": "5549f83ed2cf3ee5d8964eb0df37eb0626cfeab249c5db3f2c9b6ffe51baf521"
+ },
+ "cohort_script_sha256": "011c27de4c122ad29c41e7638725cdc3e89bc304282a8e4f4e482382235d40d7",
+ "models": {
+  "GA_contract_sha256": "14f030254dff78587b589192d1b82e096d39320be3b1d23af2849d36902580ba",
+  "JO_checkpoints": {
+   "JO1": "8bae91a6ee8e2b482914cd0e9417113f14450b953ec7e28e42a5b1757a803536",
+   "JO2": "95e78d005b733771cef41c47a33d2576dc0d0f39ea111630bfb90e0ec8809efa",
+   "JO3": "4ab0259fe0fd1e7c8d34a4ed221c7b87b4871378fa37c0df46e076a69c9f5849"
+  }
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "settings": {
+  "selector": "S = (p90 - p10) / median of the episode's valid context depth; learned where S >= 1.2",
+  "disagreement_selector": "GAN where median |log(GAN / H3)| outside NEAR >= 0.18",
+  "opacity_min": 0.5,
+  "alpha_min": 0.5,
+  "region": "FARH"
+ },
+ "primary": {
+  "P1_SELECTED_CARRIER_VS_HARMONIC_FARH": "FARH: H3 - SEL_GAN"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by sel_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

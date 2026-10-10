@@ -1,5 +1,655 @@
 # 实验注册表
 
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1（2026-10-10，hit GPU + CPU，更多真实训练数据能否改进逆向 JEPA 的补全）
+
+- [协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/PROTOCOL.md)。2026-10-10 01:58:03 锁定，sha256 `35f85731…`；设计受 NS 结果启发，锁定早于本实验的任何训练与评估。
+- **训练：** 只改一个因素，JO 配方（重叠感知、上限 3.0）的训练数据从 182 个扫描增加到 502 个（与 NS 相同）；JOL1–JOL3。
+- **评估：** ARKIT160_OVERLAP 的 VAL80 部分（第 6、7 帧），CTX 臂；复用 OVERLAP-V1 的 arms 与 JO 封存。
+- **主检验（FARH）：** P1 = JO − JOL（更多数据是否改进补全）；P2 = H3 − JOL。
+- **结果：**
+  - P1 = JO − JOL（FARH，VAL80）：−0.0044，42/0/33，NOT_ESTABLISHED。
+  - P2 = H3 − JOL：+0.1125，42/0/33，PARTIAL。
+  - S2（对比 G1N）n.s.；复现差值 0；分析两次逐字节相同。
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/README.md)。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1（2026-10-10，hit CPU，Core B 中 TTT 与 R7 的集成权重）
+
+- [README](docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/PROTOCOL.md)。2026-10-10 01:51:05 锁定，sha256 `178a022a…`；权重选择只读开发集真值，记录哈希后才读确认集。
+- **方法：** GEO_w = R7^(1−w) × ZS_TTT_F7^w，w ∈ {0.5, …, 1.0}，在 ARKIT_SYSTEM + ARKIT_SYSTEM2 上选择，在 ARKIT_SYSTEM3 与 ARKIT_VAL 上确认；不运行模型。
+- **结果：**
+  - w* = 0.9。
+  - P1 = CORE_B − GEO_0.9（SYSTEM3）：+0.0025，106/0/54，PARTIAL。
+  - P2（VAL）：+0.0019，52/0/28，PARTIAL。
+  - 对 R7：GEO_0.9 130/0/30，TTT 单独 126/0/34。
+  - 分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1（2026-10-10，hit GPU + CPU，用逆向 JEPA 学到的有选择弃权改进 Core B）
+
+- [README](docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/PROTOCOL.md)。2026-10-10 01:37:36 锁定，sha256 `091f0b96…`；候选选择只读开发集真值，01:40:08 记录哈希后才读确认集。
+- **方法：** 三种候选（MASK、TRIPLE、PAIR），只组合已有状态。在 ARKIT_SYSTEM + ARKIT_SYSTEM2 上选择（JN1 的前馈由本实验评估），在 ARKIT_SYSTEM3 与 ARKIT_VAL 上确认。
+- **结果：**
+  - 选出 PAIR。
+  - P1 = CORE_B − PAIR（SYSTEM3）：+0.0029，102/0/58，PARTIAL。
+  - P2（VAL）：+0.0019，55/0/25，PARTIAL。
+  - S6（对比 TTT 单独）：+0.0004，76/0/84，n.s.。
+  - 复现差值 0；分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1（2026-10-10，hit CPU，只调高读出阈值能否得到逆向 JEPA 的前馈改进）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/PROTOCOL.md)。2026-10-10 01:28:14 锁定，sha256 `644bad0d…`；阈值选择只读开发集真值，01:28:28 记录哈希后才读确认集。
+- **方法：** 不运行模型，复用已有封存。阈值网格 0.5–0.99，在开发集（ARKIT_SYSTEM + ARKIT_SYSTEM2）上分别为前馈与 Core B 选最优阈值，在 ARKIT_SYSTEM3 与 ARKIT_VAL 上确认。
+- **结果：**
+  - 开发集上读出随阈值升高单调变差，τ_C* = τ_T* = 0.5。
+  - P1 = ZS_CACHE(τ_C*) − JNS_CACHE（SYSTEM3）：+0.0041，110/0/50，PARTIAL；VAL 上 +0.0041，61/0/19，SUPPORTED。
+  - P2（Core B 换阈值）：τ_T* = 0.5，NOT_ESTABLISHED。
+  - 分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1（2026-10-09，hit GPU + CPU，更多真实训练数据能否放大逆向 JEPA 的前馈改进）
+
+- [协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/PROTOCOL.md)。2026-10-09 23:18:31 锁定，sha256 `d9ed9d50…`；设计受 NF 结果启发，锁定早于本实验的任何训练与评估。
+- **训练：** 只改一个因素，训练数据从 182 个扫描增加到 502 个（加入实验已结束的 CONFIRM、SELECT、SYSTEM、SYSTEM2 四个队列，无需新下载）；JL1–JL3，其余设置与 JN 相同。
+- **评估：** ARKIT_SYSTEM3 与 ARKIT_VAL，只跑 CACHE 臂；复用 V3、NF、ENSEMBLES-ARKIT、OBJECTIVE-TTT 的封存。
+- **主检验（SYSTEM3）：** P1 = JNS_CACHE − JLS_CACHE（更多数据是否有帮助）；P2 = ZS_CACHE − JLS_CACHE。
+- **结果：**
+  - P1 = JNS_CACHE − JLS_CACHE（SYSTEM3）：−0.0000，82/0/78，NOT_ESTABLISHED；VAL 上 −0.0002，44/0/36。
+  - P2 = ZS_CACHE − JLS_CACHE（SYSTEM3）：+0.0041，111/0/49，PARTIAL；VAL 上 +0.0039，58/0/22，PARTIAL。
+  - S4（对比 Core B）+0.0002，51/0/109，n.s.；三个种子各自 PARTIAL。
+  - 12 项复现检查差值为 0；分析两次逐字节相同。
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/README.md)。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1（2026-10-09，hit GPU + CPU，只奖励精度的逆向 JEPA 能否改进前馈状态）
+
+- [协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/PROTOCOL.md)。2026-10-09 19:23:38 锁定，sha256 `7ff1827a…`；设计受 OBJECTIVE-TTT 的 S3 启发，锁定时 V3 尚未读取 ARKIT_SYSTEM3 的任何真值。
+- **数据：** ARKIT_SYSTEM3（V3 的队列，160 个扫描、640 个查询），复用 V3 的几何封存。
+- **模型：** ZS（发布权重）；JN1、JK1（OBJECTIVE-TTT 的检查点）；JN2、JN3（新训练，种子 20261009、20261010）。只评估 CACHE 臂，上限 0.1。
+- **主检验：** P1 = ZS_CACHE − JN1_CACHE（ALL）；P2 = ZS_CACHE − JNS_CACHE（ALL，三个种子平均）。
+- **结果：**
+  - P1 = ZS_CACHE − JN1_CACHE：+0.0036，109/0/51，PARTIAL。
+  - P2 = ZS_CACHE − JNS_CACHE：+0.0041，110/0/50，PARTIAL。
+  - S4（NEAR7）+0.0046，110/0/50；S1（对 R7）+0.0058，94/0/66；S3（发布权重对 R7）+0.0022，79/0/81，n.s.；S8、S9（JN2、JN3）+0.0045、+0.0042；JK1 n.s.。
+  - 分析两次逐字节相同。事后探索见 `exploratory_posthoc/`（与 Core B 均值打平，Core B 在 113/160 个场景更好）。
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/README.md)。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3（2026-10-09，hit CPU + GPU，Hypersim 小载体 G1 的选择性集成能否改进 Core B）
+
+- [协议](docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/PROTOCOL.md)。计划锁写于 2026-10-09 14:50:58，早于任何新数据下载；正式锁定 15:08:10，sha256 `0a33ebdf…`。
+- **来源：** FULL-SYSTEM-V2 的次要分析 S5（G1 接法 +0.0042，21/43/16）；同一接法在 V1 上不成立。
+- **方法：** 在被选中的 episode（S ≥ 1.2）中，把 Core B 在 FAR7 的基底换成 sqrt(R7 × 7 帧 G1)。
+- **数据：** 全新队列 ARKIT_SYSTEM3，160 个扫描（为提高功效，比以往多一倍）；320 个 episode 中 125 个被选中。
+- **主检验：** P1 = CORE_B − SYS_G1（ALL）；P2 = R7 − SYS_G1（ALL）。
+- **结果：**
+  - P1 = CORE_B − SYS_G1：+0.0010，38/99/23，NOT_ESTABLISHED。
+  - P2 = R7 − SYS_G1：+0.0071，139/0/21，SUPPORTED。
+  - S1（FAR7）+0.0062，36/96/25，SUPPORTED；S2（Core B 复现）+0.0061，149/0/11，SUPPORTED；S3（TTT 增益）+0.0064，130/0/30；S5（GA 接法）+0.0003，n.s.。
+  - 分析两次逐字节相同。
+- [README](docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/README.md)。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1（2026-10-09，hit GPU + CPU，只奖励精度的逆向 JEPA 能否改进 TTT）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/PROTOCOL.md)。2026-10-09 14:41:45 锁定，sha256 `a826b21c…`；设计受 JBT 与 JC 结果启发，锁定早于本实验的任何训练与评估。
+- **训练：** 只奖励已覆盖像素精度的目标，各一个种子，上限 0.1。
+  - JN1：OVERLAP-V1 的 episode。
+  - JK1：上下文 + 4 个流式帧 → 第 14、15 帧。
+- **评估：** ARKIT_VAL，CACHE 与 TTT；复用 ENSEMBLES-ARKIT、JBT、JC 的封存，复现差值为 0。
+- **结果：**
+  - P1 = ZS_TTT − JN_TTT：−0.0008，30/0/50，NOT_ESTABLISHED。
+  - P2 = ZS_TTT − JK_TTT：−0.0038，24/0/56，HARMFUL。
+  - S3 = ZS_CACHE − JN_CACHE：+0.0036，60/0/20，SUPPORTED（次要）。
+  - 前馈覆盖率从 0.73 降到 0.55（JN）和 0.26（JK）。
+  - 分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-ARKIT-SYSTEM3-DATA-V1（2026-10-09，hit，ARKitScenes 第三个完整系统队列）
+
+- **来源：** `scripts/prepare_rgbd_arkit_system3_cohort.py`，训练折种子顺序第 1000–1359 位场馆（360 个）。与此前所有队列以及 VAL 都不相交。
+- **过程：** 360 个扫描全部下载（33.8 GB）并锁定相机元数据（1 个失败），按顺序准备到 160 个合格（109 个不合格）；不运行模型，不计算分数。
+- **许可与存放：** 只用于非商业研究，媒体在 `zonghan_o_mirror/_data_arkitscenes`，不进 git。
+
+## EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2（2026-10-09，hit CPU + GPU，TTT 集成加上 7 帧小载体的选择性集成）
+
+- [README](docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/README.md)、[协议](docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/PROTOCOL.md)。计划锁写于 2026-10-09 13:08:03，早于任何新数据下载；正式锁定 13:16:03，sha256 `b36f2657…`。
+- **来源：** FULL-SYSTEM-V1 的事后探索（样本内，从 9 种变体中挑出）。
+- **方法：** 在被选中的 episode（S ≥ 1.2）中，把 Core B 在 FAR7 的基底换成 sqrt(R7 × 7 帧 GA)。
+- **数据：** 全新队列 ARKIT_SYSTEM2，取训练折种子顺序第 840–999 位。
+- **主检验：** P1 = CORE_B − SYS（ALL）；P2 = R7 − SYS（ALL）。
+- **结果：** P1 = CORE_B − SYS：−0.0022，16/42/22，NOT_ESTABLISHED；P2：NOT_ESTABLISHED。S2（Core B 复现）+0.0049，70/0/10，SUPPORTED；S5（G1 接法）+0.0042，21/43/16，SUPPORTED（次要）；S6（7 帧 GA 对比 R7，FAR7）HARMFUL。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1（2026-10-09，hit CPU + GPU，TTT 集成加上按深度范围选择的补全）
+
+- [README](docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/PROTOCOL.md)。计划锁 2026-10-09 11:28:13，写在下载任何新数据之前；正式锁定 11:35:44，sha256 `8bfe2c18…`。
+- **数据：** 全新队列 ARKIT_SYSTEM，80 个扫描（见下一条）。episode 为上下文 3 帧 + 流式帧 4 帧，查询第 14、15 帧；160 个 episode 中有 69 个被选中（S ≥ 1.2）。
+- **主检验：**
+  - P1 = CORE_B − FULL（ALL）：把选择后的补全接进 Core B 的 FAR7 区域，是否改进 Core B；
+  - P2 = R7 − FULL（ALL）。
+- **结果：** P1 = CORE_B − FULL：−0.0031，15/49/16，NOT_ESTABLISHED；P2 = R7 − FULL：+0.0015，NOT_ESTABLISHED。S2（Core B 复现）= R7 − CORE_B：+0.0047，71/0/9，SUPPORTED；S3（TTT 增益）+0.0071，61/0/19，SUPPORTED。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-ARKIT-SYSTEM-DATA-V1（2026-10-09，hit，ARKitScenes 完整系统队列）
+
+- **来源：** `scripts/prepare_rgbd_arkit_system_cohort.py`，训练折种子顺序第 680–839 位场馆。与试点（0–359）、CONFIRM（360–519）、SELECT（520–679）以及 VAL 都不相交。
+- **过程：** 160 个扫描全部下载并锁定相机元数据，按顺序准备到 80 个合格（75 个不合格）；不运行模型，不计算分数。
+- **许可与存放：** 只用于非商业研究，媒体在 `zonghan_o_mirror/_data_arkitscenes`，不进 git。
+
+## EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1（2026-10-09，hit CPU + GPU，深度范围选择规则能否推广到远处视角）
+
+- [README](docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/PROTOCOL.md)。2026-10-09 11:10:24 锁定，sha256 `62fcff3c…`。
+- **设计：** 规则和阈值不变（S ≥ 1.2）。选择器封存复制自 SELECTOR-V1（上下文相同）。查询改为同一批扫描的第 14、15 帧，这两帧此前从未被评估。
+- **模型：** G1、GA（arms 封存，CPU）；JO、JA（GPU，只跑 CTX）。
+- **主检验：** P1 = H3 − SEL_GAN（FARH）。
+- **结果：** P1 = H3 − SEL_GAN（FARH）：+0.0577 [+0.0058, +0.1083]，24/17/12，SUPPORTED（FAR_SELECTOR_CONSISTENT）；SEL_G1N +0.0579（28/17/8）SUPPORTED；SEL_JO、SEL_JA 不成立；不选择时四种模型都不成立。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1（2026-10-09，hit CPU + GPU，用上下文深度范围决定何时使用学到的补全）
+
+- [README](docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/PROTOCOL.md)。
+    - 计划锁于 2026-10-09 10:42:42 写定，早于任何新数据下载。
+    - 正式锁定于 10:51:00，sha256 `c6dc93e1…`。
+- **来源：** EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1 的事后探索（样本内）：上下文深度范围 S 预测学到的补全是否有用。
+- **规则：** S ≥ 1.2 时用学到的补全，否则用调和插值。
+- **数据：** 全新队列 ARKIT_SELECT（80 个扫描，见下条），查询为第 6、7 帧；160 个 episode 中有 70 个被选中。
+- **主检验：** P1 = H3 − SEL_GAN（FARH）。
+- **结果：** P1 = H3 − SEL_GAN（FARH）：+0.1115 [+0.0600, +0.1675]，32/31/9，SUPPORTED（SELECTOR_CONSISTENT）。SEL_G1N +0.1138（31/31/10）、SEL_JO +0.0731（29/31/12）也都是 SUPPORTED；不选择时三者都是 PARTIAL。修订 1（11:05:48）只修复打分代码中空 FAR 时的 NaN，修复前没有产生任何结果。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-ARKIT-SELECT-DATA-V1（2026-10-09，hit，ARKitScenes 选择器确认队列）
+
+- **来源：** `scripts/prepare_rgbd_arkit_select_cohort.py`，取训练折种子顺序第 520–679 位场馆。
+    - 第 0–359 位留给试点训练，第 360–519 位是 CONFIRM 队列；本队列与它们和 VAL 都不相交。
+- **过程：** 160 个扫描全部下载并锁定相机元数据，按顺序准备到 80 个合格（62 个不合格）。不运行模型，不计算分数。
+- **许可与存放：** 只用于非商业研究，媒体在 `zonghan_o_mirror/_data_arkitscenes`，不进 git。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1（2026-10-09，hit GPU + CPU，在 TTT 的尺度上限下训练逆向 JEPA）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/PROTOCOL.md)。2026-10-09 06:03:48 锁定，sha256 `1b00184e…`；设计受 JBT 与 OVERLAP-V1 结果启发，锁定早于本实验的任何训练与评估。
+- **训练：** OVERLAP-V1 的配方，尺度上限 0.1（JC1，一个种子）。
+- **评估：** ARKIT_VAL，CACHE 与 TTT；复用发布权重（上限 0.1）的封存以及 JBT 中 JA、ZS3 的封存，复现差值为 0。
+- **结果：** P1 = ZS_TTT − JC_TTT：−0.0070，24/0/56，HARMFUL；P2 = ZS_CACHE − JC_CACHE：−0.0517，5/0/75，HARMFUL；S4 = JA_TTT − JC_TTT：+0.0375，55/0/25；集成后与发布权重打平（0.116）。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1（2026-10-09，hit CPU，用 ARKit 做重叠感知训练的旧基座补全载体）
+
+- [README](docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/PROTOCOL.md)。冻结记录见 `freeze.json`（2026-10-09 02:24:02，sha256 `2cef537d…`），早于 OVERLAP-V1 的任何结果。第一次冻结有缺陷，未训练就被替换，保留在 `first_freeze_without_cap/`。
+- **训练：** 冻结的 V17 L 代码与配方，在 CPU 上训练 3 个种子、24000 步。训练集是 151 个 ARKit TRAIN 扫描，训练查询为两个角色的上下文命中比例都 ≥ 0.05 的帧（GA）。
+- **评估：** ARKIT160_OVERLAP，查询为第 6、7 帧。G1（Hypersim）与 GA 在同一个 arms 封存中评估。
+- **主检验：** C1 = H3 − GAN（FARH）；C2 = G1N − GAN（FARH）。
+- **结果：** C1 = H3 − GAN（FARH）：+0.1215，79/0/68，PARTIAL；C2 = G1N − GAN：+0.0138，NOT_ESTABLISHED；S1 = H3 − HGAN：+0.0923，100/0/47。FARH：H3 0.452，GAN 0.330，G1N 0.344。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1（2026-10-09，hit GPU + CPU，重叠感知的真实数据逆向 JEPA）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/PROTOCOL.md)。2026-10-09 01:19:13 锁定，sha256 `27d25dd4…`；锁定时 JEPA-ARKIT-V1 尚无任何结果。
+- **训练：** JEPA-ARKIT-V1 配方，目标只取上下文命中比例 ≥ 0.05 的帧（JO1–JO3）。
+- **评估：** ARKIT160_OVERLAP，查询为第 6、7 帧（从未评估或输入过）；147 个场景有 FARH。
+- **结果：** O1 = H3 − JO（FARH）：+0.1101，80/0/67，PARTIAL（中位数 +0.005）；O2 = JA − JO：−0.0047，NOT_ESTABLISHED。FARH：H3 0.452，JO 0.341，JA 0.337，G1N 0.344，J 0.407。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1（2026-10-09，hit GPU + CPU，以真实数据 JEPA 为起点的 TTT）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/PROTOCOL.md)。2026-10-09 01:19:01 锁定，sha256 `6441e982…`；修订 1（01:33:33，只改执行方式：为留出显存停掉一个分片后单独重跑）。
+- **数据：** ARKIT_VAL（80 个扫描），episode 与 ENSEMBLES-ARKIT 相同；复用其几何封存和发布权重的 CACHE / TTT 封存（复现差值为 0）。
+- **主检验：** Q1 = ZS_TTT − JA_TTT（ALL）；Q2 = ZS3_TTT − JA_TTT（ALL）。JA 只用事先指定的 JA1。
+- **结果：** Q1：−0.0445，15/0/65，HARMFUL；Q2：−0.0226，30/0/50，HARMFUL。S4（JA 上的 TTT 增益）+0.1070，70/0/10；S6（上限 0.1 优于 3.0）+0.0219，70/0/10。分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1（2026-10-08/09，hit GPU + CPU，在 ARKit 真实数据上训练逆向 JEPA）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/PROTOCOL.md)。2026-10-08 23:42:00 锁定，sha256 `de61109d…`。修订 1 于 2026-10-09 00:03:50 记录，早于读取评估真值。
+- **训练：** ARKit 训练折 TRAIN 182 个扫描，3 个种子，V1 配方（JA1–JA3）。
+- **评估：** ARKIT160 = ARKIT_VAL80 + ARKIT_CONFIRM80。
+- **结果：**
+  - R1 = H3 − JA（FAR）：+0.2101，90/14/55，PARTIAL；R2 = J − JA：+0.2307，104/13/42，PARTIAL。
+  - 修订 1：
+    - X2 只换补洞常数：+0.3749，SUPPORTED；
+    - X1 在校准基线之上加 JA：−0.0289，HARMFUL；
+    - X6 只看有重叠的查询：+0.0269，NOT_ESTABLISHED。
+  - 主分析与修订分析都运行两次，结果逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1（2026-10-08，hit CPU，归一化 G1 补全集成的真实数据确认）
+
+- [README](docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/PROTOCOL.md)。2026-10-08 13:46:12 锁定，sha256 `b5b24308…`。
+- **数据：** `outputs/EXP-3D-RGBD-ARKIT-CONFIRM-DATA-V1`，80 个扫描、160 个 episode。
+- **主检验：** C1 = H3 − (H3 + G1N) / 2（FAR，V2 gate）。G1N 在不透明度 ≥ 0.5 处取 深度 / 不透明度，否则用 H3。
+- **结果：** C1：+0.0642，48/19/12，SUPPORTED；分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-ARKIT-CONFIRM-DATA-V1（2026-10-08，hit，ARKitScenes 确认队列）
+
+- **来源：** `scripts/prepare_rgbd_arkit_confirm_cohort.py`。训练折种子顺序第 360–519 位场馆；前 360 位由试点保留。
+- **过程：** 160 个扫描全部下载并锁定相机元数据，按顺序处理到 80 个合格（67 个不合格）；不运行模型，不计算分数。
+
+## EXP-3D-RGBD-ENSEMBLES-ARKIT-V1（2026-10-08，hit GPU + CPU，两个集成在 ARKitScenes 上的检验）
+
+- [README](docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/PROTOCOL.md)。2026-10-08 12:08:56 锁定，sha256 `6947f14f…`。
+- 数据见 `outputs/EXP-3D-RGBD-ARKIT-VAL-DATA-V1`：80 个扫描、160 个 episode。
+- **主检验（V2 gate）：**
+  - A1 = H3 − HJG（FAR）；A2 = HG − HJG（FAR）；
+  - B1 = R7 − √(R7 × TTT)（ALL）；B2 = √(R7 × CACHE) − √(R7 × TTT)（ALL）。
+- **结果：**
+  - A1：+0.4216，56/24，PARTIAL；A2：−0.0086，NOT_ESTABLISHED；
+  - B1：+0.0049，71/9，SUPPORTED；B2：+0.0031，60/20，SUPPORTED；
+  - 分析两次逐字节相同；另有事后偏差检查（`exploratory_posthoc/`）。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-ARKIT-VAL-DATA-V1（2026-10-08，hit，ARKitScenes Validation 评估队列）
+
+- **来源：** `scripts/prepare_rgbd_arkit_data.py --folds Validation`，加上 `scripts/prepare_rgbd_arkit_val_cohort.py`（按同一种子顺序扩展）。
+- **过程：**
+  - 前 70 个场馆 41 个合格；扩展部分处理到第 66 个场馆时凑满 80 个合格（27 个不合格）；
+  - 帧与规则在读取媒体之前锁定（`candidate_lock*.json`）；
+  - 不运行模型，不计算分数。
+- **许可与存放：** 只用于非商业研究，媒体在 `zonghan_o_mirror/_data_arkitscenes`，不进 git。
+
+## EXP-3D-RGBD-TTT-ENSEMBLE-V1（2026-10-08，hit GPU + CPU，TTT 状态与无模型重投影取平均）
+
+- [README](docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/PROTOCOL.md)。2026-10-08 06:31:24 锁定，sha256 `5154f900…`。假设来源：`exploratory_source/`（FRESH78 上的探索）。
+- **设置：** 发布版 DepthSplat（ZS），CACHE 与 TTT（100 步，m = 1）；R7 = REPROJ7_HARMONIC；队列为 EVAL34，流帧同 Core B V8。
+- **主检验（V2 gate，ALL）：**
+  - T1 = R7 − √(R7 × TTT)；
+  - T2 = √(R7 × CACHE) − √(R7 × TTT)。
+- **结果：**
+  - T1：+0.0290，71/12，SUPPORTED；
+  - T2：+0.0185，80/3，SUPPORTED；
+  - 分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1（2026-10-08，hit GPU + CPU，TTT 是否依赖学到的基座）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/PROTOCOL.md)。2026-10-08 06:25:19 锁定，sha256 `cebe6e23…`。
+- **NV（无网络高斯）：** 每个有效测量像素一个各向同性高斯，σ = c × 像素足迹，不透明度 0.95，颜色取像素 RGB。DEV 上选 c = 0.0625、m = 1。TTT 与 V1 的 ZS 完全相同。
+- **主检验（V2 gate，ALL）：** P1 = NV_TTT − ZS_TTT，P2 = NV_CACHE − ZS_CACHE。
+- **结果：**
+  - P1：+0.0237，61/17，SUPPORTED；
+  - P2：+0.0062，47/31，NOT_ESTABLISHED；
+  - 分支 LEARNED_BASE_MATTERS；分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1（2026-10-08，hit CPU + GPU 推理，学到的补全与调和插值取平均）
+
+- [README](docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/README.md)、[协议](docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/PROTOCOL.md)。2026-10-08 05:41:37 锁定，sha256 `d6248ece…`。假设来源：`exploratory_source/`（FRESH78 上的探索）。
+- **读出（FAR）：**
+  - H3：调和；
+  - G1：3 种子平均；
+  - J：V1 的逆向 JEPA，3 个冻结检查点，至少 2 个种子覆盖处取覆盖种子的平均，其余为 H3；
+  - 组合：JG、HG、HJ、HJG（等权平均），以及几何平均版本。
+- **主检验（V2 gate）：** E1 = H3 − HJG，E2 = HG − HJG（FAR）。
+- **结果：**
+  - E1：+0.1310，60/20，SUPPORTED；
+  - E2：−0.0023，34/46，NOT_ESTABLISHED；
+  - S1 = H3 − HG：+0.1332，65/15，SUPPORTED；S12 = H3 − HG（ALL）：SUPPORTED；
+  - 分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1（2026-10-08，hit GPU + CPU，以 DepthSplat 为基座检验逆向 JEPA 与 TTT）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/README.md)、[协议与修订](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/PROTOCOL.md)。2026-10-08 01:16:18 锁定，sha256 `fa87f117…`。
+- **构建器：**
+  - ZS：发布权重，尺度上限 0.1；
+  - ZS3：发布权重，上限 3.0；
+  - J1–J3：逆向 JEPA。TRAIN72 + SEG-V1，4000 步，lr 5e-6，渲染 2 个其他帧的深度相对 L1 + 0.5 × RGB L1，上限 3.0。
+  - 所有构建器都注入测得深度。
+- **臂：** CTX（3 帧）、CACHE（3 帧上下文加 4 帧流帧）、TTT（只用于 ZS，100 步，m = 1，在 DEV 上选出）；无模型的 REPROJ_HARMONIC、REPROJ7_HARMONIC 与 G1。
+- **主检验（V2 gate）：**
+  - A1 = FAR：调和补全 − J；
+  - B1 = ALL：CACHE − TTT；
+  - B2 = ALL：REPROJ7 − TTT。
+- **结果：**
+  - A1：+0.0687，45/32，PARTIAL；
+  - B1：+0.0298，73/5，SUPPORTED；
+  - B2：+0.0567，54/24，PARTIAL；
+  - 分支为 A_PARTIAL、B_MECHANISM_ONLY；分析两次逐字节相同。
+- **状态：** 结束。修订 1（显存不足后重跑）、修订 2（先读 TTT 的真值）都只涉及执行。
+
+## EXP-MEASUREMENT-PLANNING-ORACLE-V1（2026-10-06，hit CPU，预算化深度采集的 oracle 余量审计）
+
+- [README](outputs/EXP-MEASUREMENT-PLANNING-ORACLE-V1/README.md)、[协议](outputs/EXP-MEASUREMENT-PLANNING-ORACLE-V1/PROTOCOL.md)、[预注册](outputs/EXP-MEASUREMENT-PLANNING-ORACLE-V1/preregistration.md)、[交接审计](docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/HANDOFF_AUDIT.md)、[相关工作](docs/measurement_planning_related_work.md)。
+- **任务：**
+  - episode = 记录 × 上下文角色；
+  - 初始为 3 个 RGB-D 帧；
+  - 候选是 9 个不属于任何角色的帧，RGB 与相机可见，深度只在请求后读取；
+  - 预算 K ∈ {1, 2, 4}，查询是 primary_query。
+- **判定：** 交叉查询 oracle 相对最强可部署规则通过 V2 gate，且余量比例 ≥ 0.20。
+- **结果：** NOT_ESTABLISHED（K = 1、2、4 都不成立），POLICY_TRAINING_ALLOWED = false；最强规则是 LATEST；完整性 PASS。
+- **状态：** 结束。方向停止，见 `negative_result.md`。
+
+## EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1（2026-10-05 至 10-06，hit GPU + CPU，以 DepthSplat 为基座的探索性检查）
+
+- [README](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/README.md)。探索性，未预注册。使用 DEV（8 个场景）和 EVAL-V3/V4（83 个场景，以前已被使用）。
+- **设置：**
+  - 模型：DepthSplat base（re10k+dl3dv）@2dad25a7；
+  - 输入：3 个 RGB-D 上下文，可注入实测深度；可再加每条记录 9 个未使用的帧作为只有 RGB 的视角；
+  - 渲染深度按累积不透明度归一化；
+  - 组合方式：FAR 中已覆盖的像素用 DepthSplat，其余用调和插值或 G1；
+  - 另做了 TRAIN 数据上的深度微调，以及不经渲染的深度融合。
+- **结果：** 见 STATUS 的 2026-10-06 条目。
+- **状态：** 结束。不做预注册确认，因为排除相邻帧之后没有可以确认的效应。
+
+## EXP-3D-RGBD-ARMS-CONFIRM-V33（2026-10-04，hit CPU，在新队列上确认三维上下文分支）
+
+- [计划](outputs/EXP-3D-RGBD-ARMS-CONFIRM-V33/PLAN_BEFORE_V33.md)（05:22 写定，sha256 `f4b5b846…`，此时 V32 尚无结果）。
+- **设计：** 组 G1、U、P（第 24000 步，3 个 seed），队列 EVAL-V5、TRAIN-EXT、Replica；P1 = FAR(G1) − FAR(U)（EVAL-V5 ∪ TRAIN-EXT），P2 = 调和插值 − AHFILL8(U) 的标签；分支 A/B/C；只在 V32 的 P1 均值大于 0 时运行。
+- **状态：** 05:30 冻结（预注册 sha256 `9ebd3e79…`）；06:36 按预先写定的条件未运行（V32 的 P1 均值 −0.0020）。
+
+## EXP-3D-RGBD-UNET-CONTEXT-V32（2026-10-04，hit GPU 训练 + CPU 评价，覆盖整个体积的三维上下文）
+
+- [计划](outputs/EXP-3D-RGBD-UNET-CONTEXT-V32/PLAN_BEFORE_V32.md)（01:52 写定，sha256 `4bbdacfa…`）、[修订 1](outputs/EXP-3D-RGBD-UNET-CONTEXT-V32/PLAN_AMENDMENT_1.md)（01:56，sha256 `960bf302…`，冒烟测试的设备与时机）。
+- **动机：** carrier 的空间感受野只有 5³ 个体素，可能是补全不一致的结构性原因；加宽（V19）不改变感受野。
+- **设计：** U = V17 L 加三维 U-Net 残差分支（32³→4³→32³，每级 32 通道，带全局项，输出层初值为零，新增 361,856 个参数），对照 V21 的 G1；P1 = FAR(G1) − FAR(U)（第 24000 步，EVAL-V3/V4），P2 = 调和插值 − AHFILL8(U) 的标签；分支 A/B/C。
+- **状态：** 02:12 冻结（freeze.json sha256 `8df99840…`），03:21–05:16 在 GPU 上先做冒烟测试再训练，05:17–06:34 CPU 评价。
+- **结果（分支 C）：** P1 FAR(G1) − FAR(U) −0.0020 [−0.0200, +0.0206]（36/0/44），NOT_ESTABLISHED；P2 +0.0329（45/3/35），NOT_DISTINGUISHABLE；第 6000 步 U 好 +0.0178（57/23），第 24000 步 EVAL-FAR、FRESH-V2 上 U 更差。
+
+## EXP-3D-RGBD-PRETRAINED-FEATURES-V31（2026-10-04，hit GPU 训练 + CPU 评价，冻结的预训练视觉特征）
+
+- [计划](outputs/EXP-3D-RGBD-PRETRAINED-FEATURES-V31/PLAN_BEFORE_V31.md)（01:08 写定，sha256 `82ff870d…`）、[冒烟测试](outputs/EXP-3D-RGBD-PRETRAINED-FEATURES-V31/audit/smoke_v31.md)。
+- **动机：** V17–V30 在现有结构里的改动，都没有让 carrier 相对无模型基线有稳定的提升；瓶颈可能是只有 8 个从零学出的图像通道。
+- **设计：** P = V17 L 加上冻结的 DINOv2 ViT-S/14 特征（384→24 投影，经初值为零的 48→64 旁路进入融合），对照 V21 的 G1；P1 = FAR(G1) − FAR(P)（第 24000 步，EVAL-V3/V4），P2 = 调和插值 − AHFILL8(P) 的标签；分支 A/B/C。
+- **状态：** 01:45 冻结（freeze.json sha256 `a49ca180…`），01:45–03:20 GPU 训练，03:21–04:35 CPU 评价。
+- **结果（分支 C）：** P1 FAR(G1) − FAR(P) +0.0041 [−0.0139, +0.0235]（36/0/44），NOT_ESTABLISHED；P2 +0.0347（47/3/33），NOT_DISTINGUISHABLE；EVAL-FAR、FRESH-V2 上 P 略差。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-RGB-SUPERVISION-V30（2026-10-03，hit GPU + CPU，只有 RGB 的新帧只作监督）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-RGB-SUPERVISION-V30/PLAN_BEFORE_V30.md)（17:55 写定，sha256 `f3a0783c…`）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-RGB-SUPERVISION-V30/PROTOCOL.md)。
+- **动机：** V29 中缓存没有深度的新帧有害（carrier 只在带深度的视图上训练过）；本轮不缓存它们，只用它们的 RGB 监督写入。
+- **设计：** EVAL-V3/V4；P1 = NO_STREAM − RGB_SUP_100，P2 = CTX_TTT_100 − CTX_RGB_SUP_100；分支 A/B/C/D。
+- **状态：** 18:23 冻结（预注册 sha256 `5b51493e…`），18:55–20:01 运行。
+- **结果（分支 D，完整性 PASS）：** P1 NO_STREAM − RGB_SUP_100 −0.0796（20/0/63），HARMFUL；P2 CTX_TTT_100 − CTX_RGB_SUP_100 +0.0013（35/0/48），NOT_ESTABLISHED；封存前没有读取任何流帧深度。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-RGB-ONLY-V29（2026-10-03，hit GPU + CPU，只有 RGB 的新帧）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-RGB-ONLY-V29/PLAN_BEFORE_V29.md)（14:09 写定，sha256 `d82283ee…`）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-RGB-ONLY-V29/PROTOCOL.md)。
+- **动机：** V24、V25、V27 说明新帧带深度时，无模型重投影就胜过 carrier；没有深度时，无模型方法用不上新帧，carrier 的写入可能有实际价值。
+- **设计：** EVAL-V3/V4；P1 = NO_STREAM − TTT_RGB_100，P2 = REPROJ3_HARMONIC − HFILL8_3(TTT_RGB_100)；分支 A/B/C/D。
+- **状态：** 14:28 冻结（预注册 sha256 `f3a1c9bb…`），16:51–17:52 运行。
+- **结果（分支 D，完整性 PASS）：** P1 NO_STREAM − TTT_RGB_100 −0.0261（27/0/56），HARMFUL；P2 +0.0205（43/3/37），PARTIAL；只缓存没有深度的帧 −0.0386；封存前没有读取任何流帧深度。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-REPLICA-V28（2026-10-03，hit GPU + CPU，跨数据集的流帧写入）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-REPLICA-V28/PLAN_BEFORE_V28.md)（13:46 写定，sha256 `8b154c92…`）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-REPLICA-V28/PROTOCOL.md)。
+- **设计：** Replica 8 个场景，V17 L；P1 = OFF − TTT_100，P2 = REPROJ7_HARMONIC − HFILL8_7(TTT_100)；分支 A/B/C/D。
+- **状态：** 14:06 冻结（预注册 sha256 `a1019f23…`），18:12–18:44 运行。
+- **结果（分支 B，完整性 PASS）：** P1 OFF − TTT_100 +0.0250（7/0/1），SUPPORTED；P2 REPROJ7_HARMONIC − HFILL8_7(TTT_100) −0.1468（1/0/7），HARMFUL；carrier 0.445 与常数预测 0.411 相当，REPROJ7_HARMONIC 0.062。
+
+## EXP-3D-RGBD-HYBRID-CONFIRM-V27（2026-10-03，hit CPU，两个新队列上的混合方法与 MAXFILL 规则）
+
+- [计划](outputs/EXP-3D-RGBD-HYBRID-CONFIRM-V27/PLAN_BEFORE_V27.md)（13:25 写定，sha256 `d991381f…`）、[协议](outputs/EXP-3D-RGBD-HYBRID-CONFIRM-V27/PROTOCOL.md)。13:40 冻结（预注册 sha256 `f1535aa5…`），13:43 完成。
+- **动机：** V24、V25 的混合方法只有 PARTIAL；探索性分析在同样的数据上找到 MAXFILL 规则，需要在新数据上检验。
+- **设计：** TRAIN-EXT（V9）与 EVAL-V5（V7）合并 78 个场景；P1 = REPROJ7_HARMONIC − MAXFILL8_7(TTT_100)，P2 = REPROJ7_HARMONIC − HFILL8_7(TTT_100)。
+- **结果（分支 D，完整性 PASS）：** P1 +0.0003（29/31/18），P2 +0.0013（36/19/23），都 NOT_ESTABLISHED；写入在 FAR7 上 +0.028（CI 不含 0）。
+
+## EXP-3D-RGBD-FAR-FOCUS-V26（2026-10-03，hit GPU，训练光线集中在测量覆盖不到的像素上）
+
+- [计划](outputs/EXP-3D-RGBD-FAR-FOCUS-V26/PLAN_BEFORE_V26.md)（13:04 写定，sha256 `0cce2455…`）、[修订 1](outputs/EXP-3D-RGBD-FAR-FOCUS-V26/PLAN_AMENDMENT_1.md)（13:13，sha256 `08e6e904…`，FAR 光线不放回抽取）。
+- **动机：** V24、V25 说明 carrier 在实际可用的混合方法里只负责测量覆盖不到的像素，而那里的补全在场景之间不一致。
+- **设计：** GF（V17 L 配方 + FAR 集中采样，GPU）对照 V21 的 G1；P1 = FAR(G1) − FAR(GF)，P2 = 调和插值 − AHFILL8(GF) 的标签。
+- **状态：** 13:23 冻结（freeze.json sha256 `790b7e6e…`），16:50 GPU 训练完成（三个 seed），18:01 CPU 评价与分析完成。
+- **结果（分支 C）：** P1 FAR(G1) − FAR(GF) +0.0198 [−0.0045, +0.0511]（42/0/38），NOT_ESTABLISHED；P2 调和插值 − AHFILL8(GF) +0.0348（49/3/31），NOT_DISTINGUISHABLE；EVAL_FAR 与 FRESH_V2 上方向相反。
+
+## EXP-3D-RGBD-STREAM-FAR-V25（2026-10-03，hit CPU，远处 query 上的 Core B 状态与无模型基线）
+
+- [计划](outputs/EXP-3D-RGBD-STREAM-FAR-V25/PLAN_BEFORE_V25.md)（11:52 写定，sha256 `f525b031…`）、[协议](outputs/EXP-3D-RGBD-STREAM-FAR-V25/PROTOCOL.md)。12:11 冻结（预注册 sha256 `06437de3…`），12:55 完成。
+- **设计：** Core B V8 封存的状态在 EVAL-FAR 远处 query 上渲染（5,688 个视图）；与 V24 相同的基线与混合；P1 = REPROJ7_HARMONIC − HFILL8_7(TTT_100)，P2 = HFILL8_7(OFF) − HFILL8_7(TTT_100)。
+- **结果（分支 D，完整性 PASS）：**
+  - 7 帧 NEAR 占 87.1%；P1 +0.0145 [+0.0020, +0.0301]，35/14/30，PARTIAL；P2 +0.0004，NOT_ESTABLISHED；
+  - carrier 内部写入 +0.0102（58/21）；归一化读出的混合相对无模型基线 +0.0202（40/14/25）。
+
+## EXP-3D-RGBD-STREAM-BASELINES-V24（2026-10-03，hit CPU，Core B 与使用同样帧的无模型基线）
+
+- [计划](outputs/EXP-3D-RGBD-STREAM-BASELINES-V24/PLAN_BEFORE_V24.md)（11:33 写定，sha256 `ff8ea7e0…`）、[协议](outputs/EXP-3D-RGBD-STREAM-BASELINES-V24/PROTOCOL.md)。11:46 冻结（预注册 sha256 `10ad8715…`），11:49 完成。
+- **动机：** Core B 的写入一直只与 carrier 自己的其他策略比较；流帧也是测得的 RGB-D，同样可以重投影。
+- **设计：** 重新计分 Core B V8 的封存预测；REPROJ7_HARMONIC 与混合 HFILL8_7(p)；P1 = HFILL8_7(OFF) − HFILL8_7(TTT_100)，P2 = REPROJ7_HARMONIC − HFILL8_7(TTT_100)。
+- **准备：** 预演指向 Core B V8 自己的 CPU 预演目录；第一次预演在冻结阶段因取错常数的字段位置（在 V17 合同的 `eval` 之下）而停止，未计算任何东西，改正后通过；完整测试 1125 个通过。
+- **结果（分支 D，完整性 PASS）：**
+  - 7 帧 NEAR 占 93.8% 的有效像素；REPROJ7_HARMONIC 0.1746，优于 carrier TTT_100（0.1858，19/83 个场景 carrier 更好）；
+  - P1 +0.0001，NOT_ESTABLISHED；P2 +0.0081 [+0.0000, +0.0189]，31/19/33，PARTIAL；
+  - FAR7 像素上 carrier 平均优于调和插值（+0.060），但不一致。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-ONLINE-V11（2026-10-03，hit GPU，Core B 第十一轮：逐帧在线写入）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-ONLINE-V11/PLAN_BEFORE_COREB_V11.md)（11:08 写定，sha256 `94a461e2…`，在 Core B V9、V10 冻结之后、得到其结果之前）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-ONLINE-V11/PROTOCOL.md)。
+- **动机：** 到 Core B V8 为止的写入都在 4 个流帧全部到达之后一次性进行。
+- **设计：** EVAL-V3 ∪ EVAL-V4（83 个场景）；P1 = OFF − ONLINE_100，P2 = ½(OFF + TTT_100) − ONLINE_100，P3 = ONLINE_NEW_100 − ONLINE_100；分支 A/B/C。
+- **状态：** 11:32 冻结（预注册 sha256 `b23f1cb9…`），20:13–22:03 运行。
+- **结果（分支 B，完整性 PASS）：** P1 OFF − ONLINE_100 +0.0145（68/0/15），SUPPORTED；P2 +0.0038（52/0/31），NOT_ESTABLISHED；P3 −0.0027（41/0/42），NOT_ESTABLISHED；在线保住一次性写入增益的约 2/3。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-CARRIER-V10（2026-10-03，hit GPU，Core B 第十轮：写入的增益是否依赖 carrier）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-CARRIER-V10/PLAN_BEFORE_COREB_V10.md)（10:46 写定，sha256 `e8081221…`，在 Core B V9 冻结之后、得到其结果之前）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-CARRIER-V10/PROTOCOL.md)。
+- **动机：** Core B V4–V9 都只用 V17 L 一个 carrier。
+- **设计：** EVAL-V3 ∪ EVAL-V4（83 个场景）；V17 L、V18 L、V19 L、V20 L（宽度 × 训练数据的 2×2）各做 NO_STREAM、OFF、TTT_100 与 TTT_100_WRONG_SCENE；P1–P3 = 三个新 carrier 上的 OFF − TTT_100；分支 A（三者都 SUPPORTED）/B/C。
+- **状态：** 11:08 冻结（预注册 sha256 `aba2a5f1…`），12:41–15:03 运行。
+- **结果（分支 A，完整性 PASS）：**
+  - OFF − TTT_100：V18 L +0.0244（77/6）、V19 L +0.0286（70/13）、V20 L +0.0327（75/8），都 SUPPORTED；V17 L +0.0213；
+  - 宽度对增益的作用 +0.0078（CI 不含 0），训练数据与交互作用的 CI 跨 0；
+  - 15,936 个指标重新计算一致；V17 L 的 NO_STREAM、OFF 与 Core B V8 逐位相同。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-DOSE-V9（2026-10-03，hit GPU，Core B 第九轮：300 步流帧写入与监督来源的重现）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-DOSE-V9/PLAN_BEFORE_COREB_V9.md)（10:21 写定，sha256 `8956b200…`）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-DOSE-V9/PROTOCOL.md)。
+- **动机：** 流帧写入从 10 步加到 100 步，增益约翻倍（Core B V7、V8）；V8 中新帧监督相对上下文监督 +0.0114，但只有 69% 的场景不变差（PARTIAL）。
+- **设计：** TRAIN-EXT（55 个场景）；P1 = TTT_100 − TTT_300，P2 = OFF_CTX_TTT_100 − TTT_100；分支 A/B/C/D。
+- **状态：** 10:45 冻结（预注册 sha256 `25644e43…`），12:30 完成。
+- **结果（分支 D，完整性 PASS）：**
+  - P1 TTT_100 − TTT_300 +0.0041 [−0.0033, +0.0096]，44/0/11，NOT_ESTABLISHED；P2 OFF_CTX_TTT_100 − TTT_100 +0.0162 [+0.0038, +0.0296]，37/0/18，PARTIAL；
+  - OFF − TTT_100 +0.0355（51/4），OFF − TTT_300 +0.0396；特异性 +0.0651；
+  - 3,960 个指标重新计算一致；NO_STREAM、OFF 与 Core B V6 逐位相同。
+
+## EXP-3D-RGBD-DEPTH-READOUT-V22（2026-10-03，hit CPU，深度读出与长训练增益）
+
+- [计划](outputs/EXP-3D-RGBD-DEPTH-READOUT-V22/PLAN_BEFORE_V22.md)（05:17 写定，sha256 `022fe661…`），05:24 冻结。
+- **动机：** 事后诊断（探索性，只用 EVAL-V3/V4，[记录](outputs/EXP-3D-RGBD-POSTHOC-DIAG-V1/README.md)）发现渲染器的深度未除以不透明度。改用归一化读出后，V17–V20 的长训练 FAR 增益几乎消失。
+- **设计：**
+  - 只在 CPU 上重新计分 V17–V20 已封存的 EVAL-FAR 预测，不运行任何模型；
+  - 读出 RAW 与 NORM = 深度 / max(不透明度, 10⁻³)，区域、聚合、bootstrap 与 V2 gate 都与 V11/V17 相同；
+  - 主判定一：长训练增益在 NORM 下的残差，若 CI 上界小于 RAW 增益的一半，则为 EXPLAINED；
+  - 主判定二：第 6000 步的归一化增益，用 V2 gate；只有 V17 用于判定。
+- **结果（分支 C，完整性 PASS）：**
+  - V17：RAW +0.058 [+0.036, +0.079] → NORM +0.021 [+0.003, +0.039]，NOT_EXPLAINED；
+  - 第 6000 步的归一化增益 +0.050，PARTIAL（55/0/23）；
+  - V18–V20 的残差为 +0.009 到 +0.026；
+  - 长训练增益约 2/3 来自读出偏差，远处 query 上仍有约 +0.02 的真实补全改进。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-SOURCE-V8（2026-10-03，hit GPU，Core B 第八轮：新帧监督与上下文监督）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-SOURCE-V8/PLAN_BEFORE_COREB_V8.md)（08:49 写定，sha256 `2f04035b…`）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-SOURCE-V8/PROTOCOL.md)。
+- **动机：** V6、V7 中，新帧监督相对上下文监督的点估计都为正（+0.0073、+0.0107），但 CI 跨 0；V7 中 FAR 区域 +0.0239。
+- **设计：** EVAL-V3 ∪ EVAL-V4（83 个场景）；P1 = OFF − TTT_100，P2 = OFF_CTX_TTT_100 − TTT_100；分支 A/B/C/D。
+- **状态：** 09:03 冻结（预注册 sha256 `e4848ca4…`），10:14 完成。
+- **结果（分支 B，完整性 PASS）：**
+  - P1 OFF − TTT_100 +0.0213 [+0.0141, +0.0297]，73/0/10，SUPPORTED；P2 OFF_CTX_TTT_100 − TTT_100 +0.0114 [+0.0053, +0.0180]，57/0/26，PARTIAL；
+  - 上下文监督本身 +0.0099，FAR 上为 0；FAR 上 TTT_100 相对上下文监督 +0.0190；
+  - 5,976 个指标重新计算一致，NEAR 掩码 332/332 与 V17 相同。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-FRESH-V7（2026-10-03，hit GPU，Core B 第七轮：全新队列上的更高剂量）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-FRESH-V7/PLAN_BEFORE_COREB_V7.md)（07:56 写定，sha256 `d48a9b28…`）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-FRESH-V7/PROTOCOL.md)。
+- **动机：** V23 显示 10 步的上下文 TTT 在 EVAL-V3/V4 上只是 PARTIAL，而 100 步的增益约为 3 倍。
+- **设计：** EVAL-V5（23 个场景）；V17 L 第 24000 步；8 种策略与 4 个对照；P1 = NO_STREAM − CTX_TTT_100，P2 = OFF − TTT_100；分支 A/B/C/D。
+- **状态：** 08:11 冻结（预注册 sha256 `e7ede177…`），08:46 完成。
+- **结果（分支 B，完整性 PASS）：**
+  - P1 NO_STREAM − CTX_TTT_100 +0.0059 [−0.0003, +0.0132]，NOT_ESTABLISHED；P2 OFF − TTT_100 +0.0150 [+0.0069, +0.0243]，19/0/4，SUPPORTED；
+  - 特异性 TTT_100 +0.0228（22/1）；监督来源整体 +0.0107（CI 跨 0），FAR +0.0239；
+  - TTT_100 在 FAR 上 +0.0171；3,312 个指标重新计算一致。
+
+## EXP-3D-RGBD-EVAL-V5-DATA（2026-10-03，hit，放宽规则的最后一批未观察过的场景）
+
+- [计划](outputs/EXP-3D-RGBD-EVAL-V5-DATA/PLAN_BEFORE_EVAL_V5_DATA.md)、[记录](outputs/EXP-3D-RGBD-EVAL-V5-DATA/README.md)。
+- **动机：** 按 EVAL-V4 的规则已无候选。用户决定允许 val 划分、允许与 DEV/FRESH 共享 volume。
+- **结果：** 34 个候选，23 个有效，7 个 volume（都只与 DEV 共享）；下载 332 MB；PASS。
+
+## EXP-3D-RGBD-STATIC-TTT-EVAL-V23（2026-10-03，hit GPU，只用上下文的测试时精修）
+
+- [计划](outputs/EXP-3D-RGBD-STATIC-TTT-EVAL-V23/PLAN_BEFORE_V23.md)（07:02 写定，sha256 `8e0f54e2…`）、[协议](outputs/EXP-3D-RGBD-STATIC-TTT-EVAL-V23/PROTOCOL.md)。
+- **动机：** Core B V6 中，只用上下文的 TTT 改进了静态状态（+0.0078，45/0/10）。
+- **设计：** EVAL-V3 ∪ EVAL-V4（83 个场景）；V17 L 第 24000 步；NO_STREAM、CTX_TTT（10 步）、CTX_TTT_30、CTX_TTT_100 与对照；P1 = NO_STREAM − CTX_TTT，P2 = CTX_TTT_WRONG_SCENE − CTX_TTT；描述性：FAR/NEAR、调和插值、AHFILL8。
+- **状态：** 07:15 冻结（预注册 sha256 `e629b9b9…`），07:54 完成。
+- **结果（分支 C，完整性 PASS）：**
+  - P1（10 步）+0.0054 [+0.0019, +0.0101]，59/0/24，PARTIAL；P2 特异性 +0.0062，PARTIAL；
+  - 剂量（描述性）：30 步 +0.0112，100 步 +0.0176 [+0.0079, +0.0321]（66/0/17）；100 步时 FAR +0.0124；
+  - 10 步的设置对没见过的场景太少；V7 把 100 步作为主判定的设置。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-CONTEXT-V6（2026-10-03，hit GPU，Core B 第六轮：测试时写入需要新帧吗）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-CONTEXT-V6/PLAN_BEFORE_COREB_V6.md)（06:22 写定，sha256 `658025fd…`）、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-CONTEXT-V6/PROTOCOL.md)。
+- **动机：** Core B V4/V5 的 TTT 增益集中在已观测区域，这引出两个问题：它能否在第三个独立队列上重现？它是否其实不需要新帧，只是对状态的一般性精修？
+- **设计：** TRAIN-EXT（55 个场景）；策略 NO_STREAM、CTX_TTT、OFF、OFF_CTX_TTT、TTT 与两个对照；Core B V4 的设置；P1 = OFF − TTT，P2 = NO_STREAM − CTX_TTT。
+- **状态：** 06:42:46 冻结（预注册 sha256 `136d777a…`），06:59 完成。
+- **结果（分支 A，完整性 PASS）：**
+  - P1 OFF − TTT +0.0148 [+0.0054, +0.0245]，49/0/6，SUPPORTED；P2 NO_STREAM − CTX_TTT +0.0078 [+0.0026, +0.0133]，45/0/10，SUPPORTED；
+  - 监督来源 OFF_CTX_TTT − TTT +0.0073，CI 跨 0；两种 TTT 都有场景特异性；
+  - 增益以 NEAR 为主；4,620 个指标重新计算一致，NEAR 掩码 220/220 与 GPU 试点相同。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-EVAL-V5（2026-10-03，hit GPU，Core B 第五轮：独立场景上的确认）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-EVAL-V5/PLAN_BEFORE_COREB_V5.md)、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-EVAL-V5/PROTOCOL.md)。
+- **动机：** Core B V4 为分支 A，但 DEV 只有 8 个反复使用的场景，TRAIN 选择集上也没有增益。
+- **设计：**
+  - 队列：EVAL-V3（57）∪ EVAL-V4（26），共 83 个场景。它们从未用于 Core B，也从未用于 carrier 的训练或选择；
+  - carrier、TTT 设置（10 步，学习率 1e-3，不重新选择）、episode 规则、策略与对照都与 Core B V4 相同；
+  - 主判定 TTT_BEYOND_BASELINE 与 TTT_SPECIFICITY，用冻结的 V2 gate；分支 A/B/C 同计划；
+  - 描述性：每个队列、每个 seed，以及归一化的深度读出。
+- **准备：**
+  - 新模块 `rgbd_stream_ttt_eval_v5.py` 为 EVAL 记录读取上下文。测试证明，同一批合成场景上它与 Core B V4 的 DEV 路径得到逐位相同的缓存状态；
+  - CPU 预演（4 个 TRAIN 场景充当两个 EVAL 队列）全流程通过；完整测试 1081 个通过、3 个跳过。
+- **状态：**
+  - 05:15 第一次冻结（`a0183207…`）。冻结的封存屏障每次读取都重算全部状态的哈希（平方级），05:57 在写出任何指标之前停止，产物保留在 `audit/attempt1_slow_barrier/`（`audit/incident_attempt1_slow_seal_barrier.md`）；
+  - 加入 `CachedSealBarrier`（封存关闭时与最后一个 query 之后各完整校验一次）后，06:06 重新冻结（`f2a6f0e9…`），06:18 完成。
+- **结果（分支 A，完整性 PASS）：**
+  - OFF 0.207，TTT 0.199，TTT_WRONG_SCENE 0.206，NO_STREAM 0.269；
+  - TTT_BEYOND_BASELINE +0.0079 [+0.0030, +0.0135]，65/0/18，SUPPORTED；TTT_SPECIFICITY +0.0068 [+0.0015, +0.0122]，67/0/16，SUPPORTED；
+  - 3,984 个指标重新计算一致，58,174 个旧文件未变；
+  - 事后（探索性）：增益集中在 NEAR 区域，FAR 区域的改善几乎都来自新帧本身的观测。
+
+## EXP-3D-RGBD-DYNAMIC-TTT-V4（2026-10-03，hit GPU，Core B 第四轮）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-TTT-V4/PLAN_BEFORE_COREB_V4.md)、[协议](outputs/EXP-3D-RGBD-DYNAMIC-TTT-V4/PROTOCOL.md)。
+- **动机：** Core B V1–V3 中，学到的写入规则都没有胜过只缓存新帧。写入规则要从一次前向的激活里猜出快速权重的增量；本轮改为直接用新帧测得的 RGB-D，对快速权重做梯度下降（测试时训练）。
+- **设计：**
+  - carrier、episode 与 DEV 队列都与 Core B V3 相同（V17 L 第 24000 步，冻结）；
+  - TTT：缓存流帧之后，fuse 与 complete 两个增量从 0 开始，用冻结的 V2 C1 损失对 4 个流帧自己的 RGB 与测得深度做 K 步 Adam，每步每帧 256 条光线；
+  - 超参数网格 K ∈ {10, 50} × 学习率 ∈ {1e-3, 1e-2}，只在 32 个 TRAIN episode 上按 OFF − TTT 选择；
+  - 对照 TTT_WRONG_SCENE：把下一个 DEV 场景同一角色的 TTT 增量用到本场景的缓存上；
+  - 主判定 TTT_BEYOND_BASELINE = OFF − TTT 与 TTT_SPECIFICITY = TTT_WRONG_SCENE − TTT，用冻结的 V2 gate；分支 A/B/C 同计划。
+- **准备：**
+  - 冻结前检查代码时发现，场景数据类初始化时会读取实验目录里的 `train_depth_prior.json`。冻结流程改为从 V7 复制它，并核对与 Core B V3 的副本相同；
+  - CPU 预演（2 个 TRAIN 场景充当 DEV，极小网格）全流程通过；完整测试 1077 个通过、3 个跳过。
+- **状态：** 2026-10-03 02:26 冻结（预注册 sha256 `4f750d9c…`）。V21 训练释放 4 号卡之后，04:43 开始 GPU 预演，04:45 预演通过，正式运行 04:56 完成。
+- **结果（分支 A，完整性 PASS）：**
+  - TRAIN 选择：4 组的平均增益都不为正，选 10 步、学习率 1e-3（−0.0001）；
+  - DEV AbsRel：NO_STREAM 0.330，OFF 0.236，TTT 0.224，TTT_WRONG_SCENE 0.239；
+  - TTT_BEYOND_BASELINE +0.0115 [+0.0050, +0.0187]，8/0/0，SUPPORTED；TTT_SPECIFICITY +0.0146 [+0.0072, +0.0224]，8/0/0，SUPPORTED；
+  - 384 个指标重新计算一致，57,724 个旧文件未变；
+  - 事后（探索性）：归一化深度读出下 TTT 的优势不变（+0.0120），不透明度不变，所以不是读出偏差。
+  - 增益小、DEV 只有 8 个场景，需要在独立数据上确认。
+
+## EXP-3D-RGBD-DYNAMIC-WRITE-V3（2026-10-03，hit GPU，Core B 第三轮）
+
+- [计划](outputs/EXP-3D-RGBD-DYNAMIC-WRITE-V3/PLAN_BEFORE_COREB_V3.md)、[协议](outputs/EXP-3D-RGBD-DYNAMIC-WRITE-V3/PROTOCOL.md)。
+- **动机：** Core B V2 中学到的写入不胜过只缓存新帧；检验是不是因为当时的 carrier（V9 C1，宽度 8、6000 步）太弱。
+- **设计：**
+  - 与 Core B V2 相同，只把冻结的 carrier 换成 V17 L 第 24000 步的 checkpoint；
+  - 写入规则的训练与 DEV 评价都在 4 号卡上（关闭 TF32）；
+  - 主判定 BEYOND_BASELINE = OFF − ALL 与 SPECIFICITY = ALL_WRONG_SCENE − ALL。
+- **彩排：** 第一次彩排时，GPU 渲染的 RGB 因舍入略出 [0, 1]，触发了指标函数的范围检查。V3 的评价改为先截断再计分，并记录截掉的量（最多 2.4×10⁻⁷）；第二次彩排全流程通过。
+- **结果（2026-10-03 01:59，分支 C，完整性 PASS）：**
+  - BEYOND_BASELINE −0.0015 [−0.0079, +0.0031]，NOT_ESTABLISHED；SPECIFICITY −0.0011，NOT_ESTABLISHED；
+  - 缓存新帧的作用 +0.094（Core B V2 为 +0.052）；训练写入规则的作用 −0.0015；
+  - 学到的写入在更强的 carrier 上同样不胜过只缓存新帧。
+
+## EXP-3D-RGBD-SEGMENT-DIVERSITY-V21（2026-10-03，hit GPU，同一批场景里的内容多样性）
+
+- [计划](outputs/EXP-3D-RGBD-SEGMENT-DIVERSITY-V21/PLAN_BEFORE_V21_DATA.md)，冻结记录 `outputs/EXP-3D-RGBD-SEGMENT-DIVERSITY-V21/freeze.json`。
+- **动机：** Hypersim 只剩 41 个未用场景，而且都在已用过的 volume 里；但每个训练场景只用了相机轨迹开头的 16 帧（轨迹中位数 100 帧）。
+- **数据 SEG-V1（`outputs/EXP-3D-RGBD-SEGMENT-DATA-V1`）：**
+  - TRAIN72 每个场景的轨迹第 16–79 帧位置切成最多 4 个片段，沿用原记录的冻结有效性规则与相机角色规则。
+  - 下载在锁定顺序的第 64 个场景中途碰到 4 GB 预算，读取器报错，没有写出清单。按冻结规则（读到预算为止）不用这个场景及其后的 8 个场景；由 `scripts/recover_rgbd_segment_data.py` 在不联网的情况下重建清单，每个片段的角色支持都与原运行一致。
+  - 结果：240 个有效片段，来自 62 个场景。
+- **设计：**
+  - 两组都在 GPU 上用冻结的 V17 代码训练 24000 步，各 3 个 seed：G1 用原片段（72 个），G5 用原片段加 240 个新片段（312 个）；
+  - P1：DIVERSITY_GAIN = FAR(G1) − FAR(G5)，第 24000 步，V2 gate；P2：调和插值 − AHFILL8(G5)，INPAINT 标签。
+- **状态：** 2026-10-03 01:31 冻结。第一次启动因缺 `checkpoints/` 目录在第 0 步失败（`audit/incident_launch_missing_checkpoints.md`），02:03 以同一冻结命令重启；训练 04:42 结束，CPU 上的评价 05:55 结束。
+- **结果（分支 C）：**
+  - P1 DIVERSITY_GAIN −0.023 [−0.063, +0.014]，32/0/48，NOT_ESTABLISHED；P2 调和插值 − AHFILL8(G5) +0.031，NOT_DISTINGUISHABLE；
+  - 每个检查点上 G5 都比 G1 差；EVAL-FAR 上 −0.034 [−0.060, −0.006]；
+  - 设备检查：V17 L（CPU）− G1（GPU）= −0.005 [−0.016, +0.005]；
+  - 同一批场景里的内容多样性不能改善补全，也不能解决不一致。
+
+## EXP-3D-RGBD-GPU-LENGTH-PILOT-V1（2026-10-02，hit GPU，探索性）
+
+- [计划](outputs/EXP-3D-RGBD-GPU-LENGTH-PILOT-V1/PLAN_BEFORE_PILOT.md)、[结果](outputs/EXP-3D-RGBD-GPU-LENGTH-PILOT-V1/README.md)。
+- 宽度 32、64 训练到 96000 步，在 TRAIN-EXT 的 55 个场景（TRAIN72 训练从未见过）上评价。
+- **结果：**
+  - FAR 在 12000–24000 步之后不再下降（宽度 32：第 24000 步 0.316，第 96000 步 0.325；宽度 64：0.312、0.321）；
+  - 宽度 64 在任何步数都没有可区分的优势；
+  - 相对调和插值（FAR 0.418）平均好约 0.10，但只有约 33/54 个场景变好。
+
+## EXP-3D-RGBD-LONG-TRAIN-WIDTH-DATA-V20（2026-10-02，hit，宽度 64 × 127 个训练场景 × 长训练）
+
+- [计划](outputs/EXP-3D-RGBD-LONG-TRAIN-WIDTH-DATA-V20/PLAN_BEFORE_V20_TRAINING.md)、[协议](outputs/EXP-3D-RGBD-LONG-TRAIN-WIDTH-DATA-V20/PROTOCOL.md)。
+- **动机：** 检验只有同时放大容量、数据与训练长度时补全才改善的假设；(宽度 64, TRAIN127, 24000 步) 是前几轮都没有覆盖的一角。
+- **设计：**
+  - V15 C1 配方（宽度 64，127 个场景）训练 24000 步；前 6000 步必须与 V15 C1 逐位相同。
+  - 与 V18 每一步的数据相同，只有宽度不同。
+  - P1：LENGTH_GAIN；P2：WIDTH_GAIN_24K = FAR(V18 第 24000 步) − FAR(V20 第 24000 步)，都用冻结的 V2 gate。
+  - 四个实验都完成后，另报宽度 × 数据 × 步数的 2×2×2（描述性）。
+- **结果（2026-10-03 01:38，分支 C）：** 内置对照 PASS；P1 LENGTH_GAIN +0.058 [+0.026, +0.092]（58/22，PARTIAL）；P2 WIDTH_GAIN_24K −0.002 [−0.015, +0.012]（41/39，NOT_ESTABLISHED）；FAR 第 6000 → 24000 步 0.418 → 0.360（宽度 32 为 0.420 → 0.358）。2×2×2 见上方 STATUS。原状态：2026-10-02 06:16 冻结。
+
+## EXP-3D-RGBD-LONG-TRAIN-WIDTH-V19（2026-10-02，hit，长训练下的宽度 64）
+
+- [计划](outputs/EXP-3D-RGBD-LONG-TRAIN-WIDTH-V19/PLAN_BEFORE_V19_TRAINING.md)、[协议](outputs/EXP-3D-RGBD-LONG-TRAIN-WIDTH-V19/PROTOCOL.md)。
+- **动机：** V12、V15 中宽度 64 在 6000 步时没有改善补全；检验更宽的载体是否需要更长的训练才显出优势。
+- **设计：**
+  - V12 C1 配方（宽度 64，TRAIN72）训练 24000 步；前 6000 步必须与 V12 C1 逐位相同。
+  - 与 V17 每一步的数据相同，只有宽度不同。
+  - P1：LENGTH_GAIN；P2：WIDTH_GAIN_24K = FAR(V17 第 24000 步) − FAR(V19 第 24000 步)，都用冻结的 V2 gate。
+- **结果（2026-10-03 00:49，分支 C）：** 内置对照 PASS；P1 LENGTH_GAIN +0.042 [+0.015, +0.072]（53/27，PARTIAL）；P2 WIDTH_GAIN_24K +0.004 [−0.014, +0.030]（41/39，NOT_ESTABLISHED）；FAR 第 6000 → 24000 步 0.386 → 0.344（宽度 32 为 0.392 → 0.348）。原状态：2026-10-02 05:47 冻结。第一次完整测试时漏设 `CUDA_VISIBLE_DEVICES=""`，两个 CUDA 小测试在默认 GPU 上跑了几秒；已在隐藏 CUDA 的条件下重跑，见该实验的 `audit/incident_first_suite_cuda_visible.md`。
+
+## EXP-3D-RGBD-LONG-TRAIN-DATA-V18（2026-10-02，hit，127 个训练场景上的长训练）
+
+- [计划](outputs/EXP-3D-RGBD-LONG-TRAIN-DATA-V18/PLAN_BEFORE_V18_TRAINING.md)、[协议](outputs/EXP-3D-RGBD-LONG-TRAIN-DATA-V18/PROTOCOL.md)。
+- **动机：** V14 中更多训练场景让补全变差；事后分析显示，两种训练集的补全都随训练步数持续改善。检验更长的训练能否扭转数据的作用。
+- **设计：**
+  - V14 C1 配方（TRAIN72 + TRAIN-EXT，127 个场景）训练 24000 步；前 6000 步必须与 V14 C1 逐位相同。
+  - 主判定与 V17 相同；与 V17 合成训练集 × 步数的 2×2（描述性）。
+- **结果（2026-10-02 12:41，分支 C）：**
+  - 内置对照 PASS。
+  - P1 LENGTH_GAIN +0.062 [+0.030, +0.095]，55/25 个场景，PARTIAL。
+  - P2 调和插值 − AHFILL8(第 24000 步) +0.032 [+0.012, +0.055]，46/3/34，NOT_DISTINGUISHABLE。
+  - FAR：0.420（第 6000 步）→ 0.390（第 12000 步）→ 0.354（第 16000 步）→ 0.358（第 24000 步）。
+  - DEV 选中第 5000、2000、4000 步。
+  - 与 V17 的 2×2（描述性，`audit/two_by_two_v17_v18.json`）：更多数据的效果在第 6000 步为 −0.027 [−0.049, −0.007]，在第 24000 步为 −0.009 [−0.031, +0.014]，交互 −0.018 [−0.049, +0.012]。长训练缩小了劣势，但没有反转。
+
+## EXP-3D-RGBD-LONG-TRAIN-V17（2026-10-02，hit，更长的训练能否改善补全）
+
+- [计划](outputs/EXP-3D-RGBD-LONG-TRAIN-V17/PLAN_BEFORE_V17_TRAINING.md)、[协议](outputs/EXP-3D-RGBD-LONG-TRAIN-V17/PROTOCOL.md)。
+- **动机：** 据 V14 事后分析，V11 C1 配方的补全误差随步数单调下降，到第 6000 步仍在下降；V13 的弃权提高了组合方法的稳定性。
+- **设计：**
+  - V11 C1 配方训练 24000 步，检查点在 6000 步后追加 8000–24000 步；前 6000 步必须与 V11 C1 逐位相同（内置对照）。
+  - P1：LENGTH_GAIN = FAR(第 6000 步) − FAR(第 24000 步)，冻结的 V2 gate。
+  - P2：调和插值 − AHFILL8(第 24000 步)，INPAINT-V1 的标签规则。
+  - 主队列 EVAL-V3 ∪ EVAL-V4（83 个场景）；EVAL-FAR 与 FRESH-V2 只作描述。
+- **结果（2026-10-02 12:29，分支 C）：**
+  - 内置对照 PASS。
+  - P1 LENGTH_GAIN +0.044 [+0.018, +0.069]，54/26 个场景，PARTIAL（只差场景一致性：67.5% < 75%）。
+  - P2 调和插值 − AHFILL8(第 24000 步) +0.035 [+0.015, +0.057]，52/3/28，NOT_DISTINGUISHABLE。
+  - FAR：0.392（第 6000 步）→ 0.365（第 10000 步）→ 0.356（第 16000 步）→ 0.348（第 24000 步）。
+  - DEV 选中第 750、1500、4000 步，与 V11 C1 相同；SEL 的 FAR 0.421，比第 6000 步差 0.029。
+  - 描述性：EVAL-FAR 上 LENGTH_GAIN +0.058，SUPPORTED；FRESH-V2 上 +0.006，看不出。
+
+## 迁移到 hit（2026-10-02）
+
+- **内容：** 代码与文档从 GitHub main `249becb` 克隆；数据、记录与模型打成 5 个包，经本地中转后逐文件核对哈希（CV1–CV3 共 22,412 个文件，CV4 1,338 个，CV5 109 个）。
+- **环境：** 按 `uv.lock` 同步，Python 3.12.7、PyTorch 2.11.0+cu128、NumPy 2.5.2，与 zonghan_o 相同；完整测试 1031 个通过、3 个跳过。
+- **路径：** 记录里写的是 zonghan_o 的 `/home/zonghan/…` 路径，在 hit 上用启动包装 `cv_host_run.py` 在运行时映射，文件本身不改。
+- **复现（[HIT-REPRO-V1](outputs/EXP-3D-HIT-REPRO-V1/README.md)）：** 在 hit 上重训 V15 C0（seed 20260928）。设置 `ATEN_CPU_CAPABILITY=avx2`、`MKL_CBWR=AVX2`、`DNNL_MAX_CPU_ISA=AVX2` 并用单线程 BLAS 时，与 zonghan_o 逐位一致（6000 步训练记录、第 5000/6000 步参数、12 个 DEV 检查点）。不设置时第 1 步就不同，DEV 最多差 0.047，选出的 checkpoint 也不同。GPU 上（4 号卡）训练无法逐位复现：强制确定性时 3D `grid_sample` 的反向没有确定性实现；默认设置下两次运行从第 2 步起不同，选出的 checkpoint 也不同；每步比 CPU 快 7–20 倍。
+
 ## EXP-3D-RGBD-VOLUME-DISJOINT-V16（2026-09-30，陌生 volume 上的补全优势）
 
 - [结果](outputs/EXP-3D-RGBD-VOLUME-DISJOINT-V16/README.md)、[协议](outputs/EXP-3D-RGBD-VOLUME-DISJOINT-V16/PROTOCOL.md)。

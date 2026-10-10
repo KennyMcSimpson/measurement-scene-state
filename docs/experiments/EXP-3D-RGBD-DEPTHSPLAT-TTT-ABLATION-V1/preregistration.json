@@ -1,0 +1,54 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1",
+ "locked_at": "2026-10-08 06:25:19 +0800",
+ "protocol_sha256": "1ef2204148a9299f357994ecbeae6ff230fe6543b73f0c42c15a3663ec411bad",
+ "code": {
+  "ablation_analyze.py": "a02f5f203d40954da9c297c5e2a0f97b6bf668720d8879113b61c25f59c1e2a6",
+  "ablation_dev_job.sh": "26af7974b61ee076e7df6481ff91da7ab31d334f3a708c9580aee0539c31ab9c",
+  "ablation_formal.sh": "26baf4093a24a2878158b0e09972ba3cbdb43557309575efff682fa662230706",
+  "ablation_lock.py": "b4235b7b2c7a5c9a105697f806e5949e434af885260c3cbb24c92a75dfa7d5d8",
+  "ablation_select.py": "05dc1d41f61d4dd5c25a6436aeb96ad215d60126bd87910c7f3a06c2db846aa2",
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "naive_eval.py": "b6ae80f15d17d6b01793620eb85d90b5910a306a6d1a9096076722d4e0d9b6af",
+  "train_jepa.py": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f"
+ },
+ "root_files": {
+  "frame_role_lock.json": "f00e17bb099af4ad6ef0b99b269babb2db9b287bc0ea64fd21046d61c632b1eb",
+  "nv_selection.json": "70e215be9cab1785f93eb165144b808649ed3f973c6c403a49d7c9ef96734da4",
+  "geometry/geometry_seal_FRESH78.json": "bd1f6fb0b75504964e5aaef5621939bc6542a0f906a3f3cd2a18271fd66d4562"
+ },
+ "v1": {
+  "preregistration_sha256": "fa87f117dfc2a7bb341f9987b2a385fac2e1ac86e32ae7773a2fa4ce576e70fb",
+  "arms_seal_sha256": "7925e96ab2cdd46704b776733fca85d6a8a68446e22492db4e11973e25ccc450",
+  "zs_seals": {
+   "ds_seal_0of3.json": "793b0d7b00f31fde8c4f31daa82c828ab41fb9e7d790334284096b7e4ce919da",
+   "ds_seal_1of3.json": "8ddb3439ae0ca379d9d8d79aa3f44386ab4a01952978b2705d7364930c31975a",
+   "ds_seal_2of3.json": "90a523365eed3f3ea7d2596da66a573c1923dd5f17312c4217338907e95d5b14"
+  }
+ },
+ "settings": {
+  "nv_scale_c": 0.0625,
+  "nv_opacity": 0.95,
+  "nv_ttt_mult": 1.0,
+  "ttt_steps": 100,
+  "zs_ttt_mult": 1.0,
+  "alpha_min": 0.5,
+  "bootstrap": {
+   "draws": 10000,
+   "seed": 20260928,
+   "unit": "scene"
+  }
+ },
+ "primary": {
+  "P1_LEARNED_BASE_UNDER_TTT_ALL": "ALL: NV_TTT_F7 - ZS_TTT_F7",
+  "P2_LEARNED_BASE_CACHE_ALL": "ALL: NV_CACHE_F7 - ZS_CACHE_F7"
+ },
+ "branch": "LEARNED_BASE_MATTERS if P1 passes the V2 gate; NAIVE_BETTER if P1's CI high < 0; TTT_IS_GENERIC if P1's CI spans 0 and P3 (NV_CACHE_F7 - NV_TTT_F7) passes; else INCONCLUSIVE",
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by the V1 score stage after the NV seals are complete",
+  "protected holdout never opened; nothing pushed"
+ ]
+}

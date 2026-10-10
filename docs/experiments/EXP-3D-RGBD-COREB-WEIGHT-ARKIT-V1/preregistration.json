@@ -1,0 +1,61 @@
+{
+ "experiment": "EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1",
+ "locked_at": "2026-10-10 01:51:05 +0800",
+ "protocol_sha256": "212eb96db890eec70af318278f6058cd84fc082ab584cc3ad3a1dfe59638b3c0",
+ "code": {
+  "cw_jobs.sh": "92d31de6a15c88a781f3264a1191ee99c3256e3470cef2f45183ab5ee36c20e0",
+  "cw_lock.py": "b132ccd914b4a23bc8b05290c0476181d03a83b7e2981d4dfe2f0b3a606c40a0",
+  "cw_make_root.py": "cca33b6fd8bb9fe0983f4c3d5c5019677f0f178cfed125120bcb412e72edbe24",
+  "cw_score.py": "081e1211d6858f773c9b6daf62249dcf997f7656f3332c469278860cf386b8b3"
+ },
+ "root_files": {
+  "reused_seals.json": "19e914c2081b881eac0ba223a39d49a448ffa55d6e2e9a518091d9b5d89fb5d1"
+ },
+ "earlier_preregistrations": {
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1": "8bfe2c187c1d3532079b3debed8c2eedd7c390a0470cecdc7fd335dfc7cde299",
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2": "b36f26577845e5c395d19ee1281790e8502c684a42f0dbbe7e8f284f5d31d046",
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3": "0a33ebdf73fdfa59d050e475379fc50f33c203574598aa64a920d4f72da5126b",
+  "EXP-3D-RGBD-ENSEMBLES-ARKIT-V1": "6947f14ff3f3440bc713615611795eb10b6118efa4e77a26d8ff0a896dafa2c6",
+  "EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1": "644bad0dff907f4da44642fb29662c80bb6503bffdc7cc418db9bb460a2fd6b6",
+  "EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1": "091f0b96eaea5b3b023a2be96e5d7c5507fda0a61b9f9e540db19b5f6e185d78"
+ },
+ "v1_code": {
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "design_basis": "known: TTT alone has a lower mean than Core B on every ARKit cohort but is less consistent against R7 (AT dev curve, V3, CA); locked before any weight other than 0.5 and 1.0 was computed",
+ "settings": {
+  "readout": "GEO_w = R7^(1-w) x ZS_TTT_F7^w",
+  "grid": [
+   0.5,
+   0.6,
+   0.7,
+   0.8,
+   0.9,
+   1.0
+  ],
+  "dev": [
+   "ARKIT_SYSTEM",
+   "ARKIT_SYSTEM2"
+  ],
+  "confirmation": [
+   "ARKIT_SYSTEM3",
+   "ARKIT_VAL"
+  ],
+  "selection": "w* = argmin DEV scene mean ALL; ties: the smaller w"
+ },
+ "primary": {
+  "P1_WEIGHT_VS_CORE_B_SYSTEM3_ALL": "ARKIT_SYSTEM3 ALL: CORE_B - GEO_w*",
+  "P2_WEIGHT_VS_CORE_B_VAL_ALL": "ARKIT_VAL ALL: CORE_B - GEO_w*"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "the selection reads DEV query depth only and is hashed before any confirmation query depth is read",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

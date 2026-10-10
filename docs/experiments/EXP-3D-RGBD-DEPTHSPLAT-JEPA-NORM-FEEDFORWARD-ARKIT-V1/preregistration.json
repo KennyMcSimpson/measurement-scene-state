@@ -1,0 +1,59 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1",
+ "locked_at": "2026-10-09 19:23:38 +0800",
+ "protocol_sha256": "aac013458ccf6b12e292cc86b83bf872a690037a235bde70e78ddaa180dd775b",
+ "code": {
+  "arkit_records.py": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "nf_jobs.sh": "9b55efec0d3fbb7daa78bda5682e161d72700518dac0c14cd884d0cca03dccba",
+  "nf_lock.py": "9cd9c4a5111125db931186a98325f9d94cb126dc1678f07f268d8b615beef7c6",
+  "nf_make_root.py": "b871e6175fa95f772c621b66a4b187514711fedc08a1ac267ac3d8234c939881",
+  "nf_score.py": "06f04aaf19d571463e39b6a25aaade4a4075df6d8c0baa5626fd889985ef9f6e",
+  "train_jepa_arkit_norm.py": "cdd27c6589eed7caa33af7b3975fde119d752af8af32b9b4fad674430065599c"
+ },
+ "root_files": {
+  "frame_role_lock.json": "145f2041374bc0a7366fda56a5a2025f37474d14a9adf5f2161a886e28c68fb9",
+  "reused_seals.json": "e34369608a4211160b681927a9ac25e85aa3e7e36e6c8cd492df1f2aa955ad22",
+  "training/hit_shares_TRAIN.json": "26b361a0187d46e98e2f5ddba3f3a899cf8bf7ca5e537fb4682f90592e258a18"
+ },
+ "training_data": {
+  "manifest_arkit_trainval.json": "7203f486dd70f418313853ad842de48c84b1292c55ec40d3122da49d22ca4bb9",
+  "candidate_lock.json": "47e6ebe9b6caf97a90c1a6a5a8f5756f698651ddd58de6ed5058af78ffdc5e5e"
+ },
+ "objective_preregistration_sha256": "a826b21ce062a848a188fdba4d02a1d1326c8ffff76e5fbe4a22cf1a75d95d5f",
+ "objective_results_sha256": "9460d2f713f7607da3974aec5ef447f24eebf1181b8e1ad0efa211607b8f4c06",
+ "v3_preregistration_sha256": "0a33ebdf73fdfa59d050e475379fc50f33c203574598aa64a920d4f72da5126b",
+ "v3_scored_at_lock": false,
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "reused_checkpoints": {
+  "JN1": "9968ca8cda75f20f99e58f4aeec8fffdf41278da38a68521121a3d34eeec58a2",
+  "JK1": "6cc10e36ee38f745b16226a4c01d0d5c225f89d6bf19943fbaca82ff8686fd3d"
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "design_basis": "S3 of EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1 (known at design time); locked before any NF training or evaluation and before V3 read any ARKIT_SYSTEM3 query depth",
+ "settings": {
+  "training": "JN2 / JN3: train_jepa_arkit_norm.py with JN1's settings (4000 steps, lr 5e-6 / ViT 5e-7, warmup 200, cosine, AdamW wd 1e-4, clip 1.0, 2 targets, scale cap 0.1, last step), seeds 20261009 / 20261010",
+  "evaluation": "V1's ds_eval.py, CACHE arm only (3 context + 4 stream views), cap 0.1, ARKIT_SYSTEM3 (V3 episodes): ZS (released), JN1, JN2, JN3, JK1",
+  "alpha_min": 0.5,
+  "recipe_readout": "JNS = per-query mean over JN1-JN3 of the AbsRel"
+ },
+ "primary": {
+  "P1_JN1_FEEDFORWARD_VS_RELEASED_ALL": "ALL: ZS_CACHE - JN1_CACHE",
+  "P2_RECIPE_FEEDFORWARD_VS_RELEASED_ALL": "ALL: ZS_CACHE - JNS_CACHE"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by nf_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

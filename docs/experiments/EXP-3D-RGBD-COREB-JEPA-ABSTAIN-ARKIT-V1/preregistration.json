@@ -1,0 +1,64 @@
+{
+ "experiment": "EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1",
+ "locked_at": "2026-10-10 01:37:36 +0800",
+ "protocol_sha256": "17a2f6762e21443524efd4e10842e38f5ebba3e4fedf9f4541459168d212a528",
+ "code": {
+  "ca_jobs.sh": "c0aa0722887758107c38c6cc5475ad84667546699c2db68a6439925c02b5ab11",
+  "ca_lock.py": "dbab3cf1a2407b14c7cf980ae6143b8555ab041a824dbad5db977c876b6c7532",
+  "ca_make_root.py": "1429fb7e79bf2e411c5f8aca4ddc7bef5873d53425a1e646d9f030570317ccd5",
+  "ca_score.py": "2de62531412c45a3b23d0fc40b389745095d5b0f68dabf5dffe7a7aa850d0612"
+ },
+ "root_files": {
+  "reused_seals.json": "03167ba2c96515c29f5ba4adf89db4f960ee8c15a62faf3ecb7e872091570515",
+  "eval_SYSTEM/frame_role_lock.json": "13c9b48ebf869a0250f783eab18438b8a62e87f1fec681ee0ad648c9c5f87eda",
+  "eval_SYSTEM2/frame_role_lock.json": "2abd5108659decaf3ae176ce641f0732156d7baee14983ccabef24241d6277a7"
+ },
+ "earlier_preregistrations": {
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1": "8bfe2c187c1d3532079b3debed8c2eedd7c390a0470cecdc7fd335dfc7cde299",
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2": "b36f26577845e5c395d19ee1281790e8502c684a42f0dbbe7e8f284f5d31d046",
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3": "0a33ebdf73fdfa59d050e475379fc50f33c203574598aa64a920d4f72da5126b",
+  "EXP-3D-RGBD-ENSEMBLES-ARKIT-V1": "6947f14ff3f3440bc713615611795eb10b6118efa4e77a26d8ff0a896dafa2c6",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1": "a826b21ce062a848a188fdba4d02a1d1326c8ffff76e5fbe4a22cf1a75d95d5f",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1": "7ff1827a9ffb18d2ce964510b024bd47c31b9b4b57c19491729dd036e5069f57",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1": "d9ed9d50574c86b2424c2b979d565ecff673de257d3fc56ee9eb40224feab03b",
+  "EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1": "644bad0dff907f4da44642fb29662c80bb6503bffdc7cc418db9bb460a2fd6b6"
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "design_basis": "NF / NS / AT (known: JN's selective abstention improves the feed-forward state, a global threshold does not) and the exploratory NF tie of JNS with CORE_B; locked before any candidate was computed",
+ "settings": {
+  "candidates": {
+   "MASK": "sqrt(R7 x T'), T' = TTT ray where alpha_TTT >= 0.5 and alpha_JN >= 0.5, else R7",
+   "TRIPLE": "(R7 x ZS_TTT_F7 x JN_F7)^(1/3)",
+   "PAIR": "sqrt(ZS_TTT_F7 x JN_F7)"
+  },
+  "dev": [
+   "ARKIT_SYSTEM",
+   "ARKIT_SYSTEM2"
+  ],
+  "confirmation": [
+   "ARKIT_SYSTEM3",
+   "ARKIT_VAL"
+  ],
+  "system_model": "JN1 (JN2 / JN3 secondary)",
+  "dev_evaluation": "V1 ds_eval.py, JN1, CACHE arm, cap 0.1",
+  "selection": "lowest DEV scene mean ALL; ties MASK, TRIPLE, PAIR; stop unless below CORE_B"
+ },
+ "primary": {
+  "P1_JEPA_ABSTAIN_VS_CORE_B_SYSTEM3_ALL": "ARKIT_SYSTEM3 ALL: CORE_B - SYS*",
+  "P2_JEPA_ABSTAIN_VS_CORE_B_VAL_ALL": "ARKIT_VAL ALL: CORE_B - SYS*"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "the selection reads DEV query depth only and is hashed before any confirmation query depth is read",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

@@ -1,26 +1,29 @@
 {
-  "publication": "research/rgbd-experiments-20261001",
+  "publication": "research/depthsplat-arkit-20261010",
   "clean_checkout_tests": {
-    "passed": 1024,
-    "skipped": 1,
-    "seconds": 93.14,
-    "skip_reason": "Historical V5 checkpoint not distributed",
-    "scope": "Fresh git worktree of the publication commit without data/ or outputs/, using the installed Python dependencies"
+    "passed": 1200,
+    "skipped": 3,
+    "seconds": 339.0,
+    "skip_reasons": [
+      "CUDA is not available (two GPU smoke tests; CUDA hidden)",
+      "Historical V5 checkpoint not distributed"
+    ],
+    "scope": "Fresh git worktree of origin/main 249becb plus every file of this publication, without data/ or outputs/, CUDA hidden, using the installed Python dependencies (run on hit before the transfer)"
   },
-  "ruff": "PASS; third_party/backups/outputs/docs/experiments excluded",
+  "ruff": "PASS; third_party/backups/outputs/docs/experiments excluded; E501 waived for scripts/prepare_rgbd_arkit_confirm_cohort.py and scripts/prepare_rgbd_arkit_val_cohort.py, whose hashes are recorded in the ARKitScenes cohort locks",
   "lock_check": "uv lock --check --offline PASS",
   "archives": {
-    "files": 31,
-    "original_bytes": 1088821784,
-    "compressed_bytes": 166160721,
+    "new_archives": 0,
     "roundtrip_sha256": "PASS (restore_report_artifacts.py --check, all 38 archives)"
   },
-  "fixes_for_collaborators": [
-    "Text reports over 5 MB stored as deterministic .gz and registered for restore",
-    "Lint scope excludes byte-preserved experiment evidence under docs/experiments"
-  ],
-  "test_failure_history": "First clean-worktree lint found 356 issues, all in byte-preserved docs/experiments scripts; excluded that directory from ruff instead of editing evidence; final lint and tests pass",
-  "not_published": "Local outputs/ trees, including the records of evaluation-only experiments (V13, V16, inpainting baselines, EVAL-V4 replication, Replica transfer, geometric baselines, data preparation); their results are summarized in EXPERIMENTS.md and STATUS.md",
+  "published_records": {
+    "experiments": 26,
+    "files": 391,
+    "bytes": 15616769,
+    "content": "README.md, PROTOCOL.md, preregistration.json (freeze.json for the GA carrier), results JSON (results/, DEV selections, amendment and exploratory post-hoc JSON) and code (.py, .sh) of the DepthSplat line; no checkpoints, sealed predictions, per-query score rows, manifests, logs or media"
+  },
+  "not_published": "Everything else under the local outputs/ trees (checkpoints, sealed predictions, scores, frame-role locks, manifests, logs), the ARKitScenes and Replica data (research-only licences, never redistributed), and the evaluation-only experiments listed in the previous publication",
   "training_and_data_download_rerun": false,
+  "transfer": "Staged and validated on hit without committing there, packed (sha256 f1cc0880638ef99ceb3c968f016831dca55144fbf3bdb1be39d0cc6ed3e93a5e), relayed hit -> local machine -> zonghan_o, hash-checked, then committed and pushed from zonghan_o",
   "workflow_remote_status": "Not yet run; clean worktree verified"
 }

@@ -1,0 +1,52 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1",
+ "locked_at": "2026-10-09 01:19:01 +0800",
+ "protocol_sha256": "50a86a5cef0611d59410014636d05e937886db223b57f9f2804b939e3dec02f0",
+ "code": {
+  "jbt_jobs.sh": "59212823df6147747cfb07c6fdf65b546263a814072a2e5340ca99c537d90b29",
+  "jbt_lock.py": "d3c74a01bd6142823ccf9a63ddd08dbcab618426761d4cd74a6e83620ab687af",
+  "jbt_make_root.py": "206768a63b32cd22188b03cfac9cef691c2ff63efcb18010b67e57c8a88e4b77",
+  "jbt_score.py": "42afc127b5860bfb88674ce3cc9538253d7c2e589e485e57c5367b8e9cc2bc1f"
+ },
+ "root_files": {
+  "frame_role_lock.json": "b0efbf650ad9593da23d4af3e00a9caf113cb4daf1efc2dca2baf50f16576a01",
+  "reused_seals.json": "6e0644be707d0ad6b832e7b8dda55c9b4c31cdb3d2732a43da7d7b47b2761496"
+ },
+ "ja_checkpoint": {
+  "path": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/checkpoints/JA1/depthsplat_jepa_final.pth",
+  "sha256": "0659fb4ef7b79527faea1ca3f959133d8de81a7f24cb96cd4ce68880ae297389",
+  "seed": 20261008,
+  "jepa_arkit_preregistration_sha256": "de61109d317081004b08ee8a8555519587b7804bfa7149f0ca6b7eec292ded35"
+ },
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "jepa_arkit_results_existed_at_lock": false,
+ "settings": {
+  "arms": "CACHE, TTT m = 1 (100 steps) from V1's ds_eval.py",
+  "caps": {
+   "JA": 3.0,
+   "ZS3": 3.0,
+   "ZS": 0.1
+  },
+  "readout": "F7: ray depth where alpha >= 0.5 else REPROJ7_HARMONIC",
+  "alpha_min": 0.5
+ },
+ "primary": {
+  "Q1_JEPA_BASE_VS_RELEASED_TTT_ALL": "ALL: ZS_TTT - JA_TTT",
+  "Q2_JEPA_TRAINING_HELPS_TTT_SAME_CAP_ALL": "ALL: ZS3_TTT - JA_TTT"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by jbt_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

@@ -1,0 +1,504 @@
+{
+ "branches": {
+  "P1": "JEPA_BEYOND_THRESHOLD_PARTIAL",
+  "P2": "THRESHOLD_CORE_B_NOT_ESTABLISHED"
+ },
+ "means": {
+  "ARKIT_SYSTEM3:CORE_B_05|ALL": {
+   "mean": 0.15688559379590356,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:CORE_B_05|FAR7": {
+   "mean": 0.2983391072287765,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:CORE_B_05|NEAR7": {
+   "mean": 0.07118334448601922,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:CORE_B_TAU|ALL": {
+   "mean": 0.15688559379590356,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:CORE_B_TAU|FAR7": {
+   "mean": 0.2983391072287765,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:CORE_B_TAU|NEAR7": {
+   "mean": 0.07118334448601922,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:JLS_CACHE|ALL": {
+   "mean": 0.1566852729918965,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:JLS_CACHE|FAR7": {
+   "mean": 0.29876186279900835,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:JLS_CACHE|NEAR7": {
+   "mean": 0.07087777361985188,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:JNS_CACHE|ALL": {
+   "mean": 0.15666466911682633,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:JNS_CACHE|FAR7": {
+   "mean": 0.29817165482807556,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:JNS_CACHE|NEAR7": {
+   "mean": 0.07118115405592525,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:R7|ALL": {
+   "mean": 0.16295738123606124,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:R7|FAR7": {
+   "mean": 0.3036761627597139,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:R7|NEAR7": {
+   "mean": 0.07805229940281354,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_05_coverage": {
+   "mean": 0.7221969604492188,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_05|ALL": {
+   "mean": 0.16079469014437195,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_05|FAR7": {
+   "mean": 0.29732518032928906,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_05|NEAR7": {
+   "mean": 0.07629777385915612,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_TAU_coverage": {
+   "mean": 0.7221969604492188,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_TAU|ALL": {
+   "mean": 0.16079469014437195,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_TAU|FAR7": {
+   "mean": 0.29732518032928906,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:ZS_CACHE_TAU|NEAR7": {
+   "mean": 0.07629777385915612,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_05_coverage": {
+   "mean": 0.713431396484375,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_05|ALL": {
+   "mean": 0.1543765964116925,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_05|FAR7": {
+   "mean": 0.2979875136774173,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_05|NEAR7": {
+   "mean": 0.06798301893796185,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_TAU_coverage": {
+   "mean": 0.713431396484375,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_TAU|ALL": {
+   "mean": 0.1543765964116925,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_TAU|FAR7": {
+   "mean": 0.2979875136774173,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_TAU|NEAR7": {
+   "mean": 0.06798301893796185,
+   "scenes": 160
+  },
+  "ARKIT_VAL:CORE_B_05|ALL": {
+   "mean": 0.11608169943366528,
+   "scenes": 80
+  },
+  "ARKIT_VAL:CORE_B_05|FAR7": {
+   "mean": 0.25404339862137604,
+   "scenes": 75
+  },
+  "ARKIT_VAL:CORE_B_05|NEAR7": {
+   "mean": 0.07071112922842633,
+   "scenes": 80
+  },
+  "ARKIT_VAL:CORE_B_TAU|ALL": {
+   "mean": 0.11608169943366528,
+   "scenes": 80
+  },
+  "ARKIT_VAL:CORE_B_TAU|FAR7": {
+   "mean": 0.25404339862137604,
+   "scenes": 75
+  },
+  "ARKIT_VAL:CORE_B_TAU|NEAR7": {
+   "mean": 0.07071112922842633,
+   "scenes": 80
+  },
+  "ARKIT_VAL:JLS_CACHE|ALL": {
+   "mean": 0.11693655712718339,
+   "scenes": 80
+  },
+  "ARKIT_VAL:JLS_CACHE|FAR7": {
+   "mean": 0.25464129040978034,
+   "scenes": 75
+  },
+  "ARKIT_VAL:JLS_CACHE|NEAR7": {
+   "mean": 0.0715504812825874,
+   "scenes": 80
+  },
+  "ARKIT_VAL:JNS_CACHE|ALL": {
+   "mean": 0.11674148263161568,
+   "scenes": 80
+  },
+  "ARKIT_VAL:JNS_CACHE|FAR7": {
+   "mean": 0.254648094408257,
+   "scenes": 75
+  },
+  "ARKIT_VAL:JNS_CACHE|NEAR7": {
+   "mean": 0.07132085163663293,
+   "scenes": 80
+  },
+  "ARKIT_VAL:R7|ALL": {
+   "mean": 0.12094093663555419,
+   "scenes": 80
+  },
+  "ARKIT_VAL:R7|FAR7": {
+   "mean": 0.25670707739377496,
+   "scenes": 75
+  },
+  "ARKIT_VAL:R7|NEAR7": {
+   "mean": 0.0757193287304558,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_CACHE_05_coverage": {
+   "mean": 0.7262109375,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_CACHE_05|ALL": {
+   "mean": 0.12081415942251243,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_CACHE_05|FAR7": {
+   "mean": 0.2547397392773687,
+   "scenes": 75
+  },
+  "ARKIT_VAL:ZS_CACHE_05|NEAR7": {
+   "mean": 0.07636853766331841,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_CACHE_TAU_coverage": {
+   "mean": 0.7262109375,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_CACHE_TAU|ALL": {
+   "mean": 0.12081415942251243,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_CACHE_TAU|FAR7": {
+   "mean": 0.2547397392773687,
+   "scenes": 75
+  },
+  "ARKIT_VAL:ZS_CACHE_TAU|NEAR7": {
+   "mean": 0.07636853766331841,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_05_coverage": {
+   "mean": 0.7248764038085939,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_05|ALL": {
+   "mean": 0.11406887369301674,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_05|FAR7": {
+   "mean": 0.2543509793326869,
+   "scenes": 75
+  },
+  "ARKIT_VAL:ZS_TTT_05|NEAR7": {
+   "mean": 0.0684899838373687,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_TAU_coverage": {
+   "mean": 0.7248764038085939,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_TAU|ALL": {
+   "mean": 0.11406887369301674,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_TAU|FAR7": {
+   "mean": 0.2543509793326869,
+   "scenes": 75
+  },
+  "ARKIT_VAL:ZS_TTT_TAU|NEAR7": {
+   "mean": 0.0684899838373687,
+   "scenes": 80
+  }
+ },
+ "primary": {
+  "P1_JEPA_VS_THRESHOLD_SYSTEM3_ALL": {
+   "absolute_top1_contribution": 0.149335285555362,
+   "absolute_top3_contribution": 0.2349429005684565,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0010345673499034343,
+    0.008020114513485662
+   ],
+   "improved_tied_worse": [
+    110,
+    0,
+    50
+   ],
+   "left": "ARKIT_SYSTEM3:ZS_CACHE_TAU|ALL",
+   "loso_range": [
+    0.002695438150160984,
+    0.004577917326727586
+   ],
+   "mean": 0.004130021027545632,
+   "median": 0.0020201527452069074,
+   "n_scenes": 160,
+   "negative": 50,
+   "positive": 110,
+   "positive_top1_contribution": 0.20960347797037118,
+   "positive_top3_contribution": 0.32150790142274577,
+   "right": "ARKIT_SYSTEM3:JNS_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "P2_THRESHOLD_CORE_B_SYSTEM3_ALL": {
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "identical": true,
+   "left": "ARKIT_SYSTEM3:CORE_B_05|ALL",
+   "mean": 0.0,
+   "median": 0.0,
+   "negative": 0,
+   "positive": 0,
+   "right": "ARKIT_SYSTEM3:CORE_B_TAU|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 160
+  }
+ },
+ "secondary": {
+  "S1_THRESHOLD_FEEDFORWARD_SYSTEM3_ALL": {
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "identical": true,
+   "left": "ARKIT_SYSTEM3:ZS_CACHE_05|ALL",
+   "mean": 0.0,
+   "median": 0.0,
+   "negative": 0,
+   "positive": 0,
+   "right": "ARKIT_SYSTEM3:ZS_CACHE_TAU|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 160
+  },
+  "S2_SCALED_JEPA_VS_THRESHOLD_SYSTEM3_ALL": {
+   "absolute_top1_contribution": 0.12188937791734722,
+   "absolute_top3_contribution": 0.2134741506063745,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.001791535043821557,
+    0.006963051933496843
+   ],
+   "improved_tied_worse": [
+    111,
+    0,
+    49
+   ],
+   "left": "ARKIT_SYSTEM3:ZS_CACHE_TAU|ALL",
+   "loso_range": [
+    0.003118664264437914,
+    0.0043152503703282104
+   ],
+   "mean": 0.004109417152475478,
+   "median": 0.0019437473904221556,
+   "n_scenes": 160,
+   "negative": 49,
+   "positive": 111,
+   "positive_top1_contribution": 0.16297387801449403,
+   "positive_top3_contribution": 0.2854285646101375,
+   "right": "ARKIT_SYSTEM3:JLS_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S3_JEPA_VS_THRESHOLD_VAL_ALL": {
+   "absolute_top1_contribution": 0.09578885060251625,
+   "absolute_top3_contribution": 0.21523554883172,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0012385967622124431,
+    0.007018701212779994
+   ],
+   "improved_tied_worse": [
+    61,
+    0,
+    19
+   ],
+   "left": "ARKIT_VAL:ZS_CACHE_TAU|ALL",
+   "loso_range": [
+    0.0033388851289692743,
+    0.004618309192878548
+   ],
+   "mean": 0.004072676790896759,
+   "median": 0.0023931314822990095,
+   "n_scenes": 80,
+   "negative": 19,
+   "positive": 61,
+   "positive_top1_contribution": 0.12746063358878204,
+   "positive_top3_contribution": 0.2786608588460328,
+   "right": "ARKIT_VAL:JNS_CACHE|ALL",
+   "scenes": 80,
+   "status": "SUPPORTED",
+   "tied": 0
+  },
+  "S4_THRESHOLD_CORE_B_VAL_ALL": {
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "identical": true,
+   "left": "ARKIT_VAL:CORE_B_05|ALL",
+   "mean": 0.0,
+   "median": 0.0,
+   "negative": 0,
+   "positive": 0,
+   "right": "ARKIT_VAL:CORE_B_TAU|ALL",
+   "scenes": 80,
+   "status": "NOT_ESTABLISHED",
+   "tied": 80
+  },
+  "S5_THRESHOLD_FEEDFORWARD_VAL_ALL": {
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "identical": true,
+   "left": "ARKIT_VAL:ZS_CACHE_05|ALL",
+   "mean": 0.0,
+   "median": 0.0,
+   "negative": 0,
+   "positive": 0,
+   "right": "ARKIT_VAL:ZS_CACHE_TAU|ALL",
+   "scenes": 80,
+   "status": "NOT_ESTABLISHED",
+   "tied": 80
+  },
+  "S6_JEPA_VS_THRESHOLD_SYSTEM3_NEAR7": {
+   "absolute_top1_contribution": 0.1319465590448117,
+   "absolute_top3_contribution": 0.21951161588349996,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.001760585217470683,
+    0.009107363259082053
+   ],
+   "improved_tied_worse": [
+    112,
+    0,
+    48
+   ],
+   "left": "ARKIT_SYSTEM3:ZS_CACHE_TAU|NEAR7",
+   "loso_range": [
+    0.0036860914115063644,
+    0.005635177524228206
+   ],
+   "mean": 0.005116619803230879,
+   "median": 0.002635604081363774,
+   "n_scenes": 160,
+   "negative": 48,
+   "positive": 112,
+   "positive_top1_contribution": 0.18019850504625265,
+   "positive_top3_contribution": 0.2898915517568078,
+   "right": "ARKIT_SYSTEM3:JNS_CACHE|NEAR7",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S7_THRESHOLD_TTT_SYSTEM3_ALL": {
+   "ci95": [
+    0.0,
+    0.0
+   ],
+   "identical": true,
+   "left": "ARKIT_SYSTEM3:ZS_TTT_05|ALL",
+   "mean": 0.0,
+   "median": 0.0,
+   "negative": 0,
+   "positive": 0,
+   "right": "ARKIT_SYSTEM3:ZS_TTT_TAU|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 160
+  }
+ },
+ "selection": {
+  "tau_cache": 0.5,
+  "tau_core_b": 0.5
+ }
+}

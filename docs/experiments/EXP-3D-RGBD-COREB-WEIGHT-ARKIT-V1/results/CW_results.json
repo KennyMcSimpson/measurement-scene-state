@@ -1,0 +1,429 @@
+{
+ "branches": {
+  "P1": "WEIGHT_IMPROVES_CORE_B_PARTIAL",
+  "P2": "WEIGHT_IMPROVES_CORE_B_PARTIAL"
+ },
+ "means": {
+  "ARKIT_SYSTEM3:CORE_B|ALL": {
+   "mean": 0.15688559379590356,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:CORE_B|FAR7": {
+   "mean": 0.2983391072287765,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:CORE_B|NEAR7": {
+   "mean": 0.07118334448601922,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:GEO_STAR|ALL": {
+   "mean": 0.1544296306564768,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:GEO_STAR|FAR7": {
+   "mean": 0.29739187523392085,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:GEO_STAR|NEAR7": {
+   "mean": 0.06818931532896655,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:R7|ALL": {
+   "mean": 0.16295738123606124,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:R7|FAR7": {
+   "mean": 0.3036761627597139,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:R7|NEAR7": {
+   "mean": 0.07805229940281354,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_F7|ALL": {
+   "mean": 0.1543765964116925,
+   "scenes": 160
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_F7|FAR7": {
+   "mean": 0.2979875136774173,
+   "scenes": 157
+  },
+  "ARKIT_SYSTEM3:ZS_TTT_F7|NEAR7": {
+   "mean": 0.06798301893796185,
+   "scenes": 160
+  },
+  "ARKIT_VAL:CORE_B|ALL": {
+   "mean": 0.11608169943366528,
+   "scenes": 80
+  },
+  "ARKIT_VAL:CORE_B|FAR7": {
+   "mean": 0.25404339862137604,
+   "scenes": 75
+  },
+  "ARKIT_VAL:CORE_B|NEAR7": {
+   "mean": 0.07071112922842633,
+   "scenes": 80
+  },
+  "ARKIT_VAL:GEO_STAR|ALL": {
+   "mean": 0.11415983423857594,
+   "scenes": 80
+  },
+  "ARKIT_VAL:GEO_STAR|FAR7": {
+   "mean": 0.25407339234394505,
+   "scenes": 75
+  },
+  "ARKIT_VAL:GEO_STAR|NEAR7": {
+   "mean": 0.06858767297821952,
+   "scenes": 80
+  },
+  "ARKIT_VAL:R7|ALL": {
+   "mean": 0.12094093663555419,
+   "scenes": 80
+  },
+  "ARKIT_VAL:R7|FAR7": {
+   "mean": 0.25670707739377496,
+   "scenes": 75
+  },
+  "ARKIT_VAL:R7|NEAR7": {
+   "mean": 0.0757193287304558,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_F7|ALL": {
+   "mean": 0.11406887369301674,
+   "scenes": 80
+  },
+  "ARKIT_VAL:ZS_TTT_F7|FAR7": {
+   "mean": 0.2543509793326869,
+   "scenes": 75
+  },
+  "ARKIT_VAL:ZS_TTT_F7|NEAR7": {
+   "mean": 0.0684899838373687,
+   "scenes": 80
+  }
+ },
+ "primary": {
+  "P1_WEIGHT_VS_CORE_B_SYSTEM3_ALL": {
+   "absolute_top1_contribution": 0.10072509558354298,
+   "absolute_top3_contribution": 0.18585185950991723,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0014918268577270286,
+    0.00355099048413268
+   ],
+   "improved_tied_worse": [
+    106,
+    0,
+    54
+   ],
+   "left": "ARKIT_SYSTEM3:CORE_B|ALL",
+   "loso_range": [
+    0.002117709648150034,
+    0.002624846914071359
+   ],
+   "mean": 0.0024559631394267503,
+   "median": 0.0006500471726687551,
+   "n_scenes": 160,
+   "negative": 54,
+   "positive": 106,
+   "positive_top1_contribution": 0.11823601025243313,
+   "positive_top3_contribution": 0.20904170857170573,
+   "right": "ARKIT_SYSTEM3:GEO_STAR|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "P2_WEIGHT_VS_CORE_B_VAL_ALL": {
+   "absolute_top1_contribution": 0.13933232931781317,
+   "absolute_top3_contribution": 0.2713731549172293,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0006168076127375867,
+    0.0034029479345143903
+   ],
+   "improved_tied_worse": [
+    52,
+    0,
+    28
+   ],
+   "left": "ARKIT_VAL:CORE_B|ALL",
+   "loso_range": [
+    0.001444849644299763,
+    0.002177073050389514
+   ],
+   "mean": 0.00192186519508934,
+   "median": 0.0004302311438754841,
+   "n_scenes": 80,
+   "negative": 28,
+   "positive": 52,
+   "positive_top1_contribution": 0.18084746172895302,
+   "positive_top3_contribution": 0.33969176633494136,
+   "right": "ARKIT_VAL:GEO_STAR|ALL",
+   "scenes": 80,
+   "status": "PARTIAL",
+   "tied": 0
+  }
+ },
+ "secondary": {
+  "S1_WEIGHT_VS_MODEL_FREE_SYSTEM3_ALL": {
+   "absolute_top1_contribution": 0.10080383521059323,
+   "absolute_top3_contribution": 0.19645482084011684,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.005751657084045938,
+    0.011736128057632854
+   ],
+   "improved_tied_worse": [
+    130,
+    0,
+    30
+   ],
+   "left": "ARKIT_SYSTEM3:R7|ALL",
+   "loso_range": [
+    0.007564770984540556,
+    0.009068867988738806
+   ],
+   "mean": 0.00852775057958442,
+   "median": 0.003619036577737905,
+   "n_scenes": 160,
+   "negative": 30,
+   "positive": 130,
+   "positive_top1_contribution": 0.10892411568859293,
+   "positive_top3_contribution": 0.19923688824403138,
+   "right": "ARKIT_SYSTEM3:GEO_STAR|ALL",
+   "scenes": 160,
+   "status": "SUPPORTED",
+   "tied": 0
+  },
+  "S2_WEIGHT_VS_MODEL_FREE_VAL_ALL": {
+   "absolute_top1_contribution": 0.11263415699136647,
+   "absolute_top3_contribution": 0.23365512427540508,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.004135229144548044,
+    0.009814250459421322
+   ],
+   "improved_tied_worse": [
+    64,
+    0,
+    16
+   ],
+   "left": "ARKIT_VAL:R7|ALL",
+   "loso_range": [
+    0.005899720800773869,
+    0.0070610727239336524
+   ],
+   "mean": 0.006781102396978264,
+   "median": 0.002226444745012879,
+   "n_scenes": 80,
+   "negative": 16,
+   "positive": 64,
+   "positive_top1_contribution": 0.12517226936432216,
+   "positive_top3_contribution": 0.2596649447680156,
+   "right": "ARKIT_VAL:GEO_STAR|ALL",
+   "scenes": 80,
+   "status": "SUPPORTED",
+   "tied": 0
+  },
+  "S3_TTT_ALONE_VS_MODEL_FREE_SYSTEM3_ALL": {
+   "absolute_top1_contribution": 0.10448534294003274,
+   "absolute_top3_contribution": 0.19931015452391465,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.005678448183915272,
+    0.01195553057960552
+   ],
+   "improved_tied_worse": [
+    126,
+    0,
+    34
+   ],
+   "left": "ARKIT_SYSTEM3:R7|ALL",
+   "loso_range": [
+    0.007548092911810578,
+    0.009150986870144012
+   ],
+   "mean": 0.008580784824368762,
+   "median": 0.0033811309119301663,
+   "n_scenes": 160,
+   "negative": 34,
+   "positive": 126,
+   "positive_top1_contribution": 0.11417567224725458,
+   "positive_top3_contribution": 0.20400608944173873,
+   "right": "ARKIT_SYSTEM3:ZS_TTT_F7|ALL",
+   "scenes": 160,
+   "status": "SUPPORTED",
+   "tied": 0
+  },
+  "S4_TTT_ALONE_VS_CORE_B_SYSTEM3_ALL": {
+   "absolute_top1_contribution": 0.105455435557192,
+   "absolute_top3_contribution": 0.18830876883019715,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0013706804850733899,
+    0.0037894158893390035
+   ],
+   "improved_tied_worse": [
+    98,
+    0,
+    62
+   ],
+   "left": "ARKIT_SYSTEM3:CORE_B|ALL",
+   "loso_range": [
+    0.0021010315754200564,
+    0.002706965795476566
+   ],
+   "mean": 0.0025089973842110937,
+   "median": 0.0006423880844019375,
+   "n_scenes": 160,
+   "negative": 62,
+   "positive": 98,
+   "positive_top1_contribution": 0.12952599532633013,
+   "positive_top3_contribution": 0.2178691576925572,
+   "right": "ARKIT_SYSTEM3:ZS_TTT_F7|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S5_WEIGHT_VS_CORE_B_SYSTEM3_NEAR7": {
+   "absolute_top1_contribution": 0.10480590880374942,
+   "absolute_top3_contribution": 0.20236043004756124,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0018275015702032057,
+    0.004352274110700888
+   ],
+   "improved_tied_worse": [
+    109,
+    0,
+    51
+   ],
+   "left": "ARKIT_SYSTEM3:CORE_B|NEAR7",
+   "loso_range": [
+    0.0025814354400167223,
+    0.0031666378128125125
+   ],
+   "mean": 0.002994029157052658,
+   "median": 0.0006882198436582027,
+   "n_scenes": 160,
+   "negative": 51,
+   "positive": 109,
+   "positive_top1_contribution": 0.1210289745580419,
+   "positive_top3_contribution": 0.23368410826570235,
+   "right": "ARKIT_SYSTEM3:GEO_STAR|NEAR7",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S6_WEIGHT_VS_CORE_B_SYSTEM3_FAR7": {
+   "absolute_top1_contribution": 0.060535151529627816,
+   "absolute_top3_contribution": 0.17614637576325093,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -6.652141709183707e-05,
+    0.002031753399057674
+   ],
+   "improved_tied_worse": [
+    88,
+    10,
+    59
+   ],
+   "left": "ARKIT_SYSTEM3:CORE_B|FAR7",
+   "loso_range": [
+    0.000758688157782677,
+    0.0010845653079116367
+   ],
+   "mean": 0.0009472319948555614,
+   "median": 4.269975149616412e-05,
+   "n_scenes": 157,
+   "negative": 59,
+   "positive": 88,
+   "positive_top1_contribution": 0.09338063786782505,
+   "positive_top3_contribution": 0.27172081858632957,
+   "right": "ARKIT_SYSTEM3:GEO_STAR|FAR7",
+   "scenes": 157,
+   "status": "NOT_ESTABLISHED",
+   "tied": 10
+  }
+ },
+ "w_star": 0.9
+}

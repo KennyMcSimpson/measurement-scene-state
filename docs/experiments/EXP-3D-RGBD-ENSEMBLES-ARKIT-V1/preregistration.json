@@ -1,0 +1,56 @@
+{
+ "experiment": "EXP-3D-RGBD-ENSEMBLES-ARKIT-V1",
+ "locked_at": "2026-10-08 12:08:56 +0800",
+ "protocol_sha256": "8be74af564edca1fed867bf840b0339545829167019c752da1b677068a896286",
+ "code": {
+  "arkit_jobs.sh": "74b8eca891f1b1d5f00768895875099dbc8563fee089f8f29657e9c320d76af3",
+  "arkit_lock.py": "11fdda03e61012ca5255986039f1359e255a3857a50d523273fbec349879cc4e",
+  "arkit_make_root.py": "c07fb2771cede2cefedbc33eb8a78f5a9aab6d726764def223188d606ff052e6",
+  "arkit_score.py": "8f46e07b8e656fbdce1268da18217deb8b476514e0e995d872fcbc4a5b30a86c"
+ },
+ "root_files": {
+  "frame_role_lock.json": "b0efbf650ad9593da23d4af3e00a9caf113cb4daf1efc2dca2baf50f16576a01",
+  "evaluation_contract.json": "5842232e916e32e0d8ef39276e4cb0f0c08ff509a8ae9c93c2f2179753e70f10",
+  "manifest_arkit_val80.json": "f06a0943f3d1e57f87708e999e1118d63fd5c457485a0f25d041543e6258082d"
+ },
+ "data": {
+  "selection.json": "7705104a198738ab09dce0bf87504c002be858cf8497ea47c25079640102b37b",
+  "selection_extension.json": "dbca8af9c3a5ab4b237d78ddab00fe4c122b08b89a334ae3ea75ba7f02e5da33",
+  "candidate_lock.json": "ef566e9233f3991281dbfbe175be055420473c48f038a6e257260256fa940021",
+  "candidate_lock_extension.json": "76bf2abf3bbfef4bfbac48ea12359f2b58e0868fc34834325beb9aef544cb3ff",
+  "manifest_arkit_val.json": "a2d6b7b40d1dd315cb09abfc513a23ee5e7a1b03d589dd8a5b41a5fda1f6206a",
+  "manifest_arkit_val80.json": "f06a0943f3d1e57f87708e999e1118d63fd5c457485a0f25d041543e6258082d",
+  "preparation_integrity_val80.json": "61966ee879f47b143017d3b036592685ebecf13b6ed30a2704e3c4c6570a3a3d"
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "geometry_seal.py": "30d770efa3f1567c5609c18faea6ddbb2f6dae25ecdf25191e518cffed91cc83",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "train_jepa.py": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f"
+ },
+ "v1_checkpoints": {
+  "J1": "cb31a0dc6d76ce2df97b5bb510972b278e1b08e85076456584c418a497a7b57d",
+  "J2": "dbe16fb39adcc554df24fe57669e4c7a61e9dc6c062780d3bdf0f6944c9b2560",
+  "J3": "bf4db693a9ac57afb2162a62fd605ce7cf3a633400f8bd3e317178894b079fbd"
+ },
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "primary": {
+  "A1_COMPLETION_ENSEMBLE_VS_HARMONIC_FAR": "FAR: H3 - HJG",
+  "A2_JEPA_ADDS_TO_ENSEMBLE_FAR": "FAR: HG - HJG",
+  "B1_TTT_ENSEMBLE_VS_REPROJ7_ALL": "ALL: R7 - sqrt(R7 x TTT)",
+  "B2_TTT_NEEDED_IN_ENSEMBLE_ALL": "ALL: sqrt(R7 x CACHE) - sqrt(R7 x TTT)"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by arkit_score.py score after every seal is complete",
+  "ARKitScenes media: non-commercial research only, outside git, never redistributed; nothing pushed"
+ ]
+}

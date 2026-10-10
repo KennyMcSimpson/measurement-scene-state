@@ -1,0 +1,73 @@
+{
+  "code_sha256": {
+    "ga_jobs.sh": "1fb7143dcead351e49a104704f504c3ded389d69556d404e860ab602fda88e05",
+    "ga_make_eval.py": "50b79b33ee82b55e62988784c398bd633583fff779cee9f3828c769f38891091",
+    "ga_score.py": "6e924fdfa31ed7eb913e952b1a36efe62c1ec1a3a0eafdb5b10043968ebee06c",
+    "prepare_ga.py": "3bcc6bd46f137bb8cb8fc797a80b286c1a9c9a9edf9f1538d9044c76b6472881"
+  },
+  "first_freeze": {
+    "freeze_sha256": "1c9ef4a3033546050713871bc7ec4c9e83437f841634f1153d050db95f3f6d48",
+    "moved_to": "outputs/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/first_freeze_without_cap",
+    "trained": false,
+    "why_replaced": "without the four-frame cap the frozen extra-view rule left out the 40 records with the most overlap"
+  },
+  "frozen_utc": "2026-10-08T18:24:02.776515+00:00",
+  "ga_preregistration_sha256": "244b5c5179f91c4b7edb875a28f730b4169bc2e992ebb0c6cd4591c9fa12e48b",
+  "ga_root": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/GA/EXP-3D-RGBD-LONG-TRAIN-V17",
+  "ga_training_contract_sha256": "08fc4e6d49b756f27a43615d94a4cf2ae34e0061908f24fc84cbcdb8625d8631",
+  "hit_table_sha256": "26b361a0187d46e98e2f5ddba3f3a899cf8bf7ca5e537fb4682f90592e258a18",
+  "left_out": {
+    "arkit_40777065": "1 overlap frames",
+    "arkit_41007608": "1 overlap frames",
+    "arkit_41098076": "0 overlap frames",
+    "arkit_41125611": "0 overlap frames",
+    "arkit_41126410": "1 overlap frames",
+    "arkit_41254810": "1 overlap frames",
+    "arkit_41291626": "0 overlap frames",
+    "arkit_42444703": "0 overlap frames",
+    "arkit_42444806": "1 overlap frames",
+    "arkit_42444814": "0 overlap frames",
+    "arkit_42445428": "1 overlap frames",
+    "arkit_42445680": "0 overlap frames",
+    "arkit_42445691": "0 overlap frames",
+    "arkit_42446074": "0 overlap frames",
+    "arkit_42897631": "0 overlap frames",
+    "arkit_42899511": "0 overlap frames",
+    "arkit_42899582": "0 overlap frames",
+    "arkit_43896231": "0 overlap frames",
+    "arkit_47331573": "0 overlap frames",
+    "arkit_47331587": "1 overlap frames",
+    "arkit_47331889": "1 overlap frames",
+    "arkit_47331911": "1 overlap frames",
+    "arkit_47332487": "0 overlap frames",
+    "arkit_47332705": "0 overlap frames",
+    "arkit_47333274": "1 overlap frames",
+    "arkit_47333846": "0 overlap frames",
+    "arkit_47333862": "1 overlap frames",
+    "arkit_47430382": "1 overlap frames",
+    "arkit_48018291": "1 overlap frames",
+    "arkit_48018746": "0 overlap frames",
+    "arkit_48018889": "0 overlap frames"
+  },
+  "max_query_frames": 4,
+  "overlap_v1_results_existed": false,
+  "protocol_sha256": "f245721243e8d1e63d29738d95ab236dc8cec435476e64e080d3956ffb954701",
+  "query_frames_per_record": {
+    "2": 25,
+    "3": 18,
+    "4": 108
+  },
+  "status": "FROZEN_BEFORE_GA_TRAINING",
+  "tests": {
+    "counts": {
+      "passed": 1200,
+      "skipped": 3
+    },
+    "log_path": "outputs/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/audit/pytest_full_suite.log",
+    "log_sha256": "8315008a431742f010e8437c4e5480504f03126c4eee3acd74d430c474a95e80",
+    "status": "PASS",
+    "summary_line": "1200 passed, 3 skipped in 331.56s (0:05:31)"
+  },
+  "train_records": 151,
+  "v17_preregistration_sha256": "36b8aa6e4e527025d3746aa7af5ffc060fbf7683fc1a26ff50a94e3c744c1d1f"
+}

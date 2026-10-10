@@ -1,0 +1,591 @@
+{
+ "branches": {
+  "R1": "REAL_JEPA_PARTIAL",
+  "R2": "REAL_DATA_TRAINING_PARTIAL"
+ },
+ "by_cohort": {
+  "ARKIT_CONFIRM": {
+   "H3|FAR": 0.7470140419088241,
+   "HGN|FAR": 0.6828529895871396,
+   "HJAGN|FAR": 0.5743847100797552,
+   "HJA|FAR": 0.5631924738569379,
+   "JA|FAR": 0.6004420770908185,
+   "J|FAR": 0.7655400303685727
+  },
+  "ARKIT_VAL": {
+   "H3|FAR": 0.8387129614879612,
+   "HGN|FAR": 0.792734957121475,
+   "HJAGN|FAR": 0.6576672674428028,
+   "HJA|FAR": 0.6305168319330671,
+   "JA|FAR": 0.5659063214878437,
+   "J|FAR": 0.8613032595181644
+  }
+ },
+ "cohort": "ARKIT160",
+ "means": {
+  "G1N|ALL": {
+   "mean": 0.7110502221927467,
+   "scenes": 160
+  },
+  "G1N|FAR": {
+   "mean": 0.7470585715398995,
+   "scenes": 159
+  },
+  "G1N|NEAR": {
+   "mean": 0.21963652723809177,
+   "scenes": 99
+  },
+  "H3|ALL": {
+   "mean": 0.7433349903203142,
+   "scenes": 160
+  },
+  "H3|FAR": {
+   "mean": 0.7931518630807171,
+   "scenes": 159
+  },
+  "H3|NEAR": {
+   "mean": 0.2182695314003949,
+   "scenes": 99
+  },
+  "HGN|ALL": {
+   "mean": 0.7043980464004178,
+   "scenes": 160
+  },
+  "HGN|FAR": {
+   "mean": 0.7381395141327172,
+   "scenes": 159
+  },
+  "HGN|NEAR": {
+   "mean": 0.20316101181379867,
+   "scenes": 99
+  },
+  "HJAGN|ALL": {
+   "mean": 0.584021008253084,
+   "scenes": 160
+  },
+  "HJAGN|FAR": {
+   "mean": 0.616287883595754,
+   "scenes": 159
+  },
+  "HJAGN|NEAR": {
+   "mean": 0.19929808619030853,
+   "scenes": 99
+  },
+  "HJA|ALL": {
+   "mean": 0.5538054748776915,
+   "scenes": 160
+  },
+  "HJA|FAR": {
+   "mean": 0.5970663647128519,
+   "scenes": 159
+  },
+  "HJA|NEAR": {
+   "mean": 0.21372097640916546,
+   "scenes": 99
+  },
+  "HJ|ALL": {
+   "mean": 0.7249166812485803,
+   "scenes": 160
+  },
+  "HJ|FAR": {
+   "mean": 0.7795911399163541,
+   "scenes": 159
+  },
+  "HJ|NEAR": {
+   "mean": 0.2500939170664129,
+   "scenes": 99
+  },
+  "JA_far_coverage": {
+   "mean": 0.652509212806558,
+   "scenes": 159
+  },
+  "JA|ALL": {
+   "mean": 0.5331825603994036,
+   "scenes": 160
+  },
+  "JA|FAR": {
+   "mean": 0.5830655962842902,
+   "scenes": 159
+  },
+  "JA|NEAR": {
+   "mean": 0.24752431911524417,
+   "scenes": 99
+  },
+  "J_far_coverage": {
+   "mean": 0.36127747662311066,
+   "scenes": 159
+  },
+  "J|ALL": {
+   "mean": 0.7442408550370219,
+   "scenes": 160
+  },
+  "J|FAR": {
+   "mean": 0.8137227871733986,
+   "scenes": 159
+  },
+  "J|NEAR": {
+   "mean": 0.2996497459432264,
+   "scenes": 99
+  },
+  "ZS3_far_coverage": {
+   "mean": 0.1030229565985408,
+   "scenes": 159
+  },
+  "ZS3|ALL": {
+   "mean": 0.7390331401812626,
+   "scenes": 160
+  },
+  "ZS3|FAR": {
+   "mean": 0.7936349866263402,
+   "scenes": 159
+  },
+  "ZS3|NEAR": {
+   "mean": 0.2465118498766664,
+   "scenes": 99
+  }
+ },
+ "primary": {
+  "R1_REAL_JEPA_VS_HARMONIC_FAR": {
+   "absolute_top1_contribution": 0.07078308757312733,
+   "absolute_top3_contribution": 0.15638230968709804,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.13338613703425534,
+    0.29615013306988386
+   ],
+   "improved_tied_worse": [
+    90,
+    14,
+    55
+   ],
+   "left": "H3|FAR",
+   "loso_range": [
+    0.1896519312392901,
+    0.21616045082111035
+   ],
+   "mean": 0.21008626679642675,
+   "median": 0.02466540375058368,
+   "n_scenes": 159,
+   "negative": 55,
+   "positive": 90,
+   "positive_top1_contribution": 0.08388666952613877,
+   "positive_top3_contribution": 0.18533228179546463,
+   "right": "JA|FAR",
+   "scenes": 159,
+   "status": "PARTIAL",
+   "tied": 14
+  },
+  "R2_REAL_VS_SYNTHETIC_TRAINING_FAR": {
+   "absolute_top1_contribution": 0.0712074744626243,
+   "absolute_top3_contribution": 0.15731991504250017,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.1563901877785316,
+    0.31569141578604154
+   ],
+   "improved_tied_worse": [
+    104,
+    13,
+    42
+   ],
+   "left": "J|FAR",
+   "loso_range": [
+    0.21035305105407742,
+    0.2368615706358976
+   ],
+   "mean": 0.23065719088910852,
+   "median": 0.08185740534110719,
+   "n_scenes": 159,
+   "negative": 42,
+   "positive": 104,
+   "positive_top1_contribution": 0.08094329716486344,
+   "positive_top3_contribution": 0.17882943791132538,
+   "right": "JA|FAR",
+   "scenes": 159,
+   "status": "PARTIAL",
+   "tied": 13
+  }
+ },
+ "secondary": {
+  "S1_TRAINING_GAIN_SAME_CAP_FAR": {
+   "absolute_top1_contribution": 0.0747462773603741,
+   "absolute_top3_contribution": 0.1651382539939591,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.13521879980655277,
+    0.29516323710212355
+   ],
+   "improved_tied_worse": [
+    91,
+    14,
+    54
+   ],
+   "left": "ZS3|FAR",
+   "loso_range": [
+    0.19013811252887303,
+    0.21664663211069327
+   ],
+   "mean": 0.21056939034205002,
+   "median": 0.034225836527908005,
+   "n_scenes": 159,
+   "negative": 54,
+   "positive": 91,
+   "positive_top1_contribution": 0.08652407707208323,
+   "positive_top3_contribution": 0.1911591522776949,
+   "right": "JA|FAR",
+   "scenes": 159,
+   "status": "PARTIAL",
+   "tied": 14
+  },
+  "S2_SYNTHETIC_JEPA_VS_HARMONIC_FAR": {
+   "absolute_top1_contribution": 0.08743670746744128,
+   "absolute_top3_contribution": 0.19937713574699578,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.04816049202973027,
+    0.006722442180718185
+   ],
+   "improved_tied_worse": [
+    65,
+    36,
+    58
+   ],
+   "left": "H3|FAR",
+   "loso_range": [
+    -0.026800702915991074,
+    -0.013099431160052629
+   ],
+   "mean": -0.02057092409268172,
+   "median": 0.0,
+   "n_scenes": 159,
+   "negative": 58,
+   "positive": 65,
+   "positive_top1_contribution": 0.18417113626354734,
+   "positive_top3_contribution": 0.35285033657322357,
+   "right": "J|FAR",
+   "scenes": 159,
+   "status": "NOT_ESTABLISHED",
+   "tied": 36
+  },
+  "S3_REAL_JEPA_ENSEMBLE_VS_HARMONIC_FAR": {
+   "absolute_top1_contribution": 0.05817979056826968,
+   "absolute_top3_contribution": 0.13060383191715658,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.14654303077073677,
+    0.25160248945639807
+   ],
+   "improved_tied_worse": [
+    108,
+    14,
+    37
+   ],
+   "left": "H3|FAR",
+   "loso_range": [
+    0.18446816832096835,
+    0.19960598624961384
+   ],
+   "mean": 0.196085498367865,
+   "median": 0.05437354609433248,
+   "n_scenes": 159,
+   "negative": 37,
+   "positive": 108,
+   "positive_top1_contribution": 0.06147368611544443,
+   "positive_top3_contribution": 0.13799807270410266,
+   "right": "HJA|FAR",
+   "scenes": 159,
+   "status": "SUPPORTED",
+   "tied": 14
+  },
+  "S4_REAL_JEPA_ADDS_TO_G1N_ENSEMBLE_FAR": {
+   "absolute_top1_contribution": 0.06072154654076735,
+   "absolute_top3_contribution": 0.13747144910135145,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.08814011488795663,
+    0.15914841448838496
+   ],
+   "improved_tied_worse": [
+    103,
+    14,
+    42
+   ],
+   "left": "HGN|FAR",
+   "loso_range": [
+    0.11406760027999732,
+    0.12408790044278835
+   ],
+   "mean": 0.12185163053696313,
+   "median": 0.022558582881595957,
+   "n_scenes": 159,
+   "negative": 42,
+   "positive": 103,
+   "positive_top1_contribution": 0.0649315183068321,
+   "positive_top3_contribution": 0.14700267734449465,
+   "right": "HJAGN|FAR",
+   "scenes": 159,
+   "status": "PARTIAL",
+   "tied": 14
+  },
+  "S5_FULL_ENSEMBLE_VS_HARMONIC_FAR": {
+   "absolute_top1_contribution": 0.0422779289738655,
+   "absolute_top3_contribution": 0.09539658069510579,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.14069255417726428,
+    0.21684821432550996
+   ],
+   "improved_tied_worse": [
+    117,
+    13,
+    29
+   ],
+   "left": "H3|FAR",
+   "loso_range": [
+    0.16937672407526558,
+    0.17964545317927078
+   ],
+   "mean": 0.17686397948496296,
+   "median": 0.10092402970229433,
+   "n_scenes": 159,
+   "negative": 29,
+   "positive": 117,
+   "positive_top1_contribution": 0.04511336620948818,
+   "positive_top3_contribution": 0.10179450565546024,
+   "right": "HJAGN|FAR",
+   "scenes": 159,
+   "status": "SUPPORTED",
+   "tied": 13
+  },
+  "S6_G1N_ENSEMBLE_VS_HARMONIC_FAR": {
+   "absolute_top1_contribution": 0.05373293701483736,
+   "absolute_top3_contribution": 0.14194482944786824,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.03769775941121138,
+    0.07394174372246634
+   ],
+   "improved_tied_worse": [
+    96,
+    37,
+    26
+   ],
+   "left": "H3|FAR",
+   "loso_range": [
+    0.05144321951553886,
+    0.057022609790807886
+   ],
+   "mean": 0.05501234894799982,
+   "median": 0.006614949224463762,
+   "n_scenes": 159,
+   "negative": 26,
+   "positive": 96,
+   "positive_top1_contribution": 0.06108204724609594,
+   "positive_top3_contribution": 0.1613587728562014,
+   "right": "HGN|FAR",
+   "scenes": 159,
+   "status": "SUPPORTED",
+   "tied": 37
+  },
+  "S7_REAL_JEPA_VS_HARMONIC_NEAR": {
+   "absolute_top1_contribution": 0.07020894783970225,
+   "absolute_top3_contribution": 0.17659494661414504,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.06612830292498055,
+    0.012525457406360897
+   ],
+   "improved_tied_worse": [
+    32,
+    0,
+    67
+   ],
+   "left": "H3|NEAR",
+   "loso_range": [
+    -0.03874062122441481,
+    -0.025308280515181487
+   ],
+   "mean": -0.029254787714849257,
+   "median": -0.05220802495965074,
+   "n_scenes": 99,
+   "negative": 67,
+   "positive": 32,
+   "positive_top1_contribution": 0.18138207771108972,
+   "positive_top3_contribution": 0.4562261551516856,
+   "right": "JA|NEAR",
+   "scenes": 99,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  },
+  "S8_REAL_JEPA_ENSEMBLE_VS_HARMONIC_ALL": {
+   "absolute_top1_contribution": 0.06217207286897584,
+   "absolute_top3_contribution": 0.13956583335226713,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.13944383492527626,
+    0.2447189374760494
+   ],
+   "improved_tied_worse": [
+    111,
+    15,
+    34
+   ],
+   "left": "H3|ALL",
+   "loso_range": [
+    0.17794401776756036,
+    0.19298662929413887
+   ],
+   "mean": 0.18952951544262275,
+   "median": 0.030001609202308883,
+   "n_scenes": 160,
+   "negative": 34,
+   "positive": 111,
+   "positive_top1_contribution": 0.06449378382039685,
+   "positive_top3_contribution": 0.14477768344484868,
+   "right": "HJA|ALL",
+   "scenes": 160,
+   "status": "SUPPORTED",
+   "tied": 15
+  },
+  "S9_REAL_VS_SYNTHETIC_ENSEMBLE_FAR": {
+   "absolute_top1_contribution": 0.060567298849845526,
+   "absolute_top3_contribution": 0.1359633859351769,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": true,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.13330254958057344,
+    0.237329644528465
+   ],
+   "improved_tied_worse": [
+    109,
+    13,
+    37
+   ],
+   "left": "HJ|FAR",
+   "loso_range": [
+    0.17082161779480573,
+    0.1859594357234512
+   ],
+   "mean": 0.18252477520350216,
+   "median": 0.05485620339042496,
+   "n_scenes": 159,
+   "negative": 37,
+   "positive": 109,
+   "positive_top1_contribution": 0.06494474391484806,
+   "positive_top3_contribution": 0.1457900129118642,
+   "right": "HJA|FAR",
+   "scenes": 159,
+   "status": "SUPPORTED",
+   "tied": 13
+  }
+ }
+}

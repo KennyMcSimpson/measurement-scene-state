@@ -1,0 +1,466 @@
+{
+  "manifest": "/home/xmum26_zonghan/cv_work/depthsplat/probe_dev/manifest_dev.json",
+  "split": "DEV",
+  "size": [
+    256,
+    320
+  ],
+  "near": 0.5,
+  "far": 200.0,
+  "inject_measured_depth": false,
+  "extra_rgb": 9,
+  "inject_all": false,
+  "align_extra_scale": false,
+  "checkpoint": "/home/xmum26_zonghan/cv_work/depthsplat/ft_v2/depthsplat_ft_final.pth",
+  "dinov2_code": "/home/xmum26_zonghan/.cache/torch/hub/facebookresearch_dinov2_main",
+  "overrides": [
+    "+experiment=dl3dv",
+    "mode=test",
+    "model.encoder.num_scales=2",
+    "model.encoder.upsample_factor=4",
+    "model.encoder.lowest_feature_resolution=8",
+    "model.encoder.monodepth_vit_type=vitb",
+    "model.encoder.gaussian_adapter.gaussian_scale_max=0.1",
+    "model.encoder.supervise_intermediate_depth=false",
+    "wandb.mode=disabled"
+  ],
+  "depthsplat_commit": "2dad25a7b9ba7c5537aba08463ef88d8511a06be",
+  "torch": "2.4.0+cu121",
+  "gpu": "NVIDIA RTX A6000",
+  "queries": 32,
+  "seconds": 24.6,
+  "records": [
+    {
+      "scene_id": "ai_008_001",
+      "role": "A",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        2,
+        3,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.9815136194229126,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_008_001",
+      "role": "B",
+      "views": [
+        0,
+        6,
+        8,
+        1,
+        2,
+        3,
+        7,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.9781360030174255,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_009_001",
+      "role": "A",
+      "views": [
+        0,
+        1,
+        2,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.9568004012107849,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_009_001",
+      "role": "B",
+      "views": [
+        0,
+        3,
+        5,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.956394374370575,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_011_001",
+      "role": "A",
+      "views": [
+        0,
+        2,
+        3,
+        1,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.9542170763015747,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_011_001",
+      "role": "B",
+      "views": [
+        0,
+        8,
+        10,
+        1,
+        4,
+        5,
+        6,
+        7,
+        9,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.9422482848167419,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_014_003",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        7,
+        1,
+        2,
+        6,
+        8,
+        9,
+        10,
+        11,
+        14,
+        15
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.846747875213623,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_014_003",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        2,
+        6,
+        8,
+        9,
+        10,
+        11,
+        14,
+        15
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.849040150642395,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_016_002",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        10,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.8355118632316589,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_016_002",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        9,
+        1,
+        2,
+        5,
+        6,
+        7,
+        8,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.7973089814186096,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_021_002",
+      "role": "A",
+      "views": [
+        0,
+        6,
+        7,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.4946310222148895,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_021_002",
+      "role": "B",
+      "views": [
+        0,
+        12,
+        13,
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.722449004650116,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_032_001",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        9,
+        1,
+        2,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.9916397929191589,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_032_001",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        2,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.9893099069595337,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_034_001",
+      "role": "A",
+      "views": [
+        0,
+        5,
+        6,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.5407845377922058,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    },
+    {
+      "scene_id": "ai_034_001",
+      "role": "B",
+      "views": [
+        0,
+        9,
+        12,
+        1,
+        2,
+        3,
+        4,
+        7,
+        8,
+        10,
+        11,
+        13
+      ],
+      "gaussians": 983040,
+      "alpha_mean": 0.5797574520111084,
+      "context_depth_shape": [
+        1,
+        12,
+        256,
+        320
+      ],
+      "injection": null
+    }
+  ]
+}

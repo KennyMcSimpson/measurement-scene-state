@@ -1,0 +1,353 @@
+{
+  "manifest": "/home/xmum26_zonghan/cv_work/depthsplat/probe_dev/manifest_dev.json",
+  "split": "DEV",
+  "size": [
+    256,
+    320
+  ],
+  "near": 0.5,
+  "far": 200.0,
+  "inject_measured_depth": true,
+  "extra_rgb": 3,
+  "inject_all": false,
+  "checkpoint": "/home/xmum26_zonghan/cv_work/depthsplat/ft_v1/depthsplat_ft_final.pth",
+  "dinov2_code": "/home/xmum26_zonghan/.cache/torch/hub/facebookresearch_dinov2_main",
+  "overrides": [
+    "+experiment=dl3dv",
+    "mode=test",
+    "model.encoder.num_scales=2",
+    "model.encoder.upsample_factor=4",
+    "model.encoder.lowest_feature_resolution=8",
+    "model.encoder.monodepth_vit_type=vitb",
+    "model.encoder.gaussian_adapter.gaussian_scale_max=0.1",
+    "model.encoder.supervise_intermediate_depth=false",
+    "wandb.mode=disabled"
+  ],
+  "depthsplat_commit": "2dad25a7b9ba7c5537aba08463ef88d8511a06be",
+  "torch": "2.4.0+cu121",
+  "gpu": "NVIDIA RTX A6000",
+  "queries": 32,
+  "seconds": 15.6,
+  "records": [
+    {
+      "scene_id": "ai_008_001",
+      "role": "A",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.882708728313446,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_008_001",
+      "role": "B",
+      "views": [
+        0,
+        6,
+        8,
+        1,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8982556462287903,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_009_001",
+      "role": "A",
+      "views": [
+        0,
+        1,
+        2,
+        4,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8364517092704773,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_009_001",
+      "role": "B",
+      "views": [
+        0,
+        3,
+        5,
+        4,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8460655212402344,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_011_001",
+      "role": "A",
+      "views": [
+        0,
+        2,
+        3,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.9238901138305664,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_011_001",
+      "role": "B",
+      "views": [
+        0,
+        8,
+        10,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8819381594657898,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_014_003",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        7,
+        1,
+        9,
+        15
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.6939339637756348,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_014_003",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        9,
+        15
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.696904718875885,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_016_002",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        10,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.7436498999595642,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_016_002",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        9,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.7527406811714172,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_021_002",
+      "role": "A",
+      "views": [
+        0,
+        6,
+        7,
+        1,
+        5,
+        11
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.28513652086257935,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_021_002",
+      "role": "B",
+      "views": [
+        0,
+        12,
+        13,
+        1,
+        5,
+        11
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.6230525970458984,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_032_001",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        9,
+        1,
+        8,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.9425679445266724,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_032_001",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        8,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.9563177227973938,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_034_001",
+      "role": "A",
+      "views": [
+        0,
+        5,
+        6,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.2543054223060608,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    },
+    {
+      "scene_id": "ai_034_001",
+      "role": "B",
+      "views": [
+        0,
+        9,
+        12,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.2734697163105011,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1",
+ "locked_at": "2026-10-09 23:18:31 +0800",
+ "protocol_sha256": "bff93eb968b623099c57a9587845c52eca4ad151aafadb8a49985e5d79d9dd90",
+ "code": {
+  "arkit_records_scale.py": "b636867400855a2b5c0035ee0afd8eaa747520958db91ce808b4d7afe9b48124",
+  "derive_train_scale.py": "93692de6a8a3ace86d74b5f77fad118c2d1b0240b663397aebed8c04cf0dc5e9",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "hit_share_table.py": "33ea9284b0b72398b8cc92f840a6033c5d58309d8f544d5773165d3484496e7f",
+  "merge_hit_tables.py": "98fd07e657b2173662c3e2971bfd3b0ded9ef513bb5c994ba404f7b16341e1c5",
+  "ns_jobs.sh": "7b25765b9ed3d7f2ff2d3fece92fbdb4bced3563a23768102ed4d291d7fb0b0a",
+  "ns_lock.py": "62e057c1a541250d5294db421c7c4c5dceadfe1a6976c938f1fdb42241982dad",
+  "ns_make_root.py": "f42f9f81738897887cce0dc86780f029f8f505fa2aa36c72ee6bc0b378aee609",
+  "ns_score.py": "84117a370a3cc8270c954bd7e8d459850704f64dcdbe40d0e55a2a2dd469d820",
+  "train_jepa_arkit_scale.py": "6a3726cfe66ecc06f970c98c26821fa4d2824fdd3425505cf2f9a6903e2b8708"
+ },
+ "root_files": {
+  "reused_seals.json": "9c12543127c431fbcfbf1b41eae6f0c949a15276cb833c3aa8c83ed42efc6fbb",
+  "eval_SYSTEM3/frame_role_lock.json": "145f2041374bc0a7366fda56a5a2025f37474d14a9adf5f2161a886e28c68fb9",
+  "eval_VAL/frame_role_lock.json": "b0efbf650ad9593da23d4af3e00a9caf113cb4daf1efc2dca2baf50f16576a01",
+  "training/hit_shares_ARKIT_CONFIRM.json": "67fb24486d1553b794ca32687fbd8cfa53c60b1cca170c9f858eceddf0b400bc",
+  "training/hit_shares_ARKIT_SELECT.json": "26486e88be5551caa59cd289b04804914a4f5932c61dffccb060e64b2c054e5d",
+  "training/hit_shares_ARKIT_SYSTEM.json": "4f8ae48fdb4a5dcd18bd31a02c80aecc4a0ec374659005f37856d908afa30e14",
+  "training/hit_shares_ARKIT_SYSTEM2.json": "7c5bc92460e8a879a0bc4956978c19229139b410393e114b4f228ccbb04ea432",
+  "training/hit_shares_SCALE.json": "99c42562f002049507c50618f5df2dd72651a9bf880102dd879b169757395c47",
+  "training/hit_shares_TRAIN.json": "26b361a0187d46e98e2f5ddba3f3a899cf8bf7ca5e537fb4682f90592e258a18"
+ },
+ "training_data": {
+  "pilot": {
+   "manifest_arkit_trainval.json": "7203f486dd70f418313853ad842de48c84b1292c55ec40d3122da49d22ca4bb9",
+   "candidate_lock.json": "47e6ebe9b6caf97a90c1a6a5a8f5756f698651ddd58de6ed5058af78ffdc5e5e"
+  },
+  "CONFIRM": "e1972dd2d2bafc53c2a802401786eb51af457bcae6bf4a2dd4f4ce5d3e0878d1",
+  "SELECT": "777db151c17ef1eb46630e1a13112fdd8406d75b498c593a6fa1a92510ffbc3c",
+  "SYSTEM": "5c0300de90b4805c017ff126949e6471857974fb7cb78738de5a07e66c91a648",
+  "SYSTEM2": "91898371cd18984706becb68c30cc31eea6cc6da73fb20da6ab3d1d898cad67a"
+ },
+ "evaluation_data": {
+  "SYSTEM3": "1f239edc3a3d45311d2720d8d46f12fefa34ea478fae79e80f87da79415cf498",
+  "VAL": "f06a0943f3d1e57f87708e999e1118d63fd5c457485a0f25d041543e6258082d"
+ },
+ "objective_preregistration_sha256": "a826b21ce062a848a188fdba4d02a1d1326c8ffff76e5fbe4a22cf1a75d95d5f",
+ "nf_preregistration_sha256": "7ff1827a9ffb18d2ce964510b024bd47c31b9b4b57c19491729dd036e5069f57",
+ "nf_results_sha256": "b258ca87d5c1dde0afe70e494f4d29ab647544926b8a81bd79e170de0ba5e02f",
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "design_basis": "the NF result (known at design time: JN feed-forward gain PARTIAL); one factor changed (training data 182 -> 502 scans); locked before any NS training or evaluation",
+ "settings": {
+  "training": "JL1-JL3: train_jepa_arkit_scale.py (JN script, record source arkit_records_scale), seeds 20261008 / 20261009 / 20261010, JN's settings (4000 steps, lr 5e-6 / ViT 5e-7, warmup 200, cosine, AdamW wd 1e-4, clip 1.0, 2 targets, min hit 0.05, scale cap 0.1, last step)",
+  "evaluation": "V1's ds_eval.py, CACHE arm only, cap 0.1: JL1-JL3 on ARKIT_SYSTEM3 and ARKIT_VAL; NF's JN2 / JN3 on ARKIT_VAL",
+  "alpha_min": 0.5,
+  "seed_readouts": "JNS / JLS = per-query mean over the three seeds of the AbsRel"
+ },
+ "primary": {
+  "P1_MORE_DATA_SYSTEM3_ALL": "ARKIT_SYSTEM3 ALL: JNS_CACHE - JLS_CACHE",
+  "P2_SCALED_RECIPE_VS_RELEASED_SYSTEM3_ALL": "ARKIT_SYSTEM3 ALL: ZS_CACHE - JLS_CACHE"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by ns_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

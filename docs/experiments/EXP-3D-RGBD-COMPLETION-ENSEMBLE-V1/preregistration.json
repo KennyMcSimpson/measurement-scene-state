@@ -1,0 +1,45 @@
+{
+ "experiment": "EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1",
+ "locked_at": "2026-10-08 05:41:37 +0800",
+ "protocol_sha256": "3ad8b23d949ba851ee967d50c75ca8da82efe0208cf2e8f9f9e9b74902c937c4",
+ "code": {
+  "ens_jobs.sh": "eff4afe20cba8c3687e6406b2056238aace60e1b5ae20203db5ac9091d2bddda",
+  "ens_lock.py": "9a15a8a8b834277634ab2c75e0c87f53733458a6c138f27f0c83c7dcfdd2dfe3",
+  "ens_make_root.py": "234ede998340a41699652806238feb437d528ca469c04cd4bd013d5500a64123",
+  "ens_score.py": "8aea37f102dd925e883d4e7c725f6a18b1ada368cc045a28734f77a90b8fead2"
+ },
+ "root_files": {
+  "frame_role_lock.json": "26c3bf71f60fbeef56e1cf06cf06d9a0734b2c5d833cac8cffb19382b70ae66f",
+  "evaluation_contract.json": "f8eb8ba6b8e0cd01cc577168c29cabc2737e5d52b14a2d63422e0accd34d92b5",
+  "manifest_eval34.json": "a5353590230f110749e61494b0964dd4773b37bae5bfca3f376af6cf79202ea0"
+ },
+ "v1": {
+  "preregistration_sha256": "fa87f117dfc2a7bb341f9987b2a385fac2e1ac86e32ae7773a2fa4ce576e70fb",
+  "ds_eval_sha256": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze_sha256": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+  "checkpoints": {
+   "J1": "cb31a0dc6d76ce2df97b5bb510972b278e1b08e85076456584c418a497a7b57d",
+   "J2": "dbe16fb39adcc554df24fe57669e4c7a61e9dc6c062780d3bdf0f6944c9b2560",
+   "J3": "bf4db693a9ac57afb2162a62fd605ce7cf3a633400f8bd3e317178894b079fbd"
+  }
+ },
+ "primary": {
+  "E1_ENSEMBLE_VS_HARMONIC_FAR": "FAR: H3 - HJG",
+  "E2_JEPA_ADDS_TO_ENSEMBLE_FAR": "FAR: HG - HJG"
+ },
+ "branches": {
+  "E1": "ENSEMBLE_CONSISTENT if SUPPORTED; ENSEMBLE_PARTIAL / ENSEMBLE_NOT_ESTABLISHED / ENSEMBLE_HARMFUL",
+  "E2": "JEPA_ADDS if SUPPORTED; JEPA_ADDS_PARTIAL / JEPA_NO_ADD / JEPA_HARMFUL"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by ens_score.py score after both seals are complete",
+  "protected holdout never opened; nothing pushed"
+ ]
+}

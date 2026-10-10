@@ -1,0 +1,190 @@
+{
+ "note": "descriptive, post hoc; 8 Replica scenes; no gate",
+ "means": {
+  "CACHE|ALL": 0.06615899304779962,
+  "CACHE|FAR7": 0.1519748903077013,
+  "CACHE|NEAR7": 0.03061177567636726,
+  "R7_CACHE_GEO|ALL": 0.06290328768615056,
+  "R7_CACHE_GEO|FAR7": 0.14856446810921548,
+  "R7_CACHE_GEO|NEAR7": 0.026411085711994825,
+  "R7_TTT_GEO|ALL": 0.059060846780571344,
+  "R7_TTT_GEO|FAR7": 0.14926592383302092,
+  "R7_TTT_GEO|NEAR7": 0.021188451779287777,
+  "R7|ALL": 0.06152348611061289,
+  "R7|FAR7": 0.14786219489490454,
+  "R7|NEAR7": 0.02473533586085212,
+  "TTT|ALL": 0.05850495314720507,
+  "TTT|FAR7": 0.15216479553620266,
+  "TTT|NEAR7": 0.020240619296854643
+ },
+ "scenes_better": {
+  "TTT vs R7 (ALL)": [
+   5,
+   8
+  ],
+  "R7_TTT_GEO vs R7 (ALL)": [
+   7,
+   8
+  ],
+  "TTT vs CACHE (ALL)": [
+   8,
+   8
+  ],
+  "R7_TTT_GEO vs R7_CACHE_GEO (ALL)": [
+   8,
+   8
+  ]
+ },
+ "per_scene": {
+  "R7|ALL": {
+   "replica_office0": 0.07280522949302178,
+   "replica_office1": 0.07709074270297976,
+   "replica_office2": 0.18436841206349217,
+   "replica_office3": 0.006000093233320956,
+   "replica_office4": 0.035622111744416055,
+   "replica_room0": 0.07231842706098657,
+   "replica_room1": 0.019849866267633118,
+   "replica_room2": 0.024133006319052745
+  },
+  "R7|NEAR7": {
+   "replica_office0": 0.0236213518257645,
+   "replica_office1": 0.009920234861169977,
+   "replica_office2": 0.11467023493768708,
+   "replica_office3": 0.005943953320002802,
+   "replica_office4": 0.019565031829086584,
+   "replica_room0": 0.012146197204180597,
+   "replica_room1": 0.005131267379590404,
+   "replica_room2": 0.006884415529335022
+  },
+  "R7|FAR7": {
+   "replica_office0": 0.14533834498368706,
+   "replica_office1": 0.09798436169047307,
+   "replica_office2": 0.2785342374597795,
+   "replica_office3": 0.050100695771637185,
+   "replica_office4": 0.08655476675447663,
+   "replica_room0": 0.184129774303913,
+   "replica_room1": 0.24301658732128445,
+   "replica_room2": 0.09723879087398551
+  },
+  "CACHE|ALL": {
+   "replica_office0": 0.08298392881787862,
+   "replica_office1": 0.07737318187578321,
+   "replica_office2": 0.17957224193021573,
+   "replica_office3": 0.010797134621693877,
+   "replica_office4": 0.03665965061160108,
+   "replica_room0": 0.07745595529276054,
+   "replica_room1": 0.036997265507008215,
+   "replica_room2": 0.027432585725455795
+  },
+  "CACHE|NEAR7": {
+   "replica_office0": 0.039334873912162456,
+   "replica_office1": 0.011360763432665474,
+   "replica_office2": 0.10757299128542572,
+   "replica_office3": 0.010701038607140995,
+   "replica_office4": 0.02099466972639997,
+   "replica_room0": 0.020751522134718266,
+   "replica_room1": 0.023328937156001067,
+   "replica_room2": 0.010849409156424133
+  },
+  "CACHE|FAR7": {
+   "replica_office0": 0.1458360503223252,
+   "replica_office1": 0.0979828069404184,
+   "replica_office2": 0.2783424885808867,
+   "replica_office3": 0.08712491270122552,
+   "replica_office4": 0.08652793349363383,
+   "replica_room0": 0.18407584560278573,
+   "replica_room1": 0.23882427616874785,
+   "replica_room2": 0.09708480865158728
+  },
+  "TTT|ALL": {
+   "replica_office0": 0.07384243980518188,
+   "replica_office1": 0.07707976113010552,
+   "replica_office2": 0.1607916043003298,
+   "replica_office3": 0.004363647314805149,
+   "replica_office4": 0.03643520316925812,
+   "replica_room0": 0.07266276341970246,
+   "replica_room1": 0.019814427966513677,
+   "replica_room2": 0.023049778071743958
+  },
+  "TTT|NEAR7": {
+   "replica_office0": 0.025680729454223724,
+   "replica_office1": 0.010063391825232818,
+   "replica_office2": 0.07770561060563522,
+   "replica_office3": 0.004256621048425443,
+   "replica_office4": 0.02078097663408031,
+   "replica_room0": 0.01273122750208569,
+   "replica_room1": 0.005077861034690706,
+   "replica_room2": 0.005628536270463225
+  },
+  "TTT|FAR7": {
+   "replica_office0": 0.14357806459711656,
+   "replica_office1": 0.09792619926938469,
+   "replica_office2": 0.2770126015895298,
+   "replica_office3": 0.08733355411391902,
+   "replica_office4": 0.08655476675447663,
+   "replica_room0": 0.18413209105181605,
+   "replica_room1": 0.24354229603939312,
+   "replica_room2": 0.09723879087398551
+  },
+  "R7_TTT_GEO|ALL": {
+   "replica_office0": 0.07167544328925882,
+   "replica_office1": 0.07702835764421073,
+   "replica_office2": 0.1691670874205215,
+   "replica_office3": 0.004415520902587254,
+   "replica_office4": 0.035660257382824495,
+   "replica_room0": 0.07205521676069257,
+   "replica_room1": 0.019085947843626057,
+   "replica_room2": 0.023398943000849326
+  },
+  "R7_TTT_GEO|NEAR7": {
+   "replica_office0": 0.02285834925365774,
+   "replica_office1": 0.009712683277955414,
+   "replica_office2": 0.09073959477724247,
+   "replica_office3": 0.004336236457668724,
+   "replica_office4": 0.019696726677037046,
+   "replica_room0": 0.011734430820441025,
+   "replica_room1": 0.004403653550050974,
+   "replica_room2": 0.00602593942024883
+  },
+  "R7_TTT_GEO|FAR7": {
+   "replica_office0": 0.14323265710206107,
+   "replica_office1": 0.09795544524665553,
+   "replica_office2": 0.2778194465353545,
+   "replica_office3": 0.06628017524866214,
+   "replica_office4": 0.08655476675447663,
+   "replica_room0": 0.18412873087411416,
+   "replica_room1": 0.24091737802885785,
+   "replica_room2": 0.09723879087398551
+  },
+  "R7_CACHE_GEO|ALL": {
+   "replica_office0": 0.07596791151123475,
+   "replica_office1": 0.07710172348307509,
+   "replica_office2": 0.17897902031127533,
+   "replica_office3": 0.008015175039834024,
+   "replica_office4": 0.03566556933884668,
+   "replica_room0": 0.07429067770761182,
+   "replica_room1": 0.02762331536598787,
+   "replica_room2": 0.02558290873133889
+  },
+  "R7_CACHE_GEO|NEAR7": {
+   "replica_office0": 0.029511392475294197,
+   "replica_office1": 0.010103601420656725,
+   "replica_office2": 0.10634336167937711,
+   "replica_office3": 0.007941426884416092,
+   "replica_office4": 0.019643803038969267,
+   "replica_room0": 0.015488670589184832,
+   "replica_room1": 0.013617768060981215,
+   "replica_room2": 0.008638661547079186
+  },
+  "R7_CACHE_GEO|FAR7": {
+   "replica_office0": 0.14382385207407622,
+   "replica_office1": 0.09798357901406002,
+   "replica_office2": 0.2784442040931415,
+   "replica_office3": 0.06627222945161086,
+   "replica_office4": 0.08653984854251306,
+   "replica_room0": 0.1840927076907194,
+   "replica_room1": 0.23425944484500855,
+   "replica_room2": 0.0970998791625941
+  }
+ }
+}

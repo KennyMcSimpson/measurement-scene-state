@@ -1,0 +1,621 @@
+{
+ "branches": {
+  "P1": "JN1_FEEDFORWARD_PARTIAL",
+  "P2": "RECIPE_FEEDFORWARD_PARTIAL"
+ },
+ "cohort": "ARKIT_SYSTEM3",
+ "means": {
+  "GEO_JK1_CACHE|ALL": {
+   "mean": 0.16146588393138755,
+   "scenes": 160
+  },
+  "GEO_JK1_CACHE|FAR7": {
+   "mean": 0.30225996752211987,
+   "scenes": 157
+  },
+  "GEO_JK1_CACHE|NEAR7": {
+   "mean": 0.07645623090891199,
+   "scenes": 160
+  },
+  "GEO_JN1_CACHE|ALL": {
+   "mean": 0.15800219807291943,
+   "scenes": 160
+  },
+  "GEO_JN1_CACHE|FAR7": {
+   "mean": 0.2985843244316129,
+   "scenes": 157
+  },
+  "GEO_JN1_CACHE|NEAR7": {
+   "mean": 0.07264222721444383,
+   "scenes": 160
+  },
+  "GEO_JN2_CACHE|ALL": {
+   "mean": 0.15741662303010234,
+   "scenes": 160
+  },
+  "GEO_JN2_CACHE|FAR7": {
+   "mean": 0.2975260919661335,
+   "scenes": 157
+  },
+  "GEO_JN2_CACHE|NEAR7": {
+   "mean": 0.07220256265677617,
+   "scenes": 160
+  },
+  "GEO_JN3_CACHE|ALL": {
+   "mean": 0.157893058849698,
+   "scenes": 160
+  },
+  "GEO_JN3_CACHE|FAR7": {
+   "mean": 0.299091646633745,
+   "scenes": 157
+  },
+  "GEO_JN3_CACHE|NEAR7": {
+   "mean": 0.07234106468989225,
+   "scenes": 160
+  },
+  "GEO_ZS_CACHE|ALL": {
+   "mean": 0.1594208769527988,
+   "scenes": 160
+  },
+  "GEO_ZS_CACHE|FAR7": {
+   "mean": 0.29675254314345134,
+   "scenes": 157
+  },
+  "GEO_ZS_CACHE|NEAR7": {
+   "mean": 0.07481278050449737,
+   "scenes": 160
+  },
+  "JK1_CACHE_coverage": {
+   "mean": 0.24358741760253907,
+   "scenes": 160
+  },
+  "JK1_CACHE|ALL": {
+   "mean": 0.1610479668164037,
+   "scenes": 160
+  },
+  "JK1_CACHE|FAR7": {
+   "mean": 0.30178492847124944,
+   "scenes": 157
+  },
+  "JK1_CACHE|NEAR7": {
+   "mean": 0.07606975310429791,
+   "scenes": 160
+  },
+  "JN1_CACHE_coverage": {
+   "mean": 0.5434533691406249,
+   "scenes": 160
+  },
+  "JN1_CACHE|ALL": {
+   "mean": 0.1571713774654671,
+   "scenes": 160
+  },
+  "JN1_CACHE|FAR7": {
+   "mean": 0.2986716912596579,
+   "scenes": 157
+  },
+  "JN1_CACHE|NEAR7": {
+   "mean": 0.07166654909738289,
+   "scenes": 160
+  },
+  "JN2_CACHE_coverage": {
+   "mean": 0.5302513885498048,
+   "scenes": 160
+  },
+  "JN2_CACHE|ALL": {
+   "mean": 0.15625879770096768,
+   "scenes": 160
+  },
+  "JN2_CACHE|FAR7": {
+   "mean": 0.29722246220040477,
+   "scenes": 157
+  },
+  "JN2_CACHE|NEAR7": {
+   "mean": 0.07094549066789821,
+   "scenes": 160
+  },
+  "JN3_CACHE_coverage": {
+   "mean": 0.5271755218505859,
+   "scenes": 160
+  },
+  "JN3_CACHE|ALL": {
+   "mean": 0.1565638321840442,
+   "scenes": 160
+  },
+  "JN3_CACHE|FAR7": {
+   "mean": 0.2986208110241642,
+   "scenes": 157
+  },
+  "JN3_CACHE|NEAR7": {
+   "mean": 0.07093142240249461,
+   "scenes": 160
+  },
+  "JNS_CACHE_coverage": {
+   "mean": 0.5336267598470051,
+   "scenes": 160
+  },
+  "JNS_CACHE|ALL": {
+   "mean": 0.15666466911682633,
+   "scenes": 160
+  },
+  "JNS_CACHE|FAR7": {
+   "mean": 0.29817165482807556,
+   "scenes": 157
+  },
+  "JNS_CACHE|NEAR7": {
+   "mean": 0.07118115405592525,
+   "scenes": 160
+  },
+  "R7|ALL": {
+   "mean": 0.16295738123606124,
+   "scenes": 160
+  },
+  "R7|FAR7": {
+   "mean": 0.3036761627597139,
+   "scenes": 157
+  },
+  "R7|NEAR7": {
+   "mean": 0.07805229940281354,
+   "scenes": 160
+  },
+  "ZS_CACHE_coverage": {
+   "mean": 0.7221969604492188,
+   "scenes": 160
+  },
+  "ZS_CACHE|ALL": {
+   "mean": 0.16079469014437195,
+   "scenes": 160
+  },
+  "ZS_CACHE|FAR7": {
+   "mean": 0.29732518032928906,
+   "scenes": 157
+  },
+  "ZS_CACHE|NEAR7": {
+   "mean": 0.07629777385915612,
+   "scenes": 160
+  }
+ },
+ "primary": {
+  "P1_JN1_FEEDFORWARD_VS_RELEASED_ALL": {
+   "absolute_top1_contribution": 0.1436505553813923,
+   "absolute_top3_contribution": 0.23883698647500357,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0003778103269925655,
+    0.007596008640385654
+   ],
+   "improved_tied_worse": [
+    109,
+    0,
+    51
+   ],
+   "left": "ZS_CACHE|ALL",
+   "loso_range": [
+    0.002197486773975807,
+    0.004156269082025469
+   ],
+   "mean": 0.0036233126789048664,
+   "median": 0.0019156006288444383,
+   "n_scenes": 160,
+   "negative": 51,
+   "positive": 109,
+   "positive_top1_contribution": 0.21100840114188932,
+   "positive_top3_contribution": 0.33227436980343333,
+   "right": "JN1_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "P2_RECIPE_FEEDFORWARD_VS_RELEASED_ALL": {
+   "absolute_top1_contribution": 0.149335285555362,
+   "absolute_top3_contribution": 0.2349429005684565,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0010345673499034343,
+    0.008020114513485662
+   ],
+   "improved_tied_worse": [
+    110,
+    0,
+    50
+   ],
+   "left": "ZS_CACHE|ALL",
+   "loso_range": [
+    0.002695438150160984,
+    0.004577917326727586
+   ],
+   "mean": 0.004130021027545632,
+   "median": 0.0020201527452069074,
+   "n_scenes": 160,
+   "negative": 50,
+   "positive": 110,
+   "positive_top1_contribution": 0.20960347797037118,
+   "positive_top3_contribution": 0.32150790142274577,
+   "right": "JNS_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  }
+ },
+ "secondary": {
+  "S1_JN1_VS_MODEL_FREE_ALL": {
+   "absolute_top1_contribution": 0.08103507893544257,
+   "absolute_top3_contribution": 0.21329474304545687,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0031007755667341566,
+    0.008742095030320854
+   ],
+   "improved_tied_worse": [
+    94,
+    0,
+    66
+   ],
+   "left": "R7|ALL",
+   "loso_range": [
+    0.005140907757861777,
+    0.005944468371542968
+   ],
+   "mean": 0.005786003770594136,
+   "median": 0.0009821608888593344,
+   "n_scenes": 160,
+   "negative": 66,
+   "positive": 94,
+   "positive_top1_contribution": 0.09576705609756324,
+   "positive_top3_contribution": 0.2520712004096729,
+   "right": "JN1_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S2_RECIPE_VS_MODEL_FREE_ALL": {
+   "absolute_top1_contribution": 0.09091964489323286,
+   "absolute_top3_contribution": 0.22616114514145821,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0035096772161403735,
+    0.009383329801779935
+   ],
+   "improved_tied_worse": [
+    96,
+    0,
+    64
+   ],
+   "left": "R7|ALL",
+   "loso_range": [
+    0.005562556002563894,
+    0.006420747918884263
+   ],
+   "mean": 0.006292712119234901,
+   "median": 0.0009223392816069438,
+   "n_scenes": 160,
+   "negative": 64,
+   "positive": 96,
+   "positive_top1_contribution": 0.10402943235379748,
+   "positive_top3_contribution": 0.25877152926827857,
+   "right": "JNS_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S3_RELEASED_VS_MODEL_FREE_ALL": {
+   "absolute_top1_contribution": 0.10812093497663791,
+   "absolute_top3_contribution": 0.2459169444290738,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.0023126600789229,
+    0.006408473209825262
+   ],
+   "improved_tied_worse": [
+    79,
+    0,
+    81
+   ],
+   "left": "R7|ALL",
+   "loso_range": [
+    0.0009846386758363087,
+    0.0034928549096912673
+   ],
+   "mean": 0.0021626910916892695,
+   "median": -5.15215404073531e-05,
+   "n_scenes": 160,
+   "negative": 81,
+   "positive": 79,
+   "positive_top1_contribution": 0.1660489628360835,
+   "positive_top3_contribution": 0.29696101409114195,
+   "right": "ZS_CACHE|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  },
+  "S4_JN1_NEAR7": {
+   "absolute_top1_contribution": 0.1252042217639747,
+   "absolute_top3_contribution": 0.21273392824602635,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0010792124521091162,
+    0.008712082351253347
+   ],
+   "improved_tied_worse": [
+    110,
+    0,
+    50
+   ],
+   "left": "ZS_CACHE|NEAR7",
+   "loso_range": [
+    0.0032095884184680764,
+    0.005241131357540292
+   ],
+   "mean": 0.004631224761773229,
+   "median": 0.0025887459436068766,
+   "n_scenes": 160,
+   "negative": 50,
+   "positive": 110,
+   "positive_top1_contribution": 0.17858266332260855,
+   "positive_top3_contribution": 0.28173722318061667,
+   "right": "JN1_CACHE|NEAR7",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S5_JN1_FAR7": {
+   "absolute_top1_contribution": 0.062390982053874014,
+   "absolute_top3_contribution": 0.17368234977113747,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.004337547946580262,
+    0.0016451275406879039
+   ],
+   "improved_tied_worse": [
+    67,
+    12,
+    78
+   ],
+   "left": "ZS_CACHE|FAR7",
+   "loso_range": [
+    -0.0019469441527462028,
+    -0.0007934010214544413
+   ],
+   "mean": -0.0013465109303687779,
+   "median": 0.0,
+   "n_scenes": 157,
+   "negative": 78,
+   "positive": 67,
+   "positive_top1_contribution": 0.14558055376418777,
+   "positive_top3_contribution": 0.35633939052999847,
+   "right": "JN1_CACHE|FAR7",
+   "scenes": 157,
+   "status": "NOT_ESTABLISHED",
+   "tied": 12
+  },
+  "S6_ENSEMBLE_JN1_VS_RELEASED_ALL": {
+   "absolute_top1_contribution": 0.1526433252332297,
+   "absolute_top3_contribution": 0.26194933744561816,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.0004071097635371553,
+    0.0036513238365694033
+   ],
+   "improved_tied_worse": [
+    91,
+    0,
+    69
+   ],
+   "left": "GEO_ZS_CACHE|ALL",
+   "loso_range": [
+    0.0006253097706607856,
+    0.001723560774259223
+   ],
+   "mean": 0.0014186788798793957,
+   "median": 0.0004080502654994281,
+   "n_scenes": 160,
+   "negative": 69,
+   "positive": 91,
+   "positive_top1_contribution": 0.24007803810186623,
+   "positive_top3_contribution": 0.38014592908319506,
+   "right": "GEO_JN1_CACHE|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  },
+  "S7_SEVEN_VIEW_JK1_ALL": {
+   "absolute_top1_contribution": 0.1031273642103317,
+   "absolute_top3_contribution": 0.2330421733215758,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.004351147397679424,
+    0.003723957288792502
+   ],
+   "improved_tied_worse": [
+    97,
+    0,
+    63
+   ],
+   "left": "ZS_CACHE|ALL",
+   "loso_range": [
+    -0.0013207190454322029,
+    0.0009528631228391566
+   ],
+   "mean": -0.00025327667203171763,
+   "median": 0.0009616437287164326,
+   "n_scenes": 160,
+   "negative": 63,
+   "positive": 97,
+   "positive_top1_contribution": 0.1860736624529069,
+   "positive_top3_contribution": 0.3284870023537443,
+   "right": "JK1_CACHE|ALL",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  },
+  "S8_SEED_JN2_ALL": {
+   "absolute_top1_contribution": 0.1496691114163834,
+   "absolute_top3_contribution": 0.2295471357029255,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0014858216910748623,
+    0.008388599967482075
+   ],
+   "improved_tied_worse": [
+    105,
+    0,
+    55
+   ],
+   "left": "ZS_CACHE|ALL",
+   "loso_range": [
+    0.0030949027434462677,
+    0.00496750903652272
+   ],
+   "mean": 0.004535892443404297,
+   "median": 0.0020422003002513803,
+   "n_scenes": 160,
+   "negative": 55,
+   "positive": 105,
+   "positive_top1_contribution": 0.20434283948173768,
+   "positive_top3_contribution": 0.30627855376853375,
+   "right": "JN2_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "S9_SEED_JN3_ALL": {
+   "absolute_top1_contribution": 0.1461450407418308,
+   "absolute_top3_contribution": 0.2249328457000434,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.0011982371572933591,
+    0.008182808579522713
+   ],
+   "improved_tied_worse": [
+    109,
+    0,
+    51
+   ],
+   "left": "ZS_CACHE|ALL",
+   "loso_range": [
+    0.002793924933060879,
+    0.004609973861634572
+   ],
+   "mean": 0.004230857960327733,
+   "median": 0.0021665077232194564,
+   "n_scenes": 160,
+   "negative": 51,
+   "positive": 109,
+   "positive_top1_contribution": 0.2050959547685237,
+   "positive_top3_contribution": 0.3156646062944161,
+   "right": "JN3_CACHE|ALL",
+   "scenes": 160,
+   "status": "PARTIAL",
+   "tied": 0
+  }
+ }
+}

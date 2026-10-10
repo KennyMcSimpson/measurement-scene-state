@@ -1,0 +1,418 @@
+{
+  "manifest": "/home/xmum26_zonghan/cv_work/depthsplat/probe_dev/manifest_dev.json",
+  "split": "DEV",
+  "size": [
+    256,
+    320
+  ],
+  "near": 0.5,
+  "far": 200.0,
+  "inject_measured_depth": true,
+  "extra_rgb": 3,
+  "inject_all": false,
+  "align_extra_scale": true,
+  "checkpoint": "/home/xmum26_zonghan/zonghan_o_mirror/_models/depthsplat/depthsplat-gs-base-re10kdl3dv-448x768-randview2-6-f8ddd845.pth",
+  "dinov2_code": "/home/xmum26_zonghan/.cache/torch/hub/facebookresearch_dinov2_main",
+  "overrides": [
+    "+experiment=dl3dv",
+    "mode=test",
+    "model.encoder.num_scales=2",
+    "model.encoder.upsample_factor=4",
+    "model.encoder.lowest_feature_resolution=8",
+    "model.encoder.monodepth_vit_type=vitb",
+    "model.encoder.gaussian_adapter.gaussian_scale_max=0.1",
+    "model.encoder.supervise_intermediate_depth=false",
+    "wandb.mode=disabled"
+  ],
+  "depthsplat_commit": "2dad25a7b9ba7c5537aba08463ef88d8511a06be",
+  "torch": "2.4.0+cu121",
+  "gpu": "NVIDIA RTX A6000",
+  "queries": 32,
+  "seconds": 15.7,
+  "records": [
+    {
+      "scene_id": "ai_008_001",
+      "role": "A",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8442657589912415,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9793640375137329,
+        "context_absrel": 0.156704843044281
+      }
+    },
+    {
+      "scene_id": "ai_008_001",
+      "role": "B",
+      "views": [
+        0,
+        6,
+        8,
+        1,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8182665109634399,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9801745414733887,
+        "context_absrel": 0.05785520002245903
+      }
+    },
+    {
+      "scene_id": "ai_009_001",
+      "role": "A",
+      "views": [
+        0,
+        1,
+        2,
+        4,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8673967719078064,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9910593628883362,
+        "context_absrel": 0.12431942671537399
+      }
+    },
+    {
+      "scene_id": "ai_009_001",
+      "role": "B",
+      "views": [
+        0,
+        3,
+        5,
+        4,
+        9,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8351510167121887,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9874858260154724,
+        "context_absrel": 0.12587378919124603
+      }
+    },
+    {
+      "scene_id": "ai_011_001",
+      "role": "A",
+      "views": [
+        0,
+        2,
+        3,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.9143056869506836,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9765167236328125,
+        "context_absrel": 0.17485906183719635
+      }
+    },
+    {
+      "scene_id": "ai_011_001",
+      "role": "B",
+      "views": [
+        0,
+        8,
+        10,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.900821328163147,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9821533560752869,
+        "context_absrel": 0.1761440485715866
+      }
+    },
+    {
+      "scene_id": "ai_014_003",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        7,
+        1,
+        9,
+        15
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8222523927688599,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9716213941574097,
+        "context_absrel": 0.19515804946422577
+      }
+    },
+    {
+      "scene_id": "ai_014_003",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        9,
+        15
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8572328686714172,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9832009077072144,
+        "context_absrel": 0.22405967116355896
+      }
+    },
+    {
+      "scene_id": "ai_016_002",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        10,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.7899326086044312,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9844427108764648,
+        "context_absrel": 0.05484265461564064
+      }
+    },
+    {
+      "scene_id": "ai_016_002",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        9,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.8129616975784302,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.992299497127533,
+        "context_absrel": 0.05117833614349365
+      }
+    },
+    {
+      "scene_id": "ai_021_002",
+      "role": "A",
+      "views": [
+        0,
+        6,
+        7,
+        1,
+        5,
+        11
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.31641635298728943,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 1.0437216758728027,
+        "context_absrel": 0.10642518103122711
+      }
+    },
+    {
+      "scene_id": "ai_021_002",
+      "role": "B",
+      "views": [
+        0,
+        12,
+        13,
+        1,
+        5,
+        11
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.5986010432243347,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 1.0540052652359009,
+        "context_absrel": 0.11726995557546616
+      }
+    },
+    {
+      "scene_id": "ai_032_001",
+      "role": "A",
+      "views": [
+        0,
+        3,
+        9,
+        1,
+        8,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.9202165603637695,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9485015273094177,
+        "context_absrel": 0.11719154566526413
+      }
+    },
+    {
+      "scene_id": "ai_032_001",
+      "role": "B",
+      "views": [
+        0,
+        4,
+        5,
+        1,
+        8,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.9288293719291687,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9985562562942505,
+        "context_absrel": 0.27386924624443054
+      }
+    },
+    {
+      "scene_id": "ai_034_001",
+      "role": "A",
+      "views": [
+        0,
+        5,
+        6,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.3235895335674286,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9987989068031311,
+        "context_absrel": 0.09964049607515335
+      }
+    },
+    {
+      "scene_id": "ai_034_001",
+      "role": "B",
+      "views": [
+        0,
+        9,
+        12,
+        1,
+        7,
+        13
+      ],
+      "gaussians": 491520,
+      "alpha_mean": 0.3200870752334595,
+      "context_depth_shape": [
+        1,
+        6,
+        256,
+        320
+      ],
+      "injection": {
+        "median_ratio": 0.9933704137802124,
+        "context_absrel": 0.14424559473991394
+      }
+    }
+  ]
+}

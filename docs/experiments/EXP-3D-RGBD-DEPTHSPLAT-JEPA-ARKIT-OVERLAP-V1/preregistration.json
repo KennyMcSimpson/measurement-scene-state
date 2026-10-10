@@ -1,0 +1,74 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1",
+ "locked_at": "2026-10-09 01:19:13 +0800",
+ "protocol_sha256": "44c945b41c6e8cfceba2357ea2d9f0fe5e9674925563f4abefff09024bffad16",
+ "code": {
+  "arkit_records.py": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f",
+  "derive_train_overlap.py": "65baa2562c0a22b2a90d3c02a5fc9de080c1783410b4ec3ff4b860fc01cb1742",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "hit_share_table.py": "33ea9284b0b72398b8cc92f840a6033c5d58309d8f544d5773165d3484496e7f",
+  "overlap_jobs.sh": "51bf3552d425316c22def9b4783a64817330a69e678773130e63cf9af1bf2c27",
+  "overlap_lock.py": "a692ae84e29b31051d35c3323ee950deb7dfde207d137518e47cda552569b435",
+  "overlap_make_root.py": "4be8c45119dcb827e103435d6f83c6a3b9fe0834f7d8617c4814b40e4f81a056",
+  "overlap_score.py": "f8be3ac283233a2bfa56ef6ccb86da31220ce58483fe5fa348025d4ddc9c51da",
+  "train_jepa_arkit_overlap.py": "de03be8c985031f86c17bccfe96be47dbbe1745f42f0ca04d4a8af9f7dd858a7"
+ },
+ "root_files": {
+  "frame_role_lock.json": "b801baaada0ac31010cc88d3740d3d99ed2d5d5ba498003dbeddd9365c44f374",
+  "evaluation_contract.json": "fb99c3dff48069f8e4310410df59562c452c9ceb231f227163af2f3226b4ef0f",
+  "manifest_arkit160_overlap.json": "f32545426f6e95102c570e57ac05a09175ea801a892edb0cc8b0679d8428e383",
+  "training/hit_shares_TRAIN.json": "26b361a0187d46e98e2f5ddba3f3a899cf8bf7ca5e537fb4682f90592e258a18"
+ },
+ "training_data": {
+  "manifest_arkit_trainval.json": "7203f486dd70f418313853ad842de48c84b1292c55ec40d3122da49d22ca4bb9",
+  "candidate_lock.json": "47e6ebe9b6caf97a90c1a6a5a8f5756f698651ddd58de6ed5058af78ffdc5e5e"
+ },
+ "hit_table": {
+  "pairs": 4732,
+  "eligible_share": 0.569949281487743,
+  "min_hit": 0.05
+ },
+ "jepa_arkit_v1": {
+  "preregistration_sha256": "de61109d317081004b08ee8a8555519587b7804bfa7149f0ca6b7eec292ded35",
+  "train_script_sha256": "6e206eee30560012ba97170fa04162884f8220dabb45ef85bfbb34f298c86326",
+  "checkpoints": {
+   "JA1": "0659fb4ef7b79527faea1ca3f959133d8de81a7f24cb96cd4ce68880ae297389",
+   "JA2": "f5f8cf387b6adf062de012f4657fcc39f2cfd5894bbe5abb5c1e9c9f318445c8",
+   "JA3": "93cb636eef86330eab867a3fcf755d599782bc5142f24ccb4d5e3cd979568e01"
+  },
+  "results_present_at_lock": []
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "v1_checkpoints": {
+  "J1": "cb31a0dc6d76ce2df97b5bb510972b278e1b08e85076456584c418a497a7b57d",
+  "J2": "dbe16fb39adcc554df24fe57669e4c7a61e9dc6c062780d3bdf0f6944c9b2560",
+  "J3": "bf4db693a9ac57afb2162a62fd605ce7cf3a633400f8bd3e317178894b079fbd"
+ },
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "settings": {
+  "training": "JEPA-ARKIT-V1 recipe (seeds 20261008-10, 4000 steps, lr 5e-6 / ViT 5e-7, warmup 200, cosine, AdamW wd 1e-4, clip 1.0, 2 targets, relative L1 raw depth + 0.5 RGB L1, cap 3.0) with targets restricted to non-context frames of context hit share >= 0.05",
+  "queries": "frames 6 and 7 (next free of 9, 11, 12 where a record uses one)",
+  "alpha_min": 0.5,
+  "g1_opacity_min": 0.5,
+  "zero_hit_constant_m": 1.05
+ },
+ "primary": {
+  "O1_OVERLAP_JEPA_VS_HARMONIC_FARH": "FARH: H3 - JO",
+  "O2_OVERLAP_TRAINING_VS_ORIGINAL_RECIPE_FARH": "FARH: JA - JO"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by overlap_score.py score after every seal is complete",
+  "a failed training seed stops the run (reported); ARKitScenes media outside git; nothing pushed"
+ ]
+}

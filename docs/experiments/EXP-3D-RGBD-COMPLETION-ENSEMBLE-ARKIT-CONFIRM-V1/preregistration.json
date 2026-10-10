@@ -1,0 +1,36 @@
+{
+ "experiment": "EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1",
+ "locked_at": "2026-10-08 13:46:12 +0800",
+ "protocol_sha256": "16d50f26c9f28ee3719de07f9d940fadb82480215a81ebcfc2d79b4d1bad6957",
+ "code": {
+  "confirm_exp.py": "ed39789241a0f1db571123111c6b685d374520b9222b20459b7ca85420dee1fc",
+  "confirm_lock.py": "8ec9bd43177e8a9b00b96f41f5f0a50445cf22fc61665e91558143c136509a05"
+ },
+ "root_files": {
+  "frame_role_lock.json": "62b85ebdc67da322413fa199141d3f3d3e0ca55c14e61e6ef31a4c6af69b18d9",
+  "evaluation_contract.json": "9e1859b570a0acc1c72f2e3148d02177bc058243e95ff5841ff60829f846fcb8",
+  "manifest_arkit_confirm.json": "e1972dd2d2bafc53c2a802401786eb51af457bcae6bf4a2dd4f4ce5d3e0878d1"
+ },
+ "data": {
+  "selection.json": "825085c7fc40c3b43fc529599ca3342630bd1381364373b94d686a49dcf34731",
+  "downloads.json": "60d6cd099e8040854a5d9d0ab5f832deaede6d228709a4bb358d131effd3928c",
+  "candidate_lock.json": "5874a5e2e5d482c4ae5b90d442345571fc067e6aa257451f81c56e5d436c7ad0",
+  "manifest_arkit_confirm.json": "e1972dd2d2bafc53c2a802401786eb51af457bcae6bf4a2dd4f4ce5d3e0878d1",
+  "preparation_integrity.json": "7d5509a714d761f1e65a8ccae8545c226d035ba689e78bc9c663248b656510e4"
+ },
+ "v1_score_analyze_sha256": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+ "primary": {
+  "C1_NORMALIZED_ENSEMBLE_VS_HARMONIC_FAR": "FAR: H3 - (H3 + G1N) / 2"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by confirm_exp.py score after the arms seal is complete",
+  "ARKitScenes media: non-commercial research only, outside git; nothing pushed"
+ ]
+}

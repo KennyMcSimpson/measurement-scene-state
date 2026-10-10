@@ -1,0 +1,58 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1",
+ "locked_at": "2026-10-09 14:41:45 +0800",
+ "protocol_sha256": "43500c10fd03ed16377239cad86f4c2ad831e9e93f99e17ba9d7d4d29accbcba",
+ "code": {
+  "arkit_records.py": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f",
+  "derive_train_cache.py": "58089e9b59570474c5b4098173a4c276080fa96e7cb05a06d4d49f53a26508e1",
+  "derive_train_norm.py": "ca635c8d420c497d39ea7b6d6f2be55f91b1ab6642383bdf3b8765cd9684ae4e",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "jn_jobs.sh": "5fb10feeb253d58623db901ac7dc5913fd35a26d08cd4b1b6718cc693c88ec4f",
+  "jn_lock.py": "326de7f9fe9f8a9e38e88b83b8c3b0e82aa6da024889095ea1eef9f08d624f2d",
+  "jn_make_root.py": "4833efae662222147696c88866a057342623c69da7359d3d14dd735e0aab6f19",
+  "jn_score.py": "fa0df67d3e02f86d02a10df9c2ea674d64ede62afcffc77b76398a1f75e0851f",
+  "make_streams_train.py": "61564673c5b54b6e0b2eb2274f47c92a4a0087a4a5516f3fa1bb578a5863fa58",
+  "train_jepa_arkit_cache.py": "a9b8a19bb1b352e3999fb249ad2727cf7b4de6847398e53c713847863c6c7d99",
+  "train_jepa_arkit_norm.py": "cdd27c6589eed7caa33af7b3975fde119d752af8af32b9b4fad674430065599c"
+ },
+ "root_files": {
+  "frame_role_lock.json": "b0efbf650ad9593da23d4af3e00a9caf113cb4daf1efc2dca2baf50f16576a01",
+  "reused_seals.json": "005776917e61f2a77bdf19e0f3788016baa32159cc6910324a34bf26137e27bc",
+  "training/hit_shares_TRAIN.json": "26b361a0187d46e98e2f5ddba3f3a899cf8bf7ca5e537fb4682f90592e258a18",
+  "training/streams_TRAIN.json": "fba7c599639317790eda6eb4a95c11769b27464d75f0d33db3f494b44515b3a1"
+ },
+ "training_data": {
+  "manifest_arkit_trainval.json": "7203f486dd70f418313853ad842de48c84b1292c55ec40d3122da49d22ca4bb9",
+  "candidate_lock.json": "47e6ebe9b6caf97a90c1a6a5a8f5756f698651ddd58de6ed5058af78ffdc5e5e"
+ },
+ "overlap_v1_preregistration_sha256": "27d25dd407f80e0ccbb3e7ba07c14749513c32de56e566fa65900f6b806b5298",
+ "jc_preregistration_sha256": "1b00184ec4a16032e33a60260365b26e7fd0df4ae45db673c1200fe77df5e512",
+ "overlap_v1_training_script_sha256": "de03be8c985031f86c17bccfe96be47dbbe1745f42f0ca04d4a8af9f7dd858a7",
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "design_basis": "motivated by the JBT and JC results (known at design time); locked before any JN / JK training or evaluation",
+ "settings": {
+  "training": "accuracy-only objective (covered pixels, alpha >= 0.5, no gradient through the mask); JN1: OVERLAP-V1 episodes (3 context frames, overlapping targets with hit share >= 0.05); JK1: 3 context + 4 Core B stream frames -> primary queries 14 / 15; both seed 20261008, 4000 steps, lr 5e-6 / ViT 5e-7, warmup 200, cosine, AdamW wd 1e-4, clip 1.0, 2 targets, scale cap 0.1, last step",
+  "evaluation": "CACHE + TTT m = 1 (100 steps), cap 0.1, V1's ds_eval.py, ARKIT_VAL (ENSEMBLES-ARKIT episodes)",
+  "alpha_min": 0.5
+ },
+ "primary": {
+  "P1_ACCURACY_JEPA_VS_RELEASED_TTT_ALL": "ALL: ZS_TTT - JN_TTT",
+  "P2_SEVEN_VIEW_ACCURACY_JEPA_VS_RELEASED_TTT_ALL": "ALL: ZS_TTT - JK_TTT"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by jn_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

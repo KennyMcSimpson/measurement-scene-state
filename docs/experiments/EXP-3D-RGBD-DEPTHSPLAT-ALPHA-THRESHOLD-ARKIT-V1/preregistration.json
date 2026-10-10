@@ -1,0 +1,63 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1",
+ "locked_at": "2026-10-10 01:28:14 +0800",
+ "protocol_sha256": "6c6b942aee9b3d55d5530be79e6f7b27a0ba8e4a96d2c0c1fb6e2f6b82891f70",
+ "code": {
+  "at_jobs.sh": "205fad3a0c4e12ded2c52596cf36c7e72189a440eca0bbeecbd85c74b84b8635",
+  "at_lock.py": "28728383bfc8ccbd66f3b9e9391878ddbe3ce2be2613711eb905f6d5689f93c2",
+  "at_make_root.py": "523534e246129bbd44b70a4bced2ac20d425d23e9f39dfb89cbb296ad1f339ac",
+  "at_score.py": "72599cb4e2730b7dd5185aa9434bc239ade59b6b2938d2953987c656381bc365"
+ },
+ "root_files": {
+  "reused_seals.json": "1f14af45baec06de7c2afbdd964feeab0583a23d3bed8fb2e4fd1c35c83d911c"
+ },
+ "earlier_preregistrations": {
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1": "8bfe2c187c1d3532079b3debed8c2eedd7c390a0470cecdc7fd335dfc7cde299",
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2": "b36f26577845e5c395d19ee1281790e8502c684a42f0dbbe7e8f284f5d31d046",
+  "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3": "0a33ebdf73fdfa59d050e475379fc50f33c203574598aa64a920d4f72da5126b",
+  "EXP-3D-RGBD-ENSEMBLES-ARKIT-V1": "6947f14ff3f3440bc713615611795eb10b6118efa4e77a26d8ff0a896dafa2c6",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1": "a826b21ce062a848a188fdba4d02a1d1326c8ffff76e5fbe4a22cf1a75d95d5f",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1": "7ff1827a9ffb18d2ce964510b024bd47c31b9b4b57c19491729dd036e5069f57",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1": "d9ed9d50574c86b2424c2b979d565ecff673de257d3fc56ee9eb40224feab03b"
+ },
+ "v1_code": {
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "design_basis": "the NF / NS results (known: the JN feed-forward gain is PARTIAL and saturated in data, coverage 0.72 -> ~0.55); locked before any threshold other than 0.5 was computed on any cohort",
+ "settings": {
+  "grid": [
+   0.5,
+   0.6,
+   0.7,
+   0.8,
+   0.9,
+   0.95,
+   0.99
+  ],
+  "dev": [
+   "ARKIT_SYSTEM",
+   "ARKIT_SYSTEM2"
+  ],
+  "confirmation": [
+   "ARKIT_SYSTEM3",
+   "ARKIT_VAL"
+  ],
+  "selection": "tau_cache = argmin DEV scene mean of ZS_CACHE(t)|ALL; tau_core_b = argmin of CORE_B(t)|ALL; ties: the smaller t",
+  "jepa_readout": "JNS / JLS at t = 0.5"
+ },
+ "primary": {
+  "P1_JEPA_VS_THRESHOLD_SYSTEM3_ALL": "ARKIT_SYSTEM3 ALL: ZS_CACHE(tau_cache) - JNS_CACHE",
+  "P2_THRESHOLD_CORE_B_SYSTEM3_ALL": "ARKIT_SYSTEM3 ALL: CORE_B(0.5) - CORE_B(tau_core_b)"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "the selection reads DEV query depth only and is hashed before any confirmation query depth is read",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

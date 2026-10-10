@@ -1,0 +1,91 @@
+{
+ "note": "descriptive, post hoc; 8 Replica scenes; no gate",
+ "means": {
+  "G1|ALL": 0.3901263497345536,
+  "G1|FAR": 0.4793588664756084,
+  "H3|ALL": 0.330957440143214,
+  "H3|FAR": 0.3847566025610612,
+  "HG|ALL": 0.2567650110200398,
+  "HG|FAR": 0.300186225418443
+ },
+ "scenes_better_than_H3": {
+  "G1|FAR": [
+   2,
+   8
+  ],
+  "G1|ALL": [
+   2,
+   8
+  ],
+  "HG|FAR": [
+   4,
+   8
+  ],
+  "HG|ALL": [
+   4,
+   8
+  ]
+ },
+ "per_scene": {
+  "H3|FAR": {
+   "replica_office0": 0.5310040670884393,
+   "replica_office1": 0.5366758146621728,
+   "replica_office2": 0.6294139914577522,
+   "replica_office3": 0.2564682713646591,
+   "replica_office4": 0.31718758049341167,
+   "replica_room0": 0.39807281141968376,
+   "replica_room1": 0.2796262300472613,
+   "replica_room2": 0.12960405395510927
+  },
+  "H3|ALL": {
+   "replica_office0": 0.5106333172976767,
+   "replica_office1": 0.5366758146621728,
+   "replica_office2": 0.5027491853389847,
+   "replica_office3": 0.07127505409446444,
+   "replica_office4": 0.31718758049341167,
+   "replica_room0": 0.3949548311069688,
+   "replica_room1": 0.2796262300472613,
+   "replica_room2": 0.03455750810477137
+  },
+  "G1|FAR": {
+   "replica_office0": 0.493838654740843,
+   "replica_office1": 0.6109313548162425,
+   "replica_office2": 0.22373462167611577,
+   "replica_office3": 0.4155936424950947,
+   "replica_office4": 0.545345900312806,
+   "replica_room0": 0.4474849797129807,
+   "replica_room1": 0.5646668705056714,
+   "replica_room2": 0.5332749075451126
+  },
+  "G1|ALL": {
+   "replica_office0": 0.4625533447567214,
+   "replica_office1": 0.6109313548162425,
+   "replica_office2": 0.2219545862689649,
+   "replica_office3": 0.1445932250848829,
+   "replica_office4": 0.545345900312806,
+   "replica_room0": 0.4439878584594431,
+   "replica_room1": 0.5646668705056714,
+   "replica_room2": 0.12697765767169678
+  },
+  "HG|FAR": {
+   "replica_office0": 0.26992140190812575,
+   "replica_office1": 0.11999366218504033,
+   "replica_office2": 0.4097873107816282,
+   "replica_office3": 0.17719018144013693,
+   "replica_office4": 0.42974104211903974,
+   "replica_room0": 0.42201919638264973,
+   "replica_room1": 0.3530833475496433,
+   "replica_room2": 0.21975366098127963
+  },
+  "HG|ALL": {
+   "replica_office0": 0.25811497304364794,
+   "replica_office1": 0.11999366218504033,
+   "replica_office2": 0.35032659986695835,
+   "replica_office3": 0.06737487918720318,
+   "replica_office4": 0.42974104211903974,
+   "replica_room0": 0.4187233115082109,
+   "replica_room1": 0.3530833475496433,
+   "replica_room2": 0.05676227270057436
+  }
+ }
+}

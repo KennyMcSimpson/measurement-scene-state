@@ -1,0 +1,27 @@
+{
+  "arms": {
+    "G1": {
+      "module": "mcss.mechanism_pilot.rgbd_long_train_carrier",
+      "root": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-SEGMENT-DIVERSITY-V21/G1/EXP-3D-RGBD-LONG-TRAIN-V17",
+      "step": 24000,
+      "preregistration_sha256": "18333dad06f9099ff624c89c3b6bab8827269d3b4ae7142fca0b00346d081f10"
+    }
+  },
+  "reference_arm": "G1",
+  "seeds": [
+    20260928,
+    20260929,
+    20260930
+  ],
+  "cohorts": {
+    "DEV": {
+      "manifest": "/home/xmum26_zonghan/cv_work/depthsplat/probe_dev/manifest_dev.json",
+      "manifest_sha256": "c4326e11d0840f6d7341f5833cc5398a07e8744b503e40203e62ed8bf1755aa7",
+      "split": "DEV",
+      "role": "primary_query"
+    }
+  },
+  "near_px": 8,
+  "reprojection_fill_constant_m": 2.3736329078674316,
+  "abstain_opacity_threshold": 0.5
+}

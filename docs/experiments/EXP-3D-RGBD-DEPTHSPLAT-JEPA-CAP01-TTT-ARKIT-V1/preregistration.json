@@ -1,0 +1,51 @@
+{
+ "experiment": "EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1",
+ "locked_at": "2026-10-09 06:03:48 +0800",
+ "protocol_sha256": "608cbb69cefbd95d566abd70a403be560e6915e9ae600ad2b2beb6daf44f77f7",
+ "code": {
+  "arkit_records.py": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f",
+  "ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "jc_jobs.sh": "f33dbf865093da565e14323f16ad0b6890a922158f6d26709cc84cd418ff18b9",
+  "jc_lock.py": "728cb0ab65b86b8c041938c0523227fc8edf8dba7ac25df56dbdedc02c915b16",
+  "jc_make_root.py": "79c2343ed4d7f6e44f81e87d6ed119112f83ba384bd069c1444b343db1f4c7ec",
+  "jc_score.py": "5258bab66932325f723f5c4e66b91ba9dfa626014b5df3eefc38276851262a7a",
+  "train_jepa_arkit_overlap.py": "de03be8c985031f86c17bccfe96be47dbbe1745f42f0ca04d4a8af9f7dd858a7"
+ },
+ "root_files": {
+  "frame_role_lock.json": "b0efbf650ad9593da23d4af3e00a9caf113cb4daf1efc2dca2baf50f16576a01",
+  "reused_seals.json": "d34e05b8ddae5767d2e21f62da4d83042b2906e4902754864cd0e1f35747e386",
+  "training/hit_shares_TRAIN.json": "26b361a0187d46e98e2f5ddba3f3a899cf8bf7ca5e537fb4682f90592e258a18"
+ },
+ "training_data": {
+  "manifest_arkit_trainval.json": "7203f486dd70f418313853ad842de48c84b1292c55ec40d3122da49d22ca4bb9",
+  "candidate_lock.json": "47e6ebe9b6caf97a90c1a6a5a8f5756f698651ddd58de6ed5058af78ffdc5e5e"
+ },
+ "overlap_v1_preregistration_sha256": "27d25dd407f80e0ccbb3e7ba07c14749513c32de56e566fa65900f6b806b5298",
+ "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "design_basis": "motivated by the JBT and OVERLAP-V1 results (known at design time); locked before any JC training or evaluation",
+ "settings": {
+  "training": "OVERLAP-V1 recipe (train_jepa_arkit_overlap.py, min hit 0.05) with scale cap 0.1, seed 20261008 only (JC1), 4000 steps, lr 5e-6 / ViT 5e-7, warmup 200, cosine, AdamW wd 1e-4, clip 1.0, 2 targets",
+  "evaluation": "CACHE + TTT m = 1 (100 steps), cap 0.1, V1's ds_eval.py, ARKIT_VAL (ENSEMBLES-ARKIT episodes)",
+  "alpha_min": 0.5
+ },
+ "primary": {
+  "P1_JEPA_CAP01_VS_RELEASED_TTT_ALL": "ALL: ZS_TTT - JC_TTT",
+  "P2_JEPA_CAP01_VS_RELEASED_CACHE_ALL": "ALL: ZS_CACHE - JC_CACHE"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by jc_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

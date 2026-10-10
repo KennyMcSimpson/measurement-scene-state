@@ -1,0 +1,55 @@
+{
+ "experiment": "EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1",
+ "locked_at": "2026-10-09 11:35:44 +0800",
+ "plan_lock": "2026-10-09 11:28:13 +0800 sha256(PROTOCOL.md)=5301d73738a2772e24e4cbac0188ec2ac70ee0dba92db8cc9705ccadc36f867e sha256(scripts/prepare_rgbd_arkit_system_cohort.py)=8fdef8489f06c99091d4403be1290770bd015f2b7b89837c9dde94ac11c34715; written before any ARKIT_SYSTEM download",
+ "protocol_sha256": "5301d73738a2772e24e4cbac0188ec2ac70ee0dba92db8cc9705ccadc36f867e",
+ "code": {
+  "sys_jobs.sh": "451fa392c79b1f03f2bcf8226535388238410d4085e27bda87fafacb20931611",
+  "sys_lock.py": "a3247b6bc39e68b8ffba75be6740329edf2ff97e0476a308fe1c0db06cf2743f",
+  "sys_make_root.py": "8e23715c5702fdd2db279781f22229e5306fcc8afefd7b264343b52b8937da58",
+  "sys_score.py": "6873daa049fd1beacd0e6ad543ddbc0277e6bbca327840a0ac4e2f9104f96e7f"
+ },
+ "root_files": {
+  "frame_role_lock.json": "13c9b48ebf869a0250f783eab18438b8a62e87f1fec681ee0ad648c9c5f87eda",
+  "evaluation_contract.json": "e6197ce3c70a69459cc653f310983c39403324427256ceb12e59e25a5054bcb1",
+  "selector_seal.json": "b35d4901a02e950a0a87bc128083fe2943e26cb8bf2056e2da312044c7c2fa44"
+ },
+ "cohort_data": {
+  "selection.json": "8f0dc333d8d04004ed17016b5e80dc837da4a1ff1274bac0e3a7dc12dd19d30c",
+  "downloads.json": "d39279c9635df34813a60489b830c48322d1633b347525b579bd58ff76318a10",
+  "candidate_lock.json": "c779ab061908c0152feb8dab5875ec1e72aec69511eae25a2cc35de18ddf0f9b",
+  "manifest_arkit_system.json": "5c0300de90b4805c017ff126949e6471857974fb7cb78738de5a07e66c91a648",
+  "preparation_integrity.json": "0dcd5a33575a080bec9748e7c95c5aae9815161a680606a3c43fbd11263af91b"
+ },
+ "cohort_script_sha256": "8fdef8489f06c99091d4403be1290770bd015f2b7b89837c9dde94ac11c34715",
+ "models": {
+  "GA_contract_sha256": "14f030254dff78587b589192d1b82e096d39320be3b1d23af2849d36902580ba",
+  "released_weights_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6"
+ },
+ "v1_code": {
+  "ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "geometry_seal.py": "30d770efa3f1567c5609c18faea6ddbb2f6dae25ecdf25191e518cffed91cc83",
+  "score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "settings": {
+  "core_b": "sqrt(R7 x ZS_TTT_F7), ZS = released weights at cap 0.1, TTT m = 1, 100 steps",
+  "full": "Core B with R7 replaced on FAR7 pixels of episodes with S >= 1.2 by GAN7 (GA normalized, R7 fallback)",
+  "alpha_min": 0.5,
+  "opacity_min": 0.5
+ },
+ "primary": {
+  "P1_FULL_SYSTEM_VS_CORE_B_ALL": "ALL: CORE_B - FULL",
+  "P2_FULL_SYSTEM_VS_MODEL_FREE_ALL": "ALL: R7 - FULL"
+ },
+ "statistics": {
+  "unit": "scene",
+  "draws": 10000,
+  "seed": 20260928,
+  "gate": "V2"
+ },
+ "rules": [
+  "no setting changes after this lock; amendments only appended and dated",
+  "query depth read only by sys_score.py score after every seal is complete",
+  "ARKitScenes media outside git; nothing pushed"
+ ]
+}

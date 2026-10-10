@@ -61,3 +61,8 @@ extend-exclude = ["third_party", "backups", "outputs", "docs/experiments"]
 
 [tool.ruff.lint]
 select = ["B", "E", "F", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+# Kept byte-for-byte: their hashes are recorded in the ARKitScenes cohort locks (candidate_lock source hashes).
+"scripts/prepare_rgbd_arkit_confirm_cohort.py" = ["E501"]
+"scripts/prepare_rgbd_arkit_val_cohort.py" = ["E501"]

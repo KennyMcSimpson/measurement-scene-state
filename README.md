@@ -1,5 +1,13 @@
 # Measurement Scene State / Inverse-JEPA + Dynamic-TTT research archive
 
+## 公开阅读入口 / Public reading
+
+- **[公开文档页](https://kennymcsimpson.github.io/measurement-scene-state/)**：研究文档、实验记录、源代码与配置的静态阅读入口，随 `main` 更新自动构建。
+- **[核心文档合并原文](https://kennymcsimpson.github.io/measurement-scene-state/llms-full.txt)**：直接交给支持网页读取的 AI；包含 `STATUS.md`、`EXPERIMENTS.md` 和复现导航的原文。
+- **[直接读取索引](llms.txt)**：提供 `raw.githubusercontent.com` 原文链接，不依赖 Google 是否已有关键词搜索结果。
+
+仓库公开可访问与搜索引擎收录是两件事。若搜索不到，请直接打开上述 URL；阅读结论时以 `STATUS.md` 和对应实验协议的证据边界为准。文档页只同步已跟踪的公开文档与项目源码，不包含本机数据、权重或被忽略的输出。
+
 2026-09-30 [V16](outputs/EXP-3D-RGBD-VOLUME-DISJOINT-V16/README.md)：在与训练集 volume 不相交的 FRESH-V2 上，TRAIN72 carrier 的补全优势平均 +0.185 但极不一致（8 好 6 差，CI 跨零），未能证实补全依赖对训练 volume 的熟悉（分支 D）。
 
 2026-09-30 [V15](docs/experiments/EXP-3D-RGBD-WIDTH-DATA-V15/README.md)：在 127 个训练场景上把宽度从 32 加到 64，补全仍没有改善（−0.003，CI 跨零），组合与经典补洞打平（分支 C）；宽度 × 数据的 2×2 中两个因素都不改善补全。

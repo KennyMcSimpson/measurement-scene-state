@@ -169,7 +169,7 @@ def main() -> None:
         path
         for path in tracked
         if (
-            path.startswith(("src/", "scripts/", "configs/"))
+            path.startswith(("src/", "scripts/", "configs/", "docs/", "tests/"))
             and path.endswith((".py", ".yaml", ".yml", ".toml"))
         )
         or path == "pyproject.toml"
@@ -243,11 +243,11 @@ def main() -> None:
 这些页面同步仓库原文，保留历史记录；具体结论以对应实验协议和报告为准。</p>
 <h2>直接读取 / Direct reading</h2>
 <p><a href="{base}llms-full.txt">核心文档合并原文 / Core documents in one text file</a> ·
-<a href="{base}llms.txt">全部文档与代码的文本索引</a></p>
+<a href="{base}llms.txt">研究文档与源码的文本索引</a></p>
 <p>可把上述链接直接交给具备网页读取功能的 AI。
 直接读取公开 URL 不依赖关键词搜索是否已有结果。</p>
 <h2>关键文档 / Key documents</h2><div class="links">{cards}</div>
-<h2>完整导航 / Browse</h2><p><a href="{base}documents.html">全部研究文档</a> ·
+<h2>完整导航 / Browse</h2><p><a href="{base}documents.html">研究文档目录</a> ·
 <a href="{base}sources.html">源代码与配置</a></p>'''
     write(
         "index.html",
@@ -284,7 +284,7 @@ def main() -> None:
     ]
     for path in CORE:
         index.append(f"- [{path}]({base}{text_path(path)})\n")
-    index.append("\n## All public document and source text\n\n")
+    index.append("\n## Published document and source text\n\n")
     for entry in entries:
         index.append(f"- [{entry['path']}]({base}{quote(entry['text'], safe='/')})\n")
     write("llms.txt", "".join(index))

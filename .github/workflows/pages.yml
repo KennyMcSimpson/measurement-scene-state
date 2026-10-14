@@ -5,11 +5,12 @@ on:
     branches: [main]
     paths:
       - '*.md'
-      - 'docs/**/*.md'
+      - 'docs/**'
       - 'research/ideas/**/*.md'
       - 'src/**'
       - 'scripts/**'
       - 'configs/**'
+      - 'tests/**'
       - 'pyproject.toml'
       - '.github/workflows/pages.yml'
   workflow_dispatch:

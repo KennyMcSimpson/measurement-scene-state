@@ -46,6 +46,7 @@ h1{font-size:2.2rem;letter-spacing:-.025em}h2{margin-top:2em}
 .lead{font-size:1.12rem;max-width:820px}.meta{font-size:.88rem;overflow-wrap:anywhere}
 .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
 .links h2{font-size:1.1rem;margin-bottom:4px}.links p{margin-top:4px}
+.links section{min-width:0;overflow-wrap:anywhere}
 article{overflow-wrap:anywhere}table{display:block;overflow-x:auto;border-collapse:collapse}
 td,th{padding:10px 14px;border:1px solid #d8dfe2;text-align:left}
 pre{background:#edf1f2;padding:20px;border-radius:5px;overflow:auto;line-height:1.55}

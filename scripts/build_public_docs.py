@@ -194,7 +194,7 @@ def main() -> None:
 <meta name="description" content="{html.escape(description, quote=True)}">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="{base}{quote(path, safe="/")}">
-<link rel="stylesheet" href="{base}style.css">
+<link rel="stylesheet" href="{base}style.css?v={commit[:12]}">
 <link rel="alternate" type="text/plain" href="{base}llms.txt" title="Text index">
 </head><body><header><nav>
 <a href="{base}">Measurement Scene State</a>

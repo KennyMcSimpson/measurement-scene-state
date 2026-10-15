@@ -1,0 +1,337 @@
+{
+ "block_tails": {
+  "ARKIT_CONFIRM": {
+   "block": 160,
+   "downloads_recorded": 160,
+   "failures": 67,
+   "never_prepared": 13,
+   "never_prepared_downloaded": 13,
+   "prepared_eligible": 80
+  },
+  "ARKIT_PILOT_TRAINVAL": {
+   "block": 430,
+   "downloads_recorded": 360,
+   "failures": 170,
+   "never_prepared": 70,
+   "never_prepared_downloaded": 0,
+   "prepared_eligible": 190
+  },
+  "ARKIT_SELECT": {
+   "block": 160,
+   "downloads_recorded": 160,
+   "failures": 62,
+   "never_prepared": 18,
+   "never_prepared_downloaded": 18,
+   "prepared_eligible": 80
+  },
+  "ARKIT_SYSTEM": {
+   "block": 160,
+   "downloads_recorded": 160,
+   "failures": 75,
+   "never_prepared": 5,
+   "never_prepared_downloaded": 5,
+   "prepared_eligible": 80
+  },
+  "ARKIT_SYSTEM2": {
+   "block": 160,
+   "downloads_recorded": 160,
+   "failures": 55,
+   "never_prepared": 25,
+   "never_prepared_downloaded": 25,
+   "prepared_eligible": 80
+  },
+  "ARKIT_SYSTEM3": {
+   "block": 360,
+   "downloads_recorded": 360,
+   "failures": 109,
+   "never_prepared": 91,
+   "never_prepared_downloaded": 91,
+   "prepared_eligible": 160
+  },
+  "ARKIT_SYSTEM4": {
+   "block": 91,
+   "downloads_recorded": 0,
+   "failures": 39,
+   "never_prepared": 0,
+   "never_prepared_downloaded": 0,
+   "prepared_eligible": 52
+  },
+  "ARKIT_VAL": {
+   "block": 430,
+   "downloads_recorded": 70,
+   "failures": 29,
+   "never_prepared": 360,
+   "never_prepared_downloaded": 0,
+   "prepared_eligible": 80
+  }
+ },
+ "cohorts": {
+  "ARKIT_CONFIRM": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-CONFIRM-DATA-V1/manifest_arkit_confirm.json",
+   "scans": 80,
+   "splits": {
+    "ARKIT_CONFIRM": 80
+   }
+  },
+  "ARKIT_PILOT_TRAINVAL": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-DATA-V1/manifest_arkit_trainval.json",
+   "scans": 190,
+   "splits": {
+    "DEV": 8,
+    "TRAIN": 182
+   }
+  },
+  "ARKIT_SELECT": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-SELECT-DATA-V1/manifest_arkit_select.json",
+   "scans": 80,
+   "splits": {
+    "ARKIT_SELECT": 80
+   }
+  },
+  "ARKIT_SYSTEM": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-SYSTEM-DATA-V1/manifest_arkit_system.json",
+   "scans": 80,
+   "splits": {
+    "ARKIT_SYSTEM": 80
+   }
+  },
+  "ARKIT_SYSTEM2": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-SYSTEM2-DATA-V1/manifest_arkit_system2.json",
+   "scans": 80,
+   "splits": {
+    "ARKIT_SYSTEM2": 80
+   }
+  },
+  "ARKIT_SYSTEM3": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-SYSTEM3-DATA-V1/manifest_arkit_system3.json",
+   "scans": 160,
+   "splits": {
+    "ARKIT_SYSTEM3": 160
+   }
+  },
+  "ARKIT_SYSTEM4": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-SYSTEM4-DATA-V1/manifest_arkit_system4.json",
+   "scans": 52,
+   "splits": {
+    "ARKIT_SYSTEM4": 52
+   }
+  },
+  "ARKIT_VAL": {
+   "manifest": "outputs/EXP-3D-RGBD-ARKIT-VAL-DATA-V1/manifest_arkit_val.json",
+   "scans": 41,
+   "splits": {
+    "ARKIT_VAL": 41
+   }
+  },
+  "episode_sets": {
+   "CAJU-V1 root:CAJU_COMPAT": {
+    "episodes": 4,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 2,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 0,
+    "places": 2,
+    "queries": 8
+   },
+   "CAJU-V1 root:CAJU_EVAL": {
+    "episodes": 68,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 34,
+    "in_hjepa_training": 34,
+    "in_kf_fit": 0,
+    "places": 34,
+    "queries": 136
+   },
+   "CAJU-V1 root:CAJU_PILOT": {
+    "episodes": 16,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 8,
+    "in_hjepa_training": 8,
+    "in_kf_fit": 0,
+    "places": 8,
+    "queries": 32
+   },
+   "CAJU-V1 root:CAJU_SEL": {
+    "episodes": 32,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 16,
+    "in_hjepa_training": 16,
+    "in_kf_fit": 0,
+    "places": 16,
+    "queries": 64
+   },
+   "ENGINE/JEPAGATE DEV root:CONF_SYSTEM3": {
+    "episodes": 320,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 160,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 0,
+    "places": 160,
+    "queries": 640
+   },
+   "ENGINE/JEPAGATE DEV root:CONF_VAL": {
+    "episodes": 160,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 80,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 0,
+    "places": 80,
+    "queries": 320
+   },
+   "ENGINE/JEPAGATE DEV root:DEV_SYSTEM": {
+    "episodes": 24,
+    "in_fuse_v1_training": 12,
+    "in_fuse_v2_training": 12,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 12,
+    "places": 12,
+    "queries": 48
+   },
+   "ENGINE/JEPAGATE DEV root:DEV_SYSTEM2": {
+    "episodes": 24,
+    "in_fuse_v1_training": 12,
+    "in_fuse_v2_training": 12,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 12,
+    "places": 12,
+    "queries": 48
+   },
+   "KFUSE root:CONF_SYSTEM3": {
+    "episodes": 320,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 160,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 0,
+    "places": 160,
+    "queries": 640
+   },
+   "KFUSE root:CONF_VAL": {
+    "episodes": 160,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 80,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 0,
+    "places": 80,
+    "queries": 320
+   },
+   "KFUSE root:FIT_SYSTEM": {
+    "episodes": 160,
+    "in_fuse_v1_training": 80,
+    "in_fuse_v2_training": 80,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 80,
+    "places": 80,
+    "queries": 320
+   },
+   "KFUSE root:FIT_SYSTEM2": {
+    "episodes": 160,
+    "in_fuse_v1_training": 80,
+    "in_fuse_v2_training": 80,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 80,
+    "places": 80,
+    "queries": 320
+   },
+   "SYSTEM4 root:ARKIT_SYSTEM4": {
+    "episodes": 104,
+    "in_fuse_v1_training": 0,
+    "in_fuse_v2_training": 0,
+    "in_hjepa_training": 0,
+    "in_kf_fit": 0,
+    "places": 52,
+    "queries": 208
+   }
+  }
+ },
+ "fill_constant": {
+  "source": "EXP-3D-RGBD-DEPTH-BOUNDS-V7 decision_rules GEOMETRY_FREE_REFERENCE REF_TRAIN_ABSREL_OPTIMAL (Hypersim TRAIN scenes ai_*)",
+  "used_when": "a query has no reprojection hit at all (harmonic_fill)",
+  "value_m": 2.3736329078674316
+ },
+ "models": {
+  "DepthSplat released (re10k+dl3dv)": {
+   "arkit_training_places": 0
+  },
+  "FUSE V1 (FUSENET-V1 BASE/JEPA)": {
+   "subset_of_fit": true,
+   "train_places": 128,
+   "val_places": 32
+  },
+  "FUSE V2 (SYSTEM4-HOLDOUT-V1)": {
+   "cohorts": [
+    "FIT_SYSTEM",
+    "FIT_SYSTEM2",
+    "CONF_SYSTEM3",
+    "CONF_VAL",
+    "CAJU_PILOT",
+    "CAJU_SEL",
+    "CAJU_EVAL"
+   ],
+   "places": 458,
+   "train_places": 412,
+   "val_places": 46
+  },
+  "H-JEPA (JEPAGATE-V1)": {
+   "monitor_places": 8,
+   "train_places": 182
+  },
+  "KF_BASE table (KFUSE-V1)": {
+   "cohorts": [
+    "FIT_SYSTEM",
+    "FIT_SYSTEM2"
+   ],
+   "fit_places": 160
+  }
+ },
+ "overlaps": {},
+ "zero_hit_queries": {
+  "ARKIT_SYSTEM4": {
+   "hit7_below_0.1": 12,
+   "median_hit7": 0.5646484375,
+   "queries": 208,
+   "zero_hit": 4
+  },
+  "CAJU_EVAL": {
+   "hit7_below_0.1": 2,
+   "median_hit7": 0.51376953125,
+   "queries": 136,
+   "zero_hit": 0
+  },
+  "CAJU_PILOT": {
+   "hit7_below_0.1": 4,
+   "median_hit7": 0.421533203125,
+   "queries": 32,
+   "zero_hit": 0
+  },
+  "CAJU_SEL": {
+   "hit7_below_0.1": 4,
+   "median_hit7": 0.49111328125,
+   "queries": 64,
+   "zero_hit": 0
+  },
+  "CONF_SYSTEM3": {
+   "hit7_below_0.1": 19,
+   "median_hit7": 0.54609375,
+   "queries": 640,
+   "zero_hit": 3
+  },
+  "CONF_VAL": {
+   "hit7_below_0.1": 12,
+   "median_hit7": 0.5216796875,
+   "queries": 320,
+   "zero_hit": 2
+  },
+  "FIT_SYSTEM": {
+   "hit7_below_0.1": 28,
+   "median_hit7": 0.557861328125,
+   "queries": 320,
+   "zero_hit": 10
+  },
+  "FIT_SYSTEM2": {
+   "hit7_below_0.1": 28,
+   "median_hit7": 0.52880859375,
+   "queries": 320,
+   "zero_hit": 2
+  }
+ }
+}

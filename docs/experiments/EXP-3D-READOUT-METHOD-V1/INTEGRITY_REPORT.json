@@ -1,0 +1,130 @@
+{
+ "amendment1_b1_replay_max_abs_difference": 0.0,
+ "amendment1_kf_replay": {
+  "bins": 64,
+  "edge_max_abs_diff": {
+   "ALPHA": 0.0,
+   "DIS": 1.8985505917390455e-08
+  },
+  "fit_places": 160,
+  "fit_queries": 640,
+  "kf_base_bins_equal": 64
+ },
+ "amendment1_lock": {
+  "files_unchanged": {
+   "AMENDMENT_1.md": true,
+   "code/rm_amend1.py": true,
+   "code/rm_amend1_stats.py": true
+  },
+  "label": "TTT_ADDED_VALUE_IN_KF_V2_STRUCTURE=SUPPORTED",
+  "lock_record": "2026-10-15 02:45:51 +0800 fc72e572dbe138bca67e18f2a018d36cdf541cb488563a4a90e163a3c708c212",
+  "locked_at": "2026-10-15 02:45:51 +0800"
+ },
+ "amendment2_lock": {
+  "files_unchanged": {
+   "AMENDMENT_2.md": true,
+   "code/rm_amend2.py": true
+  },
+  "label": "B_PREMISE_ACCURACY=NOT_SUPPORTED",
+  "lock_record": "2026-10-15 02:55:42 +0800 b19a0fd8c1a306be57c171ea1dd4e428058ee5e6090e5fde236e70b05dbf2406",
+  "locked_at": "2026-10-15 02:55:42 +0800"
+ },
+ "amendment3_lock": {
+  "files_unchanged": {
+   "AMENDMENT_3.md": true,
+   "code/rm_amend3.py": true
+  },
+  "label": "A_PREMISE_FREE_SPACE=NOT_SUPPORTED",
+  "lock_record": "2026-10-15 03:11:13 +0800 5e7cbc3b45d3fd23f73cb4ce05c9fbcda4344567eecfbe4aa58b5dcf83fe6e86",
+  "locked_at": "2026-10-15 03:11:13 +0800"
+ },
+ "analysis_replay": {
+  "amendment1": "ANALYSIS_DETERMINISTIC",
+  "phase12": "ANALYSIS_DETERMINISTIC"
+ },
+ "deliverables": {
+  "BASELINE_MATRIX.csv": true,
+  "BOOTSTRAP_RESULTS.json": true,
+  "CALIBRATION_CONTROLS.csv": true,
+  "CODE_AUDIT.md": true,
+  "DATA_EXPOSURE_REGISTRY.md": true,
+  "INTEGRITY_REPORT.json": true,
+  "MODEL_LINEAGE.md": true,
+  "NEXT_METHOD_PROPOSAL.md": true,
+  "NOVELTY_AND_RELATED_WORK.md": true,
+  "PREREGISTRATION.json": true,
+  "PROTOCOL.md": true,
+  "README.md": true,
+  "REGIONAL_ERROR_BREAKDOWN.csv": true,
+  "RUNTIME_PROFILE.json": true,
+  "STATUS.md": true,
+  "TTT_NECESSITY_RESULTS.csv": true,
+  "commands.sh": true
+ },
+ "experiment": "EXP-3D-READOUT-METHOD-V1",
+ "final_holdout_touched": false,
+ "fresh_data_used": false,
+ "generated_at": "2026-10-15 03:31:41 +0800",
+ "kf_table_unchanged": true,
+ "locked_caches_unchanged": {
+  "ARKIT_SYSTEM4.json": true,
+  "ARKIT_SYSTEM4.npz": true,
+  "CAJU.json": true,
+  "CAJU.npz": true,
+  "CONF_SYSTEM3.json": true,
+  "CONF_SYSTEM3.npz": true,
+  "CONF_VAL.json": true,
+  "CONF_VAL.npz": true,
+  "FIT_SYSTEM.json": true,
+  "FIT_SYSTEM.npz": true,
+  "FIT_SYSTEM2.json": true,
+  "FIT_SYSTEM2.npz": true
+ },
+ "locked_code_unchanged": {
+  "audit_exposure.py": true,
+  "rm_cache.py": true,
+  "rm_common.py": true,
+  "rm_lock.py": true,
+  "rm_methods.py": true,
+  "rm_run.py": true
+ },
+ "post_lock_code": {
+  "rm_amend1.py": "Amendment 1 (post hoc, after the Gate A / B results), locked in AMENDMENT_1.lock.json before its run",
+  "rm_amend1_stats.py": "Amendment 1 statistics, locked with it",
+  "rm_amend2.py": "Amendment 2 (post hoc, Candidate B oracle premise test, CPU), locked in AMENDMENT_2.lock.json",
+  "rm_amend3.py": "Amendment 3 (post hoc, Candidate A free-space premise test, CPU), locked in AMENDMENT_3.lock.json",
+  "rm_integrity.py": "this report",
+  "rm_runtime.py": "runtime profile (no ground truth); first attempt failed in the DepthSplat environment's R7 path (audit/runtime.log), rerun as two parts + merge",
+  "rm_stats.py": "statistics; written after the preregistration lock, hash logged before any evaluation result (audit/stats_code_locked_at.txt)"
+ },
+ "preregistration": {
+  "locked_at": "2026-10-15 00:46:10 +0800",
+  "locked_at_record": "2026-10-15 00:46:10 +0800 6e6cda480fa7c244f072f40168167a5ab71471b0ddfac04090dae3afe9018702",
+  "sha256": "6e6cda480fa7c244f072f40168167a5ab71471b0ddfac04090dae3afe9018702"
+ },
+ "protected_holdout_or_download_in_code": [],
+ "protocol_unchanged": true,
+ "runs": {
+  "amendment1": "RM_AMEND1_DONE 816.8 s; ground-truth reads 2040",
+  "amendment1_exit": "AMEND1_EXIT 0",
+  "amendment2_exit": "AMEND2_EXIT 0",
+  "amendment3_exit": "AMEND3_EXIT 0",
+  "phase12": "RM_RUN_DONE 5273.9 s; ground-truth reads 2040",
+  "phase12_exit": "RM_RUN_EXIT 0",
+  "runtime_first_attempt_exit": "RUNTIME_EXIT 1",
+  "runtime_gpu_exit": "RUNTIME_GPU_EXIT 0"
+ },
+ "runtime_r7_check": {
+  "max_relative_difference_vs_sealed_r7": 5.944183066532855e-08,
+  "read_purposes": [
+   "ORACLE_TEACHER_ONLY",
+   "QUERY_CAMERA_TEACHER_ONLY"
+  ]
+ },
+ "stats_code": {
+  "logged_before_results": true,
+  "unchanged_since_logged": true
+ },
+ "status": "PASS",
+ "weights_stored": []
+}

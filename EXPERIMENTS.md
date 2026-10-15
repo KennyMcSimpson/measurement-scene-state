@@ -1,5 +1,17 @@
 # 实验注册表
 
+## EXP-3D-READOUT-METHOD-V1（2026-10-15，hit GPU 4 + CPU，可靠几何读出：V2 必要性、TTT 必要性与新机制的前提检验）
+
+- [README](docs/experiments/EXP-3D-READOUT-METHOD-V1/README.md)、[协议](docs/experiments/EXP-3D-READOUT-METHOD-V1/PROTOCOL.md)。2026-10-15 00:46:10 锁定；三个事后修正案各自在运行前锁定，只作探索性证据。
+- **设计：** 四个留一队列折（SYSTEM3、VAL、CAJU、SYSTEM4，合计 350 个场所，都是开发数据）。
+  - Phase 1：Core B、64 箱表、5 种只用训练集拟合的简单标定、逐像素 MLP 与 V2 配方。
+  - Phase 2：只用几何、加前馈渲染、加 TTT 渲染三个同读出系统，另做交换检验与分阶段计时。
+- **结果：**
+  - Gate A：`V2_METHOD_NECESSITY = NOT_ESTABLISHED`。B5 − B7 = +0.0092 [+0.0029, +0.0147]，但 SYSTEM4 的未覆盖像素上 B5 更好。Core B → V2 的 0.036 中，零命中常数占 31%，简单标定占 36%，V2 特有的占 25%。
+  - Gate B：`TTT_ADDED_VALUE = NOT_ESTABLISHED`（+0.0010 [−0.0026, +0.0038]）。修正案 1 在 KF 表 + V2 结构中为 +0.0064 [+0.0036, +0.0094]，SUPPORTED（探索性），几乎全在已覆盖像素；TTT 占每场景 16.6 s 中的 97.8%。
+  - 修正案 2、3：候选 B 的神谕上界 +0.0008，候选 A 的自由空间下界 +0.0003，都是 NOT_SUPPORTED。`CVPR_METHOD_NOVELTY = INSUFFICIENT`。
+- **状态：** 结束；结论 No-Go。决策报告见 Claude Docs 文档《可靠几何读出研究决策报告》。
+
 ## EXP-3D-CAJU3D-READOUT-LOCO-V1（2026-10-14，hit GPU 4，学到的读出的留一队列稳健性分析）
 
 - [README](docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/PROTOCOL.md)。2026-10-14 23:31:35 锁定；描述性分析，结果一律报告。

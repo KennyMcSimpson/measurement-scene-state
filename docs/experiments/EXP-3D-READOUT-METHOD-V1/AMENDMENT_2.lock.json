@@ -1,0 +1,16 @@
+{
+ "amendment": 2,
+ "post_hoc": true,
+ "oracle_upper_bound": true,
+ "locked_at": "2026-10-15 02:55:42 +0800",
+ "files": {
+  "AMENDMENT_2.md": "3950b8f6a2edc7acfeafae1f001a98cb4bfb6d624c9aca3105221bc6fc1cfa86",
+  "code/rm_amend2.py": "5b024183185d8016baac17dbc64629986a59dc8e4718759acff4590db4224d81"
+ },
+ "primary": "B7_F16 - B7_SHARED, pooled 350 places (> 0: sharing the two views' estimates of the same uncovered surface points would lower the error, with the true correspondences)",
+ "decision": {
+  "B_PREMISE_ACCURACY=SUPPORTED": "mean >= 0.005 and CI lower > 0",
+  "B_PREMISE_ACCURACY=NOT_SUPPORTED": "otherwise"
+ },
+ "agreement_log_threshold": 0.02
+}

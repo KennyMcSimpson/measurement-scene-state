@@ -1,4 +1,11 @@
-# 当前状态（2026-10-14）
+# 当前状态（2026-10-15）
+
+2026-10-15 03:35（hit：GPU 4 + CPU）：[可靠几何读出：V2 必要性、TTT 必要性与新机制的前提检验](docs/experiments/EXP-3D-READOUT-METHOD-V1/README.md)（00:46:10 锁定）。**No-Go。**
+- **Gate A：** `V2_METHOD_NECESSITY = NOT_ESTABLISHED`。V2 比最强的简单标定（288 箱）好 0.0092，但不是每一折都成立；SYSTEM4 上的大幅改善主要来自把零命中查询的 Hypersim 常数换成训练集常数。
+- **Gate B：** `TTT_ADDED_VALUE = NOT_ESTABLISHED`（预注册）。事后在 KF 表 + V2 结构中，TTT 好 0.0064，只在已覆盖像素，代价是 45 倍耗时。
+- **Gate C：** `CVPR_METHOD_NOVELTY = INSUFFICIENT`。候选 B（跨视角共享修正）与候选 A（自由空间下界）的增益上界都低于 0.005。
+- **数据：** 测量、TTT 监督与评价真值都是同一个 iPad LiDAR；四个评价折都已用于决策；61 个未准备的扫描仍未读取。
+- **报告：** Claude Docs 文档《可靠几何读出研究决策报告》。
 
 2026-10-14 23:45（hit：GPU 4）：[学到的读出的留一队列稳健性分析](docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/README.md)（23:31:35 锁定，描述性）。
 - **结果：** FUSE_V2 的配方在 SYSTEM3、VAL、CAJU、SYSTEM4 四个留出队列上，每次都用其余全部队列训练。误差分别降低 28%、17%、17%、37%。

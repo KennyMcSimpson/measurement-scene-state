@@ -1,0 +1,29 @@
+{
+ "amendment": 1,
+ "post_hoc": true,
+ "locked_at": "2026-10-15 02:45:51 +0800",
+ "files": {
+  "AMENDMENT_1.md": "a13a0a4a655c21dce3cbb14cb1c554307b02322efdc5709f963149208ce196da",
+  "code/rm_amend1.py": "4b05086ba8ee402b7b173655293795924585ce15fdffb6cdfb0891bb86008b13",
+  "code/rm_amend1_stats.py": "c8022dde45f1501edbfe3ff6013840a3347679c4b2e0d5cdea2daea41b3caf92"
+ },
+ "preregistration_sha256": "6e6cda480fa7c244f072f40168167a5ab71471b0ddfac04090dae3afe9018702",
+ "primary": "B7_FF - B7 (> 0: TTT helps inside the KF table + V2 structure), pooled 350 places",
+ "thresholds": {
+  "ci_lower_gt": 0.0,
+  "min_mean_gain": 0.002,
+  "median_gain_gt": 0.0,
+  "max_top1_share": 0.5
+ },
+ "labels": [
+  "TTT_ADDED_VALUE_IN_KF_V2_STRUCTURE=SUPPORTED",
+  "...=HARMFUL (CI upper < 0)",
+  "...=NOT_ESTABLISHED"
+ ],
+ "seeds": [
+  20261631,
+  20261632,
+  20261633
+ ],
+ "gate_a_and_gate_b_unchanged": true
+}

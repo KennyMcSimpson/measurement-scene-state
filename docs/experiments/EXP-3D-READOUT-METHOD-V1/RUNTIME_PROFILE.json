@@ -1,0 +1,51 @@
+{
+ "device": "NVIDIA RTX A6000",
+ "episodes": [
+  "arkit_48018808/A",
+  "arkit_48018808/B",
+  "arkit_42899282/A",
+  "arkit_42899282/B",
+  "arkit_47430262/A"
+ ],
+ "note": "single process on GPU 4, which other processes may share; every median drops the first sample of its stage (warm-up), i.e. per-scene medians over episodes 2-5 and per-query medians over queries 2-10; R7 timed on one CPU thread in the project environment, as the frozen geometry stage ran it (16 such workers in parallel); network times use random inputs of the deployed shape",
+ "per_scene_median_s": {
+  "encode_s": 0.190015,
+  "ttt10_s": 1.765885,
+  "ttt100_s": 16.23767,
+  "render_both_queries_s": 0.010655000000000001,
+  "read_7_frames_s": 0.036105,
+  "unproject_7_frames_s": 0.01895
+ },
+ "per_query_median_s": {
+  "kf_table_cpu_s": 0.00113,
+  "v2net_gpu_s": 0.00063,
+  "v2net_cpu_s": 0.01532,
+  "pixel_mlp_gpu_s": 0.00068,
+  "sysnet_gpu_s": 0.00075,
+  "reproject_harmonic_near_s": 0.05524
+ },
+ "scene_with_2_queries_total_s": {
+  "R7": 0.165535,
+  "SYS_A_geometry_only_network": 0.167035,
+  "CORE_A_feed_forward_plus_R7": 0.366205,
+  "SYS_B_feed_forward_plus_network": 0.367705,
+  "CORE_B_and_B1-B5_TTT100_plus_KF_table": 16.606135,
+  "B6_B6W_TTT100_plus_KF_table_plus_pixel_MLP": 16.607494999999997,
+  "B7_V2_TTT100_plus_KF_table_plus_V2Net": 16.607394999999997,
+  "SYS_C_TTT100_plus_network": 16.605375,
+  "SYS_C_with_TTT10_not_evaluated": 2.13359
+ },
+ "ttt100_share_of_SYS_C": 0.9778562664197589,
+ "SYS_C_over_SYS_B_time_ratio": 45.15950286234889,
+ "r7_check": {
+  "max_relative_difference_vs_sealed_r7": 5.944183066532855e-08,
+  "read_purposes": [
+   "ORACLE_TEACHER_ONLY",
+   "QUERY_CAMERA_TEACHER_ONLY"
+  ]
+ },
+ "sources": [
+  "results/runtime_gpu.json",
+  "results/runtime_r7.json"
+ ]
+}

@@ -1,2735 +1,960 @@
 {
-  "scope": "New and modified files in this publication; excludes this self-referential manifest",
-  "files": [
-    {
-      "path": "EXPERIMENTS.md",
-      "bytes": 125720,
-      "sha256": "24041e1edcf200aada77eebab25cd7ef2d912c466ded638834a66036ceefc8a1"
-    },
-    {
-      "path": "STATUS.md",
-      "bytes": 105961,
-      "sha256": "3f41a797f90ff342e099c3f97a65cb852f61a22486b1936be966dfd8519b2ace"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/PROTOCOL.md",
-      "bytes": 5730,
-      "sha256": "f245721243e8d1e63d29738d95ab236dc8cec435476e64e080d3956ffb954701"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/README.md",
-      "bytes": 5939,
-      "sha256": "b5e8a5b776bb40346b33a42e19f0cac033150d5ac36c4a9db8c53e29f9deb50e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/code/ga_jobs.sh",
-      "bytes": 2460,
-      "sha256": "1fb7143dcead351e49a104704f504c3ded389d69556d404e860ab602fda88e05"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/code/ga_make_eval.py",
-      "bytes": 2554,
-      "sha256": "50b79b33ee82b55e62988784c398bd633583fff779cee9f3828c769f38891091"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/code/ga_score.py",
-      "bytes": 8364,
-      "sha256": "6e924fdfa31ed7eb913e952b1a36efe62c1ec1a3a0eafdb5b10043968ebee06c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/code/prepare_ga.py",
-      "bytes": 10788,
-      "sha256": "3bcc6bd46f137bb8cb8fc797a80b286c1a9c9a9edf9f1538d9044c76b6472881"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/exploratory_posthoc/scene_selector_explore.json",
-      "bytes": 22799,
-      "sha256": "915452777c88b15fb8e60ffdf7c95a20d0fff0d105be00cbba8e9f4568f3c2ed"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/exploratory_posthoc/scene_selector_explore.py",
-      "bytes": 7766,
-      "sha256": "452475c54ef47eb49c12a9043284d7bb09fe7b891abfb5f8370ef3a9b3b5ca7c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/exploratory_posthoc/selector_robustness.json",
-      "bytes": 9335,
-      "sha256": "a4f4970ada3553869ee808acefa35a74421fc149610e7aa6d8c6210b8c90da9c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/exploratory_posthoc/selector_robustness.py",
-      "bytes": 7242,
-      "sha256": "834a5286c96116b5a0789b781c4a71ca7c5f1f238f65ba4fdfbeda3a7d57bde5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/freeze.json",
-      "bytes": 3284,
-      "sha256": "2cef537d36c3c4325d06952ecdd9cdccfb6d4c87b1ddbc849ff0e188a0d387da"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/results/ARKIT160_OVERLAP_carrier_results.json",
-      "bytes": 9963,
-      "sha256": "4c5d8c810f76881f4ff131ea94b510670c6955fa5f17972a87b7879a2d1cbfda"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/PROTOCOL.md",
-      "bytes": 3258,
-      "sha256": "16d50f26c9f28ee3719de07f9d940fadb82480215a81ebcfc2d79b4d1bad6957"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/README.md",
-      "bytes": 4398,
-      "sha256": "7ef220187623d9244845707a42d6bd8051fc55b3e21fdf3b9778e7753ca85a09"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/code/confirm_exp.py",
-      "bytes": 8908,
-      "sha256": "ed39789241a0f1db571123111c6b685d374520b9222b20459b7ca85420dee1fc"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/code/confirm_lock.py",
-      "bytes": 2170,
-      "sha256": "8ec9bd43177e8a9b00b96f41f5f0a50445cf22fc61665e91558143c136509a05"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/preregistration.json",
-      "bytes": 1723,
-      "sha256": "b5b24308a08051d26dc57b147e93365d0153f5183fca5cd556ceac4eb5cc867b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-ARKIT-CONFIRM-V1/results/ARKIT_CONFIRM_results.json",
-      "bytes": 7677,
-      "sha256": "4b921256f5aeacf0a5b22f37d8349b2a3e66a899769c1be24d970f10bcb57aa2"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-REPLICA-DESC/README.md",
-      "bytes": 1187,
-      "sha256": "fe194b5a35f1e63d8bb3682ee242361d0323e7e80d847cc06f78f11fc3a37ba4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-REPLICA-DESC/code/replica_hg.py",
-      "bytes": 4401,
-      "sha256": "5a89bfc733e2f99d071f16a520faa7704393be45f419ba2bf707a1431c13cd30"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-REPLICA-DESC/replica_hg_results.json",
-      "bytes": 2543,
-      "sha256": "a25620b02918b6a23d291cc30e6ccbe276af8c48f88c718719dc51ea26f51091"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/PROTOCOL.md",
-      "bytes": 4240,
-      "sha256": "3ad8b23d949ba851ee967d50c75ca8da82efe0208cf2e8f9f9e9b74902c937c4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/README.md",
-      "bytes": 5633,
-      "sha256": "f2004dc986a380331b9f37b1a6e9df8c7c562b3b584205a2c95b24253f3de885"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/code/ens_jobs.sh",
-      "bytes": 2062,
-      "sha256": "eff4afe20cba8c3687e6406b2056238aace60e1b5ae20203db5ac9091d2bddda"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/code/ens_lock.py",
-      "bytes": 2411,
-      "sha256": "9a15a8a8b834277634ab2c75e0c87f53733458a6c138f27f0c83c7dcfdd2dfe3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/code/ens_make_root.py",
-      "bytes": 3345,
-      "sha256": "234ede998340a41699652806238feb437d528ca469c04cd4bd013d5500a64123"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/code/ens_score.py",
-      "bytes": 8890,
-      "sha256": "8aea37f102dd925e883d4e7c725f6a18b1ada368cc045a28734f77a90b8fead2"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/exploratory_posthoc/bias_check.py",
-      "bytes": 3118,
-      "sha256": "abdbe625a4b913fa3e7461c2f28008022aa5273618a806437c4681213bf7bfbb"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/exploratory_posthoc/norm_g1_check.py",
-      "bytes": 2860,
-      "sha256": "923e9810392fd9180a583650b72fc5c79e726b9f2115ed390cd832376c2a3384"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/exploratory_source/gate_explore.py",
-      "bytes": 4373,
-      "sha256": "b42592a7d4fb08fb02f117ae88eaf74e851c5448256645d067dc6df1d0bc95e6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/preregistration.json",
-      "bytes": 2038,
-      "sha256": "d6248ece1326757c028ef344a03b9519d32cdbabb416a7366f6433713ab2a4d0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-ENSEMBLE-V1/results/EVAL34_ensemble_results.json",
-      "bytes": 14706,
-      "sha256": "933e5d113865f610d3073b3dbb7f30e1453edf0555f0b5407e87e10f4d048a0b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/PROTOCOL.md",
-      "bytes": 5960,
-      "sha256": "78f1fc40f8cee81169ac560811b885833985c09313d0e4ab8cf118f0b4e083ee"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/README.md",
-      "bytes": 7209,
-      "sha256": "6a7fbca648834cbe35055f62a1811d0ef9267694fd845b73e227c54cea19af97"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/code/sel_jobs.sh",
-      "bytes": 2206,
-      "sha256": "32190367afa9ca458dd183b202ec2b46b0e177c2ae3f3e5a24be54aae4cd71f8"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/code/sel_lock.py",
-      "bytes": 3681,
-      "sha256": "48eb1720f62d3addc13c44bc0a21b97926e0e30135f5944869ea389e50185117"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/code/sel_make_root.py",
-      "bytes": 4628,
-      "sha256": "1186f0b99fd0172d953e77080bf82ecc41e0e787608a170ae788aafff5f2e5a8"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/code/sel_score.py",
-      "bytes": 10418,
-      "sha256": "52a30654577cfae4f4806da4feb62e8e41a369292d0e6875ceb34206f334896a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/exploratory_posthoc/hypersim_selector_check.json",
-      "bytes": 6468,
-      "sha256": "694f0c54ef0a8df03ceca90bc39879c7bb44a4af1161cfb75483f557bcaffe67"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/exploratory_posthoc/hypersim_selector_check.py",
-      "bytes": 5010,
-      "sha256": "995e4690150a4d59efb7d951a8be17f9fe1c89d764f486929424b28d080fcf6e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/preregistration.json",
-      "bytes": 3055,
-      "sha256": "c6dc93e173044856f5a8ea97b27476a74610939e7b3bb9b0f64107b069405dda"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-ARKIT-V1/results/ARKIT_SELECT_results.json",
-      "bytes": 9437,
-      "sha256": "9363214623f5dac5b112ec68f37a36b1349ef0f74df7cd1d889460c1392944da"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/PROTOCOL.md",
-      "bytes": 3568,
-      "sha256": "823a5e8819293a1d76659eb2e6759d15d476e0b099ed304188ec50769e0b4d65"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/README.md",
-      "bytes": 4735,
-      "sha256": "43c32e916394ce5440e9fab1fe7a214fd21e29a804c473736c58ac856e3879f7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/code/far_jobs.sh",
-      "bytes": 2556,
-      "sha256": "0921bc2df58aa55c4a0621de19ff5ed896de51cad0f7fb1bda6933d80f0f49f0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/code/far_lock.py",
-      "bytes": 3099,
-      "sha256": "220132c47d334d06ec374fbdf1366c683ceff916eca31d161688dd5374560145"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/code/far_make_root.py",
-      "bytes": 3218,
-      "sha256": "07ff6d05df53a83158ab26fa760ce4660952dc8d755813dd5b158a66a037fba3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/code/far_score.py",
-      "bytes": 10487,
-      "sha256": "89a5b160937c773ca054b7f99929a348eb0bc36e2a31fd9c6168b252851c0795"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/preregistration.json",
-      "bytes": 2420,
-      "sha256": "62fcff3c8e9d092d525673b5a73f8e379a57c1e061209f91762903364a373a3a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COMPLETION-SELECTOR-FAR-ARKIT-V1/results/ARKIT_SELECT_FAR_results.json",
-      "bytes": 9718,
-      "sha256": "7579accea131c0582022e7128125ed5116d1a12a5e52dd553ebef850315738fc"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/PROTOCOL.md",
-      "bytes": 4366,
-      "sha256": "17a2f6762e21443524efd4e10842e38f5ebba3e4fedf9f4541459168d212a528"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/README.md",
-      "bytes": 5760,
-      "sha256": "fb23b3846630c7720d0b7820871c468eea57f0c00222b605d1c199fc3bf473d5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/code/ca_jobs.sh",
-      "bytes": 2094,
-      "sha256": "c0aa0722887758107c38c6cc5475ad84667546699c2db68a6439925c02b5ab11"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/code/ca_lock.py",
-      "bytes": 3693,
-      "sha256": "dbab3cf1a2407b14c7cf980ae6143b8555ab041a824dbad5db977c876b6c7532"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/code/ca_make_root.py",
-      "bytes": 4833,
-      "sha256": "1429fb7e79bf2e411c5f8aca4ddc7bef5873d53425a1e646d9f030570317ccd5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/code/ca_score.py",
-      "bytes": 13359,
-      "sha256": "2de62531412c45a3b23d0fc40b389745095d5b0f68dabf5dffe7a7aa850d0612"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/preregistration.json",
-      "bytes": 3272,
-      "sha256": "091f0b96eaea5b3b023a2be96e5d7c5507fda0a61b9f9e540db19b5f6e185d78"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/results/CA_results.json",
-      "bytes": 14152,
-      "sha256": "b0066ce8e27963aa22a489a10aa64a7892df391cf7f28ad96338a6fbfa3e170a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-JEPA-ABSTAIN-ARKIT-V1/selection.json",
-      "bytes": 445,
-      "sha256": "b25b778b52f24e1cc15b843c7c269b4165cd72c40d14ed605d61887307822979"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/PROTOCOL.md",
-      "bytes": 3077,
-      "sha256": "212eb96db890eec70af318278f6058cd84fc082ab584cc3ad3a1dfe59638b3c0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/README.md",
-      "bytes": 4024,
-      "sha256": "82e75dc30935b5bb4997e8962b2b185def4d941da03c5083afe0efddaff8ec30"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/code/cw_jobs.sh",
-      "bytes": 1054,
-      "sha256": "92d31de6a15c88a781f3264a1191ee99c3256e3470cef2f45183ab5ee36c20e0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/code/cw_lock.py",
-      "bytes": 3069,
-      "sha256": "b132ccd914b4a23bc8b05290c0476181d03a83b7e2981d4dfe2f0b3a606c40a0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/code/cw_make_root.py",
-      "bytes": 2920,
-      "sha256": "cca33b6fd8bb9fe0983f4c3d5c5019677f0f178cfed125120bcb412e72edbe24"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/code/cw_score.py",
-      "bytes": 10184,
-      "sha256": "081e1211d6858f773c9b6daf62249dcf997f7656f3332c469278860cf386b8b3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/preregistration.json",
-      "bytes": 2468,
-      "sha256": "178a022ad0eafb5aa48f1406731635d1510d02d31ca9678631be1c1c4788aafa"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/results/CW_results.json",
-      "bytes": 10205,
-      "sha256": "58bb565e351327026e9e53006442f839545e88de109e9f7ab80d2e1803a43ae6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-COREB-WEIGHT-ARKIT-V1/selection.json",
-      "bytes": 569,
-      "sha256": "9e1bc16fdfc6bf50b1a5555bd98fea505589aba0f3e58bfa83a3363506c6e0ba"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/PROTOCOL.md",
-      "bytes": 4506,
-      "sha256": "6c6b942aee9b3d55d5530be79e6f7b27a0ba8e4a96d2c0c1fb6e2f6b82891f70"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/README.md",
-      "bytes": 5012,
-      "sha256": "d360a6ce19706da71832f4df77a9eca65bb094f70d2d25f80d5df450735a2925"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/code/at_jobs.sh",
-      "bytes": 1085,
-      "sha256": "205fad3a0c4e12ded2c52596cf36c7e72189a440eca0bbeecbd85c74b84b8635"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/code/at_lock.py",
-      "bytes": 3329,
-      "sha256": "28728383bfc8ccbd66f3b9e9391878ddbe3ce2be2613711eb905f6d5689f93c2"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/code/at_make_root.py",
-      "bytes": 4301,
-      "sha256": "523534e246129bbd44b70a4bced2ac20d425d23e9f39dfb89cbb296ad1f339ac"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/code/at_score.py",
-      "bytes": 13887,
-      "sha256": "72599cb4e2730b7dd5185aa9434bc239ade59b6b2938d2953987c656381bc365"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/preregistration.json",
-      "bytes": 2722,
-      "sha256": "644bad0dff907f4da44642fb29662c80bb6503bffdc7cc418db9bb460a2fd6b6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/results/AT_results.json",
-      "bytes": 11275,
-      "sha256": "9d450363d3938dc84f81da2393d823dad3479e993ad1e28b0c92405f840b1828"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-ALPHA-THRESHOLD-ARKIT-V1/selection.json",
-      "bytes": 1665,
-      "sha256": "2fca7381d95ec16cbc8ae51185483766f65d0bc8069995be99cd20c99a2271e7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/PROTOCOL.md",
-      "bytes": 6138,
-      "sha256": "44c945b41c6e8cfceba2357ea2d9f0fe5e9674925563f4abefff09024bffad16"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/README.md",
-      "bytes": 8658,
-      "sha256": "c3b28a63231e9de98f6195b6331b0c97d01d25e40f681f2b9c14307700e98d67"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/arkit_records.py",
-      "bytes": 1465,
-      "sha256": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/derive_train_overlap.py",
-      "bytes": 4568,
-      "sha256": "65baa2562c0a22b2a90d3c02a5fc9de080c1783410b4ec3ff4b860fc01cb1742"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/hit_share_table.py",
-      "bytes": 3227,
-      "sha256": "33ea9284b0b72398b8cc92f840a6033c5d58309d8f544d5773165d3484496e7f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/overlap_jobs.sh",
-      "bytes": 3893,
-      "sha256": "51bf3552d425316c22def9b4783a64817330a69e678773130e63cf9af1bf2c27"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/overlap_lock.py",
-      "bytes": 4141,
-      "sha256": "a692ae84e29b31051d35c3323ee950deb7dfde207d137518e47cda552569b435"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/overlap_make_root.py",
-      "bytes": 4171,
-      "sha256": "4be8c45119dcb827e103435d6f83c6a3b9fe0834f7d8617c4814b40e4f81a056"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/overlap_score.py",
-      "bytes": 10813,
-      "sha256": "f8be3ac283233a2bfa56ef6ccb86da31220ce58483fe5fa348025d4ddc9c51da"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/code/train_jepa_arkit_overlap.py",
-      "bytes": 11333,
-      "sha256": "de03be8c985031f86c17bccfe96be47dbbe1745f42f0ca04d4a8af9f7dd858a7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/exploratory_posthoc/gating_explore.json",
-      "bytes": 12909,
-      "sha256": "36aa1fdf4449bee9ae03a02f1c396c9188617172e6f38483be6a05b22a618e44"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/exploratory_posthoc/gating_explore.py",
-      "bytes": 6059,
-      "sha256": "454deea9e71fb159e50ba060ed805ad4b59c7c66bcbf3cefe0363151d6459da4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/preregistration.json",
-      "bytes": 3845,
-      "sha256": "27d25dd407f80e0ccbb3e7ba07c14749513c32de56e566fa65900f6b806b5298"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-OVERLAP-V1/results/ARKIT160_OVERLAP_results.json",
-      "bytes": 12712,
-      "sha256": "91cc4d350cb7b7cb4e5c0221723e8d006f441aef4b93291eb71185f392edbbde"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/PROTOCOL.md",
-      "bytes": 7033,
-      "sha256": "d44cec06e0a7848a927c605862d2a15b567c88ed2561b2bf16df34d800a5a8dd"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/README.md",
-      "bytes": 10545,
-      "sha256": "b13e0ad7b7ed7b5dfc6d1be72be1f9e650b73ac89312cebc646cb2ec924e666b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/ARKIT160_amendment_1_results.json",
-      "bytes": 7644,
-      "sha256": "3f78e3798904ffc986485cd60ae59a4e1ebad4bc48e1a9ef89ccdfd10a44ae50"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/amend1_job.sh",
-      "bytes": 1197,
-      "sha256": "c19298cc70aa392cabb89711c4edc8e09626c1bf9eed8fc88ff75661b076662a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/amend1_record.py",
-      "bytes": 2666,
-      "sha256": "d447fc605e5d989fc26c8b55c323609a3b37f7fbdd6d1e6d582a41a30b88c381"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/amend1_score.py",
-      "bytes": 8362,
-      "sha256": "f021e961a3cbe34f8900f593cf8d5b0922e8df561965b889f4f55311cfb23064"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/first_run_single_k/h3_calibration.py",
-      "bytes": 8452,
-      "sha256": "0e3dd31dceff99a3f37609988dc6135fdba49ad88a3fcb8be2728e63e9f3e207"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/first_run_single_k/h3_calibration_TRAIN.json",
-      "bytes": 1143935,
-      "sha256": "e77fcf6539efe1cb1d36b4167b1886d29ee581dd7ee1e87c44eaabc35fb84456"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/h3_calibration.py",
-      "bytes": 10779,
-      "sha256": "9bcda08166a680951455eb904499a4373753864f11cae89ab9339035c3f89df0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/h3_calibration_TRAIN.json",
-      "bytes": 1282419,
-      "sha256": "cfe7a9ee6a90382dd5635de85abbd58c2f82cdd51c16a6a9c25f09b608c96690"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/query_rows.json",
-      "bytes": 486603,
-      "sha256": "71b505fe86bf1c912a9daea96161e9b7aee53a28fa7175bb17019ae0de638dce"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/scene_table.json",
-      "bytes": 86434,
-      "sha256": "a5fc9692a1c1a84c6ebfe3aaec7c55e13ba5e82c6268c5b744ec66d5e73f688a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/amendment_1/score_info.json",
-      "bytes": 88449,
-      "sha256": "261584b0f84222270ca1c536a13f587d93b75c16d2a4e6df8792b57782fe0b37"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/arkit_records.py",
-      "bytes": 1465,
-      "sha256": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/jepa_arkit_jobs.sh",
-      "bytes": 3266,
-      "sha256": "38b0a480148e9fb38217d6f269c20a11d507201bb27104dc98f86d64a44de0ba"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/jepa_arkit_lock.py",
-      "bytes": 3129,
-      "sha256": "933f8b1dbd5d34e58d3afcfffd3cbb54907902d30a2e372145f560213a9b6c97"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/jepa_arkit_make_root.py",
-      "bytes": 3427,
-      "sha256": "b28abae999690e8b7cc9dadb5625343cda07d72904d97ec4020b1a4e0b42bffb"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/jepa_arkit_score.py",
-      "bytes": 9898,
-      "sha256": "e14877c4fa8620e5266a461e1c7569661df04e9d9199c2447de42a14f6b88669"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/code/train_jepa_arkit.py",
-      "bytes": 10022,
-      "sha256": "6e206eee30560012ba97170fa04162884f8220dabb45ef85bfbb34f298c86326"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/exploratory_posthoc/overlap_split.json",
-      "bytes": 14660,
-      "sha256": "ecb24f61fb3ebf66d00196d5c2ae24b19fb886a1ce685f8f63d5c7394c27e679"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/exploratory_posthoc/overlap_split.py",
-      "bytes": 2621,
-      "sha256": "1f03b7060d0bf7afca15b50672013573d8bf9a471ec59570e6ee7a301764a7e4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/preregistration.json",
-      "bytes": 3154,
-      "sha256": "de61109d317081004b08ee8a8555519587b7804bfa7149f0ca6b7eec292ded35"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-ARKIT-V1/results/ARKIT160_results.json",
-      "bytes": 13251,
-      "sha256": "20153c5ba424f5c6d838a60a5c0227285ef4f88809481ee8a0da92e686151d23"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/PROTOCOL.md",
-      "bytes": 5496,
-      "sha256": "24e88788a49780f5be8002c845272d8d5abb14101c416ffd8f0f462daa784c48"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/README.md",
-      "bytes": 5941,
-      "sha256": "3325e685a94fa027a6f2ea7b9e934adebff8016e92697eee174c793ad05e5bca"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/code/jbt_jobs.sh",
-      "bytes": 2241,
-      "sha256": "59212823df6147747cfb07c6fdf65b546263a814072a2e5340ca99c537d90b29"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/code/jbt_lock.py",
-      "bytes": 3245,
-      "sha256": "d3c74a01bd6142823ccf9a63ddd08dbcab618426761d4cd74a6e83620ab687af"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/code/jbt_make_root.py",
-      "bytes": 2720,
-      "sha256": "206768a63b32cd22188b03cfac9cef691c2ff63efcb18010b67e57c8a88e4b77"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/code/jbt_score.py",
-      "bytes": 9290,
-      "sha256": "42afc127b5860bfb88674ce3cc9538253d7c2e589e485e57c5367b8e9cc2bc1f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/preregistration.json",
-      "bytes": 2181,
-      "sha256": "6441e98253d7697077498bc37149441a9524e8aaaccc4b8fcf1cb06c627358b9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-BASE-TTT-ARKIT-V1/results/ARKIT_VAL_results.json",
-      "bytes": 13908,
-      "sha256": "28e6f45634e6d716626e551b17bfd4e116711641c41fdbdc0321627f67b039af"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/PROTOCOL.md",
-      "bytes": 4348,
-      "sha256": "608cbb69cefbd95d566abd70a403be560e6915e9ae600ad2b2beb6daf44f77f7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/README.md",
-      "bytes": 5831,
-      "sha256": "26d1cbcd5a40b8bf38f14f50d3beb44f11bdba4b2c46fb533297f48f104e5b4d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/arkit_records.py",
-      "bytes": 1465,
-      "sha256": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/jc_jobs.sh",
-      "bytes": 2450,
-      "sha256": "f33dbf865093da565e14323f16ad0b6890a922158f6d26709cc84cd418ff18b9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/jc_lock.py",
-      "bytes": 3560,
-      "sha256": "728cb0ab65b86b8c041938c0523227fc8edf8dba7ac25df56dbdedc02c915b16"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/jc_make_root.py",
-      "bytes": 3276,
-      "sha256": "79c2343ed4d7f6e44f81e87d6ed119112f83ba384bd069c1444b343db1f4c7ec"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/jc_score.py",
-      "bytes": 9353,
-      "sha256": "5258bab66932325f723f5c4e66b91ba9dfa626014b5df3eefc38276851262a7a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/code/train_jepa_arkit_overlap.py",
-      "bytes": 11333,
-      "sha256": "de03be8c985031f86c17bccfe96be47dbbe1745f42f0ca04d4a8af9f7dd858a7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/preregistration.json",
-      "bytes": 2797,
-      "sha256": "1b00184ec4a16032e33a60260365b26e7fd0df4ae45db673c1200fe77df5e512"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-CAP01-TTT-ARKIT-V1/results/ARKIT_VAL_results.json",
-      "bytes": 11568,
-      "sha256": "99c4a1f44ec994919fdb0e3d2ab3a8e5fc38ce1fafb69fcb75d3cb9406c59416"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/PROTOCOL.md",
-      "bytes": 5102,
-      "sha256": "aac013458ccf6b12e292cc86b83bf872a690037a235bde70e78ddaa180dd775b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/README.md",
-      "bytes": 7309,
-      "sha256": "ea7ad15a7f8e8da90feca80d4abd26b8fbd5462c66d05a6800f8f53ae8a23d6f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/arkit_records.py",
-      "bytes": 1465,
-      "sha256": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/nf_jobs.sh",
-      "bytes": 3271,
-      "sha256": "9b55efec0d3fbb7daa78bda5682e161d72700518dac0c14cd884d0cca03dccba"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/nf_lock.py",
-      "bytes": 4684,
-      "sha256": "9cd9c4a5111125db931186a98325f9d94cb126dc1678f07f268d8b615beef7c6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/nf_make_root.py",
-      "bytes": 2770,
-      "sha256": "b871e6175fa95f772c621b66a4b187514711fedc08a1ac267ac3d8234c939881"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/nf_score.py",
-      "bytes": 9371,
-      "sha256": "06f04aaf19d571463e39b6a25aaade4a4075df6d8c0baa5626fd889985ef9f6e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/code/train_jepa_arkit_norm.py",
-      "bytes": 12174,
-      "sha256": "cdd27c6589eed7caa33af7b3975fde119d752af8af32b9b4fad674430065599c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/exploratory_posthoc/feedforward_vs_coreb.json",
-      "bytes": 831,
-      "sha256": "8ba60f6f1a6f769a5755234cd10d910aeda34f63da97643040421a01b1ee54de"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/exploratory_posthoc/feedforward_vs_coreb.py",
-      "bytes": 2028,
-      "sha256": "334f9dcf97921cd1a0b0bd4f4ea47789288415d8eedc7d34712211d6e7ffaf5f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/preregistration.json",
-      "bytes": 3391,
-      "sha256": "7ff1827a9ffb18d2ce964510b024bd47c31b9b4b57c19491729dd036e5069f57"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-FEEDFORWARD-ARKIT-V1/results/ARKIT_SYSTEM3_results.json",
-      "bytes": 14068,
-      "sha256": "b258ca87d5c1dde0afe70e494f4d29ab647544926b8a81bd79e170de0ba5e02f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/PROTOCOL.md",
-      "bytes": 4888,
-      "sha256": "bff93eb968b623099c57a9587845c52eca4ad151aafadb8a49985e5d79d9dd90"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/README.md",
-      "bytes": 6779,
-      "sha256": "9ce03d38140808affb2ade3d157694a180fcccb9cf2e17d5bf102b2e4a34fa34"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/arkit_records_scale.py",
-      "bytes": 2371,
-      "sha256": "b636867400855a2b5c0035ee0afd8eaa747520958db91ce808b4d7afe9b48124"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/derive_train_scale.py",
-      "bytes": 1482,
-      "sha256": "93692de6a8a3ace86d74b5f77fad118c2d1b0240b663397aebed8c04cf0dc5e9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/hit_share_table.py",
-      "bytes": 3227,
-      "sha256": "33ea9284b0b72398b8cc92f840a6033c5d58309d8f544d5773165d3484496e7f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/merge_hit_tables.py",
-      "bytes": 1292,
-      "sha256": "98fd07e657b2173662c3e2971bfd3b0ded9ef513bb5c994ba404f7b16341e1c5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/ns_jobs.sh",
-      "bytes": 3348,
-      "sha256": "7b25765b9ed3d7f2ff2d3fece92fbdb4bced3563a23768102ed4d291d7fb0b0a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/ns_lock.py",
-      "bytes": 6727,
-      "sha256": "62e057c1a541250d5294db421c7c4c5dceadfe1a6976c938f1fdb42241982dad"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/ns_make_root.py",
-      "bytes": 4893,
-      "sha256": "f42f9f81738897887cce0dc86780f029f8f505fa2aa36c72ee6bc0b378aee609"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/ns_score.py",
-      "bytes": 12325,
-      "sha256": "84117a370a3cc8270c954bd7e8d459850704f64dcdbe40d0e55a2a2dd469d820"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/code/train_jepa_arkit_scale.py",
-      "bytes": 12384,
-      "sha256": "6a3726cfe66ecc06f970c98c26821fa4d2824fdd3425505cf2f9a6903e2b8708"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/preregistration.json",
-      "bytes": 4712,
-      "sha256": "d9ed9d50574c86b2424c2b979d565ecff673de257d3fc56ee9eb40224feab03b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-NORM-SCALE-ARKIT-V1/results/NS_results.json",
-      "bytes": 19569,
-      "sha256": "e5bcee656fb36ffa537f7c6182f9776cb5a293490ce395242f02078c6767f9e5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/PROTOCOL.md",
-      "bytes": 4811,
-      "sha256": "43500c10fd03ed16377239cad86f4c2ad831e9e93f99e17ba9d7d4d29accbcba"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/README.md",
-      "bytes": 8083,
-      "sha256": "0a54da4265773a80868f415775b34b0df7627e4fad9582e5f2d2b424a0cb2be7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/arkit_records.py",
-      "bytes": 1465,
-      "sha256": "620793a4828df7e76e4a8f9a5d6a3cacd5aaf78d88cdd1fa081f013216d0c72f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/derive_train_cache.py",
-      "bytes": 2911,
-      "sha256": "58089e9b59570474c5b4098173a4c276080fa96e7cb05a06d4d49f53a26508e1"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/derive_train_norm.py",
-      "bytes": 3357,
-      "sha256": "ca635c8d420c497d39ea7b6d6f2be55f91b1ab6642383bdf3b8765cd9684ae4e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/jn_jobs.sh",
-      "bytes": 3067,
-      "sha256": "5fb10feeb253d58623db901ac7dc5913fd35a26d08cd4b1b6718cc693c88ec4f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/jn_lock.py",
-      "bytes": 5272,
-      "sha256": "326de7f9fe9f8a9e38e88b83b8c3b0e82aa6da024889095ea1eef9f08d624f2d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/jn_make_root.py",
-      "bytes": 3550,
-      "sha256": "4833efae662222147696c88866a057342623c69da7359d3d14dd735e0aab6f19"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/jn_score.py",
-      "bytes": 9795,
-      "sha256": "fa0df67d3e02f86d02a10df9c2ea674d64ede62afcffc77b76398a1f75e0851f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/make_streams_train.py",
-      "bytes": 1419,
-      "sha256": "61564673c5b54b6e0b2eb2274f47c92a4a0087a4a5516f3fa1bb578a5863fa58"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/train_jepa_arkit_cache.py",
-      "bytes": 12461,
-      "sha256": "a9b8a19bb1b352e3999fb249ad2727cf7b4de6847398e53c713847863c6c7d99"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/code/train_jepa_arkit_norm.py",
-      "bytes": 12174,
-      "sha256": "cdd27c6589eed7caa33af7b3975fde119d752af8af32b9b4fad674430065599c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/preregistration.json",
-      "bytes": 3675,
-      "sha256": "a826b21ce062a848a188fdba4d02a1d1326c8ffff76e5fbe4a22cf1a75d95d5f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OBJECTIVE-TTT-ARKIT-V1/results/ARKIT_VAL_results.json",
-      "bytes": 15250,
-      "sha256": "9460d2f713f7607da3974aec5ef447f24eebf1181b8e1ad0efa211607b8f4c06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/PROTOCOL.md",
-      "bytes": 3877,
-      "sha256": "ba3bc30933121016593fa81a03a2d441904c547f7efe4fa89f8838b6e7550003"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/README.md",
-      "bytes": 4762,
-      "sha256": "e4364c51e4c55ef28489c721e27c6f5d4b6474256d344604f1b3bcde29adabd9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/arkit_records_scale.py",
-      "bytes": 2371,
-      "sha256": "b636867400855a2b5c0035ee0afd8eaa747520958db91ce808b4d7afe9b48124"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/derive_train_overlap_scale.py",
-      "bytes": 1443,
-      "sha256": "c7fddaf5d1bc403a6348e7fd9e48f5cd7d5cb4b784d360ee95b50d267a8a2828"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/os_jobs.sh",
-      "bytes": 2565,
-      "sha256": "f87bf8c6882e131ebbb1c3c7ea5aed1712d981e00e27d759d7cd8f77e5c9cfb8"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/os_lock.py",
-      "bytes": 5171,
-      "sha256": "98fd32898b38a4ed9ee312de7b8819b1650fd1a5a42b71ccf085aafefbe7f142"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/os_make_root.py",
-      "bytes": 2723,
-      "sha256": "03aaa1ad559e8d256080b8a89ff8487591728f23ad5584e07b5a153f2185a258"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/os_score.py",
-      "bytes": 10846,
-      "sha256": "ae32ba5bb5055241f17dfe6d6ad1c91dc0eb0b52b18ff276cf8813ca7b410f3b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/code/train_jepa_arkit_overlap_scale.py",
-      "bytes": 11524,
-      "sha256": "8e1bbb1ab9e6889fc7c9e48d62592ecc18cd68c0739f7c12ed1fd6d503a5c198"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/preregistration.json",
-      "bytes": 3242,
-      "sha256": "35f857314310f985a73f1fd0fdadb1c18ffb9f5fb9c121f2b4e96d2c0b3cd68d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/results/OS_results.json",
-      "bytes": 7027,
-      "sha256": "ff58328dd8efac730524560a65695752ae82ef8ff8e02562c1f4e9a72797e18b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/PROTOCOL.md",
-      "bytes": 13102,
-      "sha256": "e01e9a35e26bdc43eb7b67719c76a075120f9d2fe5a6d2e8021996290c1258c4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/README.md",
-      "bytes": 12085,
-      "sha256": "d15c8616fcdff20429e24c3f387311a9f02e564be8d2b883d48dbacc552197e3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/coreb_stage1.sh",
-      "bytes": 2136,
-      "sha256": "015af0e4d59dc6797601c406dee1738aeb11696774172bdee8f3ba26c3a3d076"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_eval.py",
-      "bytes": 11948,
-      "sha256": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/formal_cpu_jobs.sh",
-      "bytes": 1948,
-      "sha256": "2d2060b9e7c07b7596d8901b9695b5ae6a6920d98471dcbfeabe8e61a673916f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/formal_gpu_job.sh",
-      "bytes": 2643,
-      "sha256": "fc853e6ab26d24e5c4987f35e436e8b86ee16e4c8f1c974278963ba457dbb75a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/formal_gpu_job_amend1.sh",
-      "bytes": 2173,
-      "sha256": "d5ed28869322aaa973f3df4a06f1e044b72a5e5f7849cc963caf99396fc33b9e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/geometry_seal.py",
-      "bytes": 6087,
-      "sha256": "30d770efa3f1567c5609c18faea6ddbb2f6dae25ecdf25191e518cffed91cc83"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/lock.py",
-      "bytes": 6108,
-      "sha256": "d6023d30380f9828bf02b197634b2fbf81708ae112c6870fb91c6c93f682845c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/make_eval_root.py",
-      "bytes": 7498,
-      "sha256": "4d97359de516b09bcd779faf00265723b52ded17271b493cf3f5c4b24f180d2b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/posthoc_analysis.py",
-      "bytes": 7688,
-      "sha256": "4d1e4c578e00ce7ea456eabfbf6663298a17d29e8d952214afb88dd039d4f9b8"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/score_analyze.py",
-      "bytes": 16909,
-      "sha256": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/train_jepa.py",
-      "bytes": 9813,
-      "sha256": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/preregistration.json",
-      "bytes": 5976,
-      "sha256": "fa87f117dfc2a7bb341f9987b2a385fac2e1ac86e32ae7773a2fa4ce576e70fb"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/results/FRESH78_posthoc_exploratory.json",
-      "bytes": 8063,
-      "sha256": "41906add1390fdb06c61d03e580b84640377c5b7a8ee28fe216b8c6e37ccd0fc"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/results/FRESH78_results.json",
-      "bytes": 26127,
-      "sha256": "eadd28b5f3a5267bdf654484ea9e1d9c696d176c834ca881dae39327c9ac7d00"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/stage1_coreB/FRESH78_posthoc_exploratory_stage1.json",
-      "bytes": 4688,
-      "sha256": "17b28e82ade7803fe622bd2f003b9c7c15033514523c7db1dbb1d1aeca85836d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/stage1_coreB/FRESH78_results_stage1.json",
-      "bytes": 16798,
-      "sha256": "51090aa870d0b069f6d914426b3181351a11ab85a5afdc895d5eed04b1b63551"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/ttt_selection.json",
-      "bytes": 381,
-      "sha256": "57dbb2b91bbcb5295188e757cb11859f96865c4868c0bb9e1b309f9a9e510dd3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/README.md",
-      "bytes": 13737,
-      "sha256": "8430a19f515e347f3fa4a45641ad2a15b78ed586a7ac280219536fe533095f14"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/align_job.sh",
-      "bytes": 853,
-      "sha256": "ef75a0f1fa8c1228393b75fd7282a6a060d51416758e0047ee8c78b979ff8a88"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/archive_probe.sh",
-      "bytes": 3146,
-      "sha256": "b1b85cc54d5744ece2b6a24c7301c71d7863eda28b95f0e5cd043e0b9960e179"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/chain_align.sh",
-      "bytes": 1382,
-      "sha256": "72a984d449aaa2f7d6fa9c855f1e9b552fa7415aa1b720d3fe12e90020f21b60"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/chain_v2.sh",
-      "bytes": 942,
-      "sha256": "1e58498f2fb231d8ffb5fb0640b7b29e9164bfa560199f5764b47c0ad8d112a1"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ds_diag.py",
-      "bytes": 5502,
-      "sha256": "0e644b8bb097e57a9ecc0137962d1ee780b5d9c84b90be8a3f81b55dd2192b11"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ds_fuse.py",
-      "bytes": 7774,
-      "sha256": "b2cf193c1a6a0b612464389f6e7a2b58b9f629cf9173f57d0766e99b1f45ea75"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ds_score.py",
-      "bytes": 9097,
-      "sha256": "a157d980d3e2fa37f3be9f4545786998de2fc0f669e59fba09023efa9f2e4dcc"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ds_selfcheck.py",
-      "bytes": 5216,
-      "sha256": "bb87480bcaa0fbddfccebb23336671b095e094973967720a35b72960e45b5083"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ds_summary.py",
-      "bytes": 3934,
-      "sha256": "f1697c8069ec7cfd834d5d92642ceabeaf23a815216d79348aa68531f29bf00d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/e34_job.sh",
-      "bytes": 1036,
-      "sha256": "66cc3ac59961e002deb6b24a21f6a7b5548f3347d07521fccf90f3732eb09367"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/e34_score.sh",
-      "bytes": 968,
-      "sha256": "4663fafd1135f2ed172a81173db8fba8845aeef4a87997ef4902f7aedcd27f6b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/e34g_job.sh",
-      "bytes": 812,
-      "sha256": "6b0985d8c1cb824c24db7c4629d1213f910aea6fef8949e3f3fc12de55f3fe9f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/eval_ft_job.sh",
-      "bytes": 1098,
-      "sha256": "b420e19c5aadb8f316ec114313238be97866b3d0f1a73c991bc060643d32982f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/extra_job.sh",
-      "bytes": 847,
-      "sha256": "cee644d6cb0db4df4e25399f9cac7d97781427fa2f8dbd7e0ab765ce70f9dfb5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/ft_job.sh",
-      "bytes": 546,
-      "sha256": "7958a4e557e38d386c3c60fedb72cc52e1f1d174725e8a937e04aa5b9b15f44a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/gpu_probe.sh",
-      "bytes": 689,
-      "sha256": "ab52a72834f304b1be91e1c39625faf43988dacf82bd4b473aea829e6a8962b7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/make_probe_root.py",
-      "bytes": 1703,
-      "sha256": "4a2603f6e3306d025ec386bc388c59eb086820efa84046b723b30f566be436c7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/make_probe_root_eval.py",
-      "bytes": 2692,
-      "sha256": "a3a9c64dd43424313932391e4f5f34cc64294dc40549a7908552ebceff645574"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/rescore.sh",
-      "bytes": 1186,
-      "sha256": "5caef8feefe3021d25a83519010e8fc4559953af93a30d67a5f7fd3b5d396624"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/score_all.sh",
-      "bytes": 597,
-      "sha256": "c616f27c8d4d87dec220bcd31ab55c913c86234c98878d6784fd8344a0ed126a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/code/selfcheck_job.sh",
-      "bytes": 484,
-      "sha256": "eab10266e877d5448f4702904f5844dae4258281136650c6dbfbae7e40222603"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_256x320/diag.json",
-      "bytes": 12902,
-      "sha256": "b77ddccbf88cc6876118bf850e5a531adaf921a0349953f22066c87f599046d4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_256x320/run_info.json",
-      "bytes": 4331,
-      "sha256": "bb09573c67e3a4b8b180ca7dbaf8ae7b9ef49aa4a1f1fd7ba4a2eac895e49384"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_256x320/scores.json",
-      "bytes": 104050,
-      "sha256": "58e93eacf2420c7ddd9ca365f00d2adf78592dcadd38bb21185d1f4d2038f4ef"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_base/diag.json",
-      "bytes": 12912,
-      "sha256": "035a28fd4c34cfc44e5bdb499b5011829a08ba49d3bd2e0de1e2a34de059a9d9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_base/run_info.json",
-      "bytes": 5807,
-      "sha256": "0fc8c7b690c43115c22689b9792801251789d8c704785aede6016daed7fba36d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_base/scores.json",
-      "bytes": 102650,
-      "sha256": "0196a71b13f678838ca8e0d68bce6a4f777f1fe7d7a6100d4da1dd989cce6d27"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgb_x3/run_info.json",
-      "bytes": 6352,
-      "sha256": "18d1dbf53e19375ae5caf1f6f1ec3426ae77868be9b671336baaac39a12768d9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgb_x3/scores.json",
-      "bytes": 104472,
-      "sha256": "bebcebbb417ac7a39e8bd841e4527545b773564b67abd22089cbeb6a52cb59a3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgb_x9/run_info.json",
-      "bytes": 7457,
-      "sha256": "cd30f15769dacebb4dec7df092a66e4395bbede3e8741a5935c13197f035991c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgb_x9/scores.json",
-      "bytes": 104349,
-      "sha256": "5834f89c319391c1c4fac692a0bbf9532aa16d703832cf26aa6ec107dd383afc"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x3/fuse_tol0.05_k2.json",
-      "bytes": 16931,
-      "sha256": "f11025185c469f845c75cfb2c2fecb9e883c333577a50b84e139d69cb1139734"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x3/run_info.json",
-      "bytes": 7863,
-      "sha256": "77e40a00812fe8bf47d77e91eb22206be765e730d8e0e86a8bbd222790164e3b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x3/scores.json",
-      "bytes": 104575,
-      "sha256": "ab4c2dc0ea430274d9040bb88e240f370b5c09af7e751b6a09a7d57a020547a6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x9/fuse_tol0.05_k2.json",
-      "bytes": 17157,
-      "sha256": "308afc701be4865af79532024f31437a2c96233e7641dbd614cd5b60b69793e7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x9/run_info.json",
-      "bytes": 8976,
-      "sha256": "acbe1bddee152ba952622d6b246c8ade09f57d0acac3cbc9cefda26194e29294"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x9/scores.json",
-      "bytes": 104571,
-      "sha256": "e0108a6b230784161d3af1bbee858078e7729a5d6a0144d065a10430a266849a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x9_align/run_info.json",
-      "bytes": 8973,
-      "sha256": "7c3621269801084fad5b5281aa657da49a2f4920556aa16248e7b208616ebc62"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft2_rgbd_x9_align/scores.json",
-      "bytes": 104376,
-      "sha256": "c34d4cc1937fbd2182f2b7ffe78b6bb5b1c4470ec017e43083c2e0dfc53a7e59"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_base/diag.json",
-      "bytes": 12880,
-      "sha256": "a2bfba2d3a6890ff7c643535a70e2adba9683a88c5b88432fdb7864252214762"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_base/run_info.json",
-      "bytes": 5375,
-      "sha256": "f479042dce54057c89b82fc9051684997171d4f64584fb638b9b9fd00664b60f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_base/scores.json",
-      "bytes": 103026,
-      "sha256": "9c0e27c18a9b76812cc6669e737ecedc85f2ffd67ea62374ff6fdbdf3e4c4119"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgb_x3/run_info.json",
-      "bytes": 5923,
-      "sha256": "1d85b2a20ef3d9bf6510015a0e2bead8fc9ffdc6733d1f80fb1e4f7c6df59630"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgb_x3/scores.json",
-      "bytes": 104642,
-      "sha256": "d8af1ea4167ca3c847ae917c99158f34c5f5d6e5a5ccc2fedc0b3792aab2058a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgb_x9/run_info.json",
-      "bytes": 7030,
-      "sha256": "56070050dd72f26e72b6ae606297740134fed0d099edcdb5bda6cfa822e285a6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgb_x9/scores.json",
-      "bytes": 103793,
-      "sha256": "cfa90114a53e1ca433d3c160da0124a216e6e5f75a08ed2a998803e889699552"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgbd_x3/run_info.json",
-      "bytes": 5919,
-      "sha256": "96f55f8037a561208b7528b9ead5f24c483cb0fa3d74d98584cb81d689813459"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgbd_x3/scores.json",
-      "bytes": 104683,
-      "sha256": "34cccdf0b713c385e7d2b01a071b63a9ad8b14b4b2315aaa6a6da8ef3d905463"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgbd_x9/run_info.json",
-      "bytes": 7030,
-      "sha256": "4f6f648c23101d696d9efecce69a74f6456e492dfda634c81373acfb44114934"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_ft_rgbd_x9/scores.json",
-      "bytes": 103847,
-      "sha256": "b0af8f829c736caef323026c8c8201aba541b2f1be4ccebd86ed89bab8ddc71a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgb_x3/run_info.json",
-      "bytes": 5970,
-      "sha256": "7ab4415f7935dbb88944aa900c9af2f32ace92aa6f640c022575b120c0ebd0c9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgb_x3/scores.json",
-      "bytes": 104689,
-      "sha256": "75658cca3782f322ec8ddc6764a50e7385123771c95de74e0ea289909472ba44"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_256x320/run_info.json",
-      "bytes": 4451,
-      "sha256": "2ac988aaa7a9d84de3856c2452bf8f91ad405f04c9c29e87ad51ca39022d3941"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_256x320/scores.json",
-      "bytes": 100556,
-      "sha256": "8e3fd4f400b7942d81f6d89cf53b421be26b17c9a2d43022538549517200a595"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x3/fuse_tol0.05_k2.json",
-      "bytes": 16955,
-      "sha256": "f950ef41cabe42960f36a1b5ed31ec781459f47bc93a62de30b35f3fb16c7ed3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x3/run_info.json",
-      "bytes": 5969,
-      "sha256": "0976d893e1a8663cc6cad9c956ea5cd537b680faa92a0b68a05ea4ffd138d2c6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x3/scores.json",
-      "bytes": 104553,
-      "sha256": "d3e375ebdade78672a48514f42c5a835814150b529e1481e51e2b4ca08ccac3e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x3_all/run_info.json",
-      "bytes": 5968,
-      "sha256": "5b71efc4470693d716efef391d48904408cb0116d6a05b77ae2d0007dd903b3c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x3_all/scores.json",
-      "bytes": 104442,
-      "sha256": "86f5c4a465c4100c04ea4d877f222680f5b49be3d7be0fa3665ea34042d7dacd"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x9/fuse_tol0.05_k2.json",
-      "bytes": 17126,
-      "sha256": "0d5165ac23c38eecc5a5e643f0f6b03aa1dba39bc3e20e98374df1c67a3a461a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x9/run_info.json",
-      "bytes": 7080,
-      "sha256": "659551b526035ea91e688f25968fe9b176bb91944e72d9294c27ee50958d8da4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x9/scores.json",
-      "bytes": 103820,
-      "sha256": "944edc36f2148ef580a3935418d0a1ee69693b2050b03f0d3f3a2a199df9c75c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x9_all/fuse_tol0.05_k2.json",
-      "bytes": 17065,
-      "sha256": "c605f8dbbc46e6bc0c6d82fe5462beac0a7cdde418316d3efbf4e8bbdebd7ae0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x9_all/run_info.json",
-      "bytes": 7074,
-      "sha256": "f7b45a7b077d8e31f6babd1368b2b8e24d4b2d5231b34616c14f73c0898a0908"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_rgbd_x9_all/scores.json",
-      "bytes": 105101,
-      "sha256": "15f70d073129074445e8c1c60c3a40befa3087f2ec56f55072c979f1afdec9e5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_zs_rgb_x9/fuse_tol0.05_k2.json",
-      "bytes": 17128,
-      "sha256": "fa88b8946490be15e6fd0f079bafbff22364c6b235ebe0da9cb9823e773f0066"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_zs_rgb_x9/run_info.json",
-      "bytes": 7079,
-      "sha256": "5fc196d63879cb8c7108d734e0bf0c5327e2894c4d5ad7146db124de09a0190f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_zs_rgb_x9/scores.json",
-      "bytes": 103787,
-      "sha256": "f778d47598fa9a49b2efb08cd24dd986721e2f2e31dfc40dd76dde682a72a884"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_zs_rgbd_x3_align/run_info.json",
-      "bytes": 7915,
-      "sha256": "60e1dbca8dd003365b1da9dfc8775a0099beff8f5ecea1b22c093a37edab2f94"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_zs_rgbd_x3_align/scores.json",
-      "bytes": 104257,
-      "sha256": "11424ce5ca40436e35929cb6f09f04c50a9525d91d0307d61da3b964a825bc94"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_zs_rgbd_x9_align/run_info.json",
-      "bytes": 9022,
-      "sha256": "d2849b8d99557fe4282c80acce73f40ee239ef9dee7f6a5ff6620a7c53dfb7c3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_dev_zs_rgbd_x9_align/scores.json",
-      "bytes": 103875,
-      "sha256": "0a074eff7b0978209fa893bdc08420af33d0aad940216383d347b36df86412d7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_ft2_rgbd_x3/fuse_tol0.05_k2.json",
-      "bytes": 168252,
-      "sha256": "e9f76f658a5b4ec623bb6f4013543362e5681fe841cac65eb04171a5591c616a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_ft2_rgbd_x3/run_info.json",
-      "bytes": 72257,
-      "sha256": "9d534832b373a107fca3fd13969077bec413f58dda68d63a74e6e96e759b6b6a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_ft2_rgbd_x3/scores.json",
-      "bytes": 927088,
-      "sha256": "3bb3fc2ba34933ebd91a7b6648b3e576161a9dd47f6d6a3b6a1f04fc31b2badd"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_ft2_rgbd_x9/fuse_tol0.05_k2.json",
-      "bytes": 168933,
-      "sha256": "c500bb1c1c5a5e0404132236f643f64b9e1b0af230c57a7dbb568f9b507e114d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_ft2_rgbd_x9/run_info.json",
-      "bytes": 83910,
-      "sha256": "552c6d753aab18dd9c10871b857e376a5e8a2a3bfecdd7abc758edc824953683"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_ft2_rgbd_x9/scores.json",
-      "bytes": 926734,
-      "sha256": "747df642be6c3ff9a0e41027ab53c4a584db31e76ff2caa79c15f8a7204618a0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x3/fuse_tol0.05_k2.json",
-      "bytes": 168093,
-      "sha256": "2ba4d70d8dd48f6e961700a71b7a96ed7949637158db969c362121c9c91a6387"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x3/run_info.json",
-      "bytes": 72276,
-      "sha256": "5e1edec5810d61578321e55d14f010c937ed5bad73ee6326534f4a7b3759f6ea"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x3/scores.json",
-      "bytes": 924926,
-      "sha256": "bea3bb8db851e5892e660cf1341e54a899a4217d474427f87229fe41aad416b7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9/fuse_tol0.05_k2.json",
-      "bytes": 168768,
-      "sha256": "5accc1eacffa8f56b8a8f81431b812ee32063506c8de4d15ea9950de17c1a5bc"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9/run_info.json",
-      "bytes": 83930,
-      "sha256": "1b4468de19eb46ed95888331102e4e898fc23778f2787a5d5a41f4d8b50f38d9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9/scores.json",
-      "bytes": 924574,
-      "sha256": "77a8a9da3d78e663d2cd85992ebddae2a3d5861bb0f1ef1a859e0dfb175028be"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9_all/fuse_tol0.05_k2.json",
-      "bytes": 168958,
-      "sha256": "c9564c0c1fdf444b1cb255c8fda93a31f54070c9d94ac14abbe6e1fb86a6fbf0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9_all/run_info.json",
-      "bytes": 83924,
-      "sha256": "0f94e8102b13b99f767c54a5e0197d1c3bcccb48ba206acef04fa566bda8294d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9_all/scores.json",
-      "bytes": 929637,
-      "sha256": "06e682fba853d710128a3fb676541127f42052d150a4a77fddd0b2a2f97275a9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9g3/run_info.json",
-      "bytes": 79873,
-      "sha256": "bf8d285e8982546ac4498fc8718ab12194bb6d6e4d2b8eca8eafddb609b51ae9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9g3/scores.json",
-      "bytes": 924722,
-      "sha256": "f86661d2b8fe4612b50111f08a6498647ffcfbbc6ae95b8dd5c0f348b2922f82"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9g3_all/run_info.json",
-      "bytes": 79870,
-      "sha256": "6069017fc6dbf3b94b0bceee0dabeb8b06483f7c59737d88466ac451d8c2a6ac"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_e34_rgbd_x9g3_all/scores.json",
-      "bytes": 926530,
-      "sha256": "c3677ccd1d1959311ba90fb81a344998c2a0e2b8cd253694a232b14814f6652e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_summary_dev.json",
-      "bytes": 54164,
-      "sha256": "293557bbb06d90f77523494773face8c40f0ac40cc924858ee188b8de96f6bb2"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_summary_e34.json",
-      "bytes": 12943,
-      "sha256": "3c2a660e5c5aef6d19501a59fc477b9bb879e532ef9d398c7d41e862b2338ca9"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ds_summary_e34g.json",
-      "bytes": 10351,
-      "sha256": "69d1c7b7c4e94a27d9e48b4ea34d4abebc7273f5188220a43c0042610d77b294"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ft_v1/finetune_log.json",
-      "bytes": 5342,
-      "sha256": "94d4cf2e832bb5ed0eed02cc90c70912cf9e8951f80f9e27b44e945b52f77224"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/ft_v2/finetune_log.json",
-      "bytes": 5337,
-      "sha256": "855da40d900d9e4f4de1a1cccdbc291a4cb8b532519b1b35b4e6916067f418dd"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_dev/GT_access_before_seal.json",
-      "bytes": 11416,
-      "sha256": "25fd18664dd4f640b8b9ba6499e5f1bae5a50f1aa5d56c4cc442071d40d4bb67"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_dev/evaluation_contract.json",
-      "bytes": 835,
-      "sha256": "a29a42c6e10c72eb35eab20aef99e742656aa5dc1f243cdfb4c875cec26ee9d2"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_dev/prediction_seal.json",
-      "bytes": 7714,
-      "sha256": "062d32f3f0158a03f97176fec8adc3a8626db24f7f25041b9167b5da97bd1030"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_dev/state_hashes.json",
-      "bytes": 4899,
-      "sha256": "7e530ad81509ee21009d88f92d063f94bd7238f8e549f6e9b0ea5432d0a48f20"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_eval34/GT_access_before_seal.json",
-      "bytes": 119369,
-      "sha256": "ebb80a1addd4a3912caf43cdefc5ea8a29707b9ab49ae7f5f32864c817420c2f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_eval34/evaluation_contract.json",
-      "bytes": 819,
-      "sha256": "14153a9ad9b0ff74c2591ea748bc3f437caece8fced3564952048841552821d6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_eval34/prediction_seal.json",
-      "bytes": 79977,
-      "sha256": "ebf575d882b2c5fafb5c805b8d641728f25fe8e201af3a43b88d921ce6645a93"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-PROBE-V1/results/probe_eval34/state_hashes.json",
-      "bytes": 17433,
-      "sha256": "1fd01a67397f1e03b5ae16428d4d70af7fddc1d08870fd3c7ce31e1896c0f2de"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/PROTOCOL.md",
-      "bytes": 5027,
-      "sha256": "1ef2204148a9299f357994ecbeae6ff230fe6543b73f0c42c15a3663ec411bad"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/README.md",
-      "bytes": 4466,
-      "sha256": "d2cf48997f9a1ebe171e2f726631833e6c21a66155dc11335bcc646b13a0dadd"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ablation_analyze.py",
-      "bytes": 3497,
-      "sha256": "a02f5f203d40954da9c297c5e2a0f97b6bf668720d8879113b61c25f59c1e2a6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ablation_dev_job.sh",
-      "bytes": 2237,
-      "sha256": "26af7974b61ee076e7df6481ff91da7ab31d334f3a708c9580aee0539c31ab9c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ablation_formal.sh",
-      "bytes": 2330,
-      "sha256": "26baf4093a24a2878158b0e09972ba3cbdb43557309575efff682fa662230706"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ablation_lock.py",
-      "bytes": 2784,
-      "sha256": "b4235b7b2c7a5c9a105697f806e5949e434af885260c3cbb24c92a75dfa7d5d8"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ablation_select.py",
-      "bytes": 757,
-      "sha256": "05dc1d41f61d4dd5c25a6436aeb96ad215d60126bd87910c7f3a06c2db846aa2"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ds_eval.py",
-      "bytes": 11948,
-      "sha256": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ds_finetune.py",
-      "bytes": 7734,
-      "sha256": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/ds_predict.py",
-      "bytes": 16026,
-      "sha256": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/naive_eval.py",
-      "bytes": 8178,
-      "sha256": "b6ae80f15d17d6b01793620eb85d90b5910a306a6d1a9096076722d4e0d9b6af"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/code/train_jepa.py",
-      "bytes": 9813,
-      "sha256": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/nv_selection.json",
-      "bytes": 412,
-      "sha256": "70e215be9cab1785f93eb165144b808649ed3f973c6c403a49d7c9ef96734da4"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/preregistration.json",
-      "bytes": 2694,
-      "sha256": "cebe6e23dbc940c649d752f4a97e33ef6702164e2be189c5ea03c87d3c4f02d5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-TTT-ABLATION-V1/results/FRESH78_ablation_results.json",
-      "bytes": 10849,
-      "sha256": "4649844b4d1bdff58166442ff1a36ac15132c46271392054dd2ece6f597cc07c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/PROTOCOL.md",
-      "bytes": 5285,
-      "sha256": "8be74af564edca1fed867bf840b0339545829167019c752da1b677068a896286"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/README.md",
-      "bytes": 8422,
-      "sha256": "2f71d40bc12096e9807258be56bfa1dc7375cf14e866fbeff5c50da4a75f86d7"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/code/arkit_jobs.sh",
-      "bytes": 2800,
-      "sha256": "74b8eca891f1b1d5f00768895875099dbc8563fee089f8f29657e9c320d76af3"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/code/arkit_lock.py",
-      "bytes": 3045,
-      "sha256": "11fdda03e61012ca5255986039f1359e255a3857a50d523273fbec349879cc4e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/code/arkit_make_root.py",
-      "bytes": 3450,
-      "sha256": "c07fb2771cede2cefedbc33eb8a78f5a9aab6d726764def223188d606ff052e6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/code/arkit_score.py",
-      "bytes": 10473,
-      "sha256": "8f46e07b8e656fbdce1268da18217deb8b476514e0e995d872fcbc4a5b30a86c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/exploratory_posthoc/bias_check.py",
-      "bytes": 3118,
-      "sha256": "abdbe625a4b913fa3e7461c2f28008022aa5273618a806437c4681213bf7bfbb"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/exploratory_posthoc/norm_g1_check.py",
-      "bytes": 2860,
-      "sha256": "923e9810392fd9180a583650b72fc5c79e726b9f2115ed390cd832376c2a3384"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/preregistration.json",
-      "bytes": 3088,
-      "sha256": "6947f14ff3f3440bc713615611795eb10b6118efa4e77a26d8ff0a896dafa2c6"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-ENSEMBLES-ARKIT-V1/results/ARKIT_VAL_ensembles_results.json",
-      "bytes": 19819,
-      "sha256": "407b8d2c42322ed78e98f27a11a09b5d0f03520763d49b9a072584d4268bc521"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/PROTOCOL.md",
-      "bytes": 5004,
-      "sha256": "5301d73738a2772e24e4cbac0188ec2ac70ee0dba92db8cc9705ccadc36f867e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/README.md",
-      "bytes": 6208,
-      "sha256": "3e7532e3b7188e24351b0c91bee84dc4fdabc64b366a010bcb74fbde9e57330c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/code/sys_jobs.sh",
-      "bytes": 2358,
-      "sha256": "451fa392c79b1f03f2bcf8226535388238410d4085e27bda87fafacb20931611"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/code/sys_lock.py",
-      "bytes": 3630,
-      "sha256": "a3247b6bc39e68b8ffba75be6740329edf2ff97e0476a308fe1c0db06cf2743f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/code/sys_make_root.py",
-      "bytes": 4208,
-      "sha256": "8e23715c5702fdd2db279781f22229e5306fcc8afefd7b264343b52b8937da58"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/code/sys_score.py",
-      "bytes": 9882,
-      "sha256": "6873daa049fd1beacd0e6ad543ddbc0277e6bbca327840a0ac4e2f9104f96e7f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/exploratory_posthoc/eval_carrier_7view.py",
-      "bytes": 5447,
-      "sha256": "4c55af09c02ccd25fcde4c1cc4e5814e8a47422dcf7c2cda8911ff5826e7f12b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/exploratory_posthoc/full7_explore.json",
-      "bytes": 13982,
-      "sha256": "cb840e777df6c9d775befa6e0f0c94108504f175c297dd76437190cabae00915"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/exploratory_posthoc/full7_explore.py",
-      "bytes": 6607,
-      "sha256": "75597d41a89847080764e4b7c13398aaec529f280dc0f6c76008274ccf2d4c45"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/preregistration.json",
-      "bytes": 2914,
-      "sha256": "8bfe2c187c1d3532079b3debed8c2eedd7c390a0470cecdc7fd335dfc7cde299"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V1/results/ARKIT_SYSTEM_results.json",
-      "bytes": 9568,
-      "sha256": "60dc16cb18d8c2f7ce8252d1834b9ed9efe652a66e1ca4051d1c9603cc09661c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/PROTOCOL.md",
-      "bytes": 4580,
-      "sha256": "2dbfc8088a5cd8befd93cbfb65695c991cfb13b916021887ca68cb2068e50b9b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/README.md",
-      "bytes": 4999,
-      "sha256": "093b2c86ef8cbd3ddb34ff5588c5218fbce4cb64c0136b46e72e581970a38a5d"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/code/eval_carrier_7view.py",
-      "bytes": 5447,
-      "sha256": "4c55af09c02ccd25fcde4c1cc4e5814e8a47422dcf7c2cda8911ff5826e7f12b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/code/sys2_jobs.sh",
-      "bytes": 2510,
-      "sha256": "e6a7692aa27c07416209138200567196ef50b90108f595f599543f736e5a0776"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/code/sys2_lock.py",
-      "bytes": 4154,
-      "sha256": "616e4f82563f1d7b575c6360fb321488b1d6811e7cf4443752cf74b27b2b3831"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/code/sys2_make_root.py",
-      "bytes": 4215,
-      "sha256": "8928496dde2f875bbfed5ae5746c271d2e68b13658daa99a9d3631da2f0068b0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/code/sys2_score.py",
-      "bytes": 10023,
-      "sha256": "dac8543db61b9187da67261c64465c98aa2efcba0dcb851026f9f3a464523f7a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/preregistration.json",
-      "bytes": 3264,
-      "sha256": "b36f26577845e5c395d19ee1281790e8502c684a42f0dbbe7e8f284f5d31d046"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V2/results/ARKIT_SYSTEM2_results.json",
-      "bytes": 9202,
-      "sha256": "c8c10a91cda498c47f6cde319907f742797cae3e932a1e3dad3df79dba7ae37b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/PROTOCOL.md",
-      "bytes": 5316,
-      "sha256": "d8b2e224d3ac8a18ba0a7f18bd56f063bdc8a504c665a511995be51c4778839b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/README.md",
-      "bytes": 6218,
-      "sha256": "95349510a5d7127b1f1c2cd31113e4ce946f52bd14ceba7ca6a7bb2ea026fcc0"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/code/eval_carrier_7view.py",
-      "bytes": 5447,
-      "sha256": "4c55af09c02ccd25fcde4c1cc4e5814e8a47422dcf7c2cda8911ff5826e7f12b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/code/sys3_jobs.sh",
-      "bytes": 2510,
-      "sha256": "3741ace477ca4ef2b72612ac1abeea55a6ec23231481043b853b4330de75a433"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/code/sys3_lock.py",
-      "bytes": 4411,
-      "sha256": "9f9ca11bc06cd1cffbb942bbfa368d396bb798e02321677158afb5d6f165fd3a"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/code/sys3_make_root.py",
-      "bytes": 4240,
-      "sha256": "9f7d03a596d5e0ccb424b52bac800d48ca611aa0eca4920ddd5cf2066bdd3566"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/code/sys3_score.py",
-      "bytes": 10241,
-      "sha256": "f6ac246ce09e89960617648af64879e14db440ffd5cd61103553292554d3cbda"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/preregistration.json",
-      "bytes": 3371,
-      "sha256": "0a33ebdf73fdfa59d050e475379fc50f33c203574598aa64a920d4f72da5126b"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-FULL-SYSTEM-ARKIT-V3/results/ARKIT_SYSTEM3_results.json",
-      "bytes": 10336,
-      "sha256": "2ec1002926475156fb6ccb18385877052b4ed1ea74bc8ca3b719fe1dc5ca2b3c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-REPLICA-DESC/README.md",
-      "bytes": 1217,
-      "sha256": "42fa226add06c2bf61056495adabe6b142d9f45f6c89526fd706fabd82d0f2d8"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-REPLICA-DESC/code/replica_gpu.sh",
-      "bytes": 851,
-      "sha256": "458d20cbbfb877a3f1cce4e4c90cd9573c2b62db7318ef98edee7bc430ff2e11"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-REPLICA-DESC/code/replica_tttens.py",
-      "bytes": 5271,
-      "sha256": "e68398b504f81ed3a22672f351c773d35ee3092fca388486aa2048f9c0b30a94"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-REPLICA-DESC/replica_tttens_results.json",
-      "bytes": 6334,
-      "sha256": "78846fcac54aeda8aef242b6554f7f69c756ce2db64c89c01ded0191b29abeea"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/PROTOCOL.md",
-      "bytes": 3647,
-      "sha256": "e8f89c34c7cf80a01fd2afe5cd806e93e4b8e7f55b5ed829a0429ab448b2b7b5"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/README.md",
-      "bytes": 4973,
-      "sha256": "2f1325f073bc6736c9c3c7bb065a3bab168cff5e3cd64f288b7865a1b447de67"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/code/tttens_jobs.sh",
-      "bytes": 2322,
-      "sha256": "3b780625c3b0451bab3f63364a7dc83594350f45704b20a909e2d9716ea6e923"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/code/tttens_lock.py",
-      "bytes": 2819,
-      "sha256": "ad2f3fa6b6d203e14fb20bec2c3092ba59ec5c2a37253f36f7b96ff83a2ec91f"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/code/tttens_make_root.py",
-      "bytes": 3513,
-      "sha256": "baab9ebb0f70a37c90b3fe870f13e869c31202236407e57f563c7eb172817a83"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/code/tttens_score.py",
-      "bytes": 7385,
-      "sha256": "b3a30f584faf0160d5c0af965761c6ddede9ce8d9e3e378ffecd1adb89df3b7c"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/exploratory_source/coreb_ensemble_explore.py",
-      "bytes": 3424,
-      "sha256": "8f315285fe8c2b56d228d8be43c330412397ff2bcdc79ba14343ba7c4c14f126"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/preregistration.json",
-      "bytes": 2493,
-      "sha256": "5154f9004b39cd3cd1aeb32d2be299846b29a28bc5a38354fa9fe2b2dd09747e"
-    },
-    {
-      "path": "docs/experiments/EXP-3D-RGBD-TTT-ENSEMBLE-V1/results/EVAL34_ttt_ensemble_results.json",
-      "bytes": 11264,
-      "sha256": "9c1b61dbec9aacd9bc17a196dc4f3cd6a50afc9840380eb15cadf3afe0316434"
-    },
-    {
-      "path": "docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/HANDOFF_AUDIT.md",
-      "bytes": 7612,
-      "sha256": "ce9b51dddaf4b0ed83929c9c78740dcc0b26488cb5edcd350bede7ad9d66a156"
-    },
-    {
-      "path": "docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/PROTOCOL.md",
-      "bytes": 9186,
-      "sha256": "0a562a9e263830decb2cd4555d17f883033d13a3e1b7d53bb30a896ad7d1560e"
-    },
-    {
-      "path": "docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/README.md",
-      "bytes": 8530,
-      "sha256": "303ef074f9e6ad1cd597b8bf934f93ad36765e76a15d4e3f095764b719988d3b"
-    },
-    {
-      "path": "docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/STATUS.md",
-      "bytes": 636,
-      "sha256": "7eed27dee1ab2e76ae56205f4da4b6aa4376f137913bb3f82206f954db0ae01a"
-    },
-    {
-      "path": "docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/commands.sh",
-      "bytes": 479,
-      "sha256": "14e5ae0e1a551625e7573864cfba428e13425340643a61915f155920ec1e8625"
-    },
-    {
-      "path": "docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/negative_result.md",
-      "bytes": 3021,
-      "sha256": "1bcf96221d70ed88e10b3adf4e3934dfb7156a5fb880465dae6fdac905d05f75"
-    },
-    {
-      "path": "docs/experiments/EXP-MEASUREMENT-PLANNING-ORACLE-V1/preregistration.md",
-      "bytes": 4565,
-      "sha256": "2461a68fdc71054801684244172771a0a80577295f57f97b13a57c8f353c6c6b"
-    },
-    {
-      "path": "docs/handoff/publication_validation.json",
-      "bytes": 1981,
-      "sha256": "d1919dea2e3ab128b92dfbb41e368dc221674f5ab96dcde616c745c131d4b917"
-    },
-    {
-      "path": "docs/measurement_planning_related_work.md",
-      "bytes": 53198,
-      "sha256": "85d184c7c64f701a638a131fc7e7e8371254b4b6c2eb970e438944f2101cf563"
-    },
-    {
-      "path": "docs/research_summary_20261003.md",
-      "bytes": 13656,
-      "sha256": "a601552799db1c6567ebeda20e14adeab8c392989ff60d6e45ee8d077e59e1cd"
-    },
-    {
-      "path": "pyproject.toml",
-      "bytes": 1697,
-      "sha256": "0f3cf9bbd3bb4bc5f3435ebae2c3fbe771a80fccc05e7fa779525ff919a62fc4"
-    },
-    {
-      "path": "scripts/analyze_rgbd_arms_confirm_v33.py",
-      "bytes": 6372,
-      "sha256": "069e5c8d933230e89853e70e1476f0eea98815d9acd8a79ec2d806275fc64614"
-    },
-    {
-      "path": "scripts/analyze_rgbd_depth_readout_v22.py",
-      "bytes": 14840,
-      "sha256": "f263a75202152923c5eeaa889fc526e4c8795ff77e7a4e1594d32189e8578046"
-    },
-    {
-      "path": "scripts/analyze_rgbd_far_focus_v26.py",
-      "bytes": 8586,
-      "sha256": "1ae39baf2059a1d0eb985773fd0daff737e0ebd8fb1f846591c750916f406dcf"
-    },
-    {
-      "path": "scripts/analyze_rgbd_hybrid_confirm_v27.py",
-      "bytes": 25589,
-      "sha256": "76ff6a4e2bd41c7dc8949f17d2df06c7527256a56395b420615e5a7b6868a646"
-    },
-    {
-      "path": "scripts/analyze_rgbd_long_scale_vs_v18.py",
-      "bytes": 7230,
-      "sha256": "e51f76f7c230f3392c7aba5e2ab797c0818f134ea1e8d15669854e7f907f2577"
-    },
-    {
-      "path": "scripts/analyze_rgbd_long_width_vs_v17.py",
-      "bytes": 7230,
-      "sha256": "81ae9362099a68d42fdc6e696c4cdd838c76cd4564d1db95722fceb43334851a"
-    },
-    {
-      "path": "scripts/analyze_rgbd_pretrained_v31.py",
-      "bytes": 8687,
-      "sha256": "e353bac53308acf3ab876380c77cc7247e759e46ac0bbe2441902c38394cc3af"
-    },
-    {
-      "path": "scripts/analyze_rgbd_segment_diversity_v21.py",
-      "bytes": 7689,
-      "sha256": "f1f62af258ff0614fb57bac2621b76fd39854a1a5e8720222637bb17f9c1a2a4"
-    },
-    {
-      "path": "scripts/analyze_rgbd_stream_baselines_v24.py",
-      "bytes": 24056,
-      "sha256": "b9ae6dc85ada9f8b13ddc0d18702b9aca4458e084aa6e26352be1b5c412dee49"
-    },
-    {
-      "path": "scripts/analyze_rgbd_stream_far_v25.py",
-      "bytes": 30886,
-      "sha256": "72b9b870c6c75586a09a7d691d8a340e4cb3493ed34a2b8f759f44b88e0b6595"
-    },
-    {
-      "path": "scripts/analyze_rgbd_stream_write_v3.py",
-      "bytes": 8131,
-      "sha256": "e523b211450613fe0ca6912ac272473b20a31fa274a6c9db26b32dfee3818cd0"
-    },
-    {
-      "path": "scripts/analyze_rgbd_unet_v32.py",
-      "bytes": 8707,
-      "sha256": "5ce257d9f497375e35ec9a006c788a2cb82c28119b0a0248abbdf7c31ed07033"
-    },
-    {
-      "path": "scripts/check_rgbd_long_data_prefix.py",
-      "bytes": 3168,
-      "sha256": "f3343eb5403fa21154fac8ae5f72c3ac6448c3215aff301188a6a12bc1ed7ec0"
-    },
-    {
-      "path": "scripts/check_rgbd_long_scale_prefix.py",
-      "bytes": 3168,
-      "sha256": "fbd50ba640e0dabcc9dfbae7b274f7e4dc5255c932f9a673537013ba75cb55fe"
-    },
-    {
-      "path": "scripts/check_rgbd_long_train_prefix.py",
-      "bytes": 3168,
-      "sha256": "10e32ea4c47e7ae9a6531872ad7efc59fd6624ac9391b346d8501ea1fc80272c"
-    },
-    {
-      "path": "scripts/check_rgbd_long_width_prefix.py",
-      "bytes": 3168,
-      "sha256": "e95cde5f9a911e8d209dfea5ddf5165b7634524b83a4b89ed6c980ddfd20c2b5"
-    },
-    {
-      "path": "scripts/eval_rgbd_far_focus_v26.sh",
-      "bytes": 1548,
-      "sha256": "6640f121d3065bf59f9156e43d3f0091f640d99a72439fdfb8064b0e3a1dbeb9"
-    },
-    {
-      "path": "scripts/eval_rgbd_pretrained_v31.sh",
-      "bytes": 1624,
-      "sha256": "8b3fe47ef7b1baf17e8cc138bebabe7f3fc507d8933a454ed84f33b95c77f869"
-    },
-    {
-      "path": "scripts/eval_rgbd_segment_diversity_v21.sh",
-      "bytes": 1667,
-      "sha256": "6eabea717f430538991294d0ae02e122b87d6849c4ddeb374ef4ff118df680c3"
-    },
-    {
-      "path": "scripts/eval_rgbd_unet_v32.sh",
-      "bytes": 1592,
-      "sha256": "afed09273250bd3e7d22572dd1e80c066e55e98a2af44aee4d93cf94faeecf8f"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_carrier_arms.py",
-      "bytes": 14968,
-      "sha256": "ec6c410bcdff48f17ef0876522758f5c1fa98ddfb50313f10036759495fdb213"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_long_data_eval.py",
-      "bytes": 17787,
-      "sha256": "c833605fe7da17120c2b8ff329984d409efff1287bd76d55ea0cf1fa0c1246bf"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_long_scale_eval.py",
-      "bytes": 17712,
-      "sha256": "6bab4aa981863111e7049148d2170f2172540724516c8c601165faea0c5b39f1"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_long_train_eval.py",
-      "bytes": 17788,
-      "sha256": "3c1d25084cc379abb88c9c54a1826f021e7a485b336b103044947c245f78768c"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_long_width_eval.py",
-      "bytes": 17712,
-      "sha256": "12b3f0f4b865f97e752526b079a0e830bd6c044168ae1f14fec02412729e59ae"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_pretrained_eval_v31.py",
-      "bytes": 17988,
-      "sha256": "540a13bf27577c2df974a72c83089191c4c07af08accda636f4d8d9aca50fdad"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_stream_write_v3.py",
-      "bytes": 4300,
-      "sha256": "8994cc140997b2551bd488c9e94cfff10a4297ed30b29dc67939426b836fa916"
-    },
-    {
-      "path": "scripts/evaluate_rgbd_unet_eval_v32.py",
-      "bytes": 17971,
-      "sha256": "830753fe85d7ad9ed7241d67aaa6e07540995b01c6e518cb52b154d9fe81225e"
-    },
-    {
-      "path": "scripts/finalize_rgbd_stream_write_v3.py",
-      "bytes": 6925,
-      "sha256": "1dc3c95ffb7089f5a50b5b59d96f930099489f06cd52a23ef01f3d286da65ec3"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arkit_confirm_cohort.py",
-      "bytes": 8255,
-      "sha256": "5252e97b82b9618182b3804fa4e44b814db803affaf15dea5e380f79fb3cbb86"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arkit_data.py",
-      "bytes": 24298,
-      "sha256": "18bc84c1c57dbae80687fdb8ebd492184443df344ec9208fcd942d39c5dc6d77"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arkit_select_cohort.py",
-      "bytes": 8938,
-      "sha256": "011c27de4c122ad29c41e7638725cdc3e89bc304282a8e4f4e482382235d40d7"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arkit_system2_cohort.py",
-      "bytes": 9460,
-      "sha256": "fe5451e01cdf7d13029eb55fbf318bc584b9fe189b9ce63d97f4e5cc3dbc096f"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arkit_system3_cohort.py",
-      "bytes": 9934,
-      "sha256": "49058aaaab297e42b96d9c57144361cab671462bfc91caa80702f9c22cc40ad0"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arkit_system_cohort.py",
-      "bytes": 9195,
-      "sha256": "8fdef8489f06c99091d4403be1290770bd015f2b7b89837c9dde94ac11c34715"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arkit_val_cohort.py",
-      "bytes": 9202,
-      "sha256": "13daf3b4f3cd1869665d696928131d23d18d9b8b88ff851fe3df85a5d0991d42"
-    },
-    {
-      "path": "scripts/prepare_rgbd_arms_confirm_v33.py",
-      "bytes": 5114,
-      "sha256": "8922a532c48394a80fe0b1f28f0b82bfca94b02044789b73e303cdbb0bb9a90e"
-    },
-    {
-      "path": "scripts/prepare_rgbd_eval_v5_data.py",
-      "bytes": 22079,
-      "sha256": "a0d2b31e6632554d95f484cb78d32e13f04f7e713d48f9dfb8e17c166deab7b1"
-    },
-    {
-      "path": "scripts/prepare_rgbd_far_focus_v26.py",
-      "bytes": 7731,
-      "sha256": "36de826d1ff4a9e819a7ed232d61537af95931b23d86e861a1cd85c8aa58f9a6"
-    },
-    {
-      "path": "scripts/prepare_rgbd_long_data_experiment.py",
-      "bytes": 24479,
-      "sha256": "30831b987f9b83c7bf24fd4b788c897e9ca5eea20dfe31359864904957d3e846"
-    },
-    {
-      "path": "scripts/prepare_rgbd_long_scale_experiment.py",
-      "bytes": 27049,
-      "sha256": "1f455b00c99f099e80c3fd8f94765c322ca788a692626e34a66944f1bb40b06b"
-    },
-    {
-      "path": "scripts/prepare_rgbd_long_train_experiment.py",
-      "bytes": 22038,
-      "sha256": "755b065fa63e7c3610e874d2b8f94bad3bd70642984b67c9a17bcd1f0bae476d"
-    },
-    {
-      "path": "scripts/prepare_rgbd_long_width_experiment.py",
-      "bytes": 24302,
-      "sha256": "879741afe13184a8ce6e9e3e84e8004aed04739d63f0e2b0bc5aad9b14e3bf58"
-    },
-    {
-      "path": "scripts/prepare_rgbd_pretrained_v31.py",
-      "bytes": 8649,
-      "sha256": "89e02175450a019082f0427a4fa4e7d3242e967f21bdee1c4155aa2f8927172e"
-    },
-    {
-      "path": "scripts/prepare_rgbd_segment_data.py",
-      "bytes": 19123,
-      "sha256": "1c5dd1b72498dd5fa6f1cd18ea400ba3a4dc12a1814da2d95f6da551a5decf81"
-    },
-    {
-      "path": "scripts/prepare_rgbd_segment_diversity_v21.py",
-      "bytes": 9231,
-      "sha256": "8e08711265696b499b82533a4ded7e5e6af560ebc36fbc361df06bea8b6ba7bb"
-    },
-    {
-      "path": "scripts/prepare_rgbd_stream_write_v3.py",
-      "bytes": 15167,
-      "sha256": "baf2bbf8ef755029c1ecd8bbc7c882e73607a63f93331ef3caed6e655de7b460"
-    },
-    {
-      "path": "scripts/prepare_rgbd_unet_v32.py",
-      "bytes": 8525,
-      "sha256": "cdb264fae9dad8368c24e7ef76b4dec6591e840de2913d128483bc4c4521736e"
-    },
-    {
-      "path": "scripts/recover_rgbd_segment_data.py",
-      "bytes": 8569,
-      "sha256": "b99419c197d2c30cd87e7ee33c292d8d252b5fb0262d1b7bac578ad4f95d960e"
-    },
-    {
-      "path": "scripts/report_rgbd_long_data_carrier.py",
-      "bytes": 4910,
-      "sha256": "0d3b7de598dd20005c284104e06540c35de2b31a38e4528e4c7a15b85c006f2c"
-    },
-    {
-      "path": "scripts/report_rgbd_long_scale_carrier.py",
-      "bytes": 6373,
-      "sha256": "630e54231aa8a84f0d6a88384387fa0273a4794380c4a66aed492f11b69d6245"
-    },
-    {
-      "path": "scripts/report_rgbd_long_train_carrier.py",
-      "bytes": 4853,
-      "sha256": "4f22adf26e087c6d5d4d5ae1e314636332a802293ea0d4d3106b308d727519b9"
-    },
-    {
-      "path": "scripts/report_rgbd_long_width_carrier.py",
-      "bytes": 6307,
-      "sha256": "46ead140248480890545f42f71213edb674366cad553a61013f2df7d3579e2a7"
-    },
-    {
-      "path": "scripts/report_rgbd_stream_write_v3.py",
-      "bytes": 6725,
-      "sha256": "aee580cddab2b0015efa3a11d1e2c678faebbf701fd1d6c20a0587141c14e50a"
-    },
-    {
-      "path": "scripts/run_measurement_planning_oracle_v1.py",
-      "bytes": 39078,
-      "sha256": "2440b0d4aba2544fc22491b85de41e7f16121dd57c0acc0894cfb5b829dc2228"
-    },
-    {
-      "path": "scripts/run_rgbd_arms_confirm_v33.sh",
-      "bytes": 2562,
-      "sha256": "3f5e8c6544c09bfc1b24c40c6f283a8449420c686ba416e5857339c9003dc56c"
-    },
-    {
-      "path": "scripts/run_rgbd_far_focus_v26.sh",
-      "bytes": 1409,
-      "sha256": "aa21fcd68052fa5b8142b8a26bb8214e6b7071001be0ff00a6af5085e76ee9c5"
-    },
-    {
-      "path": "scripts/run_rgbd_long_data_experiment.py",
-      "bytes": 8452,
-      "sha256": "a5eeab34c6e966d3543c93e1abcc103ec9d0e4e5aa8fee0ac82465d5263e19b8"
-    },
-    {
-      "path": "scripts/run_rgbd_long_scale_experiment.py",
-      "bytes": 8831,
-      "sha256": "505cd15b0b00d6ea0e586e5147c8fa44e23b3f700a5899bb6b0d2b6e6bd18f66"
-    },
-    {
-      "path": "scripts/run_rgbd_long_train_experiment.py",
-      "bytes": 8457,
-      "sha256": "6e9ce58e4fe1ca1bbaf40c2ef341eafe1909c886625e2fa08d2b37cfa367dd9c"
-    },
-    {
-      "path": "scripts/run_rgbd_long_width_experiment.py",
-      "bytes": 8831,
-      "sha256": "2b80a70277402d0eea822d9084bf73b81dbb0f67b79d7ac311f3c2fe7c0d7f9f"
-    },
-    {
-      "path": "scripts/run_rgbd_pretrained_v31.sh",
-      "bytes": 1442,
-      "sha256": "ab3c7cf9c837769f5bd05bb81e0703759c4a97baa76950730781d55fd279ac77"
-    },
-    {
-      "path": "scripts/run_rgbd_segment_diversity_v21.sh",
-      "bytes": 1510,
-      "sha256": "a74b515cbefbc6b065bda7b68285e1c2442047169954e01169ec4bc26f9912a4"
-    },
-    {
-      "path": "scripts/run_rgbd_static_ttt_eval_v23.py",
-      "bytes": 26756,
-      "sha256": "193d2c1b170a964a6326df5b0b966304054e9cf04e10d84414821ae49d622ce6"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_carrier_v10.py",
-      "bytes": 30727,
-      "sha256": "55889461280569f1b097a22f251a12f103ab782f5f3cfe44f422e7bcc5a54424"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_context_v6.py",
-      "bytes": 25056,
-      "sha256": "403331782b13fda1c58371eefec3fdf5bcf57493fe69d31ad693e7901334d539"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_dose_v9.py",
-      "bytes": 29114,
-      "sha256": "c2bbf1a2a6c2d166e17d9343c620d390ccfeffcff08cb18b47f48a87a4c0beec"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_eval_v5.py",
-      "bytes": 20308,
-      "sha256": "374bb49011e354a949d456e90eeaedbd3ce04ca441d6ecbf175df8556520d649"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_fresh_v7.py",
-      "bytes": 25051,
-      "sha256": "d90a6fe10d346f412de63904e574e860a2c4143bb857bec2e7b45384c759d466"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_online_v11.py",
-      "bytes": 29071,
-      "sha256": "915330f4d75c337ea3a6663e8b39588c5fd5f0ad0c82d89519395deab095d706"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_replica_v28.py",
-      "bytes": 25444,
-      "sha256": "c2a7f04e5d79f3ba31775d5ce871df3bec006d6c4d90fbf4f5874d45b779e23a"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_rgb_sup_v30.py",
-      "bytes": 28920,
-      "sha256": "e091b57c5ebff542a9b8f09f1620dc4bb31c38111d7c08baaaa01d1bfee50bc2"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_rgb_v29.py",
-      "bytes": 28753,
-      "sha256": "ebe096066d45200554786aec1582ca5cf3f391c1831aaf01ed5282b07e9a86f3"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_source_v8.py",
-      "bytes": 25407,
-      "sha256": "5477bb66d743aef6e856f0b4ad9b9d23dd3dbc4412bb0bba37cad52a96dfdc94"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_ttt_v4.py",
-      "bytes": 18878,
-      "sha256": "0dcd610da51667bb788d227d23b769059c0f6764f4a27f1c4f4b824fb2811ca9"
-    },
-    {
-      "path": "scripts/run_rgbd_stream_write_v3.py",
-      "bytes": 4553,
-      "sha256": "68ab96afc3888123a4c9df44b7ca684efc41c8f6fc410e43e2ae773075df1913"
-    },
-    {
-      "path": "scripts/run_rgbd_unet_v32.sh",
-      "bytes": 1417,
-      "sha256": "cab89c23386f876db095241eb1096cdbc2ed65e01abea15523717ff876f2ce68"
-    },
-    {
-      "path": "scripts/train_rgbd_far_focus_v26.py",
-      "bytes": 11747,
-      "sha256": "d5894b05700ed525033845af6227ed827ab35c70184386c766e7d7df28bd7d38"
-    },
-    {
-      "path": "scripts/train_rgbd_long_data_carrier.py",
-      "bytes": 9324,
-      "sha256": "8aa8c116af4695454a6c069b2ed4a02c0ea980f093196e34fed2be61fea77dbe"
-    },
-    {
-      "path": "scripts/train_rgbd_long_scale_carrier.py",
-      "bytes": 9342,
-      "sha256": "90563fbad3bbbc1bb2a724ea5225c1075e5a4f45227a7a74956119f2c22d8c76"
-    },
-    {
-      "path": "scripts/train_rgbd_long_train_carrier.py",
-      "bytes": 9326,
-      "sha256": "f2660354ae0086fe742ade2e0a765398198a09802a0aa3c3fc01bf23bd8e34cc"
-    },
-    {
-      "path": "scripts/train_rgbd_long_width_carrier.py",
-      "bytes": 9337,
-      "sha256": "97cba4bb5c5fe78bdb80a399214d542ffdb0c9664ad9198145627353b96094e0"
-    },
-    {
-      "path": "scripts/train_rgbd_pretrained_v31.py",
-      "bytes": 9754,
-      "sha256": "ce855b257a331dc574e3b1236b005768492da95ff18068f3dffc3b23f99fe7a0"
-    },
-    {
-      "path": "scripts/train_rgbd_stream_write_v3.py",
-      "bytes": 6541,
-      "sha256": "65f141db198567d21c62327e750c19c15c2b72fd210047c5e2b72850b9b3c208"
-    },
-    {
-      "path": "scripts/train_rgbd_unet_v32.py",
-      "bytes": 9675,
-      "sha256": "f4c8fa9ccc098f23802ede5fc4b64fb572aa4a7fcc527f4e7c094165b4d50c4e"
-    },
-    {
-      "path": "src/mcss/measurement_planning/__init__.py",
-      "bytes": 172,
-      "sha256": "157ca4ffc8cd236de2a2a4e111f9b3a5d2e5c12e9d1356945ec1690f9bd26d9d"
-    },
-    {
-      "path": "src/mcss/measurement_planning/geometry.py",
-      "bytes": 3065,
-      "sha256": "d315062eb8634a32baed58670f561e4803078f89f9c1cea7fd210b915a5505b5"
-    },
-    {
-      "path": "src/mcss/measurement_planning/heuristics.py",
-      "bytes": 10937,
-      "sha256": "a10cc81ff3c5e95f8dd8b035f651f8b4ec087cf1a34ee88e06035e9bdde523d8"
-    },
-    {
-      "path": "src/mcss/measurement_planning/information.py",
-      "bytes": 8416,
-      "sha256": "9e0529ae2216ab1b37df02f54bb9c009b2cb1626b314dc8511dce94291fd113e"
-    },
-    {
-      "path": "src/mcss/measurement_planning/oracle.py",
-      "bytes": 7947,
-      "sha256": "8dacb7299d2bf9833d9ffb39a42dd17d820a24c9188136899a751d09453cd256"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_data_carrier.py",
-      "bytes": 7356,
-      "sha256": "f9ae192869430e095767d8d36c4498617e330a08266e7812d5fab296c3ddf183"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_data_evaluation.py",
-      "bytes": 16002,
-      "sha256": "574c9a841b783c142eb28d0a9d8ad98fb0b3a3b72316d88f66581928c6e3ad1a"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_scale_carrier.py",
-      "bytes": 7503,
-      "sha256": "a4de10efadfc3761e46e6004ac6671ece8a0e986809e25fd7456955af989cee9"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_scale_evaluation.py",
-      "bytes": 16003,
-      "sha256": "41f02a09b1297b499f8e64d29239bd6ac038bb7bde74eecbb14b9788002901bf"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_train_carrier.py",
-      "bytes": 7429,
-      "sha256": "a5c528faa77f1cf7ab05f6e9623fe8a0cacf2c5d9375fc80a4844fcd40da4365"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_train_evaluation.py",
-      "bytes": 16003,
-      "sha256": "301359a1dd03de378820f7b6eb79b8eb1fc8d0fb65b8eec34cfbc811cfd87aa4"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_width_carrier.py",
-      "bytes": 7525,
-      "sha256": "cb7ca56728d26e2066743d1a38483cebffc82deee8de1faec19d9fb6208e91f6"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_long_width_evaluation.py",
-      "bytes": 16003,
-      "sha256": "2c59c03b690ee8a0bc7c5779c6a0329b0ae63fe193179d586fa7f8e8a5377637"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_pretrained_carrier.py",
-      "bytes": 12753,
-      "sha256": "dc0e8db5ec7caf4a3e69bbe0daf8972d845674bc77b728381354df01362ce52b"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_static_ttt_v23.py",
-      "bytes": 9478,
-      "sha256": "7ca1e32fa13a3548c78c950d147713b5bf4fa5a4185956965415b593cd242f6f"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_evaluation_v3.py",
-      "bytes": 9189,
-      "sha256": "fa78a5fcad8c3a87704ea75cf1dfe54d9be1c5c5554d0fd9b6898943adc6c1cb"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_context_v6.py",
-      "bytes": 11508,
-      "sha256": "695f16dd6b3f80ea17583af7259a4492a2197ffb5db54cf52c2a784732b035d9"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_eval_v5.py",
-      "bytes": 12610,
-      "sha256": "e94c8c23d2cd0aeb0cf8761aced949b6f1e7642e6c999beca6ad672027c009d0"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_evaluation_v4.py",
-      "bytes": 13347,
-      "sha256": "0eacc4064ade9f67781be9eac3f7e5026378ad8f6c52928abec3d63522ca9fd2"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_rgb_sup_v30.py",
-      "bytes": 3060,
-      "sha256": "c0f15e549faa88f402ce701f1da6461b8425a131dfa5a4daac8253f11f430a79"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_rgb_v29.py",
-      "bytes": 2950,
-      "sha256": "070e8046317fe4dfa04a11562f45d6feb8baafbf13955348dcf0afee8edf991f"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_v10.py",
-      "bytes": 3204,
-      "sha256": "e9087653cc39e840351e887a131225e20d1d46d23a7a6dfdffd45130a4cc671f"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_v11.py",
-      "bytes": 14442,
-      "sha256": "59095a103c69f09cdad3fded79ca86bee32146ac5b5efc7ec1265ba53eca227c"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_v4.py",
-      "bytes": 5446,
-      "sha256": "9d832b1a6b75df93b3257dcd829b4e0ce469fe2e46b369b331a1c11f9b7a028b"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_v7.py",
-      "bytes": 10943,
-      "sha256": "751f94cb36a07550fd7e1260ddad7aa9141b94e26009da1ee91bd5ac79dabed0"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_v8.py",
-      "bytes": 9653,
-      "sha256": "529b8bc37ea8dbc994c2796f45e95e7c19b312173f4e69914b7fe134c5957ae6"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_ttt_v9.py",
-      "bytes": 1396,
-      "sha256": "77afe4a2012e12c82a5623b3a5f0e371c2295cf454365a280e2a1ad2348484c8"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_stream_write_v3.py",
-      "bytes": 8731,
-      "sha256": "01a14e6efb0dad02e8f1aa583eae7f7001c1545baf4619c5388178578f67fd93"
-    },
-    {
-      "path": "src/mcss/mechanism_pilot/rgbd_unet_carrier.py",
-      "bytes": 9410,
-      "sha256": "4de82a32dd72c30f910c42837f4188376fb1dc85a8e2370047f451fbd3b82dac"
-    },
-    {
-      "path": "tests/test_measurement_planning_oracle_v1.py",
-      "bytes": 8589,
-      "sha256": "610f18f429598ecc05f2975b6006b48d0081784c6efbbf91a4871d637667866c"
-    },
-    {
-      "path": "tests/test_rgbd_arms_confirm_v33.py",
-      "bytes": 2162,
-      "sha256": "9c223a7d6b3653c7ffc10163a429b91c76c6bd5f5cef41a39cdf08459e274708"
-    },
-    {
-      "path": "tests/test_rgbd_depth_readout_v22.py",
-      "bytes": 1218,
-      "sha256": "46d8c3e3c187ce36fc4d22bbbdfab6b898be6b0819b9004aa2d2ac63b09c6e87"
-    },
-    {
-      "path": "tests/test_rgbd_eval_v5_data.py",
-      "bytes": 3137,
-      "sha256": "6b88610e10f1261af53f505c4ee8104b3bbd64ddb95cce5bdedf873f9ed8255b"
-    },
-    {
-      "path": "tests/test_rgbd_far_focus_v26.py",
-      "bytes": 2799,
-      "sha256": "b6b57bfc80408c154e126a6c1023a6b7980331a420d9192ab27b45eeb9221630"
-    },
-    {
-      "path": "tests/test_rgbd_hybrid_confirm_v27.py",
-      "bytes": 2727,
-      "sha256": "c4a55ed5053a8472ec83fbac7f95918b17fdbad3b888a865ce50bc664a0ac7d6"
-    },
-    {
-      "path": "tests/test_rgbd_long_data_carrier.py",
-      "bytes": 6537,
-      "sha256": "c5ec48605f9afcb55c36f9766b80ad8be2728be748ddd261a0dbb657800ed253"
-    },
-    {
-      "path": "tests/test_rgbd_long_scale_carrier.py",
-      "bytes": 9746,
-      "sha256": "68f4003cad4333cdff72680e08693a080f30b0ecce57ef0d3e2a9e749a10b2e0"
-    },
-    {
-      "path": "tests/test_rgbd_long_train_carrier.py",
-      "bytes": 6534,
-      "sha256": "6d14b7af9fa7721444a6ddb15fc4fd8aaa4e39125df2c4f8cd24d888854abd26"
-    },
-    {
-      "path": "tests/test_rgbd_long_width_carrier.py",
-      "bytes": 9745,
-      "sha256": "c03db1805d358a1698dc03b2ea11e6dbc550fe0a355a3e9e22c591a6a720e785"
-    },
-    {
-      "path": "tests/test_rgbd_pretrained_v31.py",
-      "bytes": 6197,
-      "sha256": "bf098cee0e2fef3b5ad6dc05a7316bd9098e3a50828066b271515966e75826c3"
-    },
-    {
-      "path": "tests/test_rgbd_segment_diversity_v21.py",
-      "bytes": 3865,
-      "sha256": "146892ddb2b31b10d231d8aca986b5b76e7df6772b981c25ea86ae2a88397a41"
-    },
-    {
-      "path": "tests/test_rgbd_static_ttt_v23.py",
-      "bytes": 4818,
-      "sha256": "d0fdb47045b84c61b1a25cbfd07a566c9d18a7bc5ee1df8db1ba7422b5284b1c"
-    },
-    {
-      "path": "tests/test_rgbd_stream_baselines_v24.py",
-      "bytes": 3298,
-      "sha256": "264aa48edcdb2944f8386d9c35a45efda6860416baa661cae5c4b650000266ca"
-    },
-    {
-      "path": "tests/test_rgbd_stream_far_v25.py",
-      "bytes": 3860,
-      "sha256": "8408fb8d1b32fa895e80bfd9aa046d9622d178c38bdc574acbd6e8cedd37c42d"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_context_v6.py",
-      "bytes": 5822,
-      "sha256": "c31d85dc655e2c53e23b3863559da14b918afc6bd039861a0b7de1261b117904"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_eval_v5.py",
-      "bytes": 7172,
-      "sha256": "2d7682184eb5897fdf661e5e1962fa74f8f0c2785b6370f9d3e9eb1c582daf26"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_replica_v28.py",
-      "bytes": 1718,
-      "sha256": "d59e8a1e51adf3051503d6282b15412b216b1f73622721da0660ba961be5e804"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_rgb_sup_v30.py",
-      "bytes": 4198,
-      "sha256": "46abf55a1ce8d113bcc7ed8236180120096f705db2a4b75ce008e337db2df9b0"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_rgb_v29.py",
-      "bytes": 3447,
-      "sha256": "28bbcc065f5a8eb8d3512b9b23416f082ca591a6a71f4cbf8e390eff8d1d62d1"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_v10.py",
-      "bytes": 6297,
-      "sha256": "e06dc0c4a6a4c2c6e22a5de3b49e691bfaebd17d2f154f9ea6e0d6021540ca96"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_v11.py",
-      "bytes": 7256,
-      "sha256": "7d6d7dc786082567c054f2158fe1785032b6243d6e815783110c08570ccb4874"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_v4.py",
-      "bytes": 4028,
-      "sha256": "446c6a50a26d49921a774171ee15988d4d4f7116b66f577dee24ea62fb2aeb5c"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_v7.py",
-      "bytes": 5370,
-      "sha256": "706b83d9978138e09a53aef5b54b68955ebd730c38b4452ce491f84d3ae74855"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_v8.py",
-      "bytes": 4175,
-      "sha256": "fd879d4f5ed743dda95bef72a4d4f2eac50cbc0238a5e7a3d8a1a8af791008d3"
-    },
-    {
-      "path": "tests/test_rgbd_stream_ttt_v9.py",
-      "bytes": 4880,
-      "sha256": "7b82b2e7a427b9c35a89f365ce5805d5ea99712de92b02b6f0dea1332e9b68dc"
-    },
-    {
-      "path": "tests/test_rgbd_stream_write_v3.py",
-      "bytes": 9892,
-      "sha256": "9f68534d32c68f03c9022178681aaf7a103aeb2b8c6524e1cce1c18f429b9943"
-    },
-    {
-      "path": "tests/test_rgbd_unet_v32.py",
-      "bytes": 5209,
-      "sha256": "1c494e5a346a7f49b2838347307ba7f896168b4fdd1c5fc812f52a161c0b5f8f"
-    }
-  ]
+ "scope": "New and modified files in this publication; excludes this self-referential manifest",
+ "files": [
+  {
+   "path": "EXPERIMENTS.md",
+   "bytes": 137907,
+   "sha256": "c725ac727bd6ad6263a6977349349fe3fcf9be94121816375f4070708cffa0f3"
+  },
+  {
+   "path": "STATUS.md",
+   "bytes": 116649,
+   "sha256": "4cfaebabc8ce46aa3a9e039dc6404c5c03f58ca8731b5ea319ed6ba1d80060aa"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/PROTOCOL.md",
+   "bytes": 16452,
+   "sha256": "ad64ba4a7f33a4152494d2dfc480645996e6f7884e0446bdfb8df73853c35e10"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/README.md",
+   "bytes": 10138,
+   "sha256": "47e8ddb8b9ca7d2ee616ecaf7c3249d9236819b4028d559a00c702d0913b68bd"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/STATUS.md",
+   "bytes": 1427,
+   "sha256": "a94575d791bdd98f397ed04604605a90c8d125c6042f254dcbfa9c33e9c1e320"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/action_contract.json",
+   "bytes": 1628,
+   "sha256": "572ebb0ccbde433d8c65e433ccd29e3eb840b5eeeef184de2883a4f46b52fd6d"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_equivalence_compare.py",
+   "bytes": 4183,
+   "sha256": "4e3b0c02cf55e6469cb9020ff244826c7e7a610db586c24d93a71e8ef5f82013"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_equivalence_gpu.py",
+   "bytes": 4780,
+   "sha256": "2cc9d8f24503d65e5a61bd198d44c7c50d4153c32d019257e779624025f04b40"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_finalize.py",
+   "bytes": 13299,
+   "sha256": "fc464d06e823f72bb1d8d1e2eceb1bbe992215721ceb6044bd0ab63fd16fbfe5"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_geometry.py",
+   "bytes": 6090,
+   "sha256": "661f3571c918490198ba5df3949b2bdf26b273922ac8d4159af3307365222c2f"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_jobs.sh",
+   "bytes": 4906,
+   "sha256": "bfa97fdbce7ea3a057ad56eec029ac7b08715d51ae29bf3f02c5ae6d12640346"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_lock.py",
+   "bytes": 4160,
+   "sha256": "b6c2f1e5be0d3be5b7b24ce6bc2f13ea2f164ea14eabf390296d0f3d8071d7cf"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_logic.py",
+   "bytes": 15514,
+   "sha256": "23a3f022d5734a7c87354b1f5a37cbec3dbb1e73fca292573880306f2a63cc42"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_make_root.py",
+   "bytes": 9751,
+   "sha256": "1a1a6482430a9889db47e8d67e6fd1a71d494877d2069a4a3892c6f8a0e383ad"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_replay.py",
+   "bytes": 17476,
+   "sha256": "9c5528c169d31773c38762d5392c2f3fdddf713e5c79355ac9a842bcda689f6c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/caju_score.py",
+   "bytes": 26964,
+   "sha256": "8aaac84b603af3b37601369a7b66a8478ca4830d49bf48d958f9ec4af1664ad6"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code/test_caju.py",
+   "bytes": 9781,
+   "sha256": "a0c3ad0a7898c5ad36106657f80935261dd064186e0f630abab0e756bbe028ee"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/code_audit.md",
+   "bytes": 6683,
+   "sha256": "ee6ab883d7cb10590bb14c85d3196f6728f9bd9426d5b18011e15f09a834abd1"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/commands.sh",
+   "bytes": 1623,
+   "sha256": "ef3ecdccb16df46eace8ab8aefe3d2391256e9e0d4ee6b8684d56694f5bb76ce"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/equivalence/equivalence_report.json",
+   "bytes": 987,
+   "sha256": "86e3127a0f078fdd7cfb51997962a1a70d01e470958d4d0ec93807395055bcfb"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/figures/fig1_action_utility.png",
+   "bytes": 36535,
+   "sha256": "b82331a74efc9af75d671d30e860aaa0ca4b34d9afcc9b724acca1aaf7802dbc"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/figures/fig2_oracle_vs_fixed.png",
+   "bytes": 52849,
+   "sha256": "44c45809580f0300c55d545017b374c7b4793cb859f4d4124dc48344f4dd07a8"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/figures/fig3_pareto.png",
+   "bytes": 68117,
+   "sha256": "0f9b622b011acd8eece7d1709a8a621439a910bf3e869762a9e6f3e9ebc89f80"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/figures/fig4_residual_vs_utility.png",
+   "bytes": 45997,
+   "sha256": "7550e475f38810baabe77232f04ad5eee3e4ce4c81c79367bcad2cdcb1654614"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/figures/fig5_residual_bins.png",
+   "bytes": 41231,
+   "sha256": "e3ad9615abd0ecaa9b1aaa69f7c0235c9cbb9598556af6a7b53e64a088f44608"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/fixed_action_selection.json",
+   "bytes": 363,
+   "sha256": "939861f7e8368d1ea6d43a31875b7d1cd9206d162c5a41650d77e9aa87c1c4ff"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/information_contract.json",
+   "bytes": 815,
+   "sha256": "0813a199708a7ee1e8e2bb645a530c5cf393e5b8d42321edf740e9705287b71e"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/integrity.json",
+   "bytes": 2684,
+   "sha256": "a73ab05cf38c535c16f1a0b41e9baaefdf2839b44921781c23c1c252fc06f546"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/jepa_feature_contract.md",
+   "bytes": 4616,
+   "sha256": "f5b84a8896be6dddca20fca388d844645c6cc60472c3a9eee6501ff722cc58fa"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/pilot/pilot_report.json",
+   "bytes": 2570,
+   "sha256": "a15a8ff91a743a9918ca010523b3d492ae89a4e179640231644088e19884b035"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/preregistration.json",
+   "bytes": 4220,
+   "sha256": "f82179bfa963c1d099861d123cd05be0b178c1a747481f84f889c393fc9e921a"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/results/bootstrap_results.json",
+   "bytes": 67656,
+   "sha256": "48afae3c3c610edfcbf287fa151f2db792569ea9f6befd046f7897121bbd3b83"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/results/counterfactual_utility.json",
+   "bytes": 173716,
+   "sha256": "9604f9638f62a88b0f62d20b23d2e0acd9d6173cc9658f13f173cc2b5cd2910c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/results/final_printout.txt",
+   "bytes": 1945,
+   "sha256": "bf993a64fdb6722251c6b0e285d4e2b2016cd22e197d97f44112ad7fd9bb08c4"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/results/gate0_summary.json",
+   "bytes": 1966,
+   "sha256": "c001d68d589c64fa2d935cb08de8ea85a92d7cb2aee9ff6239579c91c95e8a38"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/results/oracle_headroom.json",
+   "bytes": 24686,
+   "sha256": "0f81fe052f890441fb2d64fbf89ca9db424c27963e12e81ef8b4a037a76b4599"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/results/runtime_profile.json",
+   "bytes": 2267,
+   "sha256": "cb38f0dad2885537fbc9a420bda4d2536cdc94543ad748cde6dfe73fd3d68dc0"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU-HEADROOM-V1/tests.json",
+   "bytes": 282,
+   "sha256": "965b827e57143887daa67df50f3a6bba89c4225574571a73de6352c27dcad793"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/PROTOCOL.md",
+   "bytes": 6455,
+   "sha256": "bb7d0f2494f84a0727081ee687fb7b7fe126c193bd1a34d308b49d0491f356f5"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/README.md",
+   "bytes": 4306,
+   "sha256": "9b57140970772bda90905c1ec56f0240b51c0bf3e4ebf0c211d61cc45954325a"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/STATUS.md",
+   "bytes": 630,
+   "sha256": "161db385f683e7e02399754337f6e81906ee8881bace6639c76bf9606722aa85"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/engine_core.py",
+   "bytes": 4146,
+   "sha256": "0bb6469f29448529d709690cdb2646e1fdb4824ea8eb71684b4bb4d46be2dade"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/engine_jobs.sh",
+   "bytes": 4077,
+   "sha256": "0e9f4351671f5b5f10b7b93090f231d3b85e89c0ef50222cd448feded39599a2"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/engine_lock.py",
+   "bytes": 3449,
+   "sha256": "531ebd7c1b81f8564fae6bdeb86368bfef4f8d70950eeae7ca14d2136c35a06f"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/engine_logic.py",
+   "bytes": 3051,
+   "sha256": "e65066bc836094deefd0eef5aa770ea0ca4eb249bca2bb609e13a7134f0b2b44"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/engine_make_root.py",
+   "bytes": 4142,
+   "sha256": "f2ba33df1cf0de13baeb6c9f08dd8f329b90360487ea83342f9bd3e448713cc9"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/engine_score.py",
+   "bytes": 14272,
+   "sha256": "04f82046e3a84fcaabcf2c8b2ab807cbe78d1571f425b67937a14f5927dbc7a0"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/engine_ttt.py",
+   "bytes": 13847,
+   "sha256": "8f26b3bfd17276ae934b157d27ad4e5653cebcbc1913b81006488a0f26eefeea"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/code/test_engine.py",
+   "bytes": 6920,
+   "sha256": "e8e5b5219422f81156d0a8fc2fed243d1af2368988c0e02d3b2243e264b18bee"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/preregistration.json",
+   "bytes": 3571,
+   "sha256": "e92c77ea2d6ba54b504a34a0c839642940819281e0fbd971cc0b5da01c16e260"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/results/dev_results.json",
+   "bytes": 15244,
+   "sha256": "011109e806c038debe66d8d15e4c8a96a0c410326b1779c89207c9bf996efa1c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/selection.json",
+   "bytes": 671,
+   "sha256": "7da444c7e1dbfcc8123268ca607b7e8378c4a07dc460ed7260f8cac413ceadeb"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-REPL-V1/PROTOCOL.md",
+   "bytes": 2013,
+   "sha256": "e8f7688cda3749e50a5d12620307759c2045a5a4a0f419741068a12d5ddc7a66"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-REPL-V1/README.md",
+   "bytes": 2622,
+   "sha256": "9738f6e78b9bac158d2ff447f8314d3b12da0fb24c0bf7b6809348faa86ec704"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-REPL-V1/STATUS.md",
+   "bytes": 184,
+   "sha256": "9cb18487a9e984f9f77199531a25890c614ab74454043e0c3a6a9274605cabff"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-REPL-V1/code/fnrepl_score.py",
+   "bytes": 6407,
+   "sha256": "f355d2b97891014ab52d9532392bb4f8415a7a3620d6ab0561a3d430079a891f"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-REPL-V1/results/repl_results.json",
+   "bytes": 3944,
+   "sha256": "d618c5627131445c5a66a261332c181ed959b801c717d7d1751fa3e3dfa7193e"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/PROTOCOL.md",
+   "bytes": 4378,
+   "sha256": "fb83841ef11e43c18e90bbfd9e1b5761a39d08ce1ea25671b96818518513075b"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/README.md",
+   "bytes": 6274,
+   "sha256": "684ad4c3f24c9bcc9f4d569d3a03abc74abb4df820f0c190b114e46aaeade9a0"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/STATUS.md",
+   "bytes": 1244,
+   "sha256": "63db255891a64d9ee4269ddb5974d181c78635fa6cd7676275da0ff7db3609f5"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/analysis/fn_describe.py",
+   "bytes": 4931,
+   "sha256": "59d693227b72daaea115835bcd929d2dd54f898f81b5b4387c1608d51fae4824"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/fn_data.py",
+   "bytes": 5600,
+   "sha256": "105efe430e3d95cbe0f1acb8fdbc9706d205d04883f8d6602c903bdff4dc2748"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/fn_jobs.sh",
+   "bytes": 3335,
+   "sha256": "63746653754bc1df4766c707863abb8653dfb33199a32a315cb810b7929d8809"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/fn_lock.py",
+   "bytes": 3199,
+   "sha256": "6f9edc5a27c28c8ed6bd3a909af9e3c32d4ca8679c80fc24fd6cb385cb2c2d68"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/fn_model.py",
+   "bytes": 2388,
+   "sha256": "c42c977a6eaa63e66dbbe0ec4efab1eeb359f7a9f71c4b598ea4152f2c5ffdda"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/fn_query_features.py",
+   "bytes": 6112,
+   "sha256": "4ebd6266f54e8839782429f7263fa83b6d95014ca9459943b214dbf964417581"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/fn_score.py",
+   "bytes": 5419,
+   "sha256": "c0f8d968f60ef6dbea81c98cf7f2ac25d1c4d607eae9339e5b31b19c7588b72c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/fn_train.py",
+   "bytes": 6023,
+   "sha256": "f64e9fbf8864dc3ed1f86136e59cb5609e4f4ca9623d1f5eea2b40f1deb5574c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/code/test_fn.py",
+   "bytes": 4381,
+   "sha256": "572a42f28f41d66483bbf34a26b7b825a89d73153f9fdb0993728d0f9efe1329"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/preregistration.json",
+   "bytes": 2948,
+   "sha256": "fda3cf9081085124a1e09cbdc58563d34e0043ee7fbe7e5941bfbdafd96d5635"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/results/confirm_results.json",
+   "bytes": 14634,
+   "sha256": "4d639bb2e9fa6506f56be38090d53c3dc776b0f361d4f0bf5533a9e1ebf05e15"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/results/describe.json",
+   "bytes": 1606,
+   "sha256": "743a963470d807021f2e81dea590905563dcf92c8c9b983bdc35e628c0bbfdac"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/results/describe.txt",
+   "bytes": 1519,
+   "sha256": "6b58fecc2e895638438e7e210bbfc6938c9eaf4ee891b3c9505b5b5b39aaa7e3"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/results/train_log.json",
+   "bytes": 9856,
+   "sha256": "b9f2f1563abd4a145fa7d1c2ca934558491c5c19a6e9078c4040f97b54318cbb"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/PROTOCOL.md",
+   "bytes": 5456,
+   "sha256": "33e671cda02ab1e39e555759c244a8b19e7b116e404eb42b50e229f0f9217249"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/README.md",
+   "bytes": 7718,
+   "sha256": "8db6d21a6542c042c059c9f432e212ee263738d68929772427ef64ed3e53e106"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/STATUS.md",
+   "bytes": 1038,
+   "sha256": "4ff48e14c5b5667dab69548f690b1d5ca5ffbd9361c995adc0adb8d2e2d7ed5e"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/analysis/gate_dropped_profile.py",
+   "bytes": 11219,
+   "sha256": "fef5cd9d2b1fa38d8cfe3a6cb98de5879756ea589c10495e6e3a7a210f5b615e"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/analysis/gate_summary.py",
+   "bytes": 3157,
+   "sha256": "b2bf72c16fa9d7da5bdfac38b48bda8815255976477b2bdb3fae48cf9f410cf1"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/gate_chain.sh",
+   "bytes": 1085,
+   "sha256": "d5879ef880cdd03bb93a45d870d82a79ea7fd79c0e81ff757730970b70c02cb9"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/gate_jobs.sh",
+   "bytes": 3644,
+   "sha256": "43f0c2184e22fb652704ef44e98f95578878d26bae959164926214890deb4bab"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/gate_lock.py",
+   "bytes": 3429,
+   "sha256": "f73fe02a8bf02629cfebc3fca247fd394e12cec5b21e76f52e43b616041fe4c5"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/gate_rehearsal_check.py",
+   "bytes": 2396,
+   "sha256": "be42cf3b3aa5c25885736e639ba7f9ff7db1e0d1693e4d5fea4593f3e781bed8"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/gate_score.py",
+   "bytes": 6568,
+   "sha256": "ad8a2aa9512e6b9c27c79fa01e07f23dcda84bf993581fa02fd0e83bb1486080"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/gate_ttt.py",
+   "bytes": 12855,
+   "sha256": "df8a89b1309f5ce806e4ff1b69bd40f7194f2d8aa1b8f8b2d27dbdd737c0a5bb"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/gates.py",
+   "bytes": 3995,
+   "sha256": "2672e8e8dac8a95d8ae78ca6fcb4793428bbd0d50120b6de5c196565ce638440"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/hjepa.py",
+   "bytes": 8574,
+   "sha256": "23259fc76b008b4d11e228ae95a96744bebf84700dc9e65ea6729b541bd51c52"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/test_gate_rules.py",
+   "bytes": 1502,
+   "sha256": "aa72d7b4fcdfbf43b8ac9da1e72e75733658f2edace25677da33067dfb013fe0"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/test_gates.py",
+   "bytes": 2146,
+   "sha256": "671f529e61a3fef160fce44b6f48bb1380ce182e8b4d8af2c03f27642bedd446"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/test_hjepa.py",
+   "bytes": 4167,
+   "sha256": "1dc71f6763d43ed9287d394021aa73375dc74e66b731515e7eaf3fc61b99f0b3"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/code/train_hjepa.py",
+   "bytes": 7394,
+   "sha256": "6326a9ceef8db4bdcc8a7057baf584a23ad5ed5459272b76695244b8d4488625"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/decision.json",
+   "bytes": 354,
+   "sha256": "5cf5e992e636fa6aabccf0b10a2ec2637dd9bba10f823c9b3174b080acfb1db2"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/model/train_log.json",
+   "bytes": 18961,
+   "sha256": "6df4d2cbc513a4915a0be15677154c47951fd092b7f74d85c2e1f5e455caef6b"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/preregistration.json",
+   "bytes": 3655,
+   "sha256": "82d86a50c8e798431bc2b469d5e2821a8fc7169b05045ce54d6ea0ce75dee90b"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/results/dev_dropped_profile.json",
+   "bytes": 2722,
+   "sha256": "ee52cdcaa94fad96c778c12139ff2c1afb22b4974a8b8c873f0a39272d8ac376"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/results/dev_dropped_profile.txt",
+   "bytes": 1909,
+   "sha256": "44a8f8d55df8dd8e05d781771d87778ceace524a14bb7b4e48424998cf6f12cb"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/results/dev_results.json",
+   "bytes": 7320,
+   "sha256": "f58b6c459ecdba3827ecb2eca78c7ad26a4e4fa1a8897f9c68a1402e04a9837d"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/results/dev_summary.txt",
+   "bytes": 4627,
+   "sha256": "ea0cba552bb5bea9e066f845c85d4a2dfe630a8049bf23c40c376d02b9e956ba"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-REPL-V1/PROTOCOL.md",
+   "bytes": 2066,
+   "sha256": "8df4e073c7007bd5c2e08f4e8709dd7fc4fd8907c0127511b3cf5553d19c0c0b"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-REPL-V1/README.md",
+   "bytes": 2270,
+   "sha256": "b613edca5835388a561884ad7d141cca354ca29c8b59fa26300296faaf52329f"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-REPL-V1/STATUS.md",
+   "bytes": 182,
+   "sha256": "4b8a739210e468460141264be719a353e0d81f91a7ac75d032ecb5bcdbb59d5a"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-REPL-V1/code/repl_score.py",
+   "bytes": 5395,
+   "sha256": "62f377bd36185958f258a2b02152b0ceefc2370be36143e46d18b1922e1ae405"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-REPL-V1/results/repl_results.json",
+   "bytes": 3652,
+   "sha256": "7bdf9e7a0969eba1169c359a16c370826241bc2ca903f2f421dee8917dd4f72e"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/PROTOCOL.md",
+   "bytes": 5109,
+   "sha256": "bb21c7ebce36c70cb96da40c7a0bf06558d2652336c490ead4bce9b25cd5a64c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/README.md",
+   "bytes": 7506,
+   "sha256": "f1acb070bce945ddbf5c93b0293c11336a7395cbc87c8726abfbfa6df7999eb7"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/STATUS.md",
+   "bytes": 1303,
+   "sha256": "3f9f45dcd38504b7aa14534bf5ca8596acc03895ba408906f65aaeece7183282"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/analysis/kf_summary.py",
+   "bytes": 2197,
+   "sha256": "4d0939b181a24a706a213ac607bc1d603d6158f485fac42c1d0f1dfb54b7f900"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_data.py",
+   "bytes": 3920,
+   "sha256": "4dca40a52e1aba3b562fd4a8d59713159ae28d51235ee079349e8f4810f03995"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_jepa_core.py",
+   "bytes": 1255,
+   "sha256": "836ee400009aeaf2870946061a53fb577a6ab0294418aafa60abf5fe192000c3"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_jobs.sh",
+   "bytes": 2701,
+   "sha256": "f5ade4c52a0ae69540ad0be01f03b3de47cd780993a4146abbefd788e8208964"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_lock.py",
+   "bytes": 3167,
+   "sha256": "08d0e2262365376943b15f2fc97b887084ffc7ca2dd7a19ad76fddffa37c8109"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_logic.py",
+   "bytes": 5265,
+   "sha256": "f2a87e7c3ebc70c1d8d3ee0376ef29d09d25848bfcf63ba3cfb165d08c5bef61"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_make_root.py",
+   "bytes": 4315,
+   "sha256": "745225820471a19569a226a52ab27b0f710e699cb89f54769885f6f22d3ec351"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_query_jepa.py",
+   "bytes": 6716,
+   "sha256": "b38f003d44e419ad0461f025ce76b8a4aae58bd0dc8be663a0d774e5ea3c3280"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/kf_score.py",
+   "bytes": 5447,
+   "sha256": "4179aab7d25a27a734d1e7f7eafc6878c775c58b2975131afe89bf4d7dc5b000"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/code/test_kf.py",
+   "bytes": 5870,
+   "sha256": "e8032734677646a4bcac3978a9d119447b2a5391a1d0199082d320fc83261e34"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/exploration/fusion_headroom.py",
+   "bytes": 8866,
+   "sha256": "e7ee371893c80d8d2357e16c1277fc6e91aa0904269f62a6b1a93385afd5b3da"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/exploration/fusion_headroom_dev.json",
+   "bytes": 3737,
+   "sha256": "445a16885420919ff5719e2349620f33d0d2d241d2c81361c55ccdf8d9034812"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/exploration_posthoc/hole_probe.py",
+   "bytes": 5777,
+   "sha256": "c17f378e13a9e6f18eb8ab502708289980e7a7eab56a2d6c2398931eb07ccb11"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/exploration_posthoc/hole_probe_fit.json",
+   "bytes": 7686,
+   "sha256": "844ff1c83b1c20ab152828de7997cb324c88886a38feea1f0c6e46a72f5c63a2"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/exploration_posthoc/hole_probe_fit.txt",
+   "bytes": 2321,
+   "sha256": "2fc25558c83e193aa46cac3675a8704703352f1cd963ec99b6b8f7618eaf7485"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/fusion_tables.json",
+   "bytes": 3500,
+   "sha256": "15100550ca6b39763244a69405ec88f8eede4faaa700aff4619557ee1c7e533c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/preregistration.json",
+   "bytes": 3415,
+   "sha256": "b9e08b44006d27fe756243ad38cb9c3797a430a300218deeb29907a8f0868b6c"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/results/confirm_results.json",
+   "bytes": 18559,
+   "sha256": "e82cb4a54e719e1616163b675ae7a8d43655caeb0957a2aad1d27f264e33c116"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/results/fit_loo_results.json",
+   "bytes": 8942,
+   "sha256": "a8133232a629e8f3f3bd833106a1169bf1393809f439e54356b573a6010f3958"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/results/summary.txt",
+   "bytes": 4925,
+   "sha256": "38ca02db761ca7c7c15157d0f7c1345bed3f336e70d59f589b658d3f2e87e2eb"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/PROTOCOL.md",
+   "bytes": 1675,
+   "sha256": "b457ebd01f69d2b3a22da1a3d0d810f60b37e57d9f695293ca64533626552bb7"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/README.md",
+   "bytes": 2074,
+   "sha256": "1b7eaa6daf47778ccf411a32d53e01bab79a66b348a796f6074ce5068d2fc82b"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/STATUS.md",
+   "bytes": 248,
+   "sha256": "38fe1bb889918a51bd87897bfc45cad7a13a56241f72d02107915b50a19120f3"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/code/loco_run.py",
+   "bytes": 9059,
+   "sha256": "5557d25c203f725e986568feedbe7fbfc4fe71a1ae7d93ea81af1740cb016784"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/results/loco_results.json",
+   "bytes": 12782,
+   "sha256": "69d447e1e251594aa63b9fb2f00464bf538665bada70508fa2b9e15bddc580d4"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/PROTOCOL.md",
+   "bytes": 4249,
+   "sha256": "65dbce23116dc99c0a1aeacb27a10d67a9996e178f4a22742d682c1222456d95"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/README.md",
+   "bytes": 4782,
+   "sha256": "3491d1ebb1ab40143b6d29f2829f2235834e3c0d28342a5263ef4796e04e8634"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/STATUS.md",
+   "bytes": 1046,
+   "sha256": "94cc2f91194903e6c26e1e42e462e3e44379a49faf549325776b9e8623030eb2"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/code/s4_jobs.sh",
+   "bytes": 2689,
+   "sha256": "bcdbc7447d2fc0350cb3b6c01da76f35356fb5783aa713216b3e81cda10bc5a4"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/code/s4_make_root.py",
+   "bytes": 3342,
+   "sha256": "73280098d895137c91b84417bf345675c91bb8ad63b91e33f88a86f24899ef69"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/code/s4_readouts.py",
+   "bytes": 4689,
+   "sha256": "a659366d5fc1888c622c565e8c7df50102491117899478d0e3d47a4038cac0d8"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/code/s4_score.py",
+   "bytes": 5070,
+   "sha256": "6e0c43ebaaa7a1483c1c19aaf86588bbbb5fea4251bfc4036844cab710019650"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/code/s4_v2.py",
+   "bytes": 6706,
+   "sha256": "89d15d71b5799b1aa47fbaebf45e886f0ed03b7e61a466ad6a1acd475976efe3"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/code/s4_v2_train.py",
+   "bytes": 5138,
+   "sha256": "bf747592c59987c91a2c4238855ff5cf306d9a2f0787d7ec063ae0154177df53"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/evaluation_contract.json",
+   "bytes": 1951,
+   "sha256": "442b3dbaa55f617e2a3369b91aeb6fb33cec0705dab0ee6be0dc3e4776867826"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/results/holdout_results.json",
+   "bytes": 5793,
+   "sha256": "eb73d386e63c7ad1b081aab056fe71f34641f4d1216056ada2d48fe4ef4141be"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/results/v2_train_log.json",
+   "bytes": 4226,
+   "sha256": "69d5957416ec88d00f3a2c5fc43d0320c0a91d5cd8f56fa9655dd58dee127ad0"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_1.lock.json",
+   "bytes": 895,
+   "sha256": "fc72e572dbe138bca67e18f2a018d36cdf541cb488563a4a90e163a3c708c212"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_1.md",
+   "bytes": 3693,
+   "sha256": "a13a0a4a655c21dce3cbb14cb1c554307b02322efdc5709f963149208ce196da"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_1_RESULTS.csv",
+   "bytes": 1569,
+   "sha256": "0457b0a308ae5a173b9e9687fe40172f24b07143d4c68fe724632ccbaf68bb79"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_1_RESULTS.json",
+   "bytes": 9949,
+   "sha256": "7576ab57ca16b41736ebeba628c312cfc74f3c2bbe96aa1f8b5d6b6f7e475eaa"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_2.lock.json",
+   "bytes": 659,
+   "sha256": "b19a0fd8c1a306be57c171ea1dd4e428058ee5e6090e5fde236e70b05dbf2406"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_2.md",
+   "bytes": 3199,
+   "sha256": "3950b8f6a2edc7acfeafae1f001a98cb4bfb6d624c9aca3105221bc6fc1cfa86"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_2_RESULTS.json",
+   "bytes": 5832,
+   "sha256": "9c777a627e159d206c38078141a770cf67d4e9308d165165cc07e12f6ab212d9"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_3.lock.json",
+   "bytes": 638,
+   "sha256": "5e7cbc3b45d3fd23f73cb4ce05c9fbcda4344567eecfbe4aa58b5dcf83fe6e86"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_3.md",
+   "bytes": 3179,
+   "sha256": "f539bcd9a39a32f08d69375bf896fe6ab5210254e11605bf8b39de297b5d4aa4"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/AMENDMENT_3_RESULTS.json",
+   "bytes": 6703,
+   "sha256": "568e9f9ab11011deccfc0a404d040318d7fb62c00747ea4b700ac44252941777"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/BASELINE_MATRIX.csv",
+   "bytes": 1672,
+   "sha256": "702a7dccb45fc576fa0c32bd5f35ae494f1fa3f15e2f09d342e4d931d6cd3d05"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/BOOTSTRAP_RESULTS.json",
+   "bytes": 27267,
+   "sha256": "81be1b0126489bd3c07846a23f00894699d823d7acef60e32e52d0ed592a4a30"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/CALIBRATION_CONTROLS.csv",
+   "bytes": 3082,
+   "sha256": "4c06429ccdfd88b162231f21341289d6e313e3be6fe21f8d01edb013a75f6822"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/CODE_AUDIT.md",
+   "bytes": 6141,
+   "sha256": "26593819009d51747b1ae105f3ad463ef8db3ff488af50dcd2f108501c357534"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/DATA_EXPOSURE_REGISTRY.md",
+   "bytes": 3928,
+   "sha256": "5c24910fd403c5103b5471b7e1a97f35baf7bbf89f45efcb134fdc84109b225b"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/INTEGRITY_REPORT.json",
+   "bytes": 4408,
+   "sha256": "1ea9047304945b593669b883a246f71508d39a7421019658656ed450f9b50d16"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/MODEL_LINEAGE.md",
+   "bytes": 2445,
+   "sha256": "a5dac134c78afe6f32e1b93fa51fe174e9ed6f6751178bbbfeec531632135adf"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/NEXT_METHOD_PROPOSAL.md",
+   "bytes": 7019,
+   "sha256": "3f220a2ad994bbe3ac498086a05ddef15350054b4f2e430f85ef4798c323f364"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/NOVELTY_AND_RELATED_WORK.md",
+   "bytes": 7843,
+   "sha256": "0e6b9349e6966e14984d266e92fec57c8060edf46d55888a82b8a4d6d6b7c1c9"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/PREREGISTRATION.json",
+   "bytes": 3171,
+   "sha256": "6e6cda480fa7c244f072f40168167a5ab71471b0ddfac04090dae3afe9018702"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/PROTOCOL.md",
+   "bytes": 5375,
+   "sha256": "34093e34f1ac5619251736f1eced4069e29562ab7dfd7941fc8cdea2ae30efc9"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/README.md",
+   "bytes": 4293,
+   "sha256": "30c5c38d84a2ac756a4047f61b0affecf7296276abab3580f9354b18ae04ae8b"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/REGIONAL_ERROR_BREAKDOWN.csv",
+   "bytes": 31493,
+   "sha256": "43bd055f2903ad42effcea0f354e215187bd63d72092ce58c517581f8f2ebab7"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/RUNTIME_PROFILE.json",
+   "bytes": 1770,
+   "sha256": "d7fe37855d96b4594819ad17f9a68fc5e1f96f37331acb9550e52e69d25ed6fa"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/STATUS.md",
+   "bytes": 1448,
+   "sha256": "dbb4f5919bc8b8fd654cfe4a3197f04b574cf1a33ba40ba637571a9481853135"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/TTT_NECESSITY_RESULTS.csv",
+   "bytes": 1167,
+   "sha256": "b93db951d21fdd4df3790d6bdd9ba844a31507ebeb5d5f1aa544ccae17ff1cd2"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/audit_exposure.py",
+   "bytes": 9064,
+   "sha256": "a904f788d62774a423dd216518c7cc482d197a250eaed401ba26876691b824d5"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_amend1.py",
+   "bytes": 11868,
+   "sha256": "4b05086ba8ee402b7b173655293795924585ce15fdffb6cdfb0891bb86008b13"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_amend1_stats.py",
+   "bytes": 4985,
+   "sha256": "c8022dde45f1501edbfe3ff6013840a3347679c4b2e0d5cdea2daea41b3caf92"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_amend2.py",
+   "bytes": 12900,
+   "sha256": "5b024183185d8016baac17dbc64629986a59dc8e4718759acff4590db4224d81"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_amend3.py",
+   "bytes": 11313,
+   "sha256": "7cec5710f4575305400d97ae752f998fe1673be135378524d661802f54cee1a9"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_cache.py",
+   "bytes": 7088,
+   "sha256": "7cc3587361e05afa6939d7e23869bfaaa868bf76fc13c88163bfe090232170a4"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_common.py",
+   "bytes": 8200,
+   "sha256": "248eeb7b1f8af844a6de6a2f0d3b0a3ade11263aa3e94164d05a1625c6dbf3ff"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_integrity.py",
+   "bytes": 7434,
+   "sha256": "2e9ab188ee07c25296f42177e2728179d2caf3e9095d46f17cc6f7e4dad69819"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_lock.py",
+   "bytes": 2972,
+   "sha256": "d855f28ef9c9cd0c39c1dfda042ad926c43ce0cc9eff63c2498f4eac60cd1448"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_methods.py",
+   "bytes": 7332,
+   "sha256": "a857ceda1768e2a067f7f442d496eba150ab4a500e4c2616ae11fb958f66089e"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_run.py",
+   "bytes": 15267,
+   "sha256": "5238203c535c095bb0feb35548cec86f7f1bbd9066b70adc9dfc2f1572eebb6d"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_runtime.py",
+   "bytes": 11036,
+   "sha256": "4eb34717f83844ddc49821489faf5af4ae840ad111c91931fac9922676cf8193"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/code/rm_stats.py",
+   "bytes": 10701,
+   "sha256": "4aecca4e5734b184d8c884596e602453dcea6b6f0560d93891684ecd80254663"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/commands.sh",
+   "bytes": 6477,
+   "sha256": "c3f959e7fb2f748fae3ca972cc9ec5ea853699da4e7230d02effca3003a6c220"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/results/amend1/fusion_tables_ff.json",
+   "bytes": 1167,
+   "sha256": "4c543e0205ceba49917c97bee9d2adc363950d0ab5cff048710f870df8d45f84"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/results/amend1/kf_fit.json",
+   "bytes": 1286,
+   "sha256": "d2dcfd5c753d5e459eaf932766bab7228675c9144876dc1749004732e3941525"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/results/exposure_audit.json",
+   "bytes": 7470,
+   "sha256": "073a970299f300d63fa1cb2c10570a775a2c1686c5b74529c599b59f519a65ee"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/results/runtime_gpu.json",
+   "bytes": 1615,
+   "sha256": "c25363182222ae7fd07b450545d7beec88af65b07465c036d03a848b7c9188ef"
+  },
+  {
+   "path": "docs/experiments/EXP-3D-READOUT-METHOD-V1/results/runtime_r7.json",
+   "bytes": 842,
+   "sha256": "cc59cefea5edabf7b5fa75d87bab5dfb2fffd6c60b6f2d9320e32bc83119d783"
+  },
+  {
+   "path": "docs/handoff/publication_validation.json",
+   "bytes": 2335,
+   "sha256": "69a0d538075b6605af4dae583032db5eadc637be826c2bc7428a901e9b3c5fc0"
+  },
+  {
+   "path": "pyproject.toml",
+   "bytes": 1873,
+   "sha256": "e2dfafe76e114f106c56e02e7bb99be854b509daa4f38293834a13747acbf962"
+  },
+  {
+   "path": "scripts/prepare_rgbd_arkit_system4_cohort.py",
+   "bytes": 6197,
+   "sha256": "d8929afeb848c08a5015fb4485be34ff0b89e58b7b564ca8206e9ed90cd8d6b2"
+  }
+ ]
 }

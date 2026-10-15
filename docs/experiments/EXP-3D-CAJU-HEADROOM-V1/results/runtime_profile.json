@@ -1,0 +1,80 @@
+{
+ "encode": {
+  "mean": 0.7875629256968386,
+  "median": 0.7661149665946141,
+  "n": 100,
+  "p90": 0.8034900639671833
+ },
+ "extra_compute_by_action": {
+  "FULL": 82.55428939394187,
+  "OFF": 0.0,
+  "SHORT": 8.247147999471053
+ },
+ "failed_reverted": 0,
+ "readout_per_action": {
+  "mean": 1.0560263737477362,
+  "median": 1.0424408670514822,
+  "n": 300,
+  "p90": 1.1873764055548235
+ },
+ "seconds_per_step_11_to_100": {
+  "mean": 0.8455393823618844,
+  "median": 0.8250106810824945,
+  "n": 100,
+  "p90": 0.9186327817774792
+ },
+ "seconds_per_step_1_to_10": {
+  "mean": 0.844260051302379,
+  "median": 0.8247147999471054,
+  "n": 100,
+  "p90": 0.907204553128686
+ },
+ "shards": [
+  {
+   "checkpoint_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+   "episodes": 34,
+   "gpu": "NVIDIA RTX A6000",
+   "max_memory_gb": 5.1,
+   "replay_sha256": "9c5528c169d31773c38762d5392c2f3fdddf713e5c79355ac9a842bcda689f6c",
+   "seconds": 3045.4,
+   "shard": "0/3",
+   "targets": 238,
+   "v1_ds_eval_sha256": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791"
+  },
+  {
+   "checkpoint_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+   "episodes": 33,
+   "gpu": "NVIDIA RTX A6000",
+   "max_memory_gb": 5.1,
+   "replay_sha256": "9c5528c169d31773c38762d5392c2f3fdddf713e5c79355ac9a842bcda689f6c",
+   "seconds": 2945.7,
+   "shard": "1/3",
+   "targets": 231,
+   "v1_ds_eval_sha256": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791"
+  },
+  {
+   "checkpoint_sha256": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+   "episodes": 33,
+   "gpu": "NVIDIA RTX A6000",
+   "max_memory_gb": 5.1,
+   "replay_sha256": "9c5528c169d31773c38762d5392c2f3fdddf713e5c79355ac9a842bcda689f6c",
+   "seconds": 2963.2,
+   "shard": "2/3",
+   "targets": 231,
+   "v1_ds_eval_sha256": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791"
+  }
+ ],
+ "ttt_steps_11_to_100": {
+  "mean": 76.09854441256961,
+  "median": 74.25096129742451,
+  "n": 100,
+  "p90": 82.67695035997312
+ },
+ "ttt_steps_1_to_10": {
+  "mean": 8.44260051302379,
+  "median": 8.247147999471053,
+  "n": 100,
+  "p90": 9.072045531286859
+ },
+ "unit": "seconds, CUDA-synchronized, on GPU 4 of hit shared with other processes (time-sliced)"
+}

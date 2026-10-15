@@ -1,0 +1,44 @@
+==================================================
+CAJU-V1 GATE 0 FINAL
+==================================================
+
+REPOSITORY_HEAD=4f0c0f6 (research/caju-utility-v1)
+WORKTREE_STATUS=0 uncommitted paths
+
+CORE_B_IMPLEMENTATION=released DepthSplat (re10k+dl3dv base, cap 0.1) 7-view CACHE + 100-step Gaussian-state TTT; CORE_B = sqrt(R7 x F7), F7 = ray depth where alpha >= 0.5 else R7
+TTT_UPDATED_TENSORS=Gaussian means, per-axis log-scales (eigenbasis, rotations fixed), opacity logits, SH DC, higher SH; network weights frozen
+TTT_LOSS=relative L1 of the raw rendered depth on valid measured pixels + 0.5 x RGB L1, 7 arrived frames
+JEPA_FEATURE_STATUS=NOT_IMPLEMENTED
+
+N_EPISODES=100 formal (CAJU_SEL 32 + CAJU_EVAL 68) + 16 pilot
+N_PHYSICAL_PLACES=50 formal (16 + 34) + 8 pilot
+ACTION_SET=OFF (0 steps) / SHORT_TTT (10) / FULL_TTT (100)
+
+OFF_ABSREL=0.1112
+SHORT_TTT_ABSREL=0.1103
+FULL_TTT_ABSREL=0.1082
+
+BEST_FIXED_ACTION=FULL (chosen on CAJU_SEL)
+BEST_FIXED_UTILITY=0.00306
+
+ORACLE_UTILITY=0.00430 (per-episode, in-sample)
+ORACLE_MINUS_FIXED=0.00123
+ORACLE_GAIN_CI=[0.00024, 0.00284]
+PRIMARY_XORACLE_MINUS_FIXED=0.00076 [0.00005, 0.00191] (cross-query oracle, the preregistered primary)
+
+OFF_OPTIMAL_FRACTION=0.191
+SHORT_OPTIMAL_FRACTION=0.059
+FULL_OPTIMAL_FRACTION=0.750
+
+TTT_QUALITY_COST_PARETO=fixed: OFF 0 steps U=0; SHORT 10 steps U=0.00090; FULL 100 steps U=0.00306; cross-query oracle advantage over fixed mixtures at 10 steps 0.00028, 100 steps 0.00076, 25 steps 0.00111, 5 steps 0.00032, 50 steps 0.00143
+GATE0_STATUS=NOT_ESTABLISHED (NO_USEFUL_DYNAMIC_ACTION_SPACE)
+
+GATE1_ALLOWED=false (JEPA_FEATURE_STATUS=NOT_IMPLEMENTED; Gate 0 not passed)
+FINAL_HOLDOUT_TOUCHED=false
+GITHUB_PUSHED=false
+
+TESTS=17 passed, 0 failed, 0 skipped
+INTEGRITY=PASS_WITH_AMENDMENT_1
+REPORT_DIR=outputs/EXP-3D-CAJU-HEADROOM-V1 (all files) and docs/experiments/EXP-3D-CAJU-HEADROOM-V1 (records)
+
+==================================================

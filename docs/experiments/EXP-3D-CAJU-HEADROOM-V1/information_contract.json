@@ -1,0 +1,8 @@
+{
+ "replay": "reads the RGB, measured depth and camera of the 7 arrived frames only; query and history frames contribute their cameras (metadata) to render predictions; every opened file is audited per episode and must belong to an arrived frame",
+ "pre_update_features": "computed from the CACHE state rendered at the 7 arrived frames and their measured RGB-D only; no query or history camera, image or depth",
+ "future_query_camera_to_controller": false,
+ "geometry": "R7 from the measured depth of the 7 arrived frames (teacher path, purpose logged) at the query and history cameras",
+ "scoring": "query and history depth are read only after every seal of the cohort is complete; the fixed action is chosen on CAJU_SEL and its record hashed before any CAJU_EVAL depth is read",
+ "final_holdout_touched": false
+}

@@ -1,0 +1,168 @@
+{
+ "by_cohort": {
+  "CAJU_EVAL": {
+   "CORE_B": 0.108166155700313,
+   "FUSE_BASE": 0.0858584555875704,
+   "FUSE_BASE_W": 0.1065478004661173,
+   "KF_BASE": 0.10608788945555038
+  },
+  "CAJU_PILOT": {
+   "CORE_B": 0.17394223059626274,
+   "FUSE_BASE": 0.14727676328570644,
+   "FUSE_BASE_W": 0.1697988252178828,
+   "KF_BASE": 0.1691127633698055
+  },
+  "CAJU_SEL": {
+   "CORE_B": 0.10947274038582905,
+   "FUSE_BASE": 0.09868559043511191,
+   "FUSE_BASE_W": 0.10674399575467883,
+   "KF_BASE": 0.10645746957345512
+  }
+ },
+ "gain_quartiles": [
+  -0.055476101392262944,
+  0.0014114052248764479,
+  0.004802988915725958,
+  0.018962436444612867,
+  0.4421127667817208
+ ],
+ "ground_truth_reads": 232,
+ "means": {
+  "CORE_B": 0.11759915490955188,
+  "FUSE_BASE": 0.09786846626249715,
+  "FUSE_BASE_W": 0.11532620258044676,
+  "KF_BASE": 0.11488292864866276
+ },
+ "pixel_absrel": {
+  "cov_CORE_B": 0.047945871246487325,
+  "cov_FUSE_BASE": 0.044743934255888095,
+  "unc_CORE_B": 0.2880202595154726,
+  "unc_FUSE_BASE": 0.2278485755999666
+ },
+ "places": 58,
+ "primary_core_b_minus_fuse_base": {
+  "absolute_top1_contribution": 0.30778090532227376,
+  "absolute_top3_contribution": 0.47461640207010347,
+  "bootstrap": {
+   "CI": "percentile95",
+   "draws": 10000,
+   "seed": 20260928,
+   "unit": "scene"
+  },
+  "checks": {
+   "every_leave_one_scene_out_gain_positive": true,
+   "mean_ci_and_scene_consistency": true,
+   "positive_top1_share_at_most_0_5": true
+  },
+  "ci95": [
+   0.007162413666537825,
+   0.03795057741944214
+  ],
+  "improved_tied_worse": [
+   48,
+   0,
+   10
+  ],
+  "left": "CORE_B",
+  "loso_range": [
+   0.012320476749955319,
+   0.021050106016165554
+  ],
+  "mean": 0.019730688647054725,
+  "median": 0.004802988915725958,
+  "n_scenes": 58,
+  "negative": 10,
+  "positive": 48,
+  "positive_top1_contribution": 0.3426124805088813,
+  "positive_top3_contribution": 0.5283287559154205,
+  "right": "FUSE_BASE",
+  "scenes": 58,
+  "status": "SUPPORTED",
+  "tied": 0
+ },
+ "queries": 232,
+ "secondary": {
+  "FUSE_BASE_W_minus_FUSE_BASE": {
+   "absolute_top1_contribution": 0.34284180324067215,
+   "absolute_top3_contribution": 0.5139138785745605,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.00537096344749586,
+    0.03542311676040361
+   ],
+   "improved_tied_worse": [
+    43,
+    0,
+    15
+   ],
+   "left": "FUSE_BASE_W",
+   "loso_range": [
+    0.010022413546451288,
+    0.018484537095613637
+   ],
+   "mean": 0.017457736317949595,
+   "median": 0.003477069494564028,
+   "n_scenes": 58,
+   "negative": 15,
+   "positive": 43,
+   "positive_top1_contribution": 0.38377291388649737,
+   "positive_top3_contribution": 0.5752688989586823,
+   "right": "FUSE_BASE",
+   "scenes": 58,
+   "status": "PARTIAL",
+   "tied": 0
+  },
+  "KF_BASE_minus_FUSE_BASE": {
+   "absolute_top1_contribution": 0.34389698533684976,
+   "absolute_top3_contribution": 0.5173651845810763,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    0.004880133537428994,
+    0.035009451999508966
+   ],
+   "improved_tied_worse": [
+    41,
+    0,
+    17
+   ],
+   "left": "KF_BASE",
+   "loso_range": [
+    0.009565701242586567,
+    0.018041792955512722
+   ],
+   "mean": 0.017014462386165583,
+   "median": 0.003080890284039156,
+   "n_scenes": 58,
+   "negative": 17,
+   "positive": 41,
+   "positive_top1_contribution": 0.38891075284385307,
+   "positive_top3_contribution": 0.5850847550569243,
+   "right": "FUSE_BASE",
+   "scenes": 58,
+   "status": "PARTIAL",
+   "tied": 0
+  }
+ },
+ "verdict": "REPLICATED",
+ "worse_places": 10
+}

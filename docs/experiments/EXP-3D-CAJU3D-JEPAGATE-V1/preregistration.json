@@ -1,0 +1,77 @@
+{
+ "experiment": "EXP-3D-CAJU3D-JEPAGATE-V1",
+ "locked_at": "2026-10-14 20:37:12 +0800",
+ "root_files": {
+  "PROTOCOL.md": "33e671cda02ab1e39e555759c244a8b19e7b116e404eb42b50e229f0f9217249",
+  "frame_role_lock.json": "897d6524893559283b8ab495b31879d322f66a7eb1df11544abea09f796c0225",
+  "reused_seals.json": "fa42fb84c85df504f7cb30cd3acc2232be78c3528fea8e742d346a4ffa410577",
+  "model/hjepa_final.pth": "a3f7789312435c04f3faed924213a66d2c31c6a2f5187307f47da35d3bf960c8",
+  "model/train_log.json": "6df4d2cbc513a4915a0be15677154c47951fd092b7f74d85c2e1f5e455caef6b"
+ },
+ "code": {
+  "gate_chain.sh": "d5879ef880cdd03bb93a45d870d82a79ea7fd79c0e81ff757730970b70c02cb9",
+  "gate_jobs.sh": "43f0c2184e22fb652704ef44e98f95578878d26bae959164926214890deb4bab",
+  "gate_lock.py": "f73fe02a8bf02629cfebc3fca247fd394e12cec5b21e76f52e43b616041fe4c5",
+  "gate_rehearsal_check.py": "be42cf3b3aa5c25885736e639ba7f9ff7db1e0d1693e4d5fea4593f3e781bed8",
+  "gate_score.py": "ad8a2aa9512e6b9c27c79fa01e07f23dcda84bf993581fa02fd0e83bb1486080",
+  "gate_ttt.py": "df8a89b1309f5ce806e4ff1b69bd40f7194f2d8aa1b8f8b2d27dbdd737c0a5bb",
+  "gates.py": "2672e8e8dac8a95d8ae78ca6fcb4793428bbd0d50120b6de5c196565ce638440",
+  "hjepa.py": "23259fc76b008b4d11e228ae95a96744bebf84700dc9e65ea6729b541bd51c52",
+  "test_gate_rules.py": "aa72d7b4fcdfbf43b8ac9da1e72e75733658f2edace25677da33067dfb013fe0",
+  "test_gates.py": "671f529e61a3fef160fce44b6f48bb1380ce182e8b4d8af2c03f27642bedd446",
+  "test_hjepa.py": "1dc71f6763d43ed9287d394021aa73375dc74e66b731515e7eaf3fc61b99f0b3",
+  "train_hjepa.py": "6326a9ceef8db4bdcc8a7057baf584a23ad5ed5459272b76695244b8d4488625"
+ },
+ "imported": {
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/train_jepa.py": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+  "EXP-3D-CAJU-HEADROOM-V1/code/caju_logic.py": "23a3f022d5734a7c87354b1f5a37cbec3dbb1e73fca292573880306f2a63cc42",
+  "EXP-3D-CAJU3D-ENGINE-V1/code/engine_core.py": "0bb6469f29448529d709690cdb2646e1fdb4824ea8eb71684b4bb4d46be2dade",
+  "EXP-3D-CAJU3D-ENGINE-V1/code/engine_score.py": "04f82046e3a84fcaabcf2c8b2ab807cbe78d1571f425b67937a14f5927dbc7a0",
+  "EXP-3D-CAJU3D-ENGINE-V1/code/engine_logic.py": "e65066bc836094deefd0eef5aa770ea0ca4eb249bca2bb609e13a7134f0b2b44"
+ },
+ "jepa_training": {
+  "steps": "30000",
+  "final_eval": {
+   "step": 30000,
+   "nll": -0.0036756697272721794,
+   "mse": 0.6672024781582877,
+   "logerr_logp_corr": 0.7810356174013577
+  },
+  "train_scans": 182,
+  "dev_monitor_scans": 8
+ },
+ "constants": {
+  "share": 0.1,
+  "ttt_steps": 100,
+  "scale_max": 0.1,
+  "inc": {
+   "cos_lo": 0.1,
+   "cos_hi": 0.4,
+   "edge_max": 0.1
+  },
+  "dev_arms": [
+   "JEPA",
+   "DEPTH",
+   "INC",
+   "RANDOM"
+  ],
+  "conf_arms": [
+   "JEPA",
+   "DEPTH"
+  ]
+ },
+ "dev_rule": "GO iff GATE_JEPA's DEV mean (Core B readout) is below both CORE_B and GATE_DEPTH",
+ "primary": "CONF_SYSTEM3: GATE_DEPTH - GATE_JEPA, V1 paired place bootstrap + V2 gate; P2 the same on CONF_VAL",
+ "branches": [
+  "JEPA_ADDED_VALUE_SUPPORTED",
+  "JEPA_ADDED_VALUE_PARTIAL",
+  "JEPA_ADDED_VALUE_NOT_ESTABLISHED",
+  "JEPA_ADDED_VALUE_HARMFUL",
+  "STOP_AT_DEV"
+ ],
+ "final_holdout_touched": false
+}

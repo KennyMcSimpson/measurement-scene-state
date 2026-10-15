@@ -1,0 +1,94 @@
+{
+ "experiment": "EXP-3D-CAJU3D-KFUSE-V1",
+ "locked_at": "2026-10-14 21:56:35 +0800",
+ "root_files": {
+  "PROTOCOL.md": "bb21c7ebce36c70cb96da40c7a0bf06558d2652336c490ead4bce9b25cd5a64c",
+  "frame_role_lock.json": "dab5e35b3b6f39653368cf9138d6238b2e42cabd570ce79c6d82b30db12cc7a9",
+  "reused_seals.json": "3b6f47d8f227f118f4059321a1420283d3576b12f08ab8d294a0b2e3ac8c141e"
+ },
+ "code": {
+  "kf_data.py": "4dca40a52e1aba3b562fd4a8d59713159ae28d51235ee079349e8f4810f03995",
+  "kf_jepa_core.py": "836ee400009aeaf2870946061a53fb577a6ab0294418aafa60abf5fe192000c3",
+  "kf_jobs.sh": "f5ade4c52a0ae69540ad0be01f03b3de47cd780993a4146abbefd788e8208964",
+  "kf_lock.py": "08d0e2262365376943b15f2fc97b887084ffc7ca2dd7a19ad76fddffa37c8109",
+  "kf_logic.py": "f2a87e7c3ebc70c1d8d3ee0376ef29d09d25848bfcf63ba3cfb165d08c5bef61",
+  "kf_make_root.py": "745225820471a19569a226a52ab27b0f710e699cb89f54769885f6f22d3ec351",
+  "kf_query_jepa.py": "b38f003d44e419ad0461f025ce76b8a4aae58bd0dc8be663a0d774e5ea3c3280",
+  "kf_score.py": "4179aab7d25a27a734d1e7f7eafc6878c775c58b2975131afe89bf4d7dc5b000",
+  "test_kf.py": "e8032734677646a4bcac3978a9d119447b2a5391a1d0199082d320fc83261e34"
+ },
+ "imported": {
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+  "EXP-3D-CAJU-HEADROOM-V1/code/caju_logic.py": "23a3f022d5734a7c87354b1f5a37cbec3dbb1e73fca292573880306f2a63cc42",
+  "EXP-3D-CAJU3D-ENGINE-V1/code/engine_score.py": "04f82046e3a84fcaabcf2c8b2ab807cbe78d1571f425b67937a14f5927dbc7a0",
+  "EXP-3D-CAJU3D-ENGINE-V1/code/engine_logic.py": "e65066bc836094deefd0eef5aa770ea0ca4eb249bca2bb609e13a7134f0b2b44",
+  "EXP-3D-CAJU3D-JEPAGATE-V1/code/hjepa.py": "23259fc76b008b4d11e228ae95a96744bebf84700dc9e65ea6729b541bd51c52",
+  "EXP-3D-CAJU3D-JEPAGATE-V1/model/hjepa_final.pth": "a3f7789312435c04f3faed924213a66d2c31c6a2f5187307f47da35d3bf960c8",
+  "EXP-3D-CAJU3D-JEPAGATE-V1/preregistration.json": "82d86a50c8e798431bc2b469d5e2821a8fc7169b05045ce54d6ea0ce75dee90b"
+ },
+ "constants": {
+  "alpha_min": 0.5,
+  "weight_grid": [
+   0.0,
+   0.05,
+   0.1,
+   0.15,
+   0.2,
+   0.25,
+   0.3,
+   0.35,
+   0.4,
+   0.45,
+   0.5,
+   0.55,
+   0.6,
+   0.65,
+   0.7,
+   0.75,
+   0.8,
+   0.85,
+   0.9,
+   0.95,
+   1.0
+  ],
+  "feature_bins": {
+   "DIS": 8,
+   "ALPHA": 4,
+   "LOGP": 4
+  },
+  "arms": {
+   "GEO_U": [],
+   "KF_DIS": [
+    "DIS"
+   ],
+   "KF_BASE": [
+    "DIS",
+    "ALPHA",
+    "NEAR"
+   ],
+   "KF_JEPA": [
+    "DIS",
+    "LOGP",
+    "NEAR"
+   ],
+   "KF_FULL": [
+    "DIS",
+    "ALPHA",
+    "LOGP",
+    "NEAR"
+   ]
+  }
+ },
+ "fit": "FIT_SYSTEM + FIT_SYSTEM2: quantile edges on the covered pixels; per bin the grid weight minimizing the place-weighted AbsRel; frozen and hashed before any confirmation truth is read",
+ "primary": "P1 CONF_SYSTEM3: KF_BASE - KF_JEPA, V1 paired place bootstrap + V2 gate; P2 the same on CONF_VAL",
+ "branches": [
+  "JEPA_KALMAN_SUPPORTED",
+  "JEPA_KALMAN_PARTIAL",
+  "JEPA_KALMAN_NOT_ESTABLISHED",
+  "JEPA_KALMAN_HARMFUL"
+ ],
+ "final_holdout_touched": false
+}

@@ -66,3 +66,6 @@ select = ["B", "E", "F", "I", "UP"]
 # Kept byte-for-byte: their hashes are recorded in the ARKitScenes cohort locks (candidate_lock source hashes).
 "scripts/prepare_rgbd_arkit_confirm_cohort.py" = ["E501"]
 "scripts/prepare_rgbd_arkit_val_cohort.py" = ["E501"]
+# Kept byte-for-byte as run for EXP-3D-RGBD-ARKIT-SYSTEM4-DATA-V1 (the cohort of
+# EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1).
+"scripts/prepare_rgbd_arkit_system4_cohort.py" = ["E501"]

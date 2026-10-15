@@ -1,0 +1,5642 @@
+{
+ "action_place_mean_absrel": {
+  "CAJU_EVAL": {
+   "FULL": 0.108166155700313,
+   "OFF": 0.11122934648373903,
+   "SHORT": 0.11032964584326437
+  },
+  "CAJU_SEL": {
+   "FULL": 0.10947274038582903,
+   "OFF": 0.1118360905303984,
+   "SHORT": 0.11097130736296743
+  }
+ },
+ "action_place_mean_absrel_f7_readout": {
+  "FULL": 0.10677840642844671,
+  "OFF": 0.11355301769994586,
+  "SHORT": 0.11133096976399548
+ },
+ "cohort": "CAJU_EVAL",
+ "fixed_action": "FULL",
+ "net_utility": "quality only (lambda_c = lambda_h = 0, fixed before any utility was seen); cost and damage are reported separately (Pareto, history_damage, observed_damage)",
+ "per_episode": {
+  "arkit_41048230/A": {
+   "cost_seconds": {
+    "FULL": 86.51018075994216,
+    "SHORT": 8.379780700895935
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 93.79453481940187,
+    "camera_baseline_max_m": 0.309299011174705,
+    "coverage": 1.0,
+    "depthsplat_vs_measured_absrel": 0.5607686638832092,
+    "depthsplat_vs_measured_median_ratio": 0.84819096326828,
+    "extent_m": 1.366034746170044,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5250117063522339,
+    "measured_depth_p50": 1.3660361766815186,
+    "measured_depth_p90": 3.334707140922547,
+    "measured_depth_spread": 2.0568235911554287,
+    "residual_context_mean": 0.04350930455602836,
+    "residual_norm_covered_mean": 0.035934765942878255,
+    "residual_norm_covered_p50": 0.019135738856428493,
+    "residual_norm_covered_p90": 0.0798517969702324,
+    "residual_norm_covered_p99": 0.3059047819149709,
+    "residual_raw_mean": 0.048729707779826804,
+    "residual_raw_p50": 0.026595982183774347,
+    "residual_raw_p90": 0.11642661781521745,
+    "residual_raw_p99": 0.32716538993803557,
+    "residual_stream_mean": 0.05264501019767565,
+    "residual_top10_mass_share": 0.40927520270688794,
+    "residual_view_max": 0.0635027741773169,
+    "residual_view_min": 0.027962242058904258,
+    "residual_view_std": 0.012669737182902171,
+    "rgb_l1": 0.04871706223839283,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.00869564201377521,
+     "loss": 0.01794841301591607,
+     "rgb_l1": 0.018505542004281724
+    },
+    "OFF": {
+     "depth_term": 0.04872970777982681,
+     "loss": 0.07308823889902323,
+     "rgb_l1": 0.04871706223839283
+    },
+    "SHORT": {
+     "depth_term": 0.031712476135582444,
+     "loss": 0.04993444122536182,
+     "rgb_l1": 0.03644393017955876
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0023444695497225054,
+    "OFF": 0.0,
+    "SHORT": 0.001619416432972226
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.011987296864390373,
+     "mean_error_increase": -0.01023234265377218,
+     "reliable_pixels": 118709
+    },
+    "SHORT": {
+     "broken_share": 0.0035886073019355536,
+     "mean_error_increase": -0.004184283629621666,
+     "reliable_pixels": 118709
+    }
+   },
+   "place": "arkit_visit_381648",
+   "quality_utility": {
+    "FULL": 0.011431885697004814,
+    "OFF": 0.0,
+    "SHORT": 0.00351323497679646
+   },
+   "ttt_failed": false
+  },
+  "arkit_41048230/B": {
+   "cost_seconds": {
+    "FULL": 87.52956809592433,
+    "SHORT": 8.656750634079799
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 96.42419706910506,
+    "camera_baseline_max_m": 0.309299011174705,
+    "coverage": 0.9975795149803162,
+    "depthsplat_vs_measured_absrel": 0.13955755531787872,
+    "depthsplat_vs_measured_median_ratio": 0.9691324234008789,
+    "extent_m": 1.2884231805801392,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5298547327518464,
+    "measured_depth_p50": 1.2884325981140137,
+    "measured_depth_p90": 3.334707140922547,
+    "measured_depth_spread": 2.1769492733080464,
+    "residual_context_mean": 0.0313203889056514,
+    "residual_norm_covered_mean": 0.02615197598594169,
+    "residual_norm_covered_p50": 0.009227111334950435,
+    "residual_norm_covered_p90": 0.055229082272591754,
+    "residual_norm_covered_p99": 0.30233671188616945,
+    "residual_raw_mean": 0.044875253269079304,
+    "residual_raw_p50": 0.01587667449674048,
+    "residual_raw_p90": 0.1212110194895628,
+    "residual_raw_p99": 0.3886692081224926,
+    "residual_stream_mean": 0.05504140154165024,
+    "residual_top10_mass_share": 0.5119446492480042,
+    "residual_view_max": 0.07176039145435678,
+    "residual_view_min": 0.01953652735069672,
+    "residual_view_std": 0.019622826897638043,
+    "rgb_l1": 0.04326394476152776,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.006668706201761499,
+     "loss": 0.015394821927175603,
+     "rgb_l1": 0.017452231450828207
+    },
+    "OFF": {
+     "depth_term": 0.04487525326907931,
+     "loss": 0.0665072256498432,
+     "rgb_l1": 0.04326394476152776
+    },
+    "SHORT": {
+     "depth_term": 0.027049982426773513,
+     "loss": 0.04354469789526613,
+     "rgb_l1": 0.03298943093698524
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0007922352159080159,
+    "OFF": 0.0,
+    "SHORT": 0.0008227452408787334
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.008538675494492054,
+     "mean_error_increase": -0.005640592648610804,
+     "reliable_pixels": 127186
+    },
+    "SHORT": {
+     "broken_share": 0.0028147753328084946,
+     "mean_error_increase": -0.00275378021182927,
+     "reliable_pixels": 127186
+    }
+   },
+   "place": "arkit_visit_381648",
+   "quality_utility": {
+    "FULL": 0.006812497493888816,
+    "OFF": 0.0,
+    "SHORT": 0.0025109596211319307
+   },
+   "ttt_failed": false
+  },
+  "arkit_41048240/A": {
+   "cost_seconds": {
+    "FULL": 84.2923796090763,
+    "SHORT": 8.350470945006236
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 151.0324733794448,
+    "camera_baseline_max_m": 0.7723923678437585,
+    "coverage": 0.9987514019012451,
+    "depthsplat_vs_measured_absrel": 0.3345842659473419,
+    "depthsplat_vs_measured_median_ratio": 0.854361891746521,
+    "extent_m": 1.3702163696289062,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.8077984988689423,
+    "measured_depth_p50": 1.3702229857444763,
+    "measured_depth_p90": 3.0853917598724365,
+    "measured_depth_spread": 1.662206286640288,
+    "residual_context_mean": 0.13752473581021693,
+    "residual_norm_covered_mean": 0.07099650314090658,
+    "residual_norm_covered_p50": 0.033398661106577396,
+    "residual_norm_covered_p90": 0.19270597406418807,
+    "residual_norm_covered_p99": 0.3704116513043186,
+    "residual_raw_mean": 0.08427115419510649,
+    "residual_raw_p50": 0.05260226759171208,
+    "residual_raw_p90": 0.20438569520599603,
+    "residual_raw_p99": 0.37861597813965575,
+    "residual_stream_mean": 0.044330967983773735,
+    "residual_top10_mass_share": 0.3335970808542244,
+    "residual_view_max": 0.17215081406456656,
+    "residual_view_min": 0.03484309254437902,
+    "residual_view_std": 0.04976098538636684,
+    "rgb_l1": 0.05394548652154538,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.04176340518596135,
+     "loss": 0.05385731274205542,
+     "rgb_l1": 0.024187815112188146
+    },
+    "OFF": {
+     "depth_term": 0.08427115419510652,
+     "loss": 0.1112438974558792,
+     "rgb_l1": 0.05394548652154538
+    },
+    "SHORT": {
+     "depth_term": 0.06979443732579446,
+     "loss": 0.09227089410573372,
+     "rgb_l1": 0.0449529135598785
+    }
+   },
+   "history_utility": {
+    "FULL": -0.0002454384703017981,
+    "OFF": 0.0,
+    "SHORT": 0.00034522373303311205
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.021635649725794792,
+     "mean_error_increase": -0.008254815080612984,
+     "reliable_pixels": 83612
+    },
+    "SHORT": {
+     "broken_share": 0.008659044280648232,
+     "mean_error_increase": -0.0038564784546167366,
+     "reliable_pixels": 83612
+    }
+   },
+   "place": "arkit_visit_381542",
+   "quality_utility": {
+    "FULL": -0.0024933856954613143,
+    "OFF": 0.0,
+    "SHORT": -0.0001376088337258774
+   },
+   "ttt_failed": false
+  },
+  "arkit_41048240/B": {
+   "cost_seconds": {
+    "FULL": 80.50980693288147,
+    "SHORT": 8.064150363905355
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 151.0324733794448,
+    "camera_baseline_max_m": 0.7723923678437585,
+    "coverage": 0.9997349381446838,
+    "depthsplat_vs_measured_absrel": 0.3078271150588989,
+    "depthsplat_vs_measured_median_ratio": 0.8847020864486694,
+    "extent_m": 1.220065951347351,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.8113848268985748,
+    "measured_depth_p50": 1.2200661301612854,
+    "measured_depth_p90": 2.4254239797592168,
+    "measured_depth_spread": 1.3229112037126018,
+    "residual_context_mean": 0.06319815354642544,
+    "residual_norm_covered_mean": 0.03881413021007953,
+    "residual_norm_covered_p50": 0.016675623166010317,
+    "residual_norm_covered_p90": 0.09146842396449698,
+    "residual_norm_covered_p99": 0.3072204440475371,
+    "residual_raw_mean": 0.052346957612624284,
+    "residual_raw_p50": 0.028932153600635047,
+    "residual_raw_p90": 0.12067840723527024,
+    "residual_raw_p99": 0.3541117319301552,
+    "residual_stream_mean": 0.04420856066227341,
+    "residual_top10_mass_share": 0.41175856363448854,
+    "residual_view_max": 0.0853196371554303,
+    "residual_view_min": 0.025739455391042356,
+    "residual_view_std": 0.019776418697103865,
+    "rgb_l1": 0.046306988150496144,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.016603826234342353,
+     "loss": 0.024714594340526058,
+     "rgb_l1": 0.016221536212367407
+    },
+    "OFF": {
+     "depth_term": 0.05234695761262428,
+     "loss": 0.07550045168787235,
+     "rgb_l1": 0.046306988150496144
+    },
+    "SHORT": {
+     "depth_term": 0.03907456460571351,
+     "loss": 0.05740141321713622,
+     "rgb_l1": 0.03665369722284541
+    }
+   },
+   "history_utility": {
+    "FULL": -0.0002507743925699579,
+    "OFF": 0.0,
+    "SHORT": 0.0009573315399773186
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.01460970751941204,
+     "mean_error_increase": -0.010544838254258672,
+     "reliable_pixels": 111775
+    },
+    "SHORT": {
+     "broken_share": 0.005770521238446236,
+     "mean_error_increase": -0.003822033639531937,
+     "reliable_pixels": 111775
+    }
+   },
+   "place": "arkit_visit_381542",
+   "quality_utility": {
+    "FULL": -0.0016619771619630352,
+    "OFF": 0.0,
+    "SHORT": 1.8542862173620556e-05
+   },
+   "ttt_failed": false
+  },
+  "arkit_41048262/A": {
+   "cost_seconds": {
+    "FULL": 130.39760158699937,
+    "SHORT": 12.499326159013435
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 75.70896676527944,
+    "camera_baseline_max_m": 2.350283753579408,
+    "coverage": 0.9982282519340515,
+    "depthsplat_vs_measured_absrel": 0.1287512332201004,
+    "depthsplat_vs_measured_median_ratio": 0.9540866613388062,
+    "extent_m": 1.1741013526916504,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6725260734558106,
+    "measured_depth_p50": 1.1741080284118652,
+    "measured_depth_p90": 3.310347080230714,
+    "measured_depth_spread": 2.2466595431962944,
+    "residual_context_mean": 0.08137755542124274,
+    "residual_norm_covered_mean": 0.06523380193400907,
+    "residual_norm_covered_p50": 0.030043745107462796,
+    "residual_norm_covered_p90": 0.1666347252814127,
+    "residual_norm_covered_p99": 0.43861365857269696,
+    "residual_raw_mean": 0.09387148396076016,
+    "residual_raw_p50": 0.05445737928661439,
+    "residual_raw_p90": 0.2280981330744423,
+    "residual_raw_p99": 0.4628220958011744,
+    "residual_stream_mean": 0.1032419303653982,
+    "residual_top10_mass_share": 0.36848494544971727,
+    "residual_view_max": 0.13607811794329158,
+    "residual_view_min": 0.06044104438865318,
+    "residual_view_std": 0.021636871653940935,
+    "rgb_l1": 0.06899802877086088,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.020373038825419222,
+     "loss": 0.02936296899579744,
+     "rgb_l1": 0.017979860340756434
+    },
+    "OFF": {
+     "depth_term": 0.09387148396076013,
+     "loss": 0.12837049834619058,
+     "rgb_l1": 0.06899802877086088
+    },
+    "SHORT": {
+     "depth_term": 0.06906947504204958,
+     "loss": 0.09459679248800663,
+     "rgb_l1": 0.05105463489191412
+    }
+   },
+   "history_utility": {
+    "FULL": 0.03823790536857296,
+    "OFF": 0.0,
+    "SHORT": 0.007794274273547078
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.03415435925126076,
+     "mean_error_increase": -0.008015861797330001,
+     "reliable_pixels": 91877
+    },
+    "SHORT": {
+     "broken_share": 0.008827018551528454,
+     "mean_error_increase": -0.001963791666813394,
+     "reliable_pixels": 91877
+    }
+   },
+   "place": "arkit_visit_381650",
+   "quality_utility": {
+    "FULL": 0.0067017790208051195,
+    "OFF": 0.0,
+    "SHORT": 0.001838082346220092
+   },
+   "ttt_failed": false
+  },
+  "arkit_41048262/B": {
+   "cost_seconds": {
+    "FULL": 128.9014756209217,
+    "SHORT": 13.301649899920449
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 68.37891049848182,
+    "camera_baseline_max_m": 2.251319264156614,
+    "coverage": 0.998583972454071,
+    "depthsplat_vs_measured_absrel": 0.12171685695648193,
+    "depthsplat_vs_measured_median_ratio": 0.9475937485694885,
+    "extent_m": 1.1986868381500244,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6721755027770996,
+    "measured_depth_p50": 1.198689043521881,
+    "measured_depth_p90": 2.825923728942872,
+    "measured_depth_spread": 1.7967530760419912,
+    "residual_context_mean": 0.06639784955658384,
+    "residual_norm_covered_mean": 0.04523628869584828,
+    "residual_norm_covered_p50": 0.022659804439667322,
+    "residual_norm_covered_p90": 0.10775091802222082,
+    "residual_norm_covered_p99": 0.3502073364315078,
+    "residual_raw_mean": 0.07463214238028829,
+    "residual_raw_p50": 0.04446590018854586,
+    "residual_raw_p90": 0.180019333822472,
+    "residual_raw_p99": 0.4164987426890552,
+    "residual_stream_mean": 0.08080786199806661,
+    "residual_top10_mass_share": 0.3727355194450672,
+    "residual_view_max": 0.10100616676141567,
+    "residual_view_min": 0.058567028194570075,
+    "residual_view_std": 0.014404803565206027,
+    "rgb_l1": 0.058525098334997076,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.015322492872374492,
+     "loss": 0.02384361752950924,
+     "rgb_l1": 0.017042249314269498
+    },
+    "OFF": {
+     "depth_term": 0.07463214238028829,
+     "loss": 0.10389469154778683,
+     "rgb_l1": 0.058525098334997076
+    },
+    "SHORT": {
+     "depth_term": 0.05196931897174549,
+     "loss": 0.07352287706302323,
+     "rgb_l1": 0.04310711618255547
+    }
+   },
+   "history_utility": {
+    "FULL": 0.02016568292182,
+    "OFF": 0.0,
+    "SHORT": 0.005065745641400776
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.016627617180347443,
+     "mean_error_increase": -0.010483646470540519,
+     "reliable_pixels": 105848
+    },
+    "SHORT": {
+     "broken_share": 0.006329831667244434,
+     "mean_error_increase": -0.002701991405786492,
+     "reliable_pixels": 105848
+    }
+   },
+   "place": "arkit_visit_381650",
+   "quality_utility": {
+    "FULL": 0.004099065396390371,
+    "OFF": 0.0,
+    "SHORT": 0.0011679148078597781
+   },
+   "ttt_failed": false
+  },
+  "arkit_41098076/A": {
+   "cost_seconds": {
+    "FULL": 89.71733339992352,
+    "SHORT": 9.356248585972935
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 121.68099090340255,
+    "camera_baseline_max_m": 1.8283336668824244,
+    "coverage": 0.8106166124343872,
+    "depthsplat_vs_measured_absrel": 0.9882619380950928,
+    "depthsplat_vs_measured_median_ratio": 0.5893176794052124,
+    "extent_m": 0.6691104769706726,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.29052533209323883,
+    "measured_depth_p50": 0.6691417098045349,
+    "measured_depth_p90": 1.7197559356689456,
+    "measured_depth_spread": 2.1359161783431553,
+    "residual_context_mean": 0.401011926048148,
+    "residual_norm_covered_mean": 0.06884937127792477,
+    "residual_norm_covered_p50": 0.01067506693196895,
+    "residual_norm_covered_p90": 0.2279437108637714,
+    "residual_norm_covered_p99": 0.783090884413727,
+    "residual_raw_mean": 0.23694234892655694,
+    "residual_raw_p50": 0.08087865449970909,
+    "residual_raw_p90": 0.7382812018466212,
+    "residual_raw_p99": 0.9377912850352729,
+    "residual_stream_mean": 0.1138901660853637,
+    "residual_top10_mass_share": 0.35129268055799495,
+    "residual_view_max": 0.41340997166965815,
+    "residual_view_min": 0.04491208964949658,
+    "residual_view_std": 0.1637516208875391,
+    "rgb_l1": 0.12752704727708394,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.012462998223737011,
+     "loss": 0.025150768093327586,
+     "rgb_l1": 0.025375539739181153
+    },
+    "OFF": {
+     "depth_term": 0.236942348926557,
+     "loss": 0.30070587256509895,
+     "rgb_l1": 0.12752704727708394
+    },
+    "SHORT": {
+     "depth_term": 0.19418973274168824,
+     "loss": 0.2476442827817637,
+     "rgb_l1": 0.10690910008015095
+    }
+   },
+   "history_utility": {
+    "FULL": -0.012263835749537655,
+    "OFF": 0.0,
+    "SHORT": -0.0027598062681035984
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.000435325491707772,
+     "mean_error_increase": -0.005660171946542532,
+     "reliable_pixels": 87291
+    },
+    "SHORT": {
+     "broken_share": 0.0013403443153947592,
+     "mean_error_increase": -0.0013641361030097311,
+     "reliable_pixels": 87291
+    }
+   },
+   "place": "arkit_visit_381877",
+   "quality_utility": {
+    "FULL": 0.0058438974202677935,
+    "OFF": 0.0,
+    "SHORT": 0.0014109202496740587
+   },
+   "ttt_failed": false
+  },
+  "arkit_41098076/B": {
+   "cost_seconds": {
+    "FULL": 92.25073421210982,
+    "SHORT": 9.168669641949236
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 122.58101515289036,
+    "camera_baseline_max_m": 1.8158521966585193,
+    "coverage": 0.9918805956840515,
+    "depthsplat_vs_measured_absrel": 0.5266448259353638,
+    "depthsplat_vs_measured_median_ratio": 0.8021968007087708,
+    "extent_m": 0.9754401445388794,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.3029226064682007,
+    "measured_depth_p50": 0.9754402935504913,
+    "measured_depth_p90": 1.7227650523185731,
+    "measured_depth_spread": 1.455591341918333,
+    "residual_context_mean": 0.13154794178245696,
+    "residual_norm_covered_mean": 0.07272567347171545,
+    "residual_norm_covered_p50": 0.013525965882917676,
+    "residual_norm_covered_p90": 0.1982215712038924,
+    "residual_norm_covered_p99": 0.7481026363800142,
+    "residual_raw_mean": 0.1214090198439726,
+    "residual_raw_p50": 0.07075709484731257,
+    "residual_raw_p90": 0.32139818066906645,
+    "residual_raw_p99": 0.7475909371151768,
+    "residual_stream_mean": 0.11380482839010933,
+    "residual_top10_mass_share": 0.3942305224426677,
+    "residual_view_max": 0.28082294233405714,
+    "residual_view_min": 0.04925626986578664,
+    "residual_view_std": 0.07375480886715642,
+    "rgb_l1": 0.07522754618751151,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.011227710252646033,
+     "loss": 0.02161210681311315,
+     "rgb_l1": 0.020768793120934232
+    },
+    "OFF": {
+     "depth_term": 0.1214090198439726,
+     "loss": 0.15902279293772836,
+     "rgb_l1": 0.07522754618751151
+    },
+    "SHORT": {
+     "depth_term": 0.08423750357074,
+     "loss": 0.11502766067595946,
+     "rgb_l1": 0.06158031421043892
+    }
+   },
+   "history_utility": {
+    "FULL": -0.010082894420245098,
+    "OFF": 0.0,
+    "SHORT": -0.002532509661574839
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0008619134896434844,
+     "mean_error_increase": -0.007547377131762332,
+     "reliable_pixels": 99778
+    },
+    "SHORT": {
+     "broken_share": 0.0010022249771282077,
+     "mean_error_increase": -0.0021682413206887616,
+     "reliable_pixels": 99778
+    }
+   },
+   "place": "arkit_visit_381877",
+   "quality_utility": {
+    "FULL": 0.005111905778314246,
+    "OFF": 0.0,
+    "SHORT": 0.0011225919376031193
+   },
+   "ttt_failed": false
+  },
+  "arkit_41159488/A": {
+   "cost_seconds": {
+    "FULL": 82.92847344907932,
+    "SHORT": 8.189447951037437
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 86.16188636073653,
+    "camera_baseline_max_m": 1.2579035614448073,
+    "coverage": 0.9841587543487549,
+    "depthsplat_vs_measured_absrel": 0.5261374115943909,
+    "depthsplat_vs_measured_median_ratio": 0.9461451172828674,
+    "extent_m": 1.0841790437698364,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6347513139247895,
+    "measured_depth_p50": 1.084184467792511,
+    "measured_depth_p90": 3.6513004064559937,
+    "measured_depth_spread": 2.782320889242351,
+    "residual_context_mean": 0.1283708824104244,
+    "residual_norm_covered_mean": 0.038543125517536046,
+    "residual_norm_covered_p50": 0.018753717589998487,
+    "residual_norm_covered_p90": 0.08254063301045678,
+    "residual_norm_covered_p99": 0.3566759398357986,
+    "residual_raw_mean": 0.08026855831424391,
+    "residual_raw_p50": 0.035901668132730005,
+    "residual_raw_p90": 0.21975668329723994,
+    "residual_raw_p99": 0.6000363090669726,
+    "residual_stream_mean": 0.04419181524210858,
+    "residual_top10_mass_share": 0.48243033273613983,
+    "residual_view_max": 0.2077544396353912,
+    "residual_view_min": 0.025572499300059854,
+    "residual_view_std": 0.056394573052455474,
+    "rgb_l1": 0.05746774530156468,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.01747042173798476,
+     "loss": 0.028109255681907717,
+     "rgb_l1": 0.021277667887845915
+    },
+    "OFF": {
+     "depth_term": 0.08026855831424394,
+     "loss": 0.10900243096502628,
+     "rgb_l1": 0.05746774530156468
+    },
+    "SHORT": {
+     "depth_term": 0.05843701104157646,
+     "loss": 0.08060651224630186,
+     "rgb_l1": 0.044339002409450795
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0024054294985904473,
+    "OFF": 0.0,
+    "SHORT": 0.0011366923934554296
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.011717553250491619,
+     "mean_error_increase": -0.011479721279068924,
+     "reliable_pixels": 114273
+    },
+    "SHORT": {
+     "broken_share": 0.0026865487452596426,
+     "mean_error_increase": -0.003886117916575147,
+     "reliable_pixels": 114273
+    }
+   },
+   "place": "arkit_visit_381612",
+   "quality_utility": {
+    "FULL": 0.007738486436858358,
+    "OFF": 0.0,
+    "SHORT": 0.0018216623414909483
+   },
+   "ttt_failed": false
+  },
+  "arkit_41159488/B": {
+   "cost_seconds": {
+    "FULL": 82.11114978441037,
+    "SHORT": 8.094004015205428
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 86.16188636073653,
+    "camera_baseline_max_m": 1.2579035614448073,
+    "coverage": 0.9992466568946838,
+    "depthsplat_vs_measured_absrel": 0.1450059711933136,
+    "depthsplat_vs_measured_median_ratio": 0.9843593239784241,
+    "extent_m": 0.9634705781936646,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6320775568485261,
+    "measured_depth_p50": 0.9634725749492645,
+    "measured_depth_p90": 2.242238712310791,
+    "measured_depth_spread": 1.6712060076510786,
+    "residual_context_mean": 0.060758149796494874,
+    "residual_norm_covered_mean": 0.025574077957575186,
+    "residual_norm_covered_p50": 0.008618972109114581,
+    "residual_norm_covered_p90": 0.05266212033633041,
+    "residual_norm_covered_p99": 0.3621033398004159,
+    "residual_raw_mean": 0.04971329020279105,
+    "residual_raw_p50": 0.02197554938524058,
+    "residual_raw_p90": 0.11983196537743708,
+    "residual_raw_p99": 0.387361353117694,
+    "residual_stream_mean": 0.04142964550751317,
+    "residual_top10_mass_share": 0.4741169761421116,
+    "residual_view_max": 0.11771416248986033,
+    "residual_view_min": 0.014826092960863868,
+    "residual_view_std": 0.03273415463678905,
+    "rgb_l1": 0.04452742670786443,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.01130558772886408,
+     "loss": 0.01950946677175125,
+     "rgb_l1": 0.016407758085774337
+    },
+    "OFF": {
+     "depth_term": 0.04971329020279105,
+     "loss": 0.07197700355672326,
+     "rgb_l1": 0.04452742670786443
+    },
+    "SHORT": {
+     "depth_term": 0.03234820150657601,
+     "loss": 0.04978275138238541,
+     "rgb_l1": 0.034869099751618796
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0015212275001995623,
+    "OFF": 0.0,
+    "SHORT": 0.00044660846572118496
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.004471545107662678,
+     "mean_error_increase": -0.00794416805931297,
+     "reliable_pixels": 127920
+    },
+    "SHORT": {
+     "broken_share": 0.0034005630295723677,
+     "mean_error_increase": -0.0023672917607685754,
+     "reliable_pixels": 127920
+    }
+   },
+   "place": "arkit_visit_381612",
+   "quality_utility": {
+    "FULL": 0.00442748028353232,
+    "OFF": 0.0,
+    "SHORT": 0.0004060983977632465
+   },
+   "ttt_failed": false
+  },
+  "arkit_41254555/A": {
+   "cost_seconds": {
+    "FULL": 86.25095973908901,
+    "SHORT": 8.625229933066294
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 74.75813139729644,
+    "camera_baseline_max_m": 2.6801549038301227,
+    "coverage": 0.97607421875,
+    "depthsplat_vs_measured_absrel": 0.2241513580083847,
+    "depthsplat_vs_measured_median_ratio": 0.9239902496337891,
+    "extent_m": 2.3857061862945557,
+    "gaussians": 573440,
+    "measured_depth_p10": 1.2860737562179565,
+    "measured_depth_p50": 2.3857091665267944,
+    "measured_depth_p90": 4.57179822921753,
+    "measured_depth_spread": 1.3772527343653773,
+    "residual_context_mean": 0.18936496175559356,
+    "residual_norm_covered_mean": 0.10093881231909473,
+    "residual_norm_covered_p50": 0.03208728718498541,
+    "residual_norm_covered_p90": 0.25018930359052677,
+    "residual_norm_covered_p99": 0.7190293991349412,
+    "residual_raw_mean": 0.13610324323394715,
+    "residual_raw_p50": 0.08784058270686984,
+    "residual_raw_p90": 0.3124222558057418,
+    "residual_raw_p99": 0.7049871473583015,
+    "residual_stream_mean": 0.09615695434271239,
+    "residual_top10_mass_share": 0.35310237197676897,
+    "residual_view_max": 0.21310331126325024,
+    "residual_view_min": 0.05881576848236747,
+    "residual_view_std": 0.0574750758337563,
+    "rgb_l1": 0.06364883556275237,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.05977691149274328,
+     "loss": 0.07259944083200393,
+     "rgb_l1": 0.02564505867852128
+    },
+    "OFF": {
+     "depth_term": 0.13610324323394718,
+     "loss": 0.16792766101532336,
+     "rgb_l1": 0.06364883556275237
+    },
+    "SHORT": {
+     "depth_term": 0.11221774650537561,
+     "loss": 0.13838147087979835,
+     "rgb_l1": 0.052327448748845505
+    }
+   },
+   "history_utility": {
+    "FULL": 0.027868755872307194,
+    "OFF": 0.0,
+    "SHORT": 0.006980648143447038
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.07709688693284988,
+     "mean_error_increase": 0.006633395390506662,
+     "reliable_pixels": 76566
+    },
+    "SHORT": {
+     "broken_share": 0.02047906443476677,
+     "mean_error_increase": -0.00069914355407346,
+     "reliable_pixels": 76566
+    }
+   },
+   "place": "arkit_visit_383721",
+   "quality_utility": {
+    "FULL": 0.006088025218131184,
+    "OFF": 0.0,
+    "SHORT": 0.0016533722457897637
+   },
+   "ttt_failed": false
+  },
+  "arkit_41254555/B": {
+   "cost_seconds": {
+    "FULL": 92.31035255128518,
+    "SHORT": 9.610923406202346
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 61.465171385203234,
+    "camera_baseline_max_m": 2.6633816963819332,
+    "coverage": 0.9956473112106323,
+    "depthsplat_vs_measured_absrel": 0.18873445689678192,
+    "depthsplat_vs_measured_median_ratio": 0.9193000793457031,
+    "extent_m": 2.449747085571289,
+    "gaussians": 573440,
+    "measured_depth_p10": 1.3649135470390321,
+    "measured_depth_p50": 2.449749231338501,
+    "measured_depth_p90": 4.626420402526856,
+    "measured_depth_spread": 1.331363559079797,
+    "residual_context_mean": 0.14049878795532347,
+    "residual_norm_covered_mean": 0.08426582045363196,
+    "residual_norm_covered_p50": 0.025612481189086878,
+    "residual_norm_covered_p90": 0.23422888699852654,
+    "residual_norm_covered_p99": 0.48548954651871834,
+    "residual_raw_mean": 0.11263304242505642,
+    "residual_raw_p50": 0.06685313933086744,
+    "residual_raw_p90": 0.2737839597367954,
+    "residual_raw_p99": 0.5314662513500894,
+    "residual_stream_mean": 0.09173373327735614,
+    "residual_top10_mass_share": 0.34691000947287304,
+    "residual_view_max": 0.17095183380919138,
+    "residual_view_min": 0.0656442994422297,
+    "residual_view_std": 0.044215324954322274,
+    "rgb_l1": 0.05954762459216996,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.045187342456441265,
+     "loss": 0.05782962872812911,
+     "rgb_l1": 0.025284572543375683
+    },
+    "OFF": {
+     "depth_term": 0.11263304242505642,
+     "loss": 0.1424068547211414,
+     "rgb_l1": 0.05954762459216996
+    },
+    "SHORT": {
+     "depth_term": 0.08890696077956371,
+     "loss": 0.11302615053818484,
+     "rgb_l1": 0.04823837951724224
+    }
+   },
+   "history_utility": {
+    "FULL": 0.017359327623486145,
+    "OFF": 0.0,
+    "SHORT": 0.005191137510823243
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.06314381957054138,
+     "mean_error_increase": 0.0029975750866924836,
+     "reliable_pixels": 83777
+    },
+    "SHORT": {
+     "broken_share": 0.013631426729261875,
+     "mean_error_increase": -0.0011838911972949506,
+     "reliable_pixels": 83777
+    }
+   },
+   "place": "arkit_visit_383721",
+   "quality_utility": {
+    "FULL": 0.005619127680431268,
+    "OFF": 0.0,
+    "SHORT": 0.0013126362076156528
+   },
+   "ttt_failed": false
+  },
+  "arkit_42444703/A": {
+   "cost_seconds": {
+    "FULL": 93.25957005191594,
+    "SHORT": 9.188061482971534
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 108.91556498482544,
+    "camera_baseline_max_m": 2.459451834819647,
+    "coverage": 0.9928641319274902,
+    "depthsplat_vs_measured_absrel": 0.20110294222831726,
+    "depthsplat_vs_measured_median_ratio": 0.928985595703125,
+    "extent_m": 1.0151119232177734,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5685151278972626,
+    "measured_depth_p50": 1.0151126384735107,
+    "measured_depth_p90": 1.7543471097946166,
+    "measured_depth_spread": 1.1681777341286625,
+    "residual_context_mean": 0.23110225010256943,
+    "residual_norm_covered_mean": 0.14591677096385047,
+    "residual_norm_covered_p50": 0.057850118496312004,
+    "residual_norm_covered_p90": 0.4663493962219984,
+    "residual_norm_covered_p99": 0.6237175968783606,
+    "residual_raw_mean": 0.18045626353000985,
+    "residual_raw_p50": 0.09975663011370023,
+    "residual_raw_p90": 0.5384616527994203,
+    "residual_raw_p99": 0.773289385061112,
+    "residual_stream_mean": 0.14247177360059016,
+    "residual_top10_mass_share": 0.3584212008579934,
+    "residual_view_max": 0.5817186332486382,
+    "residual_view_min": 0.04912710728434214,
+    "residual_view_std": 0.17911811958873872,
+    "rgb_l1": 0.06146152078661523,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.03108075927516679,
+     "loss": 0.038108134321807124,
+     "rgb_l1": 0.014054750093280671
+    },
+    "OFF": {
+     "depth_term": 0.18045626353000985,
+     "loss": 0.21118702392331745,
+     "rgb_l1": 0.06146152078661523
+    },
+    "SHORT": {
+     "depth_term": 0.1417476686495641,
+     "loss": 0.16420101809716098,
+     "rgb_l1": 0.04490669889519376
+    }
+   },
+   "history_utility": {
+    "FULL": 0.02742732115736756,
+    "OFF": 0.0,
+    "SHORT": 0.007660581398833799
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.03202666714787483,
+     "mean_error_increase": 0.002541596503642057,
+     "reliable_pixels": 69005
+    },
+    "SHORT": {
+     "broken_share": 0.014955438673496246,
+     "mean_error_increase": -0.0014229790982022688,
+     "reliable_pixels": 69005
+    }
+   },
+   "place": "arkit_visit_421013",
+   "quality_utility": {
+    "FULL": 0.02405476421226989,
+    "OFF": 0.0,
+    "SHORT": 0.00494541903194215
+   },
+   "ttt_failed": false
+  },
+  "arkit_42444703/B": {
+   "cost_seconds": {
+    "FULL": 91.55320231616497,
+    "SHORT": 8.878749598981813
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 108.91556498482544,
+    "camera_baseline_max_m": 2.459451834819647,
+    "coverage": 0.9984166026115417,
+    "depthsplat_vs_measured_absrel": 0.2933008372783661,
+    "depthsplat_vs_measured_median_ratio": 0.954156219959259,
+    "extent_m": 1.060267686843872,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5685151278972626,
+    "measured_depth_p50": 1.060268759727478,
+    "measured_depth_p90": 2.065073108673096,
+    "measured_depth_spread": 1.411489272927833,
+    "residual_context_mean": 0.033540368324043744,
+    "residual_norm_covered_mean": 0.1000467553956459,
+    "residual_norm_covered_p50": 0.015674658508900978,
+    "residual_norm_covered_p90": 0.3587641619613081,
+    "residual_norm_covered_p99": 0.7778712682839625,
+    "residual_raw_mean": 0.12697977537974178,
+    "residual_raw_p50": 0.044162567968777586,
+    "residual_raw_p90": 0.4020793648599217,
+    "residual_raw_p99": 0.7786705405154444,
+    "residual_stream_mean": 0.19705933067151532,
+    "residual_top10_mass_share": 0.47892162149936246,
+    "residual_view_max": 0.4928999760415497,
+    "residual_view_min": 0.024178733627400462,
+    "residual_view_std": 0.1570274360338043,
+    "rgb_l1": 0.06352456199461229,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.008863306984758538,
+     "loss": 0.016131757001270078,
+     "rgb_l1": 0.014536900033023077
+    },
+    "OFF": {
+     "depth_term": 0.12697977537974178,
+     "loss": 0.1587420563770479,
+     "rgb_l1": 0.06352456199461229
+    },
+    "SHORT": {
+     "depth_term": 0.09563363856851069,
+     "loss": 0.12071896869096611,
+     "rgb_l1": 0.05017066024491085
+    }
+   },
+   "history_utility": {
+    "FULL": 0.055949909830006195,
+    "OFF": 0.0,
+    "SHORT": 0.013868124172267904
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0023665691260248423,
+     "mean_error_increase": -0.007353786545885722,
+     "reliable_pixels": 96342
+    },
+    "SHORT": {
+     "broken_share": 0.002792136510834098,
+     "mean_error_increase": -0.0023907826209156845,
+     "reliable_pixels": 96342
+    }
+   },
+   "place": "arkit_visit_421013",
+   "quality_utility": {
+    "FULL": 0.01684806147340305,
+    "OFF": 0.0,
+    "SHORT": 0.00349503395099042
+   },
+   "ttt_failed": false
+  },
+  "arkit_42446074/A": {
+   "cost_seconds": {
+    "FULL": 81.6494836800266,
+    "SHORT": 8.199200423900038
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 155.47690750001098,
+    "camera_baseline_max_m": 0.7474446188968294,
+    "coverage": 0.9968331456184387,
+    "depthsplat_vs_measured_absrel": 0.6810706257820129,
+    "depthsplat_vs_measured_median_ratio": 0.6133888363838196,
+    "extent_m": 0.9501003623008728,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.7109871089458466,
+    "measured_depth_p50": 0.9501060247421265,
+    "measured_depth_p90": 1.3636314749717713,
+    "measured_depth_spread": 0.6869174060895599,
+    "residual_context_mean": 0.0621737287841633,
+    "residual_norm_covered_mean": 0.021139839958743165,
+    "residual_norm_covered_p50": 0.007936579080513357,
+    "residual_norm_covered_p90": 0.03976932021457404,
+    "residual_norm_covered_p99": 0.3398471473690313,
+    "residual_raw_mean": 0.05194368966714787,
+    "residual_raw_p50": 0.02110934237013397,
+    "residual_raw_p90": 0.13186225091910966,
+    "residual_raw_p99": 0.4626413773612856,
+    "residual_stream_mean": 0.044271160329386314,
+    "residual_top10_mass_share": 0.5054814484420717,
+    "residual_view_max": 0.09520529899561851,
+    "residual_view_min": 0.036894035565764365,
+    "residual_view_std": 0.019415410233895737,
+    "rgb_l1": 0.03792044494103461,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.004796159189328949,
+     "loss": 0.009002533132016084,
+     "rgb_l1": 0.00841274788537427
+    },
+    "OFF": {
+     "depth_term": 0.051943689667147866,
+     "loss": 0.07090391213766517,
+     "rgb_l1": 0.03792044494103461
+    },
+    "SHORT": {
+     "depth_term": 0.03179459974373648,
+     "loss": 0.044652376315786814,
+     "rgb_l1": 0.025715553144100668
+    }
+   },
+   "history_utility": {
+    "FULL": 0.002019641346950589,
+    "OFF": 0.0,
+    "SHORT": 0.0006301710974305971
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.004487411119043827,
+     "mean_error_increase": -0.00687286462407818,
+     "reliable_pixels": 132816
+    },
+    "SHORT": {
+     "broken_share": 0.0036968437489122152,
+     "mean_error_increase": -0.0021171880627367645,
+     "reliable_pixels": 132816
+    }
+   },
+   "place": "arkit_visit_421948",
+   "quality_utility": {
+    "FULL": 0.0013590030791441887,
+    "OFF": 0.0,
+    "SHORT": 0.00011575306694952547
+   },
+   "ttt_failed": false
+  },
+  "arkit_42446074/B": {
+   "cost_seconds": {
+    "FULL": 82.21468964288943,
+    "SHORT": 8.128423488000408
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 120.33884881425546,
+    "camera_baseline_max_m": 0.8062457736961027,
+    "coverage": 0.9995186924934387,
+    "depthsplat_vs_measured_absrel": 0.17281968891620636,
+    "depthsplat_vs_measured_median_ratio": 0.9966257214546204,
+    "extent_m": 0.9535990953445435,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5947810649871826,
+    "measured_depth_p50": 0.953599363565445,
+    "measured_depth_p90": 1.3781774401664735,
+    "measured_depth_spread": 0.8215152034605221,
+    "residual_context_mean": 0.06611995672239955,
+    "residual_norm_covered_mean": 0.023381698332203615,
+    "residual_norm_covered_p50": 0.008657211564984509,
+    "residual_norm_covered_p90": 0.04851840750453461,
+    "residual_norm_covered_p99": 0.34645909576210165,
+    "residual_raw_mean": 0.06196645950683165,
+    "residual_raw_p50": 0.03170261641468161,
+    "residual_raw_p90": 0.15219575700729013,
+    "residual_raw_p99": 0.42159946999575426,
+    "residual_stream_mean": 0.05885133659515571,
+    "residual_top10_mass_share": 0.4232090110750645,
+    "residual_view_max": 0.08521038342355813,
+    "residual_view_min": 0.047584916688299464,
+    "residual_view_std": 0.014482483922933406,
+    "rgb_l1": 0.043043388807757314,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.004787665863737636,
+     "loss": 0.01073540735125977,
+     "rgb_l1": 0.01189548297504427
+    },
+    "OFF": {
+     "depth_term": 0.061966459506831634,
+     "loss": 0.0834881539107103,
+     "rgb_l1": 0.043043388807757314
+    },
+    "SHORT": {
+     "depth_term": 0.035806858729468,
+     "loss": 0.05178149532494386,
+     "rgb_l1": 0.031949273190951734
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0016707803151285172,
+    "OFF": 0.0,
+    "SHORT": 0.00048768028228354104
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.004967783112078905,
+     "mean_error_increase": -0.006486344151801511,
+     "reliable_pixels": 129434
+    },
+    "SHORT": {
+     "broken_share": 0.0032989787869155407,
+     "mean_error_increase": -0.002046104499449154,
+     "reliable_pixels": 129434
+    }
+   },
+   "place": "arkit_visit_421948",
+   "quality_utility": {
+    "FULL": 0.0011924367302214023,
+    "OFF": 0.0,
+    "SHORT": 5.7926947673356266e-05
+   },
+   "ttt_failed": false
+  },
+  "arkit_42897631/A": {
+   "cost_seconds": {
+    "FULL": 83.30313441390172,
+    "SHORT": 8.313193389913067
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 101.75148951330708,
+    "camera_baseline_max_m": 1.216502669250178,
+    "coverage": 0.9554198980331421,
+    "depthsplat_vs_measured_absrel": 1.142112135887146,
+    "depthsplat_vs_measured_median_ratio": 0.7718353271484375,
+    "extent_m": 0.8597825169563293,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5540010333061218,
+    "measured_depth_p50": 0.8597980439662933,
+    "measured_depth_p90": 3.2334661006927496,
+    "measured_depth_spread": 3.1163888847968475,
+    "residual_context_mean": 0.16989337867731455,
+    "residual_norm_covered_mean": 0.025010580347052017,
+    "residual_norm_covered_p50": 0.007199797163026309,
+    "residual_norm_covered_p90": 0.06320332997553856,
+    "residual_norm_covered_p99": 0.20529459676512563,
+    "residual_raw_mean": 0.10418587973654735,
+    "residual_raw_p50": 0.03627750839455633,
+    "residual_raw_p90": 0.308091343362027,
+    "residual_raw_p99": 0.7535003955372809,
+    "residual_stream_mean": 0.05490525553097195,
+    "residual_top10_mass_share": 0.49568411719938577,
+    "residual_view_max": 0.17373654201101366,
+    "residual_view_min": 0.04440481263245618,
+    "residual_view_std": 0.05757708877547093,
+    "rgb_l1": 0.05700750356298929,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0066107742584803645,
+     "loss": 0.01648257113147287,
+     "rgb_l1": 0.01974359374598501
+    },
+    "OFF": {
+     "depth_term": 0.10418587973654735,
+     "loss": 0.132689631518042,
+     "rgb_l1": 0.05700750356298929
+    },
+    "SHORT": {
+     "depth_term": 0.07235607101111505,
+     "loss": 0.09298383382560897,
+     "rgb_l1": 0.04125552562898785
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0026483349085588137,
+    "OFF": 0.0,
+    "SHORT": 0.0005284003860107078
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.009102084673941135,
+     "mean_error_increase": -0.004945102454160415,
+     "reliable_pixels": 118764
+    },
+    "SHORT": {
+     "broken_share": 0.003662726143375039,
+     "mean_error_increase": -0.0018290153911773577,
+     "reliable_pixels": 118764
+    }
+   },
+   "place": "arkit_visit_422354",
+   "quality_utility": {
+    "FULL": 0.01406556245098109,
+    "OFF": 0.0,
+    "SHORT": 0.004238733737232811
+   },
+   "ttt_failed": false
+  },
+  "arkit_42897631/B": {
+   "cost_seconds": {
+    "FULL": 83.45978746586479,
+    "SHORT": 8.424110477790236
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 101.3875320430309,
+    "camera_baseline_max_m": 1.2250105937974562,
+    "coverage": 0.9395787119865417,
+    "depthsplat_vs_measured_absrel": 0.4506778120994568,
+    "depthsplat_vs_measured_median_ratio": 0.9020373821258545,
+    "extent_m": 0.8834258317947388,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5581583917140961,
+    "measured_depth_p50": 0.8834280073642731,
+    "measured_depth_p90": 3.2334661006927496,
+    "measured_depth_spread": 3.0283256662424516,
+    "residual_context_mean": 0.17754700807565227,
+    "residual_norm_covered_mean": 0.0287144022843341,
+    "residual_norm_covered_p50": 0.010463285346363592,
+    "residual_norm_covered_p90": 0.07213814858126175,
+    "residual_norm_covered_p99": 0.23545591854957215,
+    "residual_raw_mean": 0.10620203148748084,
+    "residual_raw_p50": 0.03873697085329454,
+    "residual_raw_p90": 0.2713655300170951,
+    "residual_raw_p99": 0.7985675404020023,
+    "residual_stream_mean": 0.05269329904635232,
+    "residual_top10_mass_share": 0.5279150130817158,
+    "residual_view_max": 0.22291417455964374,
+    "residual_view_min": 0.04315913223040227,
+    "residual_view_std": 0.07206197543045144,
+    "rgb_l1": 0.06678281351103713,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.007797747137600183,
+     "loss": 0.021171472297566662,
+     "rgb_l1": 0.026747450319932958
+    },
+    "OFF": {
+     "depth_term": 0.10620203148748085,
+     "loss": 0.1395934382429994,
+     "rgb_l1": 0.06678281351103713
+    },
+    "SHORT": {
+     "depth_term": 0.0762209247475958,
+     "loss": 0.10231399739988487,
+     "rgb_l1": 0.05218614530457812
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0045969619028433245,
+    "OFF": 0.0,
+    "SHORT": 0.001402536750450968
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.00263189896941185,
+     "mean_error_increase": -0.006727199954293962,
+     "reliable_pixels": 115126
+    },
+    "SHORT": {
+     "broken_share": 0.0024581763427704573,
+     "mean_error_increase": -0.0016365708791292888,
+     "reliable_pixels": 115126
+    }
+   },
+   "place": "arkit_visit_422354",
+   "quality_utility": {
+    "FULL": 0.019048172424863466,
+    "OFF": 0.0,
+    "SHORT": 0.00533467912529452
+   },
+   "ttt_failed": false
+  },
+  "arkit_42897709/A": {
+   "cost_seconds": {
+    "FULL": 87.71221891301684,
+    "SHORT": 8.73911151709035
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 97.10776289490413,
+    "camera_baseline_max_m": 2.018356241464928,
+    "coverage": 0.9953822493553162,
+    "depthsplat_vs_measured_absrel": 0.28609418869018555,
+    "depthsplat_vs_measured_median_ratio": 1.0146687030792236,
+    "extent_m": 2.2818808555603027,
+    "gaussians": 573440,
+    "measured_depth_p10": 1.3187573432922364,
+    "measured_depth_p50": 2.2819100618362427,
+    "measured_depth_p90": 5.234479522705079,
+    "measured_depth_spread": 1.7159844486867633,
+    "residual_context_mean": 0.12529562472662872,
+    "residual_norm_covered_mean": 0.09631111215783902,
+    "residual_norm_covered_p50": 0.04764687229937954,
+    "residual_norm_covered_p90": 0.2783543351619662,
+    "residual_norm_covered_p99": 0.3802521729023176,
+    "residual_raw_mean": 0.10972502185413315,
+    "residual_raw_p50": 0.06917541058010786,
+    "residual_raw_p90": 0.29034439814831364,
+    "residual_raw_p99": 0.4169345143286657,
+    "residual_stream_mean": 0.09804706969976149,
+    "residual_top10_mass_share": 0.32012863412219283,
+    "residual_view_max": 0.15459158901209405,
+    "residual_view_min": 0.040666341937970724,
+    "residual_view_std": 0.037027043565957776,
+    "rgb_l1": 0.044935065973838006,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.05051198971071574,
+     "loss": 0.058434146245214966,
+     "rgb_l1": 0.015844313068998438
+    },
+    "OFF": {
+     "depth_term": 0.10972502185413316,
+     "loss": 0.13219255484105216,
+     "rgb_l1": 0.044935065973838006
+    },
+    "SHORT": {
+     "depth_term": 0.09211023209692427,
+     "loss": 0.1093124420245222,
+     "rgb_l1": 0.034404419855195836
+    }
+   },
+   "history_utility": {
+    "FULL": 0.019217971135745568,
+    "OFF": 0.0,
+    "SHORT": 0.005087453882314283
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.06586215645074844,
+     "mean_error_increase": -0.0011208287684296506,
+     "reliable_pixels": 72591
+    },
+    "SHORT": {
+     "broken_share": 0.015056963078677654,
+     "mean_error_increase": -0.0034735203327120635,
+     "reliable_pixels": 72591
+    }
+   },
+   "place": "arkit_visit_423337",
+   "quality_utility": {
+    "FULL": 0.007842582632106049,
+    "OFF": 0.0,
+    "SHORT": 0.0023611318359642863
+   },
+   "ttt_failed": false
+  },
+  "arkit_42897709/B": {
+   "cost_seconds": {
+    "FULL": 86.79643144994043,
+    "SHORT": 8.520547857973725
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 97.10776289490413,
+    "camera_baseline_max_m": 2.0129297616982345,
+    "coverage": 1.0,
+    "depthsplat_vs_measured_absrel": 0.15174414217472076,
+    "depthsplat_vs_measured_median_ratio": 1.1201374530792236,
+    "extent_m": 2.2794525623321533,
+    "gaussians": 573440,
+    "measured_depth_p10": 1.1372445344924926,
+    "measured_depth_p50": 2.2794543504714966,
+    "measured_depth_p90": 5.374001455307007,
+    "measured_depth_spread": 1.8586715368694078,
+    "residual_context_mean": 0.05040392754115327,
+    "residual_norm_covered_mean": 0.07772353651857282,
+    "residual_norm_covered_p50": 0.028744341849105196,
+    "residual_norm_covered_p90": 0.26284502608491467,
+    "residual_norm_covered_p99": 0.38589633556313957,
+    "residual_raw_mean": 0.09404017120048747,
+    "residual_raw_p50": 0.04405227230828382,
+    "residual_raw_p90": 0.27863712058560625,
+    "residual_raw_p99": 0.39708945389368855,
+    "residual_stream_mean": 0.12676735394498811,
+    "residual_top10_mass_share": 0.35244490746669166,
+    "residual_view_max": 0.19861896471582635,
+    "residual_view_min": 0.03032691461198496,
+    "residual_view_std": 0.056595460712069466,
+    "rgb_l1": 0.050432685682349786,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.030885284760550854,
+     "loss": 0.039276982359387175,
+     "rgb_l1": 0.01678339519767265
+    },
+    "OFF": {
+     "depth_term": 0.09404017120048747,
+     "loss": 0.11925651404166236,
+     "rgb_l1": 0.050432685682349786
+    },
+    "SHORT": {
+     "depth_term": 0.07254428666972443,
+     "loss": 0.09266759763614024,
+     "rgb_l1": 0.04024662193283164
+    }
+   },
+   "history_utility": {
+    "FULL": 0.032490073403106334,
+    "OFF": 0.0,
+    "SHORT": 0.007588430121571926
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.05357889458537102,
+     "mean_error_increase": -0.00021942480829161871,
+     "reliable_pixels": 90894
+    },
+    "SHORT": {
+     "broken_share": 0.016447730362415314,
+     "mean_error_increase": -0.0031281934761242716,
+     "reliable_pixels": 90894
+    }
+   },
+   "place": "arkit_visit_423337",
+   "quality_utility": {
+    "FULL": 0.014253308282632979,
+    "OFF": 0.0,
+    "SHORT": 0.0040864272080208125
+   },
+   "ttt_failed": false
+  },
+  "arkit_42898629/A": {
+   "cost_seconds": {
+    "FULL": 81.75209489301778,
+    "SHORT": 8.281251210020855
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 75.80605508102505,
+    "camera_baseline_max_m": 2.0731830754784446,
+    "coverage": 0.9795688986778259,
+    "depthsplat_vs_measured_absrel": 1.3658901453018188,
+    "depthsplat_vs_measured_median_ratio": 0.7655203342437744,
+    "extent_m": 0.4610017240047455,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.40276722609996796,
+    "measured_depth_p50": 0.4610017240047455,
+    "measured_depth_p90": 1.3353521823883057,
+    "measured_depth_spread": 2.0229532943758315,
+    "residual_context_mean": 0.0768884647491083,
+    "residual_norm_covered_mean": 0.015675919642867422,
+    "residual_norm_covered_p50": 0.004889318402902835,
+    "residual_norm_covered_p90": 0.041996799082835184,
+    "residual_norm_covered_p99": 0.16353025579994376,
+    "residual_raw_mean": 0.06281752741192516,
+    "residual_raw_p50": 0.016680928374279626,
+    "residual_raw_p90": 0.18244402005768734,
+    "residual_raw_p99": 0.6145190431056657,
+    "residual_stream_mean": 0.052264324409037805,
+    "residual_top10_mass_share": 0.5750379302930835,
+    "residual_view_max": 0.09051128358220349,
+    "residual_view_min": 0.034022919816344664,
+    "residual_view_std": 0.021262852174193974,
+    "rgb_l1": 0.05801585325799525,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.004391231623766092,
+     "loss": 0.01668345200226428,
+     "rgb_l1": 0.024584440756996378
+    },
+    "OFF": {
+     "depth_term": 0.06281752741192516,
+     "loss": 0.09182545404092278,
+     "rgb_l1": 0.05801585325799525
+    },
+    "SHORT": {
+     "depth_term": 0.041918092648787125,
+     "loss": 0.06461538592530142,
+     "rgb_l1": 0.045394586553028596
+    }
+   },
+   "history_utility": {
+    "FULL": 0.014106351934832673,
+    "OFF": 0.0,
+    "SHORT": 0.004802856398764238
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0030366647988557816,
+     "mean_error_increase": -0.004375773016145605,
+     "reliable_pixels": 129089
+    },
+    "SHORT": {
+     "broken_share": 0.0010148037690669298,
+     "mean_error_increase": -0.0016844823470278806,
+     "reliable_pixels": 129089
+    }
+   },
+   "place": "arkit_visit_434691",
+   "quality_utility": {
+    "FULL": -0.0023488259516388776,
+    "OFF": 0.0,
+    "SHORT": -0.0005140263330534189
+   },
+   "ttt_failed": false
+  },
+  "arkit_42898629/B": {
+   "cost_seconds": {
+    "FULL": 81.62974628107622,
+    "SHORT": 8.115527132060379
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 75.80605508102505,
+    "camera_baseline_max_m": 2.0731830754784446,
+    "coverage": 0.944873034954071,
+    "depthsplat_vs_measured_absrel": 1.0478421449661255,
+    "depthsplat_vs_measured_median_ratio": 0.7980340123176575,
+    "extent_m": 0.4610017240047455,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.4030674874782562,
+    "measured_depth_p50": 0.4610017240047455,
+    "measured_depth_p90": 1.3353521823883057,
+    "measured_depth_spread": 2.0223019706114,
+    "residual_context_mean": 0.14442021596972177,
+    "residual_norm_covered_mean": 0.017257943614719343,
+    "residual_norm_covered_p50": 0.005071163618007946,
+    "residual_norm_covered_p90": 0.047109306787115064,
+    "residual_norm_covered_p99": 0.1756092619000866,
+    "residual_raw_mean": 0.09664688359662651,
+    "residual_raw_p50": 0.022092547238041115,
+    "residual_raw_p90": 0.3457574847708227,
+    "residual_raw_p99": 0.7668867256308778,
+    "residual_stream_mean": 0.06081688431680503,
+    "residual_top10_mass_share": 0.5728386608534383,
+    "residual_view_max": 0.15783088364592898,
+    "residual_view_min": 0.03558223390903453,
+    "residual_view_std": 0.05031176141728597,
+    "rgb_l1": 0.07608096977590192,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.004765204951486278,
+     "loss": 0.017898603298572693,
+     "rgb_l1": 0.026266796694172832
+    },
+    "OFF": {
+     "depth_term": 0.0966468835966265,
+     "loss": 0.13468736848457746,
+     "rgb_l1": 0.07608096977590192
+    },
+    "SHORT": {
+     "depth_term": 0.06993073001554448,
+     "loss": 0.10002399411650609,
+     "rgb_l1": 0.06018652820192323
+    }
+   },
+   "history_utility": {
+    "FULL": 0.015103151350642531,
+    "OFF": 0.0,
+    "SHORT": 0.005147530617390851
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.003718833439052105,
+     "mean_error_increase": -0.004422584950414399,
+     "reliable_pixels": 122888
+    },
+    "SHORT": {
+     "broken_share": 0.0011799362255260348,
+     "mean_error_increase": -0.0019825569356060934,
+     "reliable_pixels": 122888
+    }
+   },
+   "place": "arkit_visit_434691",
+   "quality_utility": {
+    "FULL": -0.0023851070794881357,
+    "OFF": 0.0,
+    "SHORT": -0.0005314510030466346
+   },
+   "ttt_failed": false
+  },
+  "arkit_42898714/A": {
+   "cost_seconds": {
+    "FULL": 85.98988206801005,
+    "SHORT": 8.605936552863568
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 83.51860725942844,
+    "camera_baseline_max_m": 0.7517145859940463,
+    "coverage": 0.9986956119537354,
+    "depthsplat_vs_measured_absrel": 0.3277420103549957,
+    "depthsplat_vs_measured_median_ratio": 0.7435353398323059,
+    "extent_m": 1.2971957921981812,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.9921449601650238,
+    "measured_depth_p50": 1.2972158789634705,
+    "measured_depth_p90": 2.354725217819214,
+    "measured_depth_spread": 1.0503882042693993,
+    "residual_context_mean": 0.04877415068826398,
+    "residual_norm_covered_mean": 0.022841089210239727,
+    "residual_norm_covered_p50": 0.009059170121623899,
+    "residual_norm_covered_p90": 0.03986781741040031,
+    "residual_norm_covered_p99": 0.2860859716054845,
+    "residual_raw_mean": 0.046058525766417995,
+    "residual_raw_p50": 0.023700134540298207,
+    "residual_raw_p90": 0.1065891230930457,
+    "residual_raw_p99": 0.3911253531486415,
+    "residual_stream_mean": 0.044021807075033496,
+    "residual_top10_mass_share": 0.4588106758354416,
+    "residual_view_max": 0.05545478467973867,
+    "residual_view_min": 0.034575211257511146,
+    "residual_view_std": 0.007381225097184729,
+    "rgb_l1": 0.03893157481672361,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.008508793937169188,
+     "loss": 0.01628166727275309,
+     "rgb_l1": 0.015545746671167801
+    },
+    "OFF": {
+     "depth_term": 0.04605852576641799,
+     "loss": 0.06552431317477979,
+     "rgb_l1": 0.03893157481672361
+    },
+    "SHORT": {
+     "depth_term": 0.02937249254832474,
+     "loss": 0.04448317450589402,
+     "rgb_l1": 0.030221363915138563
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0024013569282239633,
+    "OFF": 0.0,
+    "SHORT": 0.0009769873837389143
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.006874816492199898,
+     "mean_error_increase": -0.0055478024096056785,
+     "reliable_pixels": 132949
+    },
+    "SHORT": {
+     "broken_share": 0.0044829221442341805,
+     "mean_error_increase": -0.001576079551269989,
+     "reliable_pixels": 132949
+    }
+   },
+   "place": "arkit_visit_434702",
+   "quality_utility": {
+    "FULL": 0.0055347925468459125,
+    "OFF": 0.0,
+    "SHORT": 0.0018813437277076725
+   },
+   "ttt_failed": false
+  },
+  "arkit_42898714/B": {
+   "cost_seconds": {
+    "FULL": 82.59173273388296,
+    "SHORT": 8.363764313980937
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 83.51860725942844,
+    "camera_baseline_max_m": 0.7037183812657014,
+    "coverage": 0.9997488856315613,
+    "depthsplat_vs_measured_absrel": 0.11520543694496155,
+    "depthsplat_vs_measured_median_ratio": 0.9552130103111267,
+    "extent_m": 1.3375459909439087,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.9900631964206695,
+    "measured_depth_p50": 1.3375564813613892,
+    "measured_depth_p90": 2.2569512844085695,
+    "measured_depth_spread": 0.9471660491663412,
+    "residual_context_mean": 0.03811030792983756,
+    "residual_norm_covered_mean": 0.02110873859517432,
+    "residual_norm_covered_p50": 0.008218268420444708,
+    "residual_norm_covered_p90": 0.03803131901042167,
+    "residual_norm_covered_p99": 0.27018774438130255,
+    "residual_raw_mean": 0.040121148524076625,
+    "residual_raw_p50": 0.022743695797491803,
+    "residual_raw_p90": 0.09135160498941373,
+    "residual_raw_p99": 0.3039210933575484,
+    "residual_stream_mean": 0.041629278969755934,
+    "residual_top10_mass_share": 0.42997582963764125,
+    "residual_view_max": 0.04764865720820077,
+    "residual_view_min": 0.026400967193312253,
+    "residual_view_std": 0.006469736694495522,
+    "rgb_l1": 0.036596074487835854,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.008178702641470739,
+     "loss": 0.015288645233839186,
+     "rgb_l1": 0.014219885184736894
+    },
+    "OFF": {
+     "depth_term": 0.04012114852407662,
+     "loss": 0.05841918576799454,
+     "rgb_l1": 0.036596074487835854
+    },
+    "SHORT": {
+     "depth_term": 0.024965171627237364,
+     "loss": 0.03957003358605403,
+     "rgb_l1": 0.029209723917633334
+    }
+   },
+   "history_utility": {
+    "FULL": 0.002604775709116998,
+    "OFF": 0.0,
+    "SHORT": 0.0010600797328016338
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.005836619529873133,
+     "mean_error_increase": -0.00508780434678618,
+     "reliable_pixels": 133639
+    },
+    "SHORT": {
+     "broken_share": 0.0039060453418642282,
+     "mean_error_increase": -0.001695827209448086,
+     "reliable_pixels": 133639
+    }
+   },
+   "place": "arkit_visit_434702",
+   "quality_utility": {
+    "FULL": 0.005983102229492998,
+    "OFF": 0.0,
+    "SHORT": 0.0018176942194488288
+   },
+   "ttt_failed": false
+  },
+  "arkit_42899582/A": {
+   "cost_seconds": {
+    "FULL": 82.8090551851783,
+    "SHORT": 8.254376932047307
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 89.32340061501463,
+    "camera_baseline_max_m": 2.074490393113868,
+    "coverage": 0.9248256087303162,
+    "depthsplat_vs_measured_absrel": 0.7051765322685242,
+    "depthsplat_vs_measured_median_ratio": 0.8346375226974487,
+    "extent_m": 0.6990472078323364,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5060577690601349,
+    "measured_depth_p50": 0.6990695297718048,
+    "measured_depth_p90": 2.3430761098861694,
+    "measured_depth_spread": 2.627804907225304,
+    "residual_context_mean": 0.21215708695958577,
+    "residual_norm_covered_mean": 0.026625905693212066,
+    "residual_norm_covered_p50": 0.015503130059781715,
+    "residual_norm_covered_p90": 0.05844070471434644,
+    "residual_norm_covered_p99": 0.18434683087514853,
+    "residual_raw_mean": 0.12463048114784697,
+    "residual_raw_p50": 0.04806788958749835,
+    "residual_raw_p90": 0.3726111746319385,
+    "residual_raw_p99": 0.9138507318416005,
+    "residual_stream_mean": 0.058985526789042876,
+    "residual_top10_mass_share": 0.5408973015027003,
+    "residual_view_max": 0.2525731813562155,
+    "residual_view_min": 0.04847739338517462,
+    "residual_view_std": 0.08071714807519113,
+    "rgb_l1": 0.06697587619282773,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.011461755270152182,
+     "loss": 0.022077324269086943,
+     "rgb_l1": 0.02123113799786952
+    },
+    "OFF": {
+     "depth_term": 0.12463048114784694,
+     "loss": 0.15811841924426082,
+     "rgb_l1": 0.06697587619282773
+    },
+    "SHORT": {
+     "depth_term": 0.0929728944680839,
+     "loss": 0.11878395600156733,
+     "rgb_l1": 0.05162212306696683
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0018012709724695986,
+    "OFF": 0.0,
+    "SHORT": 0.0008055785456596298
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.009462361223995686,
+     "mean_error_increase": -0.007332610052676052,
+     "reliable_pixels": 115933
+    },
+    "SHORT": {
+     "broken_share": 0.005710194353014231,
+     "mean_error_increase": -0.0014793616764439826,
+     "reliable_pixels": 115933
+    }
+   },
+   "place": "arkit_visit_435339",
+   "quality_utility": {
+    "FULL": 0.003243744902069745,
+    "OFF": 0.0,
+    "SHORT": 0.0007095492440509985
+   },
+   "ttt_failed": false
+  },
+  "arkit_42899582/B": {
+   "cost_seconds": {
+    "FULL": 85.32000637310557,
+    "SHORT": 8.485021312022582
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 89.27178144802662,
+    "camera_baseline_max_m": 2.074490393113868,
+    "coverage": 0.9990583062171936,
+    "depthsplat_vs_measured_absrel": 0.1863490492105484,
+    "depthsplat_vs_measured_median_ratio": 0.935668408870697,
+    "extent_m": 1.041033387184143,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5134538173675537,
+    "measured_depth_p50": 1.0410335659980774,
+    "measured_depth_p90": 2.8661031246185322,
+    "measured_depth_spread": 2.259916859640742,
+    "residual_context_mean": 0.06390920580593483,
+    "residual_norm_covered_mean": 0.03684213079060234,
+    "residual_norm_covered_p50": 0.016260581697319944,
+    "residual_norm_covered_p90": 0.08452423097367376,
+    "residual_norm_covered_p99": 0.2775147709434968,
+    "residual_raw_mean": 0.060510829997500536,
+    "residual_raw_p50": 0.033114224111313664,
+    "residual_raw_p90": 0.14611934615556207,
+    "residual_raw_p99": 0.385832744238036,
+    "residual_stream_mean": 0.05796204814117481,
+    "residual_top10_mass_share": 0.4050262935072166,
+    "residual_view_max": 0.0853524550654755,
+    "residual_view_min": 0.043262592663385,
+    "residual_view_std": 0.01477191515966567,
+    "rgb_l1": 0.045446381028400436,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.010719906371326984,
+     "loss": 0.018331581378132844,
+     "rgb_l1": 0.01522335001361172
+    },
+    "OFF": {
+     "depth_term": 0.060510829997500536,
+     "loss": 0.08323402051170076,
+     "rgb_l1": 0.045446381028400436
+    },
+    "SHORT": {
+     "depth_term": 0.03927016175969871,
+     "loss": 0.05622334597800505,
+     "rgb_l1": 0.03390636843661268
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0033814575738690955,
+    "OFF": 0.0,
+    "SHORT": 0.0010977572063500252
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.01786159537732601,
+     "mean_error_increase": -0.007878157843884197,
+     "reliable_pixels": 112308
+    },
+    "SHORT": {
+     "broken_share": 0.008672579191625118,
+     "mean_error_increase": -0.0026598777667287167,
+     "reliable_pixels": 112308
+    }
+   },
+   "place": "arkit_visit_435339",
+   "quality_utility": {
+    "FULL": 0.006896406897629687,
+    "OFF": 0.0,
+    "SHORT": 0.0019570456653417168
+   },
+   "ttt_failed": false
+  },
+  "arkit_42899864/A": {
+   "cost_seconds": {
+    "FULL": 82.078567545861,
+    "SHORT": 8.18003821093589
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 104.40384777342261,
+    "camera_baseline_max_m": 1.5273005710572278,
+    "coverage": 0.8466448187828064,
+    "depthsplat_vs_measured_absrel": 0.8715699911117554,
+    "depthsplat_vs_measured_median_ratio": 0.7895664572715759,
+    "extent_m": 0.5880007743835449,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.385001540184021,
+    "measured_depth_p50": 0.5880007743835449,
+    "measured_depth_p90": 2.561555123329163,
+    "measured_depth_spread": 3.7016168650917556,
+    "residual_context_mean": 0.31688173272118986,
+    "residual_norm_covered_mean": 0.00954942595033192,
+    "residual_norm_covered_p50": 0.0034962102303660023,
+    "residual_norm_covered_p90": 0.020438528312137338,
+    "residual_norm_covered_p99": 0.10241576737291588,
+    "residual_raw_mean": 0.158401223937417,
+    "residual_raw_p50": 0.02520506167881606,
+    "residual_raw_p90": 0.5750816424316362,
+    "residual_raw_p99": 0.7503806511090458,
+    "residual_stream_mean": 0.03954084234958737,
+    "residual_top10_mass_share": 0.4186264766427289,
+    "residual_view_max": 0.3259419371526182,
+    "residual_view_min": 0.015564073430272121,
+    "residual_view_std": 0.13902754149020158,
+    "rgb_l1": 0.0949994845443858,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0048052070971228225,
+     "loss": 0.014847503438175319,
+     "rgb_l1": 0.020084592682104992
+    },
+    "OFF": {
+     "depth_term": 0.158401223937417,
+     "loss": 0.2059009662096099,
+     "rgb_l1": 0.0949994845443858
+    },
+    "SHORT": {
+     "depth_term": 0.11975169373730589,
+     "loss": 0.1548766022221886,
+     "rgb_l1": 0.07024981696976544
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0015727310679984619,
+    "OFF": 0.0,
+    "SHORT": 0.0005735485221330661
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.003976969048380852,
+     "mean_error_increase": -0.0012839065040120721,
+     "reliable_pixels": 117929
+    },
+    "SHORT": {
+     "broken_share": 0.0008310084813274443,
+     "mean_error_increase": -0.0007429752695078014,
+     "reliable_pixels": 117929
+    }
+   },
+   "place": "arkit_visit_435660",
+   "quality_utility": {
+    "FULL": 0.0006592803639823841,
+    "OFF": 0.0,
+    "SHORT": 0.00019628933444948427
+   },
+   "ttt_failed": false
+  },
+  "arkit_42899864/B": {
+   "cost_seconds": {
+    "FULL": 82.57956656394526,
+    "SHORT": 7.922969477949664
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 104.40384777342261,
+    "camera_baseline_max_m": 1.5273005710572278,
+    "coverage": 0.8375906944274902,
+    "depthsplat_vs_measured_absrel": 0.6370694041252136,
+    "depthsplat_vs_measured_median_ratio": 0.7913665771484375,
+    "extent_m": 0.5880007743835449,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.3930014669895172,
+    "measured_depth_p50": 0.5880007743835449,
+    "measured_depth_p90": 2.561555123329163,
+    "measured_depth_spread": 3.688011565313225,
+    "residual_context_mean": 0.3266389155637664,
+    "residual_norm_covered_mean": 0.00946858404240973,
+    "residual_norm_covered_p50": 0.003592349467272803,
+    "residual_norm_covered_p90": 0.02003130758332376,
+    "residual_norm_covered_p99": 0.09915517035730359,
+    "residual_raw_mean": 0.16421455096030535,
+    "residual_raw_p50": 0.02798248849902447,
+    "residual_raw_p90": 0.5888102799064644,
+    "residual_raw_p99": 0.7566340719055297,
+    "residual_stream_mean": 0.0423962775077095,
+    "residual_top10_mass_share": 0.4092022124514427,
+    "residual_view_max": 0.3507270725907952,
+    "residual_view_min": 0.01642288875657652,
+    "residual_view_std": 0.14310828325222247,
+    "rgb_l1": 0.09877767862233647,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.004985560829486968,
+     "loss": 0.014103241811730234,
+     "rgb_l1": 0.018235361964486534
+    },
+    "OFF": {
+     "depth_term": 0.16421455096030532,
+     "loss": 0.21360339027147357,
+     "rgb_l1": 0.09877767862233647
+    },
+    "SHORT": {
+     "depth_term": 0.12436889137069161,
+     "loss": 0.16097850973404337,
+     "rgb_l1": 0.07321923672670351
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0015240060864979421,
+    "OFF": 0.0,
+    "SHORT": 0.0005044839915964022
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.003792516188696027,
+     "mean_error_increase": -0.0012524968643522249,
+     "reliable_pixels": 116809
+    },
+    "SHORT": {
+     "broken_share": 0.001164293847978115,
+     "mean_error_increase": -0.0006790323994754618,
+     "reliable_pixels": 116809
+    }
+   },
+   "place": "arkit_visit_435660",
+   "quality_utility": {
+    "FULL": 0.0005163004639130858,
+    "OFF": 0.0,
+    "SHORT": 1.4768122759897806e-05
+   },
+   "ttt_failed": false
+  },
+  "arkit_43895946/A": {
+   "cost_seconds": {
+    "FULL": 86.74477132689208,
+    "SHORT": 8.65299370395951
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 103.6218990956673,
+    "camera_baseline_max_m": 1.7422814503926702,
+    "coverage": 0.9946358799934387,
+    "depthsplat_vs_measured_absrel": 0.6536139249801636,
+    "depthsplat_vs_measured_median_ratio": 0.8760061264038086,
+    "extent_m": 1.2503079175949097,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.622970724105835,
+    "measured_depth_p50": 1.250317096710205,
+    "measured_depth_p90": 2.357008218765259,
+    "measured_depth_spread": 1.3868781761218563,
+    "residual_context_mean": 0.19501090350874717,
+    "residual_norm_covered_mean": 0.08901791368197427,
+    "residual_norm_covered_p50": 0.020369160519555406,
+    "residual_norm_covered_p90": 0.23723152979347578,
+    "residual_norm_covered_p99": 1.0483407287512811,
+    "residual_raw_mean": 0.12026906409039023,
+    "residual_raw_p50": 0.05212312736726893,
+    "residual_raw_p90": 0.3030498723377285,
+    "residual_raw_p99": 1.0080467315366783,
+    "residual_stream_mean": 0.06421268452662254,
+    "residual_top10_mass_share": 0.4894739504433976,
+    "residual_view_max": 0.35338740887873793,
+    "residual_view_min": 0.043670624328605384,
+    "residual_view_std": 0.09973478881623406,
+    "rgb_l1": 0.055503842983429905,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.040721593093801606,
+     "loss": 0.05066770709458203,
+     "rgb_l1": 0.019892228001560854
+    },
+    "OFF": {
+     "depth_term": 0.12026906409039023,
+     "loss": 0.1480209855821052,
+     "rgb_l1": 0.055503842983429905
+    },
+    "SHORT": {
+     "depth_term": 0.09014504822623462,
+     "loss": 0.11105871536959472,
+     "rgb_l1": 0.0418273342867202
+    }
+   },
+   "history_utility": {
+    "FULL": 0.003850664759313095,
+    "OFF": 0.0,
+    "SHORT": 0.0017968540166404812
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.013158812187612057,
+     "mean_error_increase": -0.00796369268650338,
+     "reliable_pixels": 100389
+    },
+    "SHORT": {
+     "broken_share": 0.007829543203115463,
+     "mean_error_increase": -0.0023064903228910676,
+     "reliable_pixels": 100389
+    }
+   },
+   "place": "arkit_visit_437833",
+   "quality_utility": {
+    "FULL": 0.002819088582661,
+    "OFF": 0.0,
+    "SHORT": 0.0004073714820637675
+   },
+   "ttt_failed": false
+  },
+  "arkit_43895946/B": {
+   "cost_seconds": {
+    "FULL": 88.90591965406202,
+    "SHORT": 8.995489975903183
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 103.6218990956673,
+    "camera_baseline_max_m": 1.7073646740724098,
+    "coverage": 1.0,
+    "depthsplat_vs_measured_absrel": 0.43648800253868103,
+    "depthsplat_vs_measured_median_ratio": 0.9965767860412598,
+    "extent_m": 1.3234400749206543,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6849207282066345,
+    "measured_depth_p50": 1.3234401941299438,
+    "measured_depth_p90": 2.363409399986267,
+    "measured_depth_spread": 1.2682769340273097,
+    "residual_context_mean": 0.11324302012269254,
+    "residual_norm_covered_mean": 0.05856905270712321,
+    "residual_norm_covered_p50": 0.0174439006539207,
+    "residual_norm_covered_p90": 0.11662564520473587,
+    "residual_norm_covered_p99": 0.6373687693061256,
+    "residual_raw_mean": 0.07186295593239495,
+    "residual_raw_p50": 0.02910163463634614,
+    "residual_raw_p90": 0.1542325063880573,
+    "residual_raw_p99": 0.6185328090978911,
+    "residual_stream_mean": 0.04082790778967175,
+    "residual_top10_mass_share": 0.5544280287693079,
+    "residual_view_max": 0.13520565230594742,
+    "residual_view_min": 0.03588979329320025,
+    "residual_view_std": 0.039211435647679475,
+    "rgb_l1": 0.04695765626890231,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.019676745973698593,
+     "loss": 0.028220908942804664,
+     "rgb_l1": 0.017088325938212145
+    },
+    "OFF": {
+     "depth_term": 0.07186295593239493,
+     "loss": 0.09534178406684608,
+     "rgb_l1": 0.04695765626890231
+    },
+    "SHORT": {
+     "depth_term": 0.04823158277777617,
+     "loss": 0.06699388687214247,
+     "rgb_l1": 0.0375246081887326
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0025973075560428854,
+    "OFF": 0.0,
+    "SHORT": 0.0010814503618001917
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.003346865763887763,
+     "mean_error_increase": -0.011113665333292808,
+     "reliable_pixels": 115033
+    },
+    "SHORT": {
+     "broken_share": 0.0026861857622861862,
+     "mean_error_increase": -0.0037771633533381973,
+     "reliable_pixels": 115033
+    }
+   },
+   "place": "arkit_visit_437833",
+   "quality_utility": {
+    "FULL": 0.0030084292559311443,
+    "OFF": 0.0,
+    "SHORT": 0.0012519894402467924
+   },
+   "ttt_failed": false
+  },
+  "arkit_47331604/A": {
+   "cost_seconds": {
+    "FULL": 78.3120996679645,
+    "SHORT": 7.604031231952831
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 118.67827817252687,
+    "camera_baseline_max_m": 1.1701433685786462,
+    "coverage": 0.9895089268684387,
+    "depthsplat_vs_measured_absrel": 0.6402835845947266,
+    "depthsplat_vs_measured_median_ratio": 0.5764174461364746,
+    "extent_m": 0.6597141027450562,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.47370343208312987,
+    "measured_depth_p50": 0.6597166955471039,
+    "measured_depth_p90": 0.8950192630290985,
+    "measured_depth_spread": 0.6386314516363284,
+    "residual_context_mean": 0.04203562133712498,
+    "residual_norm_covered_mean": 0.017111943945043378,
+    "residual_norm_covered_p50": 0.010087726128305954,
+    "residual_norm_covered_p90": 0.037624263877189264,
+    "residual_norm_covered_p99": 0.11901890359130839,
+    "residual_raw_mean": 0.05619949323187614,
+    "residual_raw_p50": 0.022510142358184063,
+    "residual_raw_p90": 0.14081315712479667,
+    "residual_raw_p99": 0.5138926665937817,
+    "residual_stream_mean": 0.0668223971529395,
+    "residual_top10_mass_share": 0.48516086939083186,
+    "residual_view_max": 0.11166732496268604,
+    "residual_view_min": 0.02295216091930205,
+    "residual_view_std": 0.025108498245637947,
+    "rgb_l1": 0.04102617076067591,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0026919086270279285,
+     "loss": 0.005813200615709,
+     "rgb_l1": 0.006242583977362145
+    },
+    "OFF": {
+     "depth_term": 0.05619949323187613,
+     "loss": 0.07671257861221409,
+     "rgb_l1": 0.04102617076067591
+    },
+    "SHORT": {
+     "depth_term": 0.03437120012687137,
+     "loss": 0.047873605031118066,
+     "rgb_l1": 0.02700480980849339
+    }
+   },
+   "history_utility": {
+    "FULL": 0.00043196811884648606,
+    "OFF": 0.0,
+    "SHORT": 0.0004887962790856917
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0008720246842131019,
+     "mean_error_increase": -0.009172638779251743,
+     "reliable_pixels": 131877
+    },
+    "SHORT": {
+     "broken_share": 0.002108024898916483,
+     "mean_error_increase": -0.0016660068157093536,
+     "reliable_pixels": 131877
+    }
+   },
+   "place": "arkit_visit_466835",
+   "quality_utility": {
+    "FULL": -0.0009113743962139709,
+    "OFF": 0.0,
+    "SHORT": 0.00041173656953158444
+   },
+   "ttt_failed": false
+  },
+  "arkit_47331604/B": {
+   "cost_seconds": {
+    "FULL": 81.66331619513221,
+    "SHORT": 8.010856138076633
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 118.67827817252687,
+    "camera_baseline_max_m": 1.1701433685786462,
+    "coverage": 0.9940848350524902,
+    "depthsplat_vs_measured_absrel": 1.8599321842193604,
+    "depthsplat_vs_measured_median_ratio": 0.35299158096313477,
+    "extent_m": 0.6136398911476135,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.4417495340108872,
+    "measured_depth_p50": 0.6136436760425568,
+    "measured_depth_p90": 0.7923956096172333,
+    "measured_depth_spread": 0.5714164250297408,
+    "residual_context_mean": 0.08528195503684068,
+    "residual_norm_covered_mean": 0.014895202791908091,
+    "residual_norm_covered_p50": 0.008120274228498377,
+    "residual_norm_covered_p90": 0.03278661304930704,
+    "residual_norm_covered_p99": 0.11354737497857717,
+    "residual_raw_mean": 0.08199377822702872,
+    "residual_raw_p50": 0.04235809341731864,
+    "residual_raw_p90": 0.21184483580753682,
+    "residual_raw_p99": 0.4675229792644936,
+    "residual_stream_mean": 0.07952764561966974,
+    "residual_top10_mass_share": 0.3918401912606459,
+    "residual_view_max": 0.12414316369329224,
+    "residual_view_min": 0.030591107500558146,
+    "residual_view_std": 0.030740732306999228,
+    "rgb_l1": 0.04740581668165111,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0025157900577985532,
+     "loss": 0.005437344816486143,
+     "rgb_l1": 0.005843109517375178
+    },
+    "OFF": {
+     "depth_term": 0.0819937782270287,
+     "loss": 0.10569668656785426,
+     "rgb_l1": 0.04740581668165111
+    },
+    "SHORT": {
+     "depth_term": 0.046093302990354065,
+     "loss": 0.060424730307445336,
+     "rgb_l1": 0.028662854634182538
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0007772446619323872,
+    "OFF": 0.0,
+    "SHORT": 0.000247505488091479
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0005252955597825348,
+     "mean_error_increase": -0.008024467311350845,
+     "reliable_pixels": 135162
+    },
+    "SHORT": {
+     "broken_share": 0.006725263316184282,
+     "mean_error_increase": 1.2389365093217614e-05,
+     "reliable_pixels": 135162
+    }
+   },
+   "place": "arkit_visit_466835",
+   "quality_utility": {
+    "FULL": 0.0005854568586433073,
+    "OFF": 0.0,
+    "SHORT": -6.147958063285053e-05
+   },
+   "ttt_failed": false
+  },
+  "arkit_47331878/A": {
+   "cost_seconds": {
+    "FULL": 77.71264730812982,
+    "SHORT": 7.857888801954687
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 113.46358581032734,
+    "camera_baseline_max_m": 1.2695236078880465,
+    "coverage": 0.995166003704071,
+    "depthsplat_vs_measured_absrel": 0.8333134055137634,
+    "depthsplat_vs_measured_median_ratio": 0.5085804462432861,
+    "extent_m": 0.5370021462440491,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5090011954307556,
+    "measured_depth_p50": 0.5370021462440491,
+    "measured_depth_p90": 1.711134910583496,
+    "measured_depth_spread": 2.2386013232178255,
+    "residual_context_mean": 0.06439711254289109,
+    "residual_norm_covered_mean": 0.016890104492902527,
+    "residual_norm_covered_p50": 0.007304634819984498,
+    "residual_norm_covered_p90": 0.04287991705778235,
+    "residual_norm_covered_p99": 0.13589166626314944,
+    "residual_raw_mean": 0.06594144257378258,
+    "residual_raw_p50": 0.029254820148946193,
+    "residual_raw_p90": 0.17349257222636674,
+    "residual_raw_p99": 0.43747344914062625,
+    "residual_stream_mean": 0.0670996900969512,
+    "residual_top10_mass_share": 0.44838344791846774,
+    "residual_view_max": 0.08234078017241908,
+    "residual_view_min": 0.043769407642957225,
+    "residual_view_std": 0.012117963649008391,
+    "rgb_l1": 0.04788090639531761,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.005650989608920823,
+     "loss": 0.013771743814700345,
+     "rgb_l1": 0.016241508411559042
+    },
+    "OFF": {
+     "depth_term": 0.06594144257378258,
+     "loss": 0.08988189577144139,
+     "rgb_l1": 0.04788090639531761
+    },
+    "SHORT": {
+     "depth_term": 0.041390643699000924,
+     "loss": 0.058647514822049523,
+     "rgb_l1": 0.03451374224609719
+    }
+   },
+   "history_utility": {
+    "FULL": -0.005395500845248466,
+    "OFF": 0.0,
+    "SHORT": -0.0016863468920487457
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.00032207107869908214,
+     "mean_error_increase": -0.004532992743555154,
+     "reliable_pixels": 130406
+    },
+    "SHORT": {
+     "broken_share": 0.0019094214076176286,
+     "mean_error_increase": -0.0009148075420514611,
+     "reliable_pixels": 130406
+    }
+   },
+   "place": "arkit_visit_470886",
+   "quality_utility": {
+    "FULL": 0.0008008612813536001,
+    "OFF": 0.0,
+    "SHORT": -2.9593143079452433e-05
+   },
+   "ttt_failed": false
+  },
+  "arkit_47331878/B": {
+   "cost_seconds": {
+    "FULL": 77.80441782972775,
+    "SHORT": 7.8171221318189055
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 113.46358581032734,
+    "camera_baseline_max_m": 1.2695224831412508,
+    "coverage": 0.9980329275131226,
+    "depthsplat_vs_measured_absrel": 0.8701432943344116,
+    "depthsplat_vs_measured_median_ratio": 0.5533595085144043,
+    "extent_m": 0.5396784543991089,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5100013613700867,
+    "measured_depth_p50": 0.5396785140037537,
+    "measured_depth_p90": 1.711134910583496,
+    "measured_depth_spread": 2.2256464136444296,
+    "residual_context_mean": 0.04039446759377655,
+    "residual_norm_covered_mean": 0.017103734028711615,
+    "residual_norm_covered_p50": 0.007932105779733637,
+    "residual_norm_covered_p90": 0.042715405662081055,
+    "residual_norm_covered_p99": 0.134398975573055,
+    "residual_raw_mean": 0.05186179497043129,
+    "residual_raw_p50": 0.022362172375512773,
+    "residual_raw_p90": 0.13193796479333506,
+    "residual_raw_p99": 0.33923062749247007,
+    "residual_stream_mean": 0.06046229050292234,
+    "residual_top10_mass_share": 0.43355752580430307,
+    "residual_view_max": 0.08515325948036667,
+    "residual_view_min": 0.03708167867077103,
+    "residual_view_std": 0.015553433176844543,
+    "rgb_l1": 0.04112060361191024,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.005587428162728028,
+     "loss": 0.0127915319457951,
+     "rgb_l1": 0.014408207566134142
+    },
+    "OFF": {
+     "depth_term": 0.05186179497043129,
+     "loss": 0.0724220967763864,
+     "rgb_l1": 0.04112060361191024
+    },
+    "SHORT": {
+     "depth_term": 0.03196405455071742,
+     "loss": 0.047390614401424766,
+     "rgb_l1": 0.03085311970141469
+    }
+   },
+   "history_utility": {
+    "FULL": -0.004809558581114856,
+    "OFF": 0.0,
+    "SHORT": -0.0016684882503296694
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0003135419392492622,
+     "mean_error_increase": -0.005033231686072411,
+     "reliable_pixels": 130764
+    },
+    "SHORT": {
+     "broken_share": 0.0016824201447889209,
+     "mean_error_increase": -0.0009345526947130024,
+     "reliable_pixels": 130764
+    }
+   },
+   "place": "arkit_visit_470886",
+   "quality_utility": {
+    "FULL": 0.0008087118263675058,
+    "OFF": 0.0,
+    "SHORT": 2.8406979276918154e-06
+   },
+   "ttt_failed": false
+  },
+  "arkit_47332022/A": {
+   "cost_seconds": {
+    "FULL": 80.3505119162146,
+    "SHORT": 8.199613135075197
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 107.32681912425204,
+    "camera_baseline_max_m": 0.9714934404383105,
+    "coverage": 0.9997698068618774,
+    "depthsplat_vs_measured_absrel": 0.0903344601392746,
+    "depthsplat_vs_measured_median_ratio": 1.0490573644638062,
+    "extent_m": 1.5709251165390015,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.9629533529281616,
+    "measured_depth_p50": 1.5709334015846252,
+    "measured_depth_p90": 3.4485032320022637,
+    "measured_depth_spread": 1.5822121272403329,
+    "residual_context_mean": 0.03875952280491835,
+    "residual_norm_covered_mean": 0.020355397282934885,
+    "residual_norm_covered_p50": 0.008199036958598527,
+    "residual_norm_covered_p90": 0.05063351291492515,
+    "residual_norm_covered_p99": 0.1476839277001133,
+    "residual_raw_mean": 0.044774034978588326,
+    "residual_raw_p50": 0.027175350889610386,
+    "residual_raw_p90": 0.10281527954715573,
+    "residual_raw_p99": 0.2523127449440088,
+    "residual_stream_mean": 0.04928491910884081,
+    "residual_top10_mass_share": 0.3688271183468584,
+    "residual_view_max": 0.060077326160028345,
+    "residual_view_min": 0.027002273951246592,
+    "residual_view_std": 0.009883898938725646,
+    "rgb_l1": 0.044937877933517445,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.009061700113145447,
+     "loss": 0.01986075394068887,
+     "rgb_l1": 0.021598107655086844
+    },
+    "OFF": {
+     "depth_term": 0.044774034978588326,
+     "loss": 0.06724297394534705,
+     "rgb_l1": 0.044937877933517445
+    },
+    "SHORT": {
+     "depth_term": 0.026743924223016503,
+     "loss": 0.044242051272370686,
+     "rgb_l1": 0.03499625409870836
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004210603342562118,
+    "OFF": 0.0,
+    "SHORT": 0.0014388880586335417
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.008245452307164669,
+     "mean_error_increase": -0.004789741858434068,
+     "reliable_pixels": 128677
+    },
+    "SHORT": {
+     "broken_share": 0.004157697316259146,
+     "mean_error_increase": -0.0011146473831910083,
+     "reliable_pixels": 128677
+    }
+   },
+   "place": "arkit_visit_470870",
+   "quality_utility": {
+    "FULL": 0.001764934162324516,
+    "OFF": 0.0,
+    "SHORT": 0.0004560182951064678
+   },
+   "ttt_failed": false
+  },
+  "arkit_47332022/B": {
+   "cost_seconds": {
+    "FULL": 80.36617581592873,
+    "SHORT": 8.127269660821185
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 107.32681912425204,
+    "camera_baseline_max_m": 0.9714934404383105,
+    "coverage": 0.9996373057365417,
+    "depthsplat_vs_measured_absrel": 0.30965113639831543,
+    "depthsplat_vs_measured_median_ratio": 1.0308818817138672,
+    "extent_m": 1.6530832052230835,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.9629533529281616,
+    "measured_depth_p50": 1.6530848741531372,
+    "measured_depth_p90": 4.409827280044556,
+    "measured_depth_spread": 2.085116125015784,
+    "residual_context_mean": 0.0303530093561165,
+    "residual_norm_covered_mean": 0.02158747846464586,
+    "residual_norm_covered_p50": 0.007018069980629137,
+    "residual_norm_covered_p90": 0.06219446962071591,
+    "residual_norm_covered_p99": 0.19388467116289979,
+    "residual_raw_mean": 0.03200597596696315,
+    "residual_raw_p50": 0.012133420079276432,
+    "residual_raw_p90": 0.08635363763168155,
+    "residual_raw_p99": 0.2520663914369751,
+    "residual_stream_mean": 0.03324570092509813,
+    "residual_top10_mass_share": 0.4835397184567939,
+    "residual_view_max": 0.03744495591199497,
+    "residual_view_min": 0.024056699994894917,
+    "residual_view_std": 0.004126998178785601,
+    "rgb_l1": 0.03169450546753784,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.00931225913254867,
+     "loss": 0.01587505197254927,
+     "rgb_l1": 0.0131255856800012
+    },
+    "OFF": {
+     "depth_term": 0.03200597596696314,
+     "loss": 0.04785322870073206,
+     "rgb_l1": 0.03169450546753784
+    },
+    "SHORT": {
+     "depth_term": 0.0220810883362357,
+     "loss": 0.03381624990827573,
+     "rgb_l1": 0.023470323144080058
+    }
+   },
+   "history_utility": {
+    "FULL": 0.003248245643248396,
+    "OFF": 0.0,
+    "SHORT": 0.0011764779758733114
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.023408284410834312,
+     "mean_error_increase": -0.003484564143186774,
+     "reliable_pixels": 125682
+    },
+    "SHORT": {
+     "broken_share": 0.00457503879442811,
+     "mean_error_increase": -0.0017373164562152158,
+     "reliable_pixels": 125682
+    }
+   },
+   "place": "arkit_visit_470870",
+   "quality_utility": {
+    "FULL": 0.002736708240398485,
+    "OFF": 0.0,
+    "SHORT": 0.0008601237438307617
+   },
+   "ttt_failed": false
+  },
+  "arkit_47332952/A": {
+   "cost_seconds": {
+    "FULL": 87.89527014596388,
+    "SHORT": 8.780744591029361
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 106.59159035262532,
+    "camera_baseline_max_m": 2.1754373545763976,
+    "coverage": 0.9375209212303162,
+    "depthsplat_vs_measured_absrel": 0.19074560701847076,
+    "depthsplat_vs_measured_median_ratio": 0.9829974174499512,
+    "extent_m": 1.4240213632583618,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.915267288684845,
+    "measured_depth_p50": 1.424026906490326,
+    "measured_depth_p90": 4.666449260711671,
+    "measured_depth_spread": 2.634207229463125,
+    "residual_context_mean": 0.23187576233309207,
+    "residual_norm_covered_mean": 0.046191639357705226,
+    "residual_norm_covered_p50": 0.013048026654277185,
+    "residual_norm_covered_p90": 0.08205166801496422,
+    "residual_norm_covered_p99": 0.5877028410614858,
+    "residual_raw_mean": 0.12816600811338602,
+    "residual_raw_p50": 0.03883239340919116,
+    "residual_raw_p90": 0.40033181160168807,
+    "residual_raw_p99": 0.8718239898740248,
+    "residual_stream_mean": 0.05038369244860651,
+    "residual_top10_mass_share": 0.4986505751143064,
+    "residual_view_max": 0.24778807851633752,
+    "residual_view_min": 0.017746812595043827,
+    "residual_view_std": 0.09259108553129729,
+    "rgb_l1": 0.07231735523594383,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.028562488437495315,
+     "loss": 0.04093866961204807,
+     "rgb_l1": 0.02475236234910551
+    },
+    "OFF": {
+     "depth_term": 0.128166008113386,
+     "loss": 0.16432468573135792,
+     "rgb_l1": 0.07231735523594383
+    },
+    "SHORT": {
+     "depth_term": 0.09639107040932733,
+     "loss": 0.12381735201115902,
+     "rgb_l1": 0.05485256320366338
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004858155770333123,
+    "OFF": 0.0,
+    "SHORT": 0.00195036267128125
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.02543502487242222,
+     "mean_error_increase": -0.0034044059314528707,
+     "reliable_pixels": 111028
+    },
+    "SHORT": {
+     "broken_share": 0.008934683166444302,
+     "mean_error_increase": -0.0013916203554738913,
+     "reliable_pixels": 111028
+    }
+   },
+   "place": "arkit_visit_469214",
+   "quality_utility": {
+    "FULL": 0.0030947835002156227,
+    "OFF": 0.0,
+    "SHORT": 0.0004338140228538831
+   },
+   "ttt_failed": false
+  },
+  "arkit_47332952/B": {
+   "cost_seconds": {
+    "FULL": 99.97168344794773,
+    "SHORT": 10.113580317003652
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 106.59159035262532,
+    "camera_baseline_max_m": 2.1754373545763976,
+    "coverage": 0.9947684407234192,
+    "depthsplat_vs_measured_absrel": 0.15311872959136963,
+    "depthsplat_vs_measured_median_ratio": 1.0135877132415771,
+    "extent_m": 1.4103952646255493,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.9325956523418426,
+    "measured_depth_p50": 1.410397231578827,
+    "measured_depth_p90": 3.9922352075576795,
+    "measured_depth_spread": 2.169345973397023,
+    "residual_context_mean": 0.07282945088856028,
+    "residual_norm_covered_mean": 0.028184032304974224,
+    "residual_norm_covered_p50": 0.009834035942978485,
+    "residual_norm_covered_p90": 0.058376505983086885,
+    "residual_norm_covered_p99": 0.3231622087160068,
+    "residual_raw_mean": 0.0641150341287031,
+    "residual_raw_p50": 0.024535930267711427,
+    "residual_raw_p90": 0.16703849418109382,
+    "residual_raw_p99": 0.48893316090280214,
+    "residual_stream_mean": 0.05757922155881021,
+    "residual_top10_mass_share": 0.48742080859430376,
+    "residual_view_max": 0.09197020278691606,
+    "residual_view_min": 0.02209721145206165,
+    "residual_view_std": 0.025498818661910675,
+    "rgb_l1": 0.052901760054852184,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.010507621242836327,
+     "loss": 0.02080139161051011,
+     "rgb_l1": 0.02058754073534757
+    },
+    "OFF": {
+     "depth_term": 0.0641150341287031,
+     "loss": 0.09056591415612919,
+     "rgb_l1": 0.052901760054852184
+    },
+    "SHORT": {
+     "depth_term": 0.040351609187029645,
+     "loss": 0.06052268708839019,
+     "rgb_l1": 0.04034215580272108
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004830596681426019,
+    "OFF": 0.0,
+    "SHORT": 0.0016079799967394955
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.005913948640227318,
+     "mean_error_increase": -0.0053753228365304205,
+     "reliable_pixels": 125297
+    },
+    "SHORT": {
+     "broken_share": 0.007885264232754707,
+     "mean_error_increase": -0.0012333054547016657,
+     "reliable_pixels": 125297
+    }
+   },
+   "place": "arkit_visit_469214",
+   "quality_utility": {
+    "FULL": 0.0015814120082808386,
+    "OFF": 0.0,
+    "SHORT": 0.0008773254854466395
+   },
+   "ttt_failed": false
+  },
+  "arkit_47333758/A": {
+   "cost_seconds": {
+    "FULL": 87.16354913404211,
+    "SHORT": 8.693558152066544
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 72.16904058827268,
+    "camera_baseline_max_m": 0.8994806167555223,
+    "coverage": 0.9990792274475098,
+    "depthsplat_vs_measured_absrel": 0.17987549304962158,
+    "depthsplat_vs_measured_median_ratio": 0.9326053261756897,
+    "extent_m": 1.0969258546829224,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.7352010786533356,
+    "measured_depth_p50": 1.0969319939613342,
+    "measured_depth_p90": 3.8920110702514648,
+    "measured_depth_spread": 2.877853876973711,
+    "residual_context_mean": 0.09259579200338926,
+    "residual_norm_covered_mean": 0.04838185749983785,
+    "residual_norm_covered_p50": 0.011832142652952522,
+    "residual_norm_covered_p90": 0.06817387637602927,
+    "residual_norm_covered_p99": 0.6983069930045943,
+    "residual_raw_mean": 0.0733691967868139,
+    "residual_raw_p50": 0.026906378457373738,
+    "residual_raw_p90": 0.16025402354253745,
+    "residual_raw_p99": 0.6384130997762418,
+    "residual_stream_mean": 0.058949250374382395,
+    "residual_top10_mass_share": 0.5515870934222588,
+    "residual_view_max": 0.13671285683752799,
+    "residual_view_min": 0.04718254762036161,
+    "residual_view_std": 0.028906361526223896,
+    "rgb_l1": 0.05285293577430625,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.020073741513009377,
+     "loss": 0.033657834783091686,
+     "rgb_l1": 0.027168186540164625
+    },
+    "OFF": {
+     "depth_term": 0.07336919678681389,
+     "loss": 0.09979566467396701,
+     "rgb_l1": 0.05285293577430625
+    },
+    "SHORT": {
+     "depth_term": 0.05002659733025414,
+     "loss": 0.07147059500572721,
+     "rgb_l1": 0.04288799535094614
+    }
+   },
+   "history_utility": {
+    "FULL": 0.007390987618238108,
+    "OFF": 0.0,
+    "SHORT": 0.003536239789389363
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.014395652338862419,
+     "mean_error_increase": -0.004768037985408823,
+     "reliable_pixels": 122537
+    },
+    "SHORT": {
+     "broken_share": 0.004113043658435345,
+     "mean_error_increase": -0.0019342078596262524,
+     "reliable_pixels": 122537
+    }
+   },
+   "place": "arkit_visit_467292",
+   "quality_utility": {
+    "FULL": -0.0002516005607618582,
+    "OFF": 0.0,
+    "SHORT": 0.00015295368180995306
+   },
+   "ttt_failed": false
+  },
+  "arkit_47333758/B": {
+   "cost_seconds": {
+    "FULL": 85.80069125187583,
+    "SHORT": 8.729000105988234
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 70.13359170312886,
+    "camera_baseline_max_m": 0.8976302088276056,
+    "coverage": 0.9738141894340515,
+    "depthsplat_vs_measured_absrel": 0.11335833370685577,
+    "depthsplat_vs_measured_median_ratio": 0.941094696521759,
+    "extent_m": 1.127820372581482,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.7294898808002472,
+    "measured_depth_p50": 1.1278314590454102,
+    "measured_depth_p90": 2.415324521064759,
+    "measured_depth_spread": 1.4947575958657795,
+    "residual_context_mean": 0.07959045272030006,
+    "residual_norm_covered_mean": 0.029971242680742558,
+    "residual_norm_covered_p50": 0.00799596898459632,
+    "residual_norm_covered_p90": 0.047108835261186116,
+    "residual_norm_covered_p99": 0.4672057888071034,
+    "residual_raw_mean": 0.0865150336950988,
+    "residual_raw_p50": 0.022988890069573928,
+    "residual_raw_p90": 0.24927034514907562,
+    "residual_raw_p99": 0.7148480936546141,
+    "residual_stream_mean": 0.09170846942619787,
+    "residual_top10_mass_share": 0.5347643859755854,
+    "residual_view_max": 0.17957861401066572,
+    "residual_view_min": 0.023738582785476876,
+    "residual_view_std": 0.05716302525170613,
+    "rgb_l1": 0.0567897117609691,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.012628042480105822,
+     "loss": 0.022880103578555203,
+     "rgb_l1": 0.020504122196898764
+    },
+    "OFF": {
+     "depth_term": 0.0865150336950988,
+     "loss": 0.11490988957558335,
+     "rgb_l1": 0.0567897117609691
+    },
+    "SHORT": {
+     "depth_term": 0.056305248683265655,
+     "loss": 0.07772778969116757,
+     "rgb_l1": 0.04284508201580383
+    }
+   },
+   "history_utility": {
+    "FULL": 0.006054369144327457,
+    "OFF": 0.0,
+    "SHORT": 0.003240600250654674
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.016736797988414764,
+     "mean_error_increase": -0.0019381234440340386,
+     "reliable_pixels": 126667
+    },
+    "SHORT": {
+     "broken_share": 0.005344722885638475,
+     "mean_error_increase": -0.0011830675551618656,
+     "reliable_pixels": 126667
+    }
+   },
+   "place": "arkit_visit_467292",
+   "quality_utility": {
+    "FULL": -0.002557901836763188,
+    "OFF": 0.0,
+    "SHORT": -0.00013082421592791604
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334004/A": {
+   "cost_seconds": {
+    "FULL": 85.54103875695728,
+    "SHORT": 8.647107891039923
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 122.97619577895057,
+    "camera_baseline_max_m": 1.9616385035335326,
+    "coverage": 1.0,
+    "depthsplat_vs_measured_absrel": 0.5559580326080322,
+    "depthsplat_vs_measured_median_ratio": 0.8506910800933838,
+    "extent_m": 0.6782200932502747,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.4010994374752045,
+    "measured_depth_p50": 0.6782201826572418,
+    "measured_depth_p90": 1.047316896915436,
+    "measured_depth_spread": 0.9528136672494399,
+    "residual_context_mean": 0.03603265790451951,
+    "residual_norm_covered_mean": 0.030396654627737028,
+    "residual_norm_covered_p50": 0.017953010384261996,
+    "residual_norm_covered_p90": 0.07527350798108388,
+    "residual_norm_covered_p99": 0.16707042130774155,
+    "residual_raw_mean": 0.044143989763934494,
+    "residual_raw_p50": 0.030296961668238875,
+    "residual_raw_p90": 0.10408232082107774,
+    "residual_raw_p99": 0.2152165815898372,
+    "residual_stream_mean": 0.05022748865849573,
+    "residual_top10_mass_share": 0.34183036574833436,
+    "residual_view_max": 0.08035277232098455,
+    "residual_view_min": 0.03195066744893586,
+    "residual_view_std": 0.015323023775498785,
+    "rgb_l1": 0.03766334212141157,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0028132211434169422,
+     "loss": 0.007749243513196476,
+     "rgb_l1": 0.009872044739559068
+    },
+    "OFF": {
+     "depth_term": 0.044143989763934494,
+     "loss": 0.06297566082464028,
+     "rgb_l1": 0.03766334212141157
+    },
+    "SHORT": {
+     "depth_term": 0.028368476518574604,
+     "loss": 0.04242180119329899,
+     "rgb_l1": 0.02810664934944877
+    }
+   },
+   "history_utility": {
+    "FULL": -0.08747224984565416,
+    "OFF": 0.0,
+    "SHORT": -0.008434015154290098
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0013925516977906227,
+     "mean_error_increase": -0.013283129124536127,
+     "reliable_pixels": 114897
+    },
+    "SHORT": {
+     "broken_share": 0.0014795861206948757,
+     "mean_error_increase": -0.004556909446036473,
+     "reliable_pixels": 114897
+    }
+   },
+   "place": "arkit_visit_467296",
+   "quality_utility": {
+    "FULL": 0.000953042541220972,
+    "OFF": 0.0,
+    "SHORT": 0.0003724186903019122
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334004/B": {
+   "cost_seconds": {
+    "FULL": 87.39315088908188,
+    "SHORT": 8.705163581995293
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 122.97619577895057,
+    "camera_baseline_max_m": 1.9616385035335326,
+    "coverage": 0.9995186924934387,
+    "depthsplat_vs_measured_absrel": 0.7856768369674683,
+    "depthsplat_vs_measured_median_ratio": 0.8828666806221008,
+    "extent_m": 0.6840493679046631,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.39500200748443604,
+    "measured_depth_p50": 0.68405681848526,
+    "measured_depth_p90": 1.3128074526786804,
+    "measured_depth_spread": 1.3417093732456102,
+    "residual_context_mean": 0.07469194510016595,
+    "residual_norm_covered_mean": 0.026165101997116635,
+    "residual_norm_covered_p50": 0.01606067103807648,
+    "residual_norm_covered_p90": 0.05409959731270828,
+    "residual_norm_covered_p99": 0.19391201662512458,
+    "residual_raw_mean": 0.06538900792858075,
+    "residual_raw_p50": 0.038177658916137,
+    "residual_raw_p90": 0.16062774175032427,
+    "residual_raw_p99": 0.34907547843194026,
+    "residual_stream_mean": 0.058411805049891845,
+    "residual_top10_mass_share": 0.3694915770441127,
+    "residual_view_max": 0.09233367394420289,
+    "residual_view_min": 0.035061514789016805,
+    "residual_view_std": 0.020142035925899103,
+    "rgb_l1": 0.03919817087760294,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.006821997085974266,
+     "loss": 0.01299216117907756,
+     "rgb_l1": 0.012340328186206591
+    },
+    "OFF": {
+     "depth_term": 0.06538900792858075,
+     "loss": 0.08498809336738222,
+     "rgb_l1": 0.03919817087760294
+    },
+    "SHORT": {
+     "depth_term": 0.04009616005896294,
+     "loss": 0.0551344047305117,
+     "rgb_l1": 0.030076489343097517
+    }
+   },
+   "history_utility": {
+    "FULL": -0.0016662275441592378,
+    "OFF": 0.0,
+    "SHORT": 0.0003042006358195126
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0076090069487690926,
+     "mean_error_increase": -0.011974213188830053,
+     "reliable_pixels": 125772
+    },
+    "SHORT": {
+     "broken_share": 0.006153993308544159,
+     "mean_error_increase": -0.0028171793333020695,
+     "reliable_pixels": 125772
+    }
+   },
+   "place": "arkit_visit_467296",
+   "quality_utility": {
+    "FULL": -0.000704527458834564,
+    "OFF": 0.0,
+    "SHORT": -7.786038458787448e-05
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334284/A": {
+   "cost_seconds": {
+    "FULL": 78.78320453502238,
+    "SHORT": 7.931378317065537
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 125.42191129519858,
+    "camera_baseline_max_m": 1.1755162904841094,
+    "coverage": 0.9994559288024902,
+    "depthsplat_vs_measured_absrel": 0.683091402053833,
+    "depthsplat_vs_measured_median_ratio": 0.6036026477813721,
+    "extent_m": 0.5520018935203552,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.47966827154159547,
+    "measured_depth_p50": 0.5520019233226776,
+    "measured_depth_p90": 1.019985055923462,
+    "measured_depth_spread": 0.9788313437922926,
+    "residual_context_mean": 0.037591164433958046,
+    "residual_norm_covered_mean": 0.0312528602782909,
+    "residual_norm_covered_p50": 0.009789038611588658,
+    "residual_norm_covered_p90": 0.08360895963718523,
+    "residual_norm_covered_p99": 0.2775012753176786,
+    "residual_raw_mean": 0.03522731202315169,
+    "residual_raw_p50": 0.014319656972872291,
+    "residual_raw_p90": 0.08850657844339505,
+    "residual_raw_p99": 0.28764044394702204,
+    "residual_stream_mean": 0.033454422715046936,
+    "residual_top10_mass_share": 0.4740203588239393,
+    "residual_view_max": 0.09113979238166137,
+    "residual_view_min": 0.009015489867834523,
+    "residual_view_std": 0.026935489556365103,
+    "rgb_l1": 0.032910776604883826,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.012839403692321607,
+     "loss": 0.016692689339852265,
+     "rgb_l1": 0.007706571295061317
+    },
+    "OFF": {
+     "depth_term": 0.035227312023151686,
+     "loss": 0.0516827003255936,
+     "rgb_l1": 0.032910776604883826
+    },
+    "SHORT": {
+     "depth_term": 0.027006283679330254,
+     "loss": 0.03818721534085451,
+     "rgb_l1": 0.022361863323048514
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004188888266507235,
+    "OFF": 0.0,
+    "SHORT": 0.0013341589584469071
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.010427014902234077,
+     "mean_error_increase": -0.007461293699253424,
+     "reliable_pixels": 115757
+    },
+    "SHORT": {
+     "broken_share": 8.638786312076263e-06,
+     "mean_error_increase": -0.0036409424435274607,
+     "reliable_pixels": 115757
+    }
+   },
+   "place": "arkit_visit_470116",
+   "quality_utility": {
+    "FULL": 0.0004771369428473171,
+    "OFF": 0.0,
+    "SHORT": 0.0002482494163068144
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334284/B": {
+   "cost_seconds": {
+    "FULL": 79.18841582234018,
+    "SHORT": 7.637953102122992
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 124.25513413779186,
+    "camera_baseline_max_m": 1.1733071325972884,
+    "coverage": 0.9994559288024902,
+    "depthsplat_vs_measured_absrel": 1.2664265632629395,
+    "depthsplat_vs_measured_median_ratio": 0.382781445980072,
+    "extent_m": 0.5537203550338745,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.4810310602188111,
+    "measured_depth_p50": 0.5537204146385193,
+    "measured_depth_p90": 1.019985055923462,
+    "measured_depth_spread": 0.9733323559263962,
+    "residual_context_mean": 0.03577366507265999,
+    "residual_norm_covered_mean": 0.030327413921515573,
+    "residual_norm_covered_p50": 0.00942927283171669,
+    "residual_norm_covered_p90": 0.08243198767657911,
+    "residual_norm_covered_p99": 0.27177562153246354,
+    "residual_raw_mean": 0.03351852857050008,
+    "residual_raw_p50": 0.0130514745756777,
+    "residual_raw_p90": 0.0861454815782294,
+    "residual_raw_p99": 0.2819494866004732,
+    "residual_stream_mean": 0.031827176193880154,
+    "residual_top10_mass_share": 0.48142783831153124,
+    "residual_view_max": 0.08790377242767447,
+    "residual_view_min": 0.008904874016722231,
+    "residual_view_std": 0.027045061643210317,
+    "rgb_l1": 0.032713206687243784,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.011936714977297763,
+     "loss": 0.0153146436492771,
+     "rgb_l1": 0.006755857343958674
+    },
+    "OFF": {
+     "depth_term": 0.033518528570500083,
+     "loss": 0.049875131914121976,
+     "rgb_l1": 0.032713206687243784
+    },
+    "SHORT": {
+     "depth_term": 0.0257736767865337,
+     "loss": 0.03677852497505341,
+     "rgb_l1": 0.022009696377039423
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004333252617053626,
+    "OFF": 0.0,
+    "SHORT": 0.0013582674244680126
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.005861552897840738,
+     "mean_error_increase": -0.008164294114752984,
+     "reliable_pixels": 115669
+    },
+    "SHORT": {
+     "broken_share": 4.322679160395637e-05,
+     "mean_error_increase": -0.003652402141285779,
+     "reliable_pixels": 115669
+    }
+   },
+   "place": "arkit_visit_470116",
+   "quality_utility": {
+    "FULL": 0.0005387331587964478,
+    "OFF": 0.0,
+    "SHORT": 0.0002584523619228729
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334627/A": {
+   "cost_seconds": {
+    "FULL": 78.58244216721505,
+    "SHORT": 7.779876949032769
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 104.29559340276319,
+    "camera_baseline_max_m": 1.1416375718709708,
+    "coverage": 0.9978376030921936,
+    "depthsplat_vs_measured_absrel": 0.18866769969463348,
+    "depthsplat_vs_measured_median_ratio": 0.9312480688095093,
+    "extent_m": 0.6287213563919067,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.5920019745826721,
+    "measured_depth_p50": 0.6287214159965515,
+    "measured_depth_p90": 2.7041734457015996,
+    "measured_depth_spread": 3.35947117018599,
+    "residual_context_mean": 0.05225852828281943,
+    "residual_norm_covered_mean": 0.015595340522636648,
+    "residual_norm_covered_p50": 0.0051305043690122445,
+    "residual_norm_covered_p90": 0.041366265958255204,
+    "residual_norm_covered_p99": 0.14497311642561686,
+    "residual_raw_mean": 0.04807279629866292,
+    "residual_raw_p50": 0.025198517690482442,
+    "residual_raw_p90": 0.11337573448905998,
+    "residual_raw_p99": 0.32826836580440555,
+    "residual_stream_mean": 0.04493349731054555,
+    "residual_top10_mass_share": 0.4324936877887501,
+    "residual_view_max": 0.06000448813708892,
+    "residual_view_min": 0.02704441139462197,
+    "residual_view_std": 0.010048178830131255,
+    "rgb_l1": 0.032088286801059886,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.005316344420071119,
+     "loss": 0.013144242202596145,
+     "rgb_l1": 0.015655795565050052
+    },
+    "OFF": {
+     "depth_term": 0.04807279629866292,
+     "loss": 0.06411693969919287,
+     "rgb_l1": 0.032088286801059886
+    },
+    "SHORT": {
+     "depth_term": 0.028740112226072402,
+     "loss": 0.041948530709882303,
+     "rgb_l1": 0.026416836967619806
+    }
+   },
+   "history_utility": {
+    "FULL": -0.0026536634968179484,
+    "OFF": 0.0,
+    "SHORT": 0.000549287993162284
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.004604822490364313,
+     "mean_error_increase": -0.003048247559738553,
+     "reliable_pixels": 131384
+    },
+    "SHORT": {
+     "broken_share": 0.0010960238287225366,
+     "mean_error_increase": -0.0010999847172236746,
+     "reliable_pixels": 131384
+    }
+   },
+   "place": "arkit_visit_481523",
+   "quality_utility": {
+    "FULL": 0.0078112323096028585,
+    "OFF": 0.0,
+    "SHORT": 0.002702126620237985
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334627/B": {
+   "cost_seconds": {
+    "FULL": 77.37144953780808,
+    "SHORT": 7.69542346498929
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 102.9311374046854,
+    "camera_baseline_max_m": 1.1373496298111352,
+    "coverage": 0.996944785118103,
+    "depthsplat_vs_measured_absrel": 0.24539385735988617,
+    "depthsplat_vs_measured_median_ratio": 0.9305821657180786,
+    "extent_m": 0.6440955996513367,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6079834818840026,
+    "measured_depth_p50": 0.6440956294536591,
+    "measured_depth_p90": 2.7041734457015996,
+    "measured_depth_spread": 3.254470094131282,
+    "residual_context_mean": 0.08384169194008599,
+    "residual_norm_covered_mean": 0.01470198427334168,
+    "residual_norm_covered_p50": 0.003471998384124741,
+    "residual_norm_covered_p90": 0.04083405205924316,
+    "residual_norm_covered_p99": 0.143855592786425,
+    "residual_raw_mean": 0.06488698231599405,
+    "residual_raw_p50": 0.03074207564325975,
+    "residual_raw_p90": 0.16401212542791377,
+    "residual_raw_p99": 0.39940213552567755,
+    "residual_stream_mean": 0.05067095009792511,
+    "residual_top10_mass_share": 0.41796997244582934,
+    "residual_view_max": 0.0927894822649889,
+    "residual_view_min": 0.026701316146786603,
+    "residual_view_std": 0.02174235053678025,
+    "rgb_l1": 0.03815069667296625,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.004968595209349505,
+     "loss": 0.013409080479837989,
+     "rgb_l1": 0.01688097054097697
+    },
+    "OFF": {
+     "depth_term": 0.06488698231599405,
+     "loss": 0.08396233065247717,
+     "rgb_l1": 0.03815069667296625
+    },
+    "SHORT": {
+     "depth_term": 0.03889692836185644,
+     "loss": 0.053268435702714036,
+     "rgb_l1": 0.0287430146817152
+    }
+   },
+   "history_utility": {
+    "FULL": -0.0019270651097734182,
+    "OFF": 0.0,
+    "SHORT": 0.0010150063838753054
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.004647943191230297,
+     "mean_error_increase": -0.0021455189575193432,
+     "reliable_pixels": 131456
+    },
+    "SHORT": {
+     "broken_share": 0.001049780985340476,
+     "mean_error_increase": -0.0009469604642748678,
+     "reliable_pixels": 131456
+    }
+   },
+   "place": "arkit_visit_481523",
+   "quality_utility": {
+    "FULL": 0.00767269476184379,
+    "OFF": 0.0,
+    "SHORT": 0.002668049266256807
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334834/A": {
+   "cost_seconds": {
+    "FULL": 82.02336495020427,
+    "SHORT": 8.075515726115555
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 104.65354853487614,
+    "camera_baseline_max_m": 0.8866323947053895,
+    "coverage": 0.9982770681381226,
+    "depthsplat_vs_measured_absrel": 1.0695081949234009,
+    "depthsplat_vs_measured_median_ratio": 0.4006884694099426,
+    "extent_m": 0.5412207245826721,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.49984490275383,
+    "measured_depth_p50": 0.5412207245826721,
+    "measured_depth_p90": 1.6000585675239563,
+    "measured_depth_spread": 2.03283727839226,
+    "residual_context_mean": 0.07479225152839447,
+    "residual_norm_covered_mean": 0.032026377262203296,
+    "residual_norm_covered_p50": 0.015297390709309135,
+    "residual_norm_covered_p90": 0.08348772055364566,
+    "residual_norm_covered_p99": 0.25508081618739903,
+    "residual_raw_mean": 0.0624617104508134,
+    "residual_raw_p50": 0.04233602241070947,
+    "residual_raw_p90": 0.13228348421441874,
+    "residual_raw_p99": 0.3546156454172459,
+    "residual_stream_mean": 0.05321380464262759,
+    "residual_top10_mass_share": 0.3684238395754881,
+    "residual_view_max": 0.07962079295765362,
+    "residual_view_min": 0.044802886112986454,
+    "residual_view_std": 0.013546420408717565,
+    "rgb_l1": 0.04473948473540543,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.01726822214861604,
+     "loss": 0.026385248439663018,
+     "rgb_l1": 0.018234052582093957
+    },
+    "OFF": {
+     "depth_term": 0.0624617104508134,
+     "loss": 0.08483145281851612,
+     "rgb_l1": 0.04473948473540543
+    },
+    "SHORT": {
+     "depth_term": 0.04328969251300639,
+     "loss": 0.06031846012173946,
+     "rgb_l1": 0.03405753521746614
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0032639302288816063,
+    "OFF": 0.0,
+    "SHORT": 0.001002024552493097
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.015799224376678467,
+     "mean_error_increase": -0.008761409602693112,
+     "reliable_pixels": 112284
+    },
+    "SHORT": {
+     "broken_share": 0.007561184465885162,
+     "mean_error_increase": -0.0021951285350094614,
+     "reliable_pixels": 112284
+    }
+   },
+   "place": "arkit_visit_481809",
+   "quality_utility": {
+    "FULL": -0.0014005168543877455,
+    "OFF": 0.0,
+    "SHORT": -3.1646175259053555e-06
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334834/B": {
+   "cost_seconds": {
+    "FULL": 81.4229602678679,
+    "SHORT": 8.242489180993289
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 104.74351753683642,
+    "camera_baseline_max_m": 0.8879887258289746,
+    "coverage": 0.9973841905593872,
+    "depthsplat_vs_measured_absrel": 1.109324336051941,
+    "depthsplat_vs_measured_median_ratio": 0.3885546922683716,
+    "extent_m": 0.5425010919570923,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.4998300582170486,
+    "measured_depth_p50": 0.5425013899803162,
+    "measured_depth_p90": 1.6000585675239563,
+    "measured_depth_spread": 2.028065788636648,
+    "residual_context_mean": 0.08227334285189335,
+    "residual_norm_covered_mean": 0.028686757517366327,
+    "residual_norm_covered_p50": 0.008127091398896011,
+    "residual_norm_covered_p90": 0.08951367954018542,
+    "residual_norm_covered_p99": 0.18464181351682488,
+    "residual_raw_mean": 0.06368028398765678,
+    "residual_raw_p50": 0.037798293842064346,
+    "residual_raw_p90": 0.1405257002899225,
+    "residual_raw_p99": 0.3822684079669119,
+    "residual_stream_mean": 0.049735489839479355,
+    "residual_top10_mass_share": 0.3857609949684828,
+    "residual_view_max": 0.09571804745581951,
+    "residual_view_min": 0.03632542495756249,
+    "residual_view_std": 0.02013606016472117,
+    "rgb_l1": 0.04433736626248301,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.01654385135727828,
+     "loss": 0.025437254814632555,
+     "rgb_l1": 0.017786806914708547
+    },
+    "OFF": {
+     "depth_term": 0.06368028398765677,
+     "loss": 0.08584896711889828,
+     "rgb_l1": 0.04433736626248301
+    },
+    "SHORT": {
+     "depth_term": 0.043084701753107024,
+     "loss": 0.05981945982793818,
+     "rgb_l1": 0.033469516149662315
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0012181461919297462,
+    "OFF": 0.0,
+    "SHORT": 0.0005483354032436855
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.006358052138239145,
+     "mean_error_increase": -0.005206810616278279,
+     "reliable_pixels": 115916
+    },
+    "SHORT": {
+     "broken_share": 0.0027778735384345055,
+     "mean_error_increase": -0.0015854986601594769,
+     "reliable_pixels": 115916
+    }
+   },
+   "place": "arkit_visit_481809",
+   "quality_utility": {
+    "FULL": -0.0015456428446913029,
+    "OFF": 0.0,
+    "SHORT": -1.9827399395516698e-05
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334890/A": {
+   "cost_seconds": {
+    "FULL": 77.59785275813192,
+    "SHORT": 7.765476081054658
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 102.15277980235358,
+    "camera_baseline_max_m": 1.0347695965747585,
+    "coverage": 0.993359386920929,
+    "depthsplat_vs_measured_absrel": 0.6157994866371155,
+    "depthsplat_vs_measured_median_ratio": 0.703774094581604,
+    "extent_m": 0.6892057657241821,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6570014357566833,
+    "measured_depth_p50": 0.6892057955265045,
+    "measured_depth_p90": 2.508755350112915,
+    "measured_depth_spread": 2.686793881269705,
+    "residual_context_mean": 0.06979902597380115,
+    "residual_norm_covered_mean": 0.021518873841754268,
+    "residual_norm_covered_p50": 0.007592761647490146,
+    "residual_norm_covered_p90": 0.05774423567109796,
+    "residual_norm_covered_p99": 0.21349587287500493,
+    "residual_raw_mean": 0.06401446924131571,
+    "residual_raw_p50": 0.0320938382721431,
+    "residual_raw_p90": 0.15309622073516227,
+    "residual_raw_p99": 0.46906113071678945,
+    "residual_stream_mean": 0.05967605169195164,
+    "residual_top10_mass_share": 0.45322600979658384,
+    "residual_view_max": 0.08213870712427346,
+    "residual_view_min": 0.03632435242729629,
+    "residual_view_std": 0.013307264465909976,
+    "rgb_l1": 0.0442517198347332,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.005221478715069655,
+     "loss": 0.01525389918199909,
+     "rgb_l1": 0.02006484093385887
+    },
+    "OFF": {
+     "depth_term": 0.06401446924131572,
+     "loss": 0.08614032915868232,
+     "rgb_l1": 0.0442517198347332
+    },
+    "SHORT": {
+     "depth_term": 0.03801699088458852,
+     "loss": 0.05562426318057337,
+     "rgb_l1": 0.0352145445919697
+    }
+   },
+   "history_utility": {
+    "FULL": 0.00021701500523704786,
+    "OFF": 0.0,
+    "SHORT": 0.00045553971906014956
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.007153064478188753,
+     "mean_error_increase": -0.004965598029882052,
+     "reliable_pixels": 125261
+    },
+    "SHORT": {
+     "broken_share": 0.002650465816259384,
+     "mean_error_increase": -0.0019306170223883558,
+     "reliable_pixels": 125261
+    }
+   },
+   "place": "arkit_visit_481781",
+   "quality_utility": {
+    "FULL": -0.02384019399132456,
+    "OFF": 0.0,
+    "SHORT": -0.006400238404718983
+   },
+   "ttt_failed": false
+  },
+  "arkit_47334890/B": {
+   "cost_seconds": {
+    "FULL": 78.79636183171533,
+    "SHORT": 7.954626127844676
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 102.07217088021916,
+    "camera_baseline_max_m": 1.0347695965747585,
+    "coverage": 0.9832798838615417,
+    "depthsplat_vs_measured_absrel": 0.6867679953575134,
+    "depthsplat_vs_measured_median_ratio": 0.5213370323181152,
+    "extent_m": 0.6930028796195984,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6620012521743774,
+    "measured_depth_p50": 0.6930028796195984,
+    "measured_depth_p90": 2.508755350112915,
+    "measured_depth_spread": 2.6648577549234047,
+    "residual_context_mean": 0.09533041523774226,
+    "residual_norm_covered_mean": 0.022304450028934136,
+    "residual_norm_covered_p50": 0.00748315725383145,
+    "residual_norm_covered_p90": 0.05865846803404079,
+    "residual_norm_covered_p99": 0.22522524028213783,
+    "residual_raw_mean": 0.07701079519460341,
+    "residual_raw_p50": 0.04160926641801964,
+    "residual_raw_p90": 0.18644337371784203,
+    "residual_raw_p99": 0.5710340763986844,
+    "residual_stream_mean": 0.0632710801622493,
+    "residual_top10_mass_share": 0.44490263897895305,
+    "residual_view_max": 0.09948065481594331,
+    "residual_view_min": 0.03545919285063447,
+    "residual_view_std": 0.023620024364048975,
+    "rgb_l1": 0.04775075408301205,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.005380824974821205,
+     "loss": 0.015659636617781126,
+     "rgb_l1": 0.02055762328591984
+    },
+    "OFF": {
+     "depth_term": 0.07701079519460341,
+     "loss": 0.10088617223610943,
+     "rgb_l1": 0.04775075408301205
+    },
+    "SHORT": {
+     "depth_term": 0.04698704927230142,
+     "loss": 0.06523232222314577,
+     "rgb_l1": 0.03649054590168871
+    }
+   },
+   "history_utility": {
+    "FULL": 0.00020223476056713263,
+    "OFF": 0.0,
+    "SHORT": 0.00048447049951162724
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.007542746141552925,
+     "mean_error_increase": -0.005182343412394457,
+     "reliable_pixels": 123695
+    },
+    "SHORT": {
+     "broken_share": 0.0023525606375187635,
+     "mean_error_increase": -0.0019574948872038717,
+     "reliable_pixels": 123695
+    }
+   },
+   "place": "arkit_visit_481781",
+   "quality_utility": {
+    "FULL": -0.023364701037740743,
+    "OFF": 0.0,
+    "SHORT": -0.006274351172399301
+   },
+   "ttt_failed": false
+  },
+  "arkit_47429798/A": {
+   "cost_seconds": {
+    "FULL": 78.16217900486663,
+    "SHORT": 7.888054296839982
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 107.54164311235661,
+    "camera_baseline_max_m": 1.1707868959528822,
+    "coverage": 0.9955636262893677,
+    "depthsplat_vs_measured_absrel": 0.46748843789100647,
+    "depthsplat_vs_measured_median_ratio": 0.7032235264778137,
+    "extent_m": 0.47953343391418457,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.43500152230262756,
+    "measured_depth_p50": 0.47953344881534576,
+    "measured_depth_p90": 1.1689416527748109,
+    "measured_depth_spread": 1.5305295851318228,
+    "residual_context_mean": 0.053408767237303055,
+    "residual_norm_covered_mean": 0.01731135620957211,
+    "residual_norm_covered_p50": 0.011604566640019815,
+    "residual_norm_covered_p90": 0.03869580520319358,
+    "residual_norm_covered_p99": 0.09117252420988099,
+    "residual_raw_mean": 0.04200283444417296,
+    "residual_raw_p50": 0.022953158371565703,
+    "residual_raw_p90": 0.087726456622254,
+    "residual_raw_p99": 0.3227653120450924,
+    "residual_stream_mean": 0.03344838484932539,
+    "residual_top10_mass_share": 0.4272145684929147,
+    "residual_view_max": 0.05821065115720772,
+    "residual_view_min": 0.02017469072873121,
+    "residual_view_std": 0.013840155814377359,
+    "rgb_l1": 0.04892151487488697,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0044992797347699525,
+     "loss": 0.01339004146901369,
+     "rgb_l1": 0.01778152346848748
+    },
+    "OFF": {
+     "depth_term": 0.042002834444172965,
+     "loss": 0.06646359188161645,
+     "rgb_l1": 0.04892151487488697
+    },
+    "SHORT": {
+     "depth_term": 0.026873190837751984,
+     "loss": 0.04632396789377631,
+     "rgb_l1": 0.03890155411204866
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0006711899356600937,
+    "OFF": 0.0,
+    "SHORT": 0.0004982137207145548
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0,
+     "mean_error_increase": -0.008834286699476272,
+     "reliable_pixels": 133694
+    },
+    "SHORT": {
+     "broken_share": 0.00041138718370348215,
+     "mean_error_increase": -0.0020559308586781937,
+     "reliable_pixels": 133694
+    }
+   },
+   "place": "arkit_visit_471442",
+   "quality_utility": {
+    "FULL": -0.007585604980916982,
+    "OFF": 0.0,
+    "SHORT": -0.002196369698665296
+   },
+   "ttt_failed": false
+  },
+  "arkit_47429798/B": {
+   "cost_seconds": {
+    "FULL": 77.33269944391213,
+    "SHORT": 7.779637087834999
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 107.54164311235661,
+    "camera_baseline_max_m": 1.1707868959528822,
+    "coverage": 0.9961565136909485,
+    "depthsplat_vs_measured_absrel": 0.7471368312835693,
+    "depthsplat_vs_measured_median_ratio": 0.7000111937522888,
+    "extent_m": 0.4878455102443695,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.44200187623500825,
+    "measured_depth_p50": 0.4878455549478531,
+    "measured_depth_p90": 1.1689416527748109,
+    "measured_depth_spread": 1.4901022857890074,
+    "residual_context_mean": 0.03605625140142031,
+    "residual_norm_covered_mean": 0.015169436122728029,
+    "residual_norm_covered_p50": 0.007801988907632896,
+    "residual_norm_covered_p90": 0.03492677014112068,
+    "residual_norm_covered_p99": 0.09058305115751661,
+    "residual_raw_mean": 0.03373397751337347,
+    "residual_raw_p50": 0.01888314886688172,
+    "residual_raw_p90": 0.07151795684202972,
+    "residual_raw_p99": 0.2797169618089831,
+    "residual_stream_mean": 0.03199227209733833,
+    "residual_top10_mass_share": 0.44193993490864786,
+    "residual_view_max": 0.05274917480723587,
+    "residual_view_min": 0.020195968800930927,
+    "residual_view_std": 0.011192741463188627,
+    "rgb_l1": 0.047067678288203754,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.004279061554616693,
+     "loss": 0.014312217424339097,
+     "rgb_l1": 0.02006631173944481
+    },
+    "OFF": {
+     "depth_term": 0.03373397751337347,
+     "loss": 0.057267816657475344,
+     "rgb_l1": 0.047067678288203754
+    },
+    "SHORT": {
+     "depth_term": 0.021413906600218625,
+     "loss": 0.04041810828022668,
+     "rgb_l1": 0.03800840336001611
+    }
+   },
+   "history_utility": {
+    "FULL": 0.001167593030709093,
+    "OFF": 0.0,
+    "SHORT": 0.00044466832004138104
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0,
+     "mean_error_increase": -0.00722984612178791,
+     "reliable_pixels": 134467
+    },
+    "SHORT": {
+     "broken_share": 0.0001487353874836117,
+     "mean_error_increase": -0.00223988480259189,
+     "reliable_pixels": 134467
+    }
+   },
+   "place": "arkit_visit_471442",
+   "quality_utility": {
+    "FULL": -0.007599137694667232,
+    "OFF": 0.0,
+    "SHORT": -0.002257630956202558
+   },
+   "ttt_failed": false
+  },
+  "arkit_47430056/A": {
+   "cost_seconds": {
+    "FULL": 87.87796425027773,
+    "SHORT": 8.83767448621802
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 115.10167753362411,
+    "camera_baseline_max_m": 1.3656828758398833,
+    "coverage": 0.9974749088287354,
+    "depthsplat_vs_measured_absrel": 0.3677908778190613,
+    "depthsplat_vs_measured_median_ratio": 0.7908360362052917,
+    "extent_m": 0.7473723888397217,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.49128252267837524,
+    "measured_depth_p50": 0.7473732829093933,
+    "measured_depth_p90": 1.1396517038345337,
+    "measured_depth_spread": 0.8675305847596944,
+    "residual_context_mean": 0.06040114779911852,
+    "residual_norm_covered_mean": 0.0175917705933678,
+    "residual_norm_covered_p50": 0.013111078340027612,
+    "residual_norm_covered_p90": 0.03548193642923902,
+    "residual_norm_covered_p99": 0.07892435596809637,
+    "residual_raw_mean": 0.041625209603318544,
+    "residual_raw_p50": 0.022648183871425608,
+    "residual_raw_p90": 0.08826404790507605,
+    "residual_raw_p99": 0.391715685494329,
+    "residual_stream_mean": 0.027543255956468574,
+    "residual_top10_mass_share": 0.5007619148046569,
+    "residual_view_max": 0.06151749182684392,
+    "residual_view_min": 0.015011679118075922,
+    "residual_view_std": 0.018194319699493516,
+    "rgb_l1": 0.06946044813519815,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.002532981591700709,
+     "loss": 0.009401426866359879,
+     "rgb_l1": 0.013736890549318339
+    },
+    "OFF": {
+     "depth_term": 0.041625209603318544,
+     "loss": 0.07635543367091763,
+     "rgb_l1": 0.06946044813519815
+    },
+    "SHORT": {
+     "depth_term": 0.027047235021829978,
+     "loss": 0.05468792672040985,
+     "rgb_l1": 0.05528138339715974
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0015854658163638388,
+    "OFF": 0.0,
+    "SHORT": 0.0004405084202615539
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.00016670048353262246,
+     "mean_error_increase": -0.012183322371620332,
+     "reliable_pixels": 137972
+    },
+    "SHORT": {
+     "broken_share": 0.00011596555850701407,
+     "mean_error_increase": -0.002910277561500184,
+     "reliable_pixels": 137972
+    }
+   },
+   "place": "arkit_visit_470808",
+   "quality_utility": {
+    "FULL": -0.001571008005742669,
+    "OFF": 0.0,
+    "SHORT": -0.00023034588919994964
+   },
+   "ttt_failed": false
+  },
+  "arkit_47430056/B": {
+   "cost_seconds": {
+    "FULL": 84.41345494613051,
+    "SHORT": 8.584360731998459
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 115.10167753362411,
+    "camera_baseline_max_m": 1.3656828758398833,
+    "coverage": 0.999755859375,
+    "depthsplat_vs_measured_absrel": 0.18806809186935425,
+    "depthsplat_vs_measured_median_ratio": 0.9097855091094971,
+    "extent_m": 0.8136609196662903,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.482001930475235,
+    "measured_depth_p50": 0.8136632442474365,
+    "measured_depth_p90": 1.1405489563941955,
+    "measured_depth_spread": 0.8093606668051668,
+    "residual_context_mean": 0.04749140788956408,
+    "residual_norm_covered_mean": 0.02243687573381923,
+    "residual_norm_covered_p50": 0.014184998464913742,
+    "residual_norm_covered_p90": 0.05028375143136835,
+    "residual_norm_covered_p99": 0.13540474839966668,
+    "residual_raw_mean": 0.03626627377260218,
+    "residual_raw_p50": 0.023859354844642112,
+    "residual_raw_p90": 0.07985981495584421,
+    "residual_raw_p99": 0.21692487576747013,
+    "residual_stream_mean": 0.02784742318488076,
+    "residual_top10_mass_share": 0.3873453375814762,
+    "residual_view_max": 0.061640351487085146,
+    "residual_view_min": 0.016277145963076823,
+    "residual_view_std": 0.015346931299889004,
+    "rgb_l1": 0.052032221918571986,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0028662757216518136,
+     "loss": 0.006854006476781916,
+     "rgb_l1": 0.007975461510260205
+    },
+    "OFF": {
+     "depth_term": 0.036266273772602185,
+     "loss": 0.06228238473188818,
+     "rgb_l1": 0.052032221918571986
+    },
+    "SHORT": {
+     "depth_term": 0.023092807088362453,
+     "loss": 0.04215013232701411,
+     "rgb_l1": 0.038114650477303315
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0016130635724906361,
+    "OFF": 0.0,
+    "SHORT": 0.0004796655173232925
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0013739250134676695,
+     "mean_error_increase": -0.012178159088872511,
+     "reliable_pixels": 128828
+    },
+    "SHORT": {
+     "broken_share": 0.0008383271051570773,
+     "mean_error_increase": -0.003664106831724443,
+     "reliable_pixels": 128828
+    }
+   },
+   "place": "arkit_visit_470808",
+   "quality_utility": {
+    "FULL": -0.0014458235884914558,
+    "OFF": 0.0,
+    "SHORT": -0.00018738356785022448
+   },
+   "ttt_failed": false
+  },
+  "arkit_47430293/A": {
+   "cost_seconds": {
+    "FULL": 78.50405252981,
+    "SHORT": 7.981011355994269
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 98.33739885422192,
+    "camera_baseline_max_m": 1.3016252136874813,
+    "coverage": 0.8909109830856323,
+    "depthsplat_vs_measured_absrel": 1.5778576135635376,
+    "depthsplat_vs_measured_median_ratio": 0.47211378812789917,
+    "extent_m": 0.6057505011558533,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.31200069189071655,
+    "measured_depth_p50": 0.6057668030261993,
+    "measured_depth_p90": 1.460432755947113,
+    "measured_depth_spread": 1.8958319576431575,
+    "residual_context_mean": 0.3809663435866602,
+    "residual_norm_covered_mean": 0.1874709027496246,
+    "residual_norm_covered_p50": 0.019660849066909764,
+    "residual_norm_covered_p90": 0.7491747147882054,
+    "residual_norm_covered_p99": 1.189125052918581,
+    "residual_raw_mean": 0.20685678613096803,
+    "residual_raw_p50": 0.03410588087105828,
+    "residual_raw_p90": 0.7596150167233048,
+    "residual_raw_p99": 0.9726517726353008,
+    "residual_stream_mean": 0.07627461803919894,
+    "residual_top10_mass_share": 0.4117421888331419,
+    "residual_view_max": 0.7556464506583066,
+    "residual_view_min": 0.029740993846812724,
+    "residual_view_std": 0.2371452303840069,
+    "rgb_l1": 0.0678074410406607,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.10870438859924098,
+     "loss": 0.11775779698381013,
+     "rgb_l1": 0.018106816769138303
+    },
+    "OFF": {
+     "depth_term": 0.20685678613096806,
+     "loss": 0.2407605066512984,
+     "rgb_l1": 0.0678074410406607
+    },
+    "SHORT": {
+     "depth_term": 0.169896878009191,
+     "loss": 0.1988170298545276,
+     "rgb_l1": 0.05784030369067315
+    }
+   },
+   "history_utility": {
+    "FULL": -0.017739985225175003,
+    "OFF": 0.0,
+    "SHORT": -0.0016085825861733571
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.004236134700477123,
+     "mean_error_increase": -0.00922371022265819,
+     "reliable_pixels": 84511
+    },
+    "SHORT": {
+     "broken_share": 0.00029581948183476925,
+     "mean_error_increase": -0.00403914548970221,
+     "reliable_pixels": 84511
+    }
+   },
+   "place": "arkit_visit_470978",
+   "quality_utility": {
+    "FULL": 0.0025226388364502916,
+    "OFF": 0.0,
+    "SHORT": 0.0005965760575378509
+   },
+   "ttt_failed": false
+  },
+  "arkit_47430293/B": {
+   "cost_seconds": {
+    "FULL": 79.36397557100281,
+    "SHORT": 8.036349470028654
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 97.38469284579843,
+    "camera_baseline_max_m": 1.3016252136874813,
+    "coverage": 0.906005859375,
+    "depthsplat_vs_measured_absrel": 1.6573634147644043,
+    "depthsplat_vs_measured_median_ratio": 0.4924505949020386,
+    "extent_m": 0.6057505011558533,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.31100067496299744,
+    "measured_depth_p50": 0.6057668030261993,
+    "measured_depth_p90": 1.460432755947113,
+    "measured_depth_spread": 1.8974827858541512,
+    "residual_context_mean": 0.37931633859593666,
+    "residual_norm_covered_mean": 0.10969187481795135,
+    "residual_norm_covered_p50": 0.00769933756422357,
+    "residual_norm_covered_p90": 0.7472827463511996,
+    "residual_norm_covered_p99": 0.7904985124769732,
+    "residual_raw_mean": 0.20183022098150727,
+    "residual_raw_p50": 0.025958563433763304,
+    "residual_raw_p90": 0.7812811126633422,
+    "residual_raw_p99": 0.9751417223553539,
+    "residual_stream_mean": 0.06871563277068521,
+    "residual_top10_mass_share": 0.4349572174227039,
+    "residual_view_max": 0.7814103656352869,
+    "residual_view_min": 0.028377994120276553,
+    "residual_view_std": 0.24659284143725319,
+    "rgb_l1": 0.057527801868383126,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.10462169541547005,
+     "loss": 0.11269709367481436,
+     "rgb_l1": 0.01615079651868861
+    },
+    "OFF": {
+     "depth_term": 0.20183022098150727,
+     "loss": 0.23059412191569884,
+     "rgb_l1": 0.057527801868383126
+    },
+    "SHORT": {
+     "depth_term": 0.18046736360035912,
+     "loss": 0.20243045445652302,
+     "rgb_l1": 0.043926181712327816
+    }
+   },
+   "history_utility": {
+    "FULL": -0.015492818609271597,
+    "OFF": 0.0,
+    "SHORT": -0.004282554364999136
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.022966770455241203,
+     "mean_error_increase": -0.0004389318545182531,
+     "reliable_pixels": 105239
+    },
+    "SHORT": {
+     "broken_share": 0.0016438772436231375,
+     "mean_error_increase": -0.0018348972736191259,
+     "reliable_pixels": 105239
+    }
+   },
+   "place": "arkit_visit_470978",
+   "quality_utility": {
+    "FULL": 0.002510146958776105,
+    "OFF": 0.0,
+    "SHORT": 0.0005920477257213008
+   },
+   "ttt_failed": false
+  },
+  "arkit_47430677/A": {
+   "cost_seconds": {
+    "FULL": 78.93433645530604,
+    "SHORT": 7.931817971169949
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 100.433677421351,
+    "camera_baseline_max_m": 1.196189446593111,
+    "coverage": 0.9976213574409485,
+    "depthsplat_vs_measured_absrel": 0.34415608644485474,
+    "depthsplat_vs_measured_median_ratio": 0.7591336369514465,
+    "extent_m": 0.9061949849128723,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.7628073394298553,
+    "measured_depth_p50": 0.9061998724937439,
+    "measured_depth_p90": 1.7396067857742317,
+    "measured_depth_spread": 1.0779072873364588,
+    "residual_context_mean": 0.016332702887993485,
+    "residual_norm_covered_mean": 0.015085918230648638,
+    "residual_norm_covered_p50": 0.006450246286106701,
+    "residual_norm_covered_p90": 0.03997163523296008,
+    "residual_norm_covered_p99": 0.12512675998899264,
+    "residual_raw_mean": 0.028286736861934187,
+    "residual_raw_p50": 0.011301414530923867,
+    "residual_raw_p90": 0.07010343620417572,
+    "residual_raw_p99": 0.229512318025794,
+    "residual_stream_mean": 0.03725226234238972,
+    "residual_top10_mass_share": 0.4926635851108951,
+    "residual_view_max": 0.05673291613352374,
+    "residual_view_min": 0.013127862558169348,
+    "residual_view_std": 0.014618251003720197,
+    "rgb_l1": 0.056529841133113316,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0025209727172123496,
+     "loss": 0.006487419372973549,
+     "rgb_l1": 0.007932893311522398
+    },
+    "OFF": {
+     "depth_term": 0.02828673686193419,
+     "loss": 0.056551657428490845,
+     "rgb_l1": 0.056529841133113316
+    },
+    "SHORT": {
+     "depth_term": 0.017872949322799994,
+     "loss": 0.03925983780657011,
+     "rgb_l1": 0.042773776967540235
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0009422841088158607,
+    "OFF": 0.0,
+    "SHORT": 0.0004994188823353174
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0019251802004873753,
+     "mean_error_increase": -0.007482377662135454,
+     "reliable_pixels": 133494
+    },
+    "SHORT": {
+     "broken_share": 0.002060017781332135,
+     "mean_error_increase": -0.0021047936596268885,
+     "reliable_pixels": 133494
+    }
+   },
+   "place": "arkit_visit_472316",
+   "quality_utility": {
+    "FULL": 0.002601536307295732,
+    "OFF": 0.0,
+    "SHORT": 0.0016086677476667838
+   },
+   "ttt_failed": false
+  },
+  "arkit_47430677/B": {
+   "cost_seconds": {
+    "FULL": 79.00601068511605,
+    "SHORT": 7.914345097029582
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 100.433677421351,
+    "camera_baseline_max_m": 1.196189446593111,
+    "coverage": 1.0,
+    "depthsplat_vs_measured_absrel": 0.1580403745174408,
+    "depthsplat_vs_measured_median_ratio": 0.9920986890792847,
+    "extent_m": 0.9946630597114563,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.7656246781349182,
+    "measured_depth_p50": 0.9946778118610382,
+    "measured_depth_p90": 1.7754605531692507,
+    "measured_depth_spread": 1.0152391688972466,
+    "residual_context_mean": 0.02055084453981261,
+    "residual_norm_covered_mean": 0.016460838006153028,
+    "residual_norm_covered_p50": 0.006328240847248584,
+    "residual_norm_covered_p90": 0.04462517632513667,
+    "residual_norm_covered_p99": 0.12975488699768728,
+    "residual_raw_mean": 0.03132764700809774,
+    "residual_raw_p50": 0.01600404690520178,
+    "residual_raw_p90": 0.07473092786063155,
+    "residual_raw_p99": 0.21413332485784717,
+    "residual_stream_mean": 0.03941024885931159,
+    "residual_top10_mass_share": 0.423932243324751,
+    "residual_view_max": 0.0712985277892633,
+    "residual_view_min": 0.01512267524084856,
+    "residual_view_std": 0.017664615175985995,
+    "rgb_l1": 0.04305989750604719,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0021239870751880914,
+     "loss": 0.006057715182667026,
+     "rgb_l1": 0.007867456214957868
+    },
+    "OFF": {
+     "depth_term": 0.03132764700809774,
+     "loss": 0.05285759576112133,
+     "rgb_l1": 0.04305989750604719
+    },
+    "SHORT": {
+     "depth_term": 0.01860864359965051,
+     "loss": 0.03409124752621584,
+     "rgb_l1": 0.03096520785313065
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0009770562787914938,
+    "OFF": 0.0,
+    "SHORT": 0.0005876234066698183
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0011616518022492528,
+     "mean_error_increase": -0.007940826555391675,
+     "reliable_pixels": 131709
+    },
+    "SHORT": {
+     "broken_share": 0.0020727512892335653,
+     "mean_error_increase": -0.0024073122064275114,
+     "reliable_pixels": 131709
+    }
+   },
+   "place": "arkit_visit_472316",
+   "quality_utility": {
+    "FULL": 0.0022814754564889836,
+    "OFF": 0.0,
+    "SHORT": 0.0014112696674179956
+   },
+   "ttt_failed": false
+  },
+  "arkit_47895571/A": {
+   "cost_seconds": {
+    "FULL": 90.41595898498781,
+    "SHORT": 9.061309518991038
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 75.68752113429242,
+    "camera_baseline_max_m": 0.3772262037896417,
+    "coverage": 0.9999930262565613,
+    "depthsplat_vs_measured_absrel": 0.26900002360343933,
+    "depthsplat_vs_measured_median_ratio": 1.0087432861328125,
+    "extent_m": 1.1624094247817993,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.8812125861644745,
+    "measured_depth_p50": 1.1624095439910889,
+    "measured_depth_p90": 2.8712328910827636,
+    "measured_depth_spread": 1.711978635417626,
+    "residual_context_mean": 0.06873811551384205,
+    "residual_norm_covered_mean": 0.04335554952789884,
+    "residual_norm_covered_p50": 0.014337494973462516,
+    "residual_norm_covered_p90": 0.12221192109454256,
+    "residual_norm_covered_p99": 0.4367722409072487,
+    "residual_raw_mean": 0.04882617106883059,
+    "residual_raw_p50": 0.018831554447258033,
+    "residual_raw_p90": 0.13392264242910923,
+    "residual_raw_p99": 0.43896092652019286,
+    "residual_stream_mean": 0.033892212735072,
+    "residual_top10_mass_share": 0.5259224830675134,
+    "residual_view_max": 0.15856883745617445,
+    "residual_view_min": 0.01885356398417746,
+    "residual_view_std": 0.04514235552827873,
+    "rgb_l1": 0.053580045418084414,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.024542646712114452,
+     "loss": 0.03792601446777205,
+     "rgb_l1": 0.0267667355113152
+    },
+    "OFF": {
+     "depth_term": 0.04882617106883059,
+     "loss": 0.07561619377787279,
+     "rgb_l1": 0.053580045418084414
+    },
+    "SHORT": {
+     "depth_term": 0.04045981821886855,
+     "loss": 0.06277985729354175,
+     "rgb_l1": 0.04464007814934641
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004385249633379721,
+    "OFF": 0.0,
+    "SHORT": 0.0015720064206432016
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.04549439623951912,
+     "mean_error_increase": -0.003217245466489155,
+     "reliable_pixels": 115201
+    },
+    "SHORT": {
+     "broken_share": 0.003923577256500721,
+     "mean_error_increase": -0.002857053625967606,
+     "reliable_pixels": 115201
+    }
+   },
+   "place": "arkit_visit_482331",
+   "quality_utility": {
+    "FULL": 0.001058514678002699,
+    "OFF": 0.0,
+    "SHORT": 0.0009267389749820221
+   },
+   "ttt_failed": false
+  },
+  "arkit_47895571/B": {
+   "cost_seconds": {
+    "FULL": 89.67896725493483,
+    "SHORT": 8.851946080103517
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 75.68752113429242,
+    "camera_baseline_max_m": 0.40624214428367494,
+    "coverage": 1.0,
+    "depthsplat_vs_measured_absrel": 0.30405786633491516,
+    "depthsplat_vs_measured_median_ratio": 0.8757194876670837,
+    "extent_m": 1.1774001121520996,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.8775315225124359,
+    "measured_depth_p50": 1.1774040460586548,
+    "measured_depth_p90": 2.883862781524659,
+    "measured_depth_spread": 1.7040295264216152,
+    "residual_context_mean": 0.06880002977513126,
+    "residual_norm_covered_mean": 0.04275159137168039,
+    "residual_norm_covered_p50": 0.015634808444869867,
+    "residual_norm_covered_p90": 0.1106598716152844,
+    "residual_norm_covered_p99": 0.42654929062112534,
+    "residual_raw_mean": 0.05102837723337142,
+    "residual_raw_p50": 0.022784312259875133,
+    "residual_raw_p90": 0.13462606364336446,
+    "residual_raw_p99": 0.4274259003660089,
+    "residual_stream_mean": 0.03769963782705156,
+    "residual_top10_mass_share": 0.48271477853410477,
+    "residual_view_max": 0.15733734854174208,
+    "residual_view_min": 0.024120648575358672,
+    "residual_view_std": 0.043799788424725435,
+    "rgb_l1": 0.057795985012908856,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.023190433554179057,
+     "loss": 0.03731952651826018,
+     "rgb_l1": 0.028258185928162254
+    },
+    "OFF": {
+     "depth_term": 0.051028377233371426,
+     "loss": 0.07992636973982585,
+     "rgb_l1": 0.057795985012908856
+    },
+    "SHORT": {
+     "depth_term": 0.04104189084264013,
+     "loss": 0.06516769001211338,
+     "rgb_l1": 0.04825159833894651
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004577125947798272,
+    "OFF": 0.0,
+    "SHORT": 0.0016236124841459768
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0433189757168293,
+     "mean_error_increase": -0.0039588482087321315,
+     "reliable_pixels": 113276
+    },
+    "SHORT": {
+     "broken_share": 0.004352201707661152,
+     "mean_error_increase": -0.002573732680733144,
+     "reliable_pixels": 113276
+    }
+   },
+   "place": "arkit_visit_482331",
+   "quality_utility": {
+    "FULL": -0.0010568228291988752,
+    "OFF": 0.0,
+    "SHORT": 0.0006228478416413774
+   },
+   "ttt_failed": false
+  },
+  "arkit_48018269/A": {
+   "cost_seconds": {
+    "FULL": 83.9747589349281,
+    "SHORT": 8.407899693120271
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 86.17947822037294,
+    "camera_baseline_max_m": 1.0361122261740718,
+    "coverage": 0.8476004600524902,
+    "depthsplat_vs_measured_absrel": 0.22879767417907715,
+    "depthsplat_vs_measured_median_ratio": 0.8893885016441345,
+    "extent_m": 0.8766084909439087,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6630025684833527,
+    "measured_depth_p50": 0.8766173720359802,
+    "measured_depth_p90": 1.8700176358222962,
+    "measured_depth_spread": 1.376900693327125,
+    "residual_context_mean": 0.2474631948260677,
+    "residual_norm_covered_mean": 0.021272971842352686,
+    "residual_norm_covered_p50": 0.009088584278044976,
+    "residual_norm_covered_p90": 0.05284516968659004,
+    "residual_norm_covered_p99": 0.18677250575306803,
+    "residual_raw_mean": 0.16992071425680394,
+    "residual_raw_p50": 0.03497381233855669,
+    "residual_raw_p90": 0.6810730049502057,
+    "residual_raw_p99": 0.9121113269099936,
+    "residual_stream_mean": 0.11176385382985603,
+    "residual_top10_mass_share": 0.4748555156634309,
+    "residual_view_max": 0.2599762980735024,
+    "residual_view_min": 0.03384841956886086,
+    "residual_view_std": 0.09421256140240501,
+    "rgb_l1": 0.11574578084878409,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.009816833157136075,
+     "loss": 0.02228863173824206,
+     "rgb_l1": 0.024943597162211974
+    },
+    "OFF": {
+     "depth_term": 0.16992071425680388,
+     "loss": 0.22779360468119592,
+     "rgb_l1": 0.11574578084878409
+    },
+    "SHORT": {
+     "depth_term": 0.13521206158503096,
+     "loss": 0.18051194838340287,
+     "rgb_l1": 0.09059977359674382
+    }
+   },
+   "history_utility": {
+    "FULL": 0.004087956694650459,
+    "OFF": 0.0,
+    "SHORT": 0.0005505849740862351
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0020348408725112677,
+     "mean_error_increase": -0.005586354801622598,
+     "reliable_pixels": 108608
+    },
+    "SHORT": {
+     "broken_share": 0.005349514074623585,
+     "mean_error_increase": -0.001077347776422273,
+     "reliable_pixels": 108608
+    }
+   },
+   "place": "arkit_visit_483113",
+   "quality_utility": {
+    "FULL": 0.0022875684141231423,
+    "OFF": 0.0,
+    "SHORT": 0.00018968903477944998
+   },
+   "ttt_failed": false
+  },
+  "arkit_48018269/B": {
+   "cost_seconds": {
+    "FULL": 84.94867438590154,
+    "SHORT": 8.363308717962354
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 86.17947822037294,
+    "camera_baseline_max_m": 1.0361122261740718,
+    "coverage": 0.9296665787696838,
+    "depthsplat_vs_measured_absrel": 0.3241497278213501,
+    "depthsplat_vs_measured_median_ratio": 0.9005120396614075,
+    "extent_m": 0.8912824392318726,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6662418067455292,
+    "measured_depth_p50": 0.891282469034195,
+    "measured_depth_p90": 1.8700176358222962,
+    "measured_depth_spread": 1.3506109128133015,
+    "residual_context_mean": 0.17686383744629697,
+    "residual_norm_covered_mean": 0.018714779810984912,
+    "residual_norm_covered_p50": 0.008123948900081529,
+    "residual_norm_covered_p90": 0.04646843068681922,
+    "residual_norm_covered_p99": 0.16840927456195812,
+    "residual_raw_mean": 0.12070270939390688,
+    "residual_raw_p50": 0.02921703117650682,
+    "residual_raw_p90": 0.4181493773573833,
+    "residual_raw_p99": 0.7512078845010117,
+    "residual_stream_mean": 0.07858186335461437,
+    "residual_top10_mass_share": 0.48690393030196233,
+    "residual_view_max": 0.19053347483280803,
+    "residual_view_min": 0.03196986329838464,
+    "residual_view_std": 0.06411395410181894,
+    "rgb_l1": 0.08379941064300722,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.00712974860716523,
+     "loss": 0.017377790916235973,
+     "rgb_l1": 0.020496084618141487
+    },
+    "OFF": {
+     "depth_term": 0.12070270939390688,
+     "loss": 0.16260241471541048,
+     "rgb_l1": 0.08379941064300722
+    },
+    "SHORT": {
+     "depth_term": 0.08823112638942537,
+     "loss": 0.11866188369664536,
+     "rgb_l1": 0.060861514614439984
+    }
+   },
+   "history_utility": {
+    "FULL": 0.0036729958697168594,
+    "OFF": 0.0,
+    "SHORT": 0.0003956733266006762
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.0019854072015732527,
+     "mean_error_increase": -0.005070556244932176,
+     "reliable_pixels": 120882
+    },
+    "SHORT": {
+     "broken_share": 0.0049552456475794315,
+     "mean_error_increase": -0.0010777877161727983,
+     "reliable_pixels": 120882
+    }
+   },
+   "place": "arkit_visit_483113",
+   "quality_utility": {
+    "FULL": 0.002306199843834844,
+    "OFF": 0.0,
+    "SHORT": 0.00020280933457675343
+   },
+   "ttt_failed": false
+  },
+  "arkit_48018284/A": {
+   "cost_seconds": {
+    "FULL": 80.90833309013397,
+    "SHORT": 8.08428412815556
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 118.56133111667944,
+    "camera_baseline_max_m": 1.0634229423709571,
+    "coverage": 1.0,
+    "depthsplat_vs_measured_absrel": 0.37840935587882996,
+    "depthsplat_vs_measured_median_ratio": 0.7182760834693909,
+    "extent_m": 0.6938447952270508,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6520535290241242,
+    "measured_depth_p50": 0.6938447952270508,
+    "measured_depth_p90": 1.5719632744789127,
+    "measured_depth_spread": 1.3258148677958466,
+    "residual_context_mean": 0.0033353872001756868,
+    "residual_norm_covered_mean": 0.014317750353525107,
+    "residual_norm_covered_p50": 0.004170257475226811,
+    "residual_norm_covered_p90": 0.04356255592667172,
+    "residual_norm_covered_p99": 0.15054749905665876,
+    "residual_raw_mean": 0.01769048277832561,
+    "residual_raw_p50": 0.004762095060949583,
+    "residual_raw_p90": 0.05612810789539815,
+    "residual_raw_p99": 0.16516605595530834,
+    "residual_stream_mean": 0.02845680446193805,
+    "residual_top10_mass_share": 0.5719886881915262,
+    "residual_view_max": 0.05269773470982475,
+    "residual_view_min": 0.0018402572333587304,
+    "residual_view_std": 0.020200932201364735,
+    "rgb_l1": 0.03313623988580427,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0030153486886174926,
+     "loss": 0.008824251074612502,
+     "rgb_l1": 0.011617804771990018
+    },
+    "OFF": {
+     "depth_term": 0.017690482778325606,
+     "loss": 0.03425860272122774,
+     "rgb_l1": 0.03313623988580427
+    },
+    "SHORT": {
+     "depth_term": 0.012912163517747663,
+     "loss": 0.024778283840894713,
+     "rgb_l1": 0.023732240646294096
+    }
+   },
+   "history_utility": {
+    "FULL": -0.008029145944079788,
+    "OFF": 0.0,
+    "SHORT": -0.0017936982046470734
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 7.649353210581467e-05,
+     "mean_error_increase": -0.004366284831686836,
+     "reliable_pixels": 130730
+    },
+    "SHORT": {
+     "broken_share": 0.0006119482568465173,
+     "mean_error_increase": -0.0014877773535701393,
+     "reliable_pixels": 130730
+    }
+   },
+   "place": "arkit_visit_483092",
+   "quality_utility": {
+    "FULL": 0.006594267295289696,
+    "OFF": 0.0,
+    "SHORT": 0.0013579322118427994
+   },
+   "ttt_failed": false
+  },
+  "arkit_48018284/B": {
+   "cost_seconds": {
+    "FULL": 81.78431124403141,
+    "SHORT": 8.244238477898762
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 118.24380514522235,
+    "camera_baseline_max_m": 1.0634229423709571,
+    "coverage": 0.9999930262565613,
+    "depthsplat_vs_measured_absrel": 0.29319947957992554,
+    "depthsplat_vs_measured_median_ratio": 0.80167156457901,
+    "extent_m": 0.6998069286346436,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.6551994204521179,
+    "measured_depth_p50": 0.6998089849948883,
+    "measured_depth_p90": 1.5719632744789127,
+    "measured_depth_spread": 1.3100201250395367,
+    "residual_context_mean": 0.003854901175229403,
+    "residual_norm_covered_mean": 0.014595446556264128,
+    "residual_norm_covered_p50": 0.004149952156485685,
+    "residual_norm_covered_p90": 0.046041991197395916,
+    "residual_norm_covered_p99": 0.15100719298217868,
+    "residual_raw_mean": 0.017672488490464194,
+    "residual_raw_p50": 0.004651813305967609,
+    "residual_raw_p90": 0.057028090927858634,
+    "residual_raw_p99": 0.1644663297927366,
+    "residual_stream_mean": 0.028035678976890292,
+    "residual_top10_mass_share": 0.5741110990266597,
+    "residual_view_max": 0.05268576054371619,
+    "residual_view_min": 0.002174812118070064,
+    "residual_view_std": 0.02006525228797184,
+    "rgb_l1": 0.03216396521546423,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.0029581085809571826,
+     "loss": 0.008521269359197942,
+     "rgb_l1": 0.011126321556481519
+    },
+    "OFF": {
+     "depth_term": 0.017672488490464194,
+     "loss": 0.033754471098196306,
+     "rgb_l1": 0.03216396521546423
+    },
+    "SHORT": {
+     "depth_term": 0.012990184076734626,
+     "loss": 0.024526225641178335,
+     "rgb_l1": 0.02307208312888742
+    }
+   },
+   "history_utility": {
+    "FULL": -0.008221761198791658,
+    "OFF": 0.0,
+    "SHORT": -0.0018945351306537683
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 7.684681622777134e-05,
+     "mean_error_increase": -0.004338130506639506,
+     "reliable_pixels": 130129
+    },
+    "SHORT": {
+     "broken_share": 0.000522558344528079,
+     "mean_error_increase": -0.0014724019334785348,
+     "reliable_pixels": 130129
+    }
+   },
+   "place": "arkit_visit_483092",
+   "quality_utility": {
+    "FULL": 0.006604896317259329,
+    "OFF": 0.0,
+    "SHORT": 0.0013509355446241489
+   },
+   "ttt_failed": false
+  },
+  "arkit_48018339/A": {
+   "cost_seconds": {
+    "FULL": 67.23460447485559,
+    "SHORT": 8.273148298962042
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 97.2068380625758,
+    "camera_baseline_max_m": 0.80485187182048,
+    "coverage": 0.9830148220062256,
+    "depthsplat_vs_measured_absrel": 0.20921555161476135,
+    "depthsplat_vs_measured_median_ratio": 0.8480649590492249,
+    "extent_m": 1.3916850090026855,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.9195136547088624,
+    "measured_depth_p50": 1.3916955590248108,
+    "measured_depth_p90": 3.4148671150207535,
+    "measured_depth_spread": 1.7930311296390395,
+    "residual_context_mean": 0.09465821791599673,
+    "residual_norm_covered_mean": 0.047240426733909956,
+    "residual_norm_covered_p50": 0.016429728868467483,
+    "residual_norm_covered_p90": 0.15753892042470563,
+    "residual_norm_covered_p99": 0.32705607296772027,
+    "residual_raw_mean": 0.09428626436512424,
+    "residual_raw_p50": 0.03794878481205216,
+    "residual_raw_p90": 0.2639678702179849,
+    "residual_raw_p99": 0.6075555881198578,
+    "residual_stream_mean": 0.0940072992019699,
+    "residual_top10_mass_share": 0.4231171254772183,
+    "residual_view_max": 0.16921366693236448,
+    "residual_view_min": 0.05374902102936779,
+    "residual_view_std": 0.03966280854729454,
+    "rgb_l1": 0.0781508176294405,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.021890168513897357,
+     "loss": 0.04078690517484552,
+     "rgb_l1": 0.03779347332189632
+    },
+    "OFF": {
+     "depth_term": 0.09428626436512423,
+     "loss": 0.1333616731798445,
+     "rgb_l1": 0.0781508176294405
+    },
+    "SHORT": {
+     "depth_term": 0.06941251515478236,
+     "loss": 0.10284462289914349,
+     "rgb_l1": 0.06686421548872226
+    }
+   },
+   "history_utility": {
+    "FULL": 0.00817327696583934,
+    "OFF": 0.0,
+    "SHORT": 0.0014550506099922783
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.04889693483710289,
+     "mean_error_increase": -0.0026111492841212613,
+     "reliable_pixels": 109332
+    },
+    "SHORT": {
+     "broken_share": 0.003987853415310383,
+     "mean_error_increase": -0.002869826014988707,
+     "reliable_pixels": 109332
+    }
+   },
+   "place": "arkit_visit_483302",
+   "quality_utility": {
+    "FULL": 0.0036227584269667643,
+    "OFF": 0.0,
+    "SHORT": 0.0008558483400809558
+   },
+   "ttt_failed": false
+  },
+  "arkit_48018339/B": {
+   "cost_seconds": {
+    "FULL": 80.28344069095328,
+    "SHORT": 7.9014582759700716
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 103.9931905859834,
+    "camera_baseline_max_m": 0.8526661063752068,
+    "coverage": 0.9933175444602966,
+    "depthsplat_vs_measured_absrel": 0.22062800824642181,
+    "depthsplat_vs_measured_median_ratio": 0.8672674298286438,
+    "extent_m": 1.3467031717300415,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.9215311765670776,
+    "measured_depth_p50": 1.3467031717300415,
+    "measured_depth_p90": 3.0098956823349026,
+    "measured_depth_spread": 1.5507236855208475,
+    "residual_context_mean": 0.0751307233973827,
+    "residual_norm_covered_mean": 0.04042748620808861,
+    "residual_norm_covered_p50": 0.013245354174451482,
+    "residual_norm_covered_p90": 0.12312448564527105,
+    "residual_norm_covered_p99": 0.33995743884249097,
+    "residual_raw_mean": 0.07691685187807373,
+    "residual_raw_p50": 0.030275751541099842,
+    "residual_raw_p90": 0.22411147954247365,
+    "residual_raw_p99": 0.42805603474794096,
+    "residual_stream_mean": 0.07825644823859201,
+    "residual_top10_mass_share": 0.4181308695741601,
+    "residual_view_max": 0.1260259488231926,
+    "residual_view_min": 0.04706597865871416,
+    "residual_view_std": 0.03168263042742114,
+    "rgb_l1": 0.06056304655382866,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.019219946604468536,
+     "loss": 0.0342230538285258,
+     "rgb_l1": 0.030006214448114528
+    },
+    "OFF": {
+     "depth_term": 0.07691685187807372,
+     "loss": 0.10719837515498805,
+     "rgb_l1": 0.06056304655382866
+    },
+    "SHORT": {
+     "depth_term": 0.05449135418707597,
+     "loss": 0.08047005162593059,
+     "rgb_l1": 0.05195739487770923
+    }
+   },
+   "history_utility": {
+    "FULL": 0.005651011349553953,
+    "OFF": 0.0,
+    "SHORT": 0.0008041215800536766
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.019731609150767326,
+     "mean_error_increase": -0.0050104158748999275,
+     "reliable_pixels": 116919
+    },
+    "SHORT": {
+     "broken_share": 0.0023862675298005342,
+     "mean_error_increase": -0.0025325598666231883,
+     "reliable_pixels": 116919
+    }
+   },
+   "place": "arkit_visit_483302",
+   "quality_utility": {
+    "FULL": 0.0024521216616906275,
+    "OFF": 0.0,
+    "SHORT": 0.0002852398887087798
+   },
+   "ttt_failed": false
+  },
+  "arkit_48458607/A": {
+   "cost_seconds": {
+    "FULL": 95.32602732116356,
+    "SHORT": 9.83052826509811
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 139.22948182237892,
+    "camera_baseline_max_m": 2.6366841894819775,
+    "coverage": 0.9983886480331421,
+    "depthsplat_vs_measured_absrel": 0.3411650061607361,
+    "depthsplat_vs_measured_median_ratio": 0.8397486805915833,
+    "extent_m": 1.3224610090255737,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.7549075365066529,
+    "measured_depth_p50": 1.3224648237228394,
+    "measured_depth_p90": 2.6736107826232915,
+    "measured_depth_spread": 1.4508538992480289,
+    "residual_context_mean": 0.04128102833884787,
+    "residual_norm_covered_mean": 0.06900781796597934,
+    "residual_norm_covered_p50": 0.020806387175193626,
+    "residual_norm_covered_p90": 0.20772433322590728,
+    "residual_norm_covered_p99": 0.519014779723901,
+    "residual_raw_mean": 0.08407036138183661,
+    "residual_raw_p50": 0.03264232646037657,
+    "residual_raw_p90": 0.23449471564087992,
+    "residual_raw_p99": 0.4890971534452655,
+    "residual_stream_mean": 0.11616236116407821,
+    "residual_top10_mass_share": 0.41605748374274326,
+    "residual_view_max": 0.14896081968957783,
+    "residual_view_min": 0.03717441681283178,
+    "residual_view_std": 0.05075509727487842,
+    "rgb_l1": 0.05315066342425542,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.011008005529029368,
+     "loss": 0.015716436416640722,
+     "rgb_l1": 0.009416861775222708
+    },
+    "OFF": {
+     "depth_term": 0.08407036138183663,
+     "loss": 0.11064569309396434,
+     "rgb_l1": 0.05315066342425542
+    },
+    "SHORT": {
+     "depth_term": 0.059971524989506045,
+     "loss": 0.07956228900572755,
+     "rgb_l1": 0.03918152803244301
+    }
+   },
+   "history_utility": {
+    "FULL": 0.025200752180309614,
+    "OFF": 0.0,
+    "SHORT": 0.007291460652040532
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.012910737656056881,
+     "mean_error_increase": -0.009189462207055174,
+     "reliable_pixels": 97903
+    },
+    "SHORT": {
+     "broken_share": 0.007272504270076752,
+     "mean_error_increase": -0.0033869066813279076,
+     "reliable_pixels": 97903
+    }
+   },
+   "place": "arkit_visit_484262",
+   "quality_utility": {
+    "FULL": 0.02312496262456082,
+    "OFF": 0.0,
+    "SHORT": 0.006385249971554013
+   },
+   "ttt_failed": false
+  },
+  "arkit_48458607/B": {
+   "cost_seconds": {
+    "FULL": 61.00736718508415,
+    "SHORT": 6.085045318119228
+   },
+   "cost_steps": {
+    "FULL": 100,
+    "OFF": 0,
+    "SHORT": 10
+   },
+   "features": {
+    "camera_angle_max_deg": 143.98954485505976,
+    "camera_baseline_max_m": 2.623329070269334,
+    "coverage": 0.9994768500328064,
+    "depthsplat_vs_measured_absrel": 0.261136531829834,
+    "depthsplat_vs_measured_median_ratio": 0.949377715587616,
+    "extent_m": 1.4406729936599731,
+    "gaussians": 573440,
+    "measured_depth_p10": 0.8348901212215424,
+    "measured_depth_p50": 1.4406819343566895,
+    "measured_depth_p90": 2.275078892707825,
+    "measured_depth_spread": 0.9996576878916533,
+    "residual_context_mean": 0.05622387448105098,
+    "residual_norm_covered_mean": 0.0654239954146124,
+    "residual_norm_covered_p50": 0.018743693520327325,
+    "residual_norm_covered_p90": 0.18580348697356558,
+    "residual_norm_covered_p99": 0.502059021959409,
+    "residual_raw_mean": 0.08541511395327493,
+    "residual_raw_p50": 0.045243627374877124,
+    "residual_raw_p90": 0.21191681271631707,
+    "residual_raw_p99": 0.4903208072687874,
+    "residual_stream_mean": 0.1073085435574429,
+    "residual_top10_mass_share": 0.41094581094214266,
+    "residual_view_max": 0.13279871158585851,
+    "residual_view_min": 0.037731935112013774,
+    "residual_view_std": 0.037438173305929426,
+    "rgb_l1": 0.06621143393234499,
+    "valid_fraction": 1.0
+   },
+   "fit": {
+    "FULL": {
+     "depth_term": 0.011067980734201637,
+     "loss": 0.02010694212482053,
+     "rgb_l1": 0.018077922781237786
+    },
+    "OFF": {
+     "depth_term": 0.08541511395327492,
+     "loss": 0.11852083091944741,
+     "rgb_l1": 0.06621143393234499
+    },
+    "SHORT": {
+     "depth_term": 0.05806378910063112,
+     "loss": 0.08413678522747207,
+     "rgb_l1": 0.05214599225368191
+    }
+   },
+   "history_utility": {
+    "FULL": 0.01763262222841433,
+    "OFF": 0.0,
+    "SHORT": 0.00559833629778677
+   },
+   "observed_damage": {
+    "FULL": {
+     "broken_share": 0.009173570200800896,
+     "mean_error_increase": -0.009311874888313636,
+     "reliable_pixels": 98871
+    },
+    "SHORT": {
+     "broken_share": 0.005744859576225281,
+     "mean_error_increase": -0.003148416408305984,
+     "reliable_pixels": 98871
+    }
+   },
+   "place": "arkit_visit_484262",
+   "quality_utility": {
+    "FULL": 0.01302914387484938,
+    "OFF": 0.0,
+    "SHORT": 0.004754665425366261
+   },
+   "ttt_failed": false
+  }
+ },
+ "per_place_utility": {
+  "FULL": {
+   "arkit_visit_381542": -0.0020776814287121748,
+   "arkit_visit_381612": 0.006082983360195339,
+   "arkit_visit_381648": 0.009122191595446815,
+   "arkit_visit_381650": 0.005400422208597745,
+   "arkit_visit_381877": 0.00547790159929102,
+   "arkit_visit_383721": 0.005853576449281226,
+   "arkit_visit_421013": 0.02045141284283647,
+   "arkit_visit_421948": 0.0012757199046827955,
+   "arkit_visit_422354": 0.016556867437922278,
+   "arkit_visit_423337": 0.011047945457369514,
+   "arkit_visit_434691": -0.0023669665155635067,
+   "arkit_visit_434702": 0.005758947388169455,
+   "arkit_visit_435339": 0.005070075899849716,
+   "arkit_visit_435660": 0.000587790413947735,
+   "arkit_visit_437833": 0.0029137589192960722,
+   "arkit_visit_466835": -0.00016295876878533178,
+   "arkit_visit_467292": -0.001404751198762523,
+   "arkit_visit_467296": 0.00012425754119320398,
+   "arkit_visit_469214": 0.0023380977542482306,
+   "arkit_visit_470116": 0.0005079350508218825,
+   "arkit_visit_470808": -0.0015084157971170624,
+   "arkit_visit_470870": 0.0022508212013615005,
+   "arkit_visit_470886": 0.000804786553860553,
+   "arkit_visit_470978": 0.0025163928976131983,
+   "arkit_visit_471442": -0.007592371337792107,
+   "arkit_visit_472316": 0.002441505881892358,
+   "arkit_visit_481523": 0.007741963535723324,
+   "arkit_visit_481781": -0.02360244751453265,
+   "arkit_visit_481809": -0.0014730798495395242,
+   "arkit_visit_482331": 8.459244019119738e-07,
+   "arkit_visit_483092": 0.006599581806274513,
+   "arkit_visit_483113": 0.002296884128978993,
+   "arkit_visit_483302": 0.003037440044328696,
+   "arkit_visit_484262": 0.0180770532497051
+  },
+  "OFF": {
+   "arkit_visit_381542": 0.0,
+   "arkit_visit_381612": 0.0,
+   "arkit_visit_381648": 0.0,
+   "arkit_visit_381650": 0.0,
+   "arkit_visit_381877": 0.0,
+   "arkit_visit_383721": 0.0,
+   "arkit_visit_421013": 0.0,
+   "arkit_visit_421948": 0.0,
+   "arkit_visit_422354": 0.0,
+   "arkit_visit_423337": 0.0,
+   "arkit_visit_434691": 0.0,
+   "arkit_visit_434702": 0.0,
+   "arkit_visit_435339": 0.0,
+   "arkit_visit_435660": 0.0,
+   "arkit_visit_437833": 0.0,
+   "arkit_visit_466835": 0.0,
+   "arkit_visit_467292": 0.0,
+   "arkit_visit_467296": 0.0,
+   "arkit_visit_469214": 0.0,
+   "arkit_visit_470116": 0.0,
+   "arkit_visit_470808": 0.0,
+   "arkit_visit_470870": 0.0,
+   "arkit_visit_470886": 0.0,
+   "arkit_visit_470978": 0.0,
+   "arkit_visit_471442": 0.0,
+   "arkit_visit_472316": 0.0,
+   "arkit_visit_481523": 0.0,
+   "arkit_visit_481781": 0.0,
+   "arkit_visit_481809": 0.0,
+   "arkit_visit_482331": 0.0,
+   "arkit_visit_483092": 0.0,
+   "arkit_visit_483113": 0.0,
+   "arkit_visit_483302": 0.0,
+   "arkit_visit_484262": 0.0
+  },
+  "SHORT": {
+   "arkit_visit_381542": -5.953298577612842e-05,
+   "arkit_visit_381612": 0.0011138803696270974,
+   "arkit_visit_381648": 0.0030120972989641955,
+   "arkit_visit_381650": 0.0015029985770399351,
+   "arkit_visit_381877": 0.001266756093638589,
+   "arkit_visit_383721": 0.0014830042267027083,
+   "arkit_visit_421013": 0.004220226491466285,
+   "arkit_visit_421948": 8.684000731144087e-05,
+   "arkit_visit_422354": 0.004786706431263665,
+   "arkit_visit_423337": 0.0032237795219925494,
+   "arkit_visit_434691": -0.0005227386680500268,
+   "arkit_visit_434702": 0.0018495189735782507,
+   "arkit_visit_435339": 0.0013332974546963576,
+   "arkit_visit_435660": 0.00010552872860469104,
+   "arkit_visit_437833": 0.0008296804611552799,
+   "arkit_visit_466835": 0.00017512849444936696,
+   "arkit_visit_467292": 1.1064732941018507e-05,
+   "arkit_visit_467296": 0.00014727915285701887,
+   "arkit_visit_469214": 0.0006555697541502613,
+   "arkit_visit_470116": 0.00025335088911484366,
+   "arkit_visit_470808": -0.00020886472852508706,
+   "arkit_visit_470870": 0.0006580710194686147,
+   "arkit_visit_470886": -1.3376222575880309e-05,
+   "arkit_visit_470978": 0.0005943118916295759,
+   "arkit_visit_471442": -0.002227000327433927,
+   "arkit_visit_472316": 0.0015099687075423897,
+   "arkit_visit_481523": 0.002685087943247396,
+   "arkit_visit_481781": -0.006337294788559142,
+   "arkit_visit_481809": -1.1496008460711027e-05,
+   "arkit_visit_482331": 0.0007747934083116997,
+   "arkit_visit_483092": 0.0013544338782334742,
+   "arkit_visit_483113": 0.0001962491846781017,
+   "arkit_visit_483302": 0.0005705441143948678,
+   "arkit_visit_484262": 0.005569957698460137
+  }
+ }
+}

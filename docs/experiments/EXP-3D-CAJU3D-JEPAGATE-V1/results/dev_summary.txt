@@ -1,0 +1,64 @@
+DEV places 24, episodes 48, decision STOP
+
+[core_b] place means (lower is better)
+  CORE_B       0.09902
+  GATE_RANDOM  0.09904
+  GATE_DEPTH   0.09910
+  GATE_INC     0.09925
+  GATE_JEPA    0.09929
+  ZS_CACHE     0.10255
+  R7           0.10350
+[core_b] pairwise contrasts left - right (> 0: right is better)
+  CORE_B       - ZS_CACHE     -0.00353 [-0.00641, -0.00133] 7/0/17 HARMFUL loso [-0.00378, -0.00245]
+  CORE_B       - GATE_JEPA    -0.00027 [-0.00040, -0.00016] 3/0/21 HARMFUL loso [-0.00029, -0.00023]
+  CORE_B       - GATE_DEPTH   -0.00008 [-0.00023, +0.00007] 9/0/15 NOT_ESTABLISHED loso [-0.00010, -0.00004]
+  CORE_B       - GATE_INC     -0.00023 [-0.00051, +0.00000] 8/0/16 NOT_ESTABLISHED loso [-0.00026, -0.00012]
+  CORE_B       - GATE_RANDOM  -0.00002 [-0.00007, +0.00003] 12/0/12 NOT_ESTABLISHED loso [-0.00003, -0.00001]
+  ZS_CACHE     - GATE_JEPA    +0.00326 [+0.00106, +0.00613] 17/0/7 PARTIAL loso [+0.00218, +0.00352]
+  ZS_CACHE     - GATE_DEPTH   +0.00346 [+0.00122, +0.00636] 18/0/6 SUPPORTED loso [+0.00236, +0.00369]
+  ZS_CACHE     - GATE_INC     +0.00331 [+0.00119, +0.00612] 16/0/8 PARTIAL loso [+0.00223, +0.00357]
+  ZS_CACHE     - GATE_RANDOM  +0.00351 [+0.00130, +0.00639] 17/0/7 PARTIAL loso [+0.00244, +0.00377]
+  GATE_JEPA    - GATE_DEPTH   +0.00019 [-0.00000, +0.00040] 17/0/7 NOT_ESTABLISHED loso [+0.00013, +0.00024]
+  GATE_JEPA    - GATE_INC     +0.00004 [-0.00019, +0.00029] 11/0/13 NOT_ESTABLISHED loso [-0.00003, +0.00012]
+  GATE_JEPA    - GATE_RANDOM  +0.00025 [+0.00012, +0.00041] 20/0/4 SUPPORTED loso [+0.00020, +0.00027]
+  GATE_DEPTH   - GATE_INC     -0.00015 [-0.00040, +0.00009] 10/0/14 NOT_ESTABLISHED loso [-0.00020, -0.00008]
+  GATE_DEPTH   - GATE_RANDOM  +0.00006 [-0.00010, +0.00023] 14/0/10 NOT_ESTABLISHED loso [+0.00001, +0.00008]
+  GATE_INC     - GATE_RANDOM  +0.00021 [-0.00002, +0.00052] 14/0/10 NOT_ESTABLISHED loso [+0.00009, +0.00025]
+
+[f7] place means (lower is better)
+  CORE_B       0.09759
+  GATE_RANDOM  0.09759
+  GATE_DEPTH   0.09764
+  GATE_INC     0.09790
+  GATE_JEPA    0.09805
+  ZS_CACHE     0.10483
+[f7] pairwise contrasts left - right (> 0: right is better)
+  CORE_B       - ZS_CACHE     -0.00724 [-0.01272, -0.00301] 5/0/19 HARMFUL loso [-0.00778, -0.00521]
+  CORE_B       - GATE_JEPA    -0.00046 [-0.00072, -0.00026] 4/0/20 HARMFUL loso [-0.00049, -0.00037]
+  CORE_B       - GATE_DEPTH   -0.00005 [-0.00036, +0.00025] 9/0/15 NOT_ESTABLISHED loso [-0.00011, +0.00003]
+  CORE_B       - GATE_INC     -0.00031 [-0.00082, +0.00009] 10/0/14 NOT_ESTABLISHED loso [-0.00038, -0.00012]
+  CORE_B       - GATE_RANDOM  -0.00000 [-0.00009, +0.00008] 13/0/11 NOT_ESTABLISHED loso [-0.00001, +0.00002]
+  ZS_CACHE     - GATE_JEPA    +0.00678 [+0.00250, +0.01229] 18/0/6 SUPPORTED loso [+0.00475, +0.00732]
+  ZS_CACHE     - GATE_DEPTH   +0.00719 [+0.00295, +0.01272] 18/0/6 SUPPORTED loso [+0.00514, +0.00769]
+  ZS_CACHE     - GATE_INC     +0.00693 [+0.00284, +0.01234] 20/0/4 SUPPORTED loso [+0.00489, +0.00750]
+  ZS_CACHE     - GATE_RANDOM  +0.00724 [+0.00298, +0.01274] 19/0/5 SUPPORTED loso [+0.00522, +0.00780]
+  GATE_JEPA    - GATE_DEPTH   +0.00041 [+0.00000, +0.00087] 17/0/7 PARTIAL loso [+0.00028, +0.00049]
+  GATE_JEPA    - GATE_INC     +0.00015 [-0.00035, +0.00065] 14/0/10 NOT_ESTABLISHED loso [+0.00000, +0.00031]
+  GATE_JEPA    - GATE_RANDOM  +0.00046 [+0.00023, +0.00075] 20/0/4 SUPPORTED loso [+0.00036, +0.00050]
+  GATE_DEPTH   - GATE_INC     -0.00026 [-0.00072, +0.00018] 9/0/15 NOT_ESTABLISHED loso [-0.00034, -0.00014]
+  GATE_DEPTH   - GATE_RANDOM  +0.00005 [-0.00026, +0.00038] 15/0/9 NOT_ESTABLISHED loso [-0.00004, +0.00011]
+  GATE_INC     - GATE_RANDOM  +0.00031 [-0.00010, +0.00084] 14/0/10 NOT_ESTABLISHED loso [+0.00011, +0.00037]
+
+query-view coverage (alpha >= 0.5 on valid ground truth): {"CORE_B": 0.7494, "ZS_CACHE": 0.744, "GATE_JEPA": 0.7469, "GATE_DEPTH": 0.7484, "GATE_INC": 0.7473, "GATE_RANDOM": 0.7483}
+dropped-set overlap (share of the first arm's dropped pixels also dropped by the second; chance 0.10):
+   {"DEPTH|INC": 0.218, "DEPTH|RANDOM": 0.1, "INC|RANDOM": 0.1, "JEPA|DEPTH": 0.181, "JEPA|INC": 0.16, "JEPA|RANDOM": 0.099}
+TTT depth term on the kept pixels (first step -> last step), failures, seconds per arm:
+  JEPA    0.0698 -> 0.0177  failures 0  kept 0.900  70.8 s
+  DEPTH   0.0639 -> 0.0121  failures 0  kept 0.900  70.4 s
+  INC     0.0722 -> 0.0207  failures 0  kept 0.900  69.5 s
+  RANDOM  0.0764 -> 0.0221  failures 0  kept 0.900  68.9 s
+score summary over episodes (mean of the episode mean, mean of the episode max):
+  JEPA    1.1653 59.7799
+  DEPTH   0.0683 2.9020
+  INC     0.0799 1.0000
+  RANDOM  0.5001 1.0000

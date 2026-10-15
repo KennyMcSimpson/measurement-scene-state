@@ -1,0 +1,50 @@
+{
+ "brief_integrity_items": {
+  "10_reset_between_scans": "the state is re-encoded per episode; the CACHE fingerprint is logged",
+  "11_action_set_frozen": "OFF / SHORT 10 / FULL 100 in the lock, before any utility",
+  "12_opacity_threshold_frozen": "alpha >= 0.5 in the lock",
+  "13_place_is_the_unit": "bootstrap, LOSO and top-1 shares over places (one scan per place)",
+  "14_deployment_runs_only_the_chosen_action": "not applicable: Gate 0 deploys no selector",
+  "15_online_cost_includes_jepa_and_mlp": "not applicable: no JEPA / MLP in Gate 0",
+  "16_results_rebuilt_from_raw_predictions": "caju_score rebuilds every number from the sealed npz files; the analysis ran twice byte-identical",
+  "1_query_gt_not_in_actions": "replay seals: query/history depth and image never read; per-episode file audit",
+  "2_query_gt_not_in_jepa_features": "no JEPA features exist (JEPA_FEATURE_STATUS=NOT_IMPLEMENTED)",
+  "3_query_gt_not_in_predictor_features": "pre-update features come from the 7 arrived frames only (audited)",
+  "4_branches_share_the_initial_state": "OFF = CACHE; SHORT / FULL = steps 10 / 100 of one trajectory from it",
+  "5_same_arrived_observations": "every action uses the same 7 arrived frames (one encode per episode)",
+  "6_off_keeps_cache_and_fusion": "OFF is the 7-view CACHE state with measured depth injected",
+  "7_r7_same_for_all_actions": "one geometry seal per target, shared by every action",
+  "8_ttt_reads_arrived_frames_only": "the TTT targets are the 7 arrived frames (audited)",
+  "9_no_optimizer_state_across_branches": "fresh Adam per episode; SHORT is a read-only snapshot; checked against independent V1 runs (equivalence)"
+ },
+ "checks": {
+  "amendment_1_engine_equivalent_in_distribution": true,
+  "analysis_deterministic": true,
+  "code_unchanged_or_amended": true,
+  "engine_compat_vs_v3_within_floor": false,
+  "equivalence_at_utility_level": true,
+  "equivalence_snapshot_vs_independent_runs": false,
+  "geometry_compat_replay_vs_v3": true,
+  "geometry_reads_no_target_depth": true,
+  "geometry_seals_unchanged": true,
+  "ground_truth_only_arkit_records": true,
+  "ground_truth_purposes_only_sealed_evaluation": true,
+  "ground_truth_read_after_every_formal_seal": true,
+  "locked_protocol_is_exact_prefix": true,
+  "preregistration_unchanged": true,
+  "replay_failures_reverted": {
+   "COMPAT": 0,
+   "FORMAL": 0,
+   "PILOT": 0
+  },
+  "replay_seals_complete_and_certified": true,
+  "root_files_unchanged": true,
+  "selection_logged_before_evaluation": true,
+  "tests_pass": true
+ },
+ "status": "PASS_WITH_AMENDMENT_1",
+ "superseded_by_amendment_1": [
+  "equivalence_snapshot_vs_independent_runs",
+  "engine_compat_vs_v3_within_floor"
+ ]
+}

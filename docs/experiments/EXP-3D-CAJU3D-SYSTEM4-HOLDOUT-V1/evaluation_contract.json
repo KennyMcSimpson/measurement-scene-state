@@ -1,0 +1,45 @@
+{
+  "arms": {
+    "G1": {
+      "module": "mcss.mechanism_pilot.rgbd_long_train_carrier",
+      "root": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-SEGMENT-DIVERSITY-V21/G1/EXP-3D-RGBD-LONG-TRAIN-V17",
+      "step": 24000,
+      "preregistration_sha256": "18333dad06f9099ff624c89c3b6bab8827269d3b4ae7142fca0b00346d081f10"
+    },
+    "GA": {
+      "module": "mcss.mechanism_pilot.rgbd_long_train_carrier",
+      "root": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/GA/EXP-3D-RGBD-LONG-TRAIN-V17",
+      "step": 24000,
+      "preregistration_sha256": "244b5c5179f91c4b7edb875a28f730b4169bc2e992ebb0c6cd4591c9fa12e48b"
+    }
+  },
+  "reference_arm": "G1",
+  "seeds": [
+    20260928,
+    20260929,
+    20260930
+  ],
+  "cohorts": {
+    "ARKIT_SYSTEM4": {
+      "manifest": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-ARKIT-SYSTEM4-DATA-V1/manifest_arkit_system4.json",
+      "manifest_sha256": "d403d077ee623a7f863668416e79d44f28744b763b7a61db0b9781d5a0b15ef8",
+      "split": "ARKIT_SYSTEM4",
+      "role": "primary_query"
+    }
+  },
+  "near_px": 8,
+  "reprojection_fill_constant_m": 2.3736329078674316,
+  "abstain_opacity_threshold": 0.5,
+  "carrier_arkit_overlap": {
+    "ga_checkpoints": {
+      "20260928": "0524192c9f379f664ca3ab082bb8660a3e97416b91c183b0b9b382371a23f1e3",
+      "20260929": "8ecd812d191b924b5935ce814515c45216233a1d4b696efb024910be13916628",
+      "20260930": "2380506619a1578d807547bd13900844185b0d085effa6dafdad11bc6513b11d"
+    },
+    "source_contract_sha256": "fb99c3dff48069f8e4310410df59562c452c9ceb231f227163af2f3226b4ef0f"
+  },
+  "source_contract": {
+    "path": "/home/xmum26_zonghan/zonghan_o_mirror/measurement-scene-state/outputs/EXP-3D-RGBD-CARRIER-ARKIT-OVERLAP-V1/evaluation_contract.json",
+    "sha256": "14f030254dff78587b589192d1b82e096d39320be3b1d23af2849d36902580ba"
+  }
+}

@@ -1,0 +1,593 @@
+{
+ "CONF_SYSTEM3": {
+  "ground_truth_reads": 640,
+  "means": {
+   "CORE_B": 0.15688559379590356,
+   "FUSE_BASE": 0.11431441426181206,
+   "FUSE_BASE_W": 0.15435877606760445,
+   "FUSE_JEPA": 0.11529551984588586,
+   "FUSE_JEPA_W": 0.15436218541533292,
+   "KF_BASE": 0.15380818848703592
+  },
+  "places": 160,
+  "primary_base_minus_jepa": {
+   "absolute_top1_contribution": 0.06621667151250127,
+   "absolute_top3_contribution": 0.17466841541264125,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": false,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.004481805288232053,
+    0.0025186390463488063
+   ],
+   "improved_tied_worse": [
+    80,
+    0,
+    80
+   ],
+   "left": "FUSE_BASE",
+   "loso_range": [
+    -0.0016790670705854206,
+    -0.00017962000313021025
+   ],
+   "mean": -0.0009811055840737984,
+   "median": -3.1670824908961587e-06,
+   "n_scenes": 160,
+   "negative": 80,
+   "positive": 80,
+   "positive_top1_contribution": 0.12342506747088917,
+   "positive_top3_contribution": 0.2913383461698655,
+   "right": "FUSE_JEPA",
+   "scenes": 160,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  },
+  "queries": 640,
+  "secondary": {
+   "CORE_B_minus_FUSE_BASE": {
+    "absolute_top1_contribution": 0.22369226640559076,
+    "absolute_top3_contribution": 0.4519095112661056,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.02040335100204618,
+     0.07385367752745776
+    ],
+    "improved_tied_worse": [
+     119,
+     0,
+     41
+    ],
+    "left": "CORE_B",
+    "loso_range": [
+     0.032302624775858914,
+     0.043148905855442676
+    ],
+    "mean": 0.042571179534091494,
+    "median": 0.0063752201533026406,
+    "n_scenes": 160,
+    "negative": 41,
+    "positive": 119,
+    "positive_top1_contribution": 0.2342943914005787,
+    "positive_top3_contribution": 0.4733282272631081,
+    "right": "FUSE_BASE",
+    "scenes": 160,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "CORE_B_minus_FUSE_JEPA": {
+    "absolute_top1_contribution": 0.21029208737394625,
+    "absolute_top3_contribution": 0.42918104911477417,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.01882624658563773,
+     0.07307378999726669
+    ],
+    "improved_tied_worse": [
+     107,
+     0,
+     53
+    ],
+    "left": "CORE_B",
+    "loso_range": [
+     0.03145038459421965,
+     0.042254825258221926
+    ],
+    "mean": 0.041590073950017695,
+    "median": 0.00418999948314339,
+    "n_scenes": 160,
+    "negative": 53,
+    "positive": 107,
+    "positive_top1_contribution": 0.22781640209984447,
+    "positive_top3_contribution": 0.46494608370546847,
+    "right": "FUSE_JEPA",
+    "scenes": 160,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "FUSE_BASE_W_minus_FUSE_BASE": {
+    "absolute_top1_contribution": 0.2336602011653557,
+    "absolute_top3_contribution": 0.4725759373103967,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.018016081064609314,
+     0.07130133235432211
+    ],
+    "improved_tied_worse": [
+     119,
+     0,
+     41
+    ],
+    "left": "FUSE_BASE_W",
+    "loso_range": [
+     0.02980703299255009,
+     0.04063545761056898
+    ],
+    "mean": 0.040044361805792385,
+    "median": 0.005319326832035044,
+    "n_scenes": 160,
+    "negative": 41,
+    "positive": 119,
+    "positive_top1_contribution": 0.2462625867925726,
+    "positive_top3_contribution": 0.4980641641048026,
+    "right": "FUSE_BASE",
+    "scenes": 160,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "KF_BASE_minus_FUSE_BASE": {
+    "absolute_top1_contribution": 0.23371054447435843,
+    "absolute_top3_contribution": 0.4729933361506677,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.01746871387192915,
+     0.07074866135956465
+    ],
+    "improved_tied_worse": [
+     111,
+     0,
+     49
+    ],
+    "left": "KF_BASE",
+    "loso_range": [
+     0.029268388612602603,
+     0.040078508930687824
+    ],
+    "mean": 0.03949377422522384,
+    "median": 0.004793901874170916,
+    "n_scenes": 160,
+    "negative": 49,
+    "positive": 111,
+    "positive_top1_contribution": 0.24773194057665454,
+    "positive_top3_contribution": 0.5013704337045294,
+    "right": "FUSE_BASE",
+    "scenes": 160,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "KF_BASE_minus_FUSE_BASE_W": {
+    "absolute_top1_contribution": 0.0911600490670692,
+    "absolute_top3_contribution": 0.15126605758164038,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": false,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     -0.0008228966646776845,
+     -0.00031661871610733035
+    ],
+    "improved_tied_worse": [
+     44,
+     0,
+     116
+    ],
+    "left": "KF_BASE",
+    "loso_range": [
+     -0.000583630043080008,
+     -0.00046407061447402393
+    ],
+    "mean": -0.0005505875805685359,
+    "median": -0.0003573157928135791,
+    "n_scenes": 160,
+    "negative": 116,
+    "positive": 44,
+    "positive_top1_contribution": 0.1366257909618456,
+    "positive_top3_contribution": 0.3344809744415156,
+    "right": "FUSE_BASE_W",
+    "scenes": 160,
+    "status": "HARMFUL",
+    "tied": 0
+   },
+   "KF_BASE_minus_FUSE_JEPA": {
+    "absolute_top1_contribution": 0.21794444879217714,
+    "absolute_top3_contribution": 0.4456237483463409,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.015866327617162876,
+     0.06979705644198177
+    ],
+    "improved_tied_worse": [
+     101,
+     0,
+     59
+    ],
+    "left": "KF_BASE",
+    "loso_range": [
+     0.028416148430963337,
+     0.03918052756858752
+    ],
+    "mean": 0.03851266864115005,
+    "median": 0.0025626332648575976,
+    "n_scenes": 160,
+    "negative": 59,
+    "positive": 101,
+    "positive_top1_contribution": 0.239899125574679,
+    "positive_top3_contribution": 0.4905137440116126,
+    "right": "FUSE_JEPA",
+    "scenes": 160,
+    "status": "PARTIAL",
+    "tied": 0
+   }
+  }
+ },
+ "CONF_VAL": {
+  "ground_truth_reads": 320,
+  "means": {
+   "CORE_B": 0.11608169943366527,
+   "FUSE_BASE": 0.09844088030914878,
+   "FUSE_BASE_W": 0.1140082646757096,
+   "FUSE_JEPA": 0.09658315261385408,
+   "FUSE_JEPA_W": 0.11410326116873352,
+   "KF_BASE": 0.11340739271075803
+  },
+  "places": 80,
+  "primary_base_minus_jepa": {
+   "absolute_top1_contribution": 0.10042805391395197,
+   "absolute_top3_contribution": 0.22058960388352658,
+   "bootstrap": {
+    "CI": "percentile95",
+    "draws": 10000,
+    "seed": 20260928,
+    "unit": "scene"
+   },
+   "checks": {
+    "every_leave_one_scene_out_gain_positive": true,
+    "mean_ci_and_scene_consistency": false,
+    "positive_top1_share_at_most_0_5": true
+   },
+   "ci95": [
+    -0.002304124778425343,
+    0.00655782773819478
+   ],
+   "improved_tied_worse": [
+    34,
+    0,
+    46
+   ],
+   "left": "FUSE_BASE",
+   "loso_range": [
+    0.000672824259472851,
+    0.002466255875596313
+   ],
+   "mean": 0.0018577276952946955,
+   "median": -0.000810034363237528,
+   "n_scenes": 80,
+   "negative": 46,
+   "positive": 34,
+   "positive_top1_contribution": 0.17369920206296222,
+   "positive_top3_contribution": 0.38152923097348196,
+   "right": "FUSE_JEPA",
+   "scenes": 80,
+   "status": "NOT_ESTABLISHED",
+   "tied": 0
+  },
+  "queries": 320,
+  "secondary": {
+   "CORE_B_minus_FUSE_BASE": {
+    "absolute_top1_contribution": 0.10387361603042497,
+    "absolute_top3_contribution": 0.25385845039115135,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": true,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.009246272896094908,
+     0.027039300060244954
+    ],
+    "improved_tied_worse": [
+     63,
+     0,
+     17
+    ],
+    "left": "CORE_B",
+    "loso_range": [
+     0.015229389908638478,
+     0.018887037804291126
+    ],
+    "mean": 0.017640819124516493,
+    "median": 0.007767385823483826,
+    "n_scenes": 80,
+    "negative": 17,
+    "positive": 63,
+    "positive_top1_contribution": 0.12189674466931186,
+    "positive_top3_contribution": 0.29790547293947656,
+    "right": "FUSE_BASE",
+    "scenes": 80,
+    "status": "SUPPORTED",
+    "tied": 0
+   },
+   "CORE_B_minus_FUSE_JEPA": {
+    "absolute_top1_contribution": 0.09686474162924089,
+    "absolute_top3_contribution": 0.2564335976690807,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.011076036870485527,
+     0.029202394177543244
+    ],
+    "improved_tied_worse": [
+     54,
+     0,
+     26
+    ],
+    "left": "CORE_B",
+    "loso_range": [
+     0.017254524519912294,
+     0.020189612571790097
+    ],
+    "mean": 0.019498546819811193,
+    "median": 0.0056251574100050945,
+    "n_scenes": 80,
+    "negative": 26,
+    "positive": 54,
+    "positive_top1_contribution": 0.10958383693255314,
+    "positive_top3_contribution": 0.29010532706065195,
+    "right": "FUSE_JEPA",
+    "scenes": 80,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "FUSE_BASE_W_minus_FUSE_BASE": {
+    "absolute_top1_contribution": 0.11246890004863246,
+    "absolute_top3_contribution": 0.2697016613974304,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.0072012911031299025,
+     0.024962354692319527
+    ],
+    "improved_tied_worse": [
+     59,
+     0,
+     21
+    ],
+    "left": "FUSE_BASE_W",
+    "loso_range": [
+     0.013139953611723902,
+     0.01683698894755886
+    ],
+    "mean": 0.015567384366560808,
+    "median": 0.005291254049327128,
+    "n_scenes": 80,
+    "negative": 21,
+    "positive": 59,
+    "positive_top1_contribution": 0.1342459972765166,
+    "positive_top3_contribution": 0.32192338047029456,
+    "right": "FUSE_BASE",
+    "scenes": 80,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "KF_BASE_minus_FUSE_BASE": {
+    "absolute_top1_contribution": 0.11096126781698189,
+    "absolute_top3_contribution": 0.2663250397303738,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.0065454191136566425,
+     0.02442629801657053
+    ],
+    "improved_tied_worse": [
+     50,
+     0,
+     30
+    ],
+    "left": "KF_BASE",
+    "loso_range": [
+     0.012531615001221335,
+     0.016244302734762715
+    ],
+    "mean": 0.014966512401609258,
+    "median": 0.004700437857881681,
+    "n_scenes": 80,
+    "negative": 30,
+    "positive": 50,
+    "positive_top1_contribution": 0.1352512841991228,
+    "positive_top3_contribution": 0.32462501868064186,
+    "right": "FUSE_BASE",
+    "scenes": 80,
+    "status": "PARTIAL",
+    "tied": 0
+   },
+   "KF_BASE_minus_FUSE_BASE_W": {
+    "absolute_top1_contribution": 0.11729074365764544,
+    "absolute_top3_contribution": 0.23797422327026185,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": false,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     -0.0010053164437326477,
+     -0.00022729686845949742
+    ],
+    "improved_tied_worse": [
+     19,
+     0,
+     61
+    ],
+    "left": "KF_BASE",
+    "loso_range": [
+     -0.000700609582279072,
+     -0.00047778898065053337
+    ],
+    "mean": -0.000600871964951548,
+    "median": -0.0004147964425606724,
+    "n_scenes": 80,
+    "negative": 61,
+    "positive": 19,
+    "positive_top1_contribution": 0.3643346430827523,
+    "positive_top3_contribution": 0.5936210940379867,
+    "right": "FUSE_BASE_W",
+    "scenes": 80,
+    "status": "HARMFUL",
+    "tied": 0
+   },
+   "KF_BASE_minus_FUSE_JEPA": {
+    "absolute_top1_contribution": 0.10194389374456678,
+    "absolute_top3_contribution": 0.26524739215207466,
+    "bootstrap": {
+     "CI": "percentile95",
+     "draws": 10000,
+     "seed": 20260928,
+     "unit": "scene"
+    },
+    "checks": {
+     "every_leave_one_scene_out_gain_positive": true,
+     "mean_ci_and_scene_consistency": false,
+     "positive_top1_share_at_most_0_5": true
+    },
+    "ci95": [
+     0.008430764257360602,
+     0.02653870027662237
+    ],
+    "improved_tied_worse": [
+     43,
+     0,
+     37
+    ],
+    "left": "KF_BASE",
+    "loso_range": [
+     0.01455674961249516,
+     0.017491992200269677
+    ],
+    "mean": 0.016824240096903954,
+    "median": 0.00045310949081003166,
+    "n_scenes": 80,
+    "negative": 37,
+    "positive": 43,
+    "positive_top1_contribution": 0.11991920034267096,
+    "positive_top3_contribution": 0.31201726745453956,
+    "right": "FUSE_JEPA",
+    "scenes": 80,
+    "status": "PARTIAL",
+    "tied": 0
+   }
+  }
+ },
+ "branch": "JEPA_FUSION_NOT_ESTABLISHED"
+}

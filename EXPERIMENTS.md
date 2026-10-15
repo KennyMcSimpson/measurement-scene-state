@@ -1,5 +1,118 @@
 # 实验注册表
 
+## EXP-3D-CAJU3D-READOUT-LOCO-V1（2026-10-14，hit GPU 4，学到的读出的留一队列稳健性分析）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-READOUT-LOCO-V1/PROTOCOL.md)。2026-10-14 23:31:35 锁定；描述性分析，结果一律报告。
+- **设计：** 四个留出折（CONF_SYSTEM3、CONF_VAL、CAJU、ARKIT_SYSTEM4），每折按 FUSE_V2 的配方用其余全部队列训练 3 个种子；FIT 两个队列只作训练。
+- **结果：**
+  - 合计 350 个场所：0.1395 → 0.1033，+0.0362 [+0.0230, +0.0524]，278/0/72，SUPPORTED。
+  - 各折中，SYSTEM3、VAL、CAJU 为 SUPPORTED，SYSTEM4 为 PARTIAL（头部占比 0.52）。
+- **状态：** 结束。
+
+## EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1（2026-10-14，hit GPU 4 + CPU，全新保留队列上的读出检验）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1/PROTOCOL.md)。
+  - 计划于 2026-10-14 22:39:36 锁定（sha256 `65dbce23…`），早于任何 SYSTEM4 数据准备；
+  - V2 代码于 22:43:21 锁定；评估代码于 22:45:40 锁定。
+- **数据：** ARKIT_SYSTEM4（52 个场所、104 个片段、208 个查询），按 FULL-SYSTEM-V3 的流程跑 Core B。
+- **读出：**
+  - CORE_B；
+  - KF_BASE（冻结表）；
+  - FUSE_V1（FUSENET-V1 冻结的 BASE 网络）；
+  - FUSE_V2：已覆盖像素用 KF 表，只学未覆盖修正，主干膨胀率到 16，训练数据为除 SYSTEM4 外的 458 个场所，3 个种子。
+- **结果：**
+  - P1 = CORE_B − FUSE_V2：+0.0539 [+0.0186, +0.1151]，47/0/5，PARTIAL（头部占比 0.52）。
+  - P2 = CORE_B − FUSE_V1：+0.0502 [+0.0157, +0.1110]，46/0/6，PARTIAL（头部占比 0.56）。
+  - CORE_B − KF_BASE：+0.0035，SUPPORTED。
+  - 分析两次逐字节相同。
+- **状态：** 结束（LEARNED_READOUT_PARTIAL）。
+
+## EXP-3D-RGBD-ARKIT-SYSTEM4-DATA-V1（2026-10-14，hit，ARKitScenes 第四个完整系统队列）
+
+- **来源：** `scripts/prepare_rgbd_arkit_system4_cohort.py`。EXP-3D-RGBD-ARKIT-SYSTEM3-DATA-V1 的批次（训练折种子顺序第 1000–1359 位）在第 160 个合格扫描（批内第 268 位）处停止准备。本队列按批内顺序准备其余 91 个扫描（第 269–359 位）：它们已下载、相机元数据已锁定，但从未读取过任何图像或深度。
+- **过程：** 用不变的基础规则和 SYSTEM3 的候选锁（其源文件哈希已核对）准备全部 91 个，52 个合格、39 个不合格。不下载数据，不运行模型，不计算分数。计划在 EXP-3D-CAJU3D-SYSTEM4-HOLDOUT-V1 中先行锁定。
+- **许可与存放：** 只用于非商业研究，媒体在 `zonghan_o_mirror/_data_arkitscenes`，不进 git。
+
+## EXP-3D-CAJU3D-FUSENET-REPL-V1（2026-10-14，hit CPU，冻结的学习式读出的复现）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-FUSENET-REPL-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-FUSENET-REPL-V1/PROTOCOL.md)。2026-10-14 22:34:28 锁定，在任何打分之前。
+- **数据：** CAJU-V1 的 58 个场所（100 步 TTT 回放与几何封存）；FUSENET-V1 的三个 BASE 网络按哈希核对，不重新训练。这些场所在 H-JEPA 的训练集里，所以不评估 JEPA 臂。
+- **结果：**
+  - P = CORE_B − FUSE_BASE：+0.01973 [+0.00716, +0.03795]，48/0/10，SUPPORTED（REPLICATED）。
+  - 未覆盖像素的 AbsRel 从 0.288 降到 0.228。
+  - 分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-CAJU3D-FUSENET-V1（2026-10-14，hit GPU 4 + CPU，CAJU-3D 第四步：学到的按像素读出）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-FUSENET-V1/PROTOCOL.md)。2026-10-14 22:20:46 锁定，sha256 `fda3cf90…`。
+- **数据：** 与 KFUSE-V1 相同。SYSTEM + SYSTEM2 分为 128 个训练场所和 32 个验证场所；确认集为 SYSTEM3（160）和 VAL（80）。
+- **模型：** FuseNet 为 5 层膨胀卷积，已覆盖像素输出卡尔曼式权重，未覆盖像素输出 R7 的有界修正。BASE 只用 8 通道基础图像，JEPA 另加 H-JEPA 查询格的 ẑ、log P 和命中。每个臂 3 个种子，30 个 epoch，按验证集选 epoch。
+- **结果：**
+  - P1 = FUSE_BASE − FUSE_JEPA：SYSTEM3 −0.00098（80/0/80），VAL +0.00186（34/0/46），都不成立。
+  - CORE_B − FUSE_BASE：SYSTEM3 +0.0426（PARTIAL），VAL +0.0176（SUPPORTED）。
+  - 未覆盖修正贡献了几乎全部收益。
+  - 8 个测试通过；分析两次逐字节相同。
+- **状态：** 结束（JEPA_FUSION_NOT_ESTABLISHED）。
+
+## EXP-3D-CAJU3D-KFUSE-REPL-V1（2026-10-14，hit CPU，冻结的卡尔曼式读出融合的复现）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-KFUSE-REPL-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-KFUSE-REPL-V1/PROTOCOL.md)。2026-10-14 22:12:05 锁定，在任何打分之前。
+- **数据：** CAJU-V1 的 CAJU_PILOT、CAJU_SEL、CAJU_EVAL（58 个场所、232 个查询），使用其 100 步 TTT 回放与几何封存；KFUSE-V1 的融合表（`15100550…`）不变。这些场所在 H-JEPA 的训练集里，所以不评估 JEPA 臂。
+- **结果：**
+  - P = CORE_B − KF_BASE：+0.00272 [+0.00145, +0.00417]，47/0/11，SUPPORTED（REPLICATED）。
+  - GEO_U − KF_BASE：+0.00046，40/0/18，PARTIAL。
+  - 分析两次逐字节相同。
+- **状态：** 结束。
+
+## EXP-3D-CAJU3D-KFUSE-V1（2026-10-14，hit GPU 4 + CPU，CAJU-3D 第三步：卡尔曼式读出融合）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-KFUSE-V1/PROTOCOL.md)。2026-10-14 21:56:35 锁定，sha256 `b9e08b44…`。设计前在第一、二步的开发集上做过探索（`exploration/`）。
+- **数据：** 拟合集为 ARKIT_SYSTEM + ARKIT_SYSTEM2 的全部片段（160 个场所）；确认集为 SYSTEM3（160 个场所，P1）和 VAL（80 个场所，P2）。四个队列互不重叠，也不与 H-JEPA 训练数据重叠。复用 Core B 的 TTT 封存和几何封存；H-JEPA 特征只用到达帧和查询相机。
+- **臂：** CORE_B、GEO_U（统一权重）、KF_DIS、KF_BASE（分歧 × α × near7）、KF_JEPA（分歧 × JEPA log P × near7）、KF_FULL。每箱一个权重，在拟合集上按场所加权 AbsRel 选出后冻结（`15100550…`）。
+- **结果：**
+  - P1 = KF_BASE − KF_JEPA：SYSTEM3 −0.00005 [−0.00013, +0.00003]，61/0/99；P2（VAL）−0.00007，33/0/47。都不成立。
+  - Core B − KF_BASE：SYSTEM3 +0.00308（SUPPORTED），VAL +0.00267（SUPPORTED）。
+  - GEO_U − KF_BASE：+0.00055 / +0.00066（PARTIAL）。
+  - 8 个测试通过；分析两次逐字节相同。
+- **状态：** 结束（JEPA_KALMAN_NOT_ESTABLISHED）。
+
+## EXP-3D-CAJU3D-JEPAGATE-V1（2026-10-14，hit GPU 4 + CPU，CAJU-3D 第二步：JEPA 潜空间创新能否挑出更值得排除的测量）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-JEPAGATE-V1/PROTOCOL.md)。2026-10-14 20:37:12 锁定，sha256 `82d86a50…`。H-JEPA 在锁定前训练并冻结。
+- **H-JEPA：** 源视角潜特征按测量深度几何对齐到目标视角（z-buffer），预测 ẑ 与 log P，用高斯 NLL 训练。数据为 ARKit TRAIN 182 个场所，3 万步；监控集上 log 误差与 log P 的相关为 0.78。
+- **臂：** 在 Core B 的 TTT 深度项中剔除每个片段 10% 的有效测量像素，挑法为 JEPA（留一归一化潜空间创新）、DEPTH（跨视角深度不一致）、INC（入射角/跳变）、RANDOM。开发集与第一步相同（24 个场所、48 个片段）。
+- **GO 规则：** GATE_JEPA 的开发集均值同时低于 CORE_B 和 GATE_DEPTH。
+- **结果：**
+  - Core B 0.09902，RANDOM 0.09904，DEPTH 0.09910，INC 0.09925，JEPA 0.09929，所以停止。
+  - JEPA 对 Core B：−0.00027 [−0.00040, −0.00016]，3/0/21。
+  - 排练中 NONE 与封存的 Core B 一致；13 个测试通过；剔除集合的复现差值为 0。
+- **状态：** 结束（STOP_AT_DEV），确认队列没有读取。
+
+## EXP-3D-CAJU3D-ENGINE-V1（2026-10-14，hit GPU 4 + CPU，CAJU-3D 第一步：不含学习模块的 TTT 引擎）
+
+- [README](docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU3D-ENGINE-V1/PROTOCOL.md)。2026-10-14 18:09:32 锁定，sha256 `e92c77ea…`。
+- **数据：** 开发集从 ARKIT_SYSTEM 和 ARKIT_SYSTEM2 各按种子选 12 个扫描，共 24 个场所、48 个片段。确认队列 CONF_SYSTEM3（160 个场所）和 CONF_VAL（80 个场所）没有使用。
+- **臂：** 两个底座 ZS（发布版权重）和 JN1，各配 RAW / NORM / NORM_DEC / NORM_DEC_INC，都从同一个 CACHE 出发跑 100 步，用 Core B 读出。复用已封存的 Core B、CACHE 和 R7。
+- **结果：**
+  - 最佳候选 ZS_NORM 对 Core B：−0.0011 [−0.0021, −0.0003]，7/0/17，所以停止。
+  - JN1_NORM 对 JN1_RAW：+0.0016 [−0.0013, +0.0061]，10/0/14。
+  - 新算的 CACHE 与封存逐位一致（96 个查询）；10 个测试通过。
+- **状态：** 结束（STOP_AT_DEV）。
+
+## EXP-3D-CAJU-HEADROOM-V1（2026-10-14，hit GPU 4 + CPU，CAJU-V1 Gate 0：Core B 更新动作的反事实 headroom）
+
+- [README](docs/experiments/EXP-3D-CAJU-HEADROOM-V1/README.md)、[协议](docs/experiments/EXP-3D-CAJU-HEADROOM-V1/PROTOCOL.md)。2026-10-14 01:07:17 锁定，sha256 `f82179bf…`。修订 1（01:31:37，正式回放之前）只改了引擎检查的放行依据：用分布比较代替单像素最大差。引擎和判定都没变。
+- **数据：** ARKit 训练折中从未跑过 Core B 的场所。SEL 16 个场所用来选固定动作，EVAL 34 个场所用来测 headroom，DEV 8 个场所做工程试点，其余 132 个场所不动。
+- **动作：** 都从同一个 CACHE 状态出发：OFF、SHORT（同一条 TTT 轨迹的第 10 步）、FULL（第 100 步）。三者都用冻结的 Core B 读出。
+- **主检验：** 在 EVAL 场所上，交叉查询 oracle 减最佳固定动作。要求均值 ≥ 0.001、CI 下界 > 0、LOSO 全部 > 0、top-1 ≤ 0.5。
+- **结果：**
+  - 固定动作为 FULL。EVAL 的 AbsRel：OFF 0.1112，SHORT 0.1103，FULL 0.1082。
+  - 主检验 +0.00076 [+0.00005, +0.00191]，9/20/5，top-1 0.57：NOT_ESTABLISHED。
+  - 事后逐片段 oracle +0.00123；交叉角色 +0.00115；最省充分策略省 33%，低于 50%。
+  - 测试 17 个通过；分析两次逐字节相同；完整性 PASS_WITH_AMENDMENT_1。
+- **状态：** 结束（`NO_USEFUL_DYNAMIC_ACTION_SPACE`，`GATE1_ALLOWED=false`）。
+
 ## EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1（2026-10-10，hit GPU + CPU，更多真实训练数据能否改进逆向 JEPA 的补全）
 
 - [协议](docs/experiments/EXP-3D-RGBD-DEPTHSPLAT-JEPA-OVERLAP-SCALE-ARKIT-V1/PROTOCOL.md)。2026-10-10 01:58:03 锁定，sha256 `35f85731…`；设计受 NS 结果启发，锁定早于本实验的任何训练与评估。

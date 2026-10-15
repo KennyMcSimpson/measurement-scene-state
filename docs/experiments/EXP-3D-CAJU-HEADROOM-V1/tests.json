@@ -1,0 +1,11 @@
+{
+ "command": "pytest -q -p no:cacheprovider -rA code/test_caju.py (repository root, PYTHONPATH=src, CPU)",
+ "exit_code": 0,
+ "summary": "17 passed in 2.58s",
+ "passed": 17,
+ "failed": 0,
+ "skipped": 0,
+ "errors": 0,
+ "log": "audit/tests.log",
+ "time": "2026-10-14 01:05:10 +0800"
+}

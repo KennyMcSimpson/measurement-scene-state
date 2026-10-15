@@ -1,0 +1,11 @@
+{
+ "episodes": 32,
+ "fixed_action": "FULL",
+ "place_mean_utility": {
+  "FULL": 0.0023633501445693666,
+  "OFF": 0.0,
+  "SHORT": 0.0008647831674309867
+ },
+ "places": 16,
+ "rule": "the action with the highest mean CAJU_SEL place utility (quality only: AbsRel(OFF) - AbsRel(a) of the Core B readout, mean over queries, mean over roles); ties to the cheaper action"
+}

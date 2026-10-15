@@ -1,0 +1,86 @@
+{
+ "episodes": 48,
+ "profile": {
+  "ALL": {
+   "pixels": 6881280,
+   "no_cross_view_hit": 0.36919744582403274,
+   "no_jepa_cell_hit": 0.36800537109375,
+   "cosine": 0.7080288515296825,
+   "edge": 0.016375296456473214,
+   "relative_depth": 1.0930862448315675,
+   "stream_view": 0.5714285714285714,
+   "log_p": -0.8943251469423384,
+   "log_err": -1.2799214330694977,
+   "depth_disagreement|hit": 0.10823020912069042,
+   "photometric_disagreement|hit": 0.07391700318419689,
+   "dropped_neighbour_share": 1.0
+  },
+  "JEPA": {
+   "pixels": 688128,
+   "no_cross_view_hit": 0.3660394577752976,
+   "no_jepa_cell_hit": 0.3628452845982143,
+   "cosine": 0.657652525557132,
+   "edge": 0.04326665969122024,
+   "relative_depth": 1.0854521573153197,
+   "stream_view": 0.5910935174851191,
+   "log_p": -1.0748752911784625,
+   "log_err": 0.3334554140744206,
+   "depth_disagreement|hit": 0.28445966352960544,
+   "photometric_disagreement|hit": 0.1263903996573178,
+   "dropped_neighbour_share": 0.8277098642114046
+  },
+  "DEPTH": {
+   "pixels": 688128,
+   "no_cross_view_hit": 0.0,
+   "no_jepa_cell_hit": 0.09471493675595238,
+   "cosine": 0.6135055791231538,
+   "edge": 0.05774507068452381,
+   "relative_depth": 1.2225125424721834,
+   "stream_view": 0.47929164341517855,
+   "log_p": -0.7979549876439803,
+   "log_err": -0.828270564627511,
+   "depth_disagreement|hit": 0.4900006436693501,
+   "photometric_disagreement|hit": 0.11155393835928826,
+   "dropped_neighbour_share": 0.7503257632058323
+  },
+  "INC": {
+   "pixels": 688128,
+   "no_cross_view_hit": 0.4038173130580357,
+   "no_jepa_cell_hit": 0.40030343191964285,
+   "cosine": 0.22059167366456545,
+   "edge": 0.16375296456473215,
+   "relative_depth": 1.1557432224549085,
+   "stream_view": 0.6137114025297619,
+   "log_p": -0.4467457926969506,
+   "log_err": -0.5854503959390571,
+   "depth_disagreement|hit": 0.18876853246772768,
+   "photometric_disagreement|hit": 0.10106908321360723,
+   "dropped_neighbour_share": 0.7245920601263562
+  },
+  "RANDOM": {
+   "pixels": 688128,
+   "no_cross_view_hit": 0.37004307338169645,
+   "no_jepa_cell_hit": 0.3693121047247024,
+   "cosine": 0.7075071412869266,
+   "edge": 0.016310918898809524,
+   "relative_depth": 1.09316822221334,
+   "stream_view": 0.5730096726190477,
+   "log_p": -0.892467047702109,
+   "log_err": -1.2791271890111686,
+   "depth_disagreement|hit": 0.10734544650436663,
+   "photometric_disagreement|hit": 0.07407735632475113,
+   "dropped_neighbour_share": 0.09982687337625455
+  }
+ },
+ "pooled_correlations": {
+  "log_nu~log_p": -0.12024453969600159,
+  "log_nu~log_err": 0.5326318262420114
+ },
+ "overlap_reproduction_max_abs_diff": {
+  "JEPA": 0.0,
+  "DEPTH": 0.0,
+  "INC": 0.0
+ },
+ "ground_truth_read": false,
+ "query_frames_read": false
+}

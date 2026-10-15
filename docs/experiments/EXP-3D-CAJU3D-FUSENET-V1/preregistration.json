@@ -1,0 +1,70 @@
+{
+ "experiment": "EXP-3D-CAJU3D-FUSENET-V1",
+ "locked_at": "2026-10-14 22:20:46 +0800",
+ "root_files": {
+  "PROTOCOL.md": "fb83841ef11e43c18e90bbfd9e1b5761a39d08ce1ea25671b96818518513075b",
+  "frame_role_lock.json": "dab5e35b3b6f39653368cf9138d6238b2e42cabd570ce79c6d82b30db12cc7a9",
+  "reused_seals.json": "3b6f47d8f227f118f4059321a1420283d3576b12f08ab8d294a0b2e3ac8c141e"
+ },
+ "code": {
+  "fn_data.py": "105efe430e3d95cbe0f1acb8fdbc9706d205d04883f8d6602c903bdff4dc2748",
+  "fn_jobs.sh": "63746653754bc1df4766c707863abb8653dfb33199a32a315cb810b7929d8809",
+  "fn_lock.py": "6f9edc5a27c28c8ed6bd3a909af9e3c32d4ca8679c80fc24fd6cb385cb2c2d68",
+  "fn_model.py": "c42c977a6eaa63e66dbbe0ec4efab1eeb359f7a9f71c4b598ea4152f2c5ffdda",
+  "fn_query_features.py": "4ebd6266f54e8839782429f7263fa83b6d95014ca9459943b214dbf964417581",
+  "fn_score.py": "c0f8d968f60ef6dbea81c98cf7f2ac25d1c4d607eae9339e5b31b19c7588b72c",
+  "fn_train.py": "f64e9fbf8864dc3ed1f86136e59cb5609e4f4ca9623d1f5eea2b40f1deb5574c",
+  "test_fn.py": "572a42f28f41d66483bbf34a26b7b825a89d73153f9fdb0993728d0f9efe1329"
+ },
+ "imported": {
+  "EXP-3D-CAJU3D-JEPAGATE-V1/model/hjepa_final.pth": "a3f7789312435c04f3faed924213a66d2c31c6a2f5187307f47da35d3bf960c8",
+  "EXP-3D-CAJU3D-JEPAGATE-V1/code/hjepa.py": "23259fc76b008b4d11e228ae95a96744bebf84700dc9e65ea6729b541bd51c52",
+  "EXP-3D-CAJU3D-KFUSE-V1/code/kf_jepa_core.py": "836ee400009aeaf2870946061a53fb577a6ab0294418aafa60abf5fe192000c3",
+  "EXP-3D-CAJU3D-KFUSE-V1/code/kf_query_jepa.py": "b38f003d44e419ad0461f025ce76b8a4aae58bd0dc8be663a0d774e5ea3c3280",
+  "EXP-3D-CAJU3D-KFUSE-V1/code/kf_logic.py": "f2a87e7c3ebc70c1d8d3ee0376ef29d09d25848bfcf63ba3cfb165d08c5bef61",
+  "EXP-3D-CAJU3D-KFUSE-V1/fusion_tables.json": "15100550ca6b39763244a69405ec88f8eede4faaa700aff4619557ee1c7e533c",
+  "EXP-3D-CAJU3D-ENGINE-V1/code/engine_score.py": "04f82046e3a84fcaabcf2c8b2ab807cbe78d1571f425b67937a14f5927dbc7a0",
+  "EXP-3D-CAJU-HEADROOM-V1/code/caju_logic.py": "23a3f022d5734a7c87354b1f5a37cbec3dbb1e73fca292573880306f2a63cc42",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9"
+ },
+ "model": {
+  "base_channels": 8,
+  "jepa_channels": 66,
+  "jepa_projection": 16,
+  "width": 32,
+  "dilations": [
+   1,
+   2,
+   4,
+   8,
+   1
+  ],
+  "r_max": 0.7
+ },
+ "training": {
+  "fit": [
+   "FIT_SYSTEM",
+   "FIT_SYSTEM2"
+  ],
+  "seeds": [
+   20261101,
+   20261102,
+   20261103
+  ],
+  "split_seed": 20261100,
+  "val_places": 32,
+  "epochs": 30,
+  "batch": 8,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "selection": "per run, the epoch with the lowest validation place-level AbsRel"
+ },
+ "primary": "P1 CONF_SYSTEM3: FUSE_BASE - FUSE_JEPA (three-seed ensembles), V1 paired place bootstrap + V2 gate; P2 the same on CONF_VAL",
+ "branches": [
+  "JEPA_FUSION_SUPPORTED",
+  "JEPA_FUSION_PARTIAL",
+  "JEPA_FUSION_NOT_ESTABLISHED",
+  "JEPA_FUSION_HARMFUL"
+ ],
+ "final_holdout_touched": false
+}

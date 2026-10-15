@@ -1,0 +1,92 @@
+{
+ "experiment": "EXP-3D-READOUT-METHOD-V1",
+ "locked_at": "2026-10-15 00:46:10 +0800",
+ "protocol_sha256": "34093e34f1ac5619251736f1eced4069e29562ab7dfd7941fc8cdea2ae30efc9",
+ "code": {
+  "audit_exposure.py": "a904f788d62774a423dd216518c7cc482d197a250eaed401ba26876691b824d5",
+  "rm_cache.py": "7cc3587361e05afa6939d7e23869bfaaa868bf76fc13c88163bfe090232170a4",
+  "rm_common.py": "248eeb7b1f8af844a6de6a2f0d3b0a3ade11263aa3e94164d05a1625c6dbf3ff",
+  "rm_lock.py": "d855f28ef9c9cd0c39c1dfda042ad926c43ce0cc9eff63c2498f4eac60cd1448",
+  "rm_methods.py": "a857ceda1768e2a067f7f442d496eba150ab4a500e4c2616ae11fb958f66089e",
+  "rm_run.py": "5238203c535c095bb0feb35548cec86f7f1bbd9066b70adc9dfc2f1572eebb6d"
+ },
+ "caches": {
+  "ARKIT_SYSTEM4.json": "1b672d313e56e5e26a19175bd3c882e32ee2fac8fa411709c63ace17f32fdffa",
+  "ARKIT_SYSTEM4.npz": "cf16ebd4dfa281611d53122a9406b603e3c175ae4e0e74347c23ec1adfade6c5",
+  "CAJU.json": "d5741c14e4d7076fc359d529909e053d74dac0b8e4d5b8e5dc665a38c2f4c7da",
+  "CAJU.npz": "b6f0ebca4f1015f8a9c89bffd6eaa86893886f697801f8f123e7475df81c7964",
+  "CONF_SYSTEM3.json": "dbd41e541dc82a7a9aa6cdd9a8ff884517ad1b10c8118cd23ee31076b96e16b1",
+  "CONF_SYSTEM3.npz": "6828ad336fa3aebd4b32a561f214d7b419d72db8f04d694a39520ff65e2a5b5f",
+  "CONF_VAL.json": "1e6455a847974a3d81efd5cb06b45de3d7cd76d4e7dfe1dfb7f3e9ee8c994d33",
+  "CONF_VAL.npz": "21a56f32c84f87ce26d7a37d81247d0dce5ba56b052903d2f50bec51b2f0d22d",
+  "FIT_SYSTEM.json": "9a42ce88af04b1848ca316e2349373fe988aa61172aa08b3b501586caa809fa6",
+  "FIT_SYSTEM.npz": "ab0270005e05887daa872f51307c5d7f3a95dcacc5ee158fe48d0e450e1a0313",
+  "FIT_SYSTEM2.json": "1b3201ba208a7f19b66fcb4495652a09ff24c170d84ce108822ba6fa6bbb9989",
+  "FIT_SYSTEM2.npz": "0f6f13ab5b0efdd6524b7ec498c677aa32eacc32dc8cd1f7c4534cf1e148ccf4"
+ },
+ "kf_table_sha256": "15100550ca6b39763244a69405ec88f8eede4faaa700aff4619557ee1c7e533c",
+ "folds": [
+  "CONF_SYSTEM3",
+  "CONF_VAL",
+  "CAJU",
+  "ARKIT_SYSTEM4"
+ ],
+ "training_only": [
+  "FIT_SYSTEM",
+  "FIT_SYSTEM2"
+ ],
+ "phase1_methods": [
+  "B0",
+  "B1",
+  "B2A",
+  "B2B",
+  "B3",
+  "B4",
+  "B5",
+  "B6",
+  "B6W",
+  "B7"
+ ],
+ "phase2_methods": [
+  "SYS_A",
+  "SYS_B",
+  "SYS_C",
+  "SYS_C_ON_B",
+  "SYS_B_ON_C",
+  "R7",
+  "CORE_A",
+  "B0"
+ ],
+ "gate_a": {
+  "comparison": "B7 vs S* = the lowest pooled place mean among B2A, B2B, B3, B4, B5",
+  "ci_lower_gt": 0.0,
+  "min_mean_gain": 0.005,
+  "max_top1_share": 0.5,
+  "median_gain_gt": 0.0,
+  "uncovered_pixel_absrel_lower_in_every_fold": true,
+  "label": [
+   "V2_METHOD_NECESSITY=SUPPORTED",
+   "V2_METHOD_NECESSITY=NOT_ESTABLISHED"
+  ]
+ },
+ "gate_b": {
+  "comparison": "SYS_C vs SYS_B (matched readouts)",
+  "ci_lower_gt": 0.0,
+  "min_mean_gain": 0.002,
+  "median_gain_gt": 0.0,
+  "max_top1_share": 0.5,
+  "label": [
+   "TTT_ADDED_VALUE=SUPPORTED",
+   "TTT_ADDED_VALUE=NOT_ESTABLISHED"
+  ]
+ },
+ "bootstrap": {
+  "draws": 10000,
+  "seed": 20260928,
+  "unit": "place",
+  "source": "score_analyze.contrast (V1)"
+ },
+ "smoke_disclosure": "one code smoke run before the lock: train FIT_SYSTEM, score FIT_SYSTEM2 (a training cohort), 1 seed, 1 epoch; no evaluation fold was scored",
+ "fresh_data_used": false,
+ "final_holdout_touched": false
+}

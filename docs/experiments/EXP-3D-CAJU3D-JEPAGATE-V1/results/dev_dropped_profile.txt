@@ -1,0 +1,19 @@
+/home/xmum26_zonghan/envs/depthsplat/lib/python3.11/site-packages/xformers/ops/fmha/flash.py:211: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+  @torch.library.impl_abstract("xformers_flash::flash_fwd")
+/home/xmum26_zonghan/envs/depthsplat/lib/python3.11/site-packages/xformers/ops/fmha/flash.py:344: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+  @torch.library.impl_abstract("xformers_flash::flash_bwd")
+feature                               ALL      JEPA     DEPTH       INC    RANDOM
+pixels                            6881280    688128    688128    688128    688128
+no_cross_view_hit                  0.3692    0.3660    0.0000    0.4038    0.3700
+no_jepa_cell_hit                   0.3680    0.3628    0.0947    0.4003    0.3693
+cosine                             0.7080    0.6577    0.6135    0.2206    0.7075
+edge                               0.0164    0.0433    0.0577    0.1638    0.0163
+relative_depth                     1.0931    1.0855    1.2225    1.1557    1.0932
+stream_view                        0.5714    0.5911    0.4793    0.6137    0.5730
+log_p                             -0.8943   -1.0749   -0.7980   -0.4467   -0.8925
+log_err                           -1.2799    0.3335   -0.8283   -0.5855   -1.2791
+depth_disagreement|hit             0.1082    0.2845    0.4900    0.1888    0.1073
+photometric_disagreement|hit       0.0739    0.1264    0.1116    0.1011    0.0741
+dropped_neighbour_share            1.0000    0.8277    0.7503    0.7246    0.0998
+pooled correlations {"log_nu~log_p": -0.12, "log_nu~log_err": 0.533}
+overlap reproduction max |diff| {"JEPA": 0.0, "DEPTH": 0.0, "INC": 0.0}

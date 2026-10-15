@@ -1,0 +1,41 @@
+{
+ "start_state": "CACHE: released DepthSplat (re10k+dl3dv base, Gaussian scale cap 0.1) on the 3 context + 4 stream RGB-D views, measured planar depth injected as the final context depth",
+ "actions": {
+  "OFF": {
+   "ttt_steps": 0
+  },
+  "SHORT": {
+   "ttt_steps": 10
+  },
+  "FULL": {
+   "ttt_steps": 100
+  }
+ },
+ "ttt": {
+  "engine": "V1 ds_eval.ttt (EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_eval.py), unchanged math",
+  "optimized": [
+   "means",
+   "per-axis log-scales in each Gaussian's eigenbasis (rotations fixed)",
+   "opacity logits",
+   "SH DC",
+   "higher SH"
+  ],
+  "network_weights": "frozen",
+  "optimizer": "Adam, eps 1e-15, fresh per episode",
+  "lr": "3DGS defaults x 1 (means 1.6e-4 x median measured planar depth, log-scales 5e-3, opacity logits 2.5e-2, SH DC 2.5e-3, higher SH 1.25e-4)",
+  "loss": "relative L1 of the raw rendered depth on valid measured pixels + 0.5 x RGB L1, on the 7 arrived frames",
+  "failure": "a non-finite loss reverts the state to CACHE (as V1)",
+  "branching": "SHORT is the state after step 10 of the FULL trajectory, read out before the trajectory continues; the pilot checks it against an independent 10-step run"
+ },
+ "readout": {
+  "ray": "depth_z / alpha / cosine",
+  "F7": "ray where alpha >= 0.5, else R7",
+  "CORE_B": "sqrt(R7 x F7), both floored at 1e-6",
+  "R7": "REPROJ7_HARMONIC of the 7 arrived frames"
+ },
+ "cost": {
+  "unit": "TTT optimizer steps (OFF 0, SHORT 10, FULL 100)",
+  "measured": "CUDA-synchronized seconds per segment, reported but not used in any gate"
+ },
+ "v1_ds_eval_sha256": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791"
+}

@@ -1,0 +1,24 @@
+{
+ "amendment": 3,
+ "post_hoc": true,
+ "deployable": true,
+ "locked_at": "2026-10-15 03:11:13 +0800",
+ "files": {
+  "AMENDMENT_3.md": "f539bcd9a39a32f08d69375bf896fe6ab5210254e11605bf8b39de297b5d4aa4",
+  "code/rm_amend3.py": "7cec5710f4575305400d97ae752f998fe1673be135378524d661802f54cee1a9"
+ },
+ "primary": "B7 - B7_FS, pooled 350 places (> 0: the free-space lower bound lowers V2's error)",
+ "decision": {
+  "A_PREMISE_FREE_SPACE=SUPPORTED": "mean >= 0.005 and CI lower > 0",
+  "A_PREMISE_FREE_SPACE=NOT_SUPPORTED": "otherwise"
+ },
+ "carving": {
+  "rel": 0.05,
+  "abs_m": 0.05,
+  "samples": 128,
+  "range_m": [
+   0.1,
+   20.0
+  ]
+ }
+}

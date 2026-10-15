@@ -1,0 +1,52 @@
+{
+ "threads": 1,
+ "episodes": [
+  "arkit_48018808/A",
+  "arkit_48018808/B",
+  "arkit_42899282/A",
+  "arkit_42899282/B",
+  "arkit_47430262/A"
+ ],
+ "read_purposes": [
+  "ORACLE_TEACHER_ONLY",
+  "QUERY_CAMERA_TEACHER_ONLY"
+ ],
+ "max_relative_difference_vs_sealed_r7": 5.944183066532855e-08,
+ "per_scene_median_s": {
+  "read_7_frames_s": 0.036105,
+  "unproject_7_frames_s": 0.01895
+ },
+ "per_query_median_s": {
+  "reproject_harmonic_near_s": 0.05524
+ },
+ "per_scene_samples_s": {
+  "read_7_frames_s": [
+   0.04604,
+   0.03622,
+   0.11428,
+   0.03599,
+   0.01475
+  ],
+  "unproject_7_frames_s": [
+   0.0248,
+   0.0192,
+   0.02932,
+   0.0187,
+   0.01828
+  ]
+ },
+ "per_query_samples_s": {
+  "reproject_harmonic_near_s": [
+   0.09364,
+   0.04823,
+   0.03225,
+   0.04533,
+   0.07936,
+   0.09701,
+   0.07902,
+   0.09506,
+   0.03079,
+   0.05524
+  ]
+ }
+}

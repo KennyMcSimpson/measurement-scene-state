@@ -1,0 +1,112 @@
+{
+ "action_absrel": {
+  "FULL": 0.17394223059626276,
+  "OFF": 0.17444872671847025,
+  "SHORT": 0.17347261417053325
+ },
+ "best_fixed_on_pilot": "SHORT",
+ "cohort": "CAJU_PILOT",
+ "engineering_only": true,
+ "episodes": 16,
+ "equivalence_utility": {
+  "equivalent": {
+   "FULL": true,
+   "OFF": true,
+   "SHORT": true
+  },
+  "max_abs_reference_run_to_run": {
+   "FULL": 7.811302863897085e-06,
+   "OFF": 0.0,
+   "SHORT": 9.024451186334659e-10
+  },
+  "max_abs_replay_minus_reference": {
+   "FULL": 1.1294121578409033e-05,
+   "OFF": 0.0,
+   "SHORT": 2.0423450708406676e-09
+  },
+  "per_episode": {
+   "arkit_43896426/A": {
+    "utility_reference": {
+     "FULL": 0.004090638294613064,
+     "OFF": 0.0,
+     "SHORT": 0.0011217536488802998
+    },
+    "utility_reference2": {
+     "FULL": 0.004088921909244231,
+     "OFF": 0.0,
+     "SHORT": 0.0011217536918730342
+    },
+    "utility_replay": {
+     "FULL": 0.004089635927332608,
+     "OFF": 0.0,
+     "SHORT": 0.0011217550680043958
+    }
+   },
+   "arkit_43896426/B": {
+    "utility_reference": {
+     "FULL": 0.0042721497388447105,
+     "OFF": 0.0,
+     "SHORT": 0.0013336444463218633
+    },
+    "utility_reference2": {
+     "FULL": 0.004278549626632433,
+     "OFF": 0.0,
+     "SHORT": 0.0013336435438767447
+    },
+    "utility_replay": {
+     "FULL": 0.004277806942442078,
+     "OFF": 0.0,
+     "SHORT": 0.0013336440550673206
+    }
+   },
+   "arkit_47334693/A": {
+    "utility_reference": {
+     "FULL": 0.0019889761894952007,
+     "OFF": 0.0,
+     "SHORT": 0.0007767474090848991
+    },
+    "utility_reference2": {
+     "FULL": 0.001996787492359098,
+     "OFF": 0.0,
+     "SHORT": 0.0007767473107651857
+    },
+    "utility_replay": {
+     "FULL": 0.0019813154494688345,
+     "OFF": 0.0,
+     "SHORT": 0.0007767459306959323
+    }
+   },
+   "arkit_47334693/B": {
+    "utility_reference": {
+     "FULL": 0.0020375272732074123,
+     "OFF": 0.0,
+     "SHORT": 0.0007865682912468197
+    },
+    "utility_reference2": {
+     "FULL": 0.0020302557712565117,
+     "OFF": 0.0,
+     "SHORT": 0.0007865679822960103
+    },
+    "utility_replay": {
+     "FULL": 0.0020262331516290033,
+     "OFF": 0.0,
+     "SHORT": 0.0007865662489017489
+    }
+   }
+  }
+ },
+ "failed_reverted": 0,
+ "place_mean_utility": {
+  "FULL": 0.0005064961222075123,
+  "OFF": 0.0,
+  "SHORT": 0.0009761125479370155
+ },
+ "timing_median_s": {
+  "encode": 0.6727308569243178,
+  "readout_FULL": 0.892230493016541,
+  "readout_OFF": 0.8709484270075336,
+  "readout_SHORT": 0.893685762421228,
+  "steps_1_to_snapshot": 7.749096379498951,
+  "steps_after_snapshot": 69.71183776203543
+ }
+}

@@ -1,29 +1,29 @@
 {
-  "publication": "research/depthsplat-arkit-20261010",
-  "clean_checkout_tests": {
-    "passed": 1200,
-    "skipped": 3,
-    "seconds": 339.0,
-    "skip_reasons": [
-      "CUDA is not available (two GPU smoke tests; CUDA hidden)",
-      "Historical V5 checkpoint not distributed"
-    ],
-    "scope": "Fresh git worktree of origin/main 249becb plus every file of this publication, without data/ or outputs/, CUDA hidden, using the installed Python dependencies (run on hit before the transfer)"
-  },
-  "ruff": "PASS; third_party/backups/outputs/docs/experiments excluded; E501 waived for scripts/prepare_rgbd_arkit_confirm_cohort.py and scripts/prepare_rgbd_arkit_val_cohort.py, whose hashes are recorded in the ARKitScenes cohort locks",
-  "lock_check": "uv lock --check --offline PASS",
-  "archives": {
-    "new_archives": 0,
-    "roundtrip_sha256": "PASS (restore_report_artifacts.py --check, all 38 archives)"
-  },
-  "published_records": {
-    "experiments": 26,
-    "files": 391,
-    "bytes": 15616769,
-    "content": "README.md, PROTOCOL.md, preregistration.json (freeze.json for the GA carrier), results JSON (results/, DEV selections, amendment and exploratory post-hoc JSON) and code (.py, .sh) of the DepthSplat line; no checkpoints, sealed predictions, per-query score rows, manifests, logs or media"
-  },
-  "not_published": "Everything else under the local outputs/ trees (checkpoints, sealed predictions, scores, frame-role locks, manifests, logs), the ARKitScenes and Replica data (research-only licences, never redistributed), and the evaluation-only experiments listed in the previous publication",
-  "training_and_data_download_rerun": false,
-  "transfer": "Staged and validated on hit without committing there, packed (sha256 f1cc0880638ef99ceb3c968f016831dca55144fbf3bdb1be39d0cc6ed3e93a5e), relayed hit -> local machine -> zonghan_o, hash-checked, then committed and pushed from zonghan_o",
-  "workflow_remote_status": "Not yet run; clean worktree verified"
+ "publication": "research/caju-readout-20261015",
+ "clean_checkout_tests": {
+  "passed": 1200,
+  "skipped": 3,
+  "seconds": 346.0,
+  "skip_reasons": [
+   "CUDA is not available (two GPU smoke tests; CUDA hidden)",
+   "Historical V5 checkpoint not distributed"
+  ],
+  "scope": "Fresh git worktree of origin/main cf2c829 plus every file of this publication, without data/ or outputs/, CUDA hidden, using the installed Python dependencies (run on hit before the transfer); the five EXP-3D-CAJU-HEADROOM-V1 result plots (PNG, referenced by its README) were added after these checks and are not read by any of them"
+ },
+ "ruff": "PASS; third_party/backups/outputs/docs/experiments excluded; E501 waived for the two hash-locked ARKitScenes cohort scripts and for scripts/prepare_rgbd_arkit_system4_cohort.py, kept byte-for-byte as it ran",
+ "lock_check": "uv lock --check --offline PASS (zonghan_o checkout)",
+ "archives": {
+  "new_archives": 0,
+  "roundtrip_sha256": "PASS (restore_report_artifacts.py --check, all 38 archives verified)"
+ },
+ "published_records": {
+  "experiments": 10,
+  "files": 186,
+  "bytes": 1497484,
+  "content": "README.md, PROTOCOL.md, STATUS.md and other Markdown documentation, preregistration / lock / selection / contract JSON, summary results (JSON, CSV, TXT), the five result plots that the CAJU-V1 Gate 0 README embeds, and code (.py, .sh) of the CAJU-V1, CAJU-3D and reliable-geometry-readout experiments"
+ },
+ "not_published": "Per-query score rows (scores/, *rows.json, per-query fold and query JSON), data manifests, frame-role locks, seals and state hashes, ground-truth read logs, audit/ and smoke/ directories, logs and checksum lists, model weights (H-JEPA, FUSE V1/V2), caches and sealed predictions (123 files of the local records), and the ARKitScenes data itself (research-only licence, never redistributed)",
+ "training_and_data_download_rerun": false,
+ "transfer": "Staged and validated on hit from the local commits 7607172 and ab1a703 of research/reliable-geometry-readout-v1 without committing there, packed (sha256 495b83e165b1572a25f9d500cd9788e086a44260b80dfb46420b898f2171be6e), relayed hit -> local machine -> zonghan_o, hash-checked, then committed and pushed from zonghan_o",
+ "workflow_remote_status": "Not yet run; the Public research docs workflow runs only on pushes to main"
 }

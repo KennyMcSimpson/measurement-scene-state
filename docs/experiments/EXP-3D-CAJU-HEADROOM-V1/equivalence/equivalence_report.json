@@ -1,0 +1,53 @@
+{
+ "pilot_keys": 28,
+ "compat_keys": 8,
+ "tolerance": "max |diff| <= 2 x floor + 1e-6",
+ "replay_vs_independent": {
+  "OFF_vs_REF": {
+   "depth_z": 0.0,
+   "alpha": 0.0
+  },
+  "SHORT_vs_REF": {
+   "depth_z": 0.0033059120178222656,
+   "alpha": 0.003791075199842453
+  },
+  "FULL_vs_REF": {
+   "depth_z": 0.123177170753479,
+   "alpha": 0.08904790878295898
+  }
+ },
+ "run_to_run_floor": {
+  "OFF_REF_vs_REF2": {
+   "depth_z": 0.0,
+   "alpha": 0.0
+  },
+  "SHORT_REF_vs_REF2": {
+   "depth_z": 0.0014396756887435913,
+   "alpha": 0.003791075199842453
+  },
+  "FULL_REF_vs_REF2": {
+   "depth_z": 0.14542245864868164,
+   "alpha": 0.11167621612548828
+  }
+ },
+ "equivalent": {
+  "OFF": true,
+  "SHORT": false,
+  "FULL": true
+ },
+ "compat_vs_v3": {
+  "OFF_vs_V3_CACHE": {
+   "depth_z": 0.0,
+   "alpha": 0.0
+  },
+  "FULL_vs_V3_TTT_m1": {
+   "depth_z": 0.35302895307540894,
+   "alpha": 0.08589959144592285
+  }
+ },
+ "compat_within_floor": {
+  "OFF": true,
+  "FULL": false
+ },
+ "ground_truth_read": false
+}

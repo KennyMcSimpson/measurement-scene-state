@@ -1,0 +1,92 @@
+{
+ "experiment": "EXP-3D-CAJU3D-ENGINE-V1",
+ "locked_at": "2026-10-14 18:09:32 +0800",
+ "root_files": {
+  "PROTOCOL.md": "bb7d0f2494f84a0727081ee687fb7b7fe126c193bd1a34d308b49d0491f356f5",
+  "frame_role_lock.json": "897d6524893559283b8ab495b31879d322f66a7eb1df11544abea09f796c0225",
+  "reused_seals.json": "fa42fb84c85df504f7cb30cd3acc2232be78c3528fea8e742d346a4ffa410577"
+ },
+ "code": {
+  "engine_core.py": "0bb6469f29448529d709690cdb2646e1fdb4824ea8eb71684b4bb4d46be2dade",
+  "engine_jobs.sh": "0e9f4351671f5b5f10b7b93090f231d3b85e89c0ef50222cd448feded39599a2",
+  "engine_lock.py": "531ebd7c1b81f8564fae6bdeb86368bfef4f8d70950eeae7ca14d2136c35a06f",
+  "engine_logic.py": "e65066bc836094deefd0eef5aa770ea0ca4eb249bca2bb609e13a7134f0b2b44",
+  "engine_make_root.py": "f2ba33df1cf0de13baeb6c9f08dd8f329b90360487ea83342f9bd3e448713cc9",
+  "engine_score.py": "04f82046e3a84fcaabcf2c8b2ab807cbe78d1571f425b67937a14f5927dbc7a0",
+  "engine_ttt.py": "8f26b3bfd17276ae934b157d27ad4e5653cebcbc1913b81006488a0f26eefeea",
+  "test_engine.py": "e8e5b5219422f81156d0a8fc2fed243d1af2368988c0e02d3b2243e264b18bee"
+ },
+ "imported": {
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_eval.py": "36b05c497cae734aa02f86349a5e7f37f8234148ac182b93bda0be770750e791",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_predict.py": "63f682752f2ac738543642eeee30d34c924854a9bdaa333a37d200044a345f06",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/ds_finetune.py": "9a006643cf883d9b6dd4dc5b16243394df7ecd3b89a02a8a3f5cfd501316852f",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/train_jepa.py": "45a0390246e39ea029aa3022d7b511dc49e3606820b0389744766162e42b865f",
+  "EXP-3D-RGBD-DEPTHSPLAT-JEPA-TTT-V1/code/score_analyze.py": "eb6c3227fa5f9549609e8a2bb42eaf7bfef5c4c9b2fa11ec2fbe0e6904ebe9d9",
+  "EXP-3D-CAJU-HEADROOM-V1/code/caju_logic.py": "23a3f022d5734a7c87354b1f5a37cbec3dbb1e73fca292573880306f2a63cc42"
+ },
+ "frozen_sources": {
+  "src/mcss/measurement_planning/information.py": "9e0529ae2216ab1b37df02f54bb9c009b2cb1626b314dc8511dce94291fd113e",
+  "src/mcss/mechanism_pilot/direct_capacity_statistics.py": "adb8b2b41915b6733054119e50c8043b485ba773dfc2581ecc17a121d5a1ddc1",
+  "src/mcss/mechanism_pilot/geometry_carrier_statistics.py": "a4605d75d58ef9787f92b7ac17c23ff1d0f4e41ca01c9178ba059d1c4c62c1b1"
+ },
+ "checkpoints": {
+  "ZS": "f8ddd845a76a2eabf79621b9757bddfb2817c28e886a6af9ad5f3c8bbd8603d6",
+  "JN1": "9968ca8cda75f20f99e58f4aeec8fffdf41278da38a68521121a3d34eeec58a2"
+ },
+ "constants": {
+  "SCALE_MAX": 0.1,
+  "STEPS": 100,
+  "MULT": 1.0,
+  "SEED": 20261008,
+  "ALPHA_MIN": 0.5,
+  "VARIANTS": [
+   "RAW",
+   "NORM",
+   "NORM_DEC",
+   "NORM_DEC_INC"
+  ],
+  "DEV_ARMS": {
+   "ZS": [
+    "CACHE",
+    "NORM",
+    "NORM_DEC",
+    "NORM_DEC_INC"
+   ],
+   "JN1": [
+    "CACHE",
+    "RAW",
+    "NORM",
+    "NORM_DEC",
+    "NORM_DEC_INC"
+   ]
+  },
+  "CANDIDATES": [
+   "ZS_NORM",
+   "ZS_NORM_DEC",
+   "ZS_NORM_DEC_INC",
+   "JN1_RAW",
+   "JN1_NORM",
+   "JN1_NORM_DEC",
+   "JN1_NORM_DEC_INC"
+  ],
+  "COMPARATOR": "ZS_RAW",
+  "INC": {
+   "cos_lo": 0.1,
+   "cos_hi": 0.4,
+   "edge_max": 0.1,
+   "anchor_conf_opacity": 0.65
+  },
+  "DEV_SEED": 20261015,
+  "DEV_PER_COHORT": 12
+ },
+ "selection": "lowest DEV mean place AbsRel (Core B readout) among CANDIDATES; STOP unless it beats ZS_RAW",
+ "primary": "CONF_SYSTEM3: CORE_B - C* (Core B readout), V1 paired place bootstrap + V2 gate; P2 = the same on CONF_VAL (replication)",
+ "branches": [
+  "CAJU3D_ENGINE_SUPPORTED",
+  "CAJU3D_ENGINE_PARTIAL",
+  "CAJU3D_ENGINE_NOT_ESTABLISHED",
+  "CAJU3D_ENGINE_HARMFUL",
+  "STOP_AT_DEV"
+ ],
+ "final_holdout_touched": false
+}
